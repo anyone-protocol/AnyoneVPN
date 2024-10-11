@@ -26,5 +26,5 @@ include(
         ':OrbotLib',
         ':anyonebotservice'
 )
-include ':anon-android-binary'
-project(':anon-android-binary').projectDir = new File("../anon-android/anon-android-binary")
+//include ':anon-android-binary'
+//project(':anon-android-binary').projectDir = new File("../anon-android/anon-android-binary")

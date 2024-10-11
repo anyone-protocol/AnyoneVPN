@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    api project(':anon-android-binary')
+    api libs.anon_android // project(':anon-android-binary')
 
     //use locally built ipt_proxy+go_tun2socks
     api project(':OrbotLib')
