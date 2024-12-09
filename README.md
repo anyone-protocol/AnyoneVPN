@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="" src="./app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" alt="AnyoneBot" align="center"/>
+<img width="" src="./docs/assets/ic_launcher.svg" width="128" height="128" alt="AnyoneBot" align="center"/>
 
 # AnyoneBot
 
