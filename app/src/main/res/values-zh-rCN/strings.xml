@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot 是免费的代理应用，可让其他应用更安全地使用网络。AnyoneBot 使用 Tor 加密网络流量，然后通过世界各地一系列计算机跳转来隐藏流量。Tor 是自由软件和开放网络，帮助用户抵御称为流量分析的网络监控，网络监控威胁到个人自由和隐私、机密商业活动和关系以及国家安全。</string>
+    <string name="app_description">AnyoneBot 是免费的代理应用，可让其他应用更安全地使用网络。AnyoneBot 使用 Anon 加密网络流量，然后通过世界各地一系列计算机跳转来隐藏流量。Anon 是自由软件和开放网络，帮助用户抵御称为流量分析的网络监控，网络监控威胁到个人自由和隐私、机密商业活动和关系以及国家安全。</string>
     <string name="menu_settings">设置</string>
     <string name="menu_log">日志</string>
     <string name="menu_stop">停止</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">常规</string>
     <string name="pref_start_boot_title">开机时启动 AnyoneBot</string>
-    <string name="pref_start_boot_summary">Android 设备开机时自动启动 AnyoneBot 并连接 Tor 网络</string>
+    <string name="pref_start_boot_summary">Android 设备开机时自动启动 AnyoneBot 并连接 Anon 网络</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">用于首次跳转的密钥指纹、昵称、国家与地址</string>
     <string name="pref_entrance_node_dialog">输入入口节点</string>
     <string name="pref_allow_background_starts_title">允许后台启动</string>
-    <string name="pref_allow_background_starts_summary">允许任何应用告知 AnyoneBot 启动 Tor 及相关服务</string>
+    <string name="pref_allow_background_starts_summary">允许任何应用告知 AnyoneBot 启动 Anon 及相关服务</string>
     <string name="pref_proxy_title">出站网络代理（可选）</string>
     <string name="pref_proxy_type_title">出站代理类型</string>
     <string name="pref_proxy_type_summary">代理服务器使用的协议：HTTP、HTTPS、SOCKS4、SOCKS5</string>
@@ -56,10 +56,10 @@
     <string name="relaying">中继转发</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">使您的设备成为非出口中继</string>
     <string name="relay_port">中继端口</string>
-    <string name="listening_port_for_your_tor_relay">Tor 中继的侦听端口</string>
+    <string name="listening_port_for_your_anon_relay">Anon 中继的侦听端口</string>
     <string name="enter_or_port">输入 OR 端口</string>
     <string name="relay_nickname">中继昵称</string>
-    <string name="the_nickname_for_your_tor_relay">Tor 中继昵称</string>
+    <string name="the_nickname_for_your_anon_relay">Anon 中继昵称</string>
     <string name="enter_a_custom_relay_nickname">输入自定义中继昵称</string>
     <string name="reachable_addresses">可访问地址</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">在具有限制策略防火墙内，作为客户端运行</string>
@@ -69,34 +69,34 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">启用调试日志输出（必须使用 adb 或 aLogCat 查看）</string>
     <string name="project_home">项目主页：</string>
     <string name="third_party_software">第三方软件：</string>
-    <string name="pref_use_expanded_notifications">当可用时，在通知中显示 tor 出口节点的国家和 IP 地址</string>
+    <string name="pref_use_expanded_notifications">当可用时，在通知中显示 Anon 出口节点的国家和 IP 地址</string>
     <string name="pref_use_expanded_notifications_title">扩展的通知</string>
     <string name="set_locale_title">语言</string>
     <string name="pref_disable_network_title">无网络自动休眠</string>
-    <string name="pref_disable_network_summary">没有网络连接时，暂时停用 Tor</string>
-    <string name="newnym">已切换为新的 Tor 标识！</string>
-    <string name="pref_socks_title">Tor SOCKS</string>
-    <string name="pref_socks_summary">Tor 提供其 SOCKS 代理的端口 (默认: 9050, 0 禁用)</string>
+    <string name="pref_disable_network_summary">没有网络连接时，暂时停用 Anon</string>
+    <string name="newnym">已切换为新的 Anon 标识！</string>
+    <string name="pref_socks_title">Anon SOCKS</string>
+    <string name="pref_socks_summary">Anon 提供其 SOCKS 代理的端口 (默认: 9050, 0 禁用)</string>
     <string name="pref_socks_dialog">SOCKS 端口配置</string>
-    <string name="pref_transport_title">Tor 透明代理端口</string>
-    <string name="pref_transport_summary">Tor 提供透明代理的端口 (默认: 9040, 0 禁用)</string>
+    <string name="pref_transport_title">Anon 透明代理端口</string>
+    <string name="pref_transport_summary">Anon 提供透明代理的端口 (默认: 9040, 0 禁用)</string>
     <string name="pref_transport_dialog">透明代理配置</string>
-    <string name="pref_dnsport_title">Tor DNS 端口</string>
-    <string name="pref_dnsport_summary">Tor 提供 DNS 的端口 (默认: 5400, 0 禁用)</string>
+    <string name="pref_dnsport_title">Anon DNS 端口</string>
+    <string name="pref_dnsport_summary">Anon 提供 DNS 的端口 (默认: 5400, 0 禁用)</string>
     <string name="pref_dnsport_dialog">DNS 端口配置</string>
-    <string name="pref_torrc_title">Torrc 自定义配置</string>
-    <string name="pref_torrc_summary">仅供专家：直接输入 torrc 配置行</string>
-    <string name="pref_torrc_dialog">自定义 Torrc</string>
+    <string name="pref_anonrc_title">anonrc 自定义配置</string>
+    <string name="pref_anonrc_summary">仅供专家：直接输入 anonrc 配置行</string>
+    <string name="pref_anonrc_dialog">自定义 anonrc</string>
     <string name="apps_mode">VPN 模式</string>
     <string name="send_email">发送电子邮件</string>
     <string name="save">保存</string>
     <string name="name">名称</string>
     <string name="please_restart_to_enable_the_changes">请重启 AnyoneBot 以使变更生效</string>
-    <string name="wizard_details_msg">AnyoneBot 是一个开源应用程序，包含 Tor、Go-Tun2Socks 和 LibEvent。它提供了一个 VPN 隧道、一个本地 HTTP 连接代理（HTTPS 仅连接端口 8118）和一个 SOCKS 代理（9050）进入 Tor 网络。</string>
+    <string name="wizard_details_msg">AnyoneBot 是一个开源应用程序，包含 Anon、Go-Tun2Socks 和 LibEvent。它提供了一个 VPN 隧道、一个本地 HTTP 连接代理（HTTPS 仅连接端口 8118）和一个 SOCKS 代理（9050）进入 Anon 网络。</string>
     <string name="pref_open_proxy_on_all_interfaces_title">在所有接口上打开代理</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">允许连接到同一Wi-Fi、局域网设备和任何其他可以连接到你的IP的人访问Tor</string>
-    <string name="pref_http_title">Tor HTTP</string>
-    <string name="pref_http_summary">Tor通过哪个端口提供HTTP代理 (默认:8118, 0表示禁用)</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">允许连接到同一Wi-Fi、局域网设备和任何其他可以连接到你的IP的人访问Anon</string>
+    <string name="pref_http_title">Anon HTTP</string>
+    <string name="pref_http_summary">Anon通过哪个端口提供HTTP代理 (默认:8118, 0表示禁用)</string>
     <string name="pref_http_dialog">HTTP 端口配置</string>
     <string name="vpn_default_world">全局 (自动)</string>
     <string name="local_port">本地端口</string>
@@ -107,7 +107,7 @@
     <string name="backup_saved_at_external_storage">备份已保存在外部存储</string>
     <string name="backup_restored">备份已恢复</string>
     <string name="restore_backup">恢复备份</string>
-    <string name="start_tor_again_for_finish_the_process">再次启动 Tor 以完成该过程</string>
+    <string name="start_anon_again_for_finish_the_process">再次启动 Anon 以完成该过程</string>
     <string name="confirm_service_deletion">确认服务删除</string>
     <string name="service_type">服务类型</string>
     <string name="share_as_qr">以 QR 码形式分享</string>
@@ -116,7 +116,7 @@
     <string name="consider_disable_battery_optimizations">托管服务正在运行，考虑禁用电池优化</string>
     <string name="consider_enable_battery_optimizations">没有托管服务正在运行，考虑启用电池优化</string>
     <string name="pref_disable_ipv4">禁用 IPv4 连接</string>
-    <string name="app_shortcuts">启用 Tor 的应用</string>
+    <string name="app_shortcuts">启用 Anon 的应用</string>
     <string name="trouble_connecting">连接时遇到问题？</string>
     <string name="full_device_vpn">全设备 VPN</string>
     <string name="vpn_disabled">VPN 已禁用</string>
@@ -136,11 +136,11 @@
     <string name="onion_port">洋葱端口</string>
     <string name="menu_hidden_services">洋葱服务</string>
     <string name="hidden_services">洋葱服务</string>
-    <string name="hidden_service_request">一个应用程序想要在端口 %1$s上打开到 Tor 网络的洋葱服务器。如果你信任这个应用程序，这是安全的。</string>
+    <string name="hidden_service_request">一个应用程序想要在端口 %1$s上打开到 Anon 网络的洋葱服务器。如果你信任这个应用程序，这是安全的。</string>
     <string name="pref_connection_padding">连接填充</string>
     <string name="onion">.onion 地址</string>
-    <string name="testing_tor_direct_success">成功。Tor 连接良好！</string>
-    <string name="testing_tor_direct">正在测试到 Tor 网络的连接 …</string>
+    <string name="testing_anon_direct_success">成功。Anon 连接良好！</string>
+    <string name="testing_anon_direct">正在测试到 Anon 网络的连接 …</string>
     <string name="pref_reduced_circuit_padding_summary">使用低开销填充算法来减少数据和电池的使用</string>
     <string name="pref_reduced_circuit_padding">缩减的电路填充</string>
     <string name="pref_circuit_padding_summary">启用电路填充以防御一些形式的流量分析</string>
@@ -168,7 +168,7 @@
     <string name="strict_nodes_description">将“排除节点”设置视为构建所有线路的要求。如果“排除节点”设置无法生成线路，可能会破坏功能。</string>
     <string name="trying_to_connect_title">连接中…</string>
     <string name="volunteer_mode_subtitle">帮助其他人连接</string>
-    <string name="btn_tor_off">关闭 Tor</string>
+    <string name="btn_anon_off">关闭 Anon</string>
     <string name="menu_header_features">功能</string>
     <string name="menu_app_settings">应用程序设置</string>
     <string name="menu_header_learn">了解更多</string>
@@ -179,13 +179,13 @@
     <string name="menu_help_others">帮助其他人</string>
     <string name="btn_choose_apps">选择应用</string>
     <string name="btn_change_exit">更改出口</string>
-    <string name="menu_tor_connection">Tor 连接</string>
+    <string name="menu_anon_connection">Anon 连接</string>
     <string name="menu_faq">常见问题</string>
     <string name="msg_taking_too_long">似乎花了太久</string>
     <string name="btn_refresh">刷新</string>
     <string name="captcha_title">让我们知道你是真人</string>
     <string name="connect">连接</string>
-    <string name="configure_header">配置你的 Tor 连接</string>
+    <string name="configure_header">配置你的 Anon 连接</string>
     <string name="drawer_close">关闭</string>
     <string name="proxy_ports">代理端口</string>
     <string name="drawer_open">打开</string>
@@ -193,7 +193,7 @@
     <string name="ports_not_set">未设置端口</string>
     <string name="incorrect_solution">不正确的解答</string>
     <string name="power_user_mode">高级用户模式</string>
-    <string name="power_user_description">适合熟悉 Tor 的用户。 允许在没有 VPN 设置的情况下启动 AnyoneBot 并显示打开的 SOCKS 和 HTTP 端口</string>
+    <string name="power_user_description">适合熟悉 Anon 的用户。 允许在没有 VPN 设置的情况下启动 AnyoneBot 并显示打开的 SOCKS 和 HTTP 端口</string>
     <string name="title_choose_apps">选择应用</string>
     <string name="app_suggested_subtitle">AnyoneBot 最适合消息传递和社交媒体应用。</string>
     <string name="apps_suggested_title">推荐的应用</string>
@@ -216,7 +216,7 @@
     <string name="btn_copy_log">复制日志</string>
     <string name="log_copied">日志已复制</string>
     <string name="not_sure">不确定吗？</string>
-    <string name="many_ways">有许多途径可以连接到Tor，其中一些可能对您来说更有效。</string>
+    <string name="many_ways">有许多途径可以连接到Anon，其中一些可能对您来说更有效。</string>
     <string name="asking">正在询问…</string>
     <string name="no_internet_subtitle">你需要连接网络来使用AnyoneBot。</string>
     <string name="kindness_adjust_title">设置</string>

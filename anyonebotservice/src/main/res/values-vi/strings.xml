@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBot là một ứng dụng proxy miễn phí, được thiết kế để làm cho các ứng dụng khác kết nối với Internet một cách an toàn. AnyoneBot sử dụng Tor để mã hóa các kết nối Internet rồi ẩn danh nó thông qua một loạt các nút trong mạng Tor. Tor là phần mềm miễn phí và là một mạng lưới mở giúp bạn chống lại sự giám sát mạng, vốn đe dọa riêng tư trực tuyến, hay các hoạt động bí mật…</string>
+  <string name="app_description">AnyoneBot là một ứng dụng proxy miễn phí, được thiết kế để làm cho các ứng dụng khác kết nối với Internet một cách an toàn. AnyoneBot sử dụng Anon để mã hóa các kết nối Internet rồi ẩn danh nó thông qua một loạt các nút trong mạng Anon. Anon là phần mềm miễn phí và là một mạng lưới mở giúp bạn chống lại sự giám sát mạng, vốn đe dọa riêng tư trực tuyến, hay các hoạt động bí mật…</string>
     <string name="status_starting_up">Ortbot đang khởi động…</string>
-  <string name="status_activated">Đã kết nối với mạng Tor</string>
+  <string name="status_activated">Đã kết nối với mạng Anon</string>
   <string name="status_disabled">AnyoneBot đã được vô hiệu hóa</string>
-  <string name="status_shutting_down">Đang tắt dịch vụ Tor</string>
+  <string name="status_shutting_down">Đang tắt dịch vụ Anon</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->
@@ -17,10 +17,10 @@
     <string name="couldn_t_start_anon_process_">Không thể khởi động tiến trình anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Thiết lập ReachableAddresses đã gây ra một vấn đề! </string>
   <string name="your_relay_settings_caused_an_exception_">Thiết lập relay của bạn đã gây ra một vấn đề!</string>
-    <string name="found_existing_tor_process">tìm ra tiến trình hiện hành của Tor…</string>
-    <string name="unable_to_start_tor">Không thể khởi động Tor được: </string>
-    <string name="newnym">Bạn đã chuyển sang một mạch Tor mới!</string>
-    <string name="updating_settings_in_tor_service">đang cập nhật cài đặt dịch vụ Tor</string>
+    <string name="found_existing_anon_process">tìm ra tiến trình hiện hành của Anon…</string>
+    <string name="unable_to_start_anon">Không thể khởi động Anon được: </string>
+    <string name="newnym">Bạn đã chuyển sang một mạch Anon mới!</string>
+    <string name="updating_settings_in_anon_service">đang cập nhật cài đặt dịch vụ Anon</string>
   <string name="mebibyte_per_second">MiB/s</string>
   <string name="kibibyte_per_second">KiB/s</string>
 </resources>

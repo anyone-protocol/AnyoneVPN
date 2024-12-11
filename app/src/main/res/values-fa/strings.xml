@@ -57,10 +57,10 @@
     <string name="relaying">درحال بازپخش</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">افزارهٔ خود را برای یک بازپخش کننده غیرخروجی به‌کار بیندازید</string>
     <string name="relay_port">درگاه بازپخش کننده</string>
-    <string name="listening_port_for_your_tor_relay">درگاه شنونده برای بازپخش کنندهٔ تور شما</string>
+    <string name="listening_port_for_your_anon_relay">درگاه شنونده برای بازپخش کنندهٔ تور شما</string>
     <string name="enter_or_port">درگاه OR را وارد کنید</string>
     <string name="relay_nickname">نام مستعار بازپخش کننده</string>
-    <string name="the_nickname_for_your_tor_relay">نام مستعار بازپخش کنندهٔ شما</string>
+    <string name="the_nickname_for_your_anon_relay">نام مستعار بازپخش کنندهٔ شما</string>
     <string name="enter_a_custom_relay_nickname">یک نام مستعار دلخواه برای بازپخش کننده وارد کنید</string>
     <string name="reachable_addresses">آدرس‌های قابل دسترس</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">بعنوان یک کارخواه پشت دیواره آتش با سیاست های محدود کننده اجرا کنید</string>
@@ -86,9 +86,9 @@
     <string name="pref_dnsport_title">درگاه ساناد تور</string>
     <string name="pref_dnsport_summary">درگاهی که تور ساناد را رویش ارائه می‌دهد (پیش‌گزیده: ۵۴۰۰ یا برای از کار انداختن: ۰)</string>
     <string name="pref_dnsport_dialog">پیکربندی درگاه ساناد</string>
-    <string name="pref_torrc_title">پیکربندی سفارشی Torrc</string>
-    <string name="pref_torrc_summary">فقط متخصصان: خط‌های پیکربندی torrc را به صورت مستقیم وارد کنید</string>
-    <string name="pref_torrc_dialog">سفارشی Torrc</string>
+    <string name="pref_anonrc_title">پیکربندی سفارشی anonrc</string>
+    <string name="pref_anonrc_summary">فقط متخصصان: خط‌های پیکربندی anonrc را به صورت مستقیم وارد کنید</string>
+    <string name="pref_anonrc_dialog">سفارشی anonrc</string>
     <string name="apps_mode">حالت وی‌پی‌ان</string>
     <string name="send_email">فرستادن رایانامه</string>
     <string name="vpn_default_world">جهانی (خودکار)</string>
@@ -106,7 +106,7 @@
     <string name="backup_restored">پشتیبان بازگردانده شد</string>
     <string name="restore_backup">برگرداندن پشتیبان</string>
     <string name="create_a_backup_first">ابتدا یک پشتیبان درست کنید</string>
-    <string name="start_tor_again_for_finish_the_process">برای پایان فرآیند، دوباره تور را آغاز کنید</string>
+    <string name="start_anon_again_for_finish_the_process">برای پایان فرآیند، دوباره تور را آغاز کنید</string>
     <string name="confirm_service_deletion">حذف خدمت را تأیید کنید</string>
     <string name="service_type">گونهٔ خدمت</string>
     <string name="please_restart_to_enable_the_changes">برای به‌کار انداختن تغییرات، روبوت پیازی را دوباره آغاز کنید</string>
@@ -156,8 +156,8 @@
     <string name="pref_disable_ipv4">از کار انداختن اتّصال‌های IPv4</string>
     <string name="pref_http_dialog">پیکربندی درگاه اچ‌تی‌تی‌پی</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">اجازه به همتایان وای‌فای، افزاره‌های وصل شده و هرکس دیگری که می‌تواند به آی‌پیتان وصل شود، برای دسترسی به تور</string>
-    <string name="testing_tor_direct_success">پیروزی. اتّصال تور خوب است!</string>
-    <string name="testing_tor_direct">آزمودن اتّصال به تور…</string>
+    <string name="testing_anon_direct_success">پیروزی. اتّصال تور خوب است!</string>
+    <string name="testing_anon_direct">آزمودن اتّصال به تور…</string>
     <string name="pref_disable_ipv4_summary">اعلام وصل نشدن به نشانی‌های IPv4 به خروجی‌ها</string>
     <string name="pref_reduced_circuit_padding">کاهش لایه‌گذاری مدار</string>
     <string name="pref_reduced_circuit_padding_summary">استفاده از الگوریتم‌های لایه‌گذاری با سربار پایین‌تر برای کاهش مصرف باتری و داده</string>
@@ -169,7 +169,7 @@
     <string name="btn_change_exit">تغییر خروجی</string>
     <string name="btn_refresh">نوسازی</string>
     <string name="captcha_title">به ما نشان دهید که انسان هستید</string>
-    <string name="menu_tor_connection">اتّصال تور</string>
+    <string name="menu_anon_connection">اتّصال تور</string>
     <string name="menu_help_others">کمک به دیگران</string>
     <string name="menu_app_settings">تنظیمات کاره</string>
     <string name="menu_faq">سوالات متداول</string>
@@ -180,7 +180,7 @@
     <string name="secure_your_connection_subtitle">نهفتن کاره از پایش شبکه و گرفتن دسترسی هنگام انسداد.</string>
     <string name="volunteer_mode_subtitle">به دیگران کمک کنید ارتباط برقرار کنند</string>
     <string name="trying_to_connect_title">در حال وصل شدن…</string>
-    <string name="btn_tor_off">تور را خاموش کنید</string>
+    <string name="btn_anon_off">تور را خاموش کنید</string>
     <string name="no_thx">نه ممنون</string>
     <string name="menu_header_features">قابلیت‌ها</string>
     <string name="strict_nodes_description">تنظیمات گره‌های مستثنی را به عنوان یک الزام برای ساخت همه مدارها در نظر بگیرید. در صورتی که هیچ مداری با تنظیمات گره‌های مستثنی شما ایجاد نشود، ممکن است عملکرد را از بین ببرد.</string>

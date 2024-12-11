@@ -193,8 +193,7 @@ class AnyoneBotActivity : BaseActivity() {
             finish()
             startActivity(Intent(this, AnyoneBotActivity::class.java))
         } else if (requestCode == REQUEST_VPN_APP_SELECT && resultCode == RESULT_OK) {
-            sendIntentToService(AnyoneBotConstants.ACTION_RESTART_VPN) // is this enough todo?
-            fragConnect.refreshMenuList(this)
+            sendIntentToService(AnyoneBotConstants.ACTION_RESTART_VPN) // is this enough to do?
         }
     }
 
@@ -223,7 +222,7 @@ class AnyoneBotActivity : BaseActivity() {
                         }
 
                         AnyoneBotConstants.STATUS_STARTING -> if (fragConnect.isAdded && fragConnect.context != null) fragConnect.doLayoutStarting(this@AnyoneBotActivity)
-                        AnyoneBotConstants.STATUS_ON -> if (fragConnect.isAdded && fragConnect.context != null) fragConnect.doLayoutOn(this@AnyoneBotActivity)
+                        AnyoneBotConstants.STATUS_ON -> if (fragConnect.isAdded && fragConnect.context != null) fragConnect.doLayoutOn()
                         AnyoneBotConstants.STATUS_STOPPING -> {}
                     }
 
@@ -232,8 +231,7 @@ class AnyoneBotActivity : BaseActivity() {
 
                 AnyoneBotConstants.LOCAL_ACTION_LOG -> {
                     intent.getStringExtra(AnyoneBotConstants.LOCAL_EXTRA_BOOTSTRAP_PERCENT)?.let {
-                        // todo progress bar shouldn't be accessed directly here, *tell* the connect fragment to update
-                        fragConnect.progressBar.progress = Integer.parseInt(it)
+                        fragConnect.setProgress(Integer.parseInt(it))
                     }
                     intent.getStringExtra(AnyoneBotConstants.LOCAL_EXTRA_LOG)?.let {
                         logBottomSheet.appendLog(it)

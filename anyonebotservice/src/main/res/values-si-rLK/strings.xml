@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot ආරම්භ කරමින්…</string>
-  <string name="status_activated">Tor ජාලයට සබැදියි</string>
+  <string name="status_activated">Anon ජාලයට සබැදියි</string>
   <string name="status_disabled">AnyoneBot ක්‍රියාවිරහිත කර ඇත </string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -15,6 +15,6 @@
     <string name="couldn_t_start_anon_process_">Anon ක්‍රියාවලින් ආරම්භ කිරීමට නොහැකි විය:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">ඔබේ සේන්දුවන ලිපිනයෙහි සිටුවම්වල ව්‍යතිරේකයක් හටගෙන ඇත!</string>
   <string name="your_relay_settings_caused_an_exception_">ඔබේ ප්‍රතියෝජක සිටුවම්වල ව්‍යතිරේකයක් හටගෙන ඇත!</string>
-    <string name="found_existing_tor_process">පවතින Tor ක්‍රියාවලි හමුවිය…</string>
-    <string name="unable_to_start_tor">Tor ආරම්භ කිරීමට නොහැකිය:</string>
+    <string name="found_existing_anon_process">පවතින Anon ක්‍රියාවලි හමුවිය…</string>
+    <string name="unable_to_start_anon">Anon ආරම්භ කිරීමට නොහැකිය:</string>
 </resources>

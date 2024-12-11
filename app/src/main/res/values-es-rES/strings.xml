@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot es una aplicación proxy gratuita que permite a otras aplicaciones utilizar Internet de forma más segura. AnyoneBot utiliza Tor para cifrar tu tráfico de Internet y luego lo oculta rebotando a través de una serie de ordenadores en todo el mundo. Tor es un software gratuito y una red abierta que te ayuda a defenderte de una forma de vigilancia de la red que amenaza la libertad y la privacidad personal, las actividades y relaciones comerciales confidenciales y la seguridad del Estado, conocida como análisis del tráfico.</string>
+    <string name="app_description">AnyoneBot es una aplicación proxy gratuita que permite a otras aplicaciones utilizar Internet de forma más segura. AnyoneBot utiliza Anon para cifrar tu tráfico de Internet y luego lo oculta rebotando a través de una serie de ordenadores en todo el mundo. Anon es un software gratuito y una red abierta que te ayuda a defenderte de una forma de vigilancia de la red que amenaza la libertad y la privacidad personal, las actividades y relaciones comerciales confidenciales y la seguridad del Estado, conocida como análisis del tráfico.</string>
     <string name="menu_settings">Ajustes</string>
     <string name="menu_log">Registro</string>
     <string name="menu_stop">Detener</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Acerca de</string>
     <string name="menu_exit">Salir</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot es una aplicación de código abierto que contiene Tor, Go-Tun2Socks y LibEvent. Proporciona un túnel VPN, un proxy HTTP Connect local (HTTPS solo en el puerto 8118) y un proxy SOCKS (9050) en la red Tor.</string>
+    <string name="wizard_details_msg">AnyoneBot es una aplicación de código abierto que contiene Anon, Go-Tun2Socks y LibEvent. Proporciona un túnel VPN, un proxy HTTP Connect local (HTTPS solo en el puerto 8118) y un proxy SOCKS (9050) en la red Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">General</string>
     <string name="pref_start_boot_title">Iniciar AnyoneBot en el arranque</string>
-    <string name="pref_start_boot_summary">Inicia AnyoneBot y conecta a Tor automáticamente cuando arranca su dispositivo Android</string>
+    <string name="pref_start_boot_summary">Inicia AnyoneBot y conecta a Anon automáticamente cuando arranca su dispositivo Android</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Huellas digitales, apodos, países y direcciones para el primer salto</string>
     <string name="pref_entrance_node_dialog">Introduzca nodos de entrada</string>
     <string name="pref_allow_background_starts_title">Permitir inicios en segundo plano</string>
-    <string name="pref_allow_background_starts_summary">Deja que cualquier aplicación le diga a AnyoneBot que inicie Tor y servicios relacionados</string>
+    <string name="pref_allow_background_starts_summary">Deja que cualquier aplicación le diga a AnyoneBot que inicie Anon y servicios relacionados</string>
     <string name="pref_proxy_title">Proxy de salida a la red (opcional)</string>
     <string name="pref_proxy_type_title">Tipo de proxy saliente</string>
     <string name="pref_proxy_type_summary">Protocolo a usar para el servidor proxy saliente: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -47,48 +47,48 @@
     <string name="pref_proxy_password_dialog">Introduzca contraseña en el proxy</string>
     <string name="error">Error</string>
     <string name="exit_nodes">Nodos de salida</string>
-    <string name="fingerprints_nicks_countries_and_addresses_for_the_last_hop">Reglas de identificación de repetidores de salida de la red Tor, mediante huellas de validación de claves (fingerprints), alias (nicks), códigos de país y direcciones (o rangos)</string>
+    <string name="fingerprints_nicks_countries_and_addresses_for_the_last_hop">Reglas de identificación de repetidores de salida de la red Anon, mediante huellas de validación de claves (fingerprints), alias (nicks), códigos de país y direcciones (o rangos)</string>
     <string name="enter_exit_nodes">Introduzca repetidores de salida</string>
     <string name="exclude_nodes">Excluír nodos</string>
-    <string name="fingerprints_nicks_countries_and_addresses_to_exclude">Reglas de identificación de repetidores a evitar en la red Tor, mediante huellas de validación de claves (fingerprints), alias (nicks), códigos de país y direcciones (o rangos)</string>
+    <string name="fingerprints_nicks_countries_and_addresses_to_exclude">Reglas de identificación de repetidores a evitar en la red Anon, mediante huellas de validación de claves (fingerprints), alias (nicks), códigos de país y direcciones (o rangos)</string>
     <string name="enter_exclude_nodes">Introduzca repetidores a evitar</string>
     <string name="strict_nodes">Hacer estricta la exclusión de nodos (incluso si falla la comunicación)</string>
     <string name="relays">Repetidores</string>
     <string name="relaying">Repetición de tráfico</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Habilita tu dispositivo para que sea un relé sin salida</string>
     <string name="relay_port">Puerto de repetidor</string>
-    <string name="listening_port_for_your_tor_relay">Puerto de escucha para tu repetidor Tor</string>
+    <string name="listening_port_for_your_anon_relay">Puerto de escucha para tu repetidor Anon</string>
     <string name="enter_or_port">Introduzca puerto OR (Onion Routing, repositorio de repetidores)</string>
     <string name="relay_nickname">Alias del repetidor</string>
-    <string name="the_nickname_for_your_tor_relay">El apodo que identificará a su repetidor en la red Tor</string>
+    <string name="the_nickname_for_your_anon_relay">El apodo que identificará a su repetidor en la red Anon</string>
     <string name="enter_a_custom_relay_nickname">Introduzca un alias personalizado para su repetidor</string>
     <string name="reachable_addresses">Reglas de direcciones accesibles ([accept(*)|reject] IP:port, etc.)</string>
-    <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Ejecutar Tor como sólo cliente detrás de un cortafuegos (firewall) con políticas restrictivas</string>
+    <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Ejecutar Anon como sólo cliente detrás de un cortafuegos (firewall) con políticas restrictivas</string>
     <string name="reachable_ports">Puertos accesibles</string>
     <string name="ports_reachable_behind_a_restrictive_firewall">Puertos accesibles detrás de un firewall restrictivo (80 y 443 por defecto)</string>
     <string name="enter_ports">Introduzca puertos</string>
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Habilitar el registro de depuración (debug log) a la salida (debe utilizar adb o aLogCat para verlo)</string>
     <string name="project_home">Página web:</string>
     <string name="third_party_software">Software de terceros:</string>
-    <string name="hidden_service_request">Una aplicación quiere abrir un servidor cebolla en el puerto %1$s a la red Tor. Esto es seguro si confías en la aplicación.</string>
-    <string name="pref_use_expanded_notifications">Mostrar en la notificación el país y la dirección IP de su nodo de salida de tor cuando esté disponible</string>
+    <string name="hidden_service_request">Una aplicación quiere abrir un servidor cebolla en el puerto %1$s a la red Anon. Esto es seguro si confías en la aplicación.</string>
+    <string name="pref_use_expanded_notifications">Mostrar en la notificación el país y la dirección IP de su nodo de salida de Anon cuando esté disponible</string>
     <string name="pref_use_expanded_notifications_title">Notificaciones expandidas</string>
     <string name="set_locale_title">Idioma</string>
     <string name="pref_disable_network_title">Sin suspensión-automática de la red</string>
-    <string name="pref_disable_network_summary">PonTor en suspensión cuando no haya Internet disponible</string>
-    <string name="newnym">¡Has cambiado a una nueva identidad de Tor!</string>
-    <string name="pref_socks_title">SOCKS de Tor</string>
-    <string name="pref_socks_summary">Puerto sobre el que Tor ofrece tu proxy SOCKS (por defecto: 9050 o 0 para deshabilitarlo)</string>
+    <string name="pref_disable_network_summary">Pon Anon en suspensión cuando no haya Internet disponible</string>
+    <string name="newnym">¡Has cambiado a una nueva identidad de Anon!</string>
+    <string name="pref_socks_title">SOCKS de Anon</string>
+    <string name="pref_socks_summary">Puerto sobre el que Anon ofrece tu proxy SOCKS (por defecto: 9050 o 0 para deshabilitarlo)</string>
     <string name="pref_socks_dialog">Configuración del puerto SOCKS</string>
-    <string name="pref_transport_title">Puerto de TransProxy de Tor</string>
-    <string name="pref_transport_summary">Puerto sobre el que Tor ofrece tu Proxy Transparente (por defecto: 9040 o 0 para deshabilitarlo)</string>
+    <string name="pref_transport_title">Puerto de TransProxy de Anon</string>
+    <string name="pref_transport_summary">Puerto sobre el que Anon ofrece tu Proxy Transparente (por defecto: 9040 o 0 para deshabilitarlo)</string>
     <string name="pref_transport_dialog">Configuración del puerto de TransProxy</string>
-    <string name="pref_dnsport_title">Puerto DNS de Tor</string>
-    <string name="pref_dnsport_summary">Puerto sobre el que Tor ofrece su DNS (por defecto: 5400 o 0 para deshabilitarlo)</string>
+    <string name="pref_dnsport_title">Puerto DNS de Anon</string>
+    <string name="pref_dnsport_summary">Puerto sobre el que Anon ofrece su DNS (por defecto: 5400 o 0 para deshabilitarlo)</string>
     <string name="pref_dnsport_dialog">Configuración del puerto DNS</string>
-    <string name="pref_torrc_title">Configuración personalizada de Torrc</string>
-    <string name="pref_torrc_summary">SÓLO EXPERTOS: Introduce directamente las líneas de configuración en el fichero torrc</string>
-    <string name="pref_torrc_dialog">Torrc personalizado</string>
+    <string name="pref_anonrc_title">Configuración personalizada de anonrc</string>
+    <string name="pref_anonrc_summary">SÓLO EXPERTOS: Introduce directamente las líneas de configuración en el fichero anonrc</string>
+    <string name="pref_anonrc_dialog">anonrc personalizado</string>
     <string name="apps_mode">Modo VPN</string>
     <string name="send_email">Enviar correo</string>
     <string name="vpn_default_world">Global (Automático)</string>
@@ -106,7 +106,7 @@
     <string name="backup_restored">Copia de seguridad restaurada</string>
     <string name="restore_backup">Restaurar copia de seguridad</string>
     <string name="create_a_backup_first">Primero cree una copia de seguridad</string>
-    <string name="start_tor_again_for_finish_the_process">Inicie Tor de nuevo para finalizar el proceso</string>
+    <string name="start_anon_again_for_finish_the_process">Inicie Anon de nuevo para finalizar el proceso</string>
     <string name="confirm_service_deletion">Confirme el borrado del servicio</string>
     <string name="service_type">Tipo de servicio</string>
     <string name="please_restart_to_enable_the_changes">Por favor, reinicia AnyoneBot para habilitar los cambios</string>
@@ -122,13 +122,13 @@
     <string name="pref_connection_padding_summary">Habilita siempre el relleno de la conexión como defensa contra algunas formas de análisis de tráfico. Predeterminado: Automático</string>
     <string name="pref_reduced_connection_padding">Relleno de la conexión reducido</string>
     <string name="pref_reduced_connection_padding_summary">Cierra las conexiones de repetidor más pronto y envía menos paquetes de relleno para reducir el uso de datos y batería</string>
-    <string name="app_shortcuts">Aplicaciones habilitadas-para-Tor</string>
+    <string name="app_shortcuts">Aplicaciones habilitadas-para-Anon</string>
     <string name="trouble_connecting">¿Problemas de conexión\?</string>
     <string name="full_device_vpn">VPN de dispositivo completo</string>
     <string name="vpn_disabled">VPN deshabilitada</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Proxy Abierto en Todas las Interfaces</string>
-    <string name="pref_http_title">Tor HTTP</string>
-    <string name="pref_http_summary">Puerto en el que Tor ofrece su proxy HTTP (predeterminado: 8118 o 0 para deshabilitar)</string>
+    <string name="pref_http_title">Anon HTTP</string>
+    <string name="pref_http_summary">Puerto en el que Anon ofrece su proxy HTTP (predeterminado: 8118 o 0 para deshabilitar)</string>
     <string name="pref_http_dialog">Configuración del puerto HTTP</string>
     <string name="refresh_apps">Refrescar aplicaciones</string>
     <string name="app_services">Servicios de aplicaciones</string>
@@ -138,7 +138,7 @@
     <string name="pref_disable_ipv4">Deshabilitar las conexiones IPv4</string>
     <string name="pref_prefer_ipv6_summary">Indica a las salidas que se prefieren las direcciones IPv6</string>
     <string name="pref_prefer_ipv6">Preferir conexiones IPv6</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Permitir que tus compañeros de Wi-Fi, dispositivos conectados y cualquier otra persona que pueda conectarse a tu IP pueda acceder a Tor</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Permitir que tus compañeros de Wi-Fi, dispositivos conectados y cualquier otra persona que pueda conectarse a tu IP pueda acceder a Anon</string>
     <string name="allow">Permitir</string>
     <string name="deny">Denegar</string>
     <string name="pref_circuit_padding">Relleno de circuito</string>
@@ -156,7 +156,7 @@
     <string name="no_thx">No, gracias</string>
     <string name="menu_header_features">Características</string>
     <string name="captcha_title">Haznos saber que eres humano</string>
-    <string name="menu_tor_connection">Conexión Tor</string>
+    <string name="menu_anon_connection">Conexión Anon</string>
     <string name="menu_help_others">Ayudar a los demás</string>
     <string name="menu_app_settings">Configuración de la aplicación</string>
     <string name="menu_faq">FAQ</string>
@@ -169,8 +169,8 @@
     <string name="pref_circuit_padding_summary">Habilita el relleno de circuitos para defenderte de algunas formas de análisis de tráfico</string>
     <string name="pref_reduced_circuit_padding">Reducción del relleno del circuito</string>
     <string name="pref_reduced_circuit_padding_summary">Utilizar algoritmos de relleno de menor carga para reducir el uso de datos y de la batería</string>
-    <string name="testing_tor_direct">Probando la conexión con Tor…</string>
-    <string name="testing_tor_direct_success">Éxito. ¡La conexión Tor es buena!</string>
+    <string name="testing_anon_direct">Probando la conexión con Anon…</string>
+    <string name="testing_anon_direct_success">Éxito. ¡La conexión Anon es buena!</string>
     <string name="kibibyte">KiB</string>
     <string name="mebibyte">MiB</string>
     <string name="v3_client_auth_activity_title">Autorización del cliente</string>
@@ -182,9 +182,9 @@
     <string name="v3_onion">Dominio .onion</string>
     <string name="strict_nodes_description">Trate la configuración de los Nodos Excluidos como un requisito para construir todos los circuitos. Esto puede romper la funcionalidad si no se pueden generar circuitos con su configuración de Nodos Excluidos.</string>
     <string name="btn_refresh">Actualizar</string>
-    <string name="btn_tor_off">Apagar Tor</string>
+    <string name="btn_anon_off">Apagar Anon</string>
     <string name="secure_your_connection_subtitle">Oculta las aplicaciones de la supervisión de la red y obten acceso cuando estén bloqueadas.</string>
-    <string name="configure_header">Configura tu conexión Tor</string>
+    <string name="configure_header">Configura tu conexión Anon</string>
     <string name="drawer_open">Abrir</string>
     <string name="drawer_close">Cerrar</string>
     <string name="proxy_ports">Puerto de Proxy</string>
@@ -193,7 +193,7 @@
     <string name="ports_not_set">Puertos no configurados</string>
     <string name="incorrect_solution">Solución incorrecta</string>
     <string name="power_user_mode">Modo de usuario avanzado</string>
-    <string name="power_user_description">Para usuarios familiarizados con Tor. Permite iniciar AnyoneBot sin la configuración de la VPN y muestra los puertos SOCKS y HTTP abiertos</string>
+    <string name="power_user_description">Para usuarios familiarizados con Anon. Permite iniciar AnyoneBot sin la configuración de la VPN y muestra los puertos SOCKS y HTTP abiertos</string>
     <string name="action_activate">Activar</string>
     <string name="volunteer_status_title">Hoy es mejor
 \ngracias a ti.</string>
@@ -204,7 +204,7 @@
     <string name="hide_apps">Oculte las aplicaciones de la supervisión de la red y obtenga acceso a ellas cuando estén bloqueadas.</string>
     <string name="log_copied">Registro copiado</string>
     <string name="not_sure">¿No estas segura\?</string>
-    <string name="many_ways">Hay muchas formas de conectarse a Tor. Algunas pueden funcionar mejor que otras para ti.</string>
+    <string name="many_ways">Hay muchas formas de conectarse a Anon. Algunas pueden funcionar mejor que otras para ti.</string>
     <string name="action_use">Uso</string>
     <string name="asking">PREGUNTANDO…</string>
     <string name="no_internet_title">Conectarse a Internet</string>

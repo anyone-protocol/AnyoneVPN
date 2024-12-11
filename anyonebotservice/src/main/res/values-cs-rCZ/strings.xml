@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot se spouští…</string>
-  <string name="status_activated">Připojen k síti Tor</string>
+  <string name="status_activated">Připojen k síti Anon</string>
   <string name="status_disabled">AnyoneBot je deaktivován</string>
   <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -15,7 +15,7 @@
     <string name="couldn_t_start_anon_process_">Nelze spustit anon proces:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Vaše nastavení dostupných adres (ReachableAddresses) způsobilo chybu!</string>
   <string name="your_relay_settings_caused_an_exception_">Vaše nastavení relace způsobilo výjimku!</string>
-    <string name="found_existing_tor_process">nalezev existující Tor proces…</string>
-    <string name="unable_to_start_tor">Nelze spustit Tor:</string>
-    <string name="newnym">Vaše identita na Toru byla změněna!</string>
+    <string name="found_existing_anon_process">nalezev existující Anon proces…</string>
+    <string name="unable_to_start_anon">Nelze spustit Anon:</string>
+    <string name="newnym">Vaše identita na Anonu byla změněna!</string>
 </resources>

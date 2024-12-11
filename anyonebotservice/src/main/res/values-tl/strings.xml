@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">Nagsisimula na ang AnyoneBot…</string>
-  <string name="status_activated">Konektado sa Tor network</string>
+  <string name="status_activated">Konektado sa Anon network</string>
   <string name="status_disabled">Naka-deactivate ang AnyoneBot</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -15,7 +15,7 @@
     <string name="couldn_t_start_anon_process_">Hindi ma umpisahan ang proseso ng anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Ang iyong ReachableAddresses settings ay nag sanhi ng exception!</string>
   <string name="your_relay_settings_caused_an_exception_">Ang iyong relay settings ay nag sanhi ng exception!</string>
-    <string name="found_existing_tor_process"> nakakita ng umiiral na Tor process…</string>
-    <string name="unable_to_start_tor">Hindi masimulan ang Tor:</string>
-    <string name="newnym">Ikaw ay nagpalit ng bagong pagkakakilanlan sa Tor!</string>
+    <string name="found_existing_anon_process"> nakakita ng umiiral na Anon process…</string>
+    <string name="unable_to_start_anon">Hindi masimulan ang Anon:</string>
+    <string name="newnym">Ikaw ay nagpalit ng bagong pagkakakilanlan sa Anon!</string>
 </resources>

@@ -16,6 +16,6 @@
     <string name="couldn_t_start_anon_process_">Није могуће покренути anon процес:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Ваше ReachableAddresses поставке су изазвале изузетак!</string>
   <string name="your_relay_settings_caused_an_exception_">Ваше поставке релеја су изазвале изузетак!</string>
-    <string name="found_existing_tor_process">нађен покренути Тор процес…</string>
-    <string name="unable_to_start_tor">Тор није у могућности да се покрене:</string>
+    <string name="found_existing_anon_process">нађен покренути Anon процес…</string>
+    <string name="unable_to_start_anon">Anon није у могућности да се покрене:</string>
 </resources>

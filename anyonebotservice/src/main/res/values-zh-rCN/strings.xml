@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBot 是一款免费的代理应用，能够让其他应用更安全地使用互联网。通过在位于世界各地的一系列计算机之间进行跳转，AnyoneBot 可利用 Tor 对网络通信进行加密并隐藏。Tor 是一款免费的软件，并且是一个开放的网络。它可以保护用户免受流量分析的危害，这种网络监控可对个人自由与隐私、商业机密活动和关系以及国家安全造成威胁。</string>
+  <string name="app_description">AnyoneBot 是一款免费的代理应用，能够让其他应用更安全地使用互联网。通过在位于世界各地的一系列计算机之间进行跳转，AnyoneBot 可利用 Anon 对网络通信进行加密并隐藏。Anon 是一款免费的软件，并且是一个开放的网络。它可以保护用户免受流量分析的危害，这种网络监控可对个人自由与隐私、商业机密活动和关系以及国家安全造成威胁。</string>
     <string name="status_starting_up">AnyoneBot 正在启动…</string>
-  <string name="status_activated">已连接到 Tor 网络</string>
+  <string name="status_activated">已连接到 Anon 网络</string>
   <string name="status_disabled">AnyoneBot 已停用</string>
-  <string name="status_shutting_down">Tor服务 正在关闭</string>
+  <string name="status_shutting_down">Anon服务 正在关闭</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->
@@ -17,10 +17,10 @@
     <string name="couldn_t_start_anon_process_">无法启动 anon 进程：</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">可访问地址设置导致异常！</string>
   <string name="your_relay_settings_caused_an_exception_">中继设置导致异常！</string>
-    <string name="found_existing_tor_process">发现当前已存在 Tor 进程…</string>
-    <string name="unable_to_start_tor">无法启动 Tor：</string>
-    <string name="newnym">已切换为新的 Tor 标识！</string>
-    <string name="updating_settings_in_tor_service">正在更新 Tor 服务中的设置</string>
+    <string name="found_existing_anon_process">发现当前已存在 Anon 进程…</string>
+    <string name="unable_to_start_anon">无法启动 Anon：</string>
+    <string name="newnym">已切换为新的 Anon 标识！</string>
+    <string name="updating_settings_in_anon_service">正在更新 Anon 服务中的设置</string>
   <string name="mebibyte_per_second">MiB/秒</string>
   <string name="kibibyte_per_second">KiB/秒</string>
 </resources>

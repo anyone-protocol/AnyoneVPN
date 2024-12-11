@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBot jest darmową aplikacją proxy która wspomaga inne aplikacje do używania internetu bezpiecznie. AnyoneBot używa Tora do szyfrowania Twojego ruchu internetowego i następnie przepuszczania go przez wiele innych komputereów pororzucanych na całym świecie. Tor jest darmowym oprogramowaniem i otwartą siecią która pomaga Tobie w obronie przed monitoringiem sieci która zagrarza osobistej wolności i prywatności, poufnym biznesowym aktywnościom.</string>
+  <string name="app_description">AnyoneBot jest darmową aplikacją proxy która wspomaga inne aplikacje do używania internetu bezpiecznie. AnyoneBot używa Anona do szyfrowania Twojego ruchu internetowego i następnie przepuszczania go przez wiele innych komputereów pororzucanych na całym świecie. Anon jest darmowym oprogramowaniem i otwartą siecią która pomaga Tobie w obronie przed monitoringiem sieci która zagrarza osobistej wolności i prywatności, poufnym biznesowym aktywnościom.</string>
     <string name="status_starting_up">AnyoneBot startuje…</string>
-  <string name="status_activated">Podłączony do sieci Tor</string>
+  <string name="status_activated">Podłączony do sieci Anon</string>
   <string name="status_disabled">AnyoneBot wyłączony</string>
-  <string name="status_shutting_down">TorService wyłącza się</string>
+  <string name="status_shutting_down">Anon wyłącza się</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->
@@ -17,8 +17,8 @@
     <string name="couldn_t_start_anon_process_">Nie można było zainicjować procesu anona:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Twoje ustawienia dostępnych adresów spowodowały wyjątek!</string>
   <string name="your_relay_settings_caused_an_exception_">Ustawienia Twojego przekaźnika spowodowały wyjątek!</string>
-    <string name="found_existing_tor_process">znaleziono istniejący proces Tora…</string>
-    <string name="unable_to_start_tor">Nie można wystartować aplikacji Tor:</string>
-    <string name="newnym">Nowa tożsamość Tor\'a została zmieniona!</string>
-    <string name="updating_settings_in_tor_service">aktualizowanie ustawień w serwisie Tor</string>
+    <string name="found_existing_anon_process">znaleziono istniejący proces Anona…</string>
+    <string name="unable_to_start_anon">Nie można wystartować aplikacji Anon:</string>
+    <string name="newnym">Nowa tożsamość Anon\'a została zmieniona!</string>
+    <string name="updating_settings_in_anon_service">aktualizowanie ustawień w serwisie Anon</string>
 </resources>

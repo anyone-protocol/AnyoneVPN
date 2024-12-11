@@ -122,7 +122,7 @@
             android:dialogTitle="@string/enter_or_port"
             android:inputType="number"
             android:key="pref_or_port"
-            android:summary="@string/listening_port_for_your_tor_relay"
+            android:summary="@string/listening_port_for_your_anon_relay"
             android:title="@string/relay_port"
             app:iconSpaceReserved="false"
             />
@@ -131,7 +131,7 @@
             android:defaultValue="AnyoneBotRelay"
             android:dialogTitle="@string/enter_a_custom_relay_nickname"
             android:key="pref_or_nickname"
-            android:summary="@string/the_nickname_for_your_tor_relay"
+            android:summary="@string/the_nickname_for_your_anon_relay"
             android:title="@string/relay_nickname"
             app:iconSpaceReserved="false"
             />
@@ -334,11 +334,11 @@
             />
 
         <EditTextPreference
-            android:dialogTitle="@string/pref_torrc_dialog"
+            android:dialogTitle="@string/pref_anonrc_dialog"
             android:inputType="textMultiLine|textNoSuggestions"
             android:key="pref_custom_torrc"
-            android:summary="@string/pref_torrc_summary"
-            android:title="@string/pref_torrc_title"
+            android:summary="@string/pref_anonrc_summary"
+            android:title="@string/pref_anonrc_title"
             app:iconSpaceReserved="false"
             />
 

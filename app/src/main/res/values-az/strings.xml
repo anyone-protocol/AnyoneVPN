@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">Pulsuz proksi tətbiqetməsi olan AnyoneBot başqa tətbiqetmələrə internetdən daha təhlükəsiz istifadə etmək imkanı verir. AnyoneBot sizin internet trafikinizi şifrələmək üçün Tordan istifadə edir və dünyanın hər yerində kompüterlərin birindən o birinə sıçramaqla bunu gizlədir. Tor pulsuz proqram təminatıdır, eyni zamanda sizin şəxsi azadlığınız və təhlükəsizliyinizə, gizli biznes fəaliyyəti və əlaqələrə, o cümlədən trafik analiz adlanan dövlət təhlükəsizliyinə xələl gətirə biləcək şəbəkə nəzarəti formalarından müdafiə olunmağa yardım edən açıq şəbəkədir.</string>
+    <string name="app_description">Pulsuz proksi tətbiqetməsi olan AnyoneBot başqa tətbiqetmələrə internetdən daha təhlükəsiz istifadə etmək imkanı verir. AnyoneBot sizin internet trafikinizi şifrələmək üçün Anondan istifadə edir və dünyanın hər yerində kompüterlərin birindən o birinə sıçramaqla bunu gizlədir. Anon pulsuz proqram təminatıdır, eyni zamanda sizin şəxsi azadlığınız və təhlükəsizliyinizə, gizli biznes fəaliyyəti və əlaqələrə, o cümlədən trafik analiz adlanan dövlət təhlükəsizliyinə xələl gətirə biləcək şəbəkə nəzarəti formalarından müdafiə olunmağa yardım edən açıq şəbəkədir.</string>
     <string name="menu_settings">Quraşdırmalar</string>
     <string name="menu_log">Jurnal</string>
     <string name="menu_stop">Dur</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Əsas</string>
     <string name="pref_start_boot_title">Android Açıldıqda AnyoneBotu Başlat</string>
-    <string name="pref_start_boot_summary">Android cihazın işə başladıqda avtomatik olaraq AnyoneBot başlansın və Tor-a qoşulsun</string>
+    <string name="pref_start_boot_summary">Android cihazın işə başladıqda avtomatik olaraq AnyoneBot başlansın və Anon-a qoşulsun</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Birinci sıçrayış üçün barmaq izləri, nişanlar, ölkələr və ünvanlar</string>
     <string name="pref_entrance_node_dialog">Giriş Kəsişmələrini Əlavə et</string>
     <string name="pref_allow_background_starts_title">Arxa fonun işə başlamasına icazə verin</string>
-    <string name="pref_allow_background_starts_summary">Qoy hər-hansı tətbiqetmə AnyoneBota Tor və əlaqəli xidmətləri işə salmalı olduğunu desin</string>
+    <string name="pref_allow_background_starts_summary">Qoy hər-hansı tətbiqetmə AnyoneBota Anon və əlaqəli xidmətləri işə salmalı olduğunu desin</string>
     <string name="pref_proxy_title">İxrac Edilən Şəbəkə Proksisi (istəyə bağlı)</string>
     <string name="pref_proxy_type_title">İxrac Edilən Proksi Növü</string>
     <string name="pref_proxy_type_summary">Proksi serveri istifadə etmək üçün protokol: HTTP, HTTPS, Socks4, Socks5</string>
@@ -56,10 +56,10 @@
     <string name="relaying">Keçidləmə</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Cihazının son-keçid funksiyasını aktivləşdir</string>
     <string name="relay_port">Keçid Portu</string>
-    <string name="listening_port_for_your_tor_relay">Tor keçidin üçün portun dinlənməsi</string>
+    <string name="listening_port_for_your_anon_relay">Anon keçidin üçün portun dinlənməsi</string>
     <string name="enter_or_port">OR port daxil et</string>
     <string name="relay_nickname">Keçid adı</string>
-    <string name="the_nickname_for_your_tor_relay">Tor keçidin üçün ad</string>
+    <string name="the_nickname_for_your_anon_relay">Anon keçidin üçün ad</string>
     <string name="enter_a_custom_relay_nickname">İlkin keçidə ad daxil et</string>
     <string name="reachable_addresses">Əlçatan Ünvanlar</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Məhdudlaşmış siyasətlə qoruyucu divar arxasındakı müştəri kimi işlət</string>
@@ -69,24 +69,24 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">məhsul üçün sazlama girişi daxil et (baxmaq üçün adb və ya aLogCat istifadə etməlisən)</string>
     <string name="project_home">Layihə Evi:</string>
     <string name="third_party_software">Xidməti Quraşdırma:</string>
-    <string name="pref_use_expanded_notifications">Mövcud olduqda bildirişdə tor çıxış qovşağınızın ölkəsini və IP ünvanını göstərin</string>
+    <string name="pref_use_expanded_notifications">Mövcud olduqda bildirişdə Anon çıxış qovşağınızın ölkəsini və IP ünvanını göstərin</string>
     <string name="pref_use_expanded_notifications_title">Ətraflı bildirişlər</string>
     <string name="set_locale_title">Dil</string>
     <string name="pref_disable_network_title">Avto-Yuxu Şəbəkəsi Yoxdur</string>
-    <string name="pref_disable_network_summary">İnternet olmadıqda icazə ver Tor yatsın</string>
-    <string name="newnym">Yeni Tor oxşarına qoşuldun!</string>
-    <string name="pref_socks_title">Tor SOCKS</string>
-    <string name="pref_socks_summary">Torun təklif etdiyi Port SOCKS proksi işləyir (standart: 9050, yaxud söndürmək üçün 0) </string>
+    <string name="pref_disable_network_summary">İnternet olmadıqda icazə ver Anon yatsın</string>
+    <string name="newnym">Yeni Anon oxşarına qoşuldun!</string>
+    <string name="pref_socks_title">Anon SOCKS</string>
+    <string name="pref_socks_summary">Anonun təklif etdiyi Port SOCKS proksi işləyir (standart: 9050, yaxud söndürmək üçün 0) </string>
     <string name="pref_socks_dialog">SOCKS Port Konfiqurasiyası</string>
-    <string name="pref_transport_title">Tor TransProxy Portu</string>
-    <string name="pref_transport_summary">Torun təklif etdiyi Port Transparent proksi işləyir (standart: 9040, yaxud söndürmək üçün 0) </string>
+    <string name="pref_transport_title">Anon TransProxy Portu</string>
+    <string name="pref_transport_summary">Anonun təklif etdiyi Port Transparent proksi işləyir (standart: 9040, yaxud söndürmək üçün 0) </string>
     <string name="pref_transport_dialog">TransProxy Port Konfiqurasiyası</string>
-    <string name="pref_dnsport_title">Tor DNS Port</string>
-    <string name="pref_dnsport_summary">Torun təklif etdiyi Port DNS işləyir (standart: 5400, yaxud söndürmək üçün 0)</string>
+    <string name="pref_dnsport_title">Anon DNS Port</string>
+    <string name="pref_dnsport_summary">Anonun təklif etdiyi Port DNS işləyir (standart: 5400, yaxud söndürmək üçün 0)</string>
     <string name="pref_dnsport_dialog">DNS Port Konfiqurasiyası</string>
-    <string name="pref_torrc_title">Torrc Xüsusi Konfiqurasiya</string>
-    <string name="pref_torrc_summary">YALNIZ EKSPERTLƏR: birbaşa torrc config xətlərini daxil edin</string>
-    <string name="pref_torrc_dialog">Xüsusi Torrc</string>
+    <string name="pref_anonrc_title">Anonrc Xüsusi Konfiqurasiya</string>
+    <string name="pref_anonrc_summary">YALNIZ EKSPERTLƏR: birbaşa anonrc config xətlərini daxil edin</string>
+    <string name="pref_anonrc_dialog">Xüsusi anonrc</string>
     <string name="send_email">Emeyl göndərin</string>
     <string name="save">Saxla</string>
     <string name="name">Ad</string>
@@ -121,10 +121,10 @@
     <string name="onion_port">Soğan limanı</string>
     <string name="restore_backup">Ehtiyyatda olanı bərpa etmə</string>
     <string name="v3_backup_key">Yedək Müştəri Avtorizasiya Açarı</string>
-    <string name="wizard_details_msg">AnyoneBot Tor, Go-Tun2Socks və LibEvent ehtiva edən açıq mənbəli proqramdır. Tor şəbəkəsinə VPN tuneli, yerli HTTP Connect proksisi (yalnız 8118 portunda HTTPS) və SOCKS proksisi (9050) təmin edir.</string>
+    <string name="wizard_details_msg">AnyoneBot Anon, Go-Tun2Socks və LibEvent ehtiva edən açıq mənbəli proqramdır. Anon şəbəkəsinə VPN tuneli, yerli HTTP Connect proksisi (yalnız 8118 portunda HTTPS) və SOCKS proksisi (9050) təmin edir.</string>
     <string name="pref_reduced_circuit_padding_summary">Data və batareyanın istifadəsini azaltmaq üçün aşağı yerüstü doldurma alqoritmlərindən istifadə edin</string>
     <string name="copy_address_to_clipboard">Ünvanı panoya kopyalayın</string>
-    <string name="hidden_service_request">Tətbiq %1$s portunda soğan serverini Tor şəbəkəsinə açmaq istəyir. Tətbiqə etibar edirsinizsə, bu təhlükəsizdir.</string>
+    <string name="hidden_service_request">Tətbiq %1$s portunda soğan serverini Anon şəbəkəsinə açmaq istəyir. Tətbiqə etibar edirsinizsə, bu təhlükəsizdir.</string>
     <string name="vpn_default_world">Qlobal (Avtomatik)</string>
     <string name="pref_isolate_port_summary">Hər təyinat portu üçün fərqli dövrədən istifadə edin</string>
     <string name="pref_isolate_dest">Təyinat ünvanlarını təcrid edin</string>
@@ -135,7 +135,7 @@
     <string name="consider_enable_battery_optimizations">Heç bir hosting xidməti işləmir, batareyanın optimallaşdırılmasını aktivləşdirin</string>
     <string name="trouble_connecting">Qoşulmaqda problem var\?</string>
     <string name="menu_hidden_services">Soğan xidmətləri</string>
-    <string name="testing_tor_direct">Tor ilə əlaqə yoxlanılır…</string>
+    <string name="testing_anon_direct">Anon ilə əlaqə yoxlanılır…</string>
     <string name="delete_service">Xidməti Sil</string>
     <string name="v3_backup_name_hint">Fayl adının ehtiyat nüsxəsi…</string>
     <string name="pref_disable_ipv4">IPv4 bağlantılarını söndürün</string>
@@ -146,7 +146,7 @@
     <string name="license">Lisenziya:</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Bütün İnterfeyslərdə Proksi açın</string>
     <string name="v3_import_auth_private">.auth_private faylını idxal edin</string>
-    <string name="pref_http_title">Tor HTTP</string>
+    <string name="pref_http_title">Anon HTTP</string>
     <string name="pref_prefer_ipv6_summary">Çıxışlara IPv6 ünvanlarına üstünlük verildiyini bildirir</string>
     <string name="deny">İnkar et</string>
     <string name="refresh_apps">Proqramları yeniləyin</string>
@@ -156,7 +156,7 @@
     <string name="backup_port_exist">Xəta: Onion xidməti artıq %s portundan istifadə edir</string>
     <string name="backup_service">Yedəkləmə Xidməti <i>(Xəbərdarlıq: Bu, Xidmət Konfiqurasiyanızı Digər Tətbiqlərə Aşa bilər)</i></string>
     <string name="service_type">Xidmət növü</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Wi-Fi həmyaşıdlarına, bağlı cihazlara və IP-yə qoşula bilən hər kəsə Tor-a daxil olmağa icazə verin</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Wi-Fi həmyaşıdlarına, bağlı cihazlara və IP-yə qoşula bilən hər kəsə Anon-a daxil olmağa icazə verin</string>
     <string name="create_a_backup_first">Əvvəlcə ehtiyat nüsxəsini yaradın</string>
     <string name="pref_connection_padding">Qoşulma örtüyü</string>
     <string name="share_as_qr">QR kimi paylaşın</string>
@@ -166,13 +166,13 @@
     <string name="v3_delete_client_authorization">Müştəri Avtorizasiya Açarını silin</string>
     <string name="pref_isolate_protocol_summary">Hər bir əlaqə protokolu üçün fərqli bir dövrə istifadə edin</string>
     <string name="confirm_service_deletion">Xidmətin silinməsini təsdiqləyin</string>
-    <string name="app_shortcuts">Tor-u aktivləşdirən proqramlar</string>
-    <string name="testing_tor_direct_success">Uğur. Tor bağlantısı yaxşıdır!</string>
+    <string name="app_shortcuts">Anon-u aktivləşdirən proqramlar</string>
+    <string name="testing_anon_direct_success">Uğur. Anon bağlantısı yaxşıdır!</string>
     <string name="strict_nodes_description">İstisna qovşaqlarının parametrlərini bütün sxemlərin qurulması üçün tələb kimi qəbul edin. İstisna Qovşaqları parametrlərinizlə heç bir sxem yaratmaq mümkün olmadıqda, bu, funksionallığı poza bilər.</string>
-    <string name="start_tor_again_for_finish_the_process">Prosesi başa çatdırmaq üçün Tor-u yenidən başladın</string>
+    <string name="start_anon_again_for_finish_the_process">Prosesi başa çatdırmaq üçün Anon-u yenidən başladın</string>
     <string name="hidden_services">Soğan xidmətləri</string>
     <string name="v3_delete_client_authorization_confirm">Müştəri Avtorizasiyasını silin</string>
-    <string name="pref_http_summary">Torun HTTP proxy-ni təklif etdiyi port (defolt: 8118 və ya 0 söndürmək üçün)</string>
+    <string name="pref_http_summary">Anonun HTTP proxy-ni təklif etdiyi port (defolt: 8118 və ya 0 söndürmək üçün)</string>
     <string name="pref_reduced_connection_padding_summary">Rele bağlantılarını daha tez bağlayır və data və batareya istifadəsini azaltmaq üçün daha az doldurma paketləri göndərir</string>
     <string name="apps_mode">VPN rejimi</string>
     <string name="local_port">Yerli liman</string>
@@ -185,11 +185,11 @@
     <string name="btn_choose_apps">Proqramları seçin</string>
     <string name="volunteer_mode_subtitle">Başqalarına qoşulmağa kömək edin</string>
     <string name="secure_your_connection_subtitle">Tətbiqləri şəbəkə monitorinqindən gizlədin və bloklandıqda giriş əldə edin.</string>
-    <string name="btn_tor_off">Tor-u söndürün</string>
+    <string name="btn_anon_off">Anon-u söndürün</string>
     <string name="btn_change_exit">Çıxışı dəyişdirin</string>
     <string name="btn_start_vpn">VPN işə salın</string>
     <string name="secure_your_connection_title">Qoşulmağa hazırdır</string>
-    <string name="configure_header">Tor bağlantınızı konfiqurasiya edin</string>
+    <string name="configure_header">Anon bağlantınızı konfiqurasiya edin</string>
     <string name="hide_apps">Tətbiqləri şəbəkə monitorinqindən gizlədin və bloklandıqda giriş əldə edin.</string>
     <string name="proxy_ports">Proksi Portlar</string>
     <string name="msg_try_something_else">Başqa bir şey cəhd edin</string>
@@ -203,8 +203,8 @@
     <string name="log_copied">Qeyd kopyalandı</string>
     <string name="btn_copy_log">Qeydi Kopyala</string>
     <string name="menu_header_learn">Daha ətraflı</string>
-    <string name="menu_tor_connection">Tor bağlantısı</string>
-    <string name="power_user_description">Tor ilə tanış olan istifadəçilər üçün. VPN ayarı olmadan AnyoneBot-u işə salmağa imkan verir və açıq SOCKS və HTTP portlarını göstərir</string>
+    <string name="menu_anon_connection">Anon bağlantısı</string>
+    <string name="power_user_description">Anon ilə tanış olan istifadəçilər üçün. VPN ayarı olmadan AnyoneBot-u işə salmağa imkan verir və açıq SOCKS və HTTP portlarını göstərir</string>
     <string name="menu_app_settings">Tətbiq Parametrləri</string>
     <string name="incorrect_solution">Yanlış Həll</string>
     <string name="app_suggested_subtitle">AnyoneBot mesajlaşma və sosial media proqramları ilə ən yaxşı şəkildə işləyir.</string>
@@ -224,5 +224,5 @@
     <string name="pref_flag_secure_title">Ekran Təhlükəsizliyi</string>
     <string name="root_warning">AnyoneBot cihazınızın köklü olduğunu aşkar etdi və bu, təhlükəsizlik problemlərinə səbəb ola bilər.</string>
     <string name="pref_flag_secure_summary">Digər proqramların AnyoneBotun skrinşotlarını çəkməsinə mane olun</string>
-    <string name="many_ways">Tor-a çatmağın bir çox yolu var. Bəziləri sizin üçün digərlərindən daha yaxşı işləyə bilər.</string>
+    <string name="many_ways">Anon-a çatmağın bir çox yolu var. Bəziləri sizin üçün digərlərindən daha yaxşı işləyə bilər.</string>
 </resources>

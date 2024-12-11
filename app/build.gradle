@@ -27,9 +27,15 @@ android {
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         archivesBaseName = "AnyoneBot"
     }
+
     compileOptions {
 //        coreLibraryDesugaringEnabled true
     }
+
+    viewBinding {
+        enabled = true
+    }
+
     buildTypes {
         release {
             shrinkResources false

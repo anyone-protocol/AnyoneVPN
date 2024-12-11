@@ -5,35 +5,24 @@
     android:layout_height="match_parent"
     tools:context=".MoreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <ListView
-        android:drawSelectorOnTop="true"
-        android:layout_marginTop="10dp"
-        android:dividerHeight="1dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
+        android:id="@+id/lvMoreActions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lvMoreActions"/>
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:dividerHeight="1dp"
+        android:drawSelectorOnTop="true" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvVersion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:orientation="horizontal"
-        >
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/orbion"
-            android:layout_margin="12dp"
-            />
-    <TextView
-        android:id="@+id/tvVersion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AnyoneBot vX.X.X"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="100dp"
-        />
-    </LinearLayout>
+        android:text="AnyoneBot vX.X.X"
+        tools:ignore="HardcodedText" />
+
 </FrameLayout>

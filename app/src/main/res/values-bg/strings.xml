@@ -56,10 +56,10 @@
     <string name="relaying">Препращане</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Устройството да бъде неизходен препращач</string>
     <string name="relay_port">Порт за препращане</string>
-    <string name="listening_port_for_your_tor_relay">Порт за слушане при препращане на Тор</string>
+    <string name="listening_port_for_your_anon_relay">Порт за слушане при препращане на Тор</string>
     <string name="enter_or_port">Въведете порт на OR</string>
     <string name="relay_nickname">Псевдоним на препращача</string>
-    <string name="the_nickname_for_your_tor_relay">Псевдоним на вашия препращач на Тор</string>
+    <string name="the_nickname_for_your_anon_relay">Псевдоним на вашия препращач на Тор</string>
     <string name="enter_a_custom_relay_nickname">Въведете псевдонима</string>
     <string name="reachable_addresses">Достижими адреси</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Стартиране като клиент зад защитна стена с ограничителна политика</string>
@@ -84,9 +84,9 @@
     <string name="pref_dnsport_title">Порт за DNS на Тор</string>
     <string name="pref_dnsport_summary">Порт, на който Тор предлага услуга за DNS (подразбиран: 5400 или 0 за изключване)</string>
     <string name="pref_dnsport_dialog">Настройка на порта за DNS</string>
-    <string name="pref_torrc_title">Потребителски настройки на Torrc</string>
-    <string name="pref_torrc_summary">ЗА ЕКСПЕРТИ: въведете редовете с настройки за torrc</string>
-    <string name="pref_torrc_dialog">Потребителски Torrc</string>
+    <string name="pref_anonrc_title">Потребителски настройки на anonrc</string>
+    <string name="pref_anonrc_summary">ЗА ЕКСПЕРТИ: въведете редовете с настройки за anonrc</string>
+    <string name="pref_anonrc_dialog">Потребителски anonrc</string>
     <string name="send_email">Изпращане на писмо</string>
     <string name="hidden_services">Услуги на Onion</string>
     <string name="menu_hidden_services">Услуги на Onion</string>
@@ -125,7 +125,7 @@
     <string name="onion_port">Порт на Onion</string>
     <string name="full_device_vpn">Услуга за ВЧМ за цялото устройство</string>
     <string name="app_shortcuts">Приложения, поддържащи Тор</string>
-    <string name="testing_tor_direct">Проверка на връзката с Тор…</string>
+    <string name="testing_anon_direct">Проверка на връзката с Тор…</string>
     <string name="pref_prefer_ipv6_summary">Показва на изходните възли предпочитание към адреси от IPv6</string>
     <string name="vpn_disabled">ВЧМ е изключена</string>
     <string name="user_services">Услуги на потребителя</string>
@@ -133,7 +133,7 @@
     <string name="v3_backup_key_warning">Внимание: По този начин ключът може да бъде разкрит пред други приложения</string>
     <string name="pref_prefer_ipv6">Предпочитане на връзка по IPv6</string>
     <string name="pref_disable_ipv4">Изключване на връзка по IPv4</string>
-    <string name="testing_tor_direct_success">Успех. Връзката с Тор е добра!</string>
+    <string name="testing_anon_direct_success">Успех. Връзката с Тор е добра!</string>
     <string name="pref_disable_ipv4_summary">Указва на изходните възли да не използват адреси от IPv4</string>
     <string name="restore_backup">Възстановяване от резервно копие</string>
     <string name="create_a_backup_first">Първо създайте резервно копие</string>
@@ -144,7 +144,7 @@
     <string name="pref_circuit_padding">Уплътняване на обходите</string>
     <string name="backup_saved_at_external_storage">Резервното копие е запазено във външното хранилище</string>
     <string name="backup_restored">Резервното копие е възстановено</string>
-    <string name="start_tor_again_for_finish_the_process">За да завърши процеса пуснете Тор отново</string>
+    <string name="start_anon_again_for_finish_the_process">За да завърши процеса пуснете Тор отново</string>
     <string name="confirm_service_deletion">Потвърждаване премахване на услуга</string>
     <string name="pref_http_title">Тор по HTTP</string>
     <string name="pref_http_summary">Порт, на който Тор предлага HTTP прокси (подразбиран: 8118 или 0 за изключване)</string>
@@ -170,7 +170,7 @@
     <string name="no_thx">Не, благодаря</string>
     <string name="menu_header_features">Възможности</string>
     <string name="captcha_title">Покажете ни, че сте човек</string>
-    <string name="menu_tor_connection">Връзка с Тор</string>
+    <string name="menu_anon_connection">Връзка с Тор</string>
     <string name="menu_help_others">Помагане на други хора</string>
     <string name="menu_app_settings">Настройки на приложението</string>
     <string name="menu_faq">Въпроси</string>
@@ -182,7 +182,7 @@
     <string name="volunteer_mode_subtitle">Помогнете на други да бъдат свързани</string>
     <string name="btn_start_vpn">Пускане на VPN</string>
     <string name="connected_title">Свързани</string>
-    <string name="btn_tor_off">Изключване на Тор</string>
+    <string name="btn_anon_off">Изключване на Тор</string>
     <string name="btn_refresh">Презареждане</string>
     <string name="drawer_open">Отваряне</string>
     <string name="connect">Свързване</string>

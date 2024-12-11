@@ -1,4 +1,10 @@
 <resources>
+        <color name="background">#131315</color>
+        <color name="background_secondary">#18181b</color>
+        <color name="border">#27272a</color>
+        <color name="accent">#27d7f2</color>
+
+        <!-- Original Orbot Colors -->
         <color name="panel_background_main">#efefef</color>
         <color name="bright_green">#ccff2a</color>
         <color name="dark_purple">#3f2b4f</color>

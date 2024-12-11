@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot está iniciándose…</string>
-  <string name="status_activated">Conectado a la red Tor</string>
+  <string name="status_activated">Conectado a la red Anon</string>
   <string name="status_disabled">\"AnyoneBot está Desactivado</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -12,5 +12,5 @@
   <!--Permissions screen-->
   <!--TipsAndTricks screen-->
   <!--Transparent Proxy screen-->
-    <string name="unable_to_start_tor">No se puede iniciar Tor:</string>
+    <string name="unable_to_start_anon">No se puede iniciar Anon:</string>
 </resources>

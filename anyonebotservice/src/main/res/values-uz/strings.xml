@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot ishga tushirilmoqda…</string>
-  <string name="status_activated">Tor tarmog\'iga ulangan</string>
+  <string name="status_activated">Anon tarmog\'iga ulangan</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->
@@ -11,5 +11,5 @@
   <!--Permissions screen-->
   <!--TipsAndTricks screen-->
   <!--Transparent Proxy screen-->
-    <string name="found_existing_tor_process">Mavjud bo\'lgan Tor jarayoni topildi…</string>
+    <string name="found_existing_anon_process">Mavjud bo\'lgan Anon jarayoni topildi…</string>
 </resources>

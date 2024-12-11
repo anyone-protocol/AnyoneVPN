@@ -57,10 +57,10 @@
     <string name="relaying">Релејирање</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Омогућите вашем уређају да буде релеј без излаза</string>
     <string name="relay_port">Порт за релеј</string>
-    <string name="listening_port_for_your_tor_relay">Порт за слушање за твој Тор релеј</string>
+    <string name="listening_port_for_your_anon_relay">Порт за слушање за твој Тор релеј</string>
     <string name="enter_or_port">Укуцајте ИЛИ порт</string>
     <string name="relay_nickname">Надимак релеја</string>
-    <string name="the_nickname_for_your_tor_relay">Надимак вашег Тор релеја</string>
+    <string name="the_nickname_for_your_anon_relay">Надимак вашег Тор релеја</string>
     <string name="enter_a_custom_relay_nickname">Унесите по избору надимак за релеј</string>
     <string name="reachable_addresses">Доступне адресе</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Покрените као клијента иза firewall-а који је рестриктивно подешен</string>
@@ -86,9 +86,9 @@
     <string name="pref_dnsport_title">Toр DNS Port</string>
     <string name="pref_dnsport_summary">Port који Тор нуди је DNS укључен (уобичајено: 5400 или 0 за искључивање)</string>
     <string name="pref_dnsport_dialog">DNS Port Подешавања</string>
-    <string name="pref_torrc_title">Torrc Прерађена Подешавања</string>
-    <string name="pref_torrc_summary">САМО ЗА ЕКСПЕРТЕ: унети директно torrc линије подешавања</string>
-    <string name="pref_torrc_dialog">Подеси Torrc</string>
+    <string name="pref_anonrc_title">anonrc Прерађена Подешавања</string>
+    <string name="pref_anonrc_summary">САМО ЗА ЕКСПЕРТЕ: унети директно anonrc линије подешавања</string>
+    <string name="pref_anonrc_dialog">Подеси anonrc</string>
     <string name="apps_mode">VPN Мод</string>
     <string name="send_email">Пошаљи Е-пошту</string>
     <string name="vpn_default_world">Глобално (Аутоматски)</string>
@@ -106,7 +106,7 @@
     <string name="backup_restored">Резервна копија је обновљена</string>
     <string name="restore_backup">Обнови резервну копију</string>
     <string name="create_a_backup_first">Направи резервну копију прво</string>
-    <string name="start_tor_again_for_finish_the_process">Поново покрените Тор да бисте довршили процес</string>
+    <string name="start_anon_again_for_finish_the_process">Поново покрените Тор да бисте довршили процес</string>
     <string name="confirm_service_deletion">Потрврди брисанје услуге</string>
     <string name="service_type">Тип Услуге</string>
     <string name="please_restart_to_enable_the_changes">Молимо покрените поново AnyoneBot ради примењивања промена</string>

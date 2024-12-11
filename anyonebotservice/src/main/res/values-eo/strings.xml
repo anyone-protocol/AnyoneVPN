@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot ŝaltiĝas…</string>
-  <string name="status_activated">Konektita al Tor-reto</string>
+  <string name="status_activated">Konektita al Anon-reto</string>
   <string name="status_disabled">AnyoneBot estas malaktivigita</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -14,6 +14,6 @@
     <!--Transparent Proxy screen-->
     <string name="couldn_t_start_anon_process_">Anon-procedo ne sukcesis stariĝi:</string>
     <string name="your_relay_settings_caused_an_exception_">Via agordo de relajso kaŭzis escepton!</string>
-    <string name="found_existing_tor_process">trovi ekzistantan Tor-procedon…</string>
-    <string name="unable_to_start_tor">Ne eblas startigi Tor:</string>
+    <string name="found_existing_anon_process">trovi ekzistantan Anon-procedon…</string>
+    <string name="unable_to_start_anon">Ne eblas startigi Anon:</string>
 </resources>

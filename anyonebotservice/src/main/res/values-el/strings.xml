@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">Το AnyoneBot ξεκινά</string>
-  <string name="status_activated">Συνδέθηκε στο δίκτυο Tor</string>
+  <string name="status_activated">Συνδέθηκε στο δίκτυο Anon</string>
   <string name="status_disabled">\"Το AnyoneBot είναι Απενεργοποιημένο</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -15,7 +15,7 @@
     <string name="couldn_t_start_anon_process_">Αδυναμία εκκίνησης της διεργασίας anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Οι ρυθμίσεις ReachableAddresses προκάλεσαν μια εξαίρεση!</string>
   <string name="your_relay_settings_caused_an_exception_">Οι ρυθμίσεις αναμεταδότη σας προκάλεσαν μια εξαίρεση!</string>
-    <string name="found_existing_tor_process">αναζήτηση διεργασιών Tor…</string>
-    <string name="unable_to_start_tor">Αδυναμία εκκίνησης του Tor:</string>
-    <string name="newnym">Έχετε αλλάξει επιτυχώς την ταυτότητα σας στο Tor! </string>
+    <string name="found_existing_anon_process">αναζήτηση διεργασιών Anon…</string>
+    <string name="unable_to_start_anon">Αδυναμία εκκίνησης του Anon:</string>
+    <string name="newnym">Έχετε αλλάξει επιτυχώς την ταυτότητα σας στο Anon! </string>
 </resources>

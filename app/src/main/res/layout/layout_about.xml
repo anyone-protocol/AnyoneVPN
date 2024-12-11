@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scrollView"
-    android:background="@color/new_background"
+    android:background="@color/background"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
@@ -73,7 +73,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:autoLink="web"
-            android:text="@string/tor_url"
+            android:text="@string/anon_url"
             android:textColor="@android:color/white"
             android:textColorLink="@android:color/white" />
 

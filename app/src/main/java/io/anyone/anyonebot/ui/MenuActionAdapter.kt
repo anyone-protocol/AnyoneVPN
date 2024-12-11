@@ -98,7 +98,7 @@ class MenuActionAdapter(context: Context, list: ArrayList<MenuAction>) :
 
                         iv.setOnClickListener { v: View? ->
                             openBrowser(
-                                URL_TOR_CHECK, false, applicationInfo.packageName
+                                URL_ANON_CHECK, false, applicationInfo.packageName
                             )
                         }
                         icons[packageManager.getApplicationLabel(applicationInfo).toString()] = iv
@@ -119,8 +119,6 @@ class MenuActionAdapter(context: Context, list: ArrayList<MenuAction>) :
         return false
     }
 
-    private val URL_TOR_CHECK = "https://check.torproject.org"
-
     private fun openBrowser(checkUrl: String, doSomething: Boolean, packageName: String) {
         startIntent(context, packageName, Intent.ACTION_VIEW, Uri.parse(checkUrl))
     }
@@ -138,4 +136,7 @@ class MenuActionAdapter(context: Context, list: ArrayList<MenuAction>) :
         }
     }
 
+    companion object {
+        val URL_ANON_CHECK = "https://check.en.anyone.tech/"
+    }
 }

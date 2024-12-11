@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot je bezplatný proxy server, který umožňuje bezpečnější použití internetu v ostatních apklikacích. AnyoneBot používá Tor pro šifrování internetového provozu a skrývá se díky předávání provozu přes více počítačů po celém světě. Tor je bezplatný software a otevřená síť, která vám pomáhá chránit se před sledováním sítě, které ohrožuje osobní svobodu, bezpečnost, důvěrné obchodní aktivity a vztahy a před státním sledováním, označovaným jako anylýza provozu.</string>
+    <string name="app_description">AnyoneBot je bezplatný proxy server, který umožňuje bezpečnější použití internetu v ostatních apklikacích. AnyoneBot používá Anon pro šifrování internetového provozu a skrývá se díky předávání provozu přes více počítačů po celém světě. Anon je bezplatný software a otevřená síť, která vám pomáhá chránit se před sledováním sítě, které ohrožuje osobní svobodu, bezpečnost, důvěrné obchodní aktivity a vztahy a před státním sledováním, označovaným jako anylýza provozu.</string>
     <string name="menu_settings">Nastavení</string>
     <string name="menu_log">Log</string>
     <string name="menu_stop">Vypnout</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Obecné</string>
     <string name="pref_start_boot_title">Spustit AnyoneBot při startu systému</string>
-    <string name="pref_start_boot_summary">Automaticky spustit AnyoneBot a připojit se k Tor po startu zařízení</string>
+    <string name="pref_start_boot_summary">Automaticky spustit AnyoneBot a připojit se k Anon po startu zařízení</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Otisky (fingerprints), přezdívky serveru (nicks), státy a adresy pro první skok (hop)</string>
     <string name="pref_entrance_node_dialog">Zadejte vstupní nody</string>
     <string name="pref_allow_background_starts_title">Povolit spuštění na pozadí</string>
-    <string name="pref_allow_background_starts_summary">Povolit všem aplikacím spustit AnyoneBot, Tor a přslušně služby</string>
+    <string name="pref_allow_background_starts_summary">Povolit všem aplikacím spustit AnyoneBot, Anon a přslušně služby</string>
     <string name="pref_proxy_title">Odchozí síťová proxy (volitelné)</string>
     <string name="pref_proxy_type_title">Typ odchozí proxy</string>
     <string name="pref_proxy_type_summary">Protokol pro proxy server: HTTP, HTTPS, Socks4, Socks5</string>
@@ -56,10 +56,10 @@
     <string name="relaying">Používání relé</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Spuštění zařízení jako neodchozího relé</string>
     <string name="relay_port">Port relé</string>
-    <string name="listening_port_for_your_tor_relay">Naslouchání Vašeho Tor relé</string>
+    <string name="listening_port_for_your_anon_relay">Naslouchání Vašeho Anon relé</string>
     <string name="enter_or_port">Zadejte OR port</string>
     <string name="relay_nickname">Přezdívka relé</string>
-    <string name="the_nickname_for_your_tor_relay">Přezdívka Vašeho Tor relé</string>
+    <string name="the_nickname_for_your_anon_relay">Přezdívka Vašeho Anon relé</string>
     <string name="enter_a_custom_relay_nickname">Zadejte klientskou přezdívku relé</string>
     <string name="reachable_addresses">Dostupné adresy</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Běžet jako klient za firewallem s restriktivní politikou</string>
@@ -69,24 +69,24 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">umožnit ladicí informace na výstup (musí používat adb nebo aLogCat k prohlížení)</string>
     <string name="project_home">Projekt Domů:</string>
     <string name="third_party_software">Software třetích stran:</string>
-    <string name="pref_use_expanded_notifications">Zobrazení země a IP adresy výstupního uzlu tor v oznámení, pokud je k dispozici</string>
+    <string name="pref_use_expanded_notifications">Zobrazení země a IP adresy výstupního uzlu Anon v oznámení, pokud je k dispozici</string>
     <string name="pref_use_expanded_notifications_title">Rozšířené oznámení</string>
     <string name="set_locale_title">Jazyk</string>
     <string name="pref_disable_network_title">Vypnout uspávání sítě</string>
-    <string name="pref_disable_network_summary">Uspat Tor když není k dispozici přístup k Internetu</string>
-    <string name="newnym">Vaše identita na Toru byla změněna!</string>
-    <string name="pref_socks_title">Tor SOCKS</string>
-    <string name="pref_socks_summary">Port, na kterém Tor nabízí SOCKS proxy (default: 9050, 0 pro zakázání)</string>
+    <string name="pref_disable_network_summary">Uspat Anon když není k dispozici přístup k Internetu</string>
+    <string name="newnym">Vaše identita na Anonu byla změněna!</string>
+    <string name="pref_socks_title">Anon SOCKS</string>
+    <string name="pref_socks_summary">Port, na kterém Anon nabízí SOCKS proxy (default: 9050, 0 pro zakázání)</string>
     <string name="pref_socks_dialog">SOCKS nastavení portu</string>
-    <string name="pref_transport_title">Tor TransProxy port</string>
-    <string name="pref_transport_summary">Port, na kterém Tor nabízí transparentní proxy (default: 9040, 0 pro zakázání)</string>
+    <string name="pref_transport_title">Anon TransProxy port</string>
+    <string name="pref_transport_summary">Port, na kterém Anon nabízí transparentní proxy (default: 9040, 0 pro zakázání)</string>
     <string name="pref_transport_dialog">TransProxy nastavení portu</string>
-    <string name="pref_dnsport_title">Tor DNS port</string>
-    <string name="pref_dnsport_summary">Port, na kterém Tor nabízí DNS (default: 5400, 0 pro zakázání)</string>
+    <string name="pref_dnsport_title">Anon DNS port</string>
+    <string name="pref_dnsport_summary">Port, na kterém Anon nabízí DNS (default: 5400, 0 pro zakázání)</string>
     <string name="pref_dnsport_dialog">DNS nastavení portu</string>
-    <string name="pref_torrc_title">Torrc vstastní konfigurace</string>
-    <string name="pref_torrc_summary">POUZE PRO EXPERTY: zadejte přímo řádky nastavení torrc</string>
-    <string name="pref_torrc_dialog">Vlastní Torrs</string>
+    <string name="pref_anonrc_title">Anonrc vstastní konfigurace</string>
+    <string name="pref_anonrc_summary">POUZE PRO EXPERTY: zadejte přímo řádky nastavení anonrc</string>
+    <string name="pref_anonrc_dialog">Vlastní anonrc</string>
     <string name="send_email">Pošli email</string>
     <string name="save">Uložit</string>
     <string name="name">Jméno</string>
@@ -123,7 +123,7 @@
     <string name="btn_refresh">Obnovit</string>
     <string name="no_thx">Ne, díky</string>
     <string name="menu_header_features">Funkce</string>
-    <string name="menu_tor_connection">Tor spojení</string>
+    <string name="menu_anon_connection">Anon spojení</string>
     <string name="proxy_ports">Proxy porty</string>
     <string name="pref_circuit_padding">Vycpávky obvodů</string>
     <string name="no_internet_subtitle">K používání služby AnyoneBot potřebujete připojení k internetu.</string>
@@ -144,13 +144,13 @@
     <string name="restore_backup">Obnovení zálohy</string>
     <string name="v3_backup_key">Autorizační klíč záložního klienta</string>
     <string name="apps_other_apps">Další aplikace</string>
-    <string name="wizard_details_msg">AnyoneBot je open-source aplikace, která obsahuje Tor, Go-Tun2Socks a LibEvent. Poskytuje tunel VPN, místní proxy server HTTP Connect (HTTPS pouze na portu 8118) a proxy server SOCKS (9050) do sítě Tor.</string>
+    <string name="wizard_details_msg">AnyoneBot je open-source aplikace, která obsahuje Anon, Go-Tun2Socks a LibEvent. Poskytuje tunel VPN, místní proxy server HTTP Connect (HTTPS pouze na portu 8118) a proxy server SOCKS (9050) do sítě Anon.</string>
     <string name="volunteer_mode_subtitle">Pomozte ostatním připojit se</string>
     <string name="pref_reduced_circuit_padding_summary">Použití algoritmů pro vyplňování s nižší režií ke snížení spotřeby dat a baterie</string>
     <string name="copy_address_to_clipboard">Kopírování adresy do schránky</string>
     <string name="option_only_when_charging">Pouze při nabíjení</string>
     <string name="hide_apps">Skrýt aplikace před sledováním sítě a získat k nim přístup, když jsou blokovány.</string>
-    <string name="hidden_service_request">Aplikace chce otevřít cibulový server na portu %1$s do sítě Tor. Pokud aplikaci důvěřujete, je to bezpečné.</string>
+    <string name="hidden_service_request">Aplikace chce otevřít cibulový server na portu %1$s do sítě Anon. Pokud aplikaci důvěřujete, je to bezpečné.</string>
     <string name="vpn_default_world">Globální (Auto)</string>
     <string name="pref_isolate_port_summary">Pro každý cílový port použijte jiný okruh</string>
     <string name="pref_isolate_dest">Izolovat cílové adresy</string>
@@ -163,23 +163,23 @@
     <string name="log_copied">Zkopírovaný záznam</string>
     <string name="btn_copy_log">Kopírovat protokol</string>
     <string name="pref_prefer_ipv6">Preferování připojení IPv6</string>
-    <string name="btn_tor_off">Vypnutí Tor</string>
+    <string name="btn_anon_off">Vypnutí Anon</string>
     <string name="option_only_on_wifi">Pouze v síti Wifi</string>
     <string name="consider_enable_battery_optimizations">Nejsou spuštěny žádné hostované služby, zvažte zapnutí optimalizace baterie</string>
     <string name="trouble_connecting">Problémy s připojením\?</string>
-    <string name="testing_tor_direct">Testování připojení k Tor…</string>
+    <string name="testing_anon_direct">Testování připojení k Anon…</string>
     <string name="delete_service">Odstranit službu</string>
     <string name="v3_backup_name_hint">Název záložního souboru…</string>
     <string name="pref_disable_ipv4">Informuje exity, že jsou upřednostňovány adresy IPv6</string>
     <string name="pref_isolate_port">Izolovat cílové porty</string>
     <string name="asking">PTÁTE SE…</string>
-    <string name="power_user_description">Pro uživatele, kteří znají Tor. Umožňuje spustit AnyoneBot bez nastavení VPN a zobrazuje otevřené porty SOCKS a HTTP</string>
+    <string name="power_user_description">Pro uživatele, kteří znají Anon. Umožňuje spustit AnyoneBot bez nastavení VPN a zobrazuje otevřené porty SOCKS a HTTP</string>
     <string name="app_services">Služby aplikací</string>
     <string name="backup_saved_at_external_storage">Zálohování uložené v externím úložišti</string>
     <string name="pref_connection_padding_summary">Vždy umožňuje vyplnění připojení, aby se bránilo proti některým formám analýzy provozu. Výchozí hodnota: auto</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Otevření proxy serveru na všech rozhraních</string>
     <string name="v3_import_auth_private">Importovat soubor .auth_private</string>
-    <string name="pref_http_title">Tor HTTP</string>
+    <string name="pref_http_title">Anon HTTP</string>
     <string name="pref_prefer_ipv6_summary">Informuje exity, že jsou upřednostňovány adresy IPv6</string>
     <string name="refresh_apps">Aplikace Refresh</string>
     <string name="pref_reduced_circuit_padding">Zmenšené polstrování obvodů</string>
@@ -191,7 +191,7 @@
     <string name="backup_port_exist">Chyba: Služba Onion již používá port %s</string>
     <string name="backup_service">Zálohování služby <i>(Varování: může dojít ke zpřístupnění konfigurace služby jiným aplikacím)</i></string>
     <string name="service_type">Typ služby</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Povolení přístupu k síti Tor partnerům Wi-Fi, připojeným zařízením a všem ostatním, kteří se mohou připojit k vaší IP adrese</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Povolení přístupu k síti Anon partnerům Wi-Fi, připojeným zařízením a všem ostatním, kteří se mohou připojit k vaší IP adrese</string>
     <string name="create_a_backup_first">Nejprve vytvořte zálohu</string>
     <string name="pref_connection_padding">Vycpávka připojení</string>
     <string name="share_as_qr">Sdílet jako QR</string>
@@ -202,29 +202,29 @@
     <string name="pref_isolate_protocol_summary">Pro každý připojovací protokol použijte jiný obvod</string>
     <string name="incorrect_solution">Nesprávné řešení</string>
     <string name="confirm_service_deletion">Potvrzení odstranění služby</string>
-    <string name="app_shortcuts">Aplikace podporující Tor</string>
-    <string name="testing_tor_direct_success">Úspěch. Připojení Tor je dobré!</string>
+    <string name="app_shortcuts">Aplikace podporující Anon</string>
+    <string name="testing_anon_direct_success">Úspěch. Připojení Anon je dobré!</string>
     <string name="btn_start_vpn">Spuštění sítě VPN</string>
     <string name="strict_nodes_description">Nastavení Vyloučit uzly považujte za požadavek pro sestavení všech obvodů. To může narušit funkčnost, pokud s nastavením Exclude Nodes nebude možné vygenerovat žádné obvody.</string>
     <string name="app_suggested_subtitle">AnyoneBot nejlépe funguje s aplikacemi pro zasílání zpráv a sociální sítě.</string>
     <string name="secure_your_connection_title">Připraveno k připojení</string>
-    <string name="start_tor_again_for_finish_the_process">Spusťte Tor znovu pro dokončení procesu</string>
+    <string name="start_anon_again_for_finish_the_process">Spusťte Anon znovu pro dokončení procesu</string>
     <string name="msg_taking_too_long">Zdá se, že to trvá příliš dlouho</string>
     <string name="v3_delete_client_authorization_confirm">Odstranění autorizace klienta</string>
-    <string name="pref_http_summary">Port, na kterém Tor nabízí svůj proxy server HTTP (výchozí: 8118 nebo 0 pro vypnutí)</string>
+    <string name="pref_http_summary">Port, na kterém Anon nabízí svůj proxy server HTTP (výchozí: 8118 nebo 0 pro vypnutí)</string>
     <string name="pref_reduced_connection_padding_summary">Uzavírá relay spojení dříve a odesílá méně paketů s vycpávkami, aby se snížila spotřeba dat a baterie</string>
     <string name="pref_flag_secure_summary">Zabránit jiným aplikacím pořizovat snímky obrazovky AnyoneBot</string>
     <string name="apps_mode">Režim VPN</string>
     <string name="volunteer_status_title">Dnešek je lepší
 \ndíky tobě.</string>
-    <string name="many_ways">Existuje mnoho způsobů, jak dosáhnout sítě Tor. Některé z nich vám mohou vyhovovat lépe než jiné.</string>
+    <string name="many_ways">Existuje mnoho způsobů, jak dosáhnout sítě Anon. Některé z nich vám mohou vyhovovat lépe než jiné.</string>
     <string name="local_port">Místní přístav</string>
     <string name="backup_restored">Obnovení zálohy</string>
     <string name="onion">.onion</string>
     <string name="v3_onion">Doména .onion</string>
     <string name="done">Hotovo!</string>
     <string name="v3_key_hash">x25519 Soukromý klíč v Base32</string>
-    <string name="configure_header">Konfigurace připojení Tor</string>
+    <string name="configure_header">Konfigurace připojení Anon</string>
     <string name="pref_detect_root_summary">Varovat při spuštění, pokud jsou na tomto zařízení zapnuta oprávnění root</string>
     <string name="pref_detect_root_title">Rozpoznání root</string>
 </resources>

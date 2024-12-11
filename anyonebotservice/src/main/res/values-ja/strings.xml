@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBotは他のアプリがインターネットをより安全に使うことを可能にするフリーのプロキシアプリです。AnyoneBotでは、Torを用いてあなたの端末のトラフィックを暗号化し、世界中のコンピューターを中継することで、そのトラフィックを隠します。Torはフリーのソフトウェアとオープンなネットワークであり、ユーザーの自由とプライバシーを脅かす監視活動や、機密のビジネス活動、国家によるトラフィック分析から身を守ることを助けてくれます。</string>
+  <string name="app_description">AnyoneBotは他のアプリがインターネットをより安全に使うことを可能にするフリーのプロキシアプリです。AnyoneBotでは、Anonを用いてあなたの端末のトラフィックを暗号化し、世界中のコンピューターを中継することで、そのトラフィックを隠します。Anonはフリーのソフトウェアとオープンなネットワークであり、ユーザーの自由とプライバシーを脅かす監視活動や、機密のビジネス活動、国家によるトラフィック分析から身を守ることを助けてくれます。</string>
     <string name="status_starting_up">AnyoneBotが開始されています…</string>
-  <string name="status_activated">Torネットワークに接続しています</string>
+  <string name="status_activated">Anonネットワークに接続しています</string>
   <string name="status_disabled">\"AnyoneBotが解除されました</string>
-  <string name="status_shutting_down">TorServiceが終了しています</string>
+  <string name="status_shutting_down">Anonが終了しています</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->
@@ -17,8 +17,8 @@
     <string name="couldn_t_start_anon_process_">Anonプロセスの起動に失敗:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">あなたのReachableAddresses設定により例外が発生しました!</string>
   <string name="your_relay_settings_caused_an_exception_">あなたのリレー設定により例外が発生しました!</string>
-    <string name="found_existing_tor_process">Torプロセスを発見</string>
-    <string name="unable_to_start_tor">Torを実行できませんでした</string>
-    <string name="newnym">新たな Tor の身元に切り替えました。</string>
-    <string name="updating_settings_in_tor_service">Torサービスの設定を更新中</string>
+    <string name="found_existing_anon_process">Anonプロセスを発見</string>
+    <string name="unable_to_start_anon">Anonを実行できませんでした</string>
+    <string name="newnym">新たな Anon の身元に切り替えました。</string>
+    <string name="updating_settings_in_anon_service">Anonサービスの設定を更新中</string>
 </resources>

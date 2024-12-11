@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot là một ứng dụng proxy miễn phí làm cho các ứng dụng khác sử dụng internet một cách bảo mật hơn. AnyoneBot sử dụng Tor để mã hóa lưu lượng Internet rồi ẩn nó bằng cách đưa qua một loạt máy tính trên khắp thế giới. Tor là phần mềm tự do và là một mạng lưới mở giúp bạn chống lại một dạng của sự giám sát trên mạng đe dọa quyền riêng tư và tự do cá nhân, những hoạt động và mối quan hệ bí mật trong kinh doanh, và an ninh tiểu bang được biết đến là phân tích lưu lượng mạng.</string>
+    <string name="app_description">AnyoneBot là một ứng dụng proxy miễn phí làm cho các ứng dụng khác sử dụng internet một cách bảo mật hơn. AnyoneBot sử dụng Anon để mã hóa lưu lượng Internet rồi ẩn nó bằng cách đưa qua một loạt máy tính trên khắp thế giới. Anon là phần mềm tự do và là một mạng lưới mở giúp bạn chống lại một dạng của sự giám sát trên mạng đe dọa quyền riêng tư và tự do cá nhân, những hoạt động và mối quan hệ bí mật trong kinh doanh, và an ninh tiểu bang được biết đến là phân tích lưu lượng mạng.</string>
     <string name="menu_settings">Cài đặt</string>
     <string name="menu_log">Nhật ký Log</string>
     <string name="menu_stop">Dừng lại</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Tổng quan</string>
     <string name="pref_start_boot_title">Khởi chạy AnyoneBot khi khởi động hệ thống</string>
-    <string name="pref_start_boot_summary">Tự khởi động AnyoneBot và kết nối vào mạng Tor sau khi thiết bị Android của bạn khởi động</string>
+    <string name="pref_start_boot_summary">Tự khởi động AnyoneBot và kết nối vào mạng Anon sau khi thiết bị Android của bạn khởi động</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Dấu vân tay theo dõi (Fingerprint), biệt hiệu, quốc gia và địa chỉ cho nút giao mạng đầu tiên</string>
     <string name="pref_entrance_node_dialog">Nhập thông tin nút giao mạng đầu vào</string>
     <string name="pref_allow_background_starts_title">Cho phép khởi động ngầm</string>
-    <string name="pref_allow_background_starts_summary">Cho phép ứng dụng bất kỳ yêu cầu AnyoneBot khởi động Tor và các dịch vụ liên quan</string>
+    <string name="pref_allow_background_starts_summary">Cho phép ứng dụng bất kỳ yêu cầu AnyoneBot khởi động Anon và các dịch vụ liên quan</string>
     <string name="pref_proxy_title">Proxy mạng ngõ ra (Outbound Network) (Tùy chọn)</string>
     <string name="pref_proxy_type_title">Kiểu Proxy ngõ ra</string>
     <string name="pref_proxy_type_summary">Giao thức dùng cho proxy: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -56,10 +56,10 @@
     <string name="relaying">Đang chuyển tiếp rơ-le</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Cho phép thiết bị của bạn làm một nút giao rơ-le chuyển tiếp (không phải nút đầu ra cuối cùng)</string>
     <string name="relay_port">Cổng Rơ-le chuyển tiếp</string>
-    <string name="listening_port_for_your_tor_relay">Cổng tiếp nhận cho rơ-le chuyển tiếp Tor của bạn</string>
+    <string name="listening_port_for_your_anon_relay">Cổng tiếp nhận cho rơ-le chuyển tiếp Anon của bạn</string>
     <string name="enter_or_port">Nhập cổng OR</string>
     <string name="relay_nickname">Biệt hiệu nút relay</string>
-    <string name="the_nickname_for_your_tor_relay">Biệt hiệu cho nút Tor-relay của bạn</string>
+    <string name="the_nickname_for_your_anon_relay">Biệt hiệu cho nút Anon-relay của bạn</string>
     <string name="enter_a_custom_relay_nickname">Nhập biệt hiệu tuỳ ý</string>
     <string name="reachable_addresses">Địa chỉ truy cập được (Reachable Addresses)</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Chạy như một máy con (client) đằng sau tường lửa với các thiết lập thu hẹp</string>
@@ -69,24 +69,24 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Kích hoạt nhật ký gỡ lỗi ở đầu ra (phải dùng adb hoặc aLogCat để xem)</string>
     <string name="project_home">Trang chủ dự án:</string>
     <string name="third_party_software">Phần mềm bên thứ 3:</string>
-    <string name="pref_use_expanded_notifications">Trong phần thông báo, hiển thị quốc gia và địa chỉ IP của nút giao mạng Tor cuối (Tor exit-node) của bạn khi có thể</string>
+    <string name="pref_use_expanded_notifications">Trong phần thông báo, hiển thị quốc gia và địa chỉ IP của nút giao mạng Anon cuối (Anon exit-node) của bạn khi có thể</string>
     <string name="pref_use_expanded_notifications_title">Thông báo mở rộng</string>
     <string name="set_locale_title">Ngôn ngữ</string>
     <string name="pref_disable_network_title">Tự động \"ngủ\" khi không có mạng</string>
-    <string name="pref_disable_network_summary">Chuyển Tor sang chế độ ngủ nếu không có Internet</string>
-    <string name="newnym">Bạn đã chuyển sang một danh tính Tor mới!</string>
+    <string name="pref_disable_network_summary">Chuyển Anon sang chế độ ngủ nếu không có Internet</string>
+    <string name="newnym">Bạn đã chuyển sang một danh tính Anon mới!</string>
     <string name="pref_socks_title">Cổng SOCKS</string>
-    <string name="pref_socks_summary">Cổng để Tor đặt proxy SOCKS lên (mặc định: 9050 hoặc 0 để vô hiệu hóa)</string>
+    <string name="pref_socks_summary">Cổng để Anon đặt proxy SOCKS lên (mặc định: 9050 hoặc 0 để vô hiệu hóa)</string>
     <string name="pref_socks_dialog">Cấu hình cổng SOCKS</string>
-    <string name="pref_transport_title">Cổng proxy trong suốt (TransProxy) của Tor</string>
-    <string name="pref_transport_summary">Cổng để Tor đặt proxy trong suốt (TransProxy) lên (mặc định: 9040 hoặc 0 để vô hiệu hóa)</string>
+    <string name="pref_transport_title">Cổng proxy trong suốt (TransProxy) của Anon</string>
+    <string name="pref_transport_summary">Cổng để Anon đặt proxy trong suốt (TransProxy) lên (mặc định: 9040 hoặc 0 để vô hiệu hóa)</string>
     <string name="pref_transport_dialog">Cấu hình cổng proxy trong suốt (TransProxy)</string>
-    <string name="pref_dnsport_title">Cổng DNS Tor</string>
-    <string name="pref_dnsport_summary">Cổng để Tor đặt DNS của nó lên (mặc định: 5400 hoặc 0 để vô hiệu hóa)</string>
+    <string name="pref_dnsport_title">Cổng DNS Anon</string>
+    <string name="pref_dnsport_summary">Cổng để Anon đặt DNS của nó lên (mặc định: 5400 hoặc 0 để vô hiệu hóa)</string>
     <string name="pref_dnsport_dialog">Cấu hình cổng DNS</string>
-    <string name="pref_torrc_title">Cấu hình tùy chỉnh cho Torrc</string>
-    <string name="pref_torrc_summary">CHỈ NGƯỜI DÙNG CHUYÊN MÔN: nhập các thiết lập trực tiếp cho torrc</string>
-    <string name="pref_torrc_dialog">Torrc tùy chỉnh</string>
+    <string name="pref_anonrc_title">Cấu hình tùy chỉnh cho anonrc</string>
+    <string name="pref_anonrc_summary">CHỈ NGƯỜI DÙNG CHUYÊN MÔN: nhập các thiết lập trực tiếp cho anonrc</string>
+    <string name="pref_anonrc_dialog">anonrc tùy chỉnh</string>
     <string name="send_email">Gửi email</string>
     <string name="save">Lưu</string>
     <string name="name">Tên</string>
@@ -94,18 +94,18 @@
     <string name="disable">Tắt</string>
     <string name="enable">Cho phép</string>
     <string name="pref_http_dialog">Thiết lập cổng HTTP</string>
-    <string name="pref_http_summary">Cổng mà Tor cho proxy HTTP của nó (mặc định: 8118 hoặc 0 để tắt)</string>
-    <string name="pref_http_title">HTTP Tor</string>
+    <string name="pref_http_summary">Cổng mà Anon cho proxy HTTP của nó (mặc định: 8118 hoặc 0 để tắt)</string>
+    <string name="pref_http_title">HTTP Anon</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Mở Proxy trên tất cả các giao diện</string>
     <string name="deny">Từ chối</string>
     <string name="allow">Cho phép</string>
-    <string name="hidden_service_request">Một ứng dụng muốn mở máy chủ onion ở cổng %1$s vào mạng Tor. Việc này là an toàn nếu bạn tin tưởng ứng dụng đó.</string>
-    <string name="wizard_details_msg">AnyoneBot là một ứng dụng mã nguồn mở chứa Tor, Go-Tun2Socks, LibEvent. Nó cung cấp một proxy HTTP cục bộ (8118) và một proxy SOCKS (9050) vào mạng Tor.</string>
+    <string name="hidden_service_request">Một ứng dụng muốn mở máy chủ onion ở cổng %1$s vào mạng Anon. Việc này là an toàn nếu bạn tin tưởng ứng dụng đó.</string>
+    <string name="wizard_details_msg">AnyoneBot là một ứng dụng mã nguồn mở chứa Anon, Go-Tun2Socks, LibEvent. Nó cung cấp một proxy HTTP cục bộ (8118) và một proxy SOCKS (9050) vào mạng Anon.</string>
     <string name="pref_reduced_connection_padding_summary">Đóng các kết nối chuyển tiếp sớm hơn và gửi ít gói đặt khoảng cách hơn để giảm sử dụng dữ liệu và pin</string>
     <string name="pref_reduced_connection_padding">Giảm khoảng cách kết nối</string>
     <string name="pref_connection_padding_summary">Luôn bật đặt khoảng cách cho kết nối để phòng vệ chống lại một số dạng phân tích lưu lượng. Mặc định: tự động</string>
     <string name="pref_connection_padding">Đặt khoảng cách cho kết nối</string>
-    <string name="app_shortcuts">App ứng dụng đã được kích hoạt Tor</string>
+    <string name="app_shortcuts">App ứng dụng đã được kích hoạt Anon</string>
     <string name="pref_disable_ipv4_summary">Bảo các lối ra không được kết nối đến các địa chỉ IPv4</string>
     <string name="pref_disable_ipv4">Tắt các kết nối IPv4</string>
     <string name="pref_prefer_ipv6_summary">Bảo các lối ra rằng các địa chỉ IPv6 được ưu tiên</string>
@@ -115,7 +115,7 @@
     <string name="pref_circuit_padding_summary">Bật đặt khoảng cách cho mạch để phòng vệ chống lại một số dạng phân tích lưu lượng</string>
     <string name="pref_circuit_padding">Đặt khoảng cách cho mạch</string>
     <string name="pref_isolate_dest_summary">Sử dụng một mạch khác cho mỗi địa chỉ đích</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Cho phép các thiết bị Wi-Fi ngang hàng, các thiết bị được chia sẻ mạng và bất kỳ ai có thể kết nối đến IP của bạn truy cập Tor</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Cho phép các thiết bị Wi-Fi ngang hàng, các thiết bị được chia sẻ mạng và bất kỳ ai có thể kết nối đến IP của bạn truy cập Anon</string>
     <string name="pref_isolate_dest">Cô lập các địa chỉ đích đến</string>
     <string name="consider_enable_battery_optimizations">Không có các dịch vụ được Host nào đang chạy cả, hãy cân nhắc việc bật tối ưu hoá pin</string>
     <string name="consider_disable_battery_optimizations">Các dịch vụ được Host đang chạy, hãy cân nhắc việc tắt tối ưu hoá pin</string>
@@ -123,7 +123,7 @@
     <string name="onion">.onion</string>
     <string name="service_type">Loại dịch vụ</string>
     <string name="confirm_service_deletion">Xác nhận xoá dịch vụ</string>
-    <string name="start_tor_again_for_finish_the_process">Khởi động lại Tor để hoàn tất quá trình</string>
+    <string name="start_anon_again_for_finish_the_process">Khởi động lại Anon để hoàn tất quá trình</string>
     <string name="create_a_backup_first">Hãy tạo một bản sao lưu backup trước tiên</string>
     <string name="restore_backup">Khôi phục bản sao lưu backup</string>
     <string name="backup_port_exist">Lỗi: Một dịch vụ Onion hiện đang sử dụng cổng %s mất rồi</string>
@@ -156,8 +156,8 @@
     <string name="vpn_disabled">VPN bị tắt</string>
     <string name="full_device_vpn">VPN thiết bị đầy đủ</string>
     <string name="trouble_connecting">Gặp vấn đề khi kết nối\?</string>
-    <string name="testing_tor_direct_success">Thành công. Kết nối đến Tor tốt rồi!</string>
-    <string name="testing_tor_direct">Đang thử nghiệm kết nối đến Tor…</string>
+    <string name="testing_anon_direct_success">Thành công. Kết nối đến Anon tốt rồi!</string>
+    <string name="testing_anon_direct">Đang thử nghiệm kết nối đến Anon…</string>
     <string name="hidden_services">Dịch vụ Onion</string>
     <string name="vpn_default_world">Toàn cầu (Tự động)</string>
     <string name="apps_mode">Chế độ VPN</string>
@@ -170,7 +170,7 @@
     <string name="connected_title">Đã kết nối</string>
     <string name="trying_to_connect_title">Đang kết nối…</string>
     <string name="menu_header_features">Tính năng</string>
-    <string name="menu_tor_connection">Kết nối Tor</string>
+    <string name="menu_anon_connection">Kết nối Anon</string>
     <string name="menu_faq">FAQ</string>
     <string name="menu_header_learn">Tìm hiểu thêm</string>
     <string name="drawer_open">Mở</string>
@@ -184,10 +184,10 @@
     <string name="pref_isolate_protocol">Cô lập các Protocol máy/ứng dụng khách</string>
     <string name="secure_your_connection_subtitle">Ẩn giấu các app ứng dụng khỏi việc bị theo dõi mạng và lấy lại khả năng truy cập khi chúng bị chặn.</string>
     <string name="btn_start_vpn">Khởi động VPN</string>
-    <string name="configure_header">Định cấu hình Kết nối Tor của bạn</string>
+    <string name="configure_header">Định cấu hình Kết nối Anon của bạn</string>
     <string name="volunteer_mode_subtitle">Giúp những người khác kết nối</string>
     <string name="btn_choose_apps">Lựa chọn app ứng dụng</string>
-    <string name="btn_tor_off">Tắt Tor đi</string>
+    <string name="btn_anon_off">Tắt Anon đi</string>
     <string name="menu_help_others">Giúp đỡ người khác</string>
     <string name="menu_app_settings">Cài đặt App ứng dụng</string>
     <string name="msg_try_something_else">Thử cái khác</string>
@@ -198,12 +198,12 @@
     <string name="option_only_when_charging">Chỉ khi đang sạc</string>
     <string name="hide_apps">Ẩn giấu các app ứng dụng khỏi việc bị theo dõi mạng và lấy lại khả năng truy cập khi chúng bị chặn.</string>
     <string name="not_sure">Không chắc chắn ư\?</string>
-    <string name="many_ways">Có nhiều cách để truy cập được Tor. Một số có thể sẽ hoạt động cho bạn tốt hơn những cái khác.</string>
+    <string name="many_ways">Có nhiều cách để truy cập được Anon. Một số có thể sẽ hoạt động cho bạn tốt hơn những cái khác.</string>
     <string name="strict_nodes_description">Hãy đối xử với các cài đặt \"Loại bỏ Nút giao mạng\" (Exclude Nodes) như một điều kiện để xây dựng tất cả các mạch nối. Điều này có thể sẽ làm phá vỡ chức năng nếu như không có mạch nối nào được phát sinh ra (generated) với các cài đặt Loại bỏ Nút giao mạng.</string>
     <string name="msg_taking_too_long">Điều này có vẻ như đang mất quá nhiều thời gian</string>
     <string name="proxy_ports">Các cổng Proxy</string>
     <string name="no_thx">Không cảm ơn</string>
-    <string name="power_user_description">Đối với những người dùng đã quen thuộc với Tor. Cho phép bạn khởi động AnyoneBot mà không cần cài đặt VPN và hiển thị các cổng SOCKS và HTTP mở khả dụng</string>
+    <string name="power_user_description">Đối với những người dùng đã quen thuộc với Anon. Cho phép bạn khởi động AnyoneBot mà không cần cài đặt VPN và hiển thị các cổng SOCKS và HTTP mở khả dụng</string>
     <string name="btn_copy_log">Sao chép nhật ký Log</string>
     <string name="log_copied">Nhật ký Log đã được sao chép</string>
     <string name="pref_flag_secure_summary">Ngăn chặn các app ứng dụng khác khỏi việc chụp ảnh màn hình AnyoneBot</string>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">Pulsuz proksi tətbiqetməsi olan AnyoneBot başqa tətbiqetmələrə internetdən daha təhlükəsiz istifadə etmək imkanı verir. AnyoneBot sizin internet trafikinizi şifrələmək üçün Tordan istifadə edir və dünyanın hər yerində kompüterlərin birindən o birinə sıçramaqla bunu gizlədir. Tor pulsuz proqram təminatıdır, eyni zamanda sizin şəxsi azadlığınız və təhlükəsizliyinizə, gizli biznes fəaliyyəti və əlaqələrə, o cümlədən trafik analiz adlanan dövlət təhlükəsizliyinə xələl gətirə biləcək şəbəkə nəzarəti formalarından müdafiə olunmağa yardım edən açıq şəbəkədir.</string>
+  <string name="app_description">Pulsuz proksi tətbiqetməsi olan AnyoneBot başqa tətbiqetmələrə internetdən daha təhlükəsiz istifadə etmək imkanı verir. AnyoneBot sizin internet trafikinizi şifrələmək üçün Anondan istifadə edir və dünyanın hər yerində kompüterlərin birindən o birinə sıçramaqla bunu gizlədir. Anon pulsuz proqram təminatıdır, eyni zamanda sizin şəxsi azadlığınız və təhlükəsizliyinizə, gizli biznes fəaliyyəti və əlaqələrə, o cümlədən trafik analiz adlanan dövlət təhlükəsizliyinə xələl gətirə biləcək şəbəkə nəzarəti formalarından müdafiə olunmağa yardım edən açıq şəbəkədir.</string>
     <string name="status_starting_up">AnyoneBot başlayır…</string>
-  <string name="status_activated">Tor şəbəkəsinə bağlandı</string>
+  <string name="status_activated">Anon şəbəkəsinə bağlandı</string>
   <string name="status_disabled">AnyoneBot deaktivasiya edildi</string>
-  <string name="status_shutting_down">Tor xidməti işini başa vurur</string>
+  <string name="status_shutting_down">Anon xidməti işini başa vurur</string>
   <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->
@@ -17,8 +17,8 @@
     <string name="couldn_t_start_anon_process_">Anon prosesi başlana bilmədi:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Sənin ƏlçatanÜnvanlar seçimin istisnaya səbəb oldu!</string>
   <string name="your_relay_settings_caused_an_exception_">Sənin keçid seçimlərin istisnaya səbəb oldu!</string>
-    <string name="found_existing_tor_process">mövcud Tor prosesi tapıldı…</string>
-    <string name="unable_to_start_tor">Tor-un başlanmasını dayandır:</string>
-  <string name="newnym">Yeni Tor oxşarına qoşuldun!</string>
-  <string name="updating_settings_in_tor_service">Tor xidmətində quraşdırmalar yüklənir</string>
+    <string name="found_existing_anon_process">mövcud Anon prosesi tapıldı…</string>
+    <string name="unable_to_start_anon">Anon-un başlanmasını dayandır:</string>
+  <string name="newnym">Yeni Anon oxşarına qoşuldun!</string>
+  <string name="updating_settings_in_anon_service">Anon xidmətində quraşdırmalar yüklənir</string>
 </resources>

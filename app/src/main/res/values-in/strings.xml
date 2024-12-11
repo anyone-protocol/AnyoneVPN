@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot adalah aplikasi proxy gratis yang membuat aplikasi-aplikasi lainnya dapat terkoneksi dengan internet secara aman. AnyoneBot menggunakan Tor untuk mengenkripsi hubungan internet Anda dan menyalurkannya melewati berbagai komputer di seluruh dunia. Tor adalah software gratis dan layanan terbuka, yang membantu Anda menghindari pengawasan jaringan yang mengancam kebebasan pribadi dan privasi, aktivitas bisnis rahasia dan relasi, serta keamanan negara yang dikenal dengan analisis traffic.</string>
+    <string name="app_description">AnyoneBot adalah aplikasi proxy gratis yang membuat aplikasi-aplikasi lainnya dapat terkoneksi dengan internet secara aman. AnyoneBot menggunakan Anon untuk mengenkripsi hubungan internet Anda dan menyalurkannya melewati berbagai komputer di seluruh dunia. Anon adalah software gratis dan layanan terbuka, yang membantu Anda menghindari pengawasan jaringan yang mengancam kebebasan pribadi dan privasi, aktivitas bisnis rahasia dan relasi, serta keamanan negara yang dikenal dengan analisis traffic.</string>
     <string name="menu_settings">Pengaturan</string>
     <string name="menu_log">Log</string>
     <string name="menu_stop">Berhenti</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Umum</string>
     <string name="pref_start_boot_title">Mulai AnyoneBot saat Boot</string>
-    <string name="pref_start_boot_summary">Secara otomatis memulai AnyoneBot dan menghubungkan dengan Tor ketika perangkat Android anda boot</string>
+    <string name="pref_start_boot_summary">Secara otomatis memulai AnyoneBot dan menghubungkan dengan Anon ketika perangkat Android anda boot</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Sidik jari, alias, negara dan alamat untuk loncatan pertama</string>
     <string name="pref_entrance_node_dialog">Masukkan Simpul Masuk</string>
     <string name="pref_allow_background_starts_title">Izinkan Memulai di Latar Belakang</string>
-    <string name="pref_allow_background_starts_summary">Biarkan aplikasi lain memberitahu AnyoneBot untuk memulai Tor dan layanan terkait</string>
+    <string name="pref_allow_background_starts_summary">Biarkan aplikasi lain memberitahu AnyoneBot untuk memulai Anon dan layanan terkait</string>
     <string name="pref_proxy_title">Outbound Proxy Jaringan (Opsional)</string>
     <string name="pref_proxy_type_title">Outbound Jenis Proxy</string>
     <string name="pref_proxy_type_summary">Protokol yang digunakan untuk server proxy: HTTP, HTTPS, Socks4, Socks5</string>
@@ -56,10 +56,10 @@
     <string name="relaying">Sedang me-Relay</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Nyalakan perangkat anda menjadi non-exit relay</string>
     <string name="relay_port">Port Relay</string>
-    <string name="listening_port_for_your_tor_relay">Port mendengarkan untuk TOR relay anda</string>
+    <string name="listening_port_for_your_anon_relay">Port mendengarkan untuk Anon relay anda</string>
     <string name="enter_or_port">Memasuki OR port</string>
     <string name="relay_nickname">Nama Relay</string>
-    <string name="the_nickname_for_your_tor_relay">sebuah nama untuk Tor Relay anda</string>
+    <string name="the_nickname_for_your_anon_relay">sebuah nama untuk Anon Relay anda</string>
     <string name="enter_a_custom_relay_nickname">Masukkan nama relay</string>
     <string name="reachable_addresses">Addresses Terjangkau</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Jalankan sebagai client dibalik firewall dengan ketentuan ketat</string>
@@ -69,24 +69,24 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">nyalakan debug log untuk output (harus menggunakan adb atau aLogCat untuk menampilkan)</string>
     <string name="project_home">Beranda Proyek:</string>
     <string name="third_party_software">Perangkat Lunak Pihak Ke-3:</string>
-    <string name="pref_use_expanded_notifications">Tampilkan dalam notifikasi dengan negara dan IP keluar nodus keluar Tor ketika tersedia</string>
+    <string name="pref_use_expanded_notifications">Tampilkan dalam notifikasi dengan negara dan IP keluar nodus keluar Anon ketika tersedia</string>
     <string name="pref_use_expanded_notifications_title">Notifikasi Melebar</string>
     <string name="set_locale_title">Bahasa</string>
     <string name="pref_disable_network_title">Auto-Tidur Tidak Ada Jaringan</string>
-    <string name="pref_disable_network_summary">Menempatkan Tor untuk tidur ketika tidak ada internet yang tersedia</string>
-    <string name="newnym">Anda telah beralih ke identitas Tor baru!</string>
-    <string name="pref_socks_title">SOCKS Tor</string>
-    <string name="pref_socks_summary">Port tempat proxy SOCKS Tor aktif (standar: 9050 atau 0 untuk mematikan)</string>
+    <string name="pref_disable_network_summary">Menempatkan Anon untuk tidur ketika tidak ada internet yang tersedia</string>
+    <string name="newnym">Anda telah beralih ke identitas Anon baru!</string>
+    <string name="pref_socks_title">SOCKS Anon</string>
+    <string name="pref_socks_summary">Port tempat proxy SOCKS Anon aktif (standar: 9050 atau 0 untuk mematikan)</string>
     <string name="pref_socks_dialog">Konfigurasi Port SOCKS</string>
-    <string name="pref_transport_title">Port TransProxy Tor</string>
-    <string name="pref_transport_summary">Port tempat Proxy Transparan Tor aktif (standar: 9040 atau 0 untuk mematikan)</string>
+    <string name="pref_transport_title">Port TransProxy Anon</string>
+    <string name="pref_transport_summary">Port tempat Proxy Transparan Anon aktif (standar: 9040 atau 0 untuk mematikan)</string>
     <string name="pref_transport_dialog">Konfigurasi Port TransProxy</string>
-    <string name="pref_dnsport_title">Port DNS Tor</string>
-    <string name="pref_dnsport_summary">Port tempat DNS Tor aktif (standar: 5400 atau 0 untuk mematikan)</string>
+    <string name="pref_dnsport_title">Port DNS Anon</string>
+    <string name="pref_dnsport_summary">Port tempat DNS Anon aktif (standar: 5400 atau 0 untuk mematikan)</string>
     <string name="pref_dnsport_dialog">Konfigurasi Port DNS</string>
-    <string name="pref_torrc_title">Konfigurasi Torrc</string>
-    <string name="pref_torrc_summary">HANYA UNTUK AHLI: masukkan baris konfigurasi direct Torrc</string>
-    <string name="pref_torrc_dialog">Torrc Custom</string>
+    <string name="pref_anonrc_title">Konfigurasi anonrc</string>
+    <string name="pref_anonrc_summary">HANYA UNTUK AHLI: masukkan baris konfigurasi direct anonrc</string>
+    <string name="pref_anonrc_dialog">anonrc Custom</string>
     <string name="send_email">Kirim Email</string>
     <string name="please_restart_to_enable_the_changes">Silakan start ulang AnyoneBot untuk mengaktifkan perubahan</string>
     <string name="done">Beres!</string>
@@ -95,10 +95,10 @@
     <string name="apps_mode">Mode VPN</string>
     <string name="mebibyte">MiB</string>
     <string name="kibibyte">KiB</string>
-    <string name="pref_http_title">Tor HTTP</string>
+    <string name="pref_http_title">Anon HTTP</string>
     <string name="deny">Pangkar</string>
     <string name="allow">Izinkan</string>
-    <string name="pref_http_summary">Port yang Tor menawarkan proxy HTTP-nya (standar: 8118 atau 0 untuk mematikan)</string>
+    <string name="pref_http_summary">Port yang Anon menawarkan proxy HTTP-nya (standar: 8118 atau 0 untuk mematikan)</string>
     <string name="trouble_connecting">Ada masalah saat menyambung\?</string>
     <string name="onion">.onion</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Buka Proxy di Semua Antarmuka</string>
@@ -109,7 +109,7 @@
     <string name="v3_client_auth_activity_title">Otorisasi Klien</string>
     <string name="secure_your_connection_subtitle">Sembunyikan aplikasi dari pemantauran jaringan dan dapatkan akses ketika mereka diblokir..</string>
     <string name="power_user_mode">Mode Pengguna Berdaya</string>
-    <string name="power_user_description">Untuk pengguna yang familier dengan Tor. Memungkinkan Anda untuk memulai AnyoneBot tanpa pengaturan VPN dan menampilkan porta SOCKS dan HTTP yang terbuka</string>
+    <string name="power_user_description">Untuk pengguna yang familier dengan Anon. Memungkinkan Anda untuk memulai AnyoneBot tanpa pengaturan VPN dan menampilkan porta SOCKS dan HTTP yang terbuka</string>
     <string name="action_activate">Aktifkan</string>
     <string name="volunteer_status_title">Hari ini lebih baik
 \nkarena tindakan Anda.</string>
@@ -124,7 +124,7 @@
     <string name="menu_new_identity">Identitas Baru</string>
     <string name="version">Versi:</string>
     <string name="license">Lisensi:</string>
-    <string name="configure_header">Konfigurasi Koneksi Tor Anda</string>
+    <string name="configure_header">Konfigurasi Koneksi Anon Anda</string>
     <string name="drawer_open">Buka</string>
     <string name="drawer_close">Tutup</string>
     <string name="proxy_ports">Porta Proksi</string>
@@ -137,11 +137,11 @@
     <string name="trying_to_connect_title">Menghubungkan…</string>
     <string name="btn_change_exit">Pilih nodus keluar</string>
     <string name="btn_refresh">Muat ulang</string>
-    <string name="btn_tor_off">Matikan Tor</string>
+    <string name="btn_anon_off">Matikan Anon</string>
     <string name="no_thx">Tidak, Terima Kasih</string>
     <string name="menu_header_features">Fitur</string>
     <string name="captcha_title">Beri tahu kami bahwa Anda manusia</string>
-    <string name="menu_tor_connection">Koneksi Tor</string>
+    <string name="menu_anon_connection">Koneksi Anon</string>
     <string name="menu_help_others">Bantu Orang Lain</string>
     <string name="menu_app_settings">Pengaturan Aplikasi</string>
     <string name="menu_header_learn">Pelajari Lebih Lanjut</string>
@@ -157,22 +157,22 @@
     <string name="user_services">Layanan pengguna</string>
     <string name="app_services">Layanan aplikasi</string>
     <string name="refresh_apps">Muat Ulang Aplikasi</string>
-    <string name="wizard_details_msg">AnyoneBot adalah aplikasi sumber terbuka yang berisi Tor, Go-Tun2Socks dan LibEvent. Ini menyediakan terowongan VPN, proksi Koneksi HTTP (hanya HTTPS dan di porta 8118) dan sebuah proksi SOCKS (9050) ke jaringan Tor.</string>
-    <string name="hidden_service_request">Sebuah aplikasi ingin membuka server onion di porta %1$s ke jaringan Tor. Ini aman jika Anda mempercayai aplikasinya.</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Perbolehkan peer Wi-Fi, perangkat tertambat dan siapa pun yang dapat menghubungkan ke IP Anda, untuk mengakses Tor</string>
+    <string name="wizard_details_msg">AnyoneBot adalah aplikasi sumber terbuka yang berisi Anon, Go-Tun2Socks dan LibEvent. Ini menyediakan terowongan VPN, proksi Koneksi HTTP (hanya HTTPS dan di porta 8118) dan sebuah proksi SOCKS (9050) ke jaringan Anon.</string>
+    <string name="hidden_service_request">Sebuah aplikasi ingin membuka server onion di porta %1$s ke jaringan Anon. Ini aman jika Anda mempercayai aplikasinya.</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Perbolehkan peer Wi-Fi, perangkat tertambat dan siapa pun yang dapat menghubungkan ke IP Anda, untuk mengakses Anon</string>
     <string name="strict_nodes_description">Terapkan pengaturan Kecualikan Nodus sebagai kebutuhan untuk membangun semua sirkuit. Ini mungkin merusak penggunaan jika tidak ada sirkuit yang dapat dibuat dengan pengaturan Kecualikan Nodus Anda.</string>
     <string name="enable">Aktifkan</string>
     <string name="consider_disable_battery_optimizations">Layanan berjalan, pertimbangkan untuk menonaktifkan optimisasi baterai</string>
     <string name="pref_disable_ipv4_summary">Memberi tahu nodus keluar untuk tidak menghubungkan ke alamat IPv4</string>
     <string name="pref_disable_ipv4">Nonaktifkan koneksi IPv4</string>
-    <string name="app_shortcuts">Aplikasi diaktifkan dengan Tor</string>
+    <string name="app_shortcuts">Aplikasi diaktifkan dengan Anon</string>
     <string name="volunteer_mode_subtitle">Bantu orang lain menghubung</string>
     <string name="btn_choose_apps">Pilih aplikasi</string>
     <string name="menu_faq">SSD</string>
     <string name="confirm">Konfirmasi</string>
     <string name="v3_backup_key_warning">Peringatan: Ini dapat membocorkan kunci Anda ke aplikasi lain</string>
     <string name="delete_service">Hapus Layanan</string>
-    <string name="start_tor_again_for_finish_the_process">Mulai Tor lagi untuk menyelesaikan proses</string>
+    <string name="start_anon_again_for_finish_the_process">Mulai Anon lagi untuk menyelesaikan proses</string>
     <string name="v3_key_hash">Kunci Pribadi x25519 dalam Base32</string>
     <string name="v3_onion">Domain .onion</string>
     <string name="v3_backup_key">Kunci Otorisasi Klien Cadangan</string>
@@ -198,13 +198,13 @@
     <string name="pref_reduced_circuit_padding_summary">Gunakan algoritma beban rendah untuk mengurangi penggunaan data dan baterai</string>
     <string name="pref_prefer_ipv6">Lebih suka koneksi IPv6</string>
     <string name="pref_prefer_ipv6_summary">Menggunakan nodus keluar bahwa alamat IPv6 lebih disukai</string>
-    <string name="testing_tor_direct">Menguji koneksi ke Tor…</string>
-    <string name="testing_tor_direct_success">Berhasil. Koneksi Tor baik!</string>
+    <string name="testing_anon_direct">Menguji koneksi ke Anon…</string>
+    <string name="testing_anon_direct_success">Berhasil. Koneksi Anon baik!</string>
     <string name="incorrect_solution">Solusi Tidak Benar</string>
     <string name="hide_apps">Sembunyikan aplikasi dari pemantauan jaringan dan dapatkan akses ketika mereka diblokir.</string>
     <string name="log_copied">Catatan Disalin</string>
     <string name="not_sure">Tidak yakin\?</string>
-    <string name="many_ways">Ada lebih banyak cara untuk mencapai Tor. Beberapa dapat bekerja dengan baik daripada yang lain untuk Anda.</string>
+    <string name="many_ways">Ada lebih banyak cara untuk mencapai Anon. Beberapa dapat bekerja dengan baik daripada yang lain untuk Anda.</string>
     <string name="no_internet_title">Hubungkan ke internet</string>
     <string name="no_internet_subtitle">Anda membutuhkan koneksi internet untuk menggunakan AnyoneBot.</string>
     <string name="kindness_adjust_title">Pengaturan</string>

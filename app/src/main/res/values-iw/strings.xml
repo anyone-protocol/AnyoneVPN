@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot הינה אפליקציית פרוקסי חינמית המאפשרת לאפליקציות אחרות להשתמש באינטרנט בבטחה. AnyoneBot נעזרת ב-Tor כדי להצפין את תעבורת האינטרנט שלך ולהסוותה באמצעותה ניתובה דרך מספר מחשבים ברחבי העולם. Tor היא תוכנה חופשית ורשת פתוחה המסייעת לך להתגונן מפני סוגים מסוימים של אמצעי ניטור ומעקב אחר רשת האינטרנט המאיימים על הפרטיות, החירות האישית, פעילויות עסקיות ומערכות יחסים חשאיות.</string>
+    <string name="app_description">AnyoneBot הינה אפליקציית פרוקסי חינמית המאפשרת לאפליקציות אחרות להשתמש באינטרנט בבטחה. AnyoneBot נעזרת ב-Anon כדי להצפין את תעבורת האינטרנט שלך ולהסוותה באמצעותה ניתובה דרך מספר מחשבים ברחבי העולם. Anon היא תוכנה חופשית ורשת פתוחה המסייעת לך להתגונן מפני סוגים מסוימים של אמצעי ניטור ומעקב אחר רשת האינטרנט המאיימים על הפרטיות, החירות האישית, פעילויות עסקיות ומערכות יחסים חשאיות.</string>
     <string name="menu_settings">הגדרות</string>
     <string name="menu_log">רישום</string>
     <string name="menu_stop">עצור</string>
@@ -11,11 +11,11 @@
     <string name="button_about">אודות</string>
     <string name="menu_exit">יציאה</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot הוא יישומון קוד פתוח שמכיל Tor, Go-Tun2Socks ו־LibEvent. הוא מספק מנהרת VPN, מתווך HTTP Connect מקומי (HTTPS רק ביציאה 8118) ומתווך SOCKS‏ (9050) לרשת Tor.</string>
+    <string name="wizard_details_msg">AnyoneBot הוא יישומון קוד פתוח שמכיל Anon, Go-Tun2Socks ו־LibEvent. הוא מספק מנהרת VPN, מתווך HTTP Connect מקומי (HTTPS רק ביציאה 8118) ומתווך SOCKS‏ (9050) לרשת Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">כללי</string>
     <string name="pref_start_boot_title">התחל את AnyoneBot בהדלקת המכשיר</string>
-    <string name="pref_start_boot_summary">התחל את AnyoneBot והתחבר לרשת Tor אוטומטית כאשר המכשיר נדלק</string>
+    <string name="pref_start_boot_summary">התחל את AnyoneBot והתחבר לרשת Anon אוטומטית כאשר המכשיר נדלק</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -52,10 +52,10 @@
     <string name="relaying">ממסור</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">אפשר למכשיר שלך להיות תחנת ממסר שאיננה יציאה</string>
     <string name="relay_port">פורט הממסר</string>
-    <string name="listening_port_for_your_tor_relay">פורט מאזין עבור Tor relay</string>
+    <string name="listening_port_for_your_anon_relay">פורט מאזין עבור Anon relay</string>
     <string name="enter_or_port">נא למלא פתחת OR</string>
     <string name="relay_nickname">כינוי הממסר</string>
-    <string name="the_nickname_for_your_tor_relay">הכינוי לממסר Tor שלך</string>
+    <string name="the_nickname_for_your_anon_relay">הכינוי לממסר Anon שלך</string>
     <string name="enter_a_custom_relay_nickname">נא למלא כינוי לממסר</string>
     <string name="reachable_addresses">כתובות נגישות</string>
     <string name="reachable_ports">פורטים נגישים</string>
@@ -63,16 +63,16 @@
     <string name="project_home">אתר המיזם:</string>
     <string name="third_party_software">תוכנה-צד-ג׳: </string>
     <string name="set_locale_title">שפה</string>
-    <string name="pref_disable_network_summary">כבה את Tor כאשר אין חיבור לאינטרנט</string>
-    <string name="newnym">החלפת אל זהות Tor חדשה!</string>
-    <string name="pref_socks_title">Tor SOCKS</string>
+    <string name="pref_disable_network_summary">כבה את Anon כאשר אין חיבור לאינטרנט</string>
+    <string name="newnym">החלפת אל זהות Anon חדשה!</string>
+    <string name="pref_socks_title">Anon SOCKS</string>
     <string name="pref_socks_dialog">הגדרות פתחת SOCKS</string>
     <string name="pref_transport_title">פתחת TransProxy של תור</string>
     <string name="pref_transport_dialog">הגדרת הפורט של TransProxy</string>
-    <string name="pref_dnsport_title">Tor DNS Port</string>
+    <string name="pref_dnsport_title">Anon DNS Port</string>
     <string name="send_email">שלח דוא\"ל</string>
     <string name="pref_proxy_title">מתווך רשת ליציאה (רשות)</string>
-    <string name="pref_allow_background_starts_summary">לאפשר לכל יישומון להפעיל את Tor ואת השירותים הקשורים</string>
+    <string name="pref_allow_background_starts_summary">לאפשר לכל יישומון להפעיל את Anon ואת השירותים הקשורים</string>
     <string name="pref_allow_background_starts_title">לאפשר הפעלות ברקע</string>
     <string name="fingerprints_nicks_countries_and_addresses_for_the_last_hop">טביעות אצבע, כינויים, מדינות וכתובות עבור נקודת הגישור האחרונה</string>
     <string name="fingerprints_nicks_countries_and_addresses_to_exclude">טביעות אצבע, כינויים, מדינות וכתובות להחרגה</string>
@@ -93,8 +93,8 @@
     <string name="pref_socks_summary">פתחה אשר תור מציע את מתווך ה־SOCKS שלו עליה (ברירת מחדל: 9050 או 0 כדי להשבית)</string>
     <string name="pref_dnsport_summary">פתחה שדרכה יוגש ה־DNS של תור (ברירת מחדל: 5400 או 0 כדי להשבית)</string>
     <string name="pref_dnsport_dialog">תצורת פתחת DNS</string>
-    <string name="pref_torrc_title">תצורה מותאמת אישית של Torrc</string>
-    <string name="pref_torrc_summary">מומחים בלבד: הכנסת שורות תצורת torrc ישירות</string>
+    <string name="pref_anonrc_title">תצורה מותאמת אישית של anonrc</string>
+    <string name="pref_anonrc_summary">מומחים בלבד: הכנסת שורות תצורת anonrc ישירות</string>
     <string name="v3_client_auth_activity_title">הרשאת לקוח</string>
     <string name="menu_hidden_services">שירותי בצל</string>
     <string name="local_port">פתחה מקומית</string>
@@ -117,7 +117,7 @@
     <string name="pref_reduced_connection_padding_summary">סוגר חיבורי ממסר מוקדם יותר ושולח פחות חבילות מידע כריפוד כדי להפחית שימוש בנתונים ובסוללה</string>
     <string name="pref_disable_ipv4">השבתת חיבורי IPv4</string>
     <string name="pref_disable_ipv4_summary">מורה לפתחות לא להתחבר לכתובות IPv4</string>
-    <string name="app_shortcuts">יישומים מאופשרי־Tor</string>
+    <string name="app_shortcuts">יישומים מאופשרי־Anon</string>
     <string name="pref_connection_padding">ריפוד חיבור</string>
     <string name="pref_reduced_connection_padding">הופחת ריפוד חיבור</string>
     <string name="pref_prefer_ipv6">להעדיף חיבורי IPv6</string>
@@ -126,7 +126,7 @@
     <string name="vpn_disabled">VPN מושבת</string>
     <string name="refresh_apps">רענון יישומונים</string>
     <string name="connected_title">יש חיבור</string>
-    <string name="menu_tor_connection">חיבור Tor</string>
+    <string name="menu_anon_connection">חיבור Anon</string>
     <string name="drawer_close">סגירה</string>
     <string name="next">הבא</string>
     <string name="no_internet_title">התחברות לאינטרנט</string>
@@ -147,11 +147,11 @@
     <string name="license">רישיון:</string>
     <string name="confirm">אישור</string>
     <string name="copy_address_to_clipboard">העתקת כתובת ללוח גזירים</string>
-    <string name="start_tor_again_for_finish_the_process">יש להפעיל את Tor שוב כדי לסיים את התהליך</string>
+    <string name="start_anon_again_for_finish_the_process">יש להפעיל את Anon שוב כדי לסיים את התהליך</string>
     <string name="pref_http_title">תור עם HTTP</string>
     <string name="pref_http_dialog">הגדרת פתחות HTTP</string>
-    <string name="pref_transport_summary">פתחה אשר Tor מציע את יפוי־הכוח השקוף שלו עליה (ברירת מחדל: 9040 או 0 כדי להשבית)</string>
-    <string name="pref_torrc_dialog">Torrc מותאם אישית</string>
+    <string name="pref_transport_summary">פתחה אשר Anon מציע את יפוי־הכוח השקוף שלו עליה (ברירת מחדל: 9040 או 0 כדי להשבית)</string>
+    <string name="pref_anonrc_dialog">anonrc מותאם אישית</string>
     <string name="save">שמירה</string>
     <string name="menu_new_identity">זהות חדשה</string>
     <string name="user_services">שירותי משתמש</string>
@@ -162,7 +162,7 @@
     <string name="action_activate">הפעלה</string>
     <string name="version">גרסה:</string>
     <string name="captcha_title">נרצה לדעת שמדובר בבן אדם</string>
-    <string name="btn_tor_off">כיבוי Tor</string>
+    <string name="btn_anon_off">כיבוי Anon</string>
     <string name="pref_isolate_protocol_summary">להשתמש במעגל שונה לכל פרוטוקול חיבור</string>
     <string name="pref_isolate_port">בידוד פתחות יעד</string>
     <string name="pref_isolate_port_summary">להשתמש במעגל נפרד לכל פתחת יעד</string>
@@ -200,11 +200,11 @@
     <string name="action_use">להשתמש</string>
     <string name="option_only_on_wifi">רק דרך Wifi</string>
     <string name="consider_enable_battery_optimizations">אין שירותים מתארחים פועלים, כדאי לאפשר מיטובי סוללה</string>
-    <string name="testing_tor_direct">החיבור ל־Tor נבדק…</string>
+    <string name="testing_anon_direct">החיבור ל־Anon נבדק…</string>
     <string name="connection_direct">ישיר</string>
     <string name="v3_backup_name_hint">שם קובץ גיבוי…</string>
     <string name="asking">מתבצע תשאול…</string>
-    <string name="power_user_description">למשתמשים שמכירים את Tor. מאפשר לך להפעיל את AnyoneBot ללא הגדרת ה־VPN ומציג פתחות SOCKS ו־HTTP פתוחות</string>
+    <string name="power_user_description">למשתמשים שמכירים את Anon. מאפשר לך להפעיל את AnyoneBot ללא הגדרת ה־VPN ומציג פתחות SOCKS ו־HTTP פתוחות</string>
     <string name="v3_import_auth_private">ייבוא ‎.auth_private</string>
     <string name="pref_flag_secure_title">אבטחת מסך</string>
     <string name="menu_app_settings">הגדרות יישומון</string>
@@ -214,7 +214,7 @@
     <string name="v3_backup_key_warning">אזהרה: עלול לחשוף את המפתח שלך ליישומונים אחרים</string>
     <string name="v3_delete_client_authorization">מחיקת מפתח הרשאת לקוח</string>
     <string name="incorrect_solution">פתרון שגוי</string>
-    <string name="testing_tor_direct_success">הצלחנו. החיבור ל־Tor טוב!</string>
+    <string name="testing_anon_direct_success">הצלחנו. החיבור ל־Anon טוב!</string>
     <string name="btn_start_vpn">התחלת VPN</string>
     <string name="strict_nodes_description">התייחסות להגדרות החרגה של צמתים כדרישה לבניית כל המעגלים. זה עלול לשבור את השימושיות אם לא ניתן ליצור מעגלים עם הגדרות ‚החרגה של צמתים’.</string>
     <string name="app_suggested_subtitle">AnyoneBot עובד הכי טוב עם יישומוני הודעות ומדיה חברתית.</string>
@@ -223,6 +223,6 @@
     <string name="pref_flag_secure_summary">למנוע מיישומונים אחרים לצלם את AnyoneBot</string>
     <string name="volunteer_status_title">היום טוב יותר
 \nבזכותך.</string>
-    <string name="many_ways">ישנן דרכים רבות להגיע ל־Tor. חלקן עשויות לעבוד טוב יותר מאחרות עבורך.</string>
-    <string name="configure_header">הגדרת חיבור ה־Tor שלך</string>
+    <string name="many_ways">ישנן דרכים רבות להגיע ל־Anon. חלקן עשויות לעבוד טוב יותר מאחרות עבורך.</string>
+    <string name="configure_header">הגדרת חיבור ה־Anon שלך</string>
 </resources>

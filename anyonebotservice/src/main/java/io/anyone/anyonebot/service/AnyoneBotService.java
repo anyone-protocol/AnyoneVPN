@@ -175,7 +175,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
             mNotifyBuilder.addAction(R.drawable.ic_refresh_white_24dp, getString(R.string.menu_new_identity), pendingIntentNewNym);
         } else if (mCurrentStatus.equals(STATUS_OFF)) {
             var pendingIntentConnect = PendingIntent.getBroadcast(this, 0, new Intent(LOCAL_ACTION_NOTIFICATION_START), PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-            mNotifyBuilder.addAction(R.drawable.ic_stat_tor, getString(R.string.connect_to_tor), pendingIntentConnect);
+            mNotifyBuilder.addAction(R.drawable.ic_stat_tor, getString(R.string.connect_to_anon), pendingIntentConnect);
         }
 
         mNotifyBuilder.setContentText(notifyMsg).setSmallIcon(icon).setTicker(notifyType != NOTIFY_ID ? notifyMsg : null);
@@ -201,7 +201,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
             final boolean shouldStartVpnFromSystemIntent = !intent.getBooleanExtra(AnyoneBotConstants.EXTRA_NOT_SYSTEM, false);
 
             if (mCurrentStatus.equals(STATUS_OFF))
-                showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_tor), NOTIFY_ID, R.drawable.ic_stat_tor);
+                showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_stat_tor);
 
             if (shouldStartVpnFromSystemIntent) {
                 Log.d(TAG, "Starting VPN from system intent: " + intent);
@@ -226,7 +226,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
     }
 
     private void showDeactivatedNotification() {
-        showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_tor), NOTIFY_ID, R.drawable.ic_stat_tor);
+        showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_stat_tor);
     }
 
     @Override
@@ -264,7 +264,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
     private void stopAnonOnError(String message) {
         stopAnonAsync(false);
-        showToolbarNotification(getString(R.string.unable_to_start_tor) + ": " + message, ERROR_NOTIFY_ID, R.drawable.ic_stat_notifyerr);
+        showToolbarNotification(getString(R.string.unable_to_start_anon) + ": " + message, ERROR_NOTIFY_ID, R.drawable.ic_stat_notifyerr);
     }
 
     private static HashMap<String, String> mFronts;
@@ -495,7 +495,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
         extraLines.append('\n');
         extraLines.append(prefs.getString("pref_custom_torrc", "")).append('\n');
 
-        logNotice(getString(R.string.log_notice_updating_torrc));
+        logNotice(getString(R.string.log_notice_updating_anonrc));
 
         debug("torrc.custom=" + extraLines);
 
@@ -587,7 +587,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 }
             }
         } catch (Exception e) {
-            logException(getString(R.string.unable_to_start_tor) + " " + e.getLocalizedMessage(), e);
+            logException(getString(R.string.unable_to_start_anon) + " " + e.getLocalizedMessage(), e);
             stopAnonOnError(e.getLocalizedMessage());
         }
     }
@@ -843,7 +843,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
     }
 
     private StringBuffer processSettingsImpl(StringBuffer extraLines) throws IOException {
-        logNotice(getString(R.string.updating_settings_in_tor_service));
+        logNotice(getString(R.string.updating_settings_in_anon_service));
         var prefs = Prefs.getSharedPrefs(getApplicationContext());
         var becomeRelay = prefs.getBoolean(AnyoneBotConstants.PREF_OR, false);
         var ReachableAddresses = prefs.getBoolean(AnyoneBotConstants.PREF_REACHABLE_ADDRESSES, false);
@@ -1185,7 +1185,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 }
                 case ACTION_STATUS -> {
                     if (mCurrentStatus.equals(STATUS_OFF))
-                        showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_tor), NOTIFY_ID, R.drawable.ic_stat_tor);
+                        showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_stat_tor);
                     replyWithStatus(mIntent);
                 }
                 case AnonControlCommands.SIGNAL_RELOAD -> requestAnonRereadConfig();

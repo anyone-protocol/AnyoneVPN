@@ -13,7 +13,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Umum</string>
     <string name="pref_start_boot_title">Mulakan AnyoneBot semasa Boot</string>
-    <string name="pref_start_boot_summary">Mula AnyoneBot secara automatik dan sambung Tor ketika peranti Android boot</string>
+    <string name="pref_start_boot_summary">Mula AnyoneBot secara automatik dan sambung Anon ketika peranti Android boot</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -53,10 +53,10 @@
     <string name="relaying">Relaying</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Membolehkan peranti anda untuk menjadi geganti bukan keluar</string>
     <string name="relay_port">Relay Port</string>
-    <string name="listening_port_for_your_tor_relay">Mendapatkan port untuk tetapan relay Tor anda</string>
+    <string name="listening_port_for_your_anon_relay">Mendapatkan port untuk tetapan relay Anon anda</string>
     <string name="enter_or_port">Masukkan port OR</string>
     <string name="relay_nickname">Nama samaran relay</string>
-    <string name="the_nickname_for_your_tor_relay">Nama samaran ini untuk relay Tor anda</string>
+    <string name="the_nickname_for_your_anon_relay">Nama samaran ini untuk relay Anon anda</string>
     <string name="enter_a_custom_relay_nickname">Masukkan nama samaran gantian untuk relay</string>
     <string name="reachable_addresses">Alamat yang dapat dicapai</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Jalan sebagai klien dibelakang firewall dengan peraturan ketat</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot on ilmainen välityspalvelinsovellus, joka tarjoaa muille sovelluksille mahdollisuuden käyttää internetiä turvallisemmin. AnyoneBot käyttää Toria kryptaamaan verkkoliikenteesi ja sitten piilottaa sen kierrättämällä sitä usean tietokoneen kautta ympäri maailman. Tor on vapaa ohjelmisto ja avoin verkosto, jotka auttavat puolustautumaan vapautta ja yksityisyyttä uhkaavalta verkkovalvonnalta ja valtioiden verkonseurannalta sekä suojaamaan salaisia liiketoimintoja ja -yhteyksiä.</string>
+    <string name="app_description">AnyoneBot on ilmainen välityspalvelinsovellus, joka tarjoaa muille sovelluksille mahdollisuuden käyttää internetiä turvallisemmin. AnyoneBot käyttää Anonia kryptaamaan verkkoliikenteesi ja sitten piilottaa sen kierrättämällä sitä usean tietokoneen kautta ympäri maailman. Anon on vapaa ohjelmisto ja avoin verkosto, jotka auttavat puolustautumaan vapautta ja yksityisyyttä uhkaavalta verkkovalvonnalta ja valtioiden verkonseurannalta sekä suojaamaan salaisia liiketoimintoja ja -yhteyksiä.</string>
     <string name="menu_settings">Asetukset</string>
     <string name="menu_log">Loki</string>
     <string name="menu_stop">Pysäytä</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Yleiset</string>
     <string name="pref_start_boot_title">Käynnistä AnyoneBot automaattisesti</string>
-    <string name="pref_start_boot_summary">Käynnistä AnyoneBot ja muodosta Tor-yhteys automaattisesti Android-laitteesi käynnistyessä.</string>
+    <string name="pref_start_boot_summary">Käynnistä AnyoneBot ja muodosta Anon-yhteys automaattisesti Android-laitteesi käynnistyessä.</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Leimat, nimimerkit, maat ja osoitteet ensimmäiseen hyppyyn.</string>
     <string name="pref_entrance_node_dialog">Syötä lähtösolmut</string>
     <string name="pref_allow_background_starts_title">Salli taustakäynnistys</string>
-    <string name="pref_allow_background_starts_summary">Salli muiden sovellusten ohjata AnyoneBotia käynnistämään Tor ja tarpeelliset palvelut.</string>
+    <string name="pref_allow_background_starts_summary">Salli muiden sovellusten ohjata AnyoneBotia käynnistämään Anon ja tarpeelliset palvelut.</string>
     <string name="pref_proxy_title">Lähtevä välityspalvelin (valinnainen)</string>
     <string name="pref_proxy_type_title">Välityspalvelimen tyyppi</string>
     <string name="pref_proxy_type_summary">Lähtevän välityspalvelimen yhteysprotokolla: HTTP, HTTPS, SOCKS4 tai SOCKS5.</string>
@@ -56,10 +56,10 @@
     <string name="relaying">Reititys</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Käytä laitettasi muuna kuin päätösreitittimenä.</string>
     <string name="relay_port">Reitittimen portti</string>
-    <string name="listening_port_for_your_tor_relay">Portti, jota Tor-reitittimesi kuuntelee.</string>
+    <string name="listening_port_for_your_anon_relay">Portti, jota Anon-reitittimesi kuuntelee.</string>
     <string name="enter_or_port">Syötä OR-portti</string>
     <string name="relay_nickname">Reitittimen lempinimi</string>
-    <string name="the_nickname_for_your_tor_relay">Tor-reitittimesi kutsumanimi.</string>
+    <string name="the_nickname_for_your_anon_relay">Anon-reitittimesi kutsumanimi.</string>
     <string name="enter_a_custom_relay_nickname">Syötä reitittimelle oma lempinimi</string>
     <string name="reachable_addresses">Tavoitettavissa olevat osoitteet</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Suorita päätteenä rajoittavan palomuurin takana.</string>
@@ -69,24 +69,24 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Käytä vianselvityslokin lähetystä (tarkastelu adb:n tai aLogCat-sovelluksen kautta).</string>
     <string name="project_home">Projektin kotisivusto:</string>
     <string name="third_party_software">3. osapuolen ohjelmistot:</string>
-    <string name="pref_use_expanded_notifications">Näytä Tor-päätössolmun maa ja IP-osoite ilmoituksessa, jos saatavilla.</string>
+    <string name="pref_use_expanded_notifications">Näytä Anon-päätössolmun maa ja IP-osoite ilmoituksessa, jos saatavilla.</string>
     <string name="pref_use_expanded_notifications_title">Laajennetut ilmoitukset</string>
     <string name="set_locale_title">Kieli</string>
     <string name="pref_disable_network_title">Ei verkon automaattilepotilaa</string>
-    <string name="pref_disable_network_summary">Aseta Tor lepotilaan, kun Internet-yhteyttä ei ole käytettävissä.</string>
-    <string name="newnym">Vaihdoit Tor-identiteettisi uuteen!</string>
-    <string name="pref_socks_title">Tor SOCKS-välityspalvelin</string>
-    <string name="pref_socks_summary">Portti, jonka kautta Torin SOCKS-välityspalvelin on tavoitettavissa (oletus on 9050 tai pois käytöstä arvolla 0).</string>
+    <string name="pref_disable_network_summary">Aseta Anon lepotilaan, kun Internet-yhteyttä ei ole käytettävissä.</string>
+    <string name="newnym">Vaihdoit Anon-identiteettisi uuteen!</string>
+    <string name="pref_socks_title">Anon SOCKS-välityspalvelin</string>
+    <string name="pref_socks_summary">Portti, jonka kautta Anonin SOCKS-välityspalvelin on tavoitettavissa (oletus on 9050 tai pois käytöstä arvolla 0).</string>
     <string name="pref_socks_dialog">Syötä SOCKS-porttimääritys</string>
-    <string name="pref_transport_title">Tor TransProxy -portti</string>
-    <string name="pref_transport_summary">Portti, jonka kautta Torin lähinäkyvä välityspalvelin on tavoitettavissa (oletus on 9040 tai pois käytöstä arvolla 0).</string>
+    <string name="pref_transport_title">Anon TransProxy -portti</string>
+    <string name="pref_transport_summary">Portti, jonka kautta Anonin lähinäkyvä välityspalvelin on tavoitettavissa (oletus on 9040 tai pois käytöstä arvolla 0).</string>
     <string name="pref_transport_dialog">Syötä TransProxy-porttimääritys</string>
-    <string name="pref_dnsport_title">Tor DNS-portti</string>
-    <string name="pref_dnsport_summary">Portti, jonka Torin DNS on tavoitettavissa (oletus on 5400 tai pois käytöstä arvolla 0).</string>
+    <string name="pref_dnsport_title">Anon DNS-portti</string>
+    <string name="pref_dnsport_summary">Portti, jonka Anonin DNS on tavoitettavissa (oletus on 5400 tai pois käytöstä arvolla 0).</string>
     <string name="pref_dnsport_dialog">Syötä DNS-porttimääritys</string>
-    <string name="pref_torrc_title">Omat Torrc-määritykset</string>
-    <string name="pref_torrc_summary">VAIN KOKENEILLE KÄYTTÄJILLE: Syötä Torrc-määritysrivejä suoraan.</string>
-    <string name="pref_torrc_dialog">Omat Torrc-määritykset</string>
+    <string name="pref_anonrc_title">Omat anonrc-määritykset</string>
+    <string name="pref_anonrc_summary">VAIN KOKENEILLE KÄYTTÄJILLE: Syötä anonrc-määritysrivejä suoraan.</string>
+    <string name="pref_anonrc_dialog">Omat anonrc-määritykset</string>
     <string name="send_email">Lähetä sähköpostia</string>
     <string name="hidden_services">Onion-palvelut</string>
     <string name="menu_hidden_services">Onion-palvelut</string>
@@ -96,10 +96,10 @@
     <string name="please_restart_to_enable_the_changes">Käynnistä AnyoneBot uudelleen muutosten käyttöönottamiseksi.</string>
     <string name="disable">Poista käytöstä</string>
     <string name="enable">Ota käyttöön</string>
-    <string name="wizard_details_msg">AnyoneBot-sovellus on avointa lähdekoodia ja se sisältää seuraavat: Tor, Go-Tun2Socks ja LibEvent. Se tarjoaa VPN-tunnelin, paikallisen HTTP Connect -välityspalvelimen (HTTPS vain portissa 8118) ja SOCKS-välityspalvelimen (9050) Tor-verkkoon.</string>
-    <string name="hidden_service_request">Sovellus haluaa avata Tor-verkkoon Onion-palvelimen portissa %1$s. Tämä on turvallista, jos luotat sovellukseen.</string>
-    <string name="pref_http_title">Tori HTTP</string>
-    <string name="pref_http_summary">Portti, jonka kautta Torin HTTP-välityspalvelin on tavoitettavissa (oletus on 8118 tai pois käytöstä arvolla 0).</string>
+    <string name="wizard_details_msg">AnyoneBot-sovellus on avointa lähdekoodia ja se sisältää seuraavat: Anon, Go-Tun2Socks ja LibEvent. Se tarjoaa VPN-tunnelin, paikallisen HTTP Connect -välityspalvelimen (HTTPS vain portissa 8118) ja SOCKS-välityspalvelimen (9050) Anon-verkkoon.</string>
+    <string name="hidden_service_request">Sovellus haluaa avata Anon-verkkoon Onion-palvelimen portissa %1$s. Tämä on turvallista, jos luotat sovellukseen.</string>
+    <string name="pref_http_title">Anoni HTTP</string>
+    <string name="pref_http_summary">Portti, jonka kautta Anonin HTTP-välityspalvelin on tavoitettavissa (oletus on 8118 tai pois käytöstä arvolla 0).</string>
     <string name="pref_http_dialog">Syötä HTTP-porttimääritys</string>
     <string name="apps_mode">VPN-tila</string>
     <string name="vpn_default_world">Globaali (automaattinen)</string>
@@ -111,7 +111,7 @@
     <string name="backup_restored">Varmuuskopio palautettu</string>
     <string name="restore_backup">Palauta varmuuskopio</string>
     <string name="create_a_backup_first">Luo ensin varmuuskopio</string>
-    <string name="start_tor_again_for_finish_the_process">Käynnistä Tor uudelleen prosessin viimeistelemiseksi</string>
+    <string name="start_anon_again_for_finish_the_process">Käynnistä Anon uudelleen prosessin viimeistelemiseksi</string>
     <string name="confirm_service_deletion">Vahvista palvelun poisto</string>
     <string name="service_type">Palvelun tyyppi</string>
     <string name="onion">.onion</string>
@@ -138,9 +138,9 @@
     <string name="vpn_disabled">VPN ei ole käytössä</string>
     <string name="full_device_vpn">Koko laitteen kattava VPN</string>
     <string name="trouble_connecting">Yhteysongelmia\?</string>
-    <string name="testing_tor_direct_success">Onnistui. Tor-yhteys on kunnossa!</string>
-    <string name="testing_tor_direct">Kokeillaan yhteyttä Toriin…</string>
-    <string name="app_shortcuts">Tor-yhteyttä käyttävät sovellukset</string>
+    <string name="testing_anon_direct_success">Onnistui. Anon-yhteys on kunnossa!</string>
+    <string name="testing_anon_direct">Kokeillaan yhteyttä Anoniin…</string>
+    <string name="app_shortcuts">Anon-yhteyttä käyttävät sovellukset</string>
     <string name="pref_disable_ipv4_summary">Kertoo päätössolmuille, ettei IPv4-osoitteisiin yhdistetä.</string>
     <string name="pref_disable_ipv4">Poista käytöstä IPv4-yhteydet</string>
     <string name="pref_prefer_ipv6_summary">Kertoo päätössolmuille, että suositaan IPv6-osoitteita.</string>
@@ -159,7 +159,7 @@
     <string name="v3_onion">.onion-verkkotunnus</string>
     <string name="v3_client_auth_activity_title">Päätteen todennus</string>
     <string name="v3_hosted_services">Isännöidyt Onion-palvelut</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Salli Tor-yhteydet suoran Wi-Fi-yhteyden ja hotspot-yhteyden välityksellä yhdistetyille laitteille sekä muille tahoille, jotka voivat yhdistää IP-osoitteeseesi.</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Salli Anon-yhteydet suoran Wi-Fi-yhteyden ja hotspot-yhteyden välityksellä yhdistetyille laitteille sekä muille tahoille, jotka voivat yhdistää IP-osoitteeseesi.</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Välityspalvelin kaikilla sovittimilla</string>
     <string name="version">Versio:</string>
     <string name="license">Lisenssi:</string>
@@ -169,11 +169,11 @@
     <string name="btn_choose_apps">Valitse sovelluksia</string>
     <string name="btn_change_exit">Vaihda päätössolmu</string>
     <string name="btn_refresh">Päivitä</string>
-    <string name="btn_tor_off">Katkaise Tor-yhteys</string>
+    <string name="btn_anon_off">Katkaise Anon-yhteys</string>
     <string name="no_thx">Ei kiitos</string>
     <string name="menu_header_features">Ominaisuudet</string>
     <string name="captcha_title">Kerro meille, että olet ihminen</string>
-    <string name="menu_tor_connection">Tor-yhteys</string>
+    <string name="menu_anon_connection">Anon-yhteys</string>
     <string name="menu_help_others">Auta muita</string>
     <string name="menu_app_settings">Sovelluksen asetukset</string>
     <string name="menu_faq">FAQ</string>
@@ -185,7 +185,7 @@
     <string name="trying_to_connect_title">Yhdistetään…</string>
     <string name="secure_your_connection_subtitle">Piilota sovelluksia verkkoseurannalta ja käytä estettyjä palveluita.</string>
     <string name="proxy_ports">Välityspalvelimen portit</string>
-    <string name="power_user_description">Kokeneille Tor-käyttäjille. Mahdollistaa AnyoneBotin käynnistyksen ilman VPN-asetusta ja näyttää avoimet SOCKS- ja HTTP-portit.</string>
+    <string name="power_user_description">Kokeneille Anon-käyttäjille. Mahdollistaa AnyoneBotin käynnistyksen ilman VPN-asetusta ja näyttää avoimet SOCKS- ja HTTP-portit.</string>
     <string name="power_user_mode">Tehokäyttäjätila</string>
     <string name="action_activate">Aktivoi</string>
     <string name="volunteer_status_title">Tänään on ansiostasi parempi päivä.</string>
@@ -193,7 +193,7 @@
     <string name="app_suggested_subtitle">AnyoneBot toimii parhaiten viestintäsovellusten ja sosiaalisen median sovellusten kanssa.</string>
     <string name="apps_other_apps">Muut sovellukset</string>
     <string name="apps_suggested_title">Ehdotetut sovellukset</string>
-    <string name="configure_header">Määritä Tor-yhteytesi</string>
+    <string name="configure_header">Määritä Anon-yhteytesi</string>
     <string name="drawer_open">Avaa</string>
     <string name="drawer_close">Sulje</string>
     <string name="connect">Yhdistä</string>
@@ -207,7 +207,7 @@
     <string name="asking">KYSYTÄÄN…</string>
     <string name="no_internet_subtitle">Tarvitset Internet-yhteyden AnyoneBotin käyttöön.</string>
     <string name="not_sure">Etkö osaa valita\?</string>
-    <string name="many_ways">Tor voidaan tavoittaa monilla tavoilla. Jotkin saattavat sopia sinulle muita paremmin.</string>
+    <string name="many_ways">Anon voidaan tavoittaa monilla tavoilla. Jotkin saattavat sopia sinulle muita paremmin.</string>
     <string name="no_internet_title">Yhdistä Internetiin</string>
     <string name="pref_isolate_protocol">Eristä pääteprotokollat</string>
     <string name="pref_isolate_port">Eristä kohdeportit</string>

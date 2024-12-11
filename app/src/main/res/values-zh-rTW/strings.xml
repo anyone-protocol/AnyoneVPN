@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot 是一款免費的網絡代理應用程式，用來保護其他應用程式的上網安全。AnyoneBot 使用 Tor 在全球一系列的電腦間跳躍，達到加密並隱藏網路流量。Tor 是個自由軟體也是個開放網路，能幫您抵禦流量分析這種網路監控模式，它威脅到個人的自由與隱私、商業機密活動與商務關係、甚至威脅國家安全。</string>
+    <string name="app_description">AnyoneBot 是一款免費的網絡代理應用程式，用來保護其他應用程式的上網安全。AnyoneBot 使用 Anon 在全球一系列的電腦間跳躍，達到加密並隱藏網路流量。Anon 是個自由軟體也是個開放網路，能幫您抵禦流量分析這種網路監控模式，它威脅到個人的自由與隱私、商業機密活動與商務關係、甚至威脅國家安全。</string>
     <string name="menu_settings">設定</string>
     <string name="menu_log">記錄檔</string>
     <string name="menu_stop">停止</string>
@@ -11,11 +11,11 @@
     <string name="button_about">關於</string>
     <string name="menu_exit">離開</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot 是一個開源應用程式，包含 Tor、Go-Tun2Socks 和 LibEvent。它提供了一個 VPN 隧道、一個本地 HTTP 連接代理（HTTPS 僅在連接埠 8118 上）和一個 SOCKS 代理（9050）進入 Tor 網路。</string>
+    <string name="wizard_details_msg">AnyoneBot 是一個開源應用程式，包含 Anon、Go-Tun2Socks 和 LibEvent。它提供了一個 VPN 隧道、一個本地 HTTP 連接代理（HTTPS 僅在連接埠 8118 上）和一個 SOCKS 代理（9050）進入 Anon 網路。</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">一般</string>
     <string name="pref_start_boot_title">開機時自動啟動 AnyoneBot</string>
-    <string name="pref_start_boot_summary">當你的 Android  裝置開機時自動開啟 AnyoneBot 並連接 Tor 網路</string>
+    <string name="pref_start_boot_summary">當你的 Android  裝置開機時自動開啟 AnyoneBot 並連接 Anon 網路</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">第一個跳板的指紋，暱稱，國家和地址</string>
     <string name="pref_entrance_node_dialog">入口節點的條件</string>
     <string name="pref_allow_background_starts_title">允許在背景啟動</string>
-    <string name="pref_allow_background_starts_summary">允許任何應用程式告訴 AnyoneBot 啟動 Tor 及相關服務</string>
+    <string name="pref_allow_background_starts_summary">允許任何應用程式告訴 AnyoneBot 啟動 Anon 及相關服務</string>
     <string name="pref_proxy_title">對外網路的代理伺服器 (可不設)</string>
     <string name="pref_proxy_type_title">對外網路的代理伺服器類型</string>
     <string name="pref_proxy_type_summary">代理伺服器使用的協議：HTTP, HTTPS, Socks4, Socks5</string>
@@ -55,12 +55,12 @@
     <string name="strict_nodes">嚴格限制節點</string>
     <string name="relays">中繼（Relays）</string>
     <string name="relaying">中繼設定</string>
-    <string name="enable_your_device_to_be_a_non_exit_relay">啟用您的裝置成為 Tor 網路的中繼節點（非出口節點）</string>
+    <string name="enable_your_device_to_be_a_non_exit_relay">啟用您的裝置成為 Anon 網路的中繼節點（非出口節點）</string>
     <string name="relay_port">中繼連接埠</string>
-    <string name="listening_port_for_your_tor_relay">您的 Tor 中繼功能連接埠</string>
+    <string name="listening_port_for_your_anon_relay">您的 Anon 中繼功能連接埠</string>
     <string name="enter_or_port">連接埠</string>
     <string name="relay_nickname">中繼節點暱稱</string>
-    <string name="the_nickname_for_your_tor_relay">給您的 Tor 中繼節點一個暱稱</string>
+    <string name="the_nickname_for_your_anon_relay">給您的 Anon 中繼節點一個暱稱</string>
     <string name="enter_a_custom_relay_nickname">輸入您自訂的中繼節點暱稱</string>
     <string name="reachable_addresses">可用位址受限</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">您的裝置位於防火牆後，存取範圍受到限制</string>
@@ -70,25 +70,25 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">啟用除錯日並輸出 (必須使用 adb 或 aLogCat 來檢視)</string>
     <string name="project_home">專案首頁：</string>
     <string name="third_party_software">第三方軟體：</string>
-    <string name="hidden_service_request">有一個應用程式想要在 Tor 網絡的連接埠 %1$s 上開啟 Onion 伺服器。如果你信任該應用程式，這是安全的。</string>
-    <string name="pref_use_expanded_notifications">如果可用，在通知中顯示你的 Tor 出口節點的國家和 IP 位址</string>
+    <string name="hidden_service_request">有一個應用程式想要在 Anon 網絡的連接埠 %1$s 上開啟 Onion 伺服器。如果你信任該應用程式，這是安全的。</string>
+    <string name="pref_use_expanded_notifications">如果可用，在通知中顯示你的 Anon 出口節點的國家和 IP 位址</string>
     <string name="pref_use_expanded_notifications_title">詳細的通知</string>
     <string name="set_locale_title">語言</string>
     <string name="pref_disable_network_title">無網路時自動休眠</string>
-    <string name="pref_disable_network_summary">當沒有網路可用時，讓 Tor 休眠</string>
-    <string name="newnym">您已切換到新的 Tor 身分！</string>
-    <string name="pref_socks_title">Tor SOCKS 代理</string>
-    <string name="pref_socks_summary">Tor 提供 SOCKS 代理的連接埠 (預設：9050，若設為 0 則關閉)</string>
+    <string name="pref_disable_network_summary">當沒有網路可用時，讓 Anon 休眠</string>
+    <string name="newnym">您已切換到新的 Anon 身分！</string>
+    <string name="pref_socks_title">Anon SOCKS 代理</string>
+    <string name="pref_socks_summary">Anon 提供 SOCKS 代理的連接埠 (預設：9050，若設為 0 則關閉)</string>
     <string name="pref_socks_dialog">設定 SOCKS 連接埠</string>
-    <string name="pref_transport_title">Tor 通透式代理連接埠</string>
-    <string name="pref_transport_summary">Tor 提供通透式代理的連接埠 (預設：9040，若設為 0 則關閉)</string>
+    <string name="pref_transport_title">Anon 通透式代理連接埠</string>
+    <string name="pref_transport_summary">Anon 提供通透式代理的連接埠 (預設：9040，若設為 0 則關閉)</string>
     <string name="pref_transport_dialog">設定通透式代理連接埠</string>
-    <string name="pref_dnsport_title">Tor DNS 埠</string>
-    <string name="pref_dnsport_summary">Tor 提供域名解析服務（DNS）的連接埠 (預設：5400，若設為0則關閉)</string>
+    <string name="pref_dnsport_title">Anon DNS 埠</string>
+    <string name="pref_dnsport_summary">Anon 提供域名解析服務（DNS）的連接埠 (預設：5400，若設為0則關閉)</string>
     <string name="pref_dnsport_dialog">DNS連接埠設定</string>
-    <string name="pref_torrc_title">Torrc 自訂設置</string>
-    <string name="pref_torrc_summary">僅限專家：輸入 torrc 設定指令</string>
-    <string name="pref_torrc_dialog">自訂 Torrc</string>
+    <string name="pref_anonrc_title">anonrc 自訂設置</string>
+    <string name="pref_anonrc_summary">僅限專家：輸入 anonrc 設定指令</string>
+    <string name="pref_anonrc_dialog">自訂 anonrc</string>
     <string name="apps_mode">VPN 模式</string>
     <string name="send_email">寄送電子信件</string>
     <string name="vpn_default_world">全域(自動)</string>
@@ -106,7 +106,7 @@
     <string name="backup_restored">備份已還原</string>
     <string name="restore_backup">還原備份</string>
     <string name="create_a_backup_first">先創立備份</string>
-    <string name="start_tor_again_for_finish_the_process">再次開啟 Tor  以完成此過程</string>
+    <string name="start_anon_again_for_finish_the_process">再次開啟 Anon  以完成此過程</string>
     <string name="confirm_service_deletion">確認服務刪除</string>
     <string name="service_type">服務類型</string>
     <string name="please_restart_to_enable_the_changes">請重新啟動 AnyoneBot 以套用變更</string>
@@ -123,7 +123,7 @@
 默認: auto</string>
     <string name="pref_reduced_connection_padding">減少連接保護</string>
     <string name="pref_reduced_connection_padding_summary">關閉中繼連接並傳送少數保護封包來減少資料和電池的用量</string>
-    <string name="app_shortcuts">Tor 支持的應用</string>
+    <string name="app_shortcuts">Anon 支持的應用</string>
     <string name="trouble_connecting">連線遇上問題?</string>
     <string name="full_device_vpn">全設備 VPN</string>
     <string name="vpn_disabled">VPN 關閉</string>
@@ -132,7 +132,7 @@
     <string name="kibibyte">KiB</string>
     <string name="confirm">確認</string>
     <string name="menu_header_features">功能</string>
-    <string name="menu_tor_connection">Tor 連線</string>
+    <string name="menu_anon_connection">Anon 連線</string>
     <string name="menu_faq">常見問題</string>
     <string name="next">下一個</string>
     <string name="title_choose_apps">選擇應用程式</string>
@@ -155,7 +155,7 @@
     <string name="btn_refresh">重新整理</string>
     <string name="connect">連接</string>
     <string name="menu_more">展開</string>
-    <string name="pref_http_title">Tor HTTP</string>
+    <string name="pref_http_title">Anon HTTP</string>
     <string name="pref_prefer_ipv6">首選 IPv6 連接</string>
     <string name="pref_open_proxy_on_all_interfaces_title">在所有接口上開啟代理</string>
     <string name="v3_import_auth_private">匯入 .auth_private</string>
@@ -178,34 +178,34 @@
     <string name="pref_prefer_ipv6_summary">告訴出口 IPv6 位址是首選</string>
     <string name="pref_disable_ipv4">停用 IPv4 連接</string>
     <string name="pref_disable_ipv4_summary">告訴出口不要連接到 IPv4 位址</string>
-    <string name="testing_tor_direct">測試與 Tor 的連接…</string>
+    <string name="testing_anon_direct">測試與 Anon 的連接…</string>
     <string name="user_services">使用者服務</string>
     <string name="refresh_apps">重新整理應用程式</string>
     <string name="secure_your_connection_title">準備連接</string>
     <string name="secure_your_connection_subtitle">將應用程式隱藏在網路監控之外，並在它們被阻止時取得存取權限。</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">允許連接到相同 Wi-Fi、區域網路裝置和任何可以連接到你的 IP 的其他人存取 Tor</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">允許連接到相同 Wi-Fi、區域網路裝置和任何可以連接到你的 IP 的其他人存取 Anon</string>
     <string name="v3_hosted_services">託管的 Onion 服務</string>
     <string name="v3_backup_key">備份用戶軟體驗證金鑰</string>
     <string name="v3_delete_client_authorization">刪除用戶軟體驗證金鑰</string>
     <string name="pref_reduced_circuit_padding_summary">使用較低開銷的填充演算法來減少資料和電池的使用</string>
-    <string name="testing_tor_direct_success">成功。Tor 連接良好！</string>
+    <string name="testing_anon_direct_success">成功。Anon 連接良好！</string>
     <string name="btn_start_vpn">啟動 VPN</string>
     <string name="asking">正在詢問…</string>
     <string name="option_only_when_charging">僅在充電時</string>
-    <string name="configure_header">配置你的 Tor 連接</string>
+    <string name="configure_header">配置你的 Anon 連接</string>
     <string name="btn_change_exit">變更出口</string>
     <string name="hide_apps">將應用程式隱藏在網路監控之外，並在它們被阻止時取得存取權限。</string>
-    <string name="pref_http_summary">Tor 提供 HTTP 代理的連接埠（預設值：8118 ，0 以停用）</string>
+    <string name="pref_http_summary">Anon 提供 HTTP 代理的連接埠（預設值：8118 ，0 以停用）</string>
     <string name="btn_copy_log">複製記錄</string>
     <string name="not_sure">不確定？</string>
     <string name="btn_choose_apps">選擇應用程式</string>
     <string name="volunteer_mode_subtitle">幫助其他人連接</string>
-    <string name="btn_tor_off">關閉 Tor</string>
+    <string name="btn_anon_off">關閉 Anon</string>
     <string name="no_thx">不，謝謝</string>
     <string name="menu_app_settings">應用程式設定</string>
     <string name="msg_try_something_else">嘗試別的</string>
     <string name="ports_not_set">連接埠未設定</string>
-    <string name="power_user_description">給熟悉 Tor 的使用者。允許你在沒有 VPN 設定的情況下啟動 AnyoneBot 並顯示開放的 SOCKS 和 HTTP 連接埠</string>
+    <string name="power_user_description">給熟悉 Anon 的使用者。允許你在沒有 VPN 設定的情況下啟動 AnyoneBot 並顯示開放的 SOCKS 和 HTTP 連接埠</string>
     <string name="apps_suggested_title">推薦的應用程式</string>
     <string name="option_only_on_wifi">僅在 Wi-Fi 上</string>
     <string name="pref_flag_secure_summary">防止其他應用程式對 AnyoneBot 進行螢幕截圖</string>
@@ -220,7 +220,7 @@
 \n因為有你。</string>
     <string name="app_suggested_subtitle">AnyoneBot 最適合與訊息和社交媒體應用程式搭配使用。</string>
     <string name="apps_other_apps">其他應用程式</string>
-    <string name="many_ways">有很多方法可以連接到 Tor。有些可能比其他的更適合你。</string>
+    <string name="many_ways">有很多方法可以連接到 Anon。有些可能比其他的更適合你。</string>
     <string name="no_internet_subtitle">你需要網絡連線才能使用 AnyoneBot。</string>
     <string name="root_warning">AnyoneBot 偵測到你的裝置已取得 root 權限，這可能會導致安全問題。</string>
     <string name="no_internet_title">連接到網絡</string>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBot er en gratis proxy app som gjør det mulig for andre apps å bruke Internett mer sikkert. AnyoneBot bruker Tor for å kryptere din Internettrafikk, og skjuler da din trafikk ved å sende trafikken gjennom en lang rekke datamaskiner over hele verden. Tor er et gratis dataprogram, og et åpent nettverk som hjelper deg å forsvare deg mot en form for nettverksovervåking som truer din personlige frihet og privatliv, konfidensiell bedriftsvirksomhet og relasjoner, og statlig sikkerhet kjent som trafikkanalyse.</string>
+  <string name="app_description">AnyoneBot er en gratis proxy app som gjør det mulig for andre apps å bruke Internett mer sikkert. AnyoneBot bruker Anon for å kryptere din Internettrafikk, og skjuler da din trafikk ved å sende trafikken gjennom en lang rekke datamaskiner over hele verden. Anon er et gratis dataprogram, og et åpent nettverk som hjelper deg å forsvare deg mot en form for nettverksovervåking som truer din personlige frihet og privatliv, konfidensiell bedriftsvirksomhet og relasjoner, og statlig sikkerhet kjent som trafikkanalyse.</string>
     <string name="status_starting_up">AnyoneBot starter…</string>
-  <string name="status_activated">Koblet til Tor-nettverket</string>
+  <string name="status_activated">Koblet til Anon-nettverket</string>
   <string name="status_disabled">AnyoneBot er deaktivert</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -16,10 +16,10 @@
     <string name="couldn_t_start_anon_process_">Kunne ikke starte anon prosessen:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Dine \"adresser som kan nås\"-innstillinger forårsaket et unntak!</string>
   <string name="your_relay_settings_caused_an_exception_">Dine relé-innstillinger forårsaket et unntak!</string>
-    <string name="found_existing_tor_process">fant eksisterende Tor-prosess…</string>
-    <string name="unable_to_start_tor">Klarte ikke å starte Tor:</string>
-    <string name="newnym">Du har byttet til en ny Tor-identitet!</string>
-    <string name="updating_settings_in_tor_service">Oppdaterer innstillinger i Tor service</string>
+    <string name="found_existing_anon_process">fant eksisterende Anon-prosess…</string>
+    <string name="unable_to_start_anon">Klarte ikke å starte Anon:</string>
+    <string name="newnym">Du har byttet til en ny Anon-identitet!</string>
+    <string name="updating_settings_in_anon_service">Oppdaterer innstillinger i Anon service</string>
   <string name="mebibyte_per_second">MiB/s</string>
   <string name="kibibyte_per_second">KiB/s</string>
 </resources>

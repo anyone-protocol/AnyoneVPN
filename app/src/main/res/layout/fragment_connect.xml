@@ -1,108 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/new_background">
-    <ProgressBar
-        tools:visibility="visible"
-        android:visibility="invisible"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/ivStatus"
-        android:id="@+id/progressBar"
-        style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
-        tools:progress="33"
-        android:progressTint="@color/progress_bar_purple"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    android:backgroundTint="@color/background">
 
     <ImageView
         android:id="@+id/ivStatus"
-        android:contentDescription="Orbie"
-        android:layout_width="148dp"
-        android:layout_height="166dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/toroff"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="-40dp"
+        android:layout_marginEnd="-40dp"
+        android:contentDescription="@string/connect"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_started"
+        app:layout_constraintBottom_toTopOf="@id/topDivider"
+        app:layout_constraintDimensionRatio="2:1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btSelectApps"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_main_scene"
+        android:drawableEnd="@drawable/ic_search"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/btn_choose_apps"
+        app:layout_constraintBottom_toTopOf="@id/btRefresh"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/ivShadow"
-        android:contentDescription="Shadow"
+    <Button
+        android:id="@+id/btRefresh"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_main_scene"
+        android:drawableEnd="@drawable/ic_refresh"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/btn_refresh"
+        app:layout_constraintEnd_toStartOf="@id/btChangeExit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btSelectApps" />
+
+    <Button
+        android:id="@+id/btChangeExit"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_main_scene"
+        android:drawableEnd="@drawable/ic_logout"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/btn_change_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btRefresh"
+        app:layout_constraintTop_toBottomOf="@id/btSelectApps" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/controlGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/orbieshadow"
+        android:visibility="gone"
+        app:constraint_referenced_ids="btSelectApps,btRefresh,btChangeExit"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/divider"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuide"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivStatus"
-        tools:ignore="HardcodedText,ImageContrastCheck" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:layout_marginTop="16dp"
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/secure_your_connection_title"
-        android:textColor="@android:color/white"
-        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:fontFamily="sans-serif-black"
+        android:text="@string/secure_your_connection_title"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:textColor="@color/accent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivShadow" />
+        app:layout_constraintTop_toBottomOf="@id/topDivider" />
 
     <TextView
-        android:textAlignment="center"
+        android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvSubtitle"
-        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-        android:text="@string/hide_apps"
-        android:textColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:paddingLeft="@dimen/activity_horizontal_large_margin"
         android:paddingRight="@dimen/activity_horizontal_large_margin"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.0" />
-
-    <Button
-        tools:enabled="false"
-        android:background="@drawable/btn_shape_round"
-        android:backgroundTint="@color/btn_enabled_purple"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/hide_apps"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
-        android:maxLines="3"
-        android:text="@string/btn_start_vpn"
-        android:id="@+id/btnStart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/unconnectedGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:paddingLeft="@dimen/button_horizontal_large_margin"
-        android:paddingRight="@dimen/button_horizontal_large_margin"
-        android:paddingTop="@dimen/activity_horizontal_margin"
-        android:paddingBottom="@dimen/activity_horizontal_margin" />
+        app:constraint_referenced_ids="tvTitle,tvSubtitle" />
 
-    <ListView
-        android:drawSelectorOnTop="true"
-        android:layout_marginTop="10dp"
-        tools:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/btnStart"
-        android:visibility="invisible"
-        android:dividerHeight="1dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
+    <ImageView
+        android:id="@+id/ivGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_green"
+        app:layout_constraintBottom_toBottomOf="@id/tvConnected"
+        app:layout_constraintEnd_toStartOf="@id/tvConnected"
+        app:layout_constraintTop_toTopOf="@id/tvConnected" />
+
+    <TextView
+        android:id="@+id/tvConnected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/connected_title"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topDivider" />
+
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvConnected"
+        tools:text="01:30:22" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/connectedGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ivGreen,tvConnected,tvCounter,tvFullDeviceVpn,appIconFlow"
+        tools:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomGuide" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="160dp" />
+
+    <TextView
+        android:id="@+id/tvFullDeviceVpn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:text="@string/full_device_vpn"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomGuide" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/appIconFlow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lvConnected"/>
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        app:flow_wrapMode="none"
+        app:flow_horizontalGap="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFullDeviceVpn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

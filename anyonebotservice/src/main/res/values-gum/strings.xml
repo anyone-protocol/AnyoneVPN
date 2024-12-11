@@ -3,25 +3,24 @@
     <string name="app_name">AnyoneBot</string>
     <string name="anyonebot_vpn">AnyoneBot VPN</string>
     <string name="app_description">AnyoneBotpe chi anwei kɵmɵn ikpape internetyu mentra kenamarmɵ chine maramtik kɵn.
-AnyoneBotpe, internet yu wammeran mentra lasrpitsɵsrkɵmɵntrappe Tor teik tɵka wetɵ ashmɵntrai isua marik kɵn, trek chippe chi wam merane esekawa ampumai imai purep ipik kɵn ik pirau mupa kuin pɵrap.
-Torpe kan software kɵn mayaelai chi anwei kɵmɵ, incha chu puisrɵ, kape chu pasriksrɵpe, wam kerilan mu kɵpen wamipikelɵ wetɵ ashmɵntrai purukupik kɵn, trek tɵwai chutɵ kucha maya misakwan aship pasrapik Estado teik wan purukupik kɵn, kan \"analisis de tráfico\" teik tɵka.</string>
+AnyoneBotpe, internet yu wammeran mentra lasrpitsɵsrkɵmɵntrappe Anon teik tɵka wetɵ ashmɵntrai isua marik kɵn, trek chippe chi wam merane esekawa ampumai imai purep ipik kɵn ik pirau mupa kuin pɵrap.
+Anonpe kan software kɵn mayaelai chi anwei kɵmɵ, incha chu puisrɵ, kape chu pasriksrɵpe, wam kerilan mu kɵpen wamipikelɵ wetɵ ashmɵntrai purukupik kɵn, trek tɵwai chutɵ kucha maya misakwan aship pasrapik Estado teik wan purukupik kɵn, kan \"analisis de tráfico\" teik tɵka.</string>
     <string name="status_starting_up">AnyoneBotpe pɵlpasrɵp pasran&#8230;</string>
-    <string name="status_activated">Toryu kelicha pasrik</string>
+    <string name="status_activated">Anonyu kelicha pasrik</string>
     <string name="status_disabled">AnyoneBotpe kuetsik pasran</string>
-    <string name="open_anyonebot_to_connect_to_tor">AnyoneBotwan kur Toryu kelichap</string>
+    <string name="open_anyonebot_to_connect_to_anon">AnyoneBotwan kur Anonyu kelichap</string>
     <string name="status_shutting_down">AnyoneBotpe kasrɵp pasran</string>
-    <string name="connect_to_tor">Tor yu kelitsik pasran</string>
     <string name="config_invalid">Orborwan tamartrentikpe kalɵ kɵn</string>
 
     <string name="couldn_t_start_anon_process_">Anonwan p­‎​ɵlpasrtrap kaimeik pasran</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">ReachableAddresses wan tamartrentikpe nɵrɵ pek tamarik kenamisran</string>
     <string name="your_relay_settings_caused_an_exception_">Relay wan tamartrentikpe nɵrɵ pek tamarik kenamisran</string>
-    <string name="found_existing_tor_process">Wetɵtraik kenamisran Tor&#8230; </string>
-    <string name="unable_to_start_tor">Torpe pɵlpasrtrap kaiman</string>
+    <string name="found_existing_anon_process">Wetɵtraik kenamisran Anon&#8230; </string>
+    <string name="unable_to_start_anon">Anonpe pɵlpasrtrap kaiman</string>
 
-    <string name="newnym">Tor maik kenamisrɵpik kuipe yunɵmaran</string>
+    <string name="newnym">Anon maik kenamisrɵpik kuipe yunɵmaran</string>
 
-    <string name="updating_settings_in_tor_service">Toryu srɵitɵ tamaramelɵ</string>
+    <string name="updating_settings_in_anon_service">Anonyu srɵitɵ tamaramelɵ</string>
 
     <string name="menu_new_identity">Srɵitɵ malɵ kena maramik</string>
     <string name="waiting_for_control_port">Puerto de controlwan munirap</string>
@@ -32,7 +31,7 @@ Torpe kan software kɵn mayaelai chi anwei kɵmɵ, incha chu puisrɵ, kape chu p
 
     <string name="log_notice_unable_to_update_onions">Ishik munchi meran asam kaik k​­ɵn</string>
     <string name="log_notice_low_memory_warning">Memoria patsap pasran</string>
-    <string name="log_notice_updating_torrc">Torrcwan na isuikmai tamaramik</string>
+    <string name="log_notice_updating_anonrc">Anonrcwan na isuikmai tamaramik</string>
     <string name="log_notice_added_event_handler">Control portwan keerik pasramisran</string>
     <string name="log_notice_connected_to_anon_control_port">Control portwan kelitsik pasran</string>
     <string name="log_notice_ignoring_start_request">Katɵle pɵlpasramik cha mieikwan ka tan, yantɵ pɵlmarik pasran</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot on vabalt kasutatav proxy rakendus, mis võimaldab teistel rakendustel Interneti turvalisemat kasutust. AnyoneBot krüpteerib ja peidab teie Internetiliikluse Tor abil paljude maailma arvutite vahel põrgatades. Tor on vaba tarkvara ja vaba võrgustik mis aitab teil kaitsta oma privaatsust, vabadust, konfidentsiaalset äritegevust, suhteid ja riiklikku julgeolekut arvutivõrgus toimuva liikluse analüüsi eest.</string>
+    <string name="app_description">AnyoneBot on vabalt kasutatav proxy rakendus, mis võimaldab teistel rakendustel Interneti turvalisemat kasutust. AnyoneBot krüpteerib ja peidab teie Internetiliikluse Anon abil paljude maailma arvutite vahel põrgatades. Anon on vaba tarkvara ja vaba võrgustik mis aitab teil kaitsta oma privaatsust, vabadust, konfidentsiaalset äritegevust, suhteid ja riiklikku julgeolekut arvutivõrgus toimuva liikluse analüüsi eest.</string>
     <string name="menu_settings">Seaded</string>
     <string name="menu_log">Logi</string>
     <string name="menu_stop">Stopp</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Üldist</string>
     <string name="pref_start_boot_title">Käivita AnyoneBot seadme käivitumisel</string>
-    <string name="pref_start_boot_summary">Automaatne AnyoneBot käivitumine ja Tor külge ühendumine seadme käivitumisel</string>
+    <string name="pref_start_boot_summary">Automaatne AnyoneBot käivitumine ja Anon külge ühendumine seadme käivitumisel</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -54,10 +54,10 @@
     <string name="relaying">Edastamine</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Luba oma seadmel hakata mitte-väljund edastajaks</string>
     <string name="relay_port">Edastusport</string>
-    <string name="listening_port_for_your_tor_relay">Port mida teie Tor edastaja kuulab</string>
+    <string name="listening_port_for_your_anon_relay">Port mida teie Anon edastaja kuulab</string>
     <string name="enter_or_port">Kas Enter VÕI port</string>
     <string name="relay_nickname">Edastaja hüüdnimi</string>
-    <string name="the_nickname_for_your_tor_relay">Teie Tor edastaja hüüdnimi</string>
+    <string name="the_nickname_for_your_anon_relay">Teie Anon edastaja hüüdnimi</string>
     <string name="enter_a_custom_relay_nickname">Sisestage edastaja kohandatud hüüdnimi</string>
     <string name="reachable_addresses">Juurdepääsetavad aadressid</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Käivita kui piirava poliitikaga tulemüüri taga asuvat klienti</string>
@@ -68,18 +68,18 @@
     <string name="project_home">Projekti kodu:</string>
     <string name="third_party_software">Kolmanda osapoole tarkvara:</string>
     <string name="pref_disable_network_title">Pole võrgu auto-und</string>
-    <string name="pref_disable_network_summary">Pane Tor magama kui Internetiühendus puudub</string>
-    <string name="newnym">Lülitusite uuele Tor identiteedile!</string>
+    <string name="pref_disable_network_summary">Pane Anon magama kui Internetiühendus puudub</string>
+    <string name="newnym">Lülitusite uuele Anon identiteedile!</string>
     <string name="save">Salvesta</string>
     <string name="name">Name</string>
     <string name="disable">Keela</string>
     <string name="enable">Luba</string>
     <string name="deny">Keelata</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Avatud proxy kõikidel liidestel</string>
-    <string name="pref_http_summary">Port, millel Tor pakub oma HTTP-proksi (vaikimisi: 8118 või 0, et keelata)</string>
+    <string name="pref_http_summary">Port, millel Anon pakub oma HTTP-proksi (vaikimisi: 8118 või 0, et keelata)</string>
     <string name="pref_transport_dialog">TransProxy portide konfiguratsioon</string>
-    <string name="pref_torrc_summary">EXPERTS ONLY: sisestage otsene torrc config read</string>
-    <string name="pref_torrc_dialog">Kohandatud Torrc</string>
+    <string name="pref_anonrc_summary">EXPERTS ONLY: sisestage otsene anonrc config read</string>
+    <string name="pref_anonrc_dialog">Kohandatud anonrc</string>
     <string name="vpn_default_world">Ülemaailmne (Auto)</string>
     <string name="apps_mode">VPN-režiim</string>
     <string name="v3_hosted_services">Majutatud sibulateenused</string>
@@ -89,9 +89,9 @@
     <string name="pref_isolate_dest">Eraldada sihtkoha aadressid</string>
     <string name="pref_prefer_ipv6">Eelistab IPv6 ühendusi</string>
     <string name="share_as_qr">Jaga kui QR</string>
-    <string name="app_shortcuts">Tor-toega rakendused</string>
+    <string name="app_shortcuts">Anon-toega rakendused</string>
     <string name="pref_allow_background_starts_title">Lubage taustakäivitusi</string>
-    <string name="pref_allow_background_starts_summary">Lase mis tahes rakendusel AnyoneBotile öelda, et ta käivitab Tori ja sellega seotud teenused</string>
+    <string name="pref_allow_background_starts_summary">Lase mis tahes rakendusel AnyoneBotile öelda, et ta käivitab Anoni ja sellega seotud teenused</string>
     <string name="version">Versioon:</string>
     <string name="license">litsents:</string>
     <string name="v3_delete_client_authorization">Kliendi autoriseerimisvõtme kustutamine</string>
@@ -107,22 +107,22 @@
     <string name="btn_choose_apps">Vali rakendused</string>
     <string name="btn_change_exit">Muuda väljumist</string>
     <string name="btn_refresh">Värskenda</string>
-    <string name="btn_tor_off">Lülita Tor välja</string>
+    <string name="btn_anon_off">Lülita Anon välja</string>
     <string name="no_thx">Ei aitäh</string>
     <string name="menu_header_features">Omadused</string>
     <string name="captcha_title">Anna meile teada, et sa oled inimene</string>
-    <string name="menu_tor_connection">Tor ühendus</string>
+    <string name="menu_anon_connection">Anon ühendus</string>
     <string name="menu_help_others">Aidata teisi</string>
     <string name="menu_faq">FAQ</string>
     <string name="menu_header_learn">Lisateave</string>
     <string name="msg_taking_too_long">See tundub liiga kaua aega võtvat</string>
     <string name="msg_try_something_else">Proovi midagi muud</string>
-    <string name="wizard_details_msg">AnyoneBot on avatud lähtekoodiga rakendus, mis sisaldab Tor, Go-Tun2Socks ja LibEvent. See pakub VPN-tunnelit, lokaalset HTTP Connect proksi (HTTPS ainult port 8118) ja SOCKS-proksi (9050) Tor-võrku.</string>
-    <string name="hidden_service_request">Rakendus soovib avada Tor-võrku sibulaserveri sadamas %1$s. See on turvaline, kui te rakendust usaldate.</string>
+    <string name="wizard_details_msg">AnyoneBot on avatud lähtekoodiga rakendus, mis sisaldab Anon, Go-Tun2Socks ja LibEvent. See pakub VPN-tunnelit, lokaalset HTTP Connect proksi (HTTPS ainult port 8118) ja SOCKS-proksi (9050) Anon-võrku.</string>
+    <string name="hidden_service_request">Rakendus soovib avada Anon-võrku sibulaserveri sadamas %1$s. See on turvaline, kui te rakendust usaldate.</string>
     <string name="allow">Luba</string>
     <string name="pref_use_expanded_notifications_title">Laiendatud teated</string>
     <string name="pref_http_dialog">HTTP portide konfigureerimine</string>
-    <string name="pref_transport_title">Tor TransProxy port</string>
+    <string name="pref_transport_title">Anon TransProxy port</string>
     <string name="kibibyte">KiB</string>
     <string name="v3_backup_key">Kliendi varukoopia autoriseerimisvõti</string>
     <string name="v3_delete_client_authorization_confirm">Kliendi autoriseeringu kustutamine</string>
@@ -134,12 +134,12 @@
     <string name="pref_disable_ipv4">IPv4-ühenduste keelamine</string>
     <string name="strict_nodes_description">Käsitlege Exclude Nodes seadistusi kui kõigi vooluahelate ehitamise nõuet. See võib rikkuda funktsionaalsuse, kui teie Exclude Nodes seadetega ei ole võimalik luua ühtegi ahelat.</string>
     <string name="set_locale_title">Keel</string>
-    <string name="pref_socks_title">Tor SOCKS proxy</string>
-    <string name="pref_http_title">Tori HTTP</string>
-    <string name="pref_transport_summary">Port, millel Tor pakub oma läbipaistvat proksi (vaikimisi: 9040 või 0, et keelata)</string>
-    <string name="pref_dnsport_title">Tor DNS-port</string>
-    <string name="pref_dnsport_summary">Port, millel Tor pakub oma DNS-i (vaikimisi: 5400 või 0, et keelata)</string>
-    <string name="pref_torrc_title">Torrc kohandatud konfiguratsioon</string>
+    <string name="pref_socks_title">Anon SOCKS proxy</string>
+    <string name="pref_http_title">Anoni HTTP</string>
+    <string name="pref_transport_summary">Port, millel Anon pakub oma läbipaistvat proksi (vaikimisi: 9040 või 0, et keelata)</string>
+    <string name="pref_dnsport_title">Anon DNS-port</string>
+    <string name="pref_dnsport_summary">Port, millel Anon pakub oma DNS-i (vaikimisi: 5400 või 0, et keelata)</string>
+    <string name="pref_anonrc_title">Anonrc kohandatud konfiguratsioon</string>
     <string name="mebibyte">MiB</string>
     <string name="send_email">Saada e-kiri</string>
     <string name="hidden_services">Sibulateenused</string>
@@ -156,7 +156,7 @@
     <string name="backup_port_exist">Viga: Onion teenus kasutab juba porti %s</string>
     <string name="restore_backup">Taastada varukoopia</string>
     <string name="create_a_backup_first">Loo esmalt varukoopia</string>
-    <string name="start_tor_again_for_finish_the_process">Alusta Tor uuesti protsessi lõpetamiseks</string>
+    <string name="start_anon_again_for_finish_the_process">Alusta Anon uuesti protsessi lõpetamiseks</string>
     <string name="confirm_service_deletion">Kinnitage teenuse kustutamine</string>
     <string name="service_type">Teenuse tüüp</string>
     <string name="please_restart_to_enable_the_changes">Palun taaskäivitage AnyoneBot muudatuste lubamiseks</string>
@@ -168,17 +168,17 @@
     <string name="pref_reduced_connection_padding">Vähendatud ühenduse polsterdamine</string>
     <string name="pref_circuit_padding_summary">Võimaldab vooluahela polsterdamist, et kaitsta end mõnede liiklusanalüüsi vormide eest</string>
     <string name="pref_prefer_ipv6_summary">Ütleb väljumistele, et IPv6-aadressid on eelistatud</string>
-    <string name="testing_tor_direct">Toriga ühenduse testimine…</string>
-    <string name="testing_tor_direct_success">Edu. Tor ühendus on hea!</string>
+    <string name="testing_anon_direct">Anoniga ühenduse testimine…</string>
+    <string name="testing_anon_direct_success">Edu. Anon ühendus on hea!</string>
     <string name="menu_new_identity">Uus identiteet</string>
     <string name="user_services">Kasutajate teenused</string>
     <string name="app_services">Rakendusteenused</string>
     <string name="refresh_apps">Värskenda rakendusi</string>
     <string name="pref_disable_ipv4_summary">Ütleb väljumistele, et nad ei ühenduksid IPv4-aadressidega</string>
     <string name="menu_app_settings">Rakenduse seaded</string>
-    <string name="pref_socks_summary">Port, millel Tor pakub oma SOCKS proxy\'d (vaikimisi: 9050 või 0, et keelata)</string>
-    <string name="pref_use_expanded_notifications">Kuvage teates riik ja IP-aadress, kui see on saadaval, teie tor väljumissõlme kohta</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Lubage Wi-Fi-võrgupartneritele, seotud seadmetele ja kõigile teistele, kes saavad teie IP-ga ühenduda, juurdepääs Torile</string>
+    <string name="pref_socks_summary">Port, millel Anon pakub oma SOCKS proxy\'d (vaikimisi: 9050 või 0, et keelata)</string>
+    <string name="pref_use_expanded_notifications">Kuvage teates riik ja IP-aadress, kui see on saadaval, teie Anon väljumissõlme kohta</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Lubage Wi-Fi-võrgupartneritele, seotud seadmetele ja kõigile teistele, kes saavad teie IP-ga ühenduda, juurdepääs Anonile</string>
     <string name="pref_socks_dialog">SOCKS-porti konfiguratsioon</string>
     <string name="pref_dnsport_dialog">DNS portide konfigureerimine</string>
     <string name="consider_enable_battery_optimizations">Hostitud teenused töötavad, kaaluge aku optimeerimise väljalülitamist</string>
@@ -200,15 +200,15 @@
     <string name="pref_isolate_protocol">Isoleerida kliendiprotokollid</string>
     <string name="hide_apps">Peida rakendused võrgu jälgimise eest ja saada juurdepääs, kui need on blokeeritud.</string>
     <string name="action_activate">Aktiveeri</string>
-    <string name="many_ways">Torini jõudmiseks on mitmeid viise. Mõni neist võib teie jaoks toimida paremini kui teised.</string>
-    <string name="power_user_description">Toriga tuttavatele kasutajatele. Võimaldab käivitada AnyoneBot ilma VPN-seadistusteta ja näitab avatud SOCKS- ja HTTP-porti</string>
+    <string name="many_ways">Anonini jõudmiseks on mitmeid viise. Mõni neist võib teie jaoks toimida paremini kui teised.</string>
+    <string name="power_user_description">Anoniga tuttavatele kasutajatele. Võimaldab käivitada AnyoneBot ilma VPN-seadistusteta ja näitab avatud SOCKS- ja HTTP-porti</string>
     <string name="volunteer_status_title">Täna on parem
 \ntänu sinule.</string>
     <string name="app_suggested_subtitle">AnyoneBot töötab kõige paremini koos sõnumite ja sotsiaalmeedia rakendustega.</string>
     <string name="no_internet_title">Ühendage internetiga</string>
     <string name="no_internet_subtitle">AnyoneBot\'i kasutamiseks on vaja internetiühendust.</string>
     <string name="log_copied">Logi kopeeritud</string>
-    <string name="configure_header">Tor-ühenduse konfigureerimine</string>
+    <string name="configure_header">Anon-ühenduse konfigureerimine</string>
     <string name="drawer_open">Avatud</string>
     <string name="drawer_close">Sulge</string>
     <string name="proxy_ports">Proxy pordid</string>

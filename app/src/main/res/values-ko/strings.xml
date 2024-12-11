@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot은 다른 앱이 인터넷을 더 안전하게 이용할 수 있도록 도와주는 무료 프록시 앱입니다. AnyoneBot은 Tor를 이용하여 여러분의 인터넷 트래픽을 암호화하고 전 세계에 연결된 컴퓨터를 거쳐서 숨깁니다. Tor는 무료 소프트웨어이면서 개방 네트워크로서 여러분을 개인의 자유, 사생활, 은밀한 사업 활동, 관계, 국가 안보를 위협하는 네트워크 감시인 트래픽 분석으로부터 보호합니다.</string>
+    <string name="app_description">AnyoneBot은 다른 앱이 인터넷을 더 안전하게 이용할 수 있도록 도와주는 무료 프록시 앱입니다. AnyoneBot은 Anon를 이용하여 여러분의 인터넷 트래픽을 암호화하고 전 세계에 연결된 컴퓨터를 거쳐서 숨깁니다. Anon는 무료 소프트웨어이면서 개방 네트워크로서 여러분을 개인의 자유, 사생활, 은밀한 사업 활동, 관계, 국가 안보를 위협하는 네트워크 감시인 트래픽 분석으로부터 보호합니다.</string>
     <string name="menu_settings">설정</string>
     <string name="menu_log">로그</string>
     <string name="menu_stop">중지</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">일반</string>
     <string name="pref_start_boot_title">부팅 후 AnyoneBot 시작</string>
-    <string name="pref_start_boot_summary">안드로이드 장치가 시작할 때 자동적으로 AnyoneBot을 시작하고 Tor에 연결합니다</string>
+    <string name="pref_start_boot_summary">안드로이드 장치가 시작할 때 자동적으로 AnyoneBot을 시작하고 Anon에 연결합니다</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">첫번째 Hop을 위한핑거프린트, 별칭, 나라와 주소</string>
     <string name="pref_entrance_node_dialog">입구 노드 입력</string>
     <string name="pref_allow_background_starts_title">백그라운드에서 시작 허용</string>
-    <string name="pref_allow_background_starts_summary">모든 어플리케이션이 AnyoneBot에 Tor를 시작하고 관련 서비스를 시작할 수 있도록 지시하는것을 허락합니다</string>
+    <string name="pref_allow_background_starts_summary">모든 어플리케이션이 AnyoneBot에 Anon를 시작하고 관련 서비스를 시작할 수 있도록 지시하는것을 허락합니다</string>
     <string name="pref_proxy_title">외부 네트워크 프록시 (선택)</string>
     <string name="pref_proxy_type_title">외부 프록시 유형</string>
     <string name="pref_proxy_type_summary">프록시 서버를 위한 사용되는 프로토콜 : HTTP, HTTPS, Socks4, Socks5</string>
@@ -56,10 +56,10 @@
     <string name="relaying">중계</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">귀하의 장치를 출구가 아닌 중계서버로 활성화</string>
     <string name="relay_port">중계 포트</string>
-    <string name="listening_port_for_your_tor_relay">귀하의 Tor 중계서버를 위한 Listening 포트</string>
+    <string name="listening_port_for_your_anon_relay">귀하의 Anon 중계서버를 위한 Listening 포트</string>
     <string name="enter_or_port">OR 포트 입력</string>
     <string name="relay_nickname">중계서버 별명</string>
-    <string name="the_nickname_for_your_tor_relay">귀하의 중계서버를 위한 별명</string>
+    <string name="the_nickname_for_your_anon_relay">귀하의 중계서버를 위한 별명</string>
     <string name="enter_a_custom_relay_nickname">임의의 중계서버 별명을 입력</string>
     <string name="reachable_addresses">도달 가능한 주소</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">엄격한 정책을 가진 방화벽 뒤에서 클라이언트 가동</string>
@@ -73,8 +73,8 @@
     <string name="pref_use_expanded_notifications_title">확장 알림</string>
     <string name="set_locale_title">언어</string>
     <string name="pref_disable_network_title">네트워크가 없을 때의 자동 슬립</string>
-    <string name="pref_disable_network_summary">인터넷이 불가능하다면 Tor를 슬립 모드로 두십시오</string>
-    <string name="newnym">새로운 Tor 신원으로 전환되었습니다!</string>
+    <string name="pref_disable_network_summary">인터넷이 불가능하다면 Anon를 슬립 모드로 두십시오</string>
+    <string name="newnym">새로운 Anon 신원으로 전환되었습니다!</string>
     <string name="pref_socks_title">토르 SOCKS</string>
     <string name="pref_socks_summary">SOCKS 프록시를 받을 포트 (기본: 9050 / 0은 비활성화)</string>
     <string name="pref_socks_dialog">SOCKS 포트 설정</string>
@@ -84,9 +84,9 @@
     <string name="pref_dnsport_title">토르 DNS 포트</string>
     <string name="pref_dnsport_summary">토르 DNS를 제공할 포트 (기본: 5400 / 0은 비활성화)</string>
     <string name="pref_dnsport_dialog">DNS 포트 설정</string>
-    <string name="pref_torrc_title">사용자 지정 Torrc 구성</string>
-    <string name="pref_torrc_summary">전문가 전용: torrc 구성 줄을 직접 입력합니다</string>
-    <string name="pref_torrc_dialog">나만의 Torrc</string>
+    <string name="pref_anonrc_title">사용자 지정 anonrc 구성</string>
+    <string name="pref_anonrc_summary">전문가 전용: anonrc 구성 줄을 직접 입력합니다</string>
+    <string name="pref_anonrc_dialog">나만의 anonrc</string>
     <string name="send_email">이메일 보내기</string>
     <string name="save">저장</string>
     <string name="name">Name</string>
@@ -102,7 +102,7 @@
     <string name="menu_new_identity">새 ID</string>
     <string name="trying_to_connect_title">접속중…</string>
     <string name="menu_header_features">기능</string>
-    <string name="menu_tor_connection">Tor 연결</string>
+    <string name="menu_anon_connection">Anon 연결</string>
     <string name="menu_faq">FAQ</string>
     <string name="menu_header_learn">더 알아보기</string>
     <string name="drawer_open">열기</string>

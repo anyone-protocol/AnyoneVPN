@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot - це безкоштовний проксі-сервер, який дає змогу іншим застосункам безпечніше користуватися інтернетом. AnyoneBot використовує Tor для шифрування вашого інтернет-трафіку, а потім приховує його, пересилаючи через низку комп\'ютерів по всьому світу. Tor - це вільне програмне забезпечення і відкрита мережа, яка допомагає вам захиститися від форми мережевого стеження, що загрожує особистій свободі і приватності, конфіденційній діловій діяльності та відносинам, а також державній безпеці, відомої як аналіз трафіку.</string>
+    <string name="app_description">AnyoneBot - це безкоштовний проксі-сервер, який дає змогу іншим застосункам безпечніше користуватися інтернетом. AnyoneBot використовує Anon для шифрування вашого інтернет-трафіку, а потім приховує його, пересилаючи через низку комп\'ютерів по всьому світу. Anon - це вільне програмне забезпечення і відкрита мережа, яка допомагає вам захиститися від форми мережевого стеження, що загрожує особистій свободі і приватності, конфіденційній діловій діяльності та відносинам, а також державній безпеці, відомої як аналіз трафіку.</string>
     <string name="menu_settings">Налаштування</string>
     <string name="menu_log">Журнал</string>
     <string name="menu_stop">Зупинити</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Про застосунок</string>
     <string name="menu_exit">Вихід</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot — це застосунок з відкритим кодом, що містить Tor, Go-Tun2Socks, LibEvent. Він забезпечує локальний HTTP-проксі (8118) та проксі SOCKS (9050) у мережу Tor.</string>
+    <string name="wizard_details_msg">AnyoneBot — це застосунок з відкритим кодом, що містить Anon, Go-Tun2Socks, LibEvent. Він забезпечує локальний HTTP-проксі (8118) та проксі SOCKS (9050) у мережу Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Загальні</string>
     <string name="pref_start_boot_title">Запуск AnyoneBot під час завантаження</string>
-    <string name="pref_start_boot_summary">Автоматичний запуск AnyoneBot та з\'єднання з Tor під час запуску вашого пристрою</string>
+    <string name="pref_start_boot_summary">Автоматичний запуск AnyoneBot та з\'єднання з Anon під час запуску вашого пристрою</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Відбитки, ніки, країни та адреси для першого стрибка</string>
     <string name="pref_entrance_node_dialog">Введіть вхідні вузли</string>
     <string name="pref_allow_background_starts_title">Дозволити фоновий запуск</string>
-    <string name="pref_allow_background_starts_summary">Дозволити будь-якому застосунку звертатися до AnyoneBot для запуску Tor і пов\'язаних з ним сервісів</string>
+    <string name="pref_allow_background_starts_summary">Дозволити будь-якому застосунку звертатися до AnyoneBot для запуску Anon і пов\'язаних з ним сервісів</string>
     <string name="pref_proxy_title">Вихідна проксі-мережа (необовʼязково)</string>
     <string name="pref_proxy_type_title">Тип вихідного проксі</string>
     <string name="pref_proxy_type_summary">Протокол для використання проксі-сервером: HTTP, HTTPS, Socks4, Socks5</string>
@@ -57,10 +57,10 @@
     <string name="relaying">Ретрансляція</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Зробити ваш пристрій не вихідним ретранслятором</string>
     <string name="relay_port">Порт ретранслятора</string>
-    <string name="listening_port_for_your_tor_relay">Прослуховуваний порт для вашого ретранслятора Tor</string>
+    <string name="listening_port_for_your_anon_relay">Прослуховуваний порт для вашого ретранслятора Anon</string>
     <string name="enter_or_port">Введіть порт OR</string>
     <string name="relay_nickname">Ім\'я ретранслятора</string>
-    <string name="the_nickname_for_your_tor_relay">Ім\'я для вашого ретранслятора Tor</string>
+    <string name="the_nickname_for_your_anon_relay">Ім\'я для вашого ретранслятора Anon</string>
     <string name="enter_a_custom_relay_nickname">Введіть користувацьке ім\'я ретранслятора</string>
     <string name="reachable_addresses">Доступні адреси</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Запускати клієнтом за брандмауером з обмежувальними політиками</string>
@@ -70,25 +70,25 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Увімкнути вивід журналу зневадження (потрібно використовувати adb або aLogCat для перегляду)</string>
     <string name="project_home">Домівка проєкту:</string>
     <string name="third_party_software">Програми сторонніх розробників: </string>
-    <string name="hidden_service_request">Застосунок хоче відкрити сервер onion на порту %1$s до мережі Tor. Це безпечно, якщо ви довіряєте застосунку.</string>
-    <string name="pref_use_expanded_notifications">Показ, за наявності, країни та IP-адреси вузла виходу tor у сповіщенні</string>
+    <string name="hidden_service_request">Застосунок хоче відкрити сервер onion на порту %1$s до мережі Anon. Це безпечно, якщо ви довіряєте застосунку.</string>
+    <string name="pref_use_expanded_notifications">Показ, за наявності, країни та IP-адреси вузла виходу Anon у сповіщенні</string>
     <string name="pref_use_expanded_notifications_title">Розгорнуті сповіщення</string>
     <string name="set_locale_title">Мова</string>
     <string name="pref_disable_network_title">Переходити в режим сну без мережі</string>
     <string name="pref_disable_network_summary">Переводити в режим сну за відсутності інтернет-з\'єднання</string>
-    <string name="newnym">Ви перемкнулись на новий ідентифікатор Tor!</string>
-    <string name="pref_socks_title">Tor SOCKS</string>
-    <string name="pref_socks_summary">Порт, який Tor надає своєму SOCKS-проксі (усталено: 9050 або 0 для вимкнення)</string>
+    <string name="newnym">Ви перемкнулись на новий ідентифікатор Anon!</string>
+    <string name="pref_socks_title">Anon SOCKS</string>
+    <string name="pref_socks_summary">Порт, який Anon надає своєму SOCKS-проксі (усталено: 9050 або 0 для вимкнення)</string>
     <string name="pref_socks_dialog">Конфігурація порту SOCKS</string>
-    <string name="pref_transport_title">Порт Tor TransProxy</string>
-    <string name="pref_transport_summary">Порт, який Tor надає своєму відкритому проксі (усталено: 9040 або 0 для вимкнення)</string>
-    <string name="pref_transport_dialog">Конфігурація порту Tor TransProxy</string>
-    <string name="pref_dnsport_title">Порт Tor DNS</string>
-    <string name="pref_dnsport_summary">Порт, який Tor надає своєму DNS (усталено: 5400 або 0 для вимкнення)</string>
+    <string name="pref_transport_title">Порт Anon TransProxy</string>
+    <string name="pref_transport_summary">Порт, який Anon надає своєму відкритому проксі (усталено: 9040 або 0 для вимкнення)</string>
+    <string name="pref_transport_dialog">Конфігурація порту Anon TransProxy</string>
+    <string name="pref_dnsport_title">Порт Anon DNS</string>
+    <string name="pref_dnsport_summary">Порт, який Anon надає своєму DNS (усталено: 5400 або 0 для вимкнення)</string>
     <string name="pref_dnsport_dialog">Конфігурація порту DNS</string>
-    <string name="pref_torrc_title">Користувацькі конфігурації Torrc</string>
-    <string name="pref_torrc_summary">ЛИШЕ ДЛЯ ЕКСПЕРТІВ: введіть конфігурації безпосередньо до рядків файлу torrc</string>
-    <string name="pref_torrc_dialog">Користувацький Torrc</string>
+    <string name="pref_anonrc_title">Користувацькі конфігурації anonrc</string>
+    <string name="pref_anonrc_summary">ЛИШЕ ДЛЯ ЕКСПЕРТІВ: введіть конфігурації безпосередньо до рядків файлу anonrc</string>
+    <string name="pref_anonrc_dialog">Користувацький anonrc</string>
     <string name="apps_mode">VPN-режим</string>
     <string name="send_email">Надіслати листа</string>
     <string name="vpn_default_world">Глобальний (автоматичний)</string>
@@ -106,7 +106,7 @@
     <string name="backup_restored">Резервну копію відновлено</string>
     <string name="restore_backup">Відновити резервну копію</string>
     <string name="create_a_backup_first">Спершу створіть резервну копію</string>
-    <string name="start_tor_again_for_finish_the_process">Запустіть Tor знову для завершення процесу</string>
+    <string name="start_anon_again_for_finish_the_process">Запустіть Anon знову для завершення процесу</string>
     <string name="confirm_service_deletion">Підтвердьте видалення служби</string>
     <string name="service_type">Тип служби</string>
     <string name="please_restart_to_enable_the_changes">Перезапустіть AnyoneBot, щоб застосувати зміни</string>
@@ -119,14 +119,14 @@
     <string name="pref_isolate_dest">Ізолювати адреси призначення</string>
     <string name="pref_isolate_dest_summary">Використати інакшу схему для кожної адреси призначення</string>
     <string name="pref_connection_padding_summary">Завжди забезпечує підкладку зʼєднання для захисту від деяких форм аналізу трафіку. Типово: автоматично</string>
-    <string name="app_shortcuts">Застосунки, що працюють з Tor</string>
+    <string name="app_shortcuts">Застосунки, що працюють з Anon</string>
     <string name="trouble_connecting">Проблеми з під\'єднанням?</string>
     <string name="full_device_vpn">VPN для всього пристрою</string>
     <string name="vpn_disabled">VPN вимкнено</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Відкрити проксі на всіх інтерфейсах</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Дозвольте одноранговим користувачам Wi-Fi, прив’язаним пристроям та будь-яким іншим, хто може під\'єднатися до вашого IP-адреси, отримувати доступ до Tor</string>
-    <string name="pref_http_title">Tor HTTP</string>
-    <string name="pref_http_summary">Порт, на якому Tor пропонує увімкнути свій HTTP-проксі (усталено: 8118 або 0 для вимкнення)</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Дозвольте одноранговим користувачам Wi-Fi, прив’язаним пристроям та будь-яким іншим, хто може під\'єднатися до вашого IP-адреси, отримувати доступ до Anon</string>
+    <string name="pref_http_title">Anon HTTP</string>
+    <string name="pref_http_summary">Порт, на якому Anon пропонує увімкнути свій HTTP-проксі (усталено: 8118 або 0 для вимкнення)</string>
     <string name="pref_http_dialog">Конфігурація порту HTTP</string>
     <string name="pref_connection_padding">Підкладка зʼєднання</string>
     <string name="pref_reduced_connection_padding">Зменшена прокладка зʼєднання</string>
@@ -139,8 +139,8 @@
     <string name="user_services">Служби користувача</string>
     <string name="app_services">Служби застосунків</string>
     <string name="refresh_apps">Оновити застосунки</string>
-    <string name="testing_tor_direct_success">Успішно. З\'єднання Tor хороше!</string>
-    <string name="testing_tor_direct">Перевірка з\'єднання з Tor…</string>
+    <string name="testing_anon_direct_success">Успішно. З\'єднання Anon хороше!</string>
+    <string name="testing_anon_direct">Перевірка з\'єднання з Anon…</string>
     <string name="mebibyte">МіБ</string>
     <string name="kibibyte">КіБ</string>
     <string name="pref_reduced_circuit_padding_summary">Використовувати алгоритми з меншими витратами, щоб зменшити використання даних та акумулятора</string>
@@ -171,7 +171,7 @@
     <string name="trying_to_connect_title">Під\'єднання…</string>
     <string name="btn_change_exit">Змінити вихід</string>
     <string name="btn_refresh">Оновити</string>
-    <string name="btn_tor_off">Вимкнути Tor</string>
+    <string name="btn_anon_off">Вимкнути Anon</string>
     <string name="no_thx">Ні, дякую</string>
     <string name="captcha_title">Дайте нам знати, що ви людина</string>
     <string name="menu_faq">ЧаП</string>
@@ -180,14 +180,14 @@
     <string name="btn_choose_apps">Вибрати застосунки</string>
     <string name="menu_header_features">Функції</string>
     <string name="btn_start_vpn">Запустити VPN</string>
-    <string name="menu_tor_connection">З\'єднання Tor</string>
+    <string name="menu_anon_connection">З\'єднання Anon</string>
     <string name="menu_app_settings">Налаштування застосунку</string>
     <string name="menu_help_others">Допоможіть іншим</string>
     <string name="menu_header_learn">Докладніше</string>
     <string name="drawer_open">Відкрити</string>
     <string name="drawer_close">Закрити</string>
     <string name="ports_not_set">Порти не налаштовані</string>
-    <string name="configure_header">Налаштуйте з\'єднання Tor</string>
+    <string name="configure_header">Налаштуйте з\'єднання Anon</string>
     <string name="proxy_ports">Порти проксі</string>
     <string name="next">Далі</string>
     <string name="connect">Під\'єднати</string>
@@ -199,12 +199,12 @@
     <string name="app_suggested_subtitle">AnyoneBot найкраще працює з застосунками для обміну повідомленнями та соціальними мережами.</string>
     <string name="apps_suggested_title">Рекомендовані застосунки</string>
     <string name="title_choose_apps">Вибрати застосунки</string>
-    <string name="power_user_description">Для користувачів, знайомих з Tor. Дозволяє запускати AnyoneBot без налаштування VPN і показує відкриті SOCKS і HTTP-порти</string>
+    <string name="power_user_description">Для користувачів, знайомих з Anon. Дозволяє запускати AnyoneBot без налаштування VPN і показує відкриті SOCKS і HTTP-порти</string>
     <string name="apps_other_apps">Інші застосунки</string>
     <string name="hide_apps">Приховуйте застосунки від моніторингу мережі та отримуйте доступ, коли вони заблоковані.</string>
     <string name="log_copied">Журнал скопійовано</string>
     <string name="action_use">Використати</string>
-    <string name="many_ways">Існує багато способів отримати доступ до Tor. Деякі з них можуть працювати для вас краще, ніж інші.</string>
+    <string name="many_ways">Існує багато способів отримати доступ до Anon. Деякі з них можуть працювати для вас краще, ніж інші.</string>
     <string name="no_internet_title">Підключення до Інтернету</string>
     <string name="not_sure">Не впевнений\?</string>
     <string name="asking">ЗАПИТУЄМО…</string>

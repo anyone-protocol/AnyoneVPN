@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBot - это свободная программа для прокси-соединений, она позволяет другим приложениям более безопасно использовать интернет-соединение. AnyoneBot использует Tor для шифрования интернет-трафика, который затем скрывается в ходе пересылки через несколько компьютеров в разных частях планеты. Tor является свободным программным приложением, а также открытой сетью, помогающей защититься от слежки в сетях, угрожающей личной свободе и частной жизни, конфиденциальным бизнес-деятельности и контактам, а также государственной программе безопасности, известной как анализ трафика.</string>
+  <string name="app_description">AnyoneBot - это свободная программа для прокси-соединений, она позволяет другим приложениям более безопасно использовать интернет-соединение. AnyoneBot использует Anon для шифрования интернет-трафика, который затем скрывается в ходе пересылки через несколько компьютеров в разных частях планеты. Anon является свободным программным приложением, а также открытой сетью, помогающей защититься от слежки в сетях, угрожающей личной свободе и частной жизни, конфиденциальным бизнес-деятельности и контактам, а также государственной программе безопасности, известной как анализ трафика.</string>
     <string name="status_starting_up">Запуск AnyoneBot…</string>
-  <string name="status_activated">Подключён к сети Tor</string>
+  <string name="status_activated">Подключён к сети Anon</string>
   <string name="status_disabled">AnyoneBot отключён</string>
-  <string name="status_shutting_down">Служба Tor выключается</string>
+  <string name="status_shutting_down">Служба Anon выключается</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->
@@ -17,8 +17,8 @@
     <string name="couldn_t_start_anon_process_">"Невозможно запустить anon: "</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Ваши настройки доступных адресов вызвали исключение!</string>
   <string name="your_relay_settings_caused_an_exception_">Настройки вашего ретранслятора вызвали исключение!</string>
-    <string name="found_existing_tor_process">найден существующий процесс Tor…</string>
-    <string name="unable_to_start_tor">Невозможно запустить Tor:</string>
-    <string name="newnym">Вы переключились на новый идентификатор Tor!</string>
-    <string name="updating_settings_in_tor_service">обновление настроек в сервисе Tor</string>
+    <string name="found_existing_anon_process">найден существующий процесс Anon…</string>
+    <string name="unable_to_start_anon">Невозможно запустить Anon:</string>
+    <string name="newnym">Вы переключились на новый идентификатор Anon!</string>
+    <string name="updating_settings_in_anon_service">обновление настроек в сервисе Anon</string>
 </resources>

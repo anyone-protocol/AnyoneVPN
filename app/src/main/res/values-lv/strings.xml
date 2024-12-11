@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot ir starpniekserveru bezmaksas lietotne, kas sniedz iespēju citām lietotnēm drošāk lietot internetu. AnyoneBot izmanto Tor, lai šifrētu Jūsu interneta datplūsmu, tad to paslēpj, pārsūtot to caur daudziem datoriem visā pasaulē. Tor ir bezmaksas programmatūra un atvērts tīkls, kas palīdz Jums aizsargāties pret tīkla uzraudzības veidu - datplūsmas analīzi -, ar kuras palīdzību tiek apdraudēta personiskā brīvība un privātums, konfidenciālas lietišķas darbības un attiecības, kā arī valsts drošība.  </string>
+    <string name="app_description">AnyoneBot ir starpniekserveru bezmaksas lietotne, kas sniedz iespēju citām lietotnēm drošāk lietot internetu. AnyoneBot izmanto Anon, lai šifrētu Jūsu interneta datplūsmu, tad to paslēpj, pārsūtot to caur daudziem datoriem visā pasaulē. Anon ir bezmaksas programmatūra un atvērts tīkls, kas palīdz Jums aizsargāties pret tīkla uzraudzības veidu - datplūsmas analīzi -, ar kuras palīdzību tiek apdraudēta personiskā brīvība un privātums, konfidenciālas lietišķas darbības un attiecības, kā arī valsts drošība.  </string>
     <string name="menu_settings">Iestatījumi</string>
     <string name="menu_log">Žurnāls</string>
     <string name="menu_stop">Apturēt</string>
@@ -14,7 +14,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Vispārīgi</string>
     <string name="pref_start_boot_title">Startēt AnyoneBot, kad ielādējas</string>
-    <string name="pref_start_boot_summary">Automātiski startēt AnyoneBot, un veidot savienojumu ar Tor, kad Jūsu Android ierīce ielādējas</string>
+    <string name="pref_start_boot_summary">Automātiski startēt AnyoneBot, un veidot savienojumu ar Anon, kad Jūsu Android ierīce ielādējas</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Ciparvirknes, segvārdi, valstis un adreses pirmajam lēkumam</string>
     <string name="pref_entrance_node_dialog">Ievadiet ieejas mezglus</string>
     <string name="pref_allow_background_starts_title">Ļaut sākšanos fonā</string>
-    <string name="pref_allow_background_starts_summary">Norādīt visām lietotnēm uzdot AnyoneBot palaist Tor un saistītos pakalpojumus.</string>
+    <string name="pref_allow_background_starts_summary">Norādīt visām lietotnēm uzdot AnyoneBot palaist Anon un saistītos pakalpojumus.</string>
     <string name="pref_proxy_title">Tīkla ārejošais starpnieks (neobligāts)</string>
     <string name="pref_proxy_type_title">Ārvērstā starpnieka tips</string>
     <string name="pref_proxy_type_summary">Starpnieka serverim izmantojamais protokols: HTTP, HTTPS, Socks4, Socks5</string>
@@ -56,10 +56,10 @@
     <string name="relaying">Retranslēšana</string>
     <string name="enable_your_device_to_be_a_non_exit_relay">Iespējot Jūsu iekārtu par bezapstājas retranslatoru</string>
     <string name="relay_port">Retranslatora ports</string>
-    <string name="listening_port_for_your_tor_relay">Jūsu Tor retranslatora klausīšanās ports</string>
+    <string name="listening_port_for_your_anon_relay">Jūsu Anon retranslatora klausīšanās ports</string>
     <string name="enter_or_port">Ievadiet OR portu</string>
     <string name="relay_nickname">Retranslatora segvārds</string>
-    <string name="the_nickname_for_your_tor_relay">Jūsu Tor\'a retranslatora segvārds</string>
+    <string name="the_nickname_for_your_anon_relay">Jūsu Anon\'a retranslatora segvārds</string>
     <string name="enter_a_custom_relay_nickname">Ievadiet brīvi izraudzītu rertranslatora segvārdu</string>
     <string name="reachable_addresses">Sasniedzamās adreses</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Izpildīt kā klientprogrammu aiz ugunsmūra, kurš nodrošina ierobežojošu kārtību</string>
@@ -69,24 +69,24 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">iespējot atkļūdošanas žurnālu izvadei (jālieto adb vai aLogCat , lai skatītu)</string>
     <string name="project_home">Projekts Home:</string>
     <string name="third_party_software">Trešo personu programmatūra:</string>
-    <string name="pref_use_expanded_notifications">Paziņojumā tiek parādīta jūsu tor izejas mezgla valsts un IP adrese, ja tāda ir pieejama</string>
+    <string name="pref_use_expanded_notifications">Paziņojumā tiek parādīta jūsu Anon izejas mezgla valsts un IP adrese, ja tāda ir pieejama</string>
     <string name="pref_use_expanded_notifications_title">Paplašināti paziņojumi</string>
     <string name="set_locale_title">Valoda</string>
     <string name="pref_disable_network_title">Neizmantot tīkla automātiskā miega režīmu</string>
-    <string name="pref_disable_network_summary">Kad nav interneta, pārslēgt Tor\'u uz miega režīmu</string>
-    <string name="newnym">Jūs pārslēdzāties uz jaunu Tor\'a identitāti!</string>
-    <string name="pref_socks_title">Tor SOCKS</string>
-    <string name="pref_socks_summary">Ports, uz kura Tor piedāvā savu SOCKS starpniekserveri (noklusējumvērtība: 9050 vai 0 lai atspējotu)</string>
+    <string name="pref_disable_network_summary">Kad nav interneta, pārslēgt Anon\'u uz miega režīmu</string>
+    <string name="newnym">Jūs pārslēdzāties uz jaunu Anon\'a identitāti!</string>
+    <string name="pref_socks_title">Anon SOCKS</string>
+    <string name="pref_socks_summary">Ports, uz kura Anon piedāvā savu SOCKS starpniekserveri (noklusējumvērtība: 9050 vai 0 lai atspējotu)</string>
     <string name="pref_socks_dialog">SOCKS Port Config</string>
-    <string name="pref_transport_title">Tor TransProxy Port</string>
-    <string name="pref_transport_summary">Ports, uz kura Tor piedāvā savu Transparent starpniekserveri (noklusējumvērtība: 9040 vai 0 lai atspējotu)</string>
+    <string name="pref_transport_title">Anon TransProxy Port</string>
+    <string name="pref_transport_summary">Ports, uz kura Anon piedāvā savu Transparent starpniekserveri (noklusējumvērtība: 9040 vai 0 lai atspējotu)</string>
     <string name="pref_transport_dialog">TransProxy Port Config</string>
-    <string name="pref_dnsport_title">Tor DNS Ports</string>
-    <string name="pref_dnsport_summary">Ports, uz kura Tor piedāvā savu DNS (noklusējumvērtība: 5400 vai 0 lai atspējotu)</string>
+    <string name="pref_dnsport_title">Anon DNS Ports</string>
+    <string name="pref_dnsport_summary">Ports, uz kura Anon piedāvā savu DNS (noklusējumvērtība: 5400 vai 0 lai atspējotu)</string>
     <string name="pref_dnsport_dialog">DNS Port konfigurēšana</string>
-    <string name="pref_torrc_title">Torrc pielāgota konfigurēšana</string>
-    <string name="pref_torrc_summary">VIENĪGI EKSPERTIEM: tieši ievadīt torrc konfigurēšanas rindas</string>
-    <string name="pref_torrc_dialog">Pielāgot Torrc</string>
+    <string name="pref_anonrc_title">anonrc pielāgota konfigurēšana</string>
+    <string name="pref_anonrc_summary">VIENĪGI EKSPERTIEM: tieši ievadīt anonrc konfigurēšanas rindas</string>
+    <string name="pref_anonrc_dialog">Pielāgot anonrc</string>
     <string name="send_email">Nosūtīt e-pastu</string>
     <string name="hidden_services">Slēptie pakalpojumi</string>
     <string name="menu_hidden_services">Slēptie pakalpojumi</string>
@@ -101,9 +101,9 @@
     <string name="pref_reduced_circuit_padding_summary">Izmantot zemākas pieskaitāmās izmaksas aizpildīšanas algoritmus, lai samazinātu datu un akumulatora patēriņu</string>
     <string name="pref_reduced_circuit_padding">Samazināts ķēžu polsterējums</string>
     <string name="pref_disable_ipv4_summary">Norāda, ka izejas nedrīkst izveidot savienojumu ar IPv4 adresēm</string>
-    <string name="testing_tor_direct">Savienojuma testēšana ar Tor…</string>
+    <string name="testing_anon_direct">Savienojuma testēšana ar Anon…</string>
     <string name="menu_new_identity">Jauna identitāte</string>
-    <string name="wizard_details_msg">AnyoneBot ir atvērtā koda lietojumprogramma, kas satur Tor, Go-Tun2Socks un LibEvent. Tā nodrošina VPN tuneli, vietējo HTTP Connect proxy (tikai HTTPS portā 8118) un SOCKS proxy (9050) uz Tor tīklu.</string>
+    <string name="wizard_details_msg">AnyoneBot ir atvērtā koda lietojumprogramma, kas satur Anon, Go-Tun2Socks un LibEvent. Tā nodrošina VPN tuneli, vietējo HTTP Connect proxy (tikai HTTPS portā 8118) un SOCKS proxy (9050) uz Anon tīklu.</string>
     <string name="secure_your_connection_subtitle">Paslēpiet lietotnes no tīkla uzraudzības un iegūstiet piekļuvi, ja tās ir bloķētas.</string>
     <string name="connected_title">Savienots</string>
     <string name="btn_start_vpn">VPN sākšana</string>
@@ -111,18 +111,18 @@
     <string name="btn_choose_apps">Izvēlieties lietotnes</string>
     <string name="btn_change_exit">Mainīt izeju</string>
     <string name="btn_refresh">Atjaunināt</string>
-    <string name="btn_tor_off">Tor izslēgšana</string>
+    <string name="btn_anon_off">Anon izslēgšana</string>
     <string name="no_thx">Nē, paldies</string>
     <string name="menu_header_features">Funkcijas</string>
     <string name="captcha_title">Ļaujiet mums zināt, ka esat cilvēks</string>
-    <string name="menu_tor_connection">Tor savienojums</string>
+    <string name="menu_anon_connection">Anon savienojums</string>
     <string name="menu_help_others">Palīdzēt citiem</string>
     <string name="menu_app_settings">Lietotņu iestatījumi</string>
     <string name="msg_taking_too_long">Šķiet, ka tas aizņem pārāk daudz laika</string>
     <string name="msg_try_something_else">Izmēģiniet ko citu</string>
     <string name="allow">Atļaut</string>
     <string name="deny">Noliegt</string>
-    <string name="hidden_service_request">Programma vēlas atvērt sīpolu serveri Tor tīklā porta %1$s. Tas ir droši, ja lietotnei uzticaties.</string>
+    <string name="hidden_service_request">Programma vēlas atvērt sīpolu serveri Anon tīklā porta %1$s. Tas ir droši, ja lietotnei uzticaties.</string>
     <string name="kibibyte">KiB</string>
     <string name="v3_backup_name_hint">Rezerves kopijas faila nosaukums…</string>
     <string name="pref_circuit_padding">Ķēdes polsterējums</string>
@@ -131,9 +131,9 @@
     <string name="pref_circuit_padding_summary">Iespēja izmantot ķēžu polsterēšanu, lai aizsargātos pret dažiem datplūsmas analīzes veidiem</string>
     <string name="pref_prefer_ipv6">Priekšroka IPv6 savienojumiem</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Atvērt starpniekserveri visās saskarnēs</string>
-    <string name="pref_open_proxy_on_all_interfaces_summary">Ļaujiet Wi-Fi vienaudžiem, pieslēgtām ierīcēm un jebkurai citai ierīcei, kas var izveidot savienojumu ar jūsu IP, piekļūt Tor</string>
-    <string name="pref_http_title">Tor HTTP</string>
-    <string name="pref_http_summary">Port, kurā Tor piedāvā savu HTTP starpniekserveri (noklusējuma iestatījums: 8118 vai 0, lai atspējotu)</string>
+    <string name="pref_open_proxy_on_all_interfaces_summary">Ļaujiet Wi-Fi vienaudžiem, pieslēgtām ierīcēm un jebkurai citai ierīcei, kas var izveidot savienojumu ar jūsu IP, piekļūt Anon</string>
+    <string name="pref_http_title">Anon HTTP</string>
+    <string name="pref_http_summary">Port, kurā Anon piedāvā savu HTTP starpniekserveri (noklusējuma iestatījums: 8118 vai 0, lai atspējotu)</string>
     <string name="pref_http_dialog">HTTP porta konfigurācija</string>
     <string name="mebibyte">MiB</string>
     <string name="apps_mode">VPN režīms</string>
@@ -152,7 +152,7 @@
     <string name="backup_port_exist">Kļūda: Onion pakalpojums jau izmanto portu %s</string>
     <string name="restore_backup">Atjaunot dublējumu</string>
     <string name="create_a_backup_first">Vispirms izveidojiet dublējumu</string>
-    <string name="start_tor_again_for_finish_the_process">Sākt Tor vēlreiz, lai pabeigtu procesu</string>
+    <string name="start_anon_again_for_finish_the_process">Sākt Anon vēlreiz, lai pabeigtu procesu</string>
     <string name="confirm_service_deletion">Pakalpojuma dzēšanas apstiprināšana</string>
     <string name="service_type">Pakalpojuma veids</string>
     <string name="onion">.onion (slēptie pakalpojumi)</string>
@@ -164,8 +164,8 @@
     <string name="pref_isolate_dest_summary">Katrai galamērķa adresei izmantojiet citu ķēdi</string>
     <string name="pref_connection_padding">Savienojuma polsterējums</string>
     <string name="pref_reduced_connection_padding">Samazināts savienojuma polsterējums</string>
-    <string name="app_shortcuts">Ar Tor iespējotas lietotnes</string>
-    <string name="testing_tor_direct_success">Panākumi. Tor savienojums ir labs!</string>
+    <string name="app_shortcuts">Ar Anon iespējotas lietotnes</string>
+    <string name="testing_anon_direct_success">Panākumi. Anon savienojums ir labs!</string>
     <string name="trouble_connecting">Problēmas ar savienojumu\?</string>
     <string name="full_device_vpn">Pilns ierīces VPN</string>
     <string name="vpn_disabled">VPN atspējots</string>
@@ -214,7 +214,7 @@
     <string name="connection_direct">Tiešsaistes</string>
     <string name="pref_isolate_port">Izolēt galamērķa ostas</string>
     <string name="asking">ASKING…</string>
-    <string name="power_user_description">Lietotājiem, kas pārzina Tor. Ļauj palaist AnyoneBot bez VPN iestatījuma un parāda atvērtos SOCKS un HTTP portus</string>
+    <string name="power_user_description">Lietotājiem, kas pārzina Anon. Ļauj palaist AnyoneBot bez VPN iestatījuma un parāda atvērtos SOCKS un HTTP portus</string>
     <string name="pref_flag_secure_title">Ekrāna drošība</string>
     <string name="root_warning">AnyoneBot ir konstatējis, ka jūsu ierīcei ir saknes, kas var radīt drošības problēmas.</string>
     <string name="pref_isolate_protocol_summary">Katram savienojuma protokolam izmantojiet atšķirīgu ķēdi</string>
@@ -223,6 +223,6 @@
     <string name="pref_flag_secure_summary">Neļaujiet citām programmām uzņemt AnyoneBot ekrānšāviņus</string>
     <string name="volunteer_status_title">Šodien ir labāk
 \npateicoties tev.</string>
-    <string name="many_ways">Ir vairāki veidi, kā sasniegt Tor. Daži no tiem jums var darboties labāk nekā citi.</string>
-    <string name="configure_header">Tor savienojuma konfigurēšana</string>
+    <string name="many_ways">Ir vairāki veidi, kā sasniegt Anon. Daži no tiem jums var darboties labāk nekā citi.</string>
+    <string name="configure_header">Anon savienojuma konfigurēšana</string>
 </resources>

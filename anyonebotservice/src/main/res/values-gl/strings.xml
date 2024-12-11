@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBot é unha aplicación de proxy libre que permite a outras aplicacións usar a internet dun xeito máis seguro. AnyoneBot usa Tor para encriptar o teu tráfico de internet ocultando e rebotándoo a través dunha serie de ordenadores ao redor do mundo. Tor é software libre e unha rede aberta que axuda a defenderte contra unha forma de vixiancia na rede que ameaza a liberdade e privacidade persoal, actividades confidenciáis de negocios e relacións, e estado de seguridade coñecido como análise de tráfico.</string>
+  <string name="app_description">AnyoneBot é unha aplicación de proxy libre que permite a outras aplicacións usar a internet dun xeito máis seguro. AnyoneBot usa Anon para encriptar o teu tráfico de internet ocultando e rebotándoo a través dunha serie de ordenadores ao redor do mundo. Anon é software libre e unha rede aberta que axuda a defenderte contra unha forma de vixiancia na rede que ameaza a liberdade e privacidade persoal, actividades confidenciáis de negocios e relacións, e estado de seguridade coñecido como análise de tráfico.</string>
     <string name="status_starting_up">AnyoneBot está a se iniciar…</string>
-  <string name="status_activated">Conectado á rede Tor</string>
+  <string name="status_activated">Conectado á rede Anon</string>
   <string name="status_disabled">AnyoneBot está desactivado</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -16,7 +16,7 @@
     <string name="couldn_t_start_anon_process_">No se pudio inciar o proceso anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">O seu axuste de ReachableAddresses causou unha excepción!</string>
   <string name="your_relay_settings_caused_an_exception_">Os seus axustes de relay causou unha excepción!</string>
-    <string name="found_existing_tor_process">atopado proceso Tor existente…</string>
-    <string name="unable_to_start_tor">Incapaz de arrancar Tor</string>
-    <string name="newnym">Cambiou a unha nova identidade Tor!</string>
+    <string name="found_existing_anon_process">atopado proceso Anon existente…</string>
+    <string name="unable_to_start_anon">Incapaz de arrancar Anon</string>
+    <string name="newnym">Cambiou a unha nova identidade Anon!</string>
 </resources>

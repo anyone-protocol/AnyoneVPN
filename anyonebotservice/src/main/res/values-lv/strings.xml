@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBot ir starpniekserveru bezmaksas lietotne, kas sniedz iespēju citām lietotnēm drošāk lietot internetu. AnyoneBot izmanto Tor, lai šifrētu Jūsu interneta datplūsmu, tad to paslēpj, pārsūtot to caur daudziem datoriem visā pasaulē. Tor ir bezmaksas programmatūra un atvērts tīkls, kas palīdz Jums aizsargāties pret tīkla uzraudzības veidu - datplūsmas analīzi -, ar kuras palīdzību tiek apdraudēta personiskā brīvība un privātums, konfidenciālas lietišķas darbības un attiecības, kā arī valsts drošība.  </string>
+  <string name="app_description">AnyoneBot ir starpniekserveru bezmaksas lietotne, kas sniedz iespēju citām lietotnēm drošāk lietot internetu. AnyoneBot izmanto Anon, lai šifrētu Jūsu interneta datplūsmu, tad to paslēpj, pārsūtot to caur daudziem datoriem visā pasaulē. Anon ir bezmaksas programmatūra un atvērts tīkls, kas palīdz Jums aizsargāties pret tīkla uzraudzības veidu - datplūsmas analīzi -, ar kuras palīdzību tiek apdraudēta personiskā brīvība un privātums, konfidenciālas lietišķas darbības un attiecības, kā arī valsts drošība.  </string>
     <string name="status_starting_up">AnyoneBot startē…</string>
-  <string name="status_activated">Izveidots savienojums ar tīklu Tor</string>
+  <string name="status_activated">Izveidots savienojums ar tīklu Anon</string>
   <string name="status_disabled">AnyoneBot ir deaktivēts</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
@@ -16,8 +16,8 @@
     <string name="couldn_t_start_anon_process_">Neizdevās palaist anon\'a procesu:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Jūsu ReachableAddresses iestatījumi izraisīja izņēmuma stāvokli!</string>
   <string name="your_relay_settings_caused_an_exception_">Jūsu retranslatora iestatījumi izraisīja izņēmuma situāciju!</string>
-    <string name="found_existing_tor_process">Atrada esošu Tor procesu…</string>
-    <string name="unable_to_start_tor">Nevar startēt Tor:</string>
-    <string name="newnym">Jūs pārslēdzāties uz jaunu Tor\'a identitāti!</string>
-    <string name="updating_settings_in_tor_service">atjaunina Tor pakalpojuma iestatījumus </string>
+    <string name="found_existing_anon_process">Atrada esošu Anon procesu…</string>
+    <string name="unable_to_start_anon">Nevar startēt Anon:</string>
+    <string name="newnym">Jūs pārslēdzāties uz jaunu Anon\'a identitāti!</string>
+    <string name="updating_settings_in_anon_service">atjaunina Anon pakalpojuma iestatījumus </string>
 </resources>
