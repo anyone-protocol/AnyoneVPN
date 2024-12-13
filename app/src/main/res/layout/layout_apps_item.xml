@@ -1,78 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/itemRow">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:visibility="visible"
-        android:id="@+id/tvHeader"
-        android:layout_marginStart="8dp"
-        tools:text="@string/apps_suggested_title"
-        android:textColor="@color/text_purple"
-        android:layout_width="wrap_content"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:layout_marginTop="-4dp"
-        android:layout_marginBottom="2dp"
-        tools:visibility="visible"
-        android:visibility="gone"
-        android:id="@+id/tvSubheader"
-        tools:text="@string/app_suggested_subtitle"
-        android:textColor="@android:color/white"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:visibility="visible"
-        android:id="@+id/appContainer"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-
-        <CheckBox
-            android:id="@+id/itemcheck"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
+        <View
+            android:id="@+id/selection"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:background="@drawable/btn_apps"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_marginStart="4dp"
-            android:id="@+id/itemicon"
-            android:layout_width="48dp"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/ivIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@id/selection"
+            app:layout_constraintEnd_toEndOf="@id/selection"
+            app:layout_constraintStart_toStartOf="@id/selection"
+            app:layout_constraintTop_toTopOf="@id/selection"
             tools:src="@drawable/ic_heart"
-            app:layout_constraintStart_toEndOf="@id/itemcheck" />
+            tools:ignore="ContentDescription" />
 
         <TextView
-            android:textColor="@android:color/white"
-            android:id="@+id/itemtext"
-            android:layout_width="280dp"
-            android:layout_height="match_parent"
-            android:singleLine="true"
-            android:textSize="18sp"
-            android:scrollHorizontally="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:clickable="true"
             android:ellipsize="marquee"
-            android:marqueeRepeatLimit ="marquee_forever"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/itemicon"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="2dp"
-            tools:text="App Name Here that is really long"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:gravity="center_vertical"
-            android:layout_marginStart="@dimen/activity_horizontal_margin" />
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivIcon"
+            tools:text="App Name Here that is really long" />
 
+        <TextView
+            android:id="@+id/tvActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/active"
+            android:textColor="@color/accent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:visibility="visible" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

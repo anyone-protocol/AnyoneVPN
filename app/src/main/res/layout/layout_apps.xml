@@ -2,30 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background"
-    android:orientation="vertical"
-    android:duplicateParentState="true">
+    android:duplicateParentState="true"
+    android:orientation="vertical">
 
-    <ProgressBar
-        android:indeterminateTint="@color/progress_bar_purple"
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        tools:visibility="visible"
-        android:visibility="gone" />
-
-    <GridView
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:id="@+id/applistview"
+    <EditText
+        android:id="@+id/etSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:drawableStart="@drawable/ic_search"
+        android:background="@drawable/btn_main_scene"
+        android:hint="@string/search_for_app_to_add_to_vpn"
+        android:importantForAutofill="no"
+        android:inputType="text|textFilter|textNoSuggestions" />
+
+    <GridView
+        android:id="@+id/appList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="4dp"
         android:gravity="center"
-        android:horizontalSpacing="5dp"
-        android:numColumns="1"
-        android:verticalSpacing="15dp"/>
+        android:horizontalSpacing="4dp"
+        android:numColumns="4"
+        android:verticalSpacing="@dimen/activity_vertical_margin" />
 
 </LinearLayout>

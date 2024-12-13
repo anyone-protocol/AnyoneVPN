@@ -225,4 +225,8 @@
     <string name="root_warning">AnyoneBot has detected your device is rooted, which can cause security issues.</string>
     <string name="pref_detect_root_summary">Warn on startup if root permissions are enabled on this device</string>
     <string name="pref_detect_root_title">Root Detection</string>
+
+    <!-- AppManagerActivity -->
+    <string name="search_for_app_to_add_to_vpn">Search for app to add to VPN</string>
+    <string name="active">Active</string>
 </resources>
