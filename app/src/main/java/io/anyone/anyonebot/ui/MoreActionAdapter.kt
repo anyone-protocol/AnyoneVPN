@@ -6,29 +6,29 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import io.anyone.anyonebot.R
+import io.anyone.anyonebot.databinding.ActionListViewBinding
 import java.util.*
 
 
-class MoreActionAdapter(context: Context, list: ArrayList<MenuAction>) : ArrayAdapter<MenuAction>(context,
-    R.layout.action_list_view, list) {
+class MoreActionAdapter(context: Context, list: ArrayList<MenuAction>)
+    : ArrayAdapter<MenuAction>(context, R.layout.action_list_view, list) {
 
     private val layoutInflater =
         context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val returnView = convertView ?: layoutInflater.inflate(R.layout.action_list_view, null)
+        val view = convertView ?: ActionListViewBinding.inflate(layoutInflater, parent, false).root
+
         getItem(position)?.let { model ->
-            val imgView = returnView.findViewById<ImageView>(R.id.ivAction)
-            val tvAction = returnView.findViewById<TextView>(R.id.tvEmoji)
+            view.findViewById<ImageView>(R.id.ivAction)
+                .setImageResource(model.imgId)
 
-            tvAction.visibility = View.GONE
-            imgView.visibility = View.VISIBLE
-            imgView.setImageResource(model.imgId)
+            view.findViewById<TextView>(R.id.tvLabel)
+                .text = context.getString(model.textId)
 
-            returnView.findViewById<TextView>(R.id.tvLabel).text = context.getString(model.textId)
-            returnView.setOnClickListener { model.action() }
+            view.setOnClickListener { model.action() }
         }
-        return returnView
-    }
 
+        return view
+    }
 }

@@ -17,7 +17,7 @@ class AboutDialogFragment : DialogFragment() {
 
     companion object {
         const val TAG = "AboutDialogFragment"
-        const val VERSION = "${BuildConfig.VERSION_NAME} (Tor ${AnyoneBotService.BINARY_TOR_VERSION})"
+        const val VERSION = "${BuildConfig.VERSION_NAME} (Tor ${AnyoneBotService.BINARY_ANON_VERSION})"
         private const val BUNDLE_KEY_TV_ABOUT_TEXT = "about_tv_txt"
         private const val ABOUT_LICENSE_EQUALSIGN =
             "==============================================================================="

@@ -186,12 +186,6 @@ class AnyoneBotActivity : BaseActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE_VPN && resultCode == RESULT_OK) {
             fragConnect.startAnonAndVpn()
-        } else if (requestCode == REQUEST_CODE_SETTINGS && resultCode == RESULT_OK) {
-            Prefs.setDefaultLocale(data?.getStringExtra("locale"))
-            sendIntentToService(AnyoneBotConstants.ACTION_LOCAL_LOCALE_SET)
-            (application as AnyoneBotApp).setLocale()
-            finish()
-            startActivity(Intent(this, AnyoneBotActivity::class.java))
         }
     }
 

@@ -25,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="@id/selection"
             app:layout_constraintStart_toStartOf="@id/selection"
             app:layout_constraintTop_toTopOf="@id/selection"
-            tools:src="@drawable/ic_heart" />
+            tools:src="@drawable/ic_anyone" />
 
         <TextView
             android:id="@+id/tvName"

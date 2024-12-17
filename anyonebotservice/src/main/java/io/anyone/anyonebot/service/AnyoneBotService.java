@@ -68,7 +68,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 @SuppressWarnings("StringConcatenationInsideStringBufferAppend")
 public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
-    public final static String BINARY_TOR_VERSION = AnonService.VERSION_NAME;
+    public final static String BINARY_ANON_VERSION = AnonService.VERSION_NAME;
 
     static final int NOTIFY_ID = 1;
     private static final int ERROR_NOTIFY_ID = 3;
