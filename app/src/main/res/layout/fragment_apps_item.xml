@@ -20,12 +20,12 @@
             android:id="@+id/ivIcon"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@id/selection"
             app:layout_constraintEnd_toEndOf="@id/selection"
             app:layout_constraintStart_toStartOf="@id/selection"
             app:layout_constraintTop_toTopOf="@id/selection"
-            tools:src="@drawable/ic_heart"
-            tools:ignore="ContentDescription" />
+            tools:src="@drawable/ic_heart" />
 
         <TextView
             android:id="@+id/tvName"

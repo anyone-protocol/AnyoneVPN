@@ -24,12 +24,12 @@ import io.anyone.anyonebot.databinding.FragmentConnectBinding
 import io.anyone.anyonebot.service.AnyoneBotConstants
 import io.anyone.anyonebot.service.AnyoneBotService
 import io.anyone.anyonebot.service.util.Prefs
-import io.anyone.anyonebot.ui.AppManagerActivity
+import io.anyone.anyonebot.ui.AppsFragment
 import io.anyone.jni.AnonControlCommands
 
 
 class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
-    ExitNodeDialogFragment.ExitNodeSelectedCallback {
+    ExitNodeDialogFragment.ExitNodeSelectedCallback, AppsFragment.OnChangeListener {
 
     // main screen UI
     private lateinit var binding: FragmentConnectBinding
@@ -42,14 +42,6 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         override fun run() {
             binding.tvCounter.text = DateUtils.formatElapsedTime((System.currentTimeMillis() - begin) / 1000)
             mainHandler.postDelayed(this, 1000)
-        }
-    }
-
-    private val appManagerResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == AppCompatActivity.RESULT_OK) {
-            sendIntentToService(AnyoneBotConstants.ACTION_RESTART_VPN)
-
-            doLayoutOn()
         }
     }
 
@@ -74,7 +66,10 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding = FragmentConnectBinding.inflate(inflater, container, false)
 
         binding.btSelectApps.setOnClickListener {
-            appManagerResultLauncher.launch(Intent(requireActivity(), AppManagerActivity::class.java))
+            activity?.supportFragmentManager?.let {
+                val fragment = AppsFragment(this)
+                fragment.show(it, fragment.tag)
+            }
         }
 
         binding.btRefresh.setOnClickListener {
@@ -277,6 +272,12 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
                 AnyoneBotService::class.java
             ).setAction(AnyoneBotConstants.CMD_SET_EXIT).putExtra("exit", countryCode)
         )
+    }
+
+    override fun onAppsChange() {
+        sendIntentToService(AnyoneBotConstants.ACTION_RESTART_VPN)
+
+        doLayoutOn()
     }
 
 

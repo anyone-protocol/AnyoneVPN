@@ -2,6 +2,7 @@
         <color name="background">#131315</color>
         <color name="background_secondary">#18181b</color>
         <color name="border">#27272a</color>
+        <color name="border700">#3f3f46</color>
         <color name="accent">#27d7f2</color>
 
         <!-- Original Orbot Colors -->

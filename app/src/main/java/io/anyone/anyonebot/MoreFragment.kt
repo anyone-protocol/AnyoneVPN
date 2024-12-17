@@ -1,6 +1,6 @@
 package io.anyone.anyonebot
 
-import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -11,20 +11,19 @@ import android.widget.ListView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import io.anyone.anyonebot.ui.AboutDialogFragment
-import io.anyone.anyonebot.ui.AppManagerActivity
-import io.anyone.anyonebot.ui.MoreActionAdapter
-import io.anyone.anyonebot.ui.MenuAction
 import io.anyone.anyonebot.AnyoneBotActivity.Companion.REQUEST_CODE_SETTINGS
-import io.anyone.anyonebot.AnyoneBotActivity.Companion.REQUEST_VPN_APP_SELECT
 import io.anyone.anyonebot.core.putNotSystem
 import io.anyone.anyonebot.core.ui.SettingsActivity
 import io.anyone.anyonebot.service.AnyoneBotConstants
 import io.anyone.anyonebot.service.AnyoneBotService
+import io.anyone.anyonebot.ui.AboutDialogFragment
+import io.anyone.anyonebot.ui.AppsFragment
+import io.anyone.anyonebot.ui.MenuAction
+import io.anyone.anyonebot.ui.MoreActionAdapter
 import io.anyone.anyonebot.ui.v3onionservice.OnionServiceActivity
 import io.anyone.anyonebot.ui.v3onionservice.clientauth.ClientAuthActivity
 
-class MoreFragment : Fragment() {
+class MoreFragment : Fragment(), AppsFragment.OnChangeListener {
     private lateinit var lvMore: ListView
 
     private var httpPort = -1
@@ -32,9 +31,10 @@ class MoreFragment : Fragment() {
 
     private lateinit var tvStatus: TextView
 
-    override fun onAttach(activity: Activity) {
-        super.onAttach(activity)
-        (activity as AnyoneBotActivity).fragMore = this
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        (context as? AnyoneBotActivity)?.fragMore = this
     }
 
 
@@ -84,11 +84,10 @@ class MoreFragment : Fragment() {
                     R.string.v3_client_auth_activity_title, R.drawable.ic_shield
                 ) { startActivity(Intent(requireActivity(), ClientAuthActivity::class.java)) },
                 MenuAction(R.string.btn_choose_apps, R.drawable.ic_choose_apps) {
-                    activity?.startActivityForResult(
-                        Intent(
-                            requireActivity(), AppManagerActivity::class.java
-                        ), REQUEST_VPN_APP_SELECT
-                    )
+                    activity?.supportFragmentManager?.let {
+                        val fragment = AppsFragment(this)
+                        fragment.show(it, fragment.tag)
+                    }
                 },
                 MenuAction(R.string.menu_settings, R.drawable.ic_settings_gear) {
 
@@ -106,6 +105,10 @@ class MoreFragment : Fragment() {
         lvMore.adapter = MoreActionAdapter(requireActivity(), listItems)
 
         return view
+    }
+
+    override fun onAppsChange() {
+        sendIntentToService(AnyoneBotConstants.ACTION_RESTART_VPN)
     }
 
     private fun getTorVersion(): String {
@@ -134,5 +137,4 @@ class MoreFragment : Fragment() {
     private fun showLog() {
         (activity as AnyoneBotActivity).showLog()
     }
-
 }

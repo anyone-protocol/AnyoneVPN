@@ -31,4 +31,15 @@
     <style name="BottomSheetRadio" parent="android:Widget.CompoundButton.RadioButton">
         <item name="buttonTint">@color/menu_header</item>
     </style>
+
+    <style name="Theme.AppCompat.Translucent"
+        parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
 </resources>

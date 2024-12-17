@@ -2,25 +2,24 @@
 package io.anyone.anyonebot.ui
 
 import android.Manifest
-import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.Menu
-import android.view.MenuItem
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Filter
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import io.anyone.anyonebot.BuildConfig
 import io.anyone.anyonebot.R
-import io.anyone.anyonebot.databinding.LayoutAppsBinding
-import io.anyone.anyonebot.databinding.LayoutAppsItemBinding
+import io.anyone.anyonebot.databinding.FragmentAppsBinding
+import io.anyone.anyonebot.databinding.FragmentAppsItemBinding
 import io.anyone.anyonebot.service.AnyoneBotConstants
 import io.anyone.anyonebot.service.util.Prefs
 import io.anyone.anyonebot.service.vpn.AnonifiedApp
@@ -29,11 +28,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.lang.ref.WeakReference
 
-class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
-    AnyoneBotConstants, TextWatcher {
+class AppsFragment(listener: OnChangeListener? = null) : BottomSheetDialogFragment(), View.OnClickListener, TextWatcher {
 
-    private lateinit var mBinding: LayoutAppsBinding
+    interface OnChangeListener {
+        fun onAppsChange()
+    }
+
+    private lateinit var mBinding: FragmentAppsBinding
 
     private var mPrefs: SharedPreferences? = null
 
@@ -42,47 +45,27 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
 
     private var mApps: List<AnonifiedApp> = emptyList()
 
+    private val mListener: WeakReference<OnChangeListener> = WeakReference(listener)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-        mBinding = LayoutAppsBinding.inflate(layoutInflater)
-        setContentView(mBinding.root)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+
+        mBinding = FragmentAppsBinding.inflate(inflater, container, false)
 
         mBinding.etSearch.addTextChangedListener(this)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        val b = BottomSheetBehavior.from(mBinding.container)
+        b.state = BottomSheetBehavior.STATE_EXPANDED
+        b.skipCollapsed = true
+
+        return mBinding.root
     }
 
     override fun onResume() {
         super.onResume()
 
-        mPrefs = Prefs.getSharedPrefs(applicationContext)
+        mPrefs = Prefs.getSharedPrefs(context)
         reloadApps()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        super.onCreateOptionsMenu(menu)
-
-        menuInflater.inflate(R.menu.app_main, menu)
-
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_save_apps) {
-            saveAppSettings()
-            finish()
-
-            return true
-        }
-        else if (item.itemId == android.R.id.home) {
-            finish()
-
-            return true
-        }
-
-        return super.onOptionsItemSelected(item)
     }
 
     override fun onClick(v: View) {
@@ -91,6 +74,8 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
         entry.app?.isTorified = !(entry.app?.isTorified ?: false)
         entry.box?.setBackgroundResource(if (entry.app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
         entry.active?.visibility = if (entry.app?.isTorified == true) View.VISIBLE else View.INVISIBLE
+
+        saveAppSettings()
     }
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -98,7 +83,7 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-        reloadApps()
+        mAdapterApps.filter.filter(s)
     }
 
     override fun afterTextChanged(s: Editable?) {
@@ -114,7 +99,9 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
     private fun reloadApps() {
         mScope.launch {
             withContext(Dispatchers.IO) {
-                mApps = getApps(packageManager, mPrefs, null, null, mBinding.etSearch.text)
+                context?.packageManager?.let {
+                    mApps = getApps(it, mPrefs, null, null)
+                }
             }
 
             mBinding.appList.adapter = mAdapterApps
@@ -122,15 +109,17 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     private val mAdapterApps by lazy {
-        object : ArrayAdapter<AnonifiedApp>(this, R.layout.layout_apps_item, R.id.tvName, mApps) {
+        object : ArrayAdapter<AnonifiedApp>(requireContext(), R.layout.fragment_apps_item, R.id.tvName, mApps) {
+
+            private var data: List<AnonifiedApp> = mApps
 
             override fun getCount(): Int {
-                return mApps.size
+                return data.size
             }
 
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val view =
-                    convertView ?: LayoutAppsItemBinding.inflate(layoutInflater, parent, false).root
+                    convertView ?: FragmentAppsItemBinding.inflate(layoutInflater, parent, false).root
                 var entry = view.tag as? ListEntry
 
                 if (entry == null) {
@@ -143,35 +132,65 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
                     view.tag = entry
                 }
 
-                entry.app = mApps[position]
+                entry.app = data[position]
 
                 entry.box?.tag = entry
                 entry.box?.setBackgroundResource(if (entry.app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
-                entry.box?.setOnClickListener(this@AppManagerActivity)
+                entry.box?.setOnClickListener(this@AppsFragment)
 
                 try {
                     entry.icon?.setImageDrawable(
-                        packageManager.getApplicationIcon(
-                            entry.app?.packageName ?: ""
-                        )
-                    )
+                        context.packageManager?.getApplicationIcon(entry.app?.packageName ?: ""))
                     entry.icon?.tag = entry
-                    entry.icon?.contentDescription = entry.app?.name
-                    entry.icon?.setOnClickListener(this@AppManagerActivity)
+                    entry.icon?.setOnClickListener(this@AppsFragment)
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
 
                 entry.text?.text = entry.app?.name
                 entry.text?.tag = entry
-                entry.text?.setOnClickListener(this@AppManagerActivity)
+                entry.text?.setOnClickListener(this@AppsFragment)
 
                 entry.active?.visibility =
                     if (entry.app?.isTorified == true) View.VISIBLE else View.INVISIBLE
                 entry.active?.tag = entry
-                entry.active?.setOnClickListener(this@AppManagerActivity)
+                entry.active?.setOnClickListener(this@AppsFragment)
 
                 return view
+            }
+
+            override fun getFilter(): Filter {
+                val filter = object : Filter() {
+
+                    override fun performFiltering(constraint: CharSequence?): FilterResults {
+                        val results = FilterResults()
+
+                        if (constraint.isNullOrBlank()) {
+                            results.values = mApps
+                            results.count = mApps.count()
+                        }
+                        else {
+                            val filtered = mApps.filter {
+                                // ignore apps, which don't contain the filter string in their id or label.
+                                it.packageName.contains(constraint, true)
+                                        || it.name.contains(constraint, true)
+                            }
+
+                            results.values = filtered
+                            results.count = filtered.count()
+                        }
+
+                        return results
+                    }
+
+                    @Suppress("UNCHECKED_CAST")
+                    override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                        data = results?.values as? List<AnonifiedApp> ?: mApps
+                        notifyDataSetChanged()
+                    }
+                }
+
+                return filter
             }
         }
     }
@@ -181,14 +200,11 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
 
         apps.addAll(mApps.filter { it.isTorified }.mapNotNull { it.packageName })
 
-        val response = Intent()
-        apps.forEach { response.putExtra(it, true) }
-
         mPrefs?.edit()
             ?.putString(AnyoneBotConstants.PREFS_KEY_ANONIFIED, apps.joinToString("|"))
             ?.apply()
 
-        setResult(RESULT_OK, response)
+        mListener.get()?.onAppsChange()
     }
 
     private class ListEntry {
@@ -205,8 +221,7 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
             packageManager: PackageManager,
             prefs: SharedPreferences?,
             include: List<String>?,
-            exclude: List<String>?,
-            filter: CharSequence?
+            exclude: List<String>?
         ): List<AnonifiedApp> {
 
             val anondApps = prefs?.getString(AnyoneBotConstants.PREFS_KEY_ANONIFIED, "")
@@ -229,10 +244,6 @@ class AppManagerActivity : AppCompatActivity(), View.OnClickListener,
                             // ignore apps, which don't connect to the net.
                             && packageManager.getPackageInfo(it.packageName, PackageManager.GET_PERMISSIONS)
                                 ?.requestedPermissions?.contains(Manifest.permission.INTERNET) == true
-                            // ignore apps, which don't contain the filter string in their id or label, if any filter.
-                            && (filter.isNullOrBlank()
-                                || it.packageName.contains(filter, true)
-                                || packageManager.getApplicationLabel(it).contains(filter, true))
                 }
                 .map {
                     val app = AnonifiedApp()

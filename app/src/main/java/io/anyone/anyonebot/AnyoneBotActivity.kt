@@ -192,8 +192,6 @@ class AnyoneBotActivity : BaseActivity() {
             (application as AnyoneBotApp).setLocale()
             finish()
             startActivity(Intent(this, AnyoneBotActivity::class.java))
-        } else if (requestCode == REQUEST_VPN_APP_SELECT && resultCode == RESULT_OK) {
-            sendIntentToService(AnyoneBotConstants.ACTION_RESTART_VPN) // is this enough to do?
         }
     }
 
