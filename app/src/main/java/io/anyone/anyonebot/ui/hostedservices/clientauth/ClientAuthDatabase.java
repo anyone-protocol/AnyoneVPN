@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.v3onionservice.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

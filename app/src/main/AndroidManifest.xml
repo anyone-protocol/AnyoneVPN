@@ -57,14 +57,14 @@
         </activity>
 
         <activity
-            android:name=".ui.v3onionservice.OnionServiceActivity"
+            android:name=".ui.hostedservices.HostedServicesActivity"
             android:label="@string/hidden_services">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".AnyoneBotActivity" />
         </activity>
 
-        <activity android:name=".ui.v3onionservice.clientauth.ClientAuthActivity"
+        <activity android:name=".ui.hostedservices.clientauth.ClientAuthActivity"
             android:label="@string/v3_client_auth_activity_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -72,13 +72,13 @@
         </activity>
 
         <provider
-            android:name=".ui.v3onionservice.OnionServiceContentProvider"
-            android:authorities="${applicationId}.ui.v3onionservice"
+            android:name=".ui.hostedservices.HostedServicesContentProvider"
+            android:authorities="${applicationId}.ui.hostedservices"
             android:exported="false" />
 
         <provider
-            android:authorities="${applicationId}.ui.v3onionservice.clientauth"
-            android:name=".ui.v3onionservice.clientauth.ClientAuthContentProvider"
+            android:authorities="${applicationId}.ui.hostedservices.clientauth"
+            android:name=".ui.hostedservices.clientauth.ClientAuthContentProvider"
             android:exported="false"/>
 
         <receiver

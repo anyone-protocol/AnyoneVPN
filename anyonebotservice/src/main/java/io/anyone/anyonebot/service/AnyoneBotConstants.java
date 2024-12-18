@@ -160,7 +160,7 @@ public interface AnyoneBotConstants {
     String CMD_ACTIVE = "ACTIVE";
     String CMD_SNOWFLAKE_PROXY = "sf_proxy";
 
-    String ONION_SERVICES_DIR = "v3_onion_services";
+    String ANON_SERVICES_DIR = "v3_onion_services";
     String V3_CLIENT_AUTH_DIR = "v3_client_auth";
 
     String PREFS_DNS_PORT = "PREFS_DNS_PORT";

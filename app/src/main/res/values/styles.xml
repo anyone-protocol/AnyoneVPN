@@ -42,4 +42,20 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@android:style/Animation</item>
     </style>
+
+    <style name="AlertDialogTitleTextStyleCustom" parent="@style/RtlOverlay.DialogWindowTitle.AppCompat">
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="AlertDialogButtonBarButtonStyleCustom" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:colorBackground">@color/background_secondary</item>
+        <item name="android:windowTitleStyle">@style/AlertDialogTitleTextStyleCustom</item>
+        <item name="buttonBarButtonStyle">@style/AlertDialogButtonBarButtonStyleCustom</item>
+    </style>
+
 </resources>

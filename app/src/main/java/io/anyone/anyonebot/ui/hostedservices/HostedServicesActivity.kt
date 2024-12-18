@@ -1,158 +1,181 @@
-package io.anyone.anyonebot.ui.v3onionservice;
+package io.anyone.anyonebot.ui.hostedservices
 
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
-import android.database.ContentObserver;
-import android.database.Cursor;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.ListView;
-import android.widget.RadioButton;
+import android.content.Context
+import android.database.ContentObserver
+import android.database.Cursor
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.view.WindowManager
+import android.widget.AdapterView
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import io.anyone.anyonebot.R
+import io.anyone.anyonebot.core.DiskUtils.createReadFileIntent
+import io.anyone.anyonebot.core.LocaleHelper.onAttach
+import io.anyone.anyonebot.databinding.ActivityHostedServicesBinding
+import io.anyone.anyonebot.ui.hostedservices.PermissionManager.requestBatteryPermissions
+import io.anyone.anyonebot.ui.hostedservices.PermissionManager.requestDropBatteryPermissions
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+class HostedServicesActivity : AppCompatActivity(), View.OnClickListener {
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+    private lateinit var mBinding: ActivityHostedServicesBinding
 
-import io.anyone.anyonebot.core.DiskUtils;
-import io.anyone.anyonebot.core.LocaleHelper;
+    private lateinit var mAdapter: HostedServiceListAdapter
 
-import io.anyone.anyonebot.R;
-
-public class OnionServiceActivity extends AppCompatActivity {
-
-    static final String BUNDLE_KEY_ID = "id", BUNDLE_KEY_PORT = "port", BUNDLE_KEY_DOMAIN = "domain", BUNDLE_KEY_PATH = "path";
-    private static final String BASE_WHERE_SELECTION_CLAUSE = OnionServiceContentProvider.OnionService.CREATED_BY_USER + "=";
-    private static final String BUNDLE_KEY_SHOW_USER_SERVICES = "show_user_key";
-    private static final int REQUEST_CODE_READ_ZIP_BACKUP = 347;
-    private RadioButton radioShowUserServices;
-    private FloatingActionButton fab;
-    private ContentResolver mContentResolver;
-    private OnionV3ListAdapter mAdapter;
-    private CoordinatorLayout mLayoutRoot;
-
-    @Override
-    public void onCreate(Bundle bundle) {
-        super.onCreate(bundle);
-        setContentView(R.layout.activity_hosted_services);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        mLayoutRoot = findViewById(R.id.hostedServiceCoordinatorLayout);
-        fab = findViewById(R.id.fab);
-        fab.setOnClickListener(v -> new OnionServiceCreateDialogFragment().show(getSupportFragmentManager(), OnionServiceCreateDialogFragment.class.getSimpleName()));
-
-        mContentResolver = getContentResolver();
-        mAdapter = new OnionV3ListAdapter(this, mContentResolver.query(OnionServiceContentProvider.CONTENT_URI, OnionServiceContentProvider.PROJECTION, BASE_WHERE_SELECTION_CLAUSE + '1', null, null));
-        mContentResolver.registerContentObserver(OnionServiceContentProvider.CONTENT_URI, true, new OnionServiceObserver(new Handler()));
-
-        ListView onionList = findViewById(R.id.onion_list);
-
-        radioShowUserServices = findViewById(R.id.radioUserServices);
-        RadioButton radioShowAppServices = findViewById(R.id.radioAppServices);
-        boolean showUserServices = radioShowAppServices.isChecked() || bundle == null || bundle.getBoolean(BUNDLE_KEY_SHOW_USER_SERVICES, false);
-        if (showUserServices) radioShowUserServices.setChecked(true);
-        else radioShowAppServices.setChecked(true);
-        filterServices(showUserServices);
-        onionList.setAdapter(mAdapter);
-        onionList.setOnItemClickListener((parent, view, position, id) -> {
-            Cursor item = (Cursor) parent.getItemAtPosition(position);
-            Bundle arguments = new Bundle();
-            arguments.putInt(BUNDLE_KEY_ID, item.getInt(item.getColumnIndex(OnionServiceContentProvider.OnionService._ID)));
-            arguments.putString(BUNDLE_KEY_PORT, item.getString(item.getColumnIndex(OnionServiceContentProvider.OnionService.PORT)));
-            arguments.putString(BUNDLE_KEY_DOMAIN, item.getString(item.getColumnIndex(OnionServiceContentProvider.OnionService.DOMAIN)));
-            arguments.putString(BUNDLE_KEY_PATH, item.getString(item.getColumnIndex(OnionServiceContentProvider.OnionService.PATH)));
-            OnionServiceActionsDialogFragment dialog = new OnionServiceActionsDialogFragment(arguments);
-            dialog.show(getSupportFragmentManager(), OnionServiceActionsDialogFragment.class.getSimpleName());
-        });
+    private val mReadBackupLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == RESULT_OK) {
+            V3BackupUtils(this).restoreZipBackupV3(result.data?.data)
+        }
     }
 
-    private void filterServices(boolean showUserServices) {
-        String predicate;
+    public override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        mBinding = ActivityHostedServicesBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
+
+        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+
+        setSupportActionBar(mBinding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        mBinding.fab.setOnClickListener {
+            HostedServiceCreateDialogFragment().show(
+                supportFragmentManager,
+                HostedServiceCreateDialogFragment::class.java.simpleName)
+        }
+
+        mBinding.rbAppServices.setOnClickListener(this)
+
+        mAdapter = HostedServiceListAdapter(
+            this,
+            contentResolver.query(
+                HostedServicesContentProvider.CONTENT_URI,
+                HostedServicesContentProvider.PROJECTION,
+                BASE_WHERE_SELECTION_CLAUSE + '1',
+                null,
+                null))
+
+        contentResolver.registerContentObserver(
+            HostedServicesContentProvider.CONTENT_URI, true, OnionServiceObserver(
+                Handler(Looper.getMainLooper())))
+
+        val showUserServices = mBinding.rbAppServices.isChecked
+                || savedInstanceState == null
+                || savedInstanceState.getBoolean(BUNDLE_KEY_SHOW_USER_SERVICES, false)
+
         if (showUserServices) {
-            predicate = "1";
-            fab.show();
+            mBinding.rbUserServices.isChecked = true
+        }
+        else {
+            mBinding.rbAppServices.isChecked = true
+        }
+
+        filterServices(showUserServices)
+
+        mBinding.listServices.adapter = mAdapter
+        mBinding.listServices.onItemClickListener =
+            AdapterView.OnItemClickListener { parent: AdapterView<*>, _: View?, position: Int, _: Long ->
+                val item = parent.getItemAtPosition(position) as Cursor
+                val arguments = Bundle()
+
+                val id = item.getInt(HostedServicesContentProvider.HostedService.ID)
+                if (id != null) arguments.putInt(BUNDLE_KEY_ID, id)
+
+                for (i in mapOf(HostedServicesContentProvider.HostedService.PORT to BUNDLE_KEY_PORT,
+                    HostedServicesContentProvider.HostedService.DOMAIN to BUNDLE_KEY_DOMAIN,
+                    HostedServicesContentProvider.HostedService.PATH to BUNDLE_KEY_PATH)
+                ) {
+                    arguments.putString(i.value, item.getString(i.key))
+                }
+
+                val dialog = HostedServiceActionsDialogFragment(arguments)
+                dialog.show(supportFragmentManager,
+                    HostedServiceActionsDialogFragment::class.java.simpleName)
+            }
+    }
+
+    private fun filterServices(showUserServices: Boolean) {
+        val predicate: String
+        if (showUserServices) {
+            predicate = "1"
+            mBinding.fab.show()
         } else {
-            predicate = "0";
-            fab.hide();
-        }
-        mAdapter.changeCursor(mContentResolver.query(OnionServiceContentProvider.CONTENT_URI, OnionServiceContentProvider.PROJECTION,
-                BASE_WHERE_SELECTION_CLAUSE + predicate, null, null));
-    }
-
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(LocaleHelper.onAttach(base));
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.hs_menu, menu);
-        return true;
-    }
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle icicle) {
-        super.onSaveInstanceState(icicle);
-        icicle.putBoolean(BUNDLE_KEY_SHOW_USER_SERVICES, radioShowUserServices.isChecked());
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_restore_backup) {
-            Intent readFileIntent = DiskUtils.createReadFileIntent(ZipUtilities.ZIP_MIME_TYPE);
-            startActivityForResult(readFileIntent, REQUEST_CODE_READ_ZIP_BACKUP);
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int result, Intent data) {
-        super.onActivityResult(requestCode, result, data);
-        if (requestCode == REQUEST_CODE_READ_ZIP_BACKUP && result == RESULT_OK) {
-            new V3BackupUtils(this).restoreZipBackupV3(data.getData());
-        }
-    }
-
-    public void onRadioButtonClick(View view) {
-        int id = view.getId();
-        if (id == R.id.radioUserServices)
-            filterServices(true);
-        else if (id == R.id.radioAppServices)
-            filterServices(false);
-    }
-
-    private class OnionServiceObserver extends ContentObserver {
-
-        OnionServiceObserver(Handler handler) {
-            super(handler);
+            predicate = "0"
+            mBinding.fab.hide()
         }
 
-        @Override
-        public void onChange(boolean selfChange) {
-            filterServices(radioShowUserServices.isChecked()); // updates adapter
-            showBatteryOptimizationsMessageIfAppropriate();
+        mAdapter.changeCursor(
+            contentResolver.query(
+                HostedServicesContentProvider.CONTENT_URI, HostedServicesContentProvider.PROJECTION,
+                BASE_WHERE_SELECTION_CLAUSE + predicate, null, null))
+    }
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(onAttach(base))
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.hs_menu, menu)
+
+        return true
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putBoolean(BUNDLE_KEY_SHOW_USER_SERVICES, mBinding.rbUserServices.isChecked)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_restore_backup) {
+            mReadBackupLauncher.launch(createReadFileIntent(ZipUtilities.ZIP_MIME_TYPE))
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onClick(view: View?) {
+        filterServices(mBinding.rbUserServices.isChecked)
+    }
+
+    private inner class OnionServiceObserver(handler: Handler?) : ContentObserver(handler) {
+
+        override fun onChange(selfChange: Boolean) {
+            filterServices(mBinding.rbUserServices.isChecked) // updates adapter
+
+            showBatteryOptimizationsMessageIfAppropriate()
         }
     }
 
-    void showBatteryOptimizationsMessageIfAppropriate() {
-        Cursor activeServices = getContentResolver().query(OnionServiceContentProvider.CONTENT_URI, OnionServiceContentProvider.PROJECTION,
-                OnionServiceContentProvider.OnionService.ENABLED + "=1", null, null);
-        if (activeServices == null) return;
-        if (activeServices.getCount() > 0)
-            PermissionManager.requestBatteryPermissions(this, mLayoutRoot);
-        else
-            PermissionManager.requestDropBatteryPermissions(this, mLayoutRoot);
-        activeServices.close();
+    fun showBatteryOptimizationsMessageIfAppropriate() {
+        val activeServices = contentResolver.query(
+            HostedServicesContentProvider.CONTENT_URI, HostedServicesContentProvider.PROJECTION,
+            HostedServicesContentProvider.HostedService.ENABLED + "=1", null, null)
+            ?: return
+
+        if (activeServices.count > 0) {
+            requestBatteryPermissions(this, mBinding.root)
+        }
+        else {
+            requestDropBatteryPermissions(this, mBinding.root)
+        }
+
+        activeServices.close()
+    }
+
+    companion object {
+        const val BUNDLE_KEY_ID = "id"
+        const val BUNDLE_KEY_PORT = "port"
+        const val BUNDLE_KEY_DOMAIN = "domain"
+        const val BUNDLE_KEY_PATH = "path"
+
+        private const val BASE_WHERE_SELECTION_CLAUSE =
+            "${HostedServicesContentProvider.HostedService.CREATED_BY_USER} = "
+        private const val BUNDLE_KEY_SHOW_USER_SERVICES = "show_user_key"
     }
 }

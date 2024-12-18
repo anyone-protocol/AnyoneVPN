@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.v3onionservice;
+package io.anyone.anyonebot.ui.hostedservices;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -13,7 +13,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import io.anyone.anyonebot.service.AnyoneBotConstants;
 import io.anyone.anyonebot.service.AnyoneBotService;
-import io.anyone.anyonebot.ui.v3onionservice.clientauth.ClientAuthContentProvider;
+import io.anyone.anyonebot.ui.hostedservices.clientauth.ClientAuthContentProvider;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -66,8 +66,8 @@ public class V3BackupUtils {
                 privKeyPath = v3BasePath + "hs_ed25519_secret_key",
                 pubKeyPath = v3BasePath + "hs_ed25519_public_key";
 
-        Cursor portData = mResolver.query(OnionServiceContentProvider.CONTENT_URI, OnionServiceContentProvider.PROJECTION,
-                OnionServiceContentProvider.OnionService.PATH + "=\"" + relativePath + "\"", null, null);
+        Cursor portData = mResolver.query(HostedServicesContentProvider.CONTENT_URI, HostedServicesContentProvider.PROJECTION,
+                HostedServicesContentProvider.HostedService.PATH + "=\"" + relativePath + "\"", null, null);
 
         JSONObject config = new JSONObject();
         try {
@@ -76,12 +76,12 @@ public class V3BackupUtils {
             portData.moveToNext();
 
 
-            config.put(OnionServiceContentProvider.OnionService.NAME, portData.getString(portData.getColumnIndex(OnionServiceContentProvider.OnionService.NAME)));
-            config.put(OnionServiceContentProvider.OnionService.PORT, portData.getString(portData.getColumnIndex(OnionServiceContentProvider.OnionService.PORT)));
-            config.put(OnionServiceContentProvider.OnionService.ONION_PORT, portData.getString(portData.getColumnIndex(OnionServiceContentProvider.OnionService.ONION_PORT)));
-            config.put(OnionServiceContentProvider.OnionService.DOMAIN, portData.getString(portData.getColumnIndex(OnionServiceContentProvider.OnionService.DOMAIN)));
-            config.put(OnionServiceContentProvider.OnionService.CREATED_BY_USER, portData.getString(portData.getColumnIndex(OnionServiceContentProvider.OnionService.CREATED_BY_USER)));
-            config.put(OnionServiceContentProvider.OnionService.ENABLED, portData.getString(portData.getColumnIndex(OnionServiceContentProvider.OnionService.ENABLED)));
+            config.put(HostedServicesContentProvider.HostedService.NAME, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.NAME)));
+            config.put(HostedServicesContentProvider.HostedService.PORT, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.PORT)));
+            config.put(HostedServicesContentProvider.HostedService.ANON_PORT, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.ANON_PORT)));
+            config.put(HostedServicesContentProvider.HostedService.DOMAIN, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.DOMAIN)));
+            config.put(HostedServicesContentProvider.HostedService.CREATED_BY_USER, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.CREATED_BY_USER)));
+            config.put(HostedServicesContentProvider.HostedService.ENABLED, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.ENABLED)));
 
             portData.close();
 
@@ -112,20 +112,20 @@ public class V3BackupUtils {
             JSONObject savedValues = new JSONObject(jsonString);
             ContentValues fields = new ContentValues();
 
-            int port = savedValues.getInt(OnionServiceContentProvider.OnionService.PORT);
-            fields.put(OnionServiceContentProvider.OnionService.PORT, port);
-            fields.put(OnionServiceContentProvider.OnionService.NAME, savedValues.getString(OnionServiceContentProvider.OnionService.NAME));
-            fields.put(OnionServiceContentProvider.OnionService.ONION_PORT, savedValues.getInt(OnionServiceContentProvider.OnionService.ONION_PORT));
-            fields.put(OnionServiceContentProvider.OnionService.DOMAIN, savedValues.getString(OnionServiceContentProvider.OnionService.DOMAIN));
-            fields.put(OnionServiceContentProvider.OnionService.CREATED_BY_USER, savedValues.getInt(OnionServiceContentProvider.OnionService.CREATED_BY_USER));
-            fields.put(OnionServiceContentProvider.OnionService.ENABLED, savedValues.getInt(OnionServiceContentProvider.OnionService.ENABLED));
+            int port = savedValues.getInt(HostedServicesContentProvider.HostedService.PORT);
+            fields.put(HostedServicesContentProvider.HostedService.PORT, port);
+            fields.put(HostedServicesContentProvider.HostedService.NAME, savedValues.getString(HostedServicesContentProvider.HostedService.NAME));
+            fields.put(HostedServicesContentProvider.HostedService.ANON_PORT, savedValues.getInt(HostedServicesContentProvider.HostedService.ANON_PORT));
+            fields.put(HostedServicesContentProvider.HostedService.DOMAIN, savedValues.getString(HostedServicesContentProvider.HostedService.DOMAIN));
+            fields.put(HostedServicesContentProvider.HostedService.CREATED_BY_USER, savedValues.getInt(HostedServicesContentProvider.HostedService.CREATED_BY_USER));
+            fields.put(HostedServicesContentProvider.HostedService.ENABLED, savedValues.getInt(HostedServicesContentProvider.HostedService.ENABLED));
 
-            Cursor dbService = mResolver.query(OnionServiceContentProvider.CONTENT_URI, OnionServiceContentProvider.PROJECTION,
-                    OnionServiceContentProvider.OnionService.PORT + "=" + port, null, null);
+            Cursor dbService = mResolver.query(HostedServicesContentProvider.CONTENT_URI, HostedServicesContentProvider.PROJECTION,
+                    HostedServicesContentProvider.HostedService.PORT + "=" + port, null, null);
             if (dbService == null || dbService.getCount() == 0)
-                mResolver.insert(OnionServiceContentProvider.CONTENT_URI, fields);
+                mResolver.insert(HostedServicesContentProvider.CONTENT_URI, fields);
             else
-                mResolver.update(OnionServiceContentProvider.CONTENT_URI, fields, OnionServiceContentProvider.OnionService.PORT + "=" + port, null);
+                mResolver.update(HostedServicesContentProvider.CONTENT_URI, fields, HostedServicesContentProvider.HostedService.PORT + "=" + port, null);
             dbService.close();
 
             configFile.delete();
@@ -145,7 +145,7 @@ public class V3BackupUtils {
     }
 
     private File getV3BasePath() {
-        return new File(mContext.getFilesDir().getAbsolutePath(), AnyoneBotConstants.ONION_SERVICES_DIR);
+        return new File(mContext.getFilesDir().getAbsolutePath(), AnyoneBotConstants.ANON_SERVICES_DIR);
     }
 
     public void restoreZipBackupV3(Uri zipUri) {

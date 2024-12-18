@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.v3onionservice.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -21,7 +21,7 @@ import androidx.fragment.app.Fragment;
 
 import io.anyone.anyonebot.core.DiskUtils;
 import io.anyone.anyonebot.core.LocaleHelper;
-import io.anyone.anyonebot.ui.v3onionservice.V3BackupUtils;
+import io.anyone.anyonebot.ui.hostedservices.V3BackupUtils;
 
 import java.util.List;
 import java.util.Objects;

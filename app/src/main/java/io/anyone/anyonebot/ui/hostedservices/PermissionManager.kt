@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.v3onionservice
+package io.anyone.anyonebot.ui.hostedservices
 
 import android.content.Context
 import android.content.Intent

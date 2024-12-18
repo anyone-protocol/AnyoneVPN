@@ -1,98 +1,98 @@
-package io.anyone.anyonebot.ui.v3onionservice;
+package io.anyone.anyonebot.ui.hostedservices
 
-import android.app.Dialog;
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.Context;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.app.Dialog
+import android.content.ContentValues
+import android.content.DialogInterface
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.DialogFragment
+import io.anyone.anyonebot.R
+import io.anyone.anyonebot.databinding.DialogHsDataBinding
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.DialogFragment;
+class HostedServiceCreateDialogFragment : DialogFragment() {
 
-import io.anyone.anyonebot.R;
+    private lateinit var mBinding: DialogHsDataBinding
 
-public class OnionServiceCreateDialogFragment extends DialogFragment {
+    private var inputValidator: TextWatcher? = null
 
-    private EditText etServer, etLocalPort, etOnionPort;
-    private TextWatcher inputValidator;
+    override fun onStart() {
+        super.onStart()
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        inputValidator.afterTextChanged(null); // initially disable positive button
+        inputValidator?.afterTextChanged(null) // initially disable positive button
     }
 
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        mBinding = DialogHsDataBinding.inflate(layoutInflater)
 
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        final View dialogView = requireActivity().getLayoutInflater().inflate(R.layout.layout_hs_data_dialog, null);
-        etServer = dialogView.findViewById(R.id.hsName);
-        etLocalPort = dialogView.findViewById(R.id.hsLocalPort);
-        etOnionPort = dialogView.findViewById(R.id.hsOnionPort);
+        val ad = AlertDialog.Builder(requireContext(), R.style.AlertDialogCustom)
+            .setTitle(R.string.hidden_services)
+            .setNegativeButton(
+                android.R.string.cancel
+            ) { dialog: DialogInterface, _: Int ->
+                dialog.cancel()
+            }
+            .setPositiveButton(
+                R.string.save
+            ) { _: DialogInterface?, _: Int ->
+                doSave()
+            }
+            .setView(mBinding.root)
+            .create()
 
-        AlertDialog alertDialog = new AlertDialog.Builder(requireActivity())
-                .setTitle(R.string.hidden_services)
-                .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.cancel())
-                .setPositiveButton(R.string.save, (dialog, which) -> doSave(requireActivity()))
-                .setView(dialogView)
-                .create();
-
-
-        inputValidator = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) { // no-op
+        inputValidator = object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                // ignored
             }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) { //no-op
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                // ignored
             }
 
-            @Override
-            public void afterTextChanged(Editable s) {
-                Button btn = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
-                try {
-                    int localPort = Integer.parseInt(etLocalPort.getText().toString());
-                    int onionPort = Integer.parseInt(etOnionPort.getText().toString());
-                    btn.setEnabled(checkInput(localPort, onionPort));
-                } catch (NumberFormatException nfe) {
-                    btn.setEnabled(false);
-                }
+            override fun afterTextChanged(s: Editable?) {
+                ad.getButton(AlertDialog.BUTTON_POSITIVE).isEnabled =
+                    toInt(mBinding.etLocalPort) in 1..65535
+                            && toInt(mBinding.etAnonPort) in 1 .. 65535
+                            && !mBinding.edServiceName.text.isNullOrBlank()
             }
-        };
+        }
 
-        etServer.addTextChangedListener(inputValidator);
-        etLocalPort.addTextChangedListener(inputValidator);
-        etOnionPort.addTextChangedListener(inputValidator);
-        return alertDialog;
+        mBinding.edServiceName.addTextChangedListener(inputValidator)
+        mBinding.etLocalPort.addTextChangedListener(inputValidator)
+        mBinding.etAnonPort.addTextChangedListener(inputValidator)
+
+        return ad
     }
 
-    private boolean checkInput(int local, int remote) {
-        if ((local < 1 || local > 65535) || (remote < 1 || remote > 65535)) return false;
-        return !TextUtils.isEmpty(etServer.getText().toString().trim());
+    private fun toInt(et: EditText): Int {
+        return try {
+            et.text.toString().toInt()
+        }
+        catch (e: NumberFormatException) {
+            0
+        }
     }
 
-    private void doSave(Context context) {
-        String serverName = etServer.getText().toString().trim();
-        int localPort = Integer.parseInt(etLocalPort.getText().toString());
-        int onionPort = Integer.parseInt(etOnionPort.getText().toString());
-        ContentValues fields = new ContentValues();
-        fields.put(OnionServiceContentProvider.OnionService.NAME, serverName);
-        fields.put(OnionServiceContentProvider.OnionService.PORT, localPort);
-        fields.put(OnionServiceContentProvider.OnionService.ONION_PORT, onionPort);
-        fields.put(OnionServiceContentProvider.OnionService.CREATED_BY_USER, 1);
-        ContentResolver cr = context.getContentResolver();
-        cr.insert(OnionServiceContentProvider.CONTENT_URI, fields);
-        Toast.makeText(context, R.string.please_restart_to_enable_the_changes, Toast.LENGTH_SHORT).show();
-        ((OnionServiceActivity) requireActivity()).showBatteryOptimizationsMessageIfAppropriate();
-    }
+    private fun doSave() {
+        val serverName = mBinding.edServiceName.text.toString().trim { it <= ' ' }
+        val localPort = toInt(mBinding.etLocalPort)
+        val onionPort = toInt(mBinding.etAnonPort)
 
+        val fields = ContentValues()
+        fields.put(HostedServicesContentProvider.HostedService.NAME, serverName)
+        fields.put(HostedServicesContentProvider.HostedService.PORT, localPort)
+        fields.put(HostedServicesContentProvider.HostedService.ANON_PORT, onionPort)
+        fields.put(HostedServicesContentProvider.HostedService.CREATED_BY_USER, 1)
+
+        val cr = context?.contentResolver
+        cr?.insert(HostedServicesContentProvider.CONTENT_URI, fields)
+
+        Toast.makeText(context, R.string.please_restart_to_enable_the_changes, Toast.LENGTH_SHORT)
+            .show()
+
+        (activity as? HostedServicesActivity)?.showBatteryOptimizationsMessageIfAppropriate()
+    }
 }

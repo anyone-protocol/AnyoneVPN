@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.v3onionservice.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -19,7 +19,7 @@ import androidx.fragment.app.DialogFragment;
 
 import io.anyone.anyonebot.core.DiskUtils;
 import io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText;
-import io.anyone.anyonebot.ui.v3onionservice.V3BackupUtils;
+import io.anyone.anyonebot.ui.hostedservices.V3BackupUtils;
 
 import java.util.Objects;
 

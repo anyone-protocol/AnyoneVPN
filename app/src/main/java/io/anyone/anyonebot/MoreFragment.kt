@@ -21,8 +21,8 @@ import io.anyone.anyonebot.ui.AboutDialogFragment
 import io.anyone.anyonebot.ui.AppsFragment
 import io.anyone.anyonebot.ui.MenuAction
 import io.anyone.anyonebot.ui.MoreActionAdapter
-import io.anyone.anyonebot.ui.v3onionservice.OnionServiceActivity
-import io.anyone.anyonebot.ui.v3onionservice.clientauth.ClientAuthActivity
+import io.anyone.anyonebot.ui.hostedservices.HostedServicesActivity
+import io.anyone.anyonebot.ui.hostedservices.clientauth.ClientAuthActivity
 
 class MoreFragment : Fragment(), AppsFragment.OnChangeListener {
 
@@ -60,7 +60,7 @@ class MoreFragment : Fragment(), AppsFragment.OnChangeListener {
 
         val listItems = arrayListOf(
             MenuAction(R.string.v3_hosted_services, R.drawable.ic_data) {
-                startActivity(Intent(requireActivity(), OnionServiceActivity::class.java))
+                startActivity(Intent(requireActivity(), HostedServicesActivity::class.java))
             },
             MenuAction(
                 R.string.v3_client_auth_activity_title, R.drawable.ic_shield_security

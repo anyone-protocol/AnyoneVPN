@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.v3onionservice.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

@@ -2,11 +2,10 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/hostedServiceCoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ui.v3onionservice.OnionServiceActivity">
+    tools:context=".ui.hostedservices.HostedServicesActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -20,7 +19,53 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/layout_hs_list_view_main" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginVertical="8dp"
+            android:text="@string/service_type"
+            android:textColor="@color/accent" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbUserServices"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/accent"
+                android:text="@string/user_services" />
+
+            <RadioButton
+                android:id="@+id/rbAppServices"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/accent"
+                android:text="@string/app_services" />
+
+        </RadioGroup>
+
+        <ListView
+            android:id="@+id/listServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginVertical="@dimen/activity_vertical_margin" />
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -28,9 +73,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/add_service"
         android:tint="@android:color/black"
+        app:backgroundTint="@color/accent"
         app:fabSize="normal"
-        app:backgroundTint="@color/progress_bar_purple"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@drawable/ic_add_square" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -324,8 +324,8 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
         configLanguage();
         try {
             //set proper content URIs for current build flavor
-            V3_ONION_SERVICES_CONTENT_URI = Uri.parse("content://" + getApplicationContext().getPackageName() + ".ui.v3onionservice/v3");
-            V3_CLIENT_AUTH_URI = Uri.parse("content://" + getApplicationContext().getPackageName() + ".ui.v3onionservice.clientauth/v3auth");
+            V3_ONION_SERVICES_CONTENT_URI = Uri.parse("content://" + getApplicationContext().getPackageName() + ".ui.hostedservices/v3");
+            V3_CLIENT_AUTH_URI = Uri.parse("content://" + getApplicationContext().getPackageName() + ".ui.hostedservices.clientauth/v3auth");
 
             try {
                 mHandler = new Handler();
@@ -341,7 +341,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
                 if (!appCacheHome.exists()) appCacheHome.mkdirs();
 
-                mV3OnionBasePath = new File(getFilesDir().getAbsolutePath(), ONION_SERVICES_DIR);
+                mV3OnionBasePath = new File(getFilesDir().getAbsolutePath(), ANON_SERVICES_DIR);
                 if (!mV3OnionBasePath.isDirectory()) mV3OnionBasePath.mkdirs();
 
                 mV3AuthBasePath = new File(getFilesDir().getAbsolutePath(), V3_CLIENT_AUTH_DIR);

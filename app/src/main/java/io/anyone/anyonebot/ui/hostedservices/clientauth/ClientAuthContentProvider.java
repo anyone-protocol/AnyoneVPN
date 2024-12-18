@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.v3onionservice.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -23,7 +23,7 @@ public class ClientAuthContentProvider extends ContentProvider {
             V3ClientAuth.HASH,
             V3ClientAuth.ENABLED,
     };
-    private static final String AUTH = BuildConfig.APPLICATION_ID + ".ui.v3onionservice.clientauth";
+    private static final String AUTH = BuildConfig.APPLICATION_ID + ".ui.hostedservices.clientauth";
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTH + "/v3auth");
     private static final int V3AUTHS = 1, V3AUTH_ID = 2;
 

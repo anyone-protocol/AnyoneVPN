@@ -8,44 +8,59 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
         android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
 
     <io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText
-        android:id="@+id/hsName"
+        android:id="@+id/edServiceName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_main_scene"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:text="@string/local_port"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
 
     <io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText
-        android:id="@+id/hsLocalPort"
+        android:id="@+id/etLocalPort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_main_scene"
         android:digits="0123456789"
         android:ems="10"
         android:inputType="number"
-        android:maxLength="5" />
+        android:maxLength="5"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:text="@string/anon_port"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
 
     <io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText
-        android:id="@+id/hsOnionPort"
+        android:id="@+id/etAnonPort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_main_scene"
         android:digits="0123456789"
         android:ems="10"
         android:inputType="number"
-        android:maxLength="5" />
+        android:maxLength="5"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp" />
 
 </LinearLayout>
