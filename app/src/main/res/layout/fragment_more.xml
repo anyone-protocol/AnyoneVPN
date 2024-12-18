@@ -7,6 +7,18 @@
     tools:context=".MoreFragment">
 
     <TextView
+        android:id="@+id/tvMoreTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:text="@string/menu_more"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/tvVersion"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -22,12 +34,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
-        android:layout_marginVertical="8dp"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:dividerHeight="0dp"
         android:drawSelectorOnTop="true"
         app:layout_constraintBottom_toTopOf="@id/tvVersion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvMoreTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
