@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">خدمات پیازی</string>
     <string name="save">ذخیره</string>
     <string name="local_port">درگاه محلّی</string>
-    <string name="onion_port">درگاه پیازی</string>
+    <string name="anon_port">درگاه پیازی</string>
     <string name="name">نام</string>
     <string name="done">انجام شد!</string>
     <string name="copy_address_to_clipboard">رونوشت نشانی‌ها در تخته‌گیره</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">حذف خدمت را تأیید کنید</string>
     <string name="service_type">گونهٔ خدمت</string>
     <string name="please_restart_to_enable_the_changes">برای به‌کار انداختن تغییرات، روبوت پیازی را دوباره آغاز کنید</string>
-    <string name="onion">‪.onion‬</string>
     <string name="share_as_qr">هم‌رسانی با کیوآر کد</string>
     <string name="disable">از کار انداختن</string>
     <string name="enable">به‌کار انداختن</string>
@@ -133,7 +132,7 @@
     <string name="mebibyte">می‌ب</string>
     <string name="v3_backup_key">پشتیبان کلید تأیید هویت کارخواه</string>
     <string name="v3_key_hash">کلید خصوصی x25519 در Base32</string>
-    <string name="v3_onion">دامنهٔ ‎.onion</string>
+    <string name="v3_anon">دامنهٔ ‎.anon</string>
     <string name="v3_delete_client_authorization">حذف کلید تأیید هویت کارخواه</string>
     <string name="v3_backup_key_warning">هشدار: این کار می‌تواند کلیدتان را برای دیگر کاره‌ها افشا کند</string>
     <string name="v3_delete_client_authorization_confirm">حذف تأیید هویت کارخواه</string>

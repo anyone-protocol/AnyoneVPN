@@ -54,7 +54,7 @@
     <string name="pref_proxy_type_dialog">Insere typo de proxy</string>
     <string name="copy_address_to_clipboard">Copiar adresse al area de transferentia</string>
     <string name="version">Version:</string>
-    <string name="menu_hidden_services">Servicios onion</string>
+    <string name="menu_hidden_services">Servicios anon</string>
     <string name="delete_service">Deler le servicio</string>
     <string name="v3_backup_name_hint">Nomine de file del copia de securitate…</string>
     <string name="license">Licentia:</string>
@@ -62,7 +62,7 @@
     <string name="service_type">Typo de servicio</string>
     <string name="app_shortcuts">Applicationes activate pro Anon</string>
     <string name="allow">Permitter</string>
-    <string name="hidden_services">Servicios onion</string>
+    <string name="hidden_services">Servicios anon</string>
     <string name="done">Facite!</string>
     <string name="kindness_adjust_title">Parametros</string>
     <string name="secure_your_connection_title">Preste pro connecter</string>
@@ -85,7 +85,7 @@
     <string name="pref_proxy_password_title">Contrasigno de proxy de sortita</string>
     <string name="pref_proxy_password_summary">Contrasigno de proxy (Optional)</string>
     <string name="pref_proxy_password_dialog">Insere contrasigno de proxy</string>
-    <string name="v3_hosted_services">Servicios Onion hospite</string>
+    <string name="v3_hosted_services">Servicios Anon hospite</string>
     <string name="vpn_disabled">VPN disactivate</string>
     <string name="user_services">Servicios de usator</string>
     <string name="app_services">Servicios de application</string>
@@ -107,7 +107,7 @@
     <string name="ports_not_set">Portos non definite</string>
     <string name="kibibyte">KiB</string>
     <string name="v3_key_hash">Clave private x25519 in Base32</string>
-    <string name="v3_onion">Dominio .onion</string>
+    <string name="v3_anon">Dominio .anon</string>
     <string name="v3_import_auth_private">Importar .auth_private</string>
     <string name="full_device_vpn">VPN de apparato plen</string>
     <string name="pref_anonrc_title">Configuration personalisate de anonrc</string>
@@ -122,11 +122,10 @@
     <string name="pref_dnsport_dialog">Configuration de porto DNS</string>
     <string name="pref_anonrc_summary">SOLMENTE EXPERTOS: insere le lineas de configuration directe de anonrc</string>
     <string name="local_port">Porto local</string>
-    <string name="onion_port">Porto onion</string>
+    <string name="anon_port">Porto anon</string>
     <string name="restore_backup">Restaurar le copia de securitate</string>
     <string name="start_anon_again_for_finish_the_process">Initia Anon novemente pro finir le processo</string>
     <string name="confirm_service_deletion">Confirma le deletion del servicio</string>
-    <string name="onion">.onion</string>
     <string name="pref_disable_ipv4">Disactivar le connexiones IPv4</string>
     <string name="confirm">Confirmar</string>
     <string name="please_restart_to_enable_the_changes">Reinitia AnyoneBot pro activar le cambiamentos</string>

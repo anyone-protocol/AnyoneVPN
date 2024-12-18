@@ -97,7 +97,7 @@
     <string name="menu_hidden_services">Imantat lurañanaka</string>
     <string name="save">Imaña</string>
     <string name="local_port">Akankir waythapiwja</string>
-    <string name="onion_port">Onion waythapiwja</string>
+    <string name="anon_port">Anon waythapiwja</string>
     <string name="name">Suti</string>
     <string name="done">¡Tukuyata!</string>
     <string name="copy_address_to_clipboard">Utjirinak waruqañawjar imam</string>
@@ -111,7 +111,6 @@
     <string name="confirm_service_deletion">Lurañanakax pichsutäniwa</string>
     <string name="service_type">Kunayman lurañanaka</string>
     <string name="please_restart_to_enable_the_changes">Mayjt\'ayatanak aqtayañatakix AnyoneBot mayamp qhantt\'ayam, amp suma</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">QRjam ch\'iqiyaña</string>
     <string name="disable">Jiwt\'ayaña</string>
     <string name="enable">Aqtayaña</string>
@@ -152,7 +151,7 @@
     <string name="connection_custom">Maynichata</string>
     <string name="asking">Jiskt\'askiwa…</string>
     <string name="allow">Sarantayaña</string>
-    <string name="v3_onion">.onion chiqa</string>
+    <string name="v3_anon">.anon chiqa</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Taqpach intirphasanakan Proxyx jist\'aratawa</string>
     <string name="pref_http_dialog">HTTP waythapiwj mayjt\'ayäwi</string>
     <string name="v3_client_auth_activity_title">Apnaqirir iyawsaña</string>
@@ -194,7 +193,7 @@
     <string name="v3_delete_client_authorization_confirm">Apnaqirir iyawsañ pichsuña</string>
     <string name="v3_delete_client_authorization">Apnaqirir iyawsañ chimpu pichsuña</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Wi-Fi peers, waythapiyat tispusitiwunaka ukat khiti yaqha jaqis IP ukamar waythapiykaspa jupax Anon ukar mantakispaw saña</string>
-    <string name="backup_port_exist">Pantjata: Mä Onion sirwisyux waythapiwj apnaqxiwa %s</string>
+    <string name="backup_port_exist">Pantjata: Mä Anon sirwisyux waythapiwj apnaqxiwa %s</string>
     <string name="v3_hosted_services">Yapt\'at Siwulla sirwisyunaka</string>
     <string name="v3_backup_key">Jark\'aqat waraqäwin apnaqirir iyawsañ chimpupa</string>
     <string name="v3_backup_name_hint">Imatan sutipan jark\'aqat waraqäwipa…</string>

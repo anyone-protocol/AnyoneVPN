@@ -98,7 +98,7 @@
     <string name="v3_client_auth_activity_title">הרשאת לקוח</string>
     <string name="menu_hidden_services">שירותי בצל</string>
     <string name="local_port">פתחה מקומית</string>
-    <string name="onion_port">פתחת בצל</string>
+    <string name="anon_port">פתחת בצל</string>
     <string name="name">שם</string>
     <string name="done">בוצע!</string>
     <string name="delete_service">מחיקת שירות</string>
@@ -108,7 +108,7 @@
     <string name="confirm_service_deletion">אישור מחיקת שירות</string>
     <string name="service_type">סוג שירות</string>
     <string name="please_restart_to_enable_the_changes">נא להפעיל את AnyoneBot מחדש כדי להפעיל את השינויים</string>
-    <string name="onion">‎.onion</string>
+    <string name="anon">‎</string>
     <string name="share_as_qr">שיתוף כ־QR</string>
     <string name="enable">הפעלה</string>
     <string name="pref_isolate_dest">בידוד כתובות יעד</string>
@@ -174,7 +174,7 @@
     <string name="pref_use_expanded_notifications">להציג בהתראה את המדינה וכתובת ה־IP של צומת יציאת התור שלך כאשר הן זמינות</string>
     <string name="v3_hosted_services">שירותי בצל באירוח</string>
     <string name="v3_key_hash">מפתח פרטי x25519 לפי Base32</string>
-    <string name="v3_onion">שם התחום ‎.onion</string>
+    <string name="v3_anon">שם התחום ‎.anon</string>
     <string name="pref_circuit_padding">ריפוד מעגל</string>
     <string name="pref_reduced_circuit_padding_summary">להשתמש באלגוריתמים עם תקורת ריפוד נמוכה כדי לחסוך בתעבורת נתונים ובניצולת סוללה</string>
     <string name="pref_circuit_padding_summary">אפשר להפעיל ריפוד מעגל כדי להגן מפני מגוון צורות של ניתוח תעבורה</string>
@@ -210,7 +210,7 @@
     <string name="menu_app_settings">הגדרות יישומון</string>
     <string name="root_warning">AnyoneBot זיהה שהמכשיר שלך נפרץ לגישת root, מה שעלול לגרום לבעיות אבטחה.</string>
     <string name="btn_change_exit">החלפת פתחה</string>
-    <string name="backup_port_exist">שגיאה: שירות Onion כבר משתמש בפתחה %s</string>
+    <string name="backup_port_exist">שגיאה: שירות Anon כבר משתמש בפתחה %s</string>
     <string name="v3_backup_key_warning">אזהרה: עלול לחשוף את המפתח שלך ליישומונים אחרים</string>
     <string name="v3_delete_client_authorization">מחיקת מפתח הרשאת לקוח</string>
     <string name="incorrect_solution">פתרון שגוי</string>

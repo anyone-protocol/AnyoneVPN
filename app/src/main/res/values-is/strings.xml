@@ -70,7 +70,7 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">virkja gerð villuskráningar á úttaki (verður að nota adb eða aLogCat til að skoða)</string>
     <string name="project_home">Heimili verkefnisins:</string>
     <string name="third_party_software">Hugbúnaður frá 3ja aðila:</string>
-    <string name="hidden_service_request">Forrit vill opna onion-netþjón á gáttinni %1$s inn á Anon-netið. Þetta er öruggt ef þú treystir forritinu.</string>
+    <string name="hidden_service_request">Forrit vill opna anon-netþjón á gáttinni %1$s inn á Anon-netið. Þetta er öruggt ef þú treystir forritinu.</string>
     <string name="pref_use_expanded_notifications">Birta land og IP-vistfang útgangspunkts í tilkynningum þegar slíkt er tiltækt</string>
     <string name="pref_use_expanded_notifications_title">Útflettar tilkynningar</string>
     <string name="set_locale_title">Tungumál</string>
@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Faldar þjónustur</string>
     <string name="save">Vista</string>
     <string name="local_port">Staðvær gátt</string>
-    <string name="onion_port">Onion-gátt</string>
+    <string name="anon_port">Anon-gátt</string>
     <string name="name">Heiti</string>
     <string name="done">Lokið!</string>
     <string name="copy_address_to_clipboard">Afrita vistfang yfir á klippispjald</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Staðfestu eyðingu á þjónustu</string>
     <string name="service_type">Tegund þjónustu</string>
     <string name="please_restart_to_enable_the_changes">Endurræstu AnyoneBot til að breytingarnar taki gildi</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Deila sem QR-kóða</string>
     <string name="disable">Gera óvirkt</string>
     <string name="enable">Virkja</string>
@@ -147,7 +146,7 @@
     <string name="testing_anon_direct_success">Tókst. Anon-tengingin er góð!</string>
     <string name="testing_anon_direct">Prófa tengingu við Anon…</string>
     <string name="mebibyte">MiB</string>
-    <string name="backup_port_exist">Villa: Önnur onion-þjónusta er þegar að nota gátt %s</string>
+    <string name="backup_port_exist">Villa: Önnur anon-þjónusta er þegar að nota gátt %s</string>
     <string name="confirm">Staðfesta</string>
     <string name="v3_import_auth_private">Flytja inn .auth_private</string>
     <string name="v3_backup_name_hint">Skráarheiti öryggisafrits…</string>
@@ -155,10 +154,10 @@
     <string name="v3_delete_client_authorization">Eyða auðkennislykli biðlara</string>
     <string name="v3_backup_key_warning">Aðvörun: Þetta gæti gert lykilinn þinn sýnilegan öðrum forritum</string>
     <string name="v3_backup_key">Auðkennislykill öryggisafrits biðlara</string>
-    <string name="v3_onion">.onion lén</string>
+    <string name="v3_anon">.anon lén</string>
     <string name="v3_key_hash">x25519 einkalykill í Base 32</string>
     <string name="v3_client_auth_activity_title">Auðkenning biðlara</string>
-    <string name="v3_hosted_services">Hýstar onion-þjónustur</string>
+    <string name="v3_hosted_services">Hýstar anon-þjónustur</string>
     <string name="deny">Hafna</string>
     <string name="allow">Leyfa</string>
     <string name="version">Útgáfa:</string>

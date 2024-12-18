@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Servizi nascosti</string>
     <string name="save">Salva</string>
     <string name="local_port">Porta locale</string>
-    <string name="onion_port">Porta onion</string>
+    <string name="anon_port">Porta anon</string>
     <string name="name">Nome</string>
     <string name="done">Fatto!</string>
     <string name="copy_address_to_clipboard">Copia l\'indirizzo negli appunti</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Conferma l\'eliminazione del servizio</string>
     <string name="service_type">Tipo di servizio</string>
     <string name="please_restart_to_enable_the_changes">Per favore riavvia AnyoneBot per rendere effettive le modifiche</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Condividi come QR</string>
     <string name="disable">Disattiva</string>
     <string name="enable">Attiva</string>
@@ -147,7 +146,7 @@
     <string name="v3_delete_client_authorization">Elimina chiave di autorizzazione del client</string>
     <string name="v3_backup_key_warning">Attenzione: ciò può esporre la tua chiave ad altre app</string>
     <string name="v3_backup_key">Backup chiave di autorizzazione del client</string>
-    <string name="v3_onion">Dominio .onion</string>
+    <string name="v3_anon">Dominio .anon</string>
     <string name="v3_key_hash">Chiave privata x25519 in Base32</string>
     <string name="v3_client_auth_activity_title">Autorizzazione client</string>
     <string name="v3_hosted_services">Servizi nascosti ospitati</string>

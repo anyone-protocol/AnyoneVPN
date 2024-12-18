@@ -92,7 +92,7 @@
     <string name="name">Jméno</string>
     <string name="please_restart_to_enable_the_changes">Pro projevení změn restartujte AnyoneBot</string>
     <string name="menu_new_identity">Nová identita</string>
-    <string name="hidden_services">Služby Onion</string>
+    <string name="hidden_services">Služby Anon</string>
     <string name="menu_faq">Často kladené dotazy</string>
     <string name="menu_header_learn">Zjistit více</string>
     <string name="version">Verze:</string>
@@ -117,7 +117,7 @@
     <string name="enable">Povolit</string>
     <string name="allow">Povolit</string>
     <string name="deny">Zamítnout</string>
-    <string name="menu_hidden_services">Služby Onion</string>
+    <string name="menu_hidden_services">Služby Anon</string>
     <string name="disable">Zakázat</string>
     <string name="trying_to_connect_title">Připojování…</string>
     <string name="btn_refresh">Obnovit</string>
@@ -128,7 +128,7 @@
     <string name="pref_circuit_padding">Vycpávky obvodů</string>
     <string name="no_internet_subtitle">K používání služby AnyoneBot potřebujete připojení k internetu.</string>
     <string name="pref_isolate_dest_summary">Pro každou cílovou adresu použijte jiný okruh</string>
-    <string name="v3_hosted_services">Hostované služby Onion</string>
+    <string name="v3_hosted_services">Hostované služby Anon</string>
     <string name="msg_try_something_else">Zkuste něco jiného</string>
     <string name="pref_disable_ipv4_summary">Informuje exity, že jsou upřednostňovány adresy IPv6</string>
     <string name="not_sure">Nejste si jisti\?</string>
@@ -140,7 +140,7 @@
     <string name="consider_disable_battery_optimizations">Spuštěné hostované služby, zvažte vypnutí optimalizací baterie</string>
     <string name="power_user_mode">Režim Power User</string>
     <string name="btn_choose_apps">Výběr aplikací</string>
-    <string name="onion_port">Cibulový přístav</string>
+    <string name="anon_port">Cibulový přístav</string>
     <string name="restore_backup">Obnovení zálohy</string>
     <string name="v3_backup_key">Autorizační klíč záložního klienta</string>
     <string name="apps_other_apps">Další aplikace</string>
@@ -188,7 +188,7 @@
     <string name="menu_app_settings">Nastavení aplikace</string>
     <string name="root_warning">AnyoneBot zjistil, že vaše zařízení je rootnuté, což může způsobit bezpečnostní problémy.</string>
     <string name="btn_change_exit">Změna výstupu</string>
-    <string name="backup_port_exist">Chyba: Služba Onion již používá port %s</string>
+    <string name="backup_port_exist">Chyba: Služba Anon již používá port %s</string>
     <string name="backup_service">Zálohování služby <i>(Varování: může dojít ke zpřístupnění konfigurace služby jiným aplikacím)</i></string>
     <string name="service_type">Typ služby</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Povolení přístupu k síti Anon partnerům Wi-Fi, připojeným zařízením a všem ostatním, kteří se mohou připojit k vaší IP adrese</string>
@@ -220,8 +220,7 @@
     <string name="many_ways">Existuje mnoho způsobů, jak dosáhnout sítě Anon. Některé z nich vám mohou vyhovovat lépe než jiné.</string>
     <string name="local_port">Místní přístav</string>
     <string name="backup_restored">Obnovení zálohy</string>
-    <string name="onion">.onion</string>
-    <string name="v3_onion">Doména .onion</string>
+    <string name="v3_anon">Doména .anon</string>
     <string name="done">Hotovo!</string>
     <string name="v3_key_hash">x25519 Soukromý klíč v Base32</string>
     <string name="configure_header">Konfigurace připojení Anon</string>

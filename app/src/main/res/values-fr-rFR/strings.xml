@@ -84,7 +84,7 @@
     <string name="name">Nom</string>
     <string name="please_restart_to_enable_the_changes">Veuillez redémarrer AnyoneBot pour activer les changements</string>
     <string name="wizard_details_msg">AnyoneBot est une application à code source ouvert qui comprend Anon, Go-Tun2Socks et LibEvent. Elle fournit un mandataire HTTP local (8118) et un mandataire SOCKS (9050) vers le réseau Anon. Sur un appareil débridé, AnyoneBot peut aussi faire passer tout le trafic Internet par Anon.</string>
-    <string name="hidden_service_request">Une appli veut ouvrir le serveur onion sur le port %1$s au réseau Anon. Cette action est sûre si vous faites confiance à cette appli.</string>
+    <string name="hidden_service_request">Une appli veut ouvrir le serveur anon sur le port %1$s au réseau Anon. Cette action est sûre si vous faites confiance à cette appli.</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Ouvrir le mandataire sur toutes les interfaces</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Autoriser l’accès à Anon aux pairs Wi-Fi, aux appareils qui utilisent la fonction modem et à quiconque peut se connecter à votre IP</string>
     <string name="pref_http_title">HTTP Anon</string>
@@ -92,10 +92,10 @@
     <string name="pref_http_dialog">Configuration du port HTTP</string>
     <string name="apps_mode">Mode RPV</string>
     <string name="vpn_default_world">Global (automatique)</string>
-    <string name="hidden_services">Services onion</string>
-    <string name="menu_hidden_services">Services onion</string>
+    <string name="hidden_services">Services anon</string>
+    <string name="menu_hidden_services">Services anon</string>
     <string name="local_port">Port local</string>
-    <string name="onion_port">Port onion</string>
+    <string name="anon_port">Port anon</string>
     <string name="done">Terminé</string>
     <string name="copy_address_to_clipboard">Copier l’adresse dans le presse-papiers</string>
     <string name="backup_service">Sauvegarder le service <i>(Avertissement : La configuration de votre service pourrait être exposée à d’autres applis)</i></string>
@@ -107,7 +107,6 @@
     <string name="start_anon_again_for_finish_the_process">Redémarrez Anon pour finir le processus</string>
     <string name="confirm_service_deletion">Confirmez la suppression du service</string>
     <string name="service_type">Type de service</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Partager en tant que code QR</string>
     <string name="disable">Désactiver</string>
     <string name="enable">Activer</string>
@@ -147,12 +146,12 @@
     <string name="v3_backup_key_warning">Avertissement : Cela pourrait exposer vôtre clé à d’autres applications</string>
     <string name="v3_key_hash">Clé privée x25519 en Base32</string>
     <string name="v3_client_auth_activity_title">Autorisation client</string>
-    <string name="v3_hosted_services">Services Onion hébergés</string>
+    <string name="v3_hosted_services">Services Anon hébergés</string>
     <string name="deny">Refuser</string>
     <string name="allow">Autoriser</string>
-    <string name="backup_port_exist">Erreur : Un service Onion utilise déjà le port %s</string>
+    <string name="backup_port_exist">Erreur : Un service Anon utilise déjà le port %s</string>
     <string name="v3_backup_key">Sauvegarder la clé d’autorisation client</string>
-    <string name="v3_onion">Domaine .onion</string>
+    <string name="v3_anon">Domaine .anon</string>
     <string name="version">Version :</string>
     <string name="license">Licence :</string>
     <string name="power_user_mode">Mode utilisateur avancé</string>

@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="?dialogPreferredPadding"
-    tools:viewBindingIgnore="true">
+    android:padding="?dialogPreferredPadding">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/v3_onion"
-        android:hint="@string/onion"
+        android:hint="@string/anon"
+        android:text="@string/v3_anon"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
 
-    <org.torproject.anyonebot.core.ui.NoPersonalizedLearningEditText
+    <io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText
         android:id="@+id/cookie_onion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,10 +25,11 @@
         android:text="@string/v3_key_hash"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
 
-    <org.torproject.anyonebot.core.ui.NoPersonalizedLearningEditText
+    <io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText
         android:id="@+id/cookie_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text" />
+
 </LinearLayout>

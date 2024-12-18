@@ -50,7 +50,6 @@
     <string name="create_a_backup_first">Ilki bilen ätiýaçlyk nusgasyny dörediň</string>
     <string name="service_type">Hyzmat görnüşi</string>
     <string name="please_restart_to_enable_the_changes">Üýtgeşmeleriň güýje girmegi üçin AnyoneBot-y täzeden açyň</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">QR hökmünde paýlaşyň</string>
     <string name="consider_disable_battery_optimizations">Işleýän hyzmatlar, batareýa optimizasiýany öçürmegi göz öňünde tutuň</string>
     <string name="pref_isolate_dest_summary">Her niýetlenen salgy üçin dürli aýlanşyk ulanyň</string>
@@ -105,11 +104,11 @@
     <string name="enter_ports">Portlary giriziň</string>
     <string name="ports_reachable_behind_a_restrictive_firewall">Çäklendiriji gorag diwarynyň arkasyndaky portlar</string>
     <string name="vpn_default_world">Global (Awto)</string>
-    <string name="hidden_services">Onion Hyzmatlary</string>
+    <string name="hidden_services">Anon Hyzmatlary</string>
     <string name="confirm">Tassykla</string>
     <string name="v3_backup_key_warning">Duýduryş: Bu açaryňyzy beýleki programmalar üçin paş edip biler</string>
     <string name="v3_backup_name_hint">Ätiýaçlyk faýl ady…</string>
-    <string name="menu_hidden_services">Onion Hyzmatlary</string>
+    <string name="menu_hidden_services">Anon Hyzmatlary</string>
     <string name="save">Saklaň</string>
     <string name="restore_backup">Ätiýaçlyk nusgasyny dikeltmek</string>
     <string name="confirm_service_deletion">Hyzmatyň öçürilmegini tassyklaň</string>
@@ -121,7 +120,7 @@
     <string name="incorrect_solution">Nädogry çözgüt</string>
     <string name="connect">Birikdir</string>
     <string name="local_port">Ýerli Port</string>
-    <string name="onion_port">Onion Porty</string>
+    <string name="anon_port">Anon Porty</string>
     <string name="start_anon_again_for_finish_the_process">Amaly tamamlamak üçin Anon-y täzeden açyň</string>
     <string name="menu_app_settings">Programma sazlamalary</string>
     <string name="power_user_mode">Giňişleýin Ulanyjy Tertibi</string>
@@ -175,7 +174,7 @@
     <string name="relaying">Releýlenýär</string>
     <string name="enter_or_port">OR portyna giriň</string>
     <string name="third_party_software">Üçünji tarap programma üpjünçiligi:</string>
-    <string name="hidden_service_request">Bir programma, %1$s portdaky onion serwerini Anon network-ine açmak isleýär. Programma ynanýan bolsaňyz, bu howpsuz.</string>
+    <string name="hidden_service_request">Bir programma, %1$s portdaky anon serwerini Anon network-ine açmak isleýär. Programma ynanýan bolsaňyz, bu howpsuz.</string>
     <string name="pref_use_expanded_notifications">Elýeterli bolanda habarnamada toruňyzdan çykýan ýurduňyzy ýa-da IP adresiňizi görkeziň</string>
     <string name="pref_disable_network_title">Network ýok wagty Awto-Uky</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Wi-Fi ulgamlaryna, birikdirilen enjamlara we IP-ä birikdirip bilýänlere Anon-a girmäge rugsat beriň</string>
@@ -191,11 +190,11 @@
     <string name="pref_anonrc_dialog">Aýratyn anonrc</string>
     <string name="kibibyte">KiB</string>
     <string name="mebibyte">MiB</string>
-    <string name="v3_hosted_services">Eýeçiligindäki Onion Hyzmatlary</string>
+    <string name="v3_hosted_services">Eýeçiligindäki Anon Hyzmatlary</string>
     <string name="v3_key_hash">Base32 üçin x25519 Şahsy Açary</string>
-    <string name="v3_onion">.onion Domen</string>
+    <string name="v3_anon">.anon Domen</string>
     <string name="v3_import_auth_private">.auth_private goş</string>
-    <string name="backup_port_exist">Ýalňyşlyk: Onion hyzmaty eýýäm port %s ulanýar</string>
+    <string name="backup_port_exist">Ýalňyşlyk: Anon hyzmaty eýýäm port %s ulanýar</string>
     <string name="backup_service">Ätiýaçlyk Hyzmaty<i>(Duýduryş: Hyzmat sazlamalaryňyzy beýleki programmalara aç-açan biler)</i></string>
     <string name="pref_connection_padding">Baglanşyk ýassygy</string>
     <string name="pref_connection_padding_summary">Baglanyşyk ýassygy, gatnawy barlamagyň käbir usullaryndan goramak üçin elmydama ulanylýar. Bellenilen: awtomatiki</string>

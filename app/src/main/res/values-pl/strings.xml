@@ -89,8 +89,8 @@
     <string name="pref_anonrc_dialog">Niestandardowy anonrc</string>
     <string name="apps_mode">Tryb VPN</string>
     <string name="send_email">Wyślij e-mail</string>
-    <string name="hidden_services">Usługi onion</string>
-    <string name="menu_hidden_services">Usługi onion</string>
+    <string name="hidden_services">Usługi anon</string>
+    <string name="menu_hidden_services">Usługi anon</string>
     <string name="save">Zapisz</string>
     <string name="local_port">Lokalne porty</string>
     <string name="name">Nazwa</string>
@@ -104,11 +104,10 @@
     <string name="pref_http_title">HTTP Anon</string>
     <string name="pref_http_summary">Port, na którym Anon oferuje swój serwer proxy HTTP (domyślnie: 8118 lub 0, aby wyłączyć)</string>
     <string name="vpn_default_world">Globalny (automatyczny)</string>
-    <string name="onion_port">Port onion</string>
+    <string name="anon_port">Port anon</string>
     <string name="delete_service">Usuń usługę</string>
     <string name="consider_disable_battery_optimizations">Uruchomione usługi hostowania, rozważ wyłączenie optymalizacji baterii</string>
     <string name="share_as_qr">Udostępnij jako QR</string>
-    <string name="onion">.onion</string>
     <string name="service_type">Typ usługi</string>
     <string name="confirm_service_deletion">Potwierdź usunięcie usługi</string>
     <string name="start_anon_again_for_finish_the_process">Uruchom Anon ponownie, aby zakończyć proces</string>
@@ -117,7 +116,7 @@
     <string name="backup_restored">Przywrócono kopię zapasową</string>
     <string name="backup_saved_at_external_storage">Kopia zapasowa zapisywana w pamięci zewnętrznej</string>
     <string name="backup_service">Usługa kopii zapasowej <i>(Uwaga: może to ujawnić konfigurację usługi innym aplikacjom)</i></string>
-    <string name="hidden_service_request">Aplikacja chce otworzyć port serwera Onion %1$s do sieci Anon. Jest to bezpieczne, jeśli zaufasz aplikacji.</string>
+    <string name="hidden_service_request">Aplikacja chce otworzyć port serwera Anon %1$s do sieci Anon. Jest to bezpieczne, jeśli zaufasz aplikacji.</string>
     <string name="wizard_details_msg">AnyoneBot to aplikacja typu open source, która zawiera Anon, Go-Tun2Socks i LibEvent. Zapewnia lokalny serwer Proxy HTTP (8118) i serwer Proxy SOCKS (9050) do sieci Anon. AnyoneBot ma również możliwość, na zrootowanym urządzeniu, wysyłania całego ruchu internetowego przez Anon.</string>
     <string name="refresh_apps">Odśwież aplikacje</string>
     <string name="app_services">Usługi aplikacji</string>
@@ -189,9 +188,9 @@
     <string name="pref_reduced_circuit_padding_summary">Użyj algorytmów wypełniania o niższym nakładzie, aby zmniejszyć zużycie danych i baterii</string>
     <string name="strict_nodes_description">Traktuj ustawienia wykluczonych węzłów jako wymóg dla budowania wszystkich obwodów. Może to spowodować przerwanie funkcjonalności, jeśli żadne obwody nie będą mogły być wygenerowane z twoimi ustawieniami wykluczonych węzłów.</string>
     <string name="confirm">Potwierdź</string>
-    <string name="backup_port_exist">Błąd: usługa onion używa już portu %s</string>
-    <string name="v3_hosted_services">Hostowane usługi onion</string>
-    <string name="v3_onion">Domena .onion</string>
+    <string name="backup_port_exist">Błąd: usługa anon używa już portu %s</string>
+    <string name="v3_hosted_services">Hostowane usługi anon</string>
+    <string name="v3_anon">Domena .anon</string>
     <string name="v3_client_auth_activity_title">Autoryzacja klienta</string>
     <string name="v3_import_auth_private">Importuj .auth_private</string>
     <string name="v3_delete_client_authorization">Usuń klucz autoryzacji klienta</string>

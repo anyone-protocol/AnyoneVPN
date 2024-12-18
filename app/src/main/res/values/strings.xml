@@ -69,7 +69,7 @@
     <string name="third_party_software">3rd-Party-Software: </string>
     <string name="version">Version:</string>
     <string name="license">License:</string>
-    <string name="hidden_service_request">An app wants to open onion server on port %1$s to the Anon network. This is safe if you trust the app.</string>
+    <string name="hidden_service_request">An app wants to open anon server on port %1$s to the Anon network. This is safe if you trust the app.</string>
     <string name="allow">Allow</string>
     <string name="deny">Deny</string>
     <string name="pref_use_expanded_notifications">Display in the notification the country and IP Address of your Anon exit node when available</string>
@@ -100,11 +100,11 @@
     <string name="apps_mode">VPN Mode</string>
     <string name="send_email">Send Email</string>
     <string name="vpn_default_world">Global (Auto)</string>
-    <string name="hidden_services">Onion Services</string>
-    <string name="v3_hosted_services">Hosted Onion Services</string>
+    <string name="hidden_services">Anon Services</string>
+    <string name="v3_hosted_services">Hosted Anon Services</string>
     <string name="v3_client_auth_activity_title">Client Authorization</string>
     <string name="v3_key_hash">x25519 Private Key in Base32</string>
-    <string name="v3_onion">.onion Domain</string>
+    <string name="v3_anon">.anon Domain</string>
     <string name="v3_backup_key">Backup Client Authorization Key</string>
     <string name="v3_backup_key_warning">Warning: This could expose your key to other apps</string>
     <string name="v3_delete_client_authorization">Delete Client Authorization Key</string>
@@ -112,10 +112,10 @@
     <string name="v3_backup_name_hint">Backup filename…</string>
     <string name="v3_import_auth_private">Import .auth_private</string>
     <string name="confirm">Confirm</string>
-    <string name="menu_hidden_services">Onion Services</string>
+    <string name="menu_hidden_services">Anon Services</string>
     <string name="save">Save</string>
     <string name="local_port">Local Port</string>
-    <string name="onion_port">Onion Port</string>
+    <string name="anon_port">Anon Port</string>
     <string name="name">Name</string>
     <string name="done">Done!</string>
     <string name="copy_address_to_clipboard">Copy address to clipboard</string>
@@ -123,14 +123,14 @@
     <string name="delete_service">Delete Service</string>
     <string name="backup_saved_at_external_storage">Backup saved at external storage</string>
     <string name="backup_restored">Backup restored</string>
-    <string name="backup_port_exist">Error: An Onion service is already using port %s</string>
+    <string name="backup_port_exist">Error: An Anon service is already using port %s</string>
     <string name="restore_backup">Restore Backup</string>
     <string name="create_a_backup_first">Create a backup first</string>
     <string name="start_anon_again_for_finish_the_process">Start Anon again for finish the process</string>
     <string name="confirm_service_deletion">Confirm service deletion</string>
     <string name="service_type">Service type</string>
     <string name="please_restart_to_enable_the_changes">Please restart AnyoneBot to enable the changes</string>
-    <string name="onion">.onion</string>
+    <string name="anon" translatable="false">.anon</string>
     <string name="share_as_qr">Share as QR</string>
     <string name="disable">Disable</string>
     <string name="enable">Enable</string>

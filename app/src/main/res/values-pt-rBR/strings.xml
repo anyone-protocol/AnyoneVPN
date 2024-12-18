@@ -70,7 +70,7 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Ativar os registros de depuração para saída (deve usar adb ou aLogCat para ver)</string>
     <string name="project_home">Site do projeto:</string>
     <string name="third_party_software">Software de Terceiros:</string>
-    <string name="hidden_service_request">Um aplicativo quer abrir uma porta no servidor onion %1$s para a rede Anon. É seguro caso você confie neste aplicativo.</string>
+    <string name="hidden_service_request">Um aplicativo quer abrir uma porta no servidor anon %1$s para a rede Anon. É seguro caso você confie neste aplicativo.</string>
     <string name="pref_use_expanded_notifications">Exibe na notificação o país e o endereço IP do seu nó de saída do Anon quando estiver disponível</string>
     <string name="pref_use_expanded_notifications_title">Notificações Expandidas</string>
     <string name="set_locale_title">Idioma</string>
@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Serviços Ocultos</string>
     <string name="save">Salvar</string>
     <string name="local_port">Porta Local</string>
-    <string name="onion_port">Porta Onion</string>
+    <string name="anon_port">Porta Anon</string>
     <string name="name">Nome</string>
     <string name="done">Feito!</string>
     <string name="copy_address_to_clipboard">Copiar para área de transferência</string>
@@ -132,7 +132,6 @@
     <string name="pref_isolate_dest">Isole os endereços do destino</string>
     <string name="consider_enable_battery_optimizations">Não há serviços hospedados em execução, considere a ativação das otimizações da bateria</string>
     <string name="consider_disable_battery_optimizations">Os serviços hospedados estão em execução, considere a desativação das otimizações da bateria</string>
-    <string name="onion">.onion</string>
     <string name="start_anon_again_for_finish_the_process">Inicie o Anon novamente para encerrar o processo</string>
     <string name="pref_http_dialog">Configuração da Porta HTTP</string>
     <string name="pref_http_summary">Porta HTTP onde o proxy do Anon está escutando (padrão: 8118 ou 0 para desativar)</string>
@@ -154,13 +153,13 @@
     <string name="v3_delete_client_authorization">Exclua a chave de autorização do cliente</string>
     <string name="v3_backup_key_warning">Aviso: Isso pode expor a sua chave a os outros aplicativos</string>
     <string name="v3_backup_key">Chave de autorização do cliente de backup</string>
-    <string name="v3_onion">Domínio .onion</string>
+    <string name="v3_anon">Domínio .anon</string>
     <string name="v3_key_hash">Chave privada x25519 na Base 32</string>
     <string name="v3_client_auth_activity_title">Autorização do cliente</string>
-    <string name="v3_hosted_services">Serviços Onion hospedados</string>
+    <string name="v3_hosted_services">Serviços Anon hospedados</string>
     <string name="deny">Negar</string>
     <string name="allow">Permitir</string>
-    <string name="backup_port_exist">Erro: Um serviço Onion já está usando a porta %s</string>
+    <string name="backup_port_exist">Erro: Um serviço Anon já está usando a porta %s</string>
     <string name="version">Versão:</string>
     <string name="license">Licença:</string>
     <string name="strict_nodes_description">Trate as configurações de exclusão dos nós como um requisito para a construção de todos os circuitos. Isso pode quebrar a funcionalidade caso nenhum circuito seja capaz de ser gerado com as configurações de exclusão dos nós.</string>

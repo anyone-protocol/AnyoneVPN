@@ -100,7 +100,7 @@
   <string name="v3_hosted_services">süpülajana cewollaka anáterüshi</string>
   <string name="v3_client_auth_activity_title">alüwataya sümüin sümajat</string>
   <string name="v3_key_hash">x25519   nojo jutújain aúú 32</string>
-  <string name="v3_onion">Julataa aül cewollaka</string>
+  <string name="v3_anon">Julataa aül cewollaka</string>
   <string name="v3_backup_key">putchi jupula jikerolia.</string>
   <string name="v3_backup_key_warning">epain: tü esü süpüla shiyatüin tü püjutaliakat wane akümajia apps.</string>
   <string name="v3_delete_client_authorization">ojütchajaya süjutalia tü alüwataya sümüin sümajatükat</string>
@@ -111,7 +111,7 @@
   <string name="menu_hidden_services">Süpülajana tüü cewollaka</string>
   <string name="save">O\'tte\'eraa</string>
   <string name="local_port">shawajapüle ´sülü shipia</string>
-  <string name="onion_port">Oporto sünaije cewollaka</string>
+  <string name="anon_port">Oporto sünaije cewollaka</string>
   <string name="name"> Anüliee</string>
   <string name="done"> ¡ Kettasü !</string>
   <string name="copy_address_to_clipboard">Ashatunajatu shiyawase sünaimuin tü süpülajanakat karaloutat</string>
@@ -119,14 +119,13 @@
   <string name="delete_service">Ajütchajanüin süpülajat</string>
   <string name="backup_saved_at_external_storage">Süyaküa tü seguridad anajayekat  sülüje</string>
   <string name="backup_restored">süyakua seguridad anoütushi</string>
-  <string name="backup_port_exist">müjüsü: wanee süpülajatü Onion kettaitapa apanüin tü süntiakat 1 %s</string>
+  <string name="backup_port_exist">müjüsü: wanee süpülajatü Anon kettaitapa apanüin tü süntiakat 1 %s</string>
   <string name="restore_backup">anoutünajatü süyakuakat tü seguridakat</string>
   <string name="create_a_backup_first">Painja wanee süyakua tü seguridakat palajana</string>
   <string name="start_anon_again_for_finish_the_process">püttira Anon süchuküa süpüla ajattüin tü sükuaipakat.</string>
   <string name="confirm_service_deletion">apirüinjat sujütchajaya tü süpülajatükat</string>
   <string name="service_type">jetsü tü süpülajatka</string>
   <string name="please_restart_to_enable_the_changes">pülejera süchukua AnyoneBot süpüla sujutalüin tü shiratiakat.</string>
-  <string name="onion">.cewollaka</string>
   <string name="share_as_qr">asülajiranuin maka sümuin QR</string>
   <string name="disable">pakatüin</string>
   <string name="enable">alaatiria</string>

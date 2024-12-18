@@ -27,13 +27,13 @@
     <string name="pref_general_group">General</string>
     <string name="relay_port">Relay Port</string>
     <string name="the_nickname_for_your_anon_relay">The nickname for your Anon relay</string>
-    <string name="hidden_service_request">An app wants to open onion server on port %1$s to the Anon network. This is safe if you trust the app.</string>
+    <string name="hidden_service_request">An app wants to open anon server on port %1$s to the Anon network. This is safe if you trust the app.</string>
     <string name="allow">Allow</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Open Proxy on All Interfaces</string>
     <string name="pref_http_dialog">HTTP Port Config</string>
     <string name="pref_transport_dialog">TransProxy Port Config</string>
     <string name="v3_key_hash">x25519 Private Key in Base32</string>
-    <string name="v3_onion">.onion Domain</string>
+    <string name="v3_anon">.anon Domain</string>
     <string name="connected_title">Connected</string>
     <string name="trying_to_connect_title">Connecting…</string>
     <string name="power_user_mode">Power User Mode</string>
@@ -76,7 +76,7 @@
     <string name="enter_exclude_nodes">Enter Exclude Nodes</string>
     <string name="pref_disable_network_title">No Network Auto-Sleep</string>
     <string name="v3_backup_key_warning">Warning: This could expose your key to other apps</string>
-    <string name="menu_hidden_services">Onion Services</string>
+    <string name="menu_hidden_services">Anon Services</string>
     <string name="pref_reduced_connection_padding_summary">Closes relay connections sooner and sends less padding packets to reduce data and battery usage</string>
     <string name="pref_proxy_username_summary">Proxy username (optional)</string>
     <string name="pref_proxy_password_title">Outbound proxy password</string>
@@ -96,10 +96,9 @@
     <string name="pref_anonrc_summary">EXPERTS ONLY: enter direct anonrc config lines</string>
     <string name="pref_anonrc_dialog">Custom anonrc</string>
     <string name="vpn_default_world">Global (Auto)</string>
-    <string name="hidden_services">Onion Services</string>
+    <string name="hidden_services">Anon Services</string>
     <string name="consider_disable_battery_optimizations">Hosted services running, consider disabling battery optimizations</string>
     <string name="please_restart_to_enable_the_changes">Please restart AnyoneBot to enable the changes</string>
-    <string name="onion">.onion</string>
     <string name="consider_enable_battery_optimizations">No hosted services running, consider enabling battery optimizations</string>
     <string name="pref_isolate_dest">Isolate destination addresses</string>
     <string name="confirm_service_deletion">Confirm service deletion</string>
@@ -159,7 +158,7 @@
     <string name="v3_backup_name_hint">Backup filename…</string>
     <string name="v3_import_auth_private">Import .auth_private</string>
     <string name="local_port">Local Port</string>
-    <string name="onion_port">Onion Port</string>
+    <string name="anon_port">Anon Port</string>
     <string name="restore_backup">Restore Backup</string>
     <string name="create_a_backup_first">Create a backup first</string>
     <string name="start_anon_again_for_finish_the_process">Start Anon again for finish the process</string>
@@ -172,7 +171,7 @@
     <string name="strict_nodes_description">Treat Exclude Nodes settings as a requirement for building all circuits. This may break functionality if no circuits are able to be generated with your Exclude Nodes settings.</string>
     <string name="pref_use_expanded_notifications">Display in the notification the country and IP Address of your Anon exit node when available</string>
     <string name="backup_restored">Backup restored</string>
-    <string name="backup_port_exist">Error: An Onion service is already using port %s</string>
+    <string name="backup_port_exist">Error: An Anon service is already using port %s</string>
     <string name="service_type">Service type</string>
     <string name="pref_disable_network_summary">Put Anon to sleep when there is no internet available</string>
     <string name="newnym">You\'ve switched to a new Anon identity!</string>
@@ -186,7 +185,7 @@
     <string name="mebibyte">MiB</string>
     <string name="apps_mode">VPN Mode</string>
     <string name="send_email">Send Email</string>
-    <string name="v3_hosted_services">Hosted Onion Services</string>
+    <string name="v3_hosted_services">Hosted Anon Services</string>
     <string name="v3_client_auth_activity_title">Client Authorization</string>
     <string name="v3_delete_client_authorization_confirm">Delete Client Authorization</string>
     <string name="done">Done!</string>

@@ -41,7 +41,7 @@
     <string name="title_choose_apps">செயலிகளைத் தேர்வுசெய்</string>
     <string name="menu_more">மேலும்</string>
     <string name="connection_custom">விருப்ப</string>
-    <string name="hidden_services">Onion சேவைகள்</string>
+    <string name="hidden_services">Anon சேவைகள்</string>
     <string name="connected_title">இணைக்கப்பட்டது</string>
     <string name="menu_faq">FAQ</string>
     <string name="menu_header_learn">மேலும் அறிய</string>
@@ -52,7 +52,7 @@
     <string name="setting_debug">வழுநீக்கு</string>
     <string name="menu_new_identity">New Identity</string>
     <string name="confirm">உறுதிப்படுத்தவும்</string>
-    <string name="menu_hidden_services">Onion சேவைகள்</string>
+    <string name="menu_hidden_services">Anon சேவைகள்</string>
     <string name="drawer_close">மூடுங்கள்</string>
     <string name="next">அடுத்தது</string>
 </resources>

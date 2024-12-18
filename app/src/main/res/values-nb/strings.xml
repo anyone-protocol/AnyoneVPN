@@ -93,7 +93,7 @@
     <string name="menu_hidden_services">Hidden Services</string>
     <string name="save">Lagre</string>
     <string name="local_port">Lokalt port</string>
-    <string name="onion_port">Løk-port</string>
+    <string name="anon_port">Løk-port</string>
     <string name="name">Navn</string>
     <string name="done">Ferdig!</string>
     <string name="copy_address_to_clipboard">Kopier adresse til utklippstavle</string>
@@ -106,7 +106,6 @@
     <string name="confirm_service_deletion">Bekreft sletting av tjeneste</string>
     <string name="service_type">Tjenestetype</string>
     <string name="please_restart_to_enable_the_changes">Gjør omstart av AnyoneBot før endringer trer i kraft</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Del som QR</string>
     <string name="disable">Skru av</string>
     <string name="enable">Slå på</string>
@@ -157,7 +156,7 @@
     <string name="v3_delete_client_authorization">Slett klientidentitetbekreftelsesnøkkel</string>
     <string name="v3_import_auth_private">Importer .auth_private</string>
     <string name="v3_hosted_services">Vertstjente løktjenester</string>
-    <string name="v3_onion">.onion-domenet</string>
+    <string name="v3_anon">.anon-domenet</string>
     <string name="v3_backup_key">Sikkerhetskopier klient-identitetbekreftelsesnøkkel</string>
     <string name="v3_backup_name_hint">Sikkerhetskopier filnavn …</string>
     <string name="connected_title">Tilkoblet</string>
@@ -210,7 +209,7 @@
     <string name="menu_app_settings">Appinnstillinger</string>
     <string name="root_warning">AnyoneBot har oppdaget at enheten din er rotfestet, noe som kan føre til sikkerhetsproblemer.</string>
     <string name="btn_change_exit">Endre utgang</string>
-    <string name="backup_port_exist">Feil: En Onion-tjeneste bruker allerede porten %s</string>
+    <string name="backup_port_exist">Feil: En Anon-tjeneste bruker allerede porten %s</string>
     <string name="v3_backup_key_warning">Advarsel: Dette kan eksponere nøkkelen din for andre apper</string>
     <string name="pref_isolate_protocol_summary">Bruk en annen krets for hver tilkoblingsprotokoll</string>
     <string name="incorrect_solution">Feil løsning</string>

@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Схаваныя службы</string>
     <string name="save">Захаваць</string>
     <string name="local_port">Лакальны порт</string>
-    <string name="onion_port">Onion-порт</string>
+    <string name="anon_port">Anon-порт</string>
     <string name="name">Імя</string>
     <string name="done">Гатова!</string>
     <string name="copy_address_to_clipboard">Скапіяваць адрас у буфер памену</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Пацверджанне выдалення службы</string>
     <string name="service_type">Тып службы</string>
     <string name="please_restart_to_enable_the_changes">Калі ласка, перазапусціце AnyoneBot для ўступу змены ў сілу</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Падзяліцца праз QR-код</string>
     <string name="disable">Адключыць</string>
     <string name="enable">Уключыць</string>
@@ -155,7 +154,7 @@
     <string name="pref_open_proxy_on_all_interfaces_summary">Дазвольце аднарангавым карыстальнікам Wi-Fi, прывязаным прыладам і любым іншым, хто можа падлучыцца да вашага IP-адрасу, атрымліваць доступ да Anon</string>
     <string name="strict_nodes_description">Разглядайце налады Exclude Nodes як патрабаванне для пабудовы ўсіх ланцугоў. Гэта можа прывесці да парушэння функцыянальнасці, калі ніводны контур не можа быць згенераваны з дапамогай налад Exclude Nodes.</string>
     <string name="pref_http_summary">Порт, на якім Anon прапануе свой HTTP-проксі (па змаўчанні: 8118 ці 0 для адключэння)</string>
-    <string name="v3_hosted_services">Размяшчэнне Onion Services</string>
+    <string name="v3_hosted_services">Размяшчэнне Anon Services</string>
     <string name="pref_http_dialog">Канфігурацыя порта HTTP</string>
     <string name="v3_backup_key">Ключ аўтарызацыі рэзервовага кліента</string>
     <string name="v3_backup_name_hint">Імя файла рэзервовай копіі…</string>
@@ -163,9 +162,9 @@
     <string name="v3_backup_key_warning">Папярэджанне: гэта можа паставіць ваш ключ у іншыя праграмы</string>
     <string name="v3_delete_client_authorization">Выдаліць ключ аўтарызацыі кліента</string>
     <string name="v3_delete_client_authorization_confirm">Выдаліць аўтарызацыю кліента</string>
-    <string name="v3_onion">Дамен .onion</string>
+    <string name="v3_anon">Дамен .anon</string>
     <string name="v3_key_hash">Закрыты ключ x25519 у Base32</string>
     <string name="pref_isolate_port">Ізалюйце парты прызначэння</string>
     <string name="v3_import_auth_private">Імпартаваць .auth_private</string>
-    <string name="backup_port_exist">Памылка: служба Onion ужо выкарыстоўвае порт %s</string>
+    <string name="backup_port_exist">Памылка: служба Anon ужо выкарыстоўвае порт %s</string>
 </resources>

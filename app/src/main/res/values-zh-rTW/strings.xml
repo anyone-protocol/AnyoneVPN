@@ -70,7 +70,7 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">啟用除錯日並輸出 (必須使用 adb 或 aLogCat 來檢視)</string>
     <string name="project_home">專案首頁：</string>
     <string name="third_party_software">第三方軟體：</string>
-    <string name="hidden_service_request">有一個應用程式想要在 Anon 網絡的連接埠 %1$s 上開啟 Onion 伺服器。如果你信任該應用程式，這是安全的。</string>
+    <string name="hidden_service_request">有一個應用程式想要在 Anon 網絡的連接埠 %1$s 上開啟 Anon 伺服器。如果你信任該應用程式，這是安全的。</string>
     <string name="pref_use_expanded_notifications">如果可用，在通知中顯示你的 Anon 出口節點的國家和 IP 位址</string>
     <string name="pref_use_expanded_notifications_title">詳細的通知</string>
     <string name="set_locale_title">語言</string>
@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">隱藏服務</string>
     <string name="save">儲存</string>
     <string name="local_port">本地端口</string>
-    <string name="onion_port">洋蔥端口</string>
+    <string name="anon_port">洋蔥端口</string>
     <string name="name">名稱</string>
     <string name="done">已完成!</string>
     <string name="copy_address_to_clipboard">複製地址到剪貼簿</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">確認服務刪除</string>
     <string name="service_type">服務類型</string>
     <string name="please_restart_to_enable_the_changes">請重新啟動 AnyoneBot 以套用變更</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">利用 QR 碼分享</string>
     <string name="disable">關閉</string>
     <string name="enable">啟用</string>
@@ -159,7 +158,7 @@
     <string name="pref_prefer_ipv6">首選 IPv6 連接</string>
     <string name="pref_open_proxy_on_all_interfaces_title">在所有接口上開啟代理</string>
     <string name="v3_import_auth_private">匯入 .auth_private</string>
-    <string name="v3_onion">.onion 域名</string>
+    <string name="v3_anon">.anon 域名</string>
     <string name="pref_isolate_port">隔離目的地連接埠</string>
     <string name="pref_circuit_padding">迴路填充</string>
     <string name="v3_backup_key_warning">警告：這可能會將你的金鑰暴露給其他應用程式</string>
@@ -169,7 +168,7 @@
     <string name="pref_http_dialog">HTTP 連接埠配置</string>
     <string name="v3_delete_client_authorization_confirm">刪除用戶軟體驗證</string>
     <string name="v3_backup_name_hint">備份檔案名稱…</string>
-    <string name="backup_port_exist">錯誤：一個 Onion 服務已在使用連接埠 %s</string>
+    <string name="backup_port_exist">錯誤：一個 Anon 服務已在使用連接埠 %s</string>
     <string name="pref_isolate_port_summary">對每個目的地連接埠使用不同的迴路</string>
     <string name="pref_isolate_protocol">隔離客戶端協定</string>
     <string name="pref_isolate_protocol_summary">為每個連接協定使用不同的迴路</string>
@@ -184,7 +183,7 @@
     <string name="secure_your_connection_title">準備連接</string>
     <string name="secure_your_connection_subtitle">將應用程式隱藏在網路監控之外，並在它們被阻止時取得存取權限。</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">允許連接到相同 Wi-Fi、區域網路裝置和任何可以連接到你的 IP 的其他人存取 Anon</string>
-    <string name="v3_hosted_services">託管的 Onion 服務</string>
+    <string name="v3_hosted_services">託管的 Anon 服務</string>
     <string name="v3_backup_key">備份用戶軟體驗證金鑰</string>
     <string name="v3_delete_client_authorization">刪除用戶軟體驗證金鑰</string>
     <string name="pref_reduced_circuit_padding_summary">使用較低開銷的填充演算法來減少資料和電池的使用</string>

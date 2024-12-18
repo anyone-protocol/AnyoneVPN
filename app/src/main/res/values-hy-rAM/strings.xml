@@ -21,7 +21,7 @@
     <string name="action_activate">Գործածել</string>
     <string name="title_choose_apps">Ընտրել ափփեր</string>
     <string name="allow">Թույլատրել</string>
-    <string name="hidden_services">Onion ծառայություններ</string>
+    <string name="hidden_services">Anon ծառայություններ</string>
     <string name="disable">Կարողազրկել</string>
     <string name="enable">Կարողացնել</string>
     <string name="next">Հաջորդը</string>
@@ -40,7 +40,7 @@
     <string name="main_layout_upload">Վերբեռնել</string>
     <string name="pref_general_group">Հիմնական</string>
     <string name="license">Արտոնագիր.</string>
-    <string name="menu_hidden_services">Onion ծառայություններ</string>
+    <string name="menu_hidden_services">Anon ծառայություններ</string>
     <string name="trying_to_connect_title">Միացում…</string>
     <string name="menu_header_features">Հատկություններ</string>
     <string name="menu_anon_connection">Anon միացում</string>
@@ -79,7 +79,7 @@
     <string name="pref_http_summary">Մատույցը, որով Anon-ն առաջարկում է իր «HTTP» փոխանորդը (լռելայնը՝ 8118 կամ 0՝ կարողազրկման համար)</string>
     <string name="pref_anonrc_dialog">Հարմարեցված Anonrc-ն</string>
     <string name="pref_anonrc_title">anonrc հարմարեցված կարգավորում</string>
-    <string name="onion_port">Onion մատույց</string>
+    <string name="anon_port">Anon մատույց</string>
     <string name="done">Պատրա՜ստ է:</string>
     <string name="copy_address_to_clipboard">Պատճենել հասցեն սեղմատախտակի վրա</string>
     <string name="user_services">Օգտագործողի ծառայություններ</string>
@@ -96,11 +96,11 @@
     <string name="pref_proxy_password_title">Արտագնա փոխանորդի գաղտնաբառ</string>
     <string name="pref_proxy_type_dialog">Մուտքագրեք փոխանորդի տեսակը</string>
     <string name="pref_proxy_password_summary">Փոխանորդի գաղտնաբառը (կամընտրական)</string>
-    <string name="backup_port_exist">Սխալ. «Onion» ծառայությունն արդեն օգտագործում է %s մատույցը</string>
+    <string name="backup_port_exist">Սխալ. «Anon» ծառայությունն արդեն օգտագործում է %s մատույցը</string>
     <string name="pref_socks_dialog">«SOCKS» մատույցի կարգավորում</string>
     <string name="pref_transport_dialog">«TransProxy» մատույցի կարգավորում</string>
     <string name="pref_dnsport_dialog">«DNS» մատույցի կարգավորում</string>
-    <string name="v3_hosted_services">Հյուրընկալված Onion ծառայություններ</string>
+    <string name="v3_hosted_services">Հյուրընկալված Anon ծառայություններ</string>
     <string name="delete_service">Ջնջել ծառայությունը</string>
     <string name="share_as_qr">Տարածել որպես QR</string>
     <string name="vpn_disabled">VPN-ը կարողազրկվեց</string>

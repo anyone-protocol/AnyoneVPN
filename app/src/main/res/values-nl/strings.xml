@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Verborgen diensten</string>
     <string name="save">Opslaan</string>
     <string name="local_port">Lokale poort</string>
-    <string name="onion_port">Onion-poort</string>
+    <string name="anon_port">Anon-poort</string>
     <string name="name">Naam</string>
     <string name="done">Klaar!</string>
     <string name="copy_address_to_clipboard">Adres kopiëren naar klembord</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Bevestig verwijderen van dienst</string>
     <string name="service_type">Diensttype</string>
     <string name="please_restart_to_enable_the_changes">Herstart AnyoneBot om de wijzigingen in te schakelen</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Delen als QR-code</string>
     <string name="disable">Uitschakelen</string>
     <string name="enable">Inschakelen</string>

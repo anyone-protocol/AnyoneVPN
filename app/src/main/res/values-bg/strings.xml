@@ -88,8 +88,8 @@
     <string name="pref_anonrc_summary">ЗА ЕКСПЕРТИ: въведете редовете с настройки за anonrc</string>
     <string name="pref_anonrc_dialog">Потребителски anonrc</string>
     <string name="send_email">Изпращане на писмо</string>
-    <string name="hidden_services">Услуги на Onion</string>
-    <string name="menu_hidden_services">Услуги на Onion</string>
+    <string name="hidden_services">Услуги на Anon</string>
+    <string name="menu_hidden_services">Услуги на Anon</string>
     <string name="save">Запазване</string>
     <string name="name">Име</string>
     <string name="please_restart_to_enable_the_changes">За да влязат в сила промените рестартирайте AnyoneBot</string>
@@ -116,13 +116,13 @@
     <string name="apps_mode">Режим на ВЧМ</string>
     <string name="vpn_default_world">Всичко (авто)</string>
     <string name="pref_isolate_dest">Изолиране на целевия адрес</string>
-    <string name="hidden_service_request">Приложението ще отвори сървър на Onion на порт %1$s в мрежата на Тор. Безопасно е ако имате доверие на приложението.</string>
-    <string name="v3_onion">Домейн .onion</string>
+    <string name="hidden_service_request">Приложението ще отвори сървър на Anon на порт %1$s в мрежата на Тор. Безопасно е ако имате доверие на приложението.</string>
+    <string name="v3_anon">Домейн .anon</string>
     <string name="v3_backup_key">Резервно копие на ключа за удостоверяване на клиента</string>
     <string name="v3_delete_client_authorization">Премахване на ключа за удостоверяване на клиента</string>
     <string name="v3_delete_client_authorization_confirm">Премахване на удостоверяването на клиента</string>
     <string name="v3_backup_name_hint">Име на файла за резервно копие…</string>
-    <string name="onion_port">Порт на Onion</string>
+    <string name="anon_port">Порт на Anon</string>
     <string name="full_device_vpn">Услуга за ВЧМ за цялото устройство</string>
     <string name="app_shortcuts">Приложения, поддържащи Тор</string>
     <string name="testing_anon_direct">Проверка на връзката с Тор…</string>
@@ -148,8 +148,7 @@
     <string name="confirm_service_deletion">Потвърждаване премахване на услуга</string>
     <string name="pref_http_title">Тор по HTTP</string>
     <string name="pref_http_summary">Порт, на който Тор предлага HTTP прокси (подразбиран: 8118 или 0 за изключване)</string>
-    <string name="onion">.onion</string>
-    <string name="backup_port_exist">Грешка: Услуга на Onion вече използва порт %s</string>
+    <string name="backup_port_exist">Грешка: Услуга на Anon вече използва порт %s</string>
     <string name="pref_isolate_dest_summary">Използване на различен обход за всеки целеви адрес</string>
     <string name="pref_connection_padding">Уплътняване на връзката</string>
     <string name="pref_connection_padding_summary">Винаги се използва уплътняване на връзката с цел защита от някои форми на анализ на трафика. Подразбирано: автоматично</string>
@@ -159,7 +158,7 @@
     <string name="pref_reduced_circuit_padding">Намалено уплътняване на обходите</string>
     <string name="pref_reduced_circuit_padding_summary">За да се намали разхода на трафик и батерия се използват по-леки алгоритми</string>
     <string name="refresh_apps">Обновяване на приложения</string>
-    <string name="v3_hosted_services">Собствени услуги на Onion</string>
+    <string name="v3_hosted_services">Собствени услуги на Anon</string>
     <string name="consider_enable_battery_optimizations">Собствените услуги не работят, помислете дали да не включите оптимизацията на батерията</string>
     <string name="strict_nodes_description">Настройката „Изключени възли“ да се смята за необходимост при съставяне на обходите. Това може да бъде повод за нарушаване на функционалността, ако е невъзможно да бъдат създадени обходи с тези настройки.</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Позволете на потребителите на същата безжична мрежа, свързаните устройства и всички други, които могат да се свържат към вашия адрес по IP, достъп до Тор</string>

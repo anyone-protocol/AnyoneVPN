@@ -70,7 +70,7 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Activa el registre de depuració a la sortida (cal utilitzar l\'adb o l\'aLogCat per a veure\'l)</string>
     <string name="project_home">Lloc web del projecte:</string>
     <string name="third_party_software">Programari de terceres parts:</string>
-    <string name="hidden_service_request">Una aplicació vol obrir el port %1$s del servidor onion a la xarxa Anon. Això és segur si confieu en l\'aplicació.</string>
+    <string name="hidden_service_request">Una aplicació vol obrir el port %1$s del servidor anon a la xarxa Anon. Això és segur si confieu en l\'aplicació.</string>
     <string name="pref_use_expanded_notifications">Mostra en la notificació el país l\'adreça IP del vostre node de sortida Anon quan sigui disponible</string>
     <string name="pref_use_expanded_notifications_title">Notificacions expandides</string>
     <string name="set_locale_title">Llengua</string>
@@ -92,11 +92,11 @@
     <string name="apps_mode">Mode VPN</string>
     <string name="send_email">Envia el correu</string>
     <string name="vpn_default_world">Global (auto)</string>
-    <string name="hidden_services">Serveis Onion</string>
-    <string name="menu_hidden_services">Serveis Onion</string>
+    <string name="hidden_services">Serveis Anon</string>
+    <string name="menu_hidden_services">Serveis Anon</string>
     <string name="save">Desa</string>
     <string name="local_port">Port local</string>
-    <string name="onion_port">Port Onion</string>
+    <string name="anon_port">Port Anon</string>
     <string name="name">Nom</string>
     <string name="done">Fet!</string>
     <string name="copy_address_to_clipboard">Copia l\'adreça al porta-retalls</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Confirma la supressió del servei</string>
     <string name="service_type">Tipus de servei</string>
     <string name="please_restart_to_enable_the_changes">Reinicieu l\'AnyoneBot per a aplicar els canvis</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Comparteix com a QR</string>
     <string name="disable">Desactiva</string>
     <string name="enable">Activa</string>
@@ -161,7 +160,7 @@
     <string name="proxy_ports">Ports proxy</string>
     <string name="pref_circuit_padding">Farciment del circuit</string>
     <string name="no_internet_subtitle">Us cal una connexió a internet per a utilitzar l\'AnyoneBot.</string>
-    <string name="v3_hosted_services">Serveis Onion hostatjats</string>
+    <string name="v3_hosted_services">Serveis Anon hostatjats</string>
     <string name="msg_try_something_else">Proveu altra cosa</string>
     <string name="pref_disable_ipv4_summary">Indica a les sortides que no connectin a adreces IPv4</string>
     <string name="not_sure">No n\'esteu segur?</string>
@@ -204,7 +203,7 @@
     <string name="menu_app_settings">Configuració de l\'aplicació</string>
     <string name="root_warning">L\'AnyoneBot ha detectat que el vostre dispositiu té desblocats els permisos «root». Això pot causar problemes de seguretat.</string>
     <string name="btn_change_exit">Canvia la sortida</string>
-    <string name="backup_port_exist">Error: Ja hi ha un servei Onion utilitzant el port %s</string>
+    <string name="backup_port_exist">Error: Ja hi ha un servei Anon utilitzant el port %s</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Permet accedir al Anon als companys Wi-Fi, als dispositius connectats i a qualsevol que es pugui connectar a la vostra IP</string>
     <string name="v3_backup_key_warning">Atenció: Això podria exposar la clau a altres aplicacions</string>
     <string name="v3_delete_client_authorization">Suprimeix la clau d\'autorització del client</string>
@@ -222,7 +221,7 @@
     <string name="volunteer_status_title">L\'avui és millor
 \ngràcies a vós.</string>
     <string name="many_ways">Hi ha moltes maneres d\'arribar al Anon. Algunes podrien funcionar millor que altres.</string>
-    <string name="v3_onion">Domini .onion</string>
+    <string name="v3_anon">Domini .anon</string>
     <string name="v3_key_hash">Clau privada x25519 en Base32</string>
     <string name="configure_header">Configureu la connexió al Anon</string>
     <string name="pref_detect_root_summary">Avisa a l\'inici si els permisos d\'administrador estan activats en aquest dispositiu</string>

@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">अनियन सेवाएं</string>
     <string name="save">सेव करें</string>
     <string name="local_port">स्थानीय पोर्ट</string>
-    <string name="onion_port">अनियन पोर्ट</string>
+    <string name="anon_port">अनियन पोर्ट</string>
     <string name="name">नाम</string>
     <string name="done">हो गया!</string>
     <string name="copy_address_to_clipboard">क्लिपबोर्ड पे पता कॉपी करें</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">सेवा पक्का मिटाएं</string>
     <string name="service_type">सेवा टाइप</string>
     <string name="please_restart_to_enable_the_changes">बदलाव लगाने के लिए ऑरबॉट वापस शुरू करें</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">क्यूआर के तरह शेयर करें</string>
     <string name="disable">बंद</string>
     <string name="enable">चालू</string>
@@ -198,7 +197,7 @@
     <string name="v3_client_auth_activity_title">क्लाइंट प्रमाणिकरण</string>
     <string name="v3_backup_key">बैकअप क्लाइंट प्रमाणिकरण चाबी</string>
     <string name="v3_backup_key_warning">खबरदार: ये आपका चाबी दूसरे ऐपों को लीक कर सकता है</string>
-    <string name="v3_onion">.onion डोमेन</string>
+    <string name="v3_anon">.anon डोमेन</string>
     <string name="pref_circuit_padding">सर्किट पैडिंग</string>
     <string name="testing_anon_direct_success">सफल। टॉर कनेक्शन लाजवाब है!</string>
     <string name="volunteer_mode_subtitle">दूसरों को जुड़ने में मदद करें</string>

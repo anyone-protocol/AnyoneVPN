@@ -85,7 +85,7 @@
     <string name="action_activate">Activate</string>
     <string name="menu_more">Karagdagan</string>
     <string name="connect">Kumonekta</string>
-    <string name="hidden_services">Mga Serbisyo ng Onion</string>
-    <string name="menu_hidden_services">Mga Serbisyo ng Onion</string>
+    <string name="hidden_services">Mga Serbisyo ng Anon</string>
+    <string name="menu_hidden_services">Mga Serbisyo ng Anon</string>
     <string name="connection_custom">Custom</string>
 </resources>

@@ -123,7 +123,7 @@
     <string name="menu_help_others">Helpu Eraill</string>
     <string name="consider_disable_battery_optimizations">Gwasanaethau lletyol sy\'n rhedeg, ystyriwch analluogi optimeiddio batri</string>
     <string name="btn_choose_apps">Dewiswch apps</string>
-    <string name="onion_port">Porthladd Nionyn</string>
+    <string name="anon_port">Porthladd Nionyn</string>
     <string name="restore_backup">Adfer copi wrth gefn</string>
     <string name="pref_dnsport_dialog">DNS Port Config</string>
     <string name="pref_anonrc_title">Ffurfwedd Custom anonrc</string>
@@ -170,7 +170,7 @@
     <string name="mebibyte">MiB</string>
     <string name="menu_app_settings">Gosodiadau Ap</string>
     <string name="btn_change_exit">Newid allanfa</string>
-    <string name="backup_port_exist">Gwall: Mae gwasanaeth Onion eisoes yn defnyddio porth %s</string>
+    <string name="backup_port_exist">Gwall: Mae gwasanaeth Anon eisoes yn defnyddio porth %s</string>
     <string name="backup_service">Gwasanaeth Wrth Gefn <i>(Rhybudd: Gallai Hyn Datguddio Ffurfweddiad Eich Gwasanaeth i Apiau Eraill)</i></string>
     <string name="service_type">Math o wasanaeth</string>
     <string name="create_a_backup_first">Creu copi wrth gefn yn gyntaf</string>
@@ -195,8 +195,7 @@
     <string name="apps_mode">Modd VPN</string>
     <string name="local_port">Porthladd Lleol</string>
     <string name="backup_restored">Copi wrth gefn wedi\'i adfer</string>
-    <string name="onion">.onion</string>
-    <string name="v3_onion">Parth .onion</string>
+    <string name="v3_anon">Parth .anon</string>
     <string name="done">Wedi\'i wneud!</string>
     <string name="v3_key_hash">x25519 Allwedd Breifat yn Sylfaen32</string>
     <string name="configure_header">Ffurfweddu eich Cysylltiad Anon</string>

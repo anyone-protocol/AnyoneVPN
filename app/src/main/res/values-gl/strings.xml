@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Servizos agochados</string>
     <string name="save">Gardar</string>
     <string name="local_port">Porto local</string>
-    <string name="onion_port">Porto Onion</string>
+    <string name="anon_port">Porto Anon</string>
     <string name="name">Nome</string>
     <string name="done">Feito!</string>
     <string name="copy_address_to_clipboard">Copiar enderezo ao portapapeis</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Confirme a eliminación do servizo</string>
     <string name="service_type">Tipo de servizo</string>
     <string name="please_restart_to_enable_the_changes">Por favor, reinicie AnyoneBot para activar os cambios</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Compartir como QR</string>
     <string name="disable">Desactivar</string>
     <string name="enable">Activar</string>
@@ -160,14 +159,14 @@
     <string name="v3_import_auth_private">Importar .auth_private</string>
     <string name="pref_http_title">Anon HTTP</string>
     <string name="v3_client_auth_activity_title">Autorización do cliente</string>
-    <string name="backup_port_exist">Erro: un servizo de Onion xa está usando o porto %s</string>
+    <string name="backup_port_exist">Erro: un servizo de Anon xa está usando o porto %s</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Permitir que os pares de wifi, os dispositivos conectados e calquera outra persoa que se poida conectar á túa IP accedan a Anon</string>
     <string name="v3_backup_key_warning">Aviso: isto podería expor a túa chave a outras aplicacións</string>
     <string name="v3_delete_client_authorization">Eliminar a clave de autorización do cliente</string>
     <string name="strict_nodes_description">Trate a configuración de Exclusión de nós como un requisito para construír todos os circuítos. Isto pode romper a funcionalidade se non se poden xerar circuítos coa túa configuración de Exclusión de nós.</string>
     <string name="v3_delete_client_authorization_confirm">Eliminar a autorización do cliente</string>
     <string name="pref_http_summary">Porto no que Anon ofrece o seu proxy HTTP (predeterminado: 8118 ou 0 para desactivar)</string>
-    <string name="v3_onion">Dominio .cebola</string>
+    <string name="v3_anon">Dominio .cebola</string>
     <string name="v3_key_hash">x25519 Chave privada en Base32</string>
     <string name="pref_isolate_protocol">Illar protocolos do cliente</string>
     <string name="pref_disable_ipv4_summary">Decir ás saídas que non se conecten a enderezos IPv4</string>

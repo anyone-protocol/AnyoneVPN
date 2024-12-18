@@ -38,7 +38,7 @@ public class OnionV3ListAdapter extends CursorAdapter {
                 cursor.getString(cursor.getColumnIndex(OnionServiceContentProvider.OnionService.PORT))));
 
         TextView onionPort = view.findViewById(R.id.onion_port);
-        onionPort.setText(String.format("%s\n%s", context.getString(R.string.onion_port),
+        onionPort.setText(String.format("%s\n%s", context.getString(R.string.anon_port),
                 cursor.getString(cursor.getColumnIndex(OnionServiceContentProvider.OnionService.ONION_PORT))));
 
         TextView name = view.findViewById(R.id.hs_name);

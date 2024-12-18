@@ -78,7 +78,7 @@
     <string name="save">Guardar</string>
     <string name="name">Nombre</string>
     <string name="disable">Deshabilitar</string>
-    <string name="menu_hidden_services">Servicios Onion</string>
+    <string name="menu_hidden_services">Servicios Anon</string>
     <string name="deny">Negar</string>
     <string name="btn_refresh">Actualizar</string>
     <string name="menu_header_features">Características</string>
@@ -97,6 +97,6 @@
     <string name="license">Licencia:</string>
     <string name="drawer_close">Cerrar</string>
     <string name="enable">Habilitar</string>
-    <string name="hidden_services">Servicios Onion</string>
+    <string name="hidden_services">Servicios Anon</string>
     <string name="confirm">Confirmar</string>
 </resources>

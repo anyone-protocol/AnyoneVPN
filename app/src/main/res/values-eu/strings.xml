@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Ezkutuko zerbitzuak</string>
     <string name="save">Gorde</string>
     <string name="local_port">Ataka lokala</string>
-    <string name="onion_port">Onion ataka</string>
+    <string name="anon_port">Anon ataka</string>
     <string name="name">Izena</string>
     <string name="done">Egina!</string>
     <string name="copy_address_to_clipboard">Kopiatu helbidea arbelera</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Berretsi zerbitzua ezabatzea</string>
     <string name="service_type">Zerbitzu mota</string>
     <string name="please_restart_to_enable_the_changes">Mesedez berrabiarazi AnyoneBot aldaketak aktibatzeko</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Partekatu QR gisa</string>
     <string name="disable">Desgaitu</string>
     <string name="enable">Gaitu</string>

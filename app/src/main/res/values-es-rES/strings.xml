@@ -58,7 +58,7 @@
     <string name="enable_your_device_to_be_a_non_exit_relay">Habilita tu dispositivo para que sea un relé sin salida</string>
     <string name="relay_port">Puerto de repetidor</string>
     <string name="listening_port_for_your_anon_relay">Puerto de escucha para tu repetidor Anon</string>
-    <string name="enter_or_port">Introduzca puerto OR (Onion Routing, repositorio de repetidores)</string>
+    <string name="enter_or_port">Introduzca puerto OR (Anon Routing, repositorio de repetidores)</string>
     <string name="relay_nickname">Alias del repetidor</string>
     <string name="the_nickname_for_your_anon_relay">El apodo que identificará a su repetidor en la red Anon</string>
     <string name="enter_a_custom_relay_nickname">Introduzca un alias personalizado para su repetidor</string>
@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Servicios ocultos</string>
     <string name="save">Guardar</string>
     <string name="local_port">Puerto local</string>
-    <string name="onion_port">Puerto onion</string>
+    <string name="anon_port">Puerto anon</string>
     <string name="name">Nombre</string>
     <string name="done">¡Hecho!</string>
     <string name="copy_address_to_clipboard">Copiar dirección al portapapeles</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Confirme el borrado del servicio</string>
     <string name="service_type">Tipo de servicio</string>
     <string name="please_restart_to_enable_the_changes">Por favor, reinicia AnyoneBot para habilitar los cambios</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Compartir como QR</string>
     <string name="disable">Deshabilitar</string>
     <string name="enable">Habilitar</string>
@@ -165,7 +164,7 @@
     <string name="msg_try_something_else">Prueba otra cosa</string>
     <string name="v3_backup_key_warning">Advertencia: Esto podría exponer tu clave a otras aplicaciones</string>
     <string name="v3_delete_client_authorization">Borrar la clave de autorización del cliente</string>
-    <string name="backup_port_exist">Error: Un servicio de Onion ya está usando el puerto %s</string>
+    <string name="backup_port_exist">Error: Un servicio de Anon ya está usando el puerto %s</string>
     <string name="pref_circuit_padding_summary">Habilita el relleno de circuitos para defenderte de algunas formas de análisis de tráfico</string>
     <string name="pref_reduced_circuit_padding">Reducción del relleno del circuito</string>
     <string name="pref_reduced_circuit_padding_summary">Utilizar algoritmos de relleno de menor carga para reducir el uso de datos y de la batería</string>
@@ -179,7 +178,7 @@
     <string name="v3_backup_name_hint">Copia de seguridad del nombre del archivo…</string>
     <string name="v3_import_auth_private">Importar .auth_private</string>
     <string name="confirm">Confirmar</string>
-    <string name="v3_onion">Dominio .onion</string>
+    <string name="v3_anon">Dominio .anon</string>
     <string name="strict_nodes_description">Trate la configuración de los Nodos Excluidos como un requisito para construir todos los circuitos. Esto puede romper la funcionalidad si no se pueden generar circuitos con su configuración de Nodos Excluidos.</string>
     <string name="btn_refresh">Actualizar</string>
     <string name="btn_anon_off">Apagar Anon</string>

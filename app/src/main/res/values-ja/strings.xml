@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">オニオンサービス</string>
     <string name="save">保存</string>
     <string name="local_port">ローカルポート</string>
-    <string name="onion_port">Onionポート</string>
+    <string name="anon_port">Anonポート</string>
     <string name="name">名前</string>
     <string name="done">完了！</string>
     <string name="copy_address_to_clipboard">クリップボードにアドレスをコピー</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">サービス削除を確認</string>
     <string name="service_type">サービスの種類</string>
     <string name="please_restart_to_enable_the_changes">変更を有効にするにはAnyoneBotを再起動してください</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">QRで共有</string>
     <string name="disable">無効</string>
     <string name="enable">有効</string>
@@ -181,7 +180,7 @@
     <string name="testing_anon_direct_success">成功しました。Anon接続は良好です!</string>
     <string name="volunteer_mode_subtitle">他の人の接続を助ける</string>
     <string name="menu_header_features">特徴</string>
-    <string name="v3_onion">.onionドメイン</string>
+    <string name="v3_anon">.anonドメイン</string>
     <string name="strict_nodes_description">除外ノードの設定は、すべての回路を構築するための要件として扱われます。このため、除外ノードの設定で回路を生成できない場合、根本的な機能が停止することがあります。</string>
     <string name="mebibyte">MiB</string>
     <string name="drawer_open">開く</string>

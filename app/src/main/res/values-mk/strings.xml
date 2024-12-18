@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Скриени сервиси</string>
     <string name="save">Зачувај</string>
     <string name="local_port">Локална порта</string>
-    <string name="onion_port">Onion порта</string>
+    <string name="anon_port">Anon порта</string>
     <string name="name">Име</string>
     <string name="done">Завршено!</string>
     <string name="copy_address_to_clipboard">Копирај ја адресата за залепување</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Потврди бришење на услугата</string>
     <string name="service_type">Тип на услуга</string>
     <string name="please_restart_to_enable_the_changes">Ве молиме стартувајте го повторно AnyoneBot за да се овозможат промените</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Сподели како QR</string>
     <string name="disable">Оневозможи</string>
     <string name="enable">Овозможи</string>

@@ -97,7 +97,7 @@
     <string name="title_choose_apps">앱 선택</string>
     <string name="action_use">사용함</string>
     <string name="confirm">확인</string>
-    <string name="menu_hidden_services">Onion 서비스</string>
+    <string name="menu_hidden_services">Anon 서비스</string>
     <string name="done">완료!</string>
     <string name="menu_new_identity">새 ID</string>
     <string name="trying_to_connect_title">접속중…</string>
@@ -120,7 +120,7 @@
     <string name="version">버전:</string>
     <string name="license">라이센스:</string>
     <string name="deny">거절</string>
-    <string name="hidden_services">Onion 서비스</string>
+    <string name="hidden_services">Anon 서비스</string>
     <string name="allow">허용</string>
     <string name="no_internet_title">인터넷에 연결하기</string>
     <string name="btn_refresh">새로고침</string>

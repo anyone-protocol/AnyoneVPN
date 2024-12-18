@@ -23,7 +23,7 @@
     <string name="button_about">په اړه</string>
     <string name="menu_exit">Exit</string>
     <string name="app_name">AnyoneBot</string>
-    <string name="menu_hidden_services">د Onion خدمات</string>
-    <string name="hidden_services">د Onion خدمات</string>
+    <string name="menu_hidden_services">د Anon خدمات</string>
+    <string name="hidden_services">د Anon خدمات</string>
     <string name="drawer_close">Close</string>
 </resources>

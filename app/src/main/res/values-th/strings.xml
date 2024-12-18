@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">บริการที่ซ่อน</string>
     <string name="save">บันทึก</string>
     <string name="local_port">พอร์ตในเครื่อง</string>
-    <string name="onion_port">พอร์ต Onion</string>
+    <string name="anon_port">พอร์ต Anon</string>
     <string name="name">ชื่อเอกสาร</string>
     <string name="done">เสร็จสิ้น!</string>
     <string name="copy_address_to_clipboard">คัดลอกที่อยู่ลงในคลิปบอร์ด</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">ยืนยันการลบบริการ</string>
     <string name="service_type">ประเภทของบริการ</string>
     <string name="please_restart_to_enable_the_changes">กรุณาเริ่ม AnyoneBot ใหม่เพื่อให้การเปลี่ยนแปลงใช้งานได้</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">แชร์ในรูปแบบคิวอาร์</string>
     <string name="disable">ปิดการใช้งาน</string>
     <string name="enable">เปิดใช้งาน</string>

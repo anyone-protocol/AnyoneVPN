@@ -118,7 +118,7 @@
     <string name="pref_http_dialog">HTTP Port Konfiqurasiyası</string>
     <string name="vpn_disabled">VPN Deaktivdir</string>
     <string name="consider_disable_battery_optimizations">Hosted xidmətlər işləyir, batareyanın optimallaşdırılmasını deaktiv etməyi düşünün</string>
-    <string name="onion_port">Soğan limanı</string>
+    <string name="anon_port">Soğan limanı</string>
     <string name="restore_backup">Ehtiyyatda olanı bərpa etmə</string>
     <string name="v3_backup_key">Yedək Müştəri Avtorizasiya Açarı</string>
     <string name="wizard_details_msg">AnyoneBot Anon, Go-Tun2Socks və LibEvent ehtiva edən açıq mənbəli proqramdır. Anon şəbəkəsinə VPN tuneli, yerli HTTP Connect proksisi (yalnız 8118 portunda HTTPS) və SOCKS proksisi (9050) təmin edir.</string>
@@ -153,7 +153,7 @@
     <string name="pref_reduced_circuit_padding">Azaldılmış dövrə doldurma</string>
     <string name="v3_client_auth_activity_title">Müştəri Avtorizasiyası</string>
     <string name="mebibyte">MiB</string>
-    <string name="backup_port_exist">Xəta: Onion xidməti artıq %s portundan istifadə edir</string>
+    <string name="backup_port_exist">Xəta: Anon xidməti artıq %s portundan istifadə edir</string>
     <string name="backup_service">Yedəkləmə Xidməti <i>(Xəbərdarlıq: Bu, Xidmət Konfiqurasiyanızı Digər Tətbiqlərə Aşa bilər)</i></string>
     <string name="service_type">Xidmət növü</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Wi-Fi həmyaşıdlarına, bağlı cihazlara və IP-yə qoşula bilən hər kəsə Anon-a daxil olmağa icazə verin</string>
@@ -177,8 +177,7 @@
     <string name="apps_mode">VPN rejimi</string>
     <string name="local_port">Yerli liman</string>
     <string name="backup_restored">Yedəkləmə bərpa edildi</string>
-    <string name="onion">.onion</string>
-    <string name="v3_onion">.onion Domen</string>
+    <string name="v3_anon">.anon Domen</string>
     <string name="done">Bitdi!</string>
     <string name="v3_key_hash">Base32-də x25519 Şəxsi Açar</string>
     <string name="no_thx">Xeyr, təşəkkürlər</string>

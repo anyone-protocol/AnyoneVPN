@@ -26,7 +26,7 @@
     <string name="deny">Odmietnuť</string>
     <string name="kibibyte">KiB</string>
     <string name="mebibyte">MiB</string>
-    <string name="v3_hosted_services">Hostované služby Onion</string>
+    <string name="v3_hosted_services">Hostované služby Anon</string>
     <string name="v3_key_hash">x25519 Súkromný kľúč v Base32</string>
     <string name="v3_delete_client_authorization_confirm">Odstránenie autorizácie klienta</string>
     <string name="delete_service">Odstránenie služby</string>
@@ -93,7 +93,6 @@
     <string name="project_home">Projekt Domov:</string>
     <string name="third_party_software">3rd-Party-Software:</string>
     <string name="license">Licencia:</string>
-    <string name="onion">.onion</string>
     <string name="pref_isolate_dest">Izolácia cieľových adries</string>
     <string name="consider_disable_battery_optimizations">Spustené hostované služby, zvážte vypnutie optimalizácie batérie</string>
     <string name="pref_isolate_dest_summary">Pre každú cieľovú adresu použite iný okruh</string>
@@ -115,13 +114,13 @@
     <string name="pref_transport_title">Port Anon TransProxy</string>
     <string name="apps_mode">Režim VPN</string>
     <string name="v3_client_auth_activity_title">Autorizácia klienta</string>
-    <string name="v3_onion">Doména .onion</string>
+    <string name="v3_anon">Doména .anon</string>
     <string name="v3_delete_client_authorization">Odstránenie autorizačného kľúča klienta</string>
     <string name="v3_backup_name_hint">Názov záložného súboru…</string>
     <string name="v3_import_auth_private">Importovať .auth_private</string>
     <string name="confirm">Potvrďte</string>
     <string name="local_port">Miestny prístav</string>
-    <string name="onion_port">Cibuľový prístav</string>
+    <string name="anon_port">Cibuľový prístav</string>
     <string name="copy_address_to_clipboard">Kopírovanie adresy do schránky</string>
     <string name="backup_service">Zálohovanie služby <i>(Upozornenie: toto môže vystaviť konfiguráciu služby iným aplikáciám)</i></string>
     <string name="backup_saved_at_external_storage">Zálohovanie uložené v externom úložisku</string>
@@ -177,7 +176,7 @@
     <string name="pref_connection_padding_summary">Vždy umožňuje vypĺňanie pripojenia na ochranu pred niektorými formami analýzy prevádzky. Predvolené nastavenie: auto</string>
     <string name="btn_start_vpn">Spustenie siete VPN</string>
     <string name="name">Názov</string>
-    <string name="backup_port_exist">Chyba: Služba Onion už používa port %s</string>
+    <string name="backup_port_exist">Chyba: Služba Anon už používa port %s</string>
     <string name="confirm_service_deletion">Potvrdenie odstránenia služby</string>
     <string name="service_type">Typ služby</string>
     <string name="pref_reduced_circuit_padding_summary">Používanie algoritmov vypĺňania s nižšou réžiou na zníženie spotreby údajov a batérie</string>

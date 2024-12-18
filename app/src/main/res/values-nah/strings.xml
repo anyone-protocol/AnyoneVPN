@@ -97,10 +97,10 @@
     <string name="send_email">Xiquinihualiz amatlacuilolli</string>
     <string name="vpn_default_world">Cemanahuac (huel mochihua) </string>
     <string name="hidden_services">Xonacatl tetlayecoltiliztli</string>
-    <string name="v3_hosted_services">Quicallotia Services Onion</string>
+    <string name="v3_hosted_services">Quicallotia Services Anon</string>
     <string name="v3_client_auth_activity_title">Ineltili tlacouhqui</string>
     <string name="v3_key_hash">x25519 Tlapohualichtacatl ce Axcahua in Base32</string>
-    <string name="v3_onion">.onion tecpania</string>
+    <string name="v3_anon">.anon tecpania</string>
     <string name="v3_backup_key">Itlapohualichtacauh in neltia ipan tlacouhqui tlein quipiya</string>
     <string name="v3_backup_key_warning">Nenonotzaliztli: Inon huel quimachtiz motlapohualichtacauh ixpan occe apps</string>
     <string name="v3_delete_client_authorization">Quipoloz itlapohualichtacauh tlacouhqui tlein oneltilic</string>
@@ -111,7 +111,7 @@
     <string name="menu_hidden_services">Xonacatl tetlayecoltiliztli</string>
     <string name="save">Xehua</string>
     <string name="local_port">Altepehua acaltecoyan</string>
-    <string name="onion_port">Xonacatl tzalantli</string>
+    <string name="anon_port">Xonacatl tzalantli</string>
     <string name="name">Tocaitl</string>
     <string name="done">Mochihua</string>
     <string name="copy_address_to_clipboard">Quixcopina in techantilia ipan amapetlacalli</string>
@@ -129,7 +129,6 @@ atl oquitlapatic</string>
     <string name="confirm_service_deletion">Quineltia itlamiliz in tequitl</string>
     <string name="service_type">Itlayehyecol in tequitl</string>
     <string name="please_restart_to_enable_the_changes">Nimitztlatlauhtia, occepa quipehuaz AnyoneBot inic quixiptlayotilia in patlaliztli</string>
-    <string name="onion">.xonacatl</string>
     <string name="share_as_qr">Quimoxexelhuia quemen QR</string>
     <string name="disable">Ahmo quichihua</string>
     <string name="enable">Quema tlacaquini</string>

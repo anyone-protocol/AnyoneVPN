@@ -70,7 +70,7 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">ενεργοποίηση καταγραφών αποσφαλμάτωσης (για την προβολή τους απαιτείται χρήση adb ή aLogCat)</string>
     <string name="project_home">Έργο Home:</string>
     <string name="third_party_software">Λογισμικό τρίτων:</string>
-    <string name="hidden_service_request">Μια εφαρμογή θέλει να ανοίξει διακομιστή onion στη θύρα %1$s στο δίκτυο Anon. Αυτό είναι ασφαλές αν εμπιστεύεστε την εφαρμογή.</string>
+    <string name="hidden_service_request">Μια εφαρμογή θέλει να ανοίξει διακομιστή anon στη θύρα %1$s στο δίκτυο Anon. Αυτό είναι ασφαλές αν εμπιστεύεστε την εφαρμογή.</string>
     <string name="pref_use_expanded_notifications">Εμφανίστε στην ειδοποίηση τη χώρα και τη διεύθυνση IP του κόμβου εξόδου Anon, όταν είναι διαθέσιμος</string>
     <string name="pref_use_expanded_notifications_title">Επεκταμένες Ειδοποιήσεις</string>
     <string name="set_locale_title">Γλώσσα </string>
@@ -92,11 +92,11 @@
     <string name="apps_mode">Λειτουργία VPN</string>
     <string name="send_email">Στείλτε Email</string>
     <string name="vpn_default_world">Παγκόσμια (Auto)</string>
-    <string name="hidden_services">Υπηρεσίες Onion</string>
-    <string name="menu_hidden_services">Υπηρεσίες Onion</string>
+    <string name="hidden_services">Υπηρεσίες Anon</string>
+    <string name="menu_hidden_services">Υπηρεσίες Anon</string>
     <string name="save">Αποθήκευση</string>
     <string name="local_port">Τοπική θύρα</string>
-    <string name="onion_port">Θύρα Onion</string>
+    <string name="anon_port">Θύρα Anon</string>
     <string name="name">Όνομα</string>
     <string name="done">Έγινε!</string>
     <string name="copy_address_to_clipboard">Αντιγραφή διέυθυνσης στο πρόχειρο</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Επιβεβαίωση διαγραφής υπηρεσίας</string>
     <string name="service_type">Τύπος υπηρεσίας</string>
     <string name="please_restart_to_enable_the_changes">Παρακαλούμε επανεκκινήστε το AnyoneBot για να ενεργοποιήσετε τις αλλαγές</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Κοινοποίηση ως QR</string>
     <string name="disable">Απενεργοποίηση</string>
     <string name="enable">Ενεργοποίηση</string>
@@ -133,7 +132,7 @@
     <string name="license">Άδεια:</string>
     <string name="v3_client_auth_activity_title">Εξουσιοδότηση πελάτη</string>
     <string name="v3_key_hash">x25519 Ιδιωτικό κλειδί σε Base32</string>
-    <string name="v3_onion">.onion Τομέας</string>
+    <string name="v3_anon">.anon Τομέας</string>
     <string name="secure_your_connection_title">Ετοιμοι για σύνδεση</string>
     <string name="secure_your_connection_subtitle">Απόκρυψη εφαρμογών από την παρακολούθηση του δικτύου και πρόσβαση σε αυτές όταν είναι μπλοκαρισμένες.</string>
     <string name="connected_title">Συνδεδεμένο</string>
@@ -153,9 +152,9 @@
     <string name="menu_header_learn">Μάθετε περισσότερα</string>
     <string name="msg_try_something_else">Δοκιμάστε κάτι άλλο</string>
     <string name="deny">Άρνηση</string>
-    <string name="v3_hosted_services">Υπηρεσίες Onion</string>
+    <string name="v3_hosted_services">Υπηρεσίες Anon</string>
     <string name="v3_backup_key_warning">Προειδοποίηση: Αυτό μπορεί να εκθέσει το κλειδί σας σε άλλες εφαρμογές</string>
-    <string name="backup_port_exist">Σφάλμα: Μια υπηρεσία Onion χρησιμοποιεί ήδη τη θύρα %s</string>
+    <string name="backup_port_exist">Σφάλμα: Μια υπηρεσία Anon χρησιμοποιεί ήδη τη θύρα %s</string>
     <string name="pref_circuit_padding">Επένδυση κυκλώματος</string>
     <string name="pref_circuit_padding_summary">Ενεργοποίηση της συμπλήρωσης κυκλώματος για την άμυνα έναντι ορισμένων μορφών ανάλυσης κίνησης</string>
     <string name="pref_reduced_circuit_padding">Μειωμένο μαξιλάρι κυκλώματος</string>

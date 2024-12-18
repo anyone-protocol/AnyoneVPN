@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Rejtett szolgáltatások</string>
     <string name="save">Mentés</string>
     <string name="local_port">Helyi Port</string>
-    <string name="onion_port">Onion Port</string>
+    <string name="anon_port">Anon Port</string>
     <string name="name">Név</string>
     <string name="done">Kész!</string>
     <string name="copy_address_to_clipboard">Cím másolása vágólapra</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Szolgáltatás törlés jóváhagyása</string>
     <string name="service_type">Szolgáltatás típus</string>
     <string name="please_restart_to_enable_the_changes">Kérlek indítsd újra az AnyoneBot-ot a változások engedélyezéséhez</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Megosztás QR-ként</string>
     <string name="disable">Kikapcsol</string>
     <string name="enable">Engedélyezés</string>

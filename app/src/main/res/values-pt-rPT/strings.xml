@@ -60,7 +60,6 @@
     <string name="refresh_apps">Atualizar apps</string>
     <string name="pref_http_title">HTTP Anon</string>
     <string name="pref_disable_ipv4">Desativar conexões IPv4</string>
-    <string name="onion">.onion</string>
     <string name="pref_prefer_ipv6_summary">Diz às saídas que os endereços IPv6 são preferidos</string>
     <string name="pref_prefer_ipv6">Preferir conexões IPv6</string>
     <string name="pref_http_summary">Porta em que o Anon oferece o seu proxy HTTP (predefinição: 8118 ou 0 para desativar)</string>
@@ -102,7 +101,7 @@
     <string name="delete_service">Remover Serviço</string>
     <string name="backup_service">Serviço de Backup <i>(Aviso: Isso pode expor a sua configuração de serviço para as outras apps)</i></string>
     <string name="copy_address_to_clipboard">Copiar para a area de transferência</string>
-    <string name="onion_port">Porta Onion</string>
+    <string name="anon_port">Porta Anon</string>
     <string name="local_port">Porta Local</string>
     <string name="vpn_default_world">Global (Automático)</string>
     <string name="apps_mode">Modo VPN</string>
@@ -119,7 +118,7 @@
     <string name="pref_disable_network_summary">Pôr o Anon em modo de latência quando não houver Internet disponível</string>
     <string name="pref_disable_network_title">Sem Rede, Modo de Latência Automática</string>
     <string name="pref_use_expanded_notifications">Mostrar na notificação o país e o endereço IP do nó de saída do seu Anon, quando disponível</string>
-    <string name="hidden_service_request">Uma app quer abrir uma porta no servidor onion %1$s para a rede Anon. É seguro caso confie nesta app.</string>
+    <string name="hidden_service_request">Uma app quer abrir uma porta no servidor anon %1$s para a rede Anon. É seguro caso confie nesta app.</string>
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Ativar os registos de depuração para saída (deve usar adb ou aLogCat para ver)</string>
     <string name="run_as_a_client_behind_a_firewall_with_restrictive_policies">Executar como um cliente atrás de um firewall com políticas restritivas</string>
     <string name="reachable_addresses">Endereços Atingíveis</string>
@@ -153,7 +152,7 @@
     <string name="v3_delete_client_authorization">Exclua a chave de autorização do cliente</string>
     <string name="v3_backup_key_warning">Advertência: Isto pode expor a sua chave a outras aplicações</string>
     <string name="v3_backup_key">Chave de autorização do cliente de backup</string>
-    <string name="v3_onion">Domínio .onion</string>
+    <string name="v3_anon">Domínio .anon</string>
     <string name="v3_key_hash">Chave privada x25519 na Base 32</string>
     <string name="v3_client_auth_activity_title">Autorização do cliente</string>
     <string name="v3_hosted_services">Serviços de Cebola Alojada</string>

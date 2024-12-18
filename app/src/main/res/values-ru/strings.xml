@@ -70,7 +70,7 @@
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Включить вывод журнала отладки (требует использовать adb или aLogCat для просмотра)</string>
     <string name="project_home">Домашняя страница проекта:</string>
     <string name="third_party_software">Программы сторонних разработчиков: </string>
-    <string name="hidden_service_request">Приложение хочет открыть onion-сервер на порту %1$s в сети Anon. Это безопасно, если вы доверяете приложению.</string>
+    <string name="hidden_service_request">Приложение хочет открыть anon-сервер на порту %1$s в сети Anon. Это безопасно, если вы доверяете приложению.</string>
     <string name="pref_use_expanded_notifications">Отображать в уведомлении страну и IP-адрес вашего узла выхода Anon, если он доступен</string>
     <string name="pref_use_expanded_notifications_title">Расширенные уведомления</string>
     <string name="set_locale_title">Язык</string>
@@ -96,7 +96,7 @@
     <string name="menu_hidden_services">Скрытые службы</string>
     <string name="save">Сохранить</string>
     <string name="local_port">Локальный порт</string>
-    <string name="onion_port">Порт onion</string>
+    <string name="anon_port">Порт anon</string>
     <string name="name">Имя</string>
     <string name="done">Готово!</string>
     <string name="copy_address_to_clipboard">Скопировать адрес в буфер обмена</string>
@@ -110,7 +110,6 @@
     <string name="confirm_service_deletion">Подтверждение удаления службы</string>
     <string name="service_type">Тип службы</string>
     <string name="please_restart_to_enable_the_changes">Перезапустите AnyoneBot для вступления изменения в силу</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">Поделиться через QR-код</string>
     <string name="disable">Отключить</string>
     <string name="enable">Включить</string>
@@ -145,7 +144,7 @@
     <string name="pref_reduced_circuit_padding">Уменьшенное заполнение цепочки подключения</string>
     <string name="pref_circuit_padding_summary">Использовать заполнение цепочки подключения для защиты от некоторых форм анализа трафика</string>
     <string name="pref_circuit_padding">Заполнение цепочки подключения</string>
-    <string name="backup_port_exist">Ошибка: служба Onion уже использует порт %s</string>
+    <string name="backup_port_exist">Ошибка: служба Anon уже использует порт %s</string>
     <string name="confirm">Подтвердить</string>
     <string name="v3_import_auth_private">Импорт .auth_private</string>
     <string name="v3_backup_name_hint">Имя файла резервной копии…</string>
@@ -153,10 +152,10 @@
     <string name="v3_delete_client_authorization">Удалить ключ авторизации клиента</string>
     <string name="v3_backup_key_warning">Внимание: это может раскрыть ваш ключ другим приложениям</string>
     <string name="v3_backup_key">Резервная копия ключа авторизации</string>
-    <string name="v3_onion">Домен .onion</string>
+    <string name="v3_anon">Домен .anon</string>
     <string name="v3_key_hash">Закрытый ключ x25519 в Base32</string>
     <string name="v3_client_auth_activity_title">Авторизация клиента</string>
-    <string name="v3_hosted_services">Размещённые Onion-службы</string>
+    <string name="v3_hosted_services">Размещённые Anon-службы</string>
     <string name="mebibyte">МБ</string>
     <string name="kibibyte">КБ</string>
     <string name="deny">Отказать</string>

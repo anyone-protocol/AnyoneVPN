@@ -94,7 +94,7 @@
     <string name="menu_hidden_services">خدمات خفية</string>
     <string name="save">حفظ</string>
     <string name="local_port">المنفذ المحلي</string>
-    <string name="onion_port">منفذ الـ Onion</string>
+    <string name="anon_port">منفذ الـ Anon</string>
     <string name="name">الاسم</string>
     <string name="done">تم !</string>
     <string name="copy_address_to_clipboard">نسخ العنوان إلى الحافظة</string>
@@ -108,7 +108,6 @@
     <string name="confirm_service_deletion">تأكيد حذف الخدمة</string>
     <string name="service_type">نوع الخدمة</string>
     <string name="please_restart_to_enable_the_changes">الرجاء إعادة تشغيل أوربوت لتفعيل التعديلات</string>
-    <string name="onion">.onion</string>
     <string name="share_as_qr">شارك كرمز كيو آر</string>
     <string name="disable">إلغاء</string>
     <string name="enable">تفعيل</string>
@@ -218,7 +217,7 @@
     <string name="pref_open_proxy_on_all_interfaces_summary">اسمح لأقران Wi-Fi والأجهزة المقيدة وأي شخص آخر يمكنه الاتصال بـ IP الخاص بك بالوصول إلى تور</string>
     <string name="pref_http_summary">المنفذ الذي يقدم تور وكيل HTTP عليه (افتراضي: 8118 أو 0 للتعطيل)</string>
     <string name="v3_hosted_services">خدمات البصل المستضافة</string>
-    <string name="v3_onion">نطاق onion.</string>
+    <string name="v3_anon">نطاق anon.</string>
     <string name="v3_backup_key">نسخ احتياطي لمفتاح استيثاق العميل</string>
     <string name="v3_backup_key_warning">تحذير: هذا قد يعرض مفتاحك لتطبيقات أخرى</string>
     <string name="v3_backup_name_hint">نسخ احتياطي لاسم ملف…</string>
