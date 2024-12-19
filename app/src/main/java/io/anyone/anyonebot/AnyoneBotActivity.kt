@@ -23,14 +23,14 @@ import io.anyone.anyonebot.core.putNotSystem
 import io.anyone.anyonebot.core.ui.BaseActivity
 import io.anyone.anyonebot.service.AnyoneBotConstants
 import io.anyone.anyonebot.service.util.Prefs
-import io.anyone.anyonebot.ui.LogBottomSheet
+import io.anyone.anyonebot.ui.LogFragment
 import io.anyone.anyonebot.service.AnyoneBotService
 
 class AnyoneBotActivity : BaseActivity() {
 
     private lateinit var bottomNavigationView: BottomNavigationView
 
-    private lateinit var logBottomSheet: LogBottomSheet
+    private lateinit var fragLog: LogFragment
     lateinit var fragConnect: ConnectFragment
     lateinit var fragMore: MoreFragment
 
@@ -74,7 +74,7 @@ class AnyoneBotActivity : BaseActivity() {
     private fun createAnyoneBot() {
         setContentView(R.layout.activity_anyonebot)
 
-        logBottomSheet = LogBottomSheet()
+        fragLog = LogFragment()
 
         bottomNavigationView = findViewById(R.id.bottom_navigation)
 
@@ -226,7 +226,7 @@ class AnyoneBotActivity : BaseActivity() {
                         fragConnect.setProgress(Integer.parseInt(it))
                     }
                     intent.getStringExtra(AnyoneBotConstants.LOCAL_EXTRA_LOG)?.let {
-                        logBottomSheet.appendLog(it)
+                        fragLog.appendLog(it)
                     }
                 }
 
@@ -248,8 +248,8 @@ class AnyoneBotActivity : BaseActivity() {
     }
 
     fun showLog() {
-        if (!logBottomSheet.isAdded) {
-            logBottomSheet.show(supportFragmentManager, AnyoneBotActivity::class.java.simpleName)
+        if (!fragLog.isAdded) {
+            fragLog.show(supportFragmentManager, AnyoneBotActivity::class.java.simpleName)
         }
     }
 }
