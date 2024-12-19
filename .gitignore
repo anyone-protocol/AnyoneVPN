@@ -38,3 +38,6 @@ OrbotLib/OrbotIPtProxy
 # Fastlane
 /fastlane/report.xml
 /fastlane/README.md
+
+# Release
+release/
