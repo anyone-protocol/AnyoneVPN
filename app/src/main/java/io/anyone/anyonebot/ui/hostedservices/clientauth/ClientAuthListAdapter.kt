@@ -1,49 +1,54 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth
 
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CursorAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.annotation.SuppressLint
+import android.content.ContentValues
+import android.content.Context
+import android.database.Cursor
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.CompoundButton
+import android.widget.CursorAdapter
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.widget.SwitchCompat
+import io.anyone.anyonebot.R
+import io.anyone.anyonebot.databinding.ClientAuthItemBinding
+import io.anyone.anyonebot.utils.getInt
+import io.anyone.anyonebot.utils.getString
 
-import androidx.appcompat.widget.SwitchCompat;
+class ClientAuthListAdapter internal constructor(context: Context, cursor: Cursor?) :
+    CursorAdapter(context, cursor, 0) {
 
-import io.anyone.anyonebot.R;
+    private val mLayoutInflator =
+        context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-public class ClientAuthListAdapter extends CursorAdapter {
-    private final LayoutInflater mLayoutInflator;
-
-    ClientAuthListAdapter(Context context, Cursor cursor) {
-        super(context, cursor, 0);
-        mLayoutInflator = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    override fun newView(context: Context, cursor: Cursor, parent: ViewGroup): View {
+        return ClientAuthItemBinding.inflate(mLayoutInflator, parent, false).root
     }
 
-    @Override
-    public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        return mLayoutInflator.inflate(R.layout.layout_client_cookie_list_item, null);
-    }
+    @SuppressLint("SetTextI18n")
+    override fun bindView(view: View, context: Context, cursor: Cursor) {
 
-    @Override
-    public void bindView(View view, Context context, Cursor cursor) {
-        int id = cursor.getInt(cursor.getColumnIndex(ClientAuthContentProvider.V3ClientAuth._ID));
-        final String where = ClientAuthContentProvider.V3ClientAuth._ID + "=" + id;
-        TextView domain = view.findViewById(R.id.cookie_onion);
-        String url = cursor.getString(cursor.getColumnIndex(ClientAuthContentProvider.V3ClientAuth.DOMAIN)) + ".onion";
-        domain.setText(url);
-        SwitchCompat enabled = view.findViewById(R.id.cookie_switch);
-        enabled.setChecked(cursor.getInt(cursor.getColumnIndex(ClientAuthContentProvider.V3ClientAuth.ENABLED)) == 1);
-        enabled.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            ContentResolver resolver = context.getContentResolver();
-            ContentValues fields = new ContentValues();
-            fields.put(ClientAuthContentProvider.V3ClientAuth.ENABLED, isChecked);
-            resolver.update(ClientAuthContentProvider.CONTENT_URI, fields, where, null);
-            Toast.makeText(context, R.string.please_restart_to_enable_the_changes, Toast.LENGTH_LONG).show();
-        });
+        view.findViewById<TextView>(R.id.tvDomain).text =
+            cursor.getString(ClientAuthContentProvider.ClientAuth.DOMAIN) + context.getString(R.string.anon)
+
+        val enabled = view.findViewById<SwitchCompat>(R.id.swAuth)
+
+        enabled.isChecked = cursor.getInt(ClientAuthContentProvider.ClientAuth.ENABLED) == 1
+
+        enabled.setOnCheckedChangeListener { _: CompoundButton?, isChecked: Boolean ->
+            val fields = ContentValues()
+            fields.put(ClientAuthContentProvider.ClientAuth.ENABLED, isChecked)
+
+            val id = cursor.getInt(ClientAuthContentProvider.ClientAuth.ID)
+
+            context.contentResolver.update(ClientAuthContentProvider.CONTENT_URI, fields,
+                "${ClientAuthContentProvider.ClientAuth.ID} = $id", null)
+
+            Toast.makeText(context, R.string.please_restart_to_enable_the_changes,
+                Toast.LENGTH_LONG).show()
+        }
     }
 }
 

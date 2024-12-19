@@ -16,7 +16,7 @@ import java.io.File
 class HostedServiceDeleteDialogFragment internal constructor(arguments: Bundle?) : DialogFragment() {
 
     init {
-        setArguments(arguments)
+        this.arguments = arguments
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {

@@ -8,13 +8,14 @@ import android.database.Cursor
 import android.net.Uri
 import android.provider.BaseColumns
 import io.anyone.anyonebot.BuildConfig
+import io.anyone.anyonebot.utils.AnyoneBotDatabase
 
 class HostedServicesContentProvider : ContentProvider() {
 
-    private lateinit var mDatabase: HostedServicesDatabase
+    private lateinit var mDatabase: AnyoneBotDatabase
 
     override fun onCreate(): Boolean {
-        mDatabase = HostedServicesDatabase(context)
+        mDatabase = AnyoneBotDatabase(context)
 
         return true
     }
@@ -29,7 +30,8 @@ class HostedServicesContentProvider : ContentProvider() {
             selection = "_id = ${uri.lastPathSegment}"
         }
 
-        return mDatabase.readableDatabase.query(HostedServicesDatabase.HOSTED_SERVICES_TABLE_NAME,
+        return mDatabase.readableDatabase.query(
+            AnyoneBotDatabase.HOSTED_SERVICES_TABLE_NAME,
             projection, selection, selectionArgs, null, null, sortOrder)
     }
 
@@ -44,7 +46,8 @@ class HostedServicesContentProvider : ContentProvider() {
     }
 
     override fun insert(uri: Uri, values: ContentValues?): Uri {
-        val regId = mDatabase.writableDatabase.insert(HostedServicesDatabase.HOSTED_SERVICES_TABLE_NAME,
+        val regId = mDatabase.writableDatabase.insert(
+            AnyoneBotDatabase.HOSTED_SERVICES_TABLE_NAME,
             null, values)
 
         context?.contentResolver?.notifyChange(CONTENT_URI, null)
@@ -59,7 +62,8 @@ class HostedServicesContentProvider : ContentProvider() {
         if (uriMatcher.match(uri) == ANON_ID) {
             selection = "_id = ${uri.lastPathSegment}"
         }
-        val rows = mDatabase.writableDatabase.delete(HostedServicesDatabase.HOSTED_SERVICES_TABLE_NAME,
+        val rows = mDatabase.writableDatabase.delete(
+            AnyoneBotDatabase.HOSTED_SERVICES_TABLE_NAME,
             selection, selectionArgs)
 
         context?.contentResolver?.notifyChange(CONTENT_URI, null)
@@ -75,7 +79,8 @@ class HostedServicesContentProvider : ContentProvider() {
 
         if (uriMatcher.match(uri) == ANON_ID) selection = "_id = ${uri.lastPathSegment}"
 
-        val rows = mDatabase.writableDatabase.update(HostedServicesDatabase.HOSTED_SERVICES_TABLE_NAME,
+        val rows = mDatabase.writableDatabase.update(
+            AnyoneBotDatabase.HOSTED_SERVICES_TABLE_NAME,
             values, selection, null)
 
         context?.contentResolver?.notifyChange(CONTENT_URI, null)

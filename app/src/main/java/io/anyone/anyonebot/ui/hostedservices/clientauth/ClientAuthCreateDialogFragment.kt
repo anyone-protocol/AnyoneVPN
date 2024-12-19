@@ -1,95 +1,80 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.Context;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.app.Dialog
+import android.content.ContentValues
+import android.content.DialogInterface
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.DialogFragment
+import io.anyone.anyonebot.R
+import io.anyone.anyonebot.databinding.DialogAddClientAuthBinding
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.DialogFragment;
+class ClientAuthCreateDialogFragment : DialogFragment() {
 
-import io.anyone.anyonebot.R;
+    private lateinit var mBinding: DialogAddClientAuthBinding
 
-public class ClientAuthCreateDialogFragment extends DialogFragment {
+    private lateinit var inputValidator: TextWatcher
 
-    private EditText etOnionUrl, etKeyHash;
-    private TextWatcher inputValidator;
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        mBinding = DialogAddClientAuthBinding.inflate(layoutInflater)
 
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        final View dialogView = requireActivity().getLayoutInflater().inflate(R.layout.dialog_add_v3_client_auth, null);
-        final AlertDialog ad = new AlertDialog.Builder(getActivity())
-                .setView(dialogView)
-                .setTitle(R.string.v3_client_auth_activity_title)
-                .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
-                .setPositiveButton(R.string.save, (dialog, which) -> doSave(requireContext()))
-                .create();
+        val ad = AlertDialog.Builder(requireContext(), R.style.AlertDialogCustom)
+            .setView(mBinding.root)
+            .setTitle(R.string.v3_client_auth_activity_title)
+            .setNegativeButton(android.R.string.cancel) { dialog: DialogInterface, _: Int ->
+                dialog.dismiss()
+            }
+            .setPositiveButton(R.string.save) { _: DialogInterface?, _: Int ->
+                doSave()
+            }
+            .create()
 
-
-        etOnionUrl = dialogView.findViewById(R.id.cookie_onion);
-        etKeyHash = dialogView.findViewById(R.id.cookie_value);
-
-        inputValidator = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+        inputValidator = object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
             }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
             }
 
-            @Override
-            public void afterTextChanged(Editable s) {
-                ad.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(checkInput());
+            override fun afterTextChanged(s: Editable?) {
+                ad.getButton(AlertDialog.BUTTON_POSITIVE).isEnabled =
+                    sanitizeDomain(mBinding.etDomain.text).matches("([a-z0-9]{56})".toRegex())
+                            && mBinding.etPrivateKey.text?.matches("([A-Z2-7]{52})".toRegex()) == true
             }
-        };
+        }
 
-        etOnionUrl.addTextChangedListener(inputValidator);
-        etKeyHash.addTextChangedListener(inputValidator);
+        mBinding.etDomain.addTextChangedListener(inputValidator)
+        mBinding.etPrivateKey.addTextChangedListener(inputValidator)
 
-        return ad;
+        return ad
     }
 
-    private void doSave(Context context) {
-        String onionName = sanitizeOnionDomainTextField();
-        String hash = etKeyHash.getText().toString();
-        ContentValues fields = new ContentValues();
-        fields.put(ClientAuthContentProvider.V3ClientAuth.DOMAIN, onionName);
-        fields.put(ClientAuthContentProvider.V3ClientAuth.HASH, hash);
-        ContentResolver cr = context.getContentResolver();
-        cr.insert(ClientAuthContentProvider.CONTENT_URI, fields);
-        Toast.makeText(context, R.string.please_restart_to_enable_the_changes, Toast.LENGTH_LONG).show();
+    override fun onStart() {
+        super.onStart()
+
+        inputValidator.afterTextChanged(null)
     }
 
-    private String sanitizeOnionDomainTextField() {
-        String domain = ".onion";
-        String onion = etOnionUrl.getText().toString();
-        if (onion.endsWith(domain))
-            return onion.substring(0, onion.indexOf(domain));
-        return onion;
+    private fun doSave() {
+        val domain = sanitizeDomain(mBinding.etDomain.text)
+        val hash = mBinding.etPrivateKey.text.toString()
+
+        val fields = ContentValues()
+        fields.put(ClientAuthContentProvider.ClientAuth.DOMAIN, domain)
+        fields.put(ClientAuthContentProvider.ClientAuth.HASH, hash)
+
+        context?.contentResolver?.insert(ClientAuthContentProvider.CONTENT_URI, fields)
+
+        Toast.makeText(context, R.string.please_restart_to_enable_the_changes, Toast.LENGTH_LONG)
+            .show()
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        inputValidator.afterTextChanged(null);
-    }
+    private fun sanitizeDomain(domain: Editable?): String {
+        val tld = context?.getString(R.string.anon) ?: ".anon"
 
-    private boolean checkInput() {
-        String onion = sanitizeOnionDomainTextField();
-        if (!onion.matches("([a-z0-9]{56})")) return false;
-        String hash = etKeyHash.getText().toString();
-        return hash.matches("([A-Z2-7]{52})");
+        return if (domain?.endsWith(tld) == true) domain.substring(0, domain.indexOf(tld)) else domain.toString()
     }
-
 }

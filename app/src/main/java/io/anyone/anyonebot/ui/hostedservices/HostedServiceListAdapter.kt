@@ -14,6 +14,8 @@ import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
 import io.anyone.anyonebot.R
 import io.anyone.anyonebot.databinding.HsListItemBinding
+import io.anyone.anyonebot.utils.getInt
+import io.anyone.anyonebot.utils.getString
 
 class HostedServiceListAdapter internal constructor(context: Context, cursor: Cursor?) :
     CursorAdapter(context, cursor, 0) {

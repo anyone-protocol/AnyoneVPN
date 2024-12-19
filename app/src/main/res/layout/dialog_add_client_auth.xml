@@ -9,27 +9,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/anon"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:text="@string/v3_anon"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
 
     <io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText
-        android:id="@+id/cookie_onion"
+        android:id="@+id/etDomain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_main_scene"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="8dp"
         android:text="@string/v3_key_hash"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" />
 
     <io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText
-        android:id="@+id/cookie_value"
+        android:id="@+id/etPrivateKey"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_main_scene"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp" />
 
 </LinearLayout>

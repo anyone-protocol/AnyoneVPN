@@ -74,9 +74,10 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:contentDescription="@string/add_service"
-        android:tint="@android:color/black"
-        app:backgroundTint="@color/accent"
+        android:tint="@color/accent"
+        app:backgroundTint="@android:color/transparent"
         app:fabSize="normal"
+        app:maxImageSize="48dp"
         app:srcCompat="@drawable/ic_add_square" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -15,11 +15,12 @@ import androidx.fragment.app.DialogFragment
 import io.anyone.anyonebot.R
 import io.anyone.anyonebot.core.ClipboardUtils.copyToClipboard
 import io.anyone.anyonebot.core.DiskUtils.createWriteFileIntent
+import io.anyone.anyonebot.utils.BackupUtils
 
 class HostedServiceActionsDialogFragment internal constructor(arguments: Bundle?) : DialogFragment() {
 
     init {
-        setArguments(arguments)
+        this.arguments = arguments
     }
 
     private val mWriteFileLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -94,11 +95,11 @@ class HostedServiceActionsDialogFragment internal constructor(arguments: Bundle?
 
     private fun attemptToWriteBackup(outputFile: Uri?) {
         if (outputFile == null) return
-        if (context == null) return
+        val context = context ?: return
 
         val relativePath = arguments?.getString(HostedServicesActivity.BUNDLE_KEY_PATH) ?: return
-        val v3BackupUtils = V3BackupUtils(context)
-        val backup = v3BackupUtils.createV3ZipBackup(relativePath, outputFile)
+        val backupUtils = BackupUtils(context)
+        val backup = backupUtils.createZipBackup(relativePath, outputFile)
 
         Toast.makeText(context,
             if (backup != null) R.string.backup_saved_at_external_storage else R.string.error,

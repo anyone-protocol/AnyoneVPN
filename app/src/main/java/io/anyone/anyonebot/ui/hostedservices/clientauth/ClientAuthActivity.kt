@@ -1,131 +1,142 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth
 
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
-import android.database.ContentObserver;
-import android.database.Cursor;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Handler;
-import android.provider.OpenableColumns;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.WindowManager;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.content.Context
+import android.database.ContentObserver
+import android.database.Cursor
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.provider.OpenableColumns
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.view.WindowManager
+import android.widget.AdapterView
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import io.anyone.anyonebot.R
+import io.anyone.anyonebot.core.DiskUtils.createReadFileIntent
+import io.anyone.anyonebot.core.DiskUtils.readFileFromInputStream
+import io.anyone.anyonebot.core.LocaleHelper.onAttach
+import io.anyone.anyonebot.databinding.ActivityClientAuthBinding
+import io.anyone.anyonebot.utils.BackupUtils
+import io.anyone.anyonebot.utils.getInt
+import io.anyone.anyonebot.utils.getString
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+class ClientAuthActivity : AppCompatActivity() {
 
-import io.anyone.anyonebot.core.DiskUtils;
-import io.anyone.anyonebot.core.LocaleHelper;
-import io.anyone.anyonebot.ui.hostedservices.V3BackupUtils;
+    private lateinit var mBinding: ActivityClientAuthBinding
 
-import java.util.List;
-import java.util.Objects;
+    private lateinit var mAdapter: ClientAuthListAdapter
 
-import io.anyone.anyonebot.R;
+    private val readBackupLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == RESULT_OK) {
+            val uri = result.data?.data ?: return@registerForActivityResult
 
-public class ClientAuthActivity extends AppCompatActivity {
+            val cursor = contentResolver.query(uri, null, null, null, null)
+            cursor?.moveToFirst()
+            val filename = cursor?.getString(OpenableColumns.DISPLAY_NAME)
+            cursor?.close()
 
-    public static final String BUNDLE_KEY_ID = "_id",
-            BUNDLE_KEY_DOMAIN = "domain",
-            BUNDLE_KEY_HASH = "key_hash_value";
+            if (filename?.endsWith(CLIENT_AUTH_FILE_EXTENSION) != true) {
+                Toast.makeText(this, R.string.error, Toast.LENGTH_LONG).show()
 
-    private ContentResolver mResolver;
-    private ClientAuthListAdapter mAdapter;
-
-    static final String CLIENT_AUTH_FILE_EXTENSION = ".auth_private",
-            CLIENT_AUTH_SAF_MIME_TYPE = "*/*";
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_v3auth);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-
-        setSupportActionBar(findViewById(R.id.toolbar));
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
-        mResolver = getContentResolver();
-        mAdapter = new ClientAuthListAdapter(this, mResolver.query(ClientAuthContentProvider.CONTENT_URI, ClientAuthContentProvider.PROJECTION, null, null, null));
-        mResolver.registerContentObserver(ClientAuthContentProvider.CONTENT_URI, true, new V3ClientAuthContentObserver(new Handler()));
-
-        findViewById(R.id.fab).setOnClickListener(v ->
-                new ClientAuthCreateDialogFragment().show(getSupportFragmentManager(), ClientAuthCreateDialogFragment.class.getSimpleName()));
-
-        ListView auths = findViewById(R.id.auth_hash_list);
-        auths.setAdapter(mAdapter);
-        auths.setOnItemClickListener((parent, view, position, id) -> {
-            Cursor item = (Cursor) parent.getItemAtPosition(position);
-            Bundle args = new Bundle();
-            args.putInt(BUNDLE_KEY_ID, item.getInt(item.getColumnIndex(ClientAuthContentProvider.V3ClientAuth._ID)));
-            args.putString(BUNDLE_KEY_DOMAIN, item.getString(item.getColumnIndex(ClientAuthContentProvider.V3ClientAuth.DOMAIN)));
-            args.putString(BUNDLE_KEY_HASH, item.getString(item.getColumnIndex(ClientAuthContentProvider.V3ClientAuth.HASH)));
-            new ClientAuthActionsDialogFragment(args).show(getSupportFragmentManager(), ClientAuthActionsDialogFragment.class.getSimpleName());
-        });
-    }
-
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_CODE_READ_ZIP_BACKUP && resultCode == RESULT_OK) {
-            Uri uri = data.getData();
-            if (uri != null) {
-                Cursor cursor = getContentResolver().query(uri, null, null, null, null);
-                assert cursor != null;
-                int nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
-                cursor.moveToFirst();
-                String filename = cursor.getString(nameIndex);
-                cursor.close();
-                if (!filename.endsWith(CLIENT_AUTH_FILE_EXTENSION)) {
-                    Toast.makeText(this, R.string.error, Toast.LENGTH_LONG).show();
-                    return;
-                }
-                String authText = DiskUtils.readFileFromInputStream(getContentResolver(), uri);
-                new V3BackupUtils(this).restoreClientAuthBackup(authText);
+                return@registerForActivityResult
             }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-            List<Fragment> frags = getSupportFragmentManager().getFragments();
-            for (Fragment f : frags) f.onActivityResult(requestCode, resultCode, data);
+
+            val authText = readFileFromInputStream(contentResolver, uri)
+            BackupUtils(this).restoreClientAuthBackup(authText)
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(LocaleHelper.onAttach(base));
-    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    private class V3ClientAuthContentObserver extends ContentObserver {
-        V3ClientAuthContentObserver(Handler handler) {
-            super(handler);
+        mBinding = ActivityClientAuthBinding.inflate(layoutInflater)
+
+        setContentView(mBinding.root)
+
+        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+
+        setSupportActionBar(mBinding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        mAdapter = ClientAuthListAdapter(
+            this,
+            contentResolver.query(ClientAuthContentProvider.CONTENT_URI,
+                ClientAuthContentProvider.PROJECTION, null, null, null))
+
+        contentResolver.registerContentObserver(ClientAuthContentProvider.CONTENT_URI,
+            true, V3ClientAuthContentObserver(Handler(Looper.getMainLooper())))
+
+        mBinding.fab.setOnClickListener { _: View? ->
+            ClientAuthCreateDialogFragment().show(
+                supportFragmentManager,
+                ClientAuthCreateDialogFragment::class.java.simpleName)
         }
 
-        @Override
-        public void onChange(boolean selfChange) {
-            mAdapter.changeCursor(mResolver.query(ClientAuthContentProvider.CONTENT_URI, ClientAuthContentProvider.PROJECTION, null, null, null));
-        }
+        mBinding.listClientAuth.adapter = mAdapter
+        mBinding.listClientAuth.emptyView = mBinding.empty
+        mBinding.listClientAuth.onItemClickListener =
+            AdapterView.OnItemClickListener { parent: AdapterView<*>, _: View?, position: Int, _: Long ->
+                val item = parent.getItemAtPosition(position) as Cursor
+                val args = Bundle()
 
+                val id = item.getInt(ClientAuthContentProvider.ClientAuth.ID)
+                if (id != null) {
+                    args.putInt(BUNDLE_KEY_ID, id)
+                }
+
+                args.putString(BUNDLE_KEY_DOMAIN,
+                    item.getString(ClientAuthContentProvider.ClientAuth.DOMAIN))
+
+                args.putString(BUNDLE_KEY_HASH,
+                    item.getString(ClientAuthContentProvider.ClientAuth.HASH))
+
+                ClientAuthActionsDialogFragment(args).show(supportFragmentManager,
+                    ClientAuthActionsDialogFragment::class.java.simpleName)
+            }
     }
 
-    private static final int REQUEST_CODE_READ_ZIP_BACKUP = 12;
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_import_auth_priv) {
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(onAttach(base))
+    }
+
+    private inner class V3ClientAuthContentObserver(handler: Handler?) : ContentObserver(handler) {
+
+        override fun onChange(selfChange: Boolean) {
+            mAdapter.changeCursor(
+                contentResolver.query(
+                    ClientAuthContentProvider.CONTENT_URI,
+                    ClientAuthContentProvider.PROJECTION, null, null, null))
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_import_auth_priv) {
             // unfortunately no good way to filter .auth_private files
-            Intent readFileIntent = DiskUtils.createReadFileIntent(CLIENT_AUTH_SAF_MIME_TYPE);
-            startActivityForResult(readFileIntent, REQUEST_CODE_READ_ZIP_BACKUP);
+            readBackupLauncher.launch(createReadFileIntent(CLIENT_AUTH_SAF_MIME_TYPE))
+
+            return true
         }
-        return super.onOptionsItemSelected(item);
+
+        return super.onOptionsItemSelected(item)
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.v3_client_auth_menu, menu);
-        return true;
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.v3_client_auth_menu, menu)
+
+        return true
+    }
+
+    companion object {
+        const val BUNDLE_KEY_ID: String = "_id"
+        const val BUNDLE_KEY_DOMAIN: String = "domain"
+        const val BUNDLE_KEY_HASH: String = "key_hash_value"
+
+        const val CLIENT_AUTH_FILE_EXTENSION: String = ".auth_private"
+        const val CLIENT_AUTH_SAF_MIME_TYPE: String = "*/*"
     }
 }

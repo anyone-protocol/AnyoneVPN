@@ -1,105 +1,113 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth
 
-import android.content.ContentProvider;
-import android.content.ContentUris;
-import android.content.ContentValues;
-import android.content.UriMatcher;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
-import android.provider.BaseColumns;
+import android.content.ContentProvider
+import android.content.ContentUris
+import android.content.ContentValues
+import android.content.UriMatcher
+import android.database.Cursor
+import android.net.Uri
+import android.provider.BaseColumns
+import io.anyone.anyonebot.BuildConfig
+import io.anyone.anyonebot.utils.AnyoneBotDatabase
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+class ClientAuthContentProvider : ContentProvider() {
+    private lateinit var mDatabase: AnyoneBotDatabase
 
-import java.util.Objects;
+    override fun onCreate(): Boolean {
+        mDatabase = AnyoneBotDatabase(context)
 
-import io.anyone.anyonebot.BuildConfig;
-
-public class ClientAuthContentProvider extends ContentProvider {
-    public static final String[] PROJECTION = {
-            V3ClientAuth._ID,
-            V3ClientAuth.DOMAIN,
-            V3ClientAuth.HASH,
-            V3ClientAuth.ENABLED,
-    };
-    private static final String AUTH = BuildConfig.APPLICATION_ID + ".ui.hostedservices.clientauth";
-    public static final Uri CONTENT_URI = Uri.parse("content://" + AUTH + "/v3auth");
-    private static final int V3AUTHS = 1, V3AUTH_ID = 2;
-
-    private static final UriMatcher uriMatcher;
-
-    static {
-        uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI(AUTH, "v3auth", V3AUTHS);
-        uriMatcher.addURI(AUTH, "v3auth/#", V3AUTH_ID);
+        return true
     }
 
-    private ClientAuthDatabase mDatabase;
-
-    @Override
-    public boolean onCreate() {
-        mDatabase = new ClientAuthDatabase(getContext());
-        return true;
+    override fun getType(uri: Uri): String? {
+        val match = uriMatcher.match(uri)
+        return when (match) {
+            V3AUTHS -> "vnd.android.cursor.dir/vnd.anyone.v3auths"
+            V3AUTH_ID -> "vnd.android.cursor.item/vnd.anyone.v3auth"
+            else -> null
+        }
     }
 
-    @Nullable
-    @Override
-    public String getType(@NonNull Uri uri) {
-        int match = uriMatcher.match(uri);
-        return switch (match) {
-            case V3AUTHS -> "vnd.android.cursor.dir/vnd.torproject.v3auths";
-            case V3AUTH_ID -> "vnd.android.cursor.item/vnd.torproject.v3auth";
-            default -> null;
-        };
+    @Suppress("NAME_SHADOWING")
+    override fun query(uri: Uri, projection: Array<String>?, selection: String?,
+                       selectionArgs: Array<String>?, sortOrder: String?
+    ): Cursor {
+        var selection = selection
+        if (uriMatcher.match(uri) == V3AUTH_ID) selection = "_id = ${uri.lastPathSegment}"
+
+        return mDatabase.readableDatabase.query(
+            AnyoneBotDatabase.CLIENT_AUTHS_TABLE_NAME,
+            projection, selection, selectionArgs, null, null, sortOrder)
     }
 
-    @Nullable
-    @Override
-    public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
-        if (uriMatcher.match(uri) == V3AUTH_ID)
-            selection = "_id=" + uri.getLastPathSegment();
-        SQLiteDatabase db = mDatabase.getReadableDatabase();
-        return db.query(ClientAuthDatabase.DATABASE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
+    override fun insert(uri: Uri, values: ContentValues?): Uri {
+        val regId = mDatabase.writableDatabase.insert(
+            AnyoneBotDatabase.CLIENT_AUTHS_TABLE_NAME,
+            null, values)
+
+        context?.contentResolver?.notifyChange(CONTENT_URI, null)
+
+        return ContentUris.withAppendedId(CONTENT_URI, regId)
     }
 
-    @Nullable
-    @Override
-    public Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
-        SQLiteDatabase db = mDatabase.getWritableDatabase();
-        long regId = db.insert(ClientAuthDatabase.DATABASE_NAME, null, values);
-        Objects.requireNonNull(getContext()).getContentResolver().notifyChange(CONTENT_URI, null);
-        return ContentUris.withAppendedId(CONTENT_URI, regId);
+    @Suppress("NAME_SHADOWING")
+    override fun delete(uri: Uri, selection: String?, selectionArgs: Array<String>?): Int {
+        var selection = selection
+        if (uriMatcher.match(uri) == V3AUTH_ID) selection = "_id = ${uri.lastPathSegment}"
+
+        val rows = mDatabase.writableDatabase.delete(
+            AnyoneBotDatabase.CLIENT_AUTHS_TABLE_NAME,
+            selection, selectionArgs)
+
+        context?.contentResolver?.notifyChange(CONTENT_URI, null)
+
+        return rows
     }
 
-    @Override
-    public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
-        if (uriMatcher.match(uri) == V3AUTH_ID)
-            selection = "_id=" + uri.getLastPathSegment();
-        SQLiteDatabase db = mDatabase.getWritableDatabase();
-        int rows = db.delete(ClientAuthDatabase.DATABASE_NAME, selection, selectionArgs);
-        Objects.requireNonNull(getContext()).getContentResolver().notifyChange(CONTENT_URI, null);
-        return rows;
+    @Suppress("NAME_SHADOWING")
+    override fun update(uri: Uri, values: ContentValues?, selection: String?,
+                        selectionArgs: Array<String>?
+    ): Int {
+        var selection = selection
+        if (uriMatcher.match(uri) == V3AUTH_ID) selection = "id_ = ${uri.lastPathSegment}"
+
+        val rows = mDatabase.writableDatabase.update(
+            AnyoneBotDatabase.CLIENT_AUTHS_TABLE_NAME,
+            values, selection, null)
+
+        context?.contentResolver?.notifyChange(CONTENT_URI, null)
+
+        return rows
     }
 
-    @Override
-    public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
-        SQLiteDatabase db = mDatabase.getWritableDatabase();
-        if (uriMatcher.match(uri) == V3AUTH_ID)
-            selection = "id_=" + uri.getLastPathSegment();
-        int rows = db.update(ClientAuthDatabase.DATABASE_NAME, values, selection, null);
-        Objects.requireNonNull(getContext()).getContentResolver().notifyChange(CONTENT_URI, null);
-        return rows;
+    object ClientAuth : BaseColumns {
+        const val ID: String = "_id"
+        const val DOMAIN: String = "domain"
+        const val HASH: String = "hash"
+        const val ENABLED: String = "enabled"
     }
 
-    public static final class V3ClientAuth implements BaseColumns {
-        private V3ClientAuth() {
-        } // no-op
+    companion object {
+        val PROJECTION: Array<String> = arrayOf(
+            ClientAuth.ID,
+            ClientAuth.DOMAIN,
+            ClientAuth.HASH,
+            ClientAuth.ENABLED,
+        )
 
-        public static final String
-                DOMAIN = "domain",
-                HASH = "hash",
-                ENABLED = "enabled";
+        private const val AUTH = BuildConfig.APPLICATION_ID + ".ui.hostedservices.clientauth"
+
+        @JvmField
+        val CONTENT_URI: Uri = Uri.parse("content://$AUTH/v3auth")
+
+        private const val V3AUTHS = 1
+        private const val V3AUTH_ID = 2
+
+        private val uriMatcher = UriMatcher(UriMatcher.NO_MATCH)
+
+        init {
+            uriMatcher.addURI(AUTH, "v3auth", V3AUTHS)
+            uriMatcher.addURI(AUTH, "v3auth/#", V3AUTH_ID)
+        }
     }
-
 }

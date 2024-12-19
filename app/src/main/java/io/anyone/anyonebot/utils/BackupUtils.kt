@@ -1,180 +1,243 @@
-package io.anyone.anyonebot.ui.hostedservices;
+package io.anyone.anyonebot.utils
 
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
-import android.os.ParcelFileDescriptor;
-import android.provider.OpenableColumns;
-import android.widget.Toast;
+import android.content.ContentValues
+import android.content.Context
+import android.net.Uri
+import android.provider.OpenableColumns
+import android.widget.Toast
+import io.anyone.anyonebot.R
+import io.anyone.anyonebot.service.AnyoneBotConstants
+import io.anyone.anyonebot.service.AnyoneBotService
+import io.anyone.anyonebot.ui.hostedservices.HostedServicesContentProvider
+import io.anyone.anyonebot.ui.hostedservices.clientauth.ClientAuthContentProvider
+import org.json.JSONException
+import org.json.JSONObject
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.FileWriter
+import java.io.IOException
+import java.nio.channels.FileChannel
+import java.nio.charset.Charset
 
-import org.json.JSONException;
-import org.json.JSONObject;
-import io.anyone.anyonebot.service.AnyoneBotConstants;
-import io.anyone.anyonebot.service.AnyoneBotService;
-import io.anyone.anyonebot.ui.hostedservices.clientauth.ClientAuthContentProvider;
+class BackupUtils(private val mContext: Context) {
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
-import java.nio.charset.Charset;
+    private val basePath: File
+        get() = File(mContext.filesDir.absolutePath, AnyoneBotConstants.ANON_SERVICES_DIR)
 
-import io.anyone.anyonebot.R;
 
-public class V3BackupUtils {
-    private static final String configFileName = "config.json";
-    private final Context mContext;
-    private final ContentResolver mResolver;
+    fun createZipBackup(relativePath: String, zipFile: Uri): String? {
+        val files = createFilesForZipping(relativePath) ?: return null
 
-    public V3BackupUtils(Context context) {
-        mContext = context;
-        mResolver = mContext.getContentResolver();
+        val zip = ZipUtils(files, zipFile, mContext.contentResolver)
+
+        if (!zip.canZip()) return null
+
+        return zipFile.path
     }
 
-    public String createV3ZipBackup(String relativePath, Uri zipFile) {
-        String[] files = createFilesForZippingV3(relativePath);
-        ZipUtilities zip = new ZipUtilities(files, zipFile, mResolver);
-        if (!zip.zip()) return null;
-        return zipFile.getPath();
-    }
+    fun createAuthBackup(domain: String?, keyHash: String?, backupFile: Uri): String? {
+        val fileText = AnyoneBotService.buildV3ClientAuthFile(domain, keyHash)
 
-    public String createV3AuthBackup(String domain, String keyHash, Uri backupFile) {
-        String fileText = AnyoneBotService.buildV3ClientAuthFile(domain, keyHash);
         try {
-            ParcelFileDescriptor pfd = mContext.getContentResolver().openFileDescriptor(backupFile, "w");
-            assert pfd != null;
-            FileOutputStream fos = new FileOutputStream(pfd.getFileDescriptor());
-            fos.write(fileText.getBytes());
-            fos.close();
-            pfd.close();
-        } catch (IOException ioe) {
-            return null;
+            val pfd = mContext.contentResolver.openFileDescriptor(backupFile, "w") ?: return null
+            val fos = FileOutputStream(pfd.fileDescriptor)
+            fos.write(fileText.toByteArray())
+            fos.close()
+            pfd.close()
         }
-        return backupFile.getPath();
+        catch (ioe: IOException) {
+            return null
+        }
+
+        return backupFile.path
     }
 
     // todo this doesn't export data for onions that orbot hosts which have authentication (not supported yet...)
-    private String[] createFilesForZippingV3(String relativePath) {
-        final String v3BasePath = getV3BasePath() + "/" + relativePath + "/";
-        final String hostnamePath = v3BasePath + "hostname",
-                configFilePath = v3BasePath + configFileName,
-                privKeyPath = v3BasePath + "hs_ed25519_secret_key",
-                pubKeyPath = v3BasePath + "hs_ed25519_public_key";
+    private fun createFilesForZipping(relativePath: String): Array<String>? {
+        val basePath = "$basePath/$relativePath/"
+        val hostnamePath = "${basePath}hostname"
+        val configFilePath = "$basePath$CONFIG_FILE_NAME"
+        val privKeyPath = "${basePath}hs_ed25519_secret_key"
+        val pubKeyPath = "${basePath}hs_ed25519_public_key"
 
-        Cursor portData = mResolver.query(HostedServicesContentProvider.CONTENT_URI, HostedServicesContentProvider.PROJECTION,
-                HostedServicesContentProvider.HostedService.PATH + "=\"" + relativePath + "\"", null, null);
+        val portData = mContext.contentResolver.query(
+            HostedServicesContentProvider.CONTENT_URI,
+            HostedServicesContentProvider.PROJECTION,
+            "${HostedServicesContentProvider.HostedService.PATH} = \"$relativePath\"",
+            null,
+            null
+        )
 
-        JSONObject config = new JSONObject();
+        val config = JSONObject()
         try {
-            if (portData == null || portData.getCount() != 1)
-                return null;
-            portData.moveToNext();
+            if (portData == null || portData.count != 1) return null
 
+            portData.moveToNext()
 
-            config.put(HostedServicesContentProvider.HostedService.NAME, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.NAME)));
-            config.put(HostedServicesContentProvider.HostedService.PORT, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.PORT)));
-            config.put(HostedServicesContentProvider.HostedService.ANON_PORT, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.ANON_PORT)));
-            config.put(HostedServicesContentProvider.HostedService.DOMAIN, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.DOMAIN)));
-            config.put(HostedServicesContentProvider.HostedService.CREATED_BY_USER, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.CREATED_BY_USER)));
-            config.put(HostedServicesContentProvider.HostedService.ENABLED, portData.getString(portData.getColumnIndex(HostedServicesContentProvider.HostedService.ENABLED)));
+            config.put(
+                HostedServicesContentProvider.HostedService.NAME,
+                portData.getString(HostedServicesContentProvider.HostedService.NAME))
 
-            portData.close();
+            config.put(
+                HostedServicesContentProvider.HostedService.PORT,
+                portData.getString(HostedServicesContentProvider.HostedService.PORT))
 
-            FileWriter fileWriter = new FileWriter(configFilePath);
-            fileWriter.write(config.toString());
-            fileWriter.close();
-        } catch (JSONException | IOException ioe) {
-            ioe.printStackTrace();
-            return null;
+            config.put(
+                HostedServicesContentProvider.HostedService.ANON_PORT,
+                portData.getString(HostedServicesContentProvider.HostedService.ANON_PORT))
+
+            config.put(
+                HostedServicesContentProvider.HostedService.DOMAIN,
+                portData.getString(HostedServicesContentProvider.HostedService.DOMAIN))
+
+            config.put(
+                HostedServicesContentProvider.HostedService.CREATED_BY_USER,
+                portData.getString(HostedServicesContentProvider.HostedService.CREATED_BY_USER))
+
+            config.put(
+                HostedServicesContentProvider.HostedService.ENABLED,
+                portData.getString(HostedServicesContentProvider.HostedService.ENABLED))
+
+            portData.close()
+
+            val fileWriter = FileWriter(configFilePath)
+            fileWriter.write(config.toString())
+            fileWriter.close()
+        }
+        catch (ioe: JSONException) {
+            ioe.printStackTrace()
+            return null
+        }
+        catch (ioe: IOException) {
+            ioe.printStackTrace()
+            return null
         }
 
-        return new String[]{hostnamePath, configFilePath, privKeyPath, pubKeyPath};
+        return arrayOf(hostnamePath, configFilePath, privKeyPath, pubKeyPath)
     }
 
-    private void extractConfigFromUnzippedBackupV3(String backupName) {
-        File v3BasePath = getV3BasePath();
-        String v3Dir = backupName.substring(0, backupName.lastIndexOf('.'));
-        String configFilePath = v3BasePath + "/" + v3Dir + "/" + configFileName;
-        File v3Path = new File(v3BasePath.getAbsolutePath(), v3Dir);
-        if (!v3Path.isDirectory()) v3Path.mkdirs();
+    private fun extractConfigFromUnzippedBackup(backupName: String) {
+        val basePath = basePath
+        val dir = backupName.substring(0, backupName.lastIndexOf('.'))
+        val configFilePath = "$basePath/$dir/$CONFIG_FILE_NAME"
 
-        File configFile = new File(configFilePath);
+        val path = File(basePath.absolutePath, dir)
+        if (!path.isDirectory) path.mkdirs()
+
+        val configFile = File(configFilePath)
+
         try {
-            FileInputStream fis = new FileInputStream(configFile);
-            FileChannel fc = fis.getChannel();
-            MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size());
-            String jsonString = Charset.defaultCharset().decode(bb).toString();
-            JSONObject savedValues = new JSONObject(jsonString);
-            ContentValues fields = new ContentValues();
+            val fis = FileInputStream(configFile)
+            val fc = fis.channel
+            val bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size())
+            val jsonString = Charset.defaultCharset().decode(bb).toString()
+            val savedValues = JSONObject(jsonString)
+            val fields = ContentValues()
 
-            int port = savedValues.getInt(HostedServicesContentProvider.HostedService.PORT);
-            fields.put(HostedServicesContentProvider.HostedService.PORT, port);
-            fields.put(HostedServicesContentProvider.HostedService.NAME, savedValues.getString(HostedServicesContentProvider.HostedService.NAME));
-            fields.put(HostedServicesContentProvider.HostedService.ANON_PORT, savedValues.getInt(HostedServicesContentProvider.HostedService.ANON_PORT));
-            fields.put(HostedServicesContentProvider.HostedService.DOMAIN, savedValues.getString(HostedServicesContentProvider.HostedService.DOMAIN));
-            fields.put(HostedServicesContentProvider.HostedService.CREATED_BY_USER, savedValues.getInt(HostedServicesContentProvider.HostedService.CREATED_BY_USER));
-            fields.put(HostedServicesContentProvider.HostedService.ENABLED, savedValues.getInt(HostedServicesContentProvider.HostedService.ENABLED));
+            val port = savedValues.getInt(HostedServicesContentProvider.HostedService.PORT)
+            fields.put(HostedServicesContentProvider.HostedService.PORT, port)
 
-            Cursor dbService = mResolver.query(HostedServicesContentProvider.CONTENT_URI, HostedServicesContentProvider.PROJECTION,
-                    HostedServicesContentProvider.HostedService.PORT + "=" + port, null, null);
-            if (dbService == null || dbService.getCount() == 0)
-                mResolver.insert(HostedServicesContentProvider.CONTENT_URI, fields);
-            else
-                mResolver.update(HostedServicesContentProvider.CONTENT_URI, fields, HostedServicesContentProvider.HostedService.PORT + "=" + port, null);
-            dbService.close();
+            fields.put(
+                HostedServicesContentProvider.HostedService.NAME,
+                savedValues.getString(HostedServicesContentProvider.HostedService.NAME))
 
-            configFile.delete();
-            if (v3Path.renameTo(new File(v3BasePath, "/v3" + port))) {
-                Toast.makeText(mContext, R.string.backup_restored, Toast.LENGTH_LONG).show();
-            } else {
-                // collision, clean up files
-                for (File file: v3Path.listFiles())
-                    file.delete();
-                v3Path.delete();
-                Toast.makeText(mContext, mContext.getString(R.string.backup_port_exist, ("" + port)), Toast.LENGTH_LONG).show();
+            fields.put(
+                HostedServicesContentProvider.HostedService.ANON_PORT,
+                savedValues.getInt(HostedServicesContentProvider.HostedService.ANON_PORT))
+
+            fields.put(
+                HostedServicesContentProvider.HostedService.DOMAIN,
+                savedValues.getString(HostedServicesContentProvider.HostedService.DOMAIN))
+
+            fields.put(
+                HostedServicesContentProvider.HostedService.CREATED_BY_USER,
+                savedValues.getInt(HostedServicesContentProvider.HostedService.CREATED_BY_USER))
+
+            fields.put(
+                HostedServicesContentProvider.HostedService.ENABLED,
+                savedValues.getInt(HostedServicesContentProvider.HostedService.ENABLED))
+
+            val dbService = mContext.contentResolver.query(
+                HostedServicesContentProvider.CONTENT_URI, HostedServicesContentProvider.PROJECTION,
+                "${HostedServicesContentProvider.HostedService.PORT} = $port", null, null)
+
+            if (dbService == null || dbService.count == 0) {
+                mContext.contentResolver.insert(HostedServicesContentProvider.CONTENT_URI, fields)
             }
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            Toast.makeText(mContext, R.string.error, Toast.LENGTH_LONG).show();
+            else {
+                mContext.contentResolver.update(
+                    HostedServicesContentProvider.CONTENT_URI, fields,
+                    "${HostedServicesContentProvider.HostedService.PORT} = $port", null)
+            }
+
+            dbService?.close()
+
+            configFile.delete()
+
+            if (path.renameTo(File(basePath, "/v3$port"))) {
+                Toast.makeText(mContext, R.string.backup_restored, Toast.LENGTH_LONG).show()
+            }
+            else {
+                // collision, clean up files
+                for (file in path.listFiles() ?: emptyArray()) {
+                    file.delete()
+                }
+
+                path.delete()
+
+                Toast.makeText(mContext, mContext.getString(R.string.backup_port_exist, ("" + port)),
+                    Toast.LENGTH_LONG).show()
+            }
+        }
+        catch (e: IOException) {
+            e.printStackTrace()
+            Toast.makeText(mContext, R.string.error, Toast.LENGTH_LONG).show()
+        }
+        catch (e: JSONException) {
+            e.printStackTrace()
+            Toast.makeText(mContext, R.string.error, Toast.LENGTH_LONG).show()
         }
     }
 
-    private File getV3BasePath() {
-        return new File(mContext.getFilesDir().getAbsolutePath(), AnyoneBotConstants.ANON_SERVICES_DIR);
-    }
+    fun restoreZipBackup(zipUri: Uri) {
+        val cursor = mContext.contentResolver.query(zipUri, null, null, null, null) ?: return
 
-    public void restoreZipBackupV3(Uri zipUri) {
-        Cursor returnCursor = mResolver.query(zipUri, null, null, null, null);
-        assert returnCursor != null;
-        int nameIndex = returnCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
-        returnCursor.moveToFirst();
-        String backupName = returnCursor.getString(nameIndex);
-        returnCursor.close();
+        cursor.moveToFirst()
+        val backupName = cursor.getString(OpenableColumns.DISPLAY_NAME)
+        cursor.close()
 
-        String v3Dir = backupName.substring(0, backupName.lastIndexOf('.'));
-        File v3Path = new File(getV3BasePath().getAbsolutePath(), v3Dir);
-        if (new ZipUtilities(null, zipUri, mResolver).unzip(v3Path.getAbsolutePath()))
-            extractConfigFromUnzippedBackupV3(backupName);
-        else
-            Toast.makeText(mContext, R.string.error, Toast.LENGTH_LONG).show();
-    }
+        if (backupName.isNullOrBlank()) return
 
-    public void restoreClientAuthBackup(String authFileContents) {
-        ContentValues fields = new ContentValues();
-        String[] split = authFileContents.split(":");
-        if (split.length != 4) {
-            Toast.makeText(mContext, R.string.error, Toast.LENGTH_LONG).show();
-            return;
+        val dir = backupName.substring(0, backupName.lastIndexOf('.'))
+        val path = File(basePath.absolutePath, dir)
+
+        if (ZipUtils(emptyArray(), zipUri, mContext.contentResolver).unzip(path.absolutePath)) {
+            extractConfigFromUnzippedBackup(backupName)
         }
-        fields.put(ClientAuthContentProvider.   V3ClientAuth.DOMAIN, split[0]);
-        fields.put(ClientAuthContentProvider.V3ClientAuth.HASH, split[3]);
-        mResolver.insert(ClientAuthContentProvider.CONTENT_URI, fields);
-        Toast.makeText(mContext, R.string.backup_restored, Toast.LENGTH_LONG).show();
+        else {
+            Toast.makeText(mContext, R.string.error, Toast.LENGTH_LONG).show()
+        }
     }
 
+    fun restoreClientAuthBackup(authFileContents: String) {
+        val split = authFileContents.split(":").dropLastWhile { it.isEmpty() }.toTypedArray()
+
+        if (split.size != 4) {
+            Toast.makeText(mContext, R.string.error, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val fields = ContentValues()
+        fields.put(ClientAuthContentProvider.ClientAuth.DOMAIN, split[0])
+        fields.put(ClientAuthContentProvider.ClientAuth.HASH, split[3])
+
+        mContext.contentResolver.insert(ClientAuthContentProvider.CONTENT_URI, fields)
+
+        Toast.makeText(mContext, R.string.backup_restored, Toast.LENGTH_LONG).show()
+    }
+
+    companion object {
+        private const val CONFIG_FILE_NAME = "config.json"
+    }
 }

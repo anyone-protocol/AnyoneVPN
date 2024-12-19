@@ -1,37 +1,36 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.os.Bundle;
+import android.app.Dialog
+import android.content.DialogInterface
+import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.DialogFragment
+import io.anyone.anyonebot.R
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
+class ClientAuthDeleteDialogFragment(args: Bundle?) : DialogFragment() {
 
-import io.anyone.anyonebot.R;
-
-public class ClientAuthDeleteDialogFragment extends DialogFragment {
-
-    public ClientAuthDeleteDialogFragment() {}
-    public ClientAuthDeleteDialogFragment(Bundle args) {
-        super();
-        setArguments(args);
+    init {
+        arguments = args
     }
 
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        return new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.v3_delete_client_authorization)
-                .setPositiveButton(R.string.v3_delete_client_authorization_confirm, (dialog, which) -> doDelete())
-                .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
-                .create();
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        return AlertDialog.Builder(requireContext(), R.style.AlertDialogCustom)
+            .setTitle(R.string.v3_delete_client_authorization)
+            .setPositiveButton(R.string.v3_delete_client_authorization_confirm) { _: DialogInterface?, _: Int ->
+                doDelete()
+            }
+            .setNegativeButton(android.R.string.cancel) { dialog: DialogInterface, _: Int ->
+                dialog.dismiss()
+            }
+            .create()
     }
 
-    private void doDelete() {
-        assert getArguments() != null;
-        int id = getArguments().getInt(ClientAuthActivity.BUNDLE_KEY_ID);
-        requireContext().getContentResolver().delete(ClientAuthContentProvider.CONTENT_URI, ClientAuthContentProvider.V3ClientAuth._ID + "=" + id, null);
-    }
+    private fun doDelete() {
+        val id = arguments?.getInt(ClientAuthActivity.BUNDLE_KEY_ID)
 
+        context?.contentResolver?.delete(
+            ClientAuthContentProvider.CONTENT_URI,
+            "${ClientAuthContentProvider.ClientAuth.ID} = $id",
+            null)
+    }
 }

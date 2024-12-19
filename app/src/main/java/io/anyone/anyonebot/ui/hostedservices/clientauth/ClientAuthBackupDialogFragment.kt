@@ -1,129 +1,134 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.Toast;
+import android.app.Activity
+import android.app.Dialog
+import android.content.DialogInterface
+import android.net.Uri
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.DialogFragment
+import io.anyone.anyonebot.R
+import io.anyone.anyonebot.core.DiskUtils.createWriteFileIntent
+import io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText
+import io.anyone.anyonebot.utils.BackupUtils
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.DialogFragment;
+class ClientAuthBackupDialogFragment(args: Bundle?) : DialogFragment() {
 
-import io.anyone.anyonebot.core.DiskUtils;
-import io.anyone.anyonebot.core.ui.NoPersonalizedLearningEditText;
-import io.anyone.anyonebot.ui.hostedservices.V3BackupUtils;
+    private lateinit var etFilename: NoPersonalizedLearningEditText
+    private lateinit var fileNameTextWatcher: TextWatcher
 
-import java.util.Objects;
+    private val writeFileLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val data = result.data?.data ?: return@registerForActivityResult
 
-import io.anyone.anyonebot.R;
-
-public class ClientAuthBackupDialogFragment extends DialogFragment {
-
-    private NoPersonalizedLearningEditText etFilename;
-    private TextWatcher fileNameTextWatcher;
-
-    private static final String BUNDLE_KEY_FILENAME = "filename";
-
-    public ClientAuthBackupDialogFragment() {
-    }
-
-    public ClientAuthBackupDialogFragment(Bundle args) {
-        super();
-        setArguments(args);
-    }
-
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog ad = new AlertDialog.Builder(getContext())
-                .setTitle(R.string.v3_backup_key)
-                .setMessage(R.string.v3_backup_key_warning)
-                .setPositiveButton(R.string.confirm, null)
-                .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
-                .create();
-        ad.setOnShowListener(dialog -> ad.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> doBackup()));
-        FrameLayout container = new FrameLayout(ad.getContext());
-        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        int margin = getResources().getDimensionPixelOffset(R.dimen.alert_dialog_margin);
-        params.leftMargin = margin;
-        params.rightMargin = margin;
-        etFilename = new NoPersonalizedLearningEditText(ad.getContext(), null);
-        etFilename.setSingleLine(true);
-        etFilename.setHint(R.string.v3_backup_name_hint);
-        if (savedInstanceState != null)
-            etFilename.setText(savedInstanceState.getString(BUNDLE_KEY_FILENAME, ""));
-        fileNameTextWatcher = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                ad.getButton(DialogInterface.BUTTON_POSITIVE).setEnabled(!TextUtils.isEmpty(s.toString().trim()));
-            }
-        };
-        etFilename.addTextChangedListener(fileNameTextWatcher);
-        etFilename.setLayoutParams(params);
-        container.addView(etFilename);
-        ad.setView(container);
-        return ad;
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString(BUNDLE_KEY_FILENAME, Objects.requireNonNull(etFilename.getText()).toString());
-    }
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        fileNameTextWatcher.afterTextChanged(etFilename.getEditableText());
-    }
-
-
-
-    private void doBackup() {
-        String filename = Objects.requireNonNull(etFilename.getText()).toString().trim();
-        if (!filename.endsWith(ClientAuthActivity.CLIENT_AUTH_FILE_EXTENSION))
-            filename += ClientAuthActivity.CLIENT_AUTH_FILE_EXTENSION;
-            Intent createFileIntent = DiskUtils.createWriteFileIntent(filename, ClientAuthActivity.CLIENT_AUTH_SAF_MIME_TYPE);
-            requireActivity().startActivityForResult(createFileIntent, REQUEST_CODE_WRITE_FILE);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_CODE_WRITE_FILE && resultCode == Activity.RESULT_OK) {
-            if (data != null) {
-                attemptToWriteBackup(data.getData());
-            }
+            attemptToWriteBackup(data)
         }
     }
 
-    private void attemptToWriteBackup(Uri outputFile) {
-        V3BackupUtils v3BackupUtils = new V3BackupUtils(getContext());
-        assert getArguments() != null;
-        String domain = getArguments().getString(ClientAuthActivity.BUNDLE_KEY_DOMAIN);
-        String hash = getArguments().getString(ClientAuthActivity.BUNDLE_KEY_HASH);
-        String backup = v3BackupUtils.createV3AuthBackup(domain, hash, outputFile);
-        Toast.makeText(getContext(), backup != null ? R.string.backup_saved_at_external_storage : R.string.error, Toast.LENGTH_LONG).show();
-        dismiss();
+    init {
+        arguments = args
     }
 
-    private static final int REQUEST_CODE_WRITE_FILE = 432;
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val ad = AlertDialog.Builder(requireContext(), R.style.AlertDialogCustom)
+            .setTitle(R.string.v3_backup_key)
+            .setMessage(R.string.v3_backup_key_warning)
+            .setPositiveButton(R.string.confirm, null)
+            .setNegativeButton(android.R.string.cancel) { dialog: DialogInterface, _: Int ->
+                dialog.dismiss()
+            }
+            .create()
+
+        ad.setOnShowListener {
+            ad.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                doBackup()
+            }
+        }
+
+        val container = FrameLayout(ad.context)
+        val params = FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT)
+
+        val margin = resources.getDimensionPixelOffset(R.dimen.alert_dialog_margin)
+        params.leftMargin = margin
+        params.rightMargin = margin
+
+        etFilename = NoPersonalizedLearningEditText(ad.context, null)
+        etFilename.isSingleLine = true
+        etFilename.setHint(R.string.v3_backup_name_hint)
+
+        if (savedInstanceState != null) {
+            etFilename.setText(savedInstanceState.getString(BUNDLE_KEY_FILENAME, ""))
+        }
+
+        fileNameTextWatcher = object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                ad.getButton(DialogInterface.BUTTON_POSITIVE).isEnabled = !s.isNullOrBlank()
+            }
+        }
+
+        etFilename.addTextChangedListener(fileNameTextWatcher)
+        etFilename.layoutParams = params
+        container.addView(etFilename)
+
+        ad.setView(container)
+
+        return ad
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString(BUNDLE_KEY_FILENAME, etFilename.text.toString())
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+
+        fileNameTextWatcher.afterTextChanged(etFilename.editableText)
+    }
+
+
+    private fun doBackup() {
+        var filename = etFilename.text.toString().trim()
+
+        if (!filename.endsWith(ClientAuthActivity.CLIENT_AUTH_FILE_EXTENSION)) {
+            filename += ClientAuthActivity.CLIENT_AUTH_FILE_EXTENSION
+        }
+
+        writeFileLauncher.launch(createWriteFileIntent(filename, ClientAuthActivity.CLIENT_AUTH_SAF_MIME_TYPE))
+    }
+
+    private fun attemptToWriteBackup(outputFile: Uri) {
+        val context = context ?: return
+
+        val backupUtils = BackupUtils(context)
+
+        val domain = arguments?.getString(ClientAuthActivity.BUNDLE_KEY_DOMAIN) ?: return
+        val hash = arguments?.getString(ClientAuthActivity.BUNDLE_KEY_HASH) ?: return
+        val backup = backupUtils.createAuthBackup(domain, hash, outputFile)
+
+        Toast.makeText(context,
+            if (backup != null) R.string.backup_saved_at_external_storage else R.string.error,
+            Toast.LENGTH_LONG).show()
+
+        dismiss()
+    }
+
+    companion object {
+        private const val BUNDLE_KEY_FILENAME = "filename"
+    }
 }

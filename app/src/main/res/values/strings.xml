@@ -232,4 +232,8 @@
 
     <!-- HostedServicesActivity -->
     <string name="add_service">Add Service</string>
+
+    <!-- ClientAuthActivity -->
+    <string name="add_client_auth">Add Client Authentication</string>
+    <string name="there_s_no_current_authorization">There\'s no current authorization</string>
 </resources>

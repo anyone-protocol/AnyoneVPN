@@ -19,6 +19,10 @@ import io.anyone.anyonebot.core.LocaleHelper.onAttach
 import io.anyone.anyonebot.databinding.ActivityHostedServicesBinding
 import io.anyone.anyonebot.ui.hostedservices.PermissionManager.requestBatteryPermissions
 import io.anyone.anyonebot.ui.hostedservices.PermissionManager.requestDropBatteryPermissions
+import io.anyone.anyonebot.utils.BackupUtils
+import io.anyone.anyonebot.utils.ZipUtils
+import io.anyone.anyonebot.utils.getInt
+import io.anyone.anyonebot.utils.getString
 
 class HostedServicesActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -28,7 +32,9 @@ class HostedServicesActivity : AppCompatActivity(), View.OnClickListener {
 
     private val mReadBackupLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
-            V3BackupUtils(this).restoreZipBackupV3(result.data?.data)
+            val uri = result.data?.data ?: return@registerForActivityResult
+
+            BackupUtils(this).restoreZipBackup(uri)
         }
     }
 
@@ -133,7 +139,7 @@ class HostedServicesActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.menu_restore_backup) {
-            mReadBackupLauncher.launch(createReadFileIntent(ZipUtilities.ZIP_MIME_TYPE))
+            mReadBackupLauncher.launch(createReadFileIntent(ZipUtils.ZIP_MIME_TYPE))
         }
 
         return super.onOptionsItemSelected(item)

@@ -1,42 +1,51 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth;
+package io.anyone.anyonebot.ui.hostedservices.clientauth
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.os.Bundle;
-import android.text.Html;
+import android.app.Dialog
+import android.content.DialogInterface
+import android.os.Bundle
+import android.text.Html
+import android.view.View
+import android.widget.AdapterView
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.DialogFragment
+import io.anyone.anyonebot.R
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.DialogFragment;
+class ClientAuthActionsDialogFragment(args: Bundle?) : DialogFragment() {
 
-import io.anyone.anyonebot.R;
-
-public class ClientAuthActionsDialogFragment extends DialogFragment {
-
-    public ClientAuthActionsDialogFragment() {}
-
-    public ClientAuthActionsDialogFragment(Bundle args) {
-        super();
-        setArguments(args);
+    init {
+        arguments = args
     }
 
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog ad = new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.v3_client_auth_activity_title)
-                .setItems(new CharSequence[]{
-                        Html.fromHtml(getString(R.string.v3_backup_key), Html.FROM_HTML_MODE_LEGACY),
-                        getString(R.string.v3_delete_client_authorization)
-                }, null)
-                .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
-                .create();
-        ad.getListView().setOnItemClickListener((parent, view, position, id) -> {
-            if (position == 0)
-                new ClientAuthBackupDialogFragment(getArguments()).show(requireActivity().getSupportFragmentManager(), ClientAuthBackupDialogFragment.class.getSimpleName());
-            else
-                new ClientAuthDeleteDialogFragment(getArguments()).show(requireActivity().getSupportFragmentManager(), ClientAuthDeleteDialogFragment.class.getSimpleName());
-            ad.dismiss();
-        });
-        return ad;
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val ad = AlertDialog.Builder(requireContext(), R.style.AlertDialogCustom)
+            .setTitle(io.anyone.anyonebot.R.string.v3_client_auth_activity_title)
+            .setItems(
+                arrayOf(
+                    Html.fromHtml(getString(io.anyone.anyonebot.R.string.v3_backup_key), Html.FROM_HTML_MODE_LEGACY),
+                    getString(R.string.v3_delete_client_authorization)
+                ), null
+            )
+            .setNegativeButton(android.R.string.cancel) { dialog: DialogInterface, _: Int ->
+                dialog.dismiss()
+            }
+            .create()
+
+        ad.listView.onItemClickListener =
+            AdapterView.OnItemClickListener { _: AdapterView<*>?, _: View?, position: Int, _: Long ->
+                val fm = activity?.supportFragmentManager ?: return@OnItemClickListener
+
+                if (position == 0) {
+                    ClientAuthBackupDialogFragment(arguments).show(fm,
+                        ClientAuthBackupDialogFragment::class.java.simpleName)
+                }
+                else {
+                    ClientAuthDeleteDialogFragment(arguments).show(fm,
+                        ClientAuthDeleteDialogFragment::class.java.simpleName)
+                }
+
+                ad.dismiss()
+            }
+
+        return ad
     }
 }

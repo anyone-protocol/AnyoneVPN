@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.hostedservices
+package io.anyone.anyonebot.utils
 
 import android.database.Cursor
 
