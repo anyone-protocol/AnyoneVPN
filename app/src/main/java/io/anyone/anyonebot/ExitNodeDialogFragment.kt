@@ -1,58 +1,36 @@
 package io.anyone.anyonebot
 
-import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-import io.anyone.anyonebot.service.util.Prefs
 import io.anyone.anyonebot.service.util.Utils
 import java.text.Collator
 import java.util.*
 
 class ExitNodeDialogFragment(private val callback: ExitNodeSelectedCallback) : DialogFragment() {
 
-
     interface ExitNodeSelectedCallback {
         fun onExitNodeSelected(countryCode: String, displayCountryName: String)
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val currentExit = Prefs.getExitNodes().replace("\\{", "").replace("\\}", "")
-        val sortedCountries = TreeMap<String, Locale>(Collator.getInstance())
-        COUNTRY_CODES.forEach {
-            val locale = Locale("", it)
-            sortedCountries[locale.displayCountry] = locale
-        }
+        val countries = COUNTRY_CODES
+            .map { Locale("", it) }
+            .sortedWith(compareBy(Collator.getInstance()) { it.displayCountry } )
 
-        val globe = getString(R.string.globe)
+        val items = mutableListOf("${getString(R.string.globe)} ${getString(R.string.vpn_default_world)}")
+        items.addAll(countries.map {
+            "${Utils.convertCountryCodeToFlagEmoji(it.country)} ${it.displayCountry}"
+        })
 
-        val array = arrayOfNulls<String>(COUNTRY_CODES.size + 1)
-        array[0] = "$globe " + getString(R.string.vpn_default_world)
-        sortedCountries.keys.forEachIndexed { index, displayCountry ->
-            array[index + 1] =
-                Utils.convertCountryCodeToFlagEmoji(sortedCountries[displayCountry]!!.country) +
-                        " " + displayCountry
-        }
-
-        return AlertDialog.Builder(context)
-            .setNegativeButton(android.R.string.cancel) { d, _ -> d.dismiss() }
+        return AlertDialog.Builder(requireContext(), R.style.AlertDialogCustom)
             .setTitle(R.string.btn_change_exit)
-            .setItems(array) { _, pos ->
-                var country = ""
-                when (pos) {
-                    0 -> {} // global
-                    else -> {
-                        var i = 1
-                        for (code in sortedCountries.keys) {
-                            if (i == pos) {
-                                country = sortedCountries[code]!!.country
-                                break
-                            }
-                            i++
-                        }
-                    }
-                }
-                callback.onExitNodeSelected(country, array[pos]!!)
+            .setNegativeButton(android.R.string.cancel) { d, _ ->
+                d.dismiss()
+            }
+            .setItems(items.toTypedArray()) { _, pos ->
+                callback.onExitNodeSelected(if (pos < 1) "" else countries[pos - 1].country, items[pos])
             }
             .create()
     }
@@ -84,6 +62,5 @@ class ExitNodeDialogFragment(private val callback: ExitNodeSelectedCallback) : D
             "SG",
             "SK"
         )
-
     }
 }
