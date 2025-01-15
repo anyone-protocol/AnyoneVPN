@@ -68,7 +68,7 @@ class ClientAuthActivity : AppCompatActivity() {
                 ClientAuthContentProvider.PROJECTION, null, null, null))
 
         contentResolver.registerContentObserver(ClientAuthContentProvider.CONTENT_URI,
-            true, V3ClientAuthContentObserver(Handler(Looper.getMainLooper())))
+            true, ClientAuthContentObserver(Handler(Looper.getMainLooper())))
 
         mBinding.fab.setOnClickListener { _: View? ->
             ClientAuthCreateDialogFragment().show(
@@ -104,7 +104,7 @@ class ClientAuthActivity : AppCompatActivity() {
         super.attachBaseContext(onAttach(base))
     }
 
-    private inner class V3ClientAuthContentObserver(handler: Handler?) : ContentObserver(handler) {
+    private inner class ClientAuthContentObserver(handler: Handler?) : ContentObserver(handler) {
 
         override fun onChange(selfChange: Boolean) {
             mAdapter.changeCursor(
