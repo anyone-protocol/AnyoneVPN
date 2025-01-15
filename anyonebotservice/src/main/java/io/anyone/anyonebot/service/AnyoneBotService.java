@@ -120,7 +120,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
     private void showConnectedToAnonNetworkNotification() {
         mNotifyBuilder.setProgress(0, 0, false);
-        showToolbarNotification(getString(R.string.status_activated), NOTIFY_ID, R.drawable.ic_stat_tor);
+        showToolbarNotification(getString(R.string.status_activated), NOTIFY_ID, R.drawable.ic_anyone);
     }
 
     @Override
@@ -155,7 +155,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
         if (mNotifyBuilder == null) {
             mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-            mNotifyBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID).setSmallIcon(R.drawable.ic_stat_tor).setContentIntent(pendIntent).setCategory(Notification.CATEGORY_SERVICE);
+            mNotifyBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID).setSmallIcon(R.drawable.ic_anyone).setContentIntent(pendIntent).setCategory(Notification.CATEGORY_SERVICE);
         }
 
         mNotifyBuilder.setOngoing(true);
@@ -175,7 +175,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
             mNotifyBuilder.addAction(R.drawable.ic_refresh_white_24dp, getString(R.string.menu_new_identity), pendingIntentNewNym);
         } else if (mCurrentStatus.equals(STATUS_OFF)) {
             var pendingIntentConnect = PendingIntent.getBroadcast(this, 0, new Intent(LOCAL_ACTION_NOTIFICATION_START), PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-            mNotifyBuilder.addAction(R.drawable.ic_stat_tor, getString(R.string.connect_to_anon), pendingIntentConnect);
+            mNotifyBuilder.addAction(R.drawable.ic_anyone, getString(R.string.connect_to_anon), pendingIntentConnect);
         }
 
         mNotifyBuilder.setContentText(notifyMsg).setSmallIcon(icon).setTicker(notifyType != NOTIFY_ID ? notifyMsg : null);
@@ -201,11 +201,11 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
             final boolean shouldStartVpnFromSystemIntent = !intent.getBooleanExtra(AnyoneBotConstants.EXTRA_NOT_SYSTEM, false);
 
             if (mCurrentStatus.equals(STATUS_OFF))
-                showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_stat_tor);
+                showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_anyone);
 
             if (shouldStartVpnFromSystemIntent) {
                 Log.d(TAG, "Starting VPN from system intent: " + intent);
-                showToolbarNotification(getString(R.string.status_starting_up), NOTIFY_ID, R.drawable.ic_stat_tor);
+                showToolbarNotification(getString(R.string.status_starting_up), NOTIFY_ID, R.drawable.ic_anyone);
                 if (VpnService.prepare(this) == null) {
                     // Power-user mode doesn't matter here. If the system is starting the VPN, i.e.
                     // via always-on VPN, we need to start it regardless.
@@ -226,7 +226,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
     }
 
     private void showDeactivatedNotification() {
-        showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_stat_tor);
+        showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_anyone);
     }
 
     @Override
@@ -267,28 +267,6 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
         showToolbarNotification(getString(R.string.unable_to_start_anon) + ": " + message, ERROR_NOTIFY_ID, R.drawable.ic_stat_notifyerr);
     }
 
-    private static HashMap<String, String> mFronts;
-
-    public static void loadCdnFronts(Context context) {
-        if (mFronts == null) {
-            mFronts = new HashMap<>();
-
-            try {
-                var reader = new BufferedReader(new InputStreamReader(context.getAssets().open("fronts")));
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    int spaceIdx = line.indexOf(' ');
-                    String key = line.substring(0, spaceIdx);
-                    String val = line.substring(spaceIdx + 1);
-                    mFronts.put(key, val);
-                }
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
     // if someone stops during startup, we may have to wait for the conn port to be setup, so we can properly shutdown anon
     private void stopAnon() {
         if (shouldUnbindAnonService) {
@@ -306,7 +284,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 conn.signal(AnonControlCommands.SIGNAL_RELOAD);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, Log.getStackTraceString(e));
         }
     }
 
@@ -377,7 +355,6 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 }
 
                 mVpnManager = new AnyoneBotVpnManager(this);
-                loadCdnFronts(this);
             } catch (Exception e) {
                 Log.e(TAG, "Error setting up AnyoneBot", e);
                 logNotice(getString(R.string.couldn_t_start_anon_process_) + " " + e.getClass().getSimpleName());
@@ -557,7 +534,6 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
         if (mPortSOCKS != -1 && mPortHTTP != -1)
             sendCallbackPorts(mPortSOCKS, mPortHTTP, mPortDns, mPortTrans);
-
     }
 
     private boolean showTorServiceErrorMsg = false;
@@ -574,7 +550,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
             }
 
             mNotifyBuilder.setProgress(100, 0, false);
-            showToolbarNotification("", NOTIFY_ID, R.drawable.ic_stat_tor);
+            showToolbarNotification("", NOTIFY_ID, R.drawable.ic_anyone);
 
             startAnonService();
             showTorServiceErrorMsg = true;
@@ -628,7 +604,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
                 mCurrentStatus = oldStatus;
             } catch (Exception e) {
-                e.printStackTrace();
+                Log.e(TAG, Log.getStackTraceString(e));
             }
             onionServices.close();
         }
@@ -642,7 +618,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 """, false);
 
         var fileTorrcCustom = updateAnonrcCustomFile();
-        if ((!fileTorrcCustom.exists()) || (!fileTorrcCustom.canRead())) return;
+        if (fileTorrcCustom == null || !fileTorrcCustom.exists() || !fileTorrcCustom.canRead()) return;
 
         sendCallbackLogMessage(getString(R.string.status_starting_up));
 
@@ -657,7 +633,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        Log.e(TAG, Log.getStackTraceString(e));
                     }
                 }
 
@@ -665,7 +641,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    Log.e(TAG, Log.getStackTraceString(e));
                 }
 
                 mRawEventListener = new AnyoneBotRawEventListener(AnyoneBotService.this);
@@ -694,7 +670,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                         conn.setEvents(events);
                         logNotice(getString(R.string.log_notice_added_event_handler));
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        Log.e(TAG, Log.getStackTraceString(e));
                     }
                 }
             }
@@ -775,12 +751,11 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 sendCallbackPorts(mPortSOCKS, mPortHTTP, mPortDns, mPortTrans);
 
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.e(TAG, Log.getStackTraceString(e));
                 stopAnonOnError(e.getLocalizedMessage());
                 conn = null;
             } catch (NullPointerException npe) {
-                Log.e(TAG, "NPE reached... how???");
-                npe.printStackTrace();
+                Log.e(TAG, Log.getStackTraceString(npe));
                 stopAnonOnError("stopping from NPE");
                 conn = null;
             }
@@ -804,7 +779,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 try {
                     if (conn != null && mCurrentStatus.equals(STATUS_ON)) {
                         mNotifyBuilder.setSubText(null); // clear previous exit node info if present
-                        showToolbarNotification(getString(R.string.newnym), NOTIFY_ID, R.drawable.ic_stat_tor);
+                        showToolbarNotification(getString(R.string.newnym), NOTIFY_ID, R.drawable.ic_anyone);
                         conn.signal(AnonControlCommands.SIGNAL_NEWNYM);
                     }
                 } catch (Exception ioe) {
@@ -831,7 +806,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 notificationMessage = notificationMessage.substring(notificationMessage.indexOf(':') + 1).trim();
             }
         }
-        showToolbarNotification(notificationMessage, NOTIFY_ID, R.drawable.ic_stat_tor);
+        showToolbarNotification(notificationMessage, NOTIFY_ID, R.drawable.ic_anyone);
         mHandler.post(() -> LocalBroadcastManager.getInstance(AnyoneBotService.this).sendBroadcast(localIntent));
     }
 
@@ -943,7 +918,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
     void showBandwidthNotification(String message, boolean isActiveTransfer) {
         if (!mCurrentStatus.equals(STATUS_ON)) return;
-        var icon = !isActiveTransfer ? R.drawable.ic_stat_tor : R.drawable.ic_stat_tor_xfer;
+        var icon = R.drawable.ic_anyone;
         showToolbarNotification(message, NOTIFY_ID, icon);
     }
 
@@ -1000,32 +975,39 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
     private void addV3ClientAuthToTorrc(StringBuffer torrc, ContentResolver contentResolver) {
         var v3auths = contentResolver.query(V3_CLIENT_AUTH_URI, V3_CLIENT_AUTH_PROJECTION, V3ClientAuth.ENABLED + "=1", null, null);
-        if (v3auths != null) {
-            for (File file : mV3AuthBasePath.listFiles()) {
-                if (!file.isDirectory())
+
+        if (v3auths == null) return;
+
+        File[] files = mV3AuthBasePath.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (!file.isDirectory()) {
                     file.delete(); // todo the adapter should maybe just write these files and not do this in service...
-            }
-            torrc.append("ClientOnionAuthDir " + mV3AuthBasePath.getAbsolutePath()).append('\n');
-            try {
-                int i = 0;
-                while (v3auths.moveToNext()) {
-                    var domain_index = v3auths.getColumnIndex(V3ClientAuth.DOMAIN);
-                    var hash_index = v3auths.getColumnIndex(V3ClientAuth.HASH);
-                    // Ensure that are have all the indexes before trying to use them
-                    if (domain_index < 0 || hash_index < 0) continue;
-                    var domain = v3auths.getString(domain_index);
-                    var hash = v3auths.getString(hash_index);
-                    var authFile = new File(mV3AuthBasePath, (i++) + ".auth_private");
-                    authFile.createNewFile();
-                    var fos = new FileOutputStream(authFile);
-                    fos.write(buildV3ClientAuthFile(domain, hash).getBytes());
-                    fos.close();
                 }
-            } catch (Exception e) {
-                Log.e(TAG, "error adding v3 client auth...");
-            } finally {
-                v3auths.close();
             }
+        }
+
+        torrc.append("ClientOnionAuthDir " + mV3AuthBasePath.getAbsolutePath()).append('\n');
+
+        try {
+            int i = 0;
+            while (v3auths.moveToNext()) {
+                var domain_index = v3auths.getColumnIndex(V3ClientAuth.DOMAIN);
+                var hash_index = v3auths.getColumnIndex(V3ClientAuth.HASH);
+                // Ensure that are have all the indexes before trying to use them
+                if (domain_index < 0 || hash_index < 0) continue;
+                var domain = v3auths.getString(domain_index);
+                var hash = v3auths.getString(hash_index);
+                var authFile = new File(mV3AuthBasePath, (i++) + ".auth_private");
+                authFile.createNewFile();
+                var fos = new FileOutputStream(authFile);
+                fos.write(buildV3ClientAuthFile(domain, hash).getBytes());
+                fos.close();
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "error adding v3 client auth...");
+        } finally {
+            v3auths.close();
         }
     }
 
@@ -1185,7 +1167,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 }
                 case ACTION_STATUS -> {
                     if (mCurrentStatus.equals(STATUS_OFF))
-                        showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_stat_tor);
+                        showToolbarNotification(getString(R.string.open_anyonebot_to_connect_to_anon), NOTIFY_ID, R.drawable.ic_anyone);
                     replyWithStatus(mIntent);
                 }
                 case AnonControlCommands.SIGNAL_RELOAD -> requestAnonRereadConfig();
@@ -1203,7 +1185,11 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
     private class ActionBroadcastReceiver extends BroadcastReceiver {
         public void onReceive(Context context, Intent intent) {
-            switch (intent.getAction()) {
+            if (intent == null) return;
+            String action = intent.getAction();
+            if (TextUtils.isEmpty(action)) return;
+
+            switch (action) {
                 case AnonControlCommands.SIGNAL_NEWNYM -> newIdentity();
                 case CMD_ACTIVE -> sendSignalActive();
                 case LOCAL_ACTION_NOTIFICATION_START -> startAnon();
@@ -1217,10 +1203,10 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                 case ACTION_STATUS -> {
                     // hack for https://github.com/guardianproject/tor-android/issues/73 remove when fixed
                     var newStatus = intent.getStringExtra(EXTRA_STATUS);
-                    if (mCurrentStatus.equals(STATUS_OFF) && newStatus.equals(STATUS_STOPPING))
+                    if (mCurrentStatus.equals(STATUS_OFF) && STATUS_STOPPING.equals(newStatus))
                         break;
                     mCurrentStatus = newStatus;
-                    if (mCurrentStatus.equals(STATUS_OFF)) {
+                    if (STATUS_OFF.equals(mCurrentStatus)) {
                         showDeactivatedNotification();
                     }
                     sendStatusToAnyoneBotActivity();
