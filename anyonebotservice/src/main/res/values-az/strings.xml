@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">Pulsuz proksi tətbiqetməsi olan AnyoneBot başqa tətbiqetmələrə internetdən daha təhlükəsiz istifadə etmək imkanı verir. AnyoneBot sizin internet trafikinizi şifrələmək üçün Anondan istifadə edir və dünyanın hər yerində kompüterlərin birindən o birinə sıçramaqla bunu gizlədir. Anon pulsuz proqram təminatıdır, eyni zamanda sizin şəxsi azadlığınız və təhlükəsizliyinizə, gizli biznes fəaliyyəti və əlaqələrə, o cümlədən trafik analiz adlanan dövlət təhlükəsizliyinə xələl gətirə biləcək şəbəkə nəzarəti formalarından müdafiə olunmağa yardım edən açıq şəbəkədir.</string>
     <string name="status_starting_up">AnyoneBot başlayır…</string>
-  <string name="status_activated">Anon şəbəkəsinə bağlandı</string>
+  <string name="status_activated">Anyone şəbəkəsinə bağlandı</string>
   <string name="status_disabled">AnyoneBot deaktivasiya edildi</string>
-  <string name="status_shutting_down">Anon xidməti işini başa vurur</string>
+  <string name="status_shutting_down">AnyoneBot xidməti işini başa vurur</string>
   <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

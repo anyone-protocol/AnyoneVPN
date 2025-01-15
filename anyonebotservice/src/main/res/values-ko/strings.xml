@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot 시작 중…</string>
-  <string name="status_activated">Anon 네트워크에 연결됨</string>
+  <string name="status_activated">Anyone 네트워크에 연결됨</string>
   <string name="status_disabled">AnyoneBot이 비활성화되어 있습니다</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot se spouští…</string>
-  <string name="status_activated">Připojen k síti Anon</string>
+  <string name="status_activated">Připojen k síti Anyone</string>
   <string name="status_disabled">AnyoneBot je deaktivován</string>
   <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

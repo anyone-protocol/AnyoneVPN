@@ -5,7 +5,7 @@
     <string name="status_starting_up">اربوت درحال آغاز است…</string>
   <string name="status_activated">متصل به شبکه تور</string>
   <string name="status_disabled">اربوت غیرفعال شده است.</string>
-  <string name="status_shutting_down">Anon خاموش است</string>
+  <string name="status_shutting_down">AnyoneBot خاموش است</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

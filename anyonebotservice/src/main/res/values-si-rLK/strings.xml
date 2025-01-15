@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot ආරම්භ කරමින්…</string>
-  <string name="status_activated">Anon ජාලයට සබැදියි</string>
+  <string name="status_activated">Anyone ජාලයට සබැදියි</string>
   <string name="status_disabled">AnyoneBot ක්‍රියාවිරහිත කර ඇත </string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

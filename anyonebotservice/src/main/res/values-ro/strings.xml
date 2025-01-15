@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot porneste…</string>
-  <string name="status_activated">Conectat la reteaua Anon</string>
+  <string name="status_activated">Conectat la reteaua Anyone</string>
   <string name="status_disabled">AnyoneBot este dezactivat</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

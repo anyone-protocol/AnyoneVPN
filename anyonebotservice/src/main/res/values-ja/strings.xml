@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBotは他のアプリがインターネットをより安全に使うことを可能にするフリーのプロキシアプリです。AnyoneBotでは、Anonを用いてあなたの端末のトラフィックを暗号化し、世界中のコンピューターを中継することで、そのトラフィックを隠します。Anonはフリーのソフトウェアとオープンなネットワークであり、ユーザーの自由とプライバシーを脅かす監視活動や、機密のビジネス活動、国家によるトラフィック分析から身を守ることを助けてくれます。</string>
     <string name="status_starting_up">AnyoneBotが開始されています…</string>
-  <string name="status_activated">Anonネットワークに接続しています</string>
+  <string name="status_activated">Anyoneネットワークに接続しています</string>
   <string name="status_disabled">\"AnyoneBotが解除されました</string>
-  <string name="status_shutting_down">Anonが終了しています</string>
+  <string name="status_shutting_down">AnyoneBotが終了しています</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

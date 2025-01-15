@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">Az AnyoneBot egy ingyenes proxy alkalmazás, ami képessé tesz alkalmazásokat, hogy biztonságosabban használhassák az internetet. Az AnyoneBot Anon-t használ, hogy titkosítsa az internetforgalmadat és elrejtse azáltal, hogy pattogtatja számítógépek sorozatain keresztül a világ körül. A Anon ingyenes szoftver és nyitott hálózat, ami segít megvédeni a hálózati felügyelettől, ami fenyegeti a személyi szabadságot és magánéletet, a bizalmas céges tevékenységeket és kapcsolatokat, és állambiztonság címén a forgalomelemzéstől.</string>
     <string name="status_starting_up">Az AnyoneBot indul…</string>
-  <string name="status_activated">Csatlakozva a Anon hálózathoz</string>
+  <string name="status_activated">Csatlakozva a Anyone hálózathoz</string>
   <string name="status_disabled">Az AnyoneBot deaktiválva</string>
-  <string name="status_shutting_down">A Anon leáll</string>
+  <string name="status_shutting_down">A AnyoneBot leáll</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

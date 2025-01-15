@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot se spouští…</string>
-  <string name="status_activated">Připojen k síti Tor</string>
+  <string name="status_activated">Připojen k síti Anyone</string>
   <string name="status_disabled">\"AnyoneBot je deaktivován</string>
   <string name="status_shutting_down">AnyoneBot se vypíná</string>
     <!--Welcome Wizard strings (DJH)-->

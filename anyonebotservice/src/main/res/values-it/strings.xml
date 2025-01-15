@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot è un\'applicazione proxy che permette alle altre applicazioni di accedere a internet in maniera più sicura. AnyoneBot usa Anon per cifrare il  traffico internet e lo nasconde poi facendolo rimbalzare attraverso una serie di computer attorno al mondo. Anon è un software libero e una rete aperta che aiuta a difendersi da una forma di sorveglianza della rete conosciuta come analisi del traffico. Quest\'ultima minaccia libertà e privacy personale, attività commerciali riservate, rapporti interpersonali, e persino la sicurezza di stato.</string>
     <string name="status_starting_up">AnyoneBot è in esecuzione…</string>
-  <string name="status_activated">Connesso alla rete Anon</string>
+  <string name="status_activated">Connesso alla rete Anyone</string>
   <string name="status_disabled">\"AnyoneBot è disattivato</string>
-  <string name="status_shutting_down">Anon si sta spegnendo</string>
+  <string name="status_shutting_down">AnyoneBot si sta spegnendo</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

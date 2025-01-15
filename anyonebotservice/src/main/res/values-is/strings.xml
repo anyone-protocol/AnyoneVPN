@@ -3,7 +3,7 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot er ókeypis proxy smáforrit sem gerir öðrum smáforritum kleift að nota veraldarvefinn á öruggari hátt. AnyoneBot notar Anon til að dulkóða umferð þína á netinu og felur hana svo með að hoppa í gegnum fjölda tölva um allan heim. Anon er ókeypis hugbúnaður og opið net sem aðstoðar þig við að verjast gegn eftirliti á netinu sem vinnur gegn frelsi einkalífsins og friðhelgi, trúnaðar viðskiptamálum og samböndum, og ríkisöryggi þekkt sem umferðargreining.</string>
     <string name="status_starting_up">AnyoneBot er að ræsa…</string>
-  <string name="status_activated">Tengdur við Anon netið</string>
+  <string name="status_activated">Tengdur við Anyone netið</string>
   <string name="status_disabled">AnyoneBot er slökkt</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

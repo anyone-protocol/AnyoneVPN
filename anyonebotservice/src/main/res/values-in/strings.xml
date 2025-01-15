@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot adalah aplikasi proxy gratis yang membuat aplikasi-aplikasi lainnya dapat terkoneksi dengan internet secara aman. AnyoneBot menggunakan Anon untuk mengenkripsi hubungan internet anda dan menyalurkannya melewati berbagai komputer di seluruh dunia. Anon adalah software gratis dan suatu network terbuka, yang membantu anda menghindari pengawasan network yang mengancam kebebasan pribadi dan privasi, aktivitas bisnis rahasia dan relasi, serta keamanan negara yang dikenal dengan analisa traffic.</string>
     <string name="status_starting_up">AnyoneBot sedang dimulai…</string>
-  <string name="status_activated">Tersambung ke Jaringan Anon</string>
+  <string name="status_activated">Tersambung ke Jaringan Anyone</string>
   <string name="status_disabled">AnyoneBot telah dibatalkan</string>
-  <string name="status_shutting_down">Anon dimatikan</string>
+  <string name="status_shutting_down">AnyoneBot dimatikan</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot abiarazten ari da…</string>
-  <string name="status_activated">Anon sarera konektatuta</string>
+  <string name="status_activated">Anyone sarera konektatuta</string>
   <string name="status_disabled">\"AnyoneBot desaktibatuta dago</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

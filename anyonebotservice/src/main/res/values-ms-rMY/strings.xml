@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot telah dimulakan..</string>
-  <string name="status_activated">Bersambung ke rangkaian Anon</string>
+  <string name="status_activated">Bersambung ke rangkaian Anyone</string>
   <string name="status_disabled">\"AnyoneBot telah dinyah-aktifkan</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

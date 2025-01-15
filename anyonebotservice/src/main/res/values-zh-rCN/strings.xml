@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot 是一款免费的代理应用，能够让其他应用更安全地使用互联网。通过在位于世界各地的一系列计算机之间进行跳转，AnyoneBot 可利用 Anon 对网络通信进行加密并隐藏。Anon 是一款免费的软件，并且是一个开放的网络。它可以保护用户免受流量分析的危害，这种网络监控可对个人自由与隐私、商业机密活动和关系以及国家安全造成威胁。</string>
     <string name="status_starting_up">AnyoneBot 正在启动…</string>
-  <string name="status_activated">已连接到 Anon 网络</string>
+  <string name="status_activated">已连接到 Anyone 网络</string>
   <string name="status_disabled">AnyoneBot 已停用</string>
-  <string name="status_shutting_down">Anon服务 正在关闭</string>
+  <string name="status_shutting_down">AnyoneBot服务 正在关闭</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

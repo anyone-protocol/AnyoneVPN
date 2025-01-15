@@ -4,10 +4,10 @@
     <string name="anyonebot_vpn">0rbot VNP</string>
     <string name="app_description">AnyoneBot shia wane a\'yataaya maliasat, akaalinjia tü wane a\'yataayaakalüirua süpüla anainjatüin shia\'yataaya. AnyoneBot a\'yataasü sulu\'u \"internet\" süka wane kanüliasü Anon je süchikijee sunujuluin sulu\'u wane kojuyasü \"computador\" sainküsü mmakat. Anon maliasat je taashisü süpüla sa\'inmajüin pia suulia eekai mojulaweein pümüin wanaa sümaa pi\'yataain sulu\'u \"internet\".</string>
     <string name="status_starting_up">Eepeja\'asu AnyoneBot&#8230;</string>
-    <string name="status_activated">Antirrawaas jumaa atalaya Anon</string>
+    <string name="status_activated">Antirrawaas jumaa atalaya Anyone</string>
     <string name="status_disabled">Yokutusu\'u AnyoneBot</string>
     <string name="open_anyonebot_to_connect_to_anon">Pe\'erulaa  AnyoneBot jupula  puyata ín juma Anon.</string>
-    <string name="status_shutting_down">Yokuuter Anon</string>
+    <string name="status_shutting_down">Yokuuter AnyoneBot</string>
     <string name="config_invalid">sükumajia AnyoneBot maliaasat</string>
 
     <string name="couldn_t_start_anon_process_">Nojotsü o\'ottuin sukuaipa shiatain anon</string>

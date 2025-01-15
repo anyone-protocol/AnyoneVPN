@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot - это свободная программа для прокси-соединений, она позволяет другим приложениям более безопасно использовать интернет-соединение. AnyoneBot использует Anon для шифрования интернет-трафика, который затем скрывается в ходе пересылки через несколько компьютеров в разных частях планеты. Anon является свободным программным приложением, а также открытой сетью, помогающей защититься от слежки в сетях, угрожающей личной свободе и частной жизни, конфиденциальным бизнес-деятельности и контактам, а также государственной программе безопасности, известной как анализ трафика.</string>
     <string name="status_starting_up">Запуск AnyoneBot…</string>
-  <string name="status_activated">Подключён к сети Anon</string>
+  <string name="status_activated">Подключён к сети Anyone</string>
   <string name="status_disabled">AnyoneBot отключён</string>
-  <string name="status_shutting_down">Служба Anon выключается</string>
+  <string name="status_shutting_down">Служба AnyoneBot выключается</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">Το AnyoneBot ξεκινά</string>
-  <string name="status_activated">Συνδέθηκε στο δίκτυο Anon</string>
+  <string name="status_activated">Συνδέθηκε στο δίκτυο Anyone</string>
   <string name="status_disabled">\"Το AnyoneBot είναι Απενεργοποιημένο</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

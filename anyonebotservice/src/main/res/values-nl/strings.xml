@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot is een gratis en vrije proxy-app die het andere apps mogelijk maakt het internet veiliger te gebruiken. AnyoneBot gebruikt Anon om je internetverkeer te coderen en het vervolgens te verhullen het door het door een serie computers over de hele wereld te routeren. Anon is vrije software en een open netwerk dat je helpt te verdedigen tegen een vorm van netwerktoezicht die persoonlijke vrijheid en privacy, vertrouwelijke bedrijfsactiviteiten en relaties en staatsveiligheid genaamd \'traffic analyse\' bedreigt.</string>
     <string name="status_starting_up">AnyoneBot is bezig met starten…</string>
-  <string name="status_activated">Verbonden met het Anon-netwerk</string>
+  <string name="status_activated">Verbonden met het Anyone-netwerk</string>
   <string name="status_disabled">AnyoneBot is uitgeschakeld</string>
-  <string name="status_shutting_down">Anon wordt afgesloten</string>
+  <string name="status_shutting_down">AnyoneBot wordt afgesloten</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

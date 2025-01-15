@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot käivitub…</string>
-  <string name="status_activated">Ühendatud Anon võrgustikku</string>
+  <string name="status_activated">Ühendatud Anyone võrgustikku</string>
   <string name="status_disabled">AnyoneBot deaktiveeritud</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

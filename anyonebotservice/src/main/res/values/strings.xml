@@ -4,7 +4,7 @@
     <string name="anyonebot_vpn">AnyoneBot VPN</string>
     <string name="app_description">AnyoneBot is a free proxy app that empowers other apps to use the internet more securely. AnyoneBot uses Anon to encrypt your Internet traffic and then hides it by bouncing through a series of computers around the world. Anon is free software and an open network that helps you defend against a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security known as traffic analysis.</string>
     <string name="status_starting_up">AnyoneBot is Starting&#8230;</string>
-    <string name="status_activated">Connected to the Anon Network</string>
+    <string name="status_activated">Connected to the Anyone Network</string>
     <string name="status_disabled">AnyoneBot is Deactivated</string>
     <string name="open_anyonebot_to_connect_to_anon">Open AnyoneBot to Connect to Anon</string>
     <string name="status_shutting_down">AnyoneBot is Shutting Down</string>

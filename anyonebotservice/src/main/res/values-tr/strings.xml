@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot başka uygulamaların interneti daha güvenli olarak kullanmasını sağlayan ücretsiz bir proxy uygulamasıdır. AnyoneBot Anon\'u kullanarak internet trafiğinizi şifreler ve dünya üzerindeki pek çok farklı bilgisayardan geçirerek gizler. Anon sizin kişisel özgürlüğünüzü ve mahremiyetinizi, gizli ticari aktivitelerinizi ve bağlantılarınızı koruma altına alan bir yazılım ve açık ağdır.</string>
     <string name="status_starting_up">AnyoneBot başlatılıyor…</string>
-  <string name="status_activated">Anon ağına bağlandı</string>
+  <string name="status_activated">Anyone ağına bağlandı</string>
   <string name="status_disabled">AnyoneBot devre dışı bırakıldı</string>
-  <string name="status_shutting_down">Anon hizmeti kapatılıyor</string>
+  <string name="status_shutting_down">AnyoneBot hizmeti kapatılıyor</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

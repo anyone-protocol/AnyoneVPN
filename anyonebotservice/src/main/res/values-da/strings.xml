@@ -3,7 +3,7 @@
     <string name="app_name">AnyoneBot</string>
     <string name="app_description">AnyoneBot er en gratis og åben proxy-applikation, der gør det muligt at anvende internettet mere sikkert fra andre programmer. AnyoneBot bruger Anon til at kryptere internettrafikken, og skjuler den ved at sende den gennem serverere, lokaliseret i hele verden. Anon er gratis og åben software, der kan hjælpe dig mod netværksovervågning kaldet trafikanalyse, der kan true din personlige frihed, dit privatliv, handelsaktivitet og forhold.</string>
     <string name="status_starting_up">AnyoneBot starter op …</string>
-    <string name="status_activated">Der er forbindelse til Anon-netværket</string>
+    <string name="status_activated">Der er forbindelse til Anyone-netværket</string>
     <string name="status_disabled">AnyoneBot er slået fra</string>
     <string name="couldn_t_start_anon_process_">Kunne ikke starte anon processen:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Din ReachableAdresses indstilling forudsagede en fejl!</string>

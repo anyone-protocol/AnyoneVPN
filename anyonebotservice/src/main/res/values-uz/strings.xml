@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot ishga tushirilmoqda…</string>
-  <string name="status_activated">Anon tarmog\'iga ulangan</string>
+  <string name="status_activated">Anyone tarmog\'iga ulangan</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->

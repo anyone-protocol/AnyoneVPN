@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">AnyoneBot</string>
     <string name="status_starting_up">AnyoneBot se zaganja…</string>
-  <string name="status_activated">Povezan v omrežje Tor</string>
+  <string name="status_activated">Povezan v omrežje Anyone</string>
   <string name="status_disabled">AnyoneBot ni aktiviran</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

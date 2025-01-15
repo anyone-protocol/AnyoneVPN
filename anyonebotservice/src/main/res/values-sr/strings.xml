@@ -3,7 +3,7 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot је бесплатна прокси апликација која даје моћ другим апликацијама да безбедније користе интернет. AnyoneBot користи Тор за шифровање вашег интернет саобраћаја и онда га скрива слањем кроз низ рачунара широм света. Тор је слободан софтвер и отворена мрежа која помаже да се одбраните од разних облика надзора мрежа који угрожавају личну слободу и приватност, поверљиве пословне активности и личне односе и државне безбедности познате као анализа саобраћаја.</string>
     <string name="status_starting_up">AnyoneBot се покреће…</string>
-  <string name="status_activated">Повезан са Тор мрежом</string>
+  <string name="status_activated">Повезан са Anyone мрежом</string>
   <string name="status_disabled">AnyoneBot је деактивиран</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

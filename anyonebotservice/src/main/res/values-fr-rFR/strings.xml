@@ -3,9 +3,9 @@
     <string name="app_name">AnyoneBot</string>
     <string name="app_description">AnyoneBot est une appli libre de serveur mandataire permettant aux applis d\'utiliser Internet avec une sécurité accrue. AnyoneBot utilise Anon pour chiffrer votre trafic Internet et le cache ensuite en le relayant au travers d\'ordinateurs de par le monde. Anon est un logiciel libre et un réseau ouvert qui vous aide à vous défendre contre une forme de surveillance réseau qui menace la liberté personnelle et la protection des données personnelles, les activités professionnelles confidentielles et les relations, et l\'analyse du trafic des gouvernements.</string>
     <string name="status_starting_up">AnyoneBot démarre…</string>
-    <string name="status_activated">Connecté au réseau Anon</string>
+    <string name="status_activated">Connecté au réseau Anyone</string>
     <string name="status_disabled">AnyoneBot est désactivé</string>
-    <string name="status_shutting_down">Anon est en cours d\'extinction</string>
+    <string name="status_shutting_down">AnyoneBot est en cours d\'extinction</string>
     <string name="couldn_t_start_anon_process_">"Impossible de démarrer le processus anon: "</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Vos paramètres ReachableAddresses (adresses accessibles) ont causé une exception !</string>
     <string name="your_relay_settings_caused_an_exception_">Vos paramètres de relais ont causé une exception !</string>

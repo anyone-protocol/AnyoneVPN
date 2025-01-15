@@ -3,7 +3,7 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot е слободна прокси апликација која им овозможува на другите апликации да го користат интернетот побезбедно. AnyoneBot користи Anon за шифрирање на интернет-сообраќајот, а потоа го сокрива и го доставува преку неколку компјутери во целиот свет. Anon е слободен софтвер и отворена мрежа која се справува со вид надзор на мрежата која штети на личната слобода и приватноста, доверливи деловни активности и односи, и државната безбедност позната како анализа на сообраќајот.</string>
     <string name="status_starting_up">AnyoneBot се стартува…</string>
-  <string name="status_activated">Поврзан на мрежата на Anon</string>
+  <string name="status_activated">Поврзан на мрежата на Anyone</string>
   <string name="status_disabled">AnyoneBot е деактивиран</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

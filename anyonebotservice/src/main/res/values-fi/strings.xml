@@ -3,7 +3,7 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot on ilmainen välityspalvelinsovellus, joka tarjoaa muille sovelluksille mahdollisuuden käyttää internetiä turvallisemmin. AnyoneBot käyttää Anonia kryptaamaan verkkoliikenteesi ja sitten piilottaa sen kierrättämällä sitä usean tietokoneen kautta ympäri maailman. Anon on vapaa ohjelmisto ja avoin verkosto, jotka auttavat puolustautumaan vapautta ja yksityisyyttä uhkaavalta verkkovalvonnalta ja valtioiden verkonseurannalta sekä suojaamaan salaisia liiketoimintoja ja -yhteyksiä.</string>
     <string name="status_starting_up">AnyoneBot käynnistyy…</string>
-  <string name="status_activated">Yhdistetty Anon-verkkoon</string>
+  <string name="status_activated">Yhdistetty Anyone-verkkoon</string>
   <string name="status_disabled">AnyoneBot on poistettu käytöstä</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->

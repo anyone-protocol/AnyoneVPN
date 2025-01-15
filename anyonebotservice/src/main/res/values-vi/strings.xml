@@ -3,9 +3,9 @@
   <string name="app_name">AnyoneBot</string>
   <string name="app_description">AnyoneBot là một ứng dụng proxy miễn phí, được thiết kế để làm cho các ứng dụng khác kết nối với Internet một cách an toàn. AnyoneBot sử dụng Anon để mã hóa các kết nối Internet rồi ẩn danh nó thông qua một loạt các nút trong mạng Anon. Anon là phần mềm miễn phí và là một mạng lưới mở giúp bạn chống lại sự giám sát mạng, vốn đe dọa riêng tư trực tuyến, hay các hoạt động bí mật…</string>
     <string name="status_starting_up">Ortbot đang khởi động…</string>
-  <string name="status_activated">Đã kết nối với mạng Anon</string>
+  <string name="status_activated">Đã kết nối với mạng Anyone</string>
   <string name="status_disabled">AnyoneBot đã được vô hiệu hóa</string>
-  <string name="status_shutting_down">Đang tắt dịch vụ Anon</string>
+  <string name="status_shutting_down">Đang tắt dịch vụ AnyoneBot</string>
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <!--New Wizard Strings-->
