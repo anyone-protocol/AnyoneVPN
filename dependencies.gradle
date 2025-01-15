@@ -19,7 +19,7 @@ ext {
             bclogic_pulsator             : "1.0.3",
             fastlane_screengrab          : "2.1.1",
          //   ipt_proxy                    : "1.7.1",
-            anon_android                  : "0.4.9.7",
+            anon_android                  : "0.4.9.10",
             pcap_core                    : "1.8.2",
             pcap_factory                 : "1.8.2",
             androidx_work                : "2.9.0"
