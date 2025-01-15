@@ -47,7 +47,7 @@
         <activity android:name=".AnyoneBotActivity"
             android:excludeFromRecents="false"
 
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:theme="@style/AnyoneBotActivityTheme"
             android:exported="true">
             <intent-filter>
