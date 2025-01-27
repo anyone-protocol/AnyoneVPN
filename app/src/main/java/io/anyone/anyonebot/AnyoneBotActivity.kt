@@ -9,18 +9,23 @@ import android.content.IntentFilter
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.scottyab.rootbeer.RootBeer
 import io.anyone.anyonebot.core.LocaleHelper
 import io.anyone.anyonebot.core.putNotSystem
 import io.anyone.anyonebot.core.ui.BaseActivity
+import io.anyone.anyonebot.databinding.ActivityAnyonebotBinding
 import io.anyone.anyonebot.service.AnyoneBotConstants
 import io.anyone.anyonebot.service.util.Prefs
 import io.anyone.anyonebot.ui.LogFragment
@@ -28,9 +33,10 @@ import io.anyone.anyonebot.service.AnyoneBotService
 
 class AnyoneBotActivity : BaseActivity() {
 
-    private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var mBinding: ActivityAnyonebotBinding
 
-    private lateinit var fragLog: LogFragment
+    private lateinit var mFragLog: LogFragment
+
     lateinit var fragConnect: ConnectFragment
     lateinit var fragMore: MoreFragment
 
@@ -72,15 +78,34 @@ class AnyoneBotActivity : BaseActivity() {
     }
 
     private fun createAnyoneBot() {
-        setContentView(R.layout.activity_anyonebot)
+        mBinding = ActivityAnyonebotBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
 
-        fragLog = LogFragment()
+        // https://developer.android.com/develop/ui/views/layout/edge-to-edge#handle-overlaps
+        ViewCompat.setOnApplyWindowInsetsListener(mBinding.root) { v, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation)
+            // Apply the insets as a margin to the view. This solution sets
+            // only the bottom, left, and right dimensions, but you can apply whichever
+            // insets are appropriate to your layout. You can also update the view padding
+            // if that's more appropriate.
+            v.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                leftMargin = insets.left
+                bottomMargin = insets.bottom
+                rightMargin = insets.right
+                topMargin = insets.top
+            }
+
+            // Return CONSUMED if you don't want want the window insets to keep passing
+            // down to descendant views.
+            WindowInsetsCompat.CONSUMED
+        }
+
+        mFragLog = LogFragment()
 
         val navController = findNavController(R.id.nav_fragment)
-        bottomNavigationView.setupWithNavController(navController)
-        bottomNavigationView.selectedItemId = R.id.connectFragment
+        mBinding.bottomNavigation.setupWithNavController(navController)
+        mBinding.bottomNavigation.selectedItemId = R.id.connectFragment
 
         with(LocalBroadcastManager.getInstance(this)) {
             registerReceiver(
@@ -115,6 +140,7 @@ class AnyoneBotActivity : BaseActivity() {
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         finish()
@@ -131,17 +157,17 @@ class AnyoneBotActivity : BaseActivity() {
             else -> {
                 // You can directly ask for the permission.
                 // The registered ActivityResultCallback gets the result of this request.
-                requestPermissionLauncher.launch(
-                    Manifest.permission.POST_NOTIFICATIONS
-                )
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                }
             }
         }
     }
 
     // Register the permissions callback, which handles the user's response to the
-// system permissions dialog. Save the return value, an instance of
-// ActivityResultLauncher. You can use either a val, as shown in this snippet,
-// or a lateinit var in your onAttach() or onCreate() method.
+    // system permissions dialog. Save the return value, an instance of
+    // ActivityResultLauncher. You can use either a val, as shown in this snippet,
+    // or a lateinit var in your onAttach() or onCreate() method.
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { isGranted: Boolean ->
@@ -159,13 +185,16 @@ class AnyoneBotActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
+
         sendIntentToService(AnyoneBotConstants.CMD_ACTIVE)
         LocaleHelper.onAttach(this)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(anyoneBotServiceBroadcastReceiver)
+
+        LocalBroadcastManager.getInstance(this)
+            .unregisterReceiver(anyoneBotServiceBroadcastReceiver)
     }
 
 
@@ -180,14 +209,6 @@ class AnyoneBotActivity : BaseActivity() {
     ).apply {
         this.action = action
     })
-
-    @Deprecated("Deprecated in Java")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_CODE_VPN && resultCode == RESULT_OK) {
-            fragConnect.startAnonAndVpn()
-        }
-    }
 
     override fun attachBaseContext(newBase: Context) =
         super.attachBaseContext(LocaleHelper.onAttach(newBase))
@@ -226,7 +247,7 @@ class AnyoneBotActivity : BaseActivity() {
                         fragConnect.setProgress(Integer.parseInt(it))
                     }
                     intent.getStringExtra(AnyoneBotConstants.LOCAL_EXTRA_LOG)?.let {
-                        fragLog.appendLog(it)
+                        mFragLog.appendLog(it)
                     }
                 }
 
@@ -241,15 +262,9 @@ class AnyoneBotActivity : BaseActivity() {
         }
     }
 
-    companion object {
-        const val REQUEST_CODE_VPN = 1234
-        const val REQUEST_CODE_SETTINGS = 2345
-        const val REQUEST_VPN_APP_SELECT = 2432
-    }
-
     fun showLog() {
-        if (!fragLog.isAdded) {
-            fragLog.show(supportFragmentManager, AnyoneBotActivity::class.java.simpleName)
+        if (!mFragLog.isAdded) {
+            mFragLog.show(supportFragmentManager, AnyoneBotActivity::class.java.simpleName)
         }
     }
 }
