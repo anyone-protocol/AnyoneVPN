@@ -58,8 +58,6 @@ class ClientAuthActivity : BaseActivity() {
 
         setContentView(mBinding.root)
 
-        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
-
         setSupportActionBar(mBinding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

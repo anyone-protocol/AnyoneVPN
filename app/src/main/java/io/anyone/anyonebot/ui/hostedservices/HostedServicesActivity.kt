@@ -45,8 +45,6 @@ class HostedServicesActivity : BaseActivity(), View.OnClickListener {
         mBinding = ActivityHostedServicesBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
-
         setSupportActionBar(mBinding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
