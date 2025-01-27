@@ -56,7 +56,7 @@ android {
         fullperm {
             dimension "free"
             applicationId 'io.anyone.anyonebot'
-            versionCode 1732300100
+            versionCode 1732300101
             versionName getVersionName()
             archivesBaseName = "AnyoneBot-${versionName}"
         }

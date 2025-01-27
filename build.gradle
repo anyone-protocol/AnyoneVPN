@@ -20,6 +20,6 @@ buildscript {
 }
 
 ext {
-    versionCode = 4811
+    versionCode = 4812
     versionName = "0.4.8.11"
 }
