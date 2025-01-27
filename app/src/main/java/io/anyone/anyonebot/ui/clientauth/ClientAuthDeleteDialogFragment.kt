@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth
+package io.anyone.anyonebot.ui.clientauth
 
 import android.app.Dialog
 import android.content.DialogInterface

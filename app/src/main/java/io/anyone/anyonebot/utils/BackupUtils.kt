@@ -9,7 +9,7 @@ import io.anyone.anyonebot.R
 import io.anyone.anyonebot.service.AnyoneBotConstants
 import io.anyone.anyonebot.service.AnyoneBotService
 import io.anyone.anyonebot.ui.hostedservices.HostedServicesContentProvider
-import io.anyone.anyonebot.ui.hostedservices.clientauth.ClientAuthContentProvider
+import io.anyone.anyonebot.ui.clientauth.ClientAuthContentProvider
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.File

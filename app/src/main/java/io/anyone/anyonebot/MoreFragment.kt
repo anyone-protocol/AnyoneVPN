@@ -22,7 +22,7 @@ import io.anyone.anyonebot.ui.AppsFragment
 import io.anyone.anyonebot.ui.MenuAction
 import io.anyone.anyonebot.ui.MoreActionAdapter
 import io.anyone.anyonebot.ui.hostedservices.HostedServicesActivity
-import io.anyone.anyonebot.ui.hostedservices.clientauth.ClientAuthActivity
+import io.anyone.anyonebot.ui.clientauth.ClientAuthActivity
 
 class MoreFragment : Fragment(), AppsFragment.OnChangeListener {
 

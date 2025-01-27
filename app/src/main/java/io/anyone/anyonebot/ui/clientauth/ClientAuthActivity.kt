@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth
+package io.anyone.anyonebot.ui.clientauth
 
 import android.content.Context
 import android.database.ContentObserver
@@ -64,10 +64,12 @@ class ClientAuthActivity : AppCompatActivity() {
 
         mAdapter = ClientAuthListAdapter(
             this,
-            contentResolver.query(ClientAuthContentProvider.CONTENT_URI,
+            contentResolver.query(
+                ClientAuthContentProvider.CONTENT_URI,
                 ClientAuthContentProvider.PROJECTION, null, null, null))
 
-        contentResolver.registerContentObserver(ClientAuthContentProvider.CONTENT_URI,
+        contentResolver.registerContentObserver(
+            ClientAuthContentProvider.CONTENT_URI,
             true, ClientAuthContentObserver(Handler(Looper.getMainLooper())))
 
         mBinding.fab.setOnClickListener { _: View? ->
@@ -88,10 +90,12 @@ class ClientAuthActivity : AppCompatActivity() {
                     args.putInt(BUNDLE_KEY_ID, id)
                 }
 
-                args.putString(BUNDLE_KEY_DOMAIN,
+                args.putString(
+                    BUNDLE_KEY_DOMAIN,
                     item.getString(ClientAuthContentProvider.ClientAuth.DOMAIN))
 
-                args.putString(BUNDLE_KEY_HASH,
+                args.putString(
+                    BUNDLE_KEY_HASH,
                     item.getString(ClientAuthContentProvider.ClientAuth.HASH))
 
                 ClientAuthActionsDialogFragment(args).show(supportFragmentManager,

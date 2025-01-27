@@ -64,7 +64,7 @@
                 android:value=".AnyoneBotActivity" />
         </activity>
 
-        <activity android:name=".ui.hostedservices.clientauth.ClientAuthActivity"
+        <activity android:name=".ui.clientauth.ClientAuthActivity"
             android:label="@string/v3_client_auth_activity_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -78,7 +78,7 @@
 
         <provider
             android:authorities="${applicationId}.ui.hostedservices.clientauth"
-            android:name=".ui.hostedservices.clientauth.ClientAuthContentProvider"
+            android:name=".ui.clientauth.ClientAuthContentProvider"
             android:exported="false"/>
 
         <receiver

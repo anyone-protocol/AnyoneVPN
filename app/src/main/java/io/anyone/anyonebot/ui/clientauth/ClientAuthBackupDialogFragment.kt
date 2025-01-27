@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth
+package io.anyone.anyonebot.ui.clientauth
 
 import android.app.Activity
 import android.app.Dialog
@@ -109,7 +109,9 @@ class ClientAuthBackupDialogFragment(args: Bundle?) : DialogFragment() {
             filename += ClientAuthActivity.CLIENT_AUTH_FILE_EXTENSION
         }
 
-        writeFileLauncher.launch(createWriteFileIntent(filename, ClientAuthActivity.CLIENT_AUTH_SAF_MIME_TYPE))
+        writeFileLauncher.launch(createWriteFileIntent(filename,
+            ClientAuthActivity.CLIENT_AUTH_SAF_MIME_TYPE
+        ))
     }
 
     private fun attemptToWriteBackup(outputFile: Uri) {

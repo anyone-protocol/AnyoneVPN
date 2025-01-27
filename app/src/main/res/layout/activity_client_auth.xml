@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:fitsSystemWindows="true"
-    tools:context=".ui.hostedservices.clientauth.ClientAuthActivity">
+    tools:context=".ui.clientauth.ClientAuthActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

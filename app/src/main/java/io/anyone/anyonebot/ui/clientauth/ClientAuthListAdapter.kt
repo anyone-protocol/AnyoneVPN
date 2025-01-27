@@ -1,4 +1,4 @@
-package io.anyone.anyonebot.ui.hostedservices.clientauth
+package io.anyone.anyonebot.ui.clientauth
 
 import android.annotation.SuppressLint
 import android.content.ContentValues
@@ -43,7 +43,8 @@ class ClientAuthListAdapter internal constructor(context: Context, cursor: Curso
 
             val id = cursor.getInt(ClientAuthContentProvider.ClientAuth.ID)
 
-            context.contentResolver.update(ClientAuthContentProvider.CONTENT_URI, fields,
+            context.contentResolver.update(
+                ClientAuthContentProvider.CONTENT_URI, fields,
                 "${ClientAuthContentProvider.ClientAuth.ID} = $id", null)
 
             Toast.makeText(context, R.string.please_restart_to_enable_the_changes,
