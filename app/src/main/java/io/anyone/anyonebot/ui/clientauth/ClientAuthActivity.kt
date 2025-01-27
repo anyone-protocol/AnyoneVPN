@@ -19,12 +19,13 @@ import io.anyone.anyonebot.R
 import io.anyone.anyonebot.core.DiskUtils.createReadFileIntent
 import io.anyone.anyonebot.core.DiskUtils.readFileFromInputStream
 import io.anyone.anyonebot.core.LocaleHelper.onAttach
+import io.anyone.anyonebot.core.ui.BaseActivity
 import io.anyone.anyonebot.databinding.ActivityClientAuthBinding
 import io.anyone.anyonebot.utils.BackupUtils
 import io.anyone.anyonebot.utils.getInt
 import io.anyone.anyonebot.utils.getString
 
-class ClientAuthActivity : AppCompatActivity() {
+class ClientAuthActivity : BaseActivity() {
 
     private lateinit var mBinding: ActivityClientAuthBinding
 

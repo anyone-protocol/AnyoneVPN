@@ -119,11 +119,11 @@ public class Prefs {
         return prefs.getBoolean(PREF_POWER_USER_MODE, false);
     }
 
-    public static void setSecureWindow (boolean isFlagSecure) {
+    public static void setSecureWindow(boolean isFlagSecure) {
         putBoolean(PREF_SECURE_WINDOW_FLAG, isFlagSecure);
     }
 
-    public static boolean isSecureWindow () {
+    public static boolean isSecureWindow() {
         return prefs.getBoolean(PREF_SECURE_WINDOW_FLAG, true);
     }
 }

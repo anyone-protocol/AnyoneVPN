@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import io.anyone.anyonebot.R
 import io.anyone.anyonebot.core.DiskUtils.createReadFileIntent
 import io.anyone.anyonebot.core.LocaleHelper.onAttach
+import io.anyone.anyonebot.core.ui.BaseActivity
 import io.anyone.anyonebot.databinding.ActivityHostedServicesBinding
 import io.anyone.anyonebot.ui.hostedservices.PermissionManager.requestBatteryPermissions
 import io.anyone.anyonebot.ui.hostedservices.PermissionManager.requestDropBatteryPermissions
@@ -24,7 +25,7 @@ import io.anyone.anyonebot.utils.ZipUtils
 import io.anyone.anyonebot.utils.getInt
 import io.anyone.anyonebot.utils.getString
 
-class HostedServicesActivity : AppCompatActivity(), View.OnClickListener {
+class HostedServicesActivity : BaseActivity(), View.OnClickListener {
 
     private lateinit var mBinding: ActivityHostedServicesBinding
 
