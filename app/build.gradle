@@ -1,6 +1,5 @@
 apply from: "../commons-device.gradle"
 apply plugin: 'kotlin-android'
-apply from : '../dependencies.gradle'
 
 /* gets the version name from the latest Git tag, stripping the leading v off */
 def getVersionName = { ->
@@ -87,18 +86,18 @@ android {
                 project(':appcore'),
                 project(':intentintegrator'),
                 project(':anyonebotservice'),
-                libs.android_material,
-                libs.android_volley,
-                libs.androidx_localbroadcast,
+                "com.google.android.material:material:1.12.0",
+                "com.android.volley:volley:1.2.0",
+                "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0",
 
                 //use locally built ipt_proxy+go_tun2socks
                 project(':OrbotLib')
         )
 
-        implementation "com.squareup.retrofit2:retrofit:2.9.0"
-        implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+        implementation "com.squareup.retrofit2:retrofit:2.11.0"
+        implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
 
-        androidTestImplementation libs.fastlane_screengrab
+        androidTestImplementation "tools.fastlane:screengrab:2.1.1"
 //        coreLibraryDesugaring 'com.android.tools:desugar_j dk_libs:1.1.5'
     }
     lint {
@@ -113,16 +112,16 @@ android {
     namespace 'io.anyone.anyonebot'
 }
 dependencies {
-    implementation "androidx.core:core-ktx:1.13.1"
+    implementation "androidx.core:core-ktx:1.15.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     // Kotlin
-    implementation "androidx.navigation:navigation-fragment-ktx:2.8.2"
-    implementation "androidx.navigation:navigation-ui-ktx:2.8.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.8.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.8.5"
 
     //root detection
-    implementation 'com.scottyab:rootbeer-lib:0.1.0'
+    implementation 'com.scottyab:rootbeer-lib:0.1.1'
 
 }

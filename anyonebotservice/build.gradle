@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply from: "../commons.gradle"
-apply from : '../dependencies.gradle'
 
 android {
     defaultConfig {
@@ -34,19 +33,19 @@ android {
 }
 
 dependencies {
-    api libs.anon_android // project(':anon-android-binary')
+    api "io.anyone:anon-android:0.4.9.10" // project(':anon-android-binary')
 
     //use locally built ipt_proxy+go_tun2socks
     api project(':OrbotLib')
 
     implementation(
-            libs.android_shell,
-            libs.androidx_core,
-            libs.androidx_localbroadcast,
-            libs.pcap_core,
-            libs.pcap_factory,
-            libs.androidx_work,
-            libs.androidx_work_kotlin
+            "com.jaredrummler:android-shell:1.0.0",
+            "androidx.core:core:1.13.1",
+            "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0",
+            "androidx.work:work-runtime:2.9.0",
+            "androidx.work:work-runtime-ktx:2.9.0",
+            "org.pcap4j:pcap4j-core:1.8.2",
+            "org.pcap4j:pcap4j-packetfactory-static:1.8.2",
     )
 
     implementation files('../libs/geoip.jar')
