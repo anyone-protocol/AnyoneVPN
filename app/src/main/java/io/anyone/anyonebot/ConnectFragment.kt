@@ -30,10 +30,15 @@ import io.anyone.jni.AnonControlCommands
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import androidx.core.view.isVisible
 
 
 class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
     ExitNodeDialogFragment.ExitNodeSelectedCallback, AppsFragment.OnChangeListener {
+
+    companion object {
+        private var begin: Long = 0
+    }
 
     // main screen UI
     private lateinit var binding: FragmentConnectBinding
@@ -41,9 +46,10 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
     private var lastStatus: String? = ""
 
     private lateinit var mainHandler: Handler
-    private var begin: Long = 0
     private val counterTask = object : Runnable {
         override fun run() {
+            if (begin < 1) begin = System.currentTimeMillis()
+
             binding.tvCounter.text = DateUtils.formatElapsedTime((System.currentTimeMillis() - begin) / 1000)
             mainHandler.postDelayed(this, 1000)
         }
@@ -105,7 +111,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
     override fun onResume() {
         super.onResume()
 
-        if (binding.tvCounter.visibility == View.VISIBLE) {
+        if (binding.tvCounter.isVisible) {
             mainHandler.post(counterTask)
         }
     }
@@ -219,7 +225,6 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
 
         binding.root.requestLayout()
 
-        begin = System.currentTimeMillis()
         mainHandler.post(counterTask)
     }
 
@@ -239,6 +244,9 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding.tvSubtitle.visibility = View.VISIBLE
 
         binding.connectedGroup.visibility = View.GONE
+
+        mainHandler.removeCallbacks(counterTask)
+        begin = 0
     }
 
 
