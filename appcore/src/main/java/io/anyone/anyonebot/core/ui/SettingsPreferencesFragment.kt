@@ -34,7 +34,7 @@ class SettingsPreferencesFragment : PreferenceFragmentCompat() {
 
         // kludge for #992
         val categoryNodeConfig = findPreference<Preference>("category_node_config")
-        categoryNodeConfig?.title = "${categoryNodeConfig?.title}" + "\n\n" + "${categoryNodeConfig?.summary}"
+        categoryNodeConfig?.title = "${categoryNodeConfig.title}" + "\n\n" + "${categoryNodeConfig.summary}"
         categoryNodeConfig?.summary = null
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -52,9 +52,6 @@ class SettingsPreferencesFragment : PreferenceFragmentCompat() {
 
             true
         }
-
-
-
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -66,16 +63,22 @@ class SettingsPreferencesFragment : PreferenceFragmentCompat() {
     private fun setNoPersonalizedLearningOnEditTextPreferences() {
         val preferenceScreen = preferenceScreen
         val categoryCount = preferenceScreen.preferenceCount
+
         for (i in 0 until categoryCount) {
             var p = preferenceScreen.getPreference(i)
+
             if (p is PreferenceCategory) {
                 val pc = p
                 val preferenceCount = pc.preferenceCount
+
                 for (j in 0 until preferenceCount) {
                     p = pc.getPreference(j)
+
                     if (p is EditTextPreference) {
                         p.setOnBindEditTextListener {
-                            it.imeOptions = it.imeOptions or EditorInfo.IME_FLAG_NO_PERSONALIZED_LEARNING
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                it.imeOptions = it.imeOptions or EditorInfo.IME_FLAG_NO_PERSONALIZED_LEARNING
+                            }
                         }
                     }
                 }

@@ -19,9 +19,6 @@ android {
     defaultConfig {
         applicationId "io.anyone.anyonebot"
         versionName getVersionName()
-        minSdkVersion 24
-        compileSdk 35
-        targetSdkVersion 35
         multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         archivesBaseName = "AnyoneBot"
@@ -94,8 +91,8 @@ android {
                 project(':OrbotLib')
         )
 
-        implementation "com.squareup.retrofit2:retrofit:2.11.0"
-        implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+        implementation "com.squareup.retrofit2:retrofit:3.0.0"
+        implementation 'com.squareup.retrofit2:converter-gson:3.0.0'
 
         androidTestImplementation "tools.fastlane:screengrab:2.1.1"
 //        coreLibraryDesugaring 'com.android.tools:desugar_j dk_libs:1.1.5'
@@ -112,14 +109,14 @@ android {
     namespace 'io.anyone.anyonebot'
 }
 dependencies {
-    implementation "androidx.core:core-ktx:1.15.0"
+    implementation "androidx.core:core-ktx:1.17.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
-    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
     // Kotlin
-    implementation "androidx.navigation:navigation-fragment-ktx:2.8.5"
-    implementation "androidx.navigation:navigation-ui-ktx:2.8.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.9.4"
+    implementation "androidx.navigation:navigation-ui-ktx:2.9.4"
 
     //root detection
     implementation 'com.scottyab:rootbeer-lib:0.1.1'
