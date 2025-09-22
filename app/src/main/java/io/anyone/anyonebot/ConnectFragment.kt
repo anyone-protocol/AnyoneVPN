@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import io.anyone.anyonebot.core.NetworkUtils.isNetworkAvailable
 import io.anyone.anyonebot.core.putNotSystem
 import io.anyone.anyonebot.databinding.FragmentConnectBinding
@@ -26,6 +27,9 @@ import io.anyone.anyonebot.service.AnyoneBotService
 import io.anyone.anyonebot.service.util.Prefs
 import io.anyone.anyonebot.ui.AppsFragment
 import io.anyone.jni.AnonControlCommands
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
@@ -119,7 +123,14 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
 
     private fun sendNewnymSignal() {
         sendIntentToService(AnonControlCommands.SIGNAL_NEWNYM)
-        mainHandler.postDelayed({ binding.ivStatus.animate().alpha(1f).duration = 500 }, 600)
+
+        binding.ivStatus.animate().alpha(0f).duration = 500
+
+        lifecycleScope.launch(Dispatchers.Main) {
+            delay(600)
+
+            binding.ivStatus.animate().alpha(1f).duration = 500
+        }
     }
 
     private fun openExitNodeDialog() {
