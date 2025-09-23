@@ -17,6 +17,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import io.anyone.anyonebot.core.NetworkUtils.isNetworkAvailable
@@ -25,12 +26,12 @@ import io.anyone.anyonebot.databinding.FragmentConnectBinding
 import io.anyone.anyonebot.service.AnyoneBotConstants
 import io.anyone.anyonebot.service.AnyoneBotService
 import io.anyone.anyonebot.service.util.Prefs
+import io.anyone.anyonebot.service.util.Utils
 import io.anyone.anyonebot.ui.AppsFragment
 import io.anyone.jni.AnonControlCommands
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import androidx.core.view.isVisible
 
 
 class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
@@ -114,6 +115,8 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         if (binding.tvCounter.isVisible) {
             mainHandler.post(counterTask)
         }
+
+        updateExitFlag()
     }
 
     override fun onPause() {
@@ -147,14 +150,14 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
 
     fun startAnonAndVpn() {
         val vpnIntent = VpnService.prepare(requireActivity())?.putNotSystem()
-        if (vpnIntent != null && (!Prefs.isPowerUserMode())) {
+        if (vpnIntent != null && (!Prefs.isPowerUserMode)) {
             requestCodeVpnLauncher.launch(vpnIntent)
         } else {
             // todo we need to add a power user mode for users to start the VPN without tor
-            Prefs.putUseVpn(!Prefs.isPowerUserMode())
+            Prefs.putUseVpn(!Prefs.isPowerUserMode)
             sendIntentToService(AnyoneBotConstants.ACTION_START)
 
-            if (!Prefs.isPowerUserMode()) sendIntentToService(AnyoneBotConstants.ACTION_START_VPN)
+            if (!Prefs.isPowerUserMode) sendIntentToService(AnyoneBotConstants.ACTION_START_VPN)
         }
     }
 
@@ -186,7 +189,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding.connectedGroup.visibility = View.VISIBLE
 
         val apps = Prefs.getSharedPrefs(context)
-            .getString(AnyoneBotConstants.PREFS_KEY_ANONIFIED, "")
+            ?.getString(AnyoneBotConstants.PREFS_KEY_ANONIFIED, "")
             ?.split("|")
             ?.filter { it.isNotEmpty() }
             ?.toTypedArray()
@@ -283,7 +286,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
     override fun onExitNodeSelected(countryCode: String, displayCountryName: String) {
 
         //tor format expects "{" for country code
-        Prefs.setExitNodes("{$countryCode}")
+        Prefs.exitNodes = "{$countryCode}"
 
         sendIntentToService(
             Intent(
@@ -291,6 +294,8 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
                 AnyoneBotService::class.java
             ).setAction(AnyoneBotConstants.CMD_SET_EXIT).putExtra("exit", countryCode)
         )
+
+        updateExitFlag()
     }
 
     override fun onAppsChange() {
@@ -320,7 +325,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
             name = context.packageManager.getApplicationLabel(appInfo)
             drawable = context.packageManager.getApplicationIcon(appInfo)
         }
-        catch (error: Throwable) {
+        catch (_: Throwable) {
             return null
         }
 
@@ -347,5 +352,17 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         }
 
         return iv
+    }
+
+    private fun updateExitFlag() {
+        val firstCountryCode = Prefs.firstExitCountry
+        var flag = getString(R.string.globe)
+
+        if (firstCountryCode?.length == 2) {
+            flag = Utils.convertCountryCodeToFlagEmoji(firstCountryCode)
+        }
+
+        binding.btChangeExit.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null,
+            Utils.emojiToDrawable(context,flag), null)
     }
 }
