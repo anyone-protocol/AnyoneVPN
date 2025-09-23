@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    api "io.anyone:anon-android:0.4.9.10" // project(':anon-android-binary')
+    api "io.anyone:anon-android:0.4.9.11" // project(':anon-android-binary')
 
     //use locally built ipt_proxy+go_tun2socks
     api project(':OrbotLib')
