@@ -1,56 +1,78 @@
-/* Copyright (c) 2009, Nathan Freitas, Orbot / The Guardian Project - http://openideals.com/guardian */
-/* See LICENSE for licensing information */
+/* Copyright (c) 2009, Nathan Freitas, Orbot / The Guardian Project - http://openideals.com/guardian */ /* See LICENSE for licensing information */
+package io.anyone.anyonebot.service.util
 
+import android.content.Context
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.drawable.BitmapDrawable
+import androidx.core.graphics.createBitmap
+import androidx.core.graphics.drawable.toDrawable
+import java.io.BufferedReader
+import java.io.IOException
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.net.InetSocketAddress
+import java.net.Socket
+import java.util.Locale
 
-package io.anyone.anyonebot.service.util;
+object Utils {
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.util.Locale;
-
-public class Utils {
-    public static boolean isPortOpen(final String ip, final int port, final int timeout) {
+    @JvmStatic
+    fun isPortOpen(ip: String?, port: Int, timeout: Int): Boolean {
         try {
-            Socket socket = new Socket();
-            socket.connect(new InetSocketAddress(ip, port), timeout);
-            socket.close();
-            return true;
-        } catch (Exception ex) {
-            //ex.printStackTrace();
-            return false;
+            val socket = Socket()
+            socket.connect(InetSocketAddress(ip, port), timeout)
+            socket.close()
+            return true
+        } catch (_: Exception) {
+            return false
         }
     }
 
-    public static String readInputStreamAsString(InputStream stream) {
-        String line;
+    @JvmStatic
+    fun readInputStreamAsString(stream: InputStream?): String {
+        var line: String?
 
-        StringBuilder out = new StringBuilder();
+        val out = StringBuilder()
 
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+            val reader = BufferedReader(InputStreamReader(stream))
 
-            while ((line = reader.readLine()) != null) {
-                out.append(line);
-                out.append('\n');
-
+            while ((reader.readLine().also { line = it }) != null) {
+                out.append(line)
+                out.append('\n')
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (e: IOException) {
+            e.printStackTrace()
         }
 
-        return out.toString();
+        return out.toString()
     }
 
-    public static String convertCountryCodeToFlagEmoji(String countryCode) {
-        countryCode = countryCode.toUpperCase(Locale.getDefault());
-        int flagOffset = 0x1F1E6;
-        int asciiOffset = 0x41;
-        int firstChar = Character.codePointAt(countryCode, 0) - asciiOffset + flagOffset;
-        int secondChar = Character.codePointAt(countryCode, 1) - asciiOffset + flagOffset;
-        return new String(Character.toChars(firstChar)) + new String(Character.toChars(secondChar));
+    @JvmStatic
+    fun convertCountryCodeToFlagEmoji(countryCode: String): String {
+        var countryCode = countryCode
+        countryCode = countryCode.uppercase(Locale.getDefault())
+        val flagOffset = 0x1F1E6
+        val asciiOffset = 0x41
+        val firstChar = Character.codePointAt(countryCode, 0) - asciiOffset + flagOffset
+        val secondChar = Character.codePointAt(countryCode, 1) - asciiOffset + flagOffset
+        return String(Character.toChars(firstChar)) + String(Character.toChars(secondChar))
+    }
+
+    fun emojiToDrawable(context: Context?, emoji: String, size: Float = 48f): BitmapDrawable? {
+        val context = context ?: return null
+
+        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            textSize = size
+        }
+        val width = paint.measureText(emoji).toInt()
+        val height = (paint.fontMetrics.bottom - paint.fontMetrics.top).toInt()
+        val bitmap = createBitmap(width, height)
+        val canvas = Canvas(bitmap)
+
+        canvas.drawText(emoji, 0f, -paint.fontMetrics.top, paint)
+
+        return bitmap.toDrawable(context.resources)
     }
 }

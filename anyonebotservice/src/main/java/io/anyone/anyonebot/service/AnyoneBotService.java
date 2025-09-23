@@ -348,7 +348,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
                     try {
                         Log.d(TAG, "Installing geoip files...");
                         new CustomAnonResourceInstaller(this, appBinHome).installGeoIP();
-                        Prefs.setIsGeoIpReinstallNeeded(false);
+                        Prefs.setGeoIpReinstallNeeded(false);
                     } catch (IOException io) { // user has < 10MB free space on disk...
                         Log.e(TAG, "Error installing geoip files", io);
                     }

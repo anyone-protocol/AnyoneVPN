@@ -21,7 +21,7 @@ class SettingsPreferencesFragment : PreferenceFragmentCompat() {
         val languages = Languages[requireActivity()]
         prefLocale?.entries = languages?.allNames
         prefLocale?.entryValues = languages?.supportedLocales
-        prefLocale?.value = Prefs.getDefaultLocale()
+        prefLocale?.value = Prefs.defaultLocale
         prefLocale?.onPreferenceChangeListener =
             Preference.OnPreferenceChangeListener { _: Preference?, newValue: Any? ->
                 val language = newValue as String?
@@ -47,7 +47,7 @@ class SettingsPreferencesFragment : PreferenceFragmentCompat() {
         val prefFlagSecure = findPreference<CheckBoxPreference>("pref_flag_secure")
         prefFlagSecure?.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _: Preference?, newValue: Any? ->
 
-            Prefs.setSecureWindow(newValue as Boolean)
+            Prefs.isSecureWindow = newValue as Boolean
             (activity as BaseActivity).resetSecureFlags()
 
             true

@@ -33,7 +33,7 @@ class MoreFragment : Fragment(), AppsFragment.OnChangeListener {
 
     private val mSettingsActivityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
-            Prefs.setDefaultLocale(result.data?.getStringExtra("locale"))
+            Prefs.defaultLocale = result.data?.getStringExtra("locale")
 
             sendIntentToService(AnyoneBotConstants.ACTION_LOCAL_LOCALE_SET)
 
