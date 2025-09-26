@@ -1088,7 +1088,7 @@ public class AnyoneBotService extends VpnService implements AnyoneBotConstants {
 
                     conn.setConf("GeoIPFile", fileGeoIP.getCanonicalPath());
                     conn.setConf("GeoIPv6File", fileGeoIP6.getCanonicalPath());
-                    conn.setConf("ExitNodes", newExits);
+                    conn.setConf("ExitNodes", Prefs.getExitNodes());
                     conn.setConf("StrictNodes", "1");
                     conn.setConf("DisableNetwork", "1");
                     conn.setConf("DisableNetwork", "0");

@@ -37,30 +37,24 @@ class ExitNodeDialogFragment(private val callback: ExitNodeSelectedCallback) : D
 
     companion object {
         private val COUNTRY_CODES = arrayOf(
-            "DE",
+            "AE",
+            "AL",
             "AT",
-            "SE",
-            "CH",
-            "IS",
             "CA",
-            "US",
+            "DE",
             "ES",
             "FR",
-            "BG",
-            "PL",
-            "AU",
-            "BR",
-            "CZ",
-            "DK",
-            "FI",
             "GB",
             "HU",
+            "LU",
+            "LV",
+            "MD",
             "NL",
-            "JP",
+            "PL",
             "RO",
             "RU",
-            "SG",
-            "SK"
+            "UA",
+            "US",
         )
     }
 }
