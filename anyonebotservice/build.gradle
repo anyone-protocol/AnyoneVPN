@@ -34,17 +34,12 @@ android {
 dependencies {
     api "io.anyone:anon-android:0.4.9.11" // project(':anon-android-binary')
 
-    //use locally built ipt_proxy+go_tun2socks
-    api project(':OrbotLib')
-
     implementation(
             "com.jaredrummler:android-shell:1.0.0",
             "androidx.core:core:1.13.1",
             "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0",
             "androidx.work:work-runtime:2.9.0",
             "androidx.work:work-runtime-ktx:2.9.0",
-            "org.pcap4j:pcap4j-core:1.8.2",
-            "org.pcap4j:pcap4j-packetfactory-static:1.8.2",
     )
 
     implementation files('../libs/geoip.jar')

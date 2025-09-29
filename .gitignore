@@ -33,7 +33,6 @@ libs/jtorctl.jar
 app/src/main/jniLibs/
 app/src/main/libs/
 anyonebotservice/src/main/libs/
-OrbotLib/OrbotIPtProxy
 
 # Fastlane
 /fastlane/report.xml

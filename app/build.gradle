@@ -53,7 +53,7 @@ android {
         fullperm {
             dimension "free"
             applicationId 'io.anyone.anyonebot'
-            versionCode 1732300101
+            versionCode 4
             versionName getVersionName()
             archivesBaseName = "AnyoneBot-${versionName}"
         }
@@ -86,9 +86,6 @@ android {
                 "com.google.android.material:material:1.12.0",
                 "com.android.volley:volley:1.2.0",
                 "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0",
-
-                //use locally built ipt_proxy+go_tun2socks
-                project(':OrbotLib')
         )
 
         implementation "com.squareup.retrofit2:retrofit:3.0.0"

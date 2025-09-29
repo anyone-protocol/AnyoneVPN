@@ -23,7 +23,6 @@ include(
         ':app',
         ':appcore',
         ':intentintegrator',
-        ':OrbotLib',
         ':anyonebotservice'
 )
 //include ':anon-android-binary'

@@ -31,27 +31,18 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import org.pcap4j.packet.IllegalRawDataException;
-import org.pcap4j.packet.IpPacket;
-import org.pcap4j.packet.IpSelector;
-import org.pcap4j.packet.UdpPacket;
-import org.pcap4j.packet.namednumber.IpNumber;
-import org.pcap4j.packet.namednumber.UdpPort;
 import io.anyone.anyonebot.service.AnyoneBotConstants;
 import io.anyone.anyonebot.service.AnyoneBotService;
 import io.anyone.anyonebot.service.R;
+import io.anyone.anyonebot.service.TProxyService;
 import io.anyone.anyonebot.service.util.Prefs;
 
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
-import IPtProxy.IPtProxy;
-import IPtProxy.PacketFlow;
 
 public class AnyoneBotVpnManager implements Handler.Callback, AnyoneBotConstants {
     private static final String TAG = "AnyoneBotVpnManager";
@@ -62,11 +53,6 @@ public class AnyoneBotVpnManager implements Handler.Callback, AnyoneBotConstants
     private int mTorDns = -1;
     private final VpnService mService;
     private final SharedPreferences prefs;
-    private DNSResolver mDnsResolver;
-
-    private final ExecutorService mExec = Executors.newFixedThreadPool(10);
-    private Thread mThreadPacket;
-    private boolean keepRunningPacket = false;
 
     private FileInputStream fis;
     private DataOutputStream fos;
@@ -122,12 +108,10 @@ public class AnyoneBotVpnManager implements Handler.Callback, AnyoneBotConstants
     }
 
     private void stopVPN() {
-        keepRunningPacket = false;
-
         if (mInterface != null) {
             try {
                 Log.d(TAG, "closing interface, destroying VPN interface");
-                IPtProxy.stopSocks();
+                TProxyService.TProxyStopService();
                 if (fis != null) {
                     fis.close();
                     fis = null;
@@ -144,10 +128,6 @@ public class AnyoneBotVpnManager implements Handler.Callback, AnyoneBotConstants
                 Log.d(TAG, "error stopping tun2socks", e);
             }
         }
-
-        if (mThreadPacket != null && mThreadPacket.isAlive()) {
-            mThreadPacket.interrupt();
-        }
     }
 
     @Override
@@ -156,30 +136,16 @@ public class AnyoneBotVpnManager implements Handler.Callback, AnyoneBotConstants
         return true;
     }
 
-    public final static String FAKE_DNS = "10.0.0.1";
-
     private synchronized void setupTun2Socks(final VpnService.Builder builder) {
         try {
-            final String defaultRoute = "0.0.0.0";
-            final String virtualGateway = "192.168.50.1";
-
-            //    builder.setMtu(VPN_MTU);
-            //   builder.addAddress(virtualGateway, 32);
-            builder.addAddress(virtualGateway, 24)
-                    .addRoute(defaultRoute, 0)
-                    .addRoute(FAKE_DNS, 32)
-                    .addDnsServer(FAKE_DNS) //just setting a value here so DNS is captured by TUN interface
-                    .setSession(mService.getString(R.string.anyonebot_vpn));
-
+            builder.setMtu(TProxyService.TUNNEL_MTU)
+                    .addAddress(TProxyService.VIRTUAL_GATEWAY_IPV4, 32)
+                    .addRoute("0.0.0.0", 0)
+                    .addDnsServer(TProxyService.FAKE_DNS) //just setting a value here so DNS is captured by TUN interface
+                    .setSession(mService.getString(R.string.anyonebot_vpn))
             //handle ipv6
-            builder.addAddress("fdfe:dcba:9876::1", 126);
-            builder.addRoute("::", 0);
-
-            /*
-             * Can't use this since our HTTP proxy is only CONNECT and not a full proxy
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                builder.setHttpProxy(ProxyInfo.buildDirectProxy("localhost",mTorHttp));
-            }**/
+                    .addAddress(TProxyService.VIRTUAL_GATEWAY_IPV6, 128)
+                    .addRoute("::", 0);
 
             doAppBasedRouting(builder);
 
@@ -199,7 +165,6 @@ public class AnyoneBotVpnManager implements Handler.Callback, AnyoneBotConstants
                     .setBlocking(true);
 
             mInterface = builder.establish();
-            mDnsResolver = new DNSResolver(mTorDns);
 
             final Handler handler = new Handler(Looper.getMainLooper());
             handler.postDelayed(() -> {
@@ -215,68 +180,49 @@ public class AnyoneBotVpnManager implements Handler.Callback, AnyoneBotConstants
         }
     }
 
+    private File getHevSocksTunnelConfFile() throws IOException {
+        var file = new File(mService.getCacheDir(), "tproxy.conf");
+        //noinspection ResultOfMethodCallIgnored
+        file.createNewFile();
+
+        var fos = new FileOutputStream(file, false);
+
+        var conf = "misc:\n" +
+//                "  log-file: /data/data/io.anyone.anyonebot/cache/hev.log\n" +
+                "  log-level: debug\n" +
+                "  task-stack-size: " + TProxyService.TASK_SIZE + "\n" +
+                "tunnel:\n" +
+                "  ipv4: '" + TProxyService.VIRTUAL_GATEWAY_IPV4 + "'\n" +
+                "  ipv6: '" + TProxyService.VIRTUAL_GATEWAY_IPV6 + "'\n" +
+                "  mtu: " + TProxyService.TUNNEL_MTU + "\n" +
+                "socks5:\n" +
+                "  port: " + mTorSocks + "\n" +
+                "  address: 127.0.0.1\n" +
+                "  upd: 'udp'\n" +
+                "mapdns:\n" +
+                "  address: " + TProxyService.FAKE_DNS + "\n" +
+                "  port: 53\n" +
+                "  network: 240.0.0.0\n" +
+                "  netmask: 240.0.0.0\n" +
+                "  cache-size: 10000\n";
+
+//        Log.d(TAG, conf);
+
+        fos.write(conf.getBytes());
+        fos.close();
+
+        return file;
+    }
+
     private void startListeningToFD() throws IOException {
         if (mInterface == null) return; // Prepare hasn't been called yet
 
         fis = new FileInputStream(mInterface.getFileDescriptor());
         fos = new DataOutputStream(new FileOutputStream(mInterface.getFileDescriptor()));
 
-        //write packets back out to TUN
-        PacketFlow pFlow = packet -> {
-            try {
-                fos.write(packet);
-            } catch (IOException e) {
-                Log.e(TAG, "error writing to VPN fd", e);
-            }
-        };
+        var conf = getHevSocksTunnelConfFile();
 
-        IPtProxy.startSocks(pFlow, "127.0.0.1", mTorSocks);
-
-        //read packets from TUN and send to go-tun2socks
-        mThreadPacket = new Thread() {
-            public void run() {
-
-                var buffer = new byte[32767 * 2]; //64k
-                keepRunningPacket = true;
-                while (keepRunningPacket) {
-                    try {
-                        int pLen = fis.read(buffer); // will block on API 21+
-
-                        if (pLen > 0) {
-                            var pdata = Arrays.copyOf(buffer, pLen);
-                            try {
-                                var packet = IpSelector.newPacket(pdata, 0, pdata.length);
-
-                                if (packet instanceof IpPacket ipPacket) {
-                                    if (isPacketDNS(ipPacket))
-                                        mExec.execute(new RequestPacketHandler(ipPacket, pFlow, mDnsResolver));
-                                    else if (isPacketICMP(ipPacket)) {
-                                        //do nothing, drop!
-                                    } else IPtProxy.inputPacket(pdata);
-                                }
-                            } catch (IllegalRawDataException e) {
-                                Log.e(TAG, e.getLocalizedMessage());
-                            }
-                        }
-                    } catch (Exception e) {
-                        Log.d(TAG, "error reading from VPN fd: " + e.getLocalizedMessage());
-                    }
-                }
-            }
-        };
-        mThreadPacket.start();
-    }
-
-    private static boolean isPacketDNS(IpPacket p) {
-        if (p.getHeader().getProtocol() == IpNumber.UDP) {
-            var up = (UdpPacket) p.getPayload();
-            return up.getHeader().getDstPort() == UdpPort.DOMAIN;
-        }
-        return false;
-    }
-
-    private static boolean isPacketICMP(IpPacket p) {
-        return (p.getHeader().getProtocol() == IpNumber.ICMPV4 || p.getHeader().getProtocol() == IpNumber.ICMPV6);
+        TProxyService.TProxyStartService(conf.getAbsolutePath(), mInterface.getFd());
     }
 
     private void doAppBasedRouting(VpnService.Builder builder) throws NameNotFoundException {
@@ -293,14 +239,6 @@ public class AnyoneBotVpnManager implements Handler.Callback, AnyoneBotConstants
             }
         }
         Log.i(TAG, "App based routing is enabled?=" + individualAppsWereSelected + ", isLockdownMode=" + isLockdownMode);
-
-        if (isLockdownMode) {
-             /* TODO https://github.com/guardianproject/orbot/issues/774
-                Need to allow briar, onionshare, etc to enter orbot's vpn gateway, but not enter the tor
-                network, that way these apps can use their own tor connection
-                 // TODO  "add" these packages here...
-                 */
-        }
 
         if (!individualAppsWereSelected && !isLockdownMode) {
             // disallow orobt itself...
