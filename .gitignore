@@ -30,9 +30,6 @@ obj/
 
 # Orbot libs
 libs/jtorctl.jar
-app/src/main/jniLibs/
-app/src/main/libs/
-anyonebotservice/src/main/libs/
 
 # Fastlane
 /fastlane/report.xml

@@ -47,13 +47,17 @@ learn to configure it properly. Learn more: https://torproject.org/
 ### Build Instructions
 
 ```sh
-git clone https://github.com/anyone-protocol/AnyoneBot.git
+git clone --recursive https://github.com/anyone-protocol/AnyoneBot.git
+```
+
+Or, if you already cloned the repo:
+
+```sh
 cd AnyoneBot
+git pull
 git submodule update --init --recursive
-cd anyonebotservice/src/main
-ndk-build # Make sure your Android NDK folder is on the PATH.
-mv libs jniLibs
- ```
+```
 
 
-**Copyright &#169; 2009-2023, Nathan Freitas, The Guardian Project**
+**Copyright &#169; 2009-2024, Nathan Freitas, The Guardian Project**
+**Copyright &#169; 2025, Anyone**
