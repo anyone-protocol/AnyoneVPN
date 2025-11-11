@@ -100,9 +100,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
                 AnyoneBotConstants.STATUS_STARTING -> doLayoutStarting(requireContext())
                 AnyoneBotConstants.STATUS_ON -> doLayoutOn()
                 AnyoneBotConstants.STATUS_STOPPING -> {}
-                else -> {
-                    doLayoutOff()
-                }
+                else -> doLayoutOff()
             }
         }
 
@@ -128,6 +126,8 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
     private fun stopAnonAndVpn() {
         sendIntentToService(AnyoneBotConstants.ACTION_STOP)
         sendIntentToService(AnyoneBotConstants.ACTION_STOP_VPN)
+
+        begin = 0
     }
 
     private fun sendNewnymSignal() {
@@ -149,6 +149,8 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
     }
 
     fun startAnonAndVpn() {
+        begin = 0
+
         val vpnIntent = VpnService.prepare(requireActivity())?.putNotSystem()
         if (vpnIntent != null && (!Prefs.isPowerUserMode)) {
             requestCodeVpnLauncher.launch(vpnIntent)
@@ -249,7 +251,6 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding.connectedGroup.visibility = View.GONE
 
         mainHandler.removeCallbacks(counterTask)
-        begin = 0
     }
 
 
