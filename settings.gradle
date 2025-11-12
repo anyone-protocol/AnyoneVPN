@@ -22,7 +22,6 @@ rootProject.name = "AnyoneBot"
 include(
         ':app',
         ':appcore',
-        ':intentintegrator',
         ':anyonebotservice'
 )
 //include ':anon-android-binary'
