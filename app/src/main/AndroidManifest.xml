@@ -71,6 +71,15 @@
                 android:value=".AnyoneBotActivity"/>
         </activity>
 
+        <activity
+            android:name=".core.ui.BaseActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".core.ui.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
+
         <provider
             android:name=".ui.hostedservices.HostedServicesContentProvider"
             android:authorities="${applicationId}.ui.hostedservices"

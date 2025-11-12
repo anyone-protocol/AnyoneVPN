@@ -79,20 +79,21 @@ android {
     }
 
     dependencies {
-        implementation(
-                project(':appcore'),
-                project(':anyonebotservice'),
-                "com.google.android.material:material:1.12.0",
-                "com.android.volley:volley:1.2.0",
-                "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0",
-        )
+        implementation project(':anyonebotservice')
+        implementation 'com.google.android.material:material:1.13.0'
+        implementation "com.android.volley:volley:1.2.1"
+        implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
+
+        implementation "androidx.appcompat:appcompat:1.7.1"
+        implementation "androidx.preference:preference-ktx:1.2.1"
+        implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
 
         implementation "com.squareup.retrofit2:retrofit:3.0.0"
         implementation 'com.squareup.retrofit2:converter-gson:3.0.0'
 
         androidTestImplementation "tools.fastlane:screengrab:2.1.1"
-//        coreLibraryDesugaring 'com.android.tools:desugar_j dk_libs:1.1.5'
     }
+
     lint {
         abortOnError false
         checkReleaseBuilds false
@@ -102,19 +103,21 @@ android {
         textReport false
         xmlReport false
     }
+
     namespace 'io.anyone.anyonebot'
 }
 dependencies {
     implementation "androidx.core:core-ktx:1.17.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
     androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+
     // Kotlin
-    implementation "androidx.navigation:navigation-fragment-ktx:2.9.4"
-    implementation "androidx.navigation:navigation-ui-ktx:2.9.4"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.9.6"
+    implementation "androidx.navigation:navigation-ui-ktx:2.9.6"
 
     //root detection
     implementation 'com.scottyab:rootbeer-lib:0.1.1'
-
 }

@@ -9,7 +9,7 @@ import android.view.inputmethod.EditorInfo
 import androidx.preference.*
 import io.anyone.anyonebot.core.Languages
 import io.anyone.anyonebot.service.util.Prefs
-import io.anyone.anyonebot.core.R
+import io.anyone.anyonebot.R
 
 class SettingsPreferencesFragment : PreferenceFragmentCompat() {
     private var prefLocale: ListPreference? = null
@@ -56,7 +56,7 @@ class SettingsPreferencesFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
 
-        setPreferencesFromResource(R.xml.preferences, rootKey)
+        setPreferencesFromResource( R.xml.preferences, rootKey)
         initPrefs()
     }
 

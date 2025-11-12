@@ -21,7 +21,6 @@ dependencyResolutionManagement {
 rootProject.name = "AnyoneBot"
 include(
         ':app',
-        ':appcore',
         ':anyonebotservice'
 )
 //include ':anon-android-binary'
