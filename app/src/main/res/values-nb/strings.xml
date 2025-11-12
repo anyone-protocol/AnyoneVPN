@@ -224,4 +224,16 @@
     <string name="many_ways">Det finnes mange måter å nå Anon på. Noen fungerer kanskje bedre enn andre for deg.</string>
     <string name="v3_key_hash">x25519 Privat nøkkel i Base32</string>
     <string name="configure_header">Konfigurere Anon-tilkoblingen</string>
+
+    <string name="status_starting_up">AnyoneBot starter…</string>
+    <string name="status_activated">Koblet til Anyone-nettverket</string>
+    <string name="status_disabled">AnyoneBot er deaktivert</string>
+    <string name="couldn_t_start_anon_process_">Kunne ikke starte anon prosessen:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Dine \"adresser som kan nås\"-innstillinger forårsaket et unntak!</string>
+    <string name="your_relay_settings_caused_an_exception_">Dine relé-innstillinger forårsaket et unntak!</string>
+    <string name="found_existing_anon_process">fant eksisterende Anon-prosess…</string>
+    <string name="unable_to_start_anon">Klarte ikke å starte Anon:</string>
+    <string name="updating_settings_in_anon_service">Oppdaterer innstillinger i Anon service</string>
+    <string name="mebibyte_per_second">MiB/s</string>
+    <string name="kibibyte_per_second">KiB/s</string>
 </resources>

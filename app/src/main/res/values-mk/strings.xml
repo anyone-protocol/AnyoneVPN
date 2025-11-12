@@ -145,4 +145,14 @@
     <string name="menu_header_features">Карактеристики</string>
     <string name="connect">Поврзи</string>
     <string name="drawer_open">Отвори</string>
+
+    <string name="status_starting_up">AnyoneBot се стартува…</string>
+    <string name="status_activated">Поврзан на мрежата на Anyone</string>
+    <string name="status_disabled">AnyoneBot е деактивиран</string>
+    <string name="couldn_t_start_anon_process_">Не може да се започне anon-процесот:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Вашите поставки за достапните адреси предизвикаа грешка!</string>
+    <string name="your_relay_settings_caused_an_exception_">Вашите поставки за реле предизвикаа грешка!</string>
+    <string name="found_existing_anon_process">Пронајден постоечки Anon-процес …</string>
+    <string name="unable_to_start_anon">Anon не може да се стартува:</string>
+    <string name="updating_settings_in_anon_service">ажурирање на поставките во сервисот Anon </string>
 </resources>

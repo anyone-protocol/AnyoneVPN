@@ -87,4 +87,12 @@
     <string name="menu_new_identity">Nova idento</string>
     <string name="drawer_close">Fermi</string>
     <string name="version">Versio:</string>
+
+    <string name="status_starting_up">AnyoneBot ŝaltiĝas…</string>
+    <string name="status_activated">Konektita al Anyone-reto</string>
+    <string name="status_disabled">AnyoneBot estas malaktivigita</string>
+    <string name="couldn_t_start_anon_process_">Anon-procedo ne sukcesis stariĝi:</string>
+    <string name="your_relay_settings_caused_an_exception_">Via agordo de relajso kaŭzis escepton!</string>
+    <string name="found_existing_anon_process">trovi ekzistantan Anon-procedon…</string>
+    <string name="unable_to_start_anon">Ne eblas startigi Anon:</string>
 </resources>

@@ -21,7 +21,6 @@ dependencyResolutionManagement {
 rootProject.name = "AnyoneBot"
 include(
         ':app',
-        ':anyonebotservice'
 )
 //include ':anon-android-binary'
 //project(':anon-android-binary').projectDir = new File("../anon-android/anon-android-binary")

@@ -226,4 +226,17 @@
     <string name="root_warning">O AnyoneBot detectou que o seu dispositivo tem root, isso pode causar sérios problemas de segurança.</string>
     <string name="pref_detect_root_summary">Avisar durante a inicialização se as permissões root estão ativadas neste dispositivo</string>
     <string name="pref_detect_root_title">Detecção root</string>
+
+    <string name="status_starting_up">AnyoneBot está iniciando…</string>
+    <string name="status_activated">Conectado à rede Anyone</string>
+    <string name="status_disabled">AnyoneBot está desativado</string>
+    <string name="status_shutting_down">AnyoneBot está desligando</string>
+    <string name="couldn_t_start_anon_process_">"Não foi possível iniciar o processo anon: "</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Suas configurações de Endereços Acessíveis causou uma exceção!</string>
+    <string name="your_relay_settings_caused_an_exception_">Suas configurações de retransmissão causaram uma exceção!</string>
+    <string name="found_existing_anon_process">procurando processos Anon existentes…</string>
+    <string name="unable_to_start_anon">Habilitar iniciar o Anon:</string>
+    <string name="updating_settings_in_anon_service">atualizando configurações no serviço Anon</string>
+    <string name="mebibyte_per_second">MiB/s</string>
+    <string name="kibibyte_per_second">KiB/s</string>
 </resources>

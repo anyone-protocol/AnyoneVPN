@@ -65,7 +65,7 @@ else
     echo "skipping release ant.properties"
 fi
 
-cd $projectroot/anyonebotservice/src/main
+cd $projectroot/app/src/main
 $ANDROID_NDK_HOME/ndk-build
 cd $projectroot
 

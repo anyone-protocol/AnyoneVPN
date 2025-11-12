@@ -55,4 +55,8 @@
     <string name="menu_hidden_services">Anon சேவைகள்</string>
     <string name="drawer_close">மூடுங்கள்</string>
     <string name="next">அடுத்தது</string>
+
+    <string name="status_starting_up">ஆர்பாட் துவங்குகிறது…</string>
+    <string name="status_activated">தோர் நெட்வொர்க் இணைக்கப்பட்ட</string>
+    <string name="status_disabled">ஆர்பாட் நிறுத்தப்பட்டது</string>
 </resources>

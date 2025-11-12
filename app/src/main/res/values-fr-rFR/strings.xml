@@ -218,4 +218,19 @@
     <string name="root_warning">AnyoneBot a détecté que votre appareil est rooté, ce qui peut entraîner des problèmes de sécurité.</string>
     <string name="pref_detect_root_summary">Avertir au démarrage si les droits d\'accès root sont activés sur cet appareil</string>
     <string name="pref_detect_root_title">Détection root</string>
+
+    <string name="open_anyonebot_to_connect_to_anon">Ouvrez AnyoneBot pour vous connecter à Anon</string>
+
+    <string name="status_starting_up">AnyoneBot démarre…</string>
+    <string name="status_activated">Connecté au réseau Anyone</string>
+    <string name="status_disabled">AnyoneBot est désactivé</string>
+    <string name="status_shutting_down">AnyoneBot est en cours d\'extinction</string>
+    <string name="couldn_t_start_anon_process_">"Impossible de démarrer le processus anon: "</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Vos paramètres ReachableAddresses (adresses accessibles) ont causé une exception !</string>
+    <string name="your_relay_settings_caused_an_exception_">Vos paramètres de relais ont causé une exception !</string>
+    <string name="found_existing_anon_process">un processus existant de Anon a été trouvé…</string>
+    <string name="unable_to_start_anon">Impossible de démarrer Anon :</string>
+    <string name="updating_settings_in_anon_service">mise à jour des paramètres dans le service Anon</string>
+    <string name="mebibyte_per_second">Mio/s</string>
+    <string name="kibibyte_per_second">Kio/s</string>
 </resources>

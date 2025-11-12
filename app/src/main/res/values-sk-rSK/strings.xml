@@ -226,4 +226,8 @@
     <string name="ports_not_set">Porty nie sú nastavené</string>
     <string name="pref_detect_root_summary">Varovať pri spustení, ak sú na tomto zariadení zapnuté oprávnenia root</string>
     <string name="pref_detect_root_title">Rozpoznanie root</string>
+
+    <string name="status_starting_up">AnyoneBot štartuje…</string>
+    <string name="status_activated">Pripojený do Anyone siete</string>
+    <string name="status_disabled">AnyoneBot je deaktivovaný</string>
 </resources>

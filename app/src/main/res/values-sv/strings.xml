@@ -224,4 +224,15 @@
     <string name="pref_flag_secure_title">Säkerhet på skärmen</string>
     <string name="root_warning">AnyoneBot har upptäckt att din enhet är rotad, vilket kan orsaka säkerhetsproblem.</string>
     <string name="pref_flag_secure_summary">Förhindra att andra appar tar skärmdumpar av AnyoneBot</string>
+
+    <string name="status_starting_up">AnyoneBot startar…</string>
+    <string name="status_activated">Uppkopplad till Anyone nätverket</string>
+    <string name="status_disabled">AnyoneBot är inaktiverad</string>
+    <string name="status_shutting_down">AnyoneBot avslutas</string>
+    <string name="couldn_t_start_anon_process_">Kunde inte starta anon-process:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Din NåbaraAdresser inställning orsakade ett undantag!</string>
+    <string name="your_relay_settings_caused_an_exception_">Din relä inställning orsakade ett undantag!</string>
+    <string name="found_existing_anon_process">hittade existerande Anon process…</string>
+    <string name="unable_to_start_anon">Kan inte starta Anon:</string>
+    <string name="updating_settings_in_anon_service">uppdaterar inställningar i Anon-tjänsten</string>
 </resources>

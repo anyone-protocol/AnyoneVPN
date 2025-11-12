@@ -226,4 +226,17 @@
     <string name="root_warning">AnyoneBot hefur skynjað að tækið þitt sé með rótaraðgangi (rooted), sem getur valdið öryggisvandamálum.</string>
     <string name="pref_detect_root_summary">Aðvara í ræsingu ef rótarheimildir eru virkar á þessu tæki</string>
     <string name="pref_detect_root_title">Skynja rótarheimildir</string>
+
+    <string name="status_starting_up">AnyoneBot er að ræsa…</string>
+    <string name="status_activated">Tengdur við Anyone netið</string>
+    <string name="status_disabled">AnyoneBot er slökkt</string>
+    <string name="couldn_t_start_anon_process_">Gat ekki kveikt á anon þráð:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Þitt ReachableAddressur stillingar ollu undanþágu!</string>
+    <string name="your_relay_settings_caused_an_exception_">Endurvarp stillingar þínar ollu undanþágu!</string>
+    <string name="found_existing_anon_process">fann annan Anon þráð…</string>
+    <string name="unable_to_start_anon">Get ekki kveikt á Anon:</string>
+    <string name="updating_settings_in_anon_service">uppfæri stillingar í Anon þjónustu</string>
+
+    <string name="mebibyte_per_second">MiB/sek</string>
+    <string name="kibibyte_per_second">KiB/sek</string>
 </resources>

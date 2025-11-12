@@ -123,4 +123,16 @@
     <string name="kindness_adjust_title">Postavke</string>
     <string name="v3_client_auth_activity_title">Autorizacija klijenta</string>
     <string name="btn_start_vpn">Pokreni VPN</string>
+
+    <string name="status_starting_up">AnyoneBot se pokreće…</string>
+    <string name="status_activated">Spojen na Anyone mrežu</string>
+    <string name="status_disabled">AnyoneBot je deaktiviran</string>
+    <string name="status_shutting_down">AnyoneBot se gasi</string>
+    <string name="couldn_t_start_anon_process_">Nije moguće započeti anon proces:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Vaše ReachableAddresses postavke su uzrokovale iznimku!</string>
+    <string name="your_relay_settings_caused_an_exception_">Vaše postavke releja su uzrokovale iznimku!</string>
+    <string name="found_existing_anon_process">pronađeni postojeći Anon procesi…</string>
+    <string name="unable_to_start_anon">Nije moguće pokrenuti Anon:</string>
+    <string name="updating_settings_in_anon_service">ažuriram postavke u Anon usluzi</string>
+
 </resources>

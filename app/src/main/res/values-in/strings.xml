@@ -226,4 +226,15 @@
     <string name="pref_flag_secure_title">Keamanan Layar</string>
     <string name="pref_detect_root_summary">Peringatkan pada pemulaian jika perizinan root diaktifkan di perangkat ini</string>
     <string name="pref_detect_root_title">Deteksi Root</string>
+
+    <string name="status_starting_up">AnyoneBot sedang dimulai…</string>
+    <string name="status_activated">Tersambung ke Jaringan Anyone</string>
+    <string name="status_disabled">AnyoneBot telah dibatalkan</string>
+    <string name="status_shutting_down">AnyoneBot dimatikan</string>
+    <string name="couldn_t_start_anon_process_">Tidak dapat memulai proses anon:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Pengaturan ReachableAddresses anda menyebabkan kesalahan!</string>
+    <string name="your_relay_settings_caused_an_exception_">Pengaturan relay anda menyebabkan kesalahan!</string>
+    <string name="found_existing_anon_process">menemukan proses Anon yang ada…</string>
+    <string name="unable_to_start_anon">Tidak dapat memulai Anon:</string>
+    <string name="updating_settings_in_anon_service">memperbarui setting pada layanan Anon</string>
 </resources>

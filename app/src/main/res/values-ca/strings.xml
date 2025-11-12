@@ -226,4 +226,13 @@
     <string name="configure_header">Configureu la connexió al Anon</string>
     <string name="pref_detect_root_summary">Avisa a l\'inici si els permisos d\'administrador estan activats en aquest dispositiu</string>
     <string name="pref_detect_root_title">Detecció d\'administrador</string>
+
+    <string name="status_starting_up">L\'AnyoneBot s\'està iniciant…</string>
+    <string name="status_activated">Esteu connectat a la xarxa Anyone</string>
+    <string name="status_disabled">L\'AnyoneBot està desactivat</string>
+    <string name="couldn_t_start_anon_process_">No s\'ha pogut iniciar el procés anon:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Els paràmetres d\'adreces accessibles han provocat una excepció.</string>
+    <string name="your_relay_settings_caused_an_exception_">Els paràmetres de reemissió han causat una excepció.</string>
+    <string name="found_existing_anon_process">s\'ha trobat un procés Anon existent…</string>
+    <string name="unable_to_start_anon">Ha estat impossible iniciar Anon:</string>
 </resources>

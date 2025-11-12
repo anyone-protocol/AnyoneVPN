@@ -226,6 +226,36 @@
     <string name="pref_detect_root_summary">Warn on startup if root permissions are enabled on this device</string>
     <string name="pref_detect_root_title">Root Detection</string>
 
+    <string name="status_starting_up">AnyoneBot is Starting&#8230;</string>
+    <string name="status_activated">Connected to the Anyone Network</string>
+    <string name="status_disabled">AnyoneBot is Deactivated</string>
+    <string name="open_anyonebot_to_connect_to_anon">Open AnyoneBot to Connect to Anon</string>
+    <string name="status_shutting_down">AnyoneBot is Shutting Down</string>
+    <string name="connect_to_anon">Connect to Anon</string>
+    <string name="config_invalid">AnyoneBot Configuration Invalid</string>
+
+    <string name="couldn_t_start_anon_process_">Couldn\'t start anon process: </string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Your ReachableAddresses settings caused an exception!</string>
+    <string name="your_relay_settings_caused_an_exception_">Your relay settings caused an exception!</string>
+    <string name="found_existing_anon_process">found existing Anon process&#8230;</string>
+    <string name="unable_to_start_anon">Unable to start Anon:</string>
+
+    <string name="updating_settings_in_anon_service">updating settings in Anon service</string>
+
+    <string name="waiting_for_control_port">Waiting for control port…</string>
+    <string name="connecting_to_control_port">Connecting to control port:</string>
+
+    <string name="kibibyte_per_second">KiB/s</string>
+    <string name="mebibyte_per_second">MiB/s</string>
+
+
+    <string name="log_notice_unable_to_update_onions">unable to upload onion names</string>
+    <string name="log_notice_low_memory_warning">Low memory warning!</string>
+    <string name="log_notice_updating_anonrc">Updating anonrc custom configuration…</string>
+    <string name="log_notice_added_event_handler">Added control port event handler</string>
+    <string name="log_notice_connected_to_anon_control_port">Connected to anon control port</string>
+    <string name="log_notice_ignoring_start_request">Ignoring start request, already started.</string>
+
     <!-- AppManagerActivity -->
     <string name="search_for_app_to_add_to_vpn">Search for app to add to VPN</string>
     <string name="active">Active</string>

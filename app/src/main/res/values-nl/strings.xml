@@ -162,4 +162,15 @@
     <string name="pref_open_proxy_on_all_interfaces_summary">Sta Wi-Fi peers, verbonden apparaten en alle anderen die verbinden kunnen maken met jouw IP-adres toe om verbinding te maken met Anon</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Open proxy op alle interfaces</string>
     <string name="pref_http_dialog">HTTP port configuratie</string>
+
+    <string name="status_starting_up">AnyoneBot is bezig met starten…</string>
+    <string name="status_activated">Verbonden met het Anyone-netwerk</string>
+    <string name="status_disabled">AnyoneBot is uitgeschakeld</string>
+    <string name="status_shutting_down">AnyoneBot wordt afgesloten</string>
+    <string name="couldn_t_start_anon_process_">"Kon anon-proces niet starten: "</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Je ReachableAddresses-instellingen veroorzaakten een fout!</string>
+    <string name="your_relay_settings_caused_an_exception_">Je relay-instellingen veroorzaakten een fout!</string>
+    <string name="found_existing_anon_process">bestaand Anon-proces gevonden…</string>
+    <string name="unable_to_start_anon">Kan Anon niet starten:</string>
+    <string name="updating_settings_in_anon_service">instellingen in Anon-dienst worden bijgewerkt</string>
 </resources>

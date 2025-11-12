@@ -225,4 +225,12 @@
 \nבזכותך.</string>
     <string name="many_ways">ישנן דרכים רבות להגיע ל־Anon. חלקן עשויות לעבוד טוב יותר מאחרות עבורך.</string>
     <string name="configure_header">הגדרת חיבור ה־Anon שלך</string>
+
+    <string name="status_starting_up">AnyoneBot מתחיל…</string>
+    <string name="status_activated">מחובר לרשת Anyone</string>
+    <string name="status_disabled">AnyoneBot כבוי</string>
+    <string name="couldn_t_start_anon_process_">אין אפשרות להתחיל תהליך anon:</string>
+    <string name="found_existing_anon_process">נמצא תהליך Anon קיים…</string>
+    <string name="unable_to_start_anon">לא מסוגל להתחיל את Anon:</string>
+    <string name="updating_settings_in_anon_service">מעדכן הגדרות Anon במכשיר</string>
 </resources>

@@ -224,4 +224,14 @@
 \npateicoties tev.</string>
     <string name="many_ways">Ir vairāki veidi, kā sasniegt Anon. Daži no tiem jums var darboties labāk nekā citi.</string>
     <string name="configure_header">Anon savienojuma konfigurēšana</string>
+
+    <string name="status_starting_up">AnyoneBot startē…</string>
+    <string name="status_activated">Izveidots savienojums ar tīklu Anyone</string>
+    <string name="status_disabled">AnyoneBot ir deaktivēts</string>
+    <string name="couldn_t_start_anon_process_">Neizdevās palaist anon\'a procesu:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Jūsu ReachableAddresses iestatījumi izraisīja izņēmuma stāvokli!</string>
+    <string name="your_relay_settings_caused_an_exception_">Jūsu retranslatora iestatījumi izraisīja izņēmuma situāciju!</string>
+    <string name="found_existing_anon_process">Atrada esošu Anon procesu…</string>
+    <string name="unable_to_start_anon">Nevar startēt Anon:</string>
+    <string name="updating_settings_in_anon_service">atjaunina Anon pakalpojuma iestatījumus </string>
 </resources>

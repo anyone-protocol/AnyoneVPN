@@ -227,4 +227,9 @@
     <string name="pref_detect_root_title">Root 檢測</string>
     <string name="msg_taking_too_long">這似乎花了太長時間</string>
     <string name="kindness_adjust_title">設定</string>
+
+    <string name="status_starting_up">AnyoneBot 正在啟動中…</string>
+    <string name="status_activated">已連線至 Anyone 網路</string>
+    <string name="status_disabled">AnyoneBot 已停用</string>
+    <string name="status_shutting_down">AnyoneBot 正在關閉</string>
 </resources>

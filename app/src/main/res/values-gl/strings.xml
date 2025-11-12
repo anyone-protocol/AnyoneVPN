@@ -203,4 +203,13 @@
     <string name="configure_header">Configura a túa conexión Anon</string>
     <string name="ports_not_set">Portos non configurados</string>
     <string name="kindness_adjust_title">Configuración</string>
+
+    <string name="status_starting_up">AnyoneBot está a se iniciar…</string>
+    <string name="status_activated">Conectado á rede Anyone</string>
+    <string name="status_disabled">AnyoneBot está desactivado</string>
+    <string name="couldn_t_start_anon_process_">No se pudio inciar o proceso anon:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">O seu axuste de ReachableAddresses causou unha excepción!</string>
+    <string name="your_relay_settings_caused_an_exception_">Os seus axustes de relay causou unha excepción!</string>
+    <string name="found_existing_anon_process">atopado proceso Anon existente…</string>
+    <string name="unable_to_start_anon">Incapaz de arrancar Anon</string>
 </resources>

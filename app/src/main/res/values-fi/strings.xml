@@ -225,4 +225,14 @@
     <string name="root_warning">AnyoneBot on havainnut laitteesi olevan rootattu ja tästä voi aiheutua tietoturvaongelmia.</string>
     <string name="pref_detect_root_summary">Varoita käynnistettäessä, jos laitetta käytetään root-oikeuksilla</string>
     <string name="pref_detect_root_title">Root-tunnistus</string>
+
+    <string name="status_starting_up">AnyoneBot käynnistyy…</string>
+    <string name="status_activated">Yhdistetty Anyone-verkkoon</string>
+    <string name="status_disabled">AnyoneBot on poistettu käytöstä</string>
+    <string name="couldn_t_start_anon_process_">Anon-prosessin käynnistäminen epäonnistui:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">ReachableAccess-asetuksesi aiheuttivat virheen!</string>
+    <string name="your_relay_settings_caused_an_exception_">Releasetuksesi aiheuttivat virheen!</string>
+    <string name="found_existing_anon_process">löytyi olemassaoleva Anon-prosessi…</string>
+    <string name="unable_to_start_anon">Anonin käynnistys epäonnistui:</string>
+    <string name="updating_settings_in_anon_service">päivitetään Anon-palvelun asetuksia</string>
 </resources>

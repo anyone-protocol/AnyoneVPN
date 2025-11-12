@@ -198,4 +198,32 @@ atl oquitlapatic</string>
     <string name="app_suggested_subtitle">AnyoneBot  tequipano cenca cualli ica amatlacuilotepoztlatlatquitl ihuan tlacanamimatlatl</string>
     <string name="apps_suggested_title">Yolitectia tepoztlatlatquitl</string>
     <string name="apps_other_apps">Occe tepoztlatlatquitl</string>
+
+    <string name="status_starting_up">AnyoneBot pehualtica &#8230;</string>
+    <string name="status_activated">Tencuitica matlatl Anyone Network</string>
+    <string name="status_disabled">AnyoneBot ahmo tequitica</string>
+    <string name="open_anyonebot_to_connect_to_anon">Xictlapoz AnyoneBot pampa xictencuiz Anon</string>
+    <string name="status_shutting_down">AnyoneBot tlaltzacuatica</string>
+    <string name="config_invalid">Ahmo melahuac mocentilis AnyoneBot</string>
+
+    <string name="couldn_t_start_anon_process_">Ahmo huel opehua anon</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">¡Mocentiliz ReachableAddresses ye omochihua, yehce za iyopa!</string>
+    <string name="your_relay_settings_caused_an_exception_">¡Mocentilis tepozteknolotilistli ye omochihua, yehce za iyopa!</string>
+    <string name="found_existing_anon_process">Otinamiqueh ce ayiliztli cenyuhqui quenime Anon &#8230;</string>
+    <string name="unable_to_start_anon">Ahmo opehua Anon</string>
+
+    <string name="updating_settings_in_anon_service">Mochihua yancuic in mocentilis ipan Anon</string>
+
+    <string name="waiting_for_control_port">Ticchiatocqueh in  huelititzalantli</string>
+    <string name="connecting_to_control_port">Nican xictencuiz huelititzalantli</string>
+
+    <string name="kibibyte_per_second">KiB/s</string>
+    <string name="mebibyte_per_second">MiB/s</string>
+
+    <string name="log_notice_unable_to_update_onions">Ahmo huel xictlecahuiz xonacatl itocalhuan</string>
+    <string name="log_notice_low_memory_warning">¡Ihuaniamatlacuiloli, ocachi tlamantli ahmo actica motepoznonotza!</string>
+    <string name="log_notice_updating_anonrc">Mocentiliz anonrc quenime mitzpactia, papatica.</string>
+    <string name="log_notice_added_event_handler">Mocahuaz in ihuelititzalantli</string>
+    <string name="log_notice_connected_to_anon_control_port">Ye octencui huelititzalantli</string>
+    <string name="log_notice_ignoring_start_request">Ahmo onicma pehuaicihuitiliztli, ye opehua.</string>
 </resources>

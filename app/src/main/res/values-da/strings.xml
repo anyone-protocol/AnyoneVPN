@@ -196,4 +196,13 @@
     <string name="drawer_close">Luk</string>
     <string name="connect">Forbinde</string>
     <string name="next">Næste</string>
+
+    <string name="status_starting_up">AnyoneBot starter op …</string>
+    <string name="status_activated">Der er forbindelse til Anyone-netværket</string>
+    <string name="status_disabled">AnyoneBot er slået fra</string>
+    <string name="couldn_t_start_anon_process_">Kunne ikke starte anon processen:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Din ReachableAdresses indstilling forudsagede en fejl!</string>
+    <string name="your_relay_settings_caused_an_exception_">Dine relæindstillinger forårsagede en fejl!</string>
+    <string name="found_existing_anon_process">fandt eksisterende Anon process…</string>
+    <string name="unable_to_start_anon">Kunne ikke starte Anon:</string>
 </resources>

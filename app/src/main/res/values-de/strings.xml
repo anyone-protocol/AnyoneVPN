@@ -226,4 +226,17 @@
     <string name="many_ways">Es gibt viele Wege, Anon zu erreichen. Manche funktionieren vielleicht besser als andere für dich.</string>
     <string name="pref_detect_root_summary">Beim Start warnen, wenn Root-Berechtigungen auf diesem Gerät aktiviert sind</string>
     <string name="pref_detect_root_title">Root Erkennung</string>
+
+    <string name="status_starting_up">AnyoneBot startet …</string>
+    <string name="status_activated">Verbunden mit dem Anyone-Netzwerk</string>
+    <string name="status_disabled">AnyoneBot ist deaktiviert</string>
+    <string name="status_shutting_down">AnyoneBot wird heruntergefahren</string>
+    <string name="couldn_t_start_anon_process_">Anon-Prozess konnte nicht gestartet werden:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Ihre eingestellten erreichbaren Adressen haben einen Ausnahmefehler verursacht!</string>
+    <string name="your_relay_settings_caused_an_exception_">Ihre Relaiseinstellungen haben einen Ausnahmefehler verursacht!</string>
+    <string name="found_existing_anon_process">bestehender Anon-Prozess gefunden …</string>
+    <string name="unable_to_start_anon">Anon kann nicht gestartet werden:</string>
+    <string name="updating_settings_in_anon_service">Einstellungen im Anon-Dienst werden aktualisiert</string>
+    <string name="mebibyte_per_second">MiB/s</string>
+    <string name="kibibyte_per_second">KiB/s</string>
 </resources>

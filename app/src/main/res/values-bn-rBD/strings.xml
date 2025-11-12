@@ -48,4 +48,8 @@
     <string name="menu_header_features">বৈশিষ্ট্যসমূহ</string>
     <string name="drawer_open">খুলো</string>
     <string name="drawer_close">বন্ধ করুন</string>
+
+    <string name="status_starting_up">অরবট চালু হচ্ছে . . . </string>
+    <string name="status_activated">টর নেটওয়ার্কের সাথে সংযুক্ত হয়েছে</string>
+    <string name="status_disabled">অরবট নিষ্ক্রিয় করা হয়েছে</string>
 </resources>

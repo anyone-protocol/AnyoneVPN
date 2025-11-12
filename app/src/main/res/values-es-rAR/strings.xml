@@ -99,4 +99,9 @@
     <string name="enable">Habilitar</string>
     <string name="hidden_services">Servicios Anon</string>
     <string name="confirm">Confirmar</string>
+
+    <string name="status_starting_up">AnyoneBot está iniciándose…</string>
+    <string name="status_activated">Conectado a la red Anyone</string>
+    <string name="status_disabled">\"AnyoneBot está Desactivado</string>
+    <string name="unable_to_start_anon">No se puede iniciar Anon:</string>
 </resources>

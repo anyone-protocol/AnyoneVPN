@@ -124,4 +124,13 @@
     <string name="allow">허용</string>
     <string name="no_internet_title">인터넷에 연결하기</string>
     <string name="btn_refresh">새로고침</string>
+
+    <string name="status_starting_up">AnyoneBot 시작 중…</string>
+    <string name="status_activated">Anyone 네트워크에 연결됨</string>
+    <string name="status_disabled">AnyoneBot이 비활성화되어 있습니다</string>
+    <string name="couldn_t_start_anon_process_">"Anon 프로세스 시작 불가능:  "</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">귀하의 ReachableAddress 설정은 예외를 발생시켰습니다!</string>
+    <string name="your_relay_settings_caused_an_exception_">귀하의 중계서버 설정은 예외를 발생시켰습니다!</string>
+    <string name="found_existing_anon_process">존재하고 있는 Anon 프로세스 발견</string>
+    <string name="unable_to_start_anon">Anon 시작 불가능</string>
 </resources>

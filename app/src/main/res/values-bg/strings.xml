@@ -226,4 +226,16 @@
     <string name="root_warning">AnyoneBot е установил, достъп до суперпотребителя, което снижава сигурността на устройството.</string>
     <string name="pref_detect_root_title">Наличие на суперпотребител</string>
     <string name="pref_detect_root_summary">Предупреждаване за наличие на достъп до правата на суперпотребителя</string>
+
+    <string name="status_starting_up">AnyoneBot стартира…</string>
+    <string name="status_activated">Свързан към Anyone мрежата</string>
+    <string name="status_disabled">AnyoneBot е деактивиран</string>
+    <string name="status_shutting_down">AnyoneBot спира</string>
+    <string name="couldn_t_start_anon_process_">"Неуспешно стартиране на anon процес: "</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Твоята ReachableAddresses настройка предизвика грешка!</string>
+    <string name="your_relay_settings_caused_an_exception_">Твоите настройки за препращане предизвикаха изключение!</string>
+    <string name="found_existing_anon_process">намерил си съвместим Anon проект…</string>
+    <string name="unable_to_start_anon">Не може да стартира Тор:</string>
+    <string name="updating_settings_in_anon_service">обновяване на настройките в Anon услугата</string>
+
 </resources>

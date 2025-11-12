@@ -226,4 +226,15 @@
     <string name="btn_copy_log">Skopiuj dziennik</string>
     <string name="pref_detect_root_title">Wykrywanie roota</string>
     <string name="pref_detect_root_summary">Ostrzegaj przy uruchomieniu, jeśli na tym urządzeniu włączone są uprawnienia roota</string>
+
+    <string name="status_starting_up">AnyoneBot startuje…</string>
+    <string name="status_activated">Podłączony do sieci Anyone</string>
+    <string name="status_disabled">AnyoneBot wyłączony</string>
+    <string name="status_shutting_down">AnyoneBot wyłącza się</string>
+    <string name="couldn_t_start_anon_process_">Nie można było zainicjować procesu anona:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Twoje ustawienia dostępnych adresów spowodowały wyjątek!</string>
+    <string name="your_relay_settings_caused_an_exception_">Ustawienia Twojego przekaźnika spowodowały wyjątek!</string>
+    <string name="found_existing_anon_process">znaleziono istniejący proces Anona…</string>
+    <string name="unable_to_start_anon">Nie można wystartować aplikacji Anon:</string>
+    <string name="updating_settings_in_anon_service">aktualizowanie ustawień w serwisie Anon</string>
 </resources>

@@ -224,4 +224,13 @@
     <string name="pref_flag_secure_title">Ekraani turvalisus</string>
     <string name="root_warning">AnyoneBot on tuvastanud, et teie seade on juurdunud, mis võib põhjustada turvaprobleeme.</string>
     <string name="btn_copy_log">Logi kopeerimine</string>
+
+    <string name="status_starting_up">AnyoneBot käivitub…</string>
+    <string name="status_activated">Ühendatud Anyone võrgustikku</string>
+    <string name="status_disabled">AnyoneBot deaktiveeritud</string>
+    <string name="couldn_t_start_anon_process_">Anon protsessi käivitamine ebaõnnestus:</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Teie ReachableAddresses seadistus põhjustas ekse!</string>
+    <string name="your_relay_settings_caused_an_exception_">Teie releeseadistus põhjustas ekse!</string>
+    <string name="found_existing_anon_process">leidus töötav Anon protsess…</string>
+    <string name="unable_to_start_anon">Anon käivitamine ebaõnnestus:</string>
 </resources>

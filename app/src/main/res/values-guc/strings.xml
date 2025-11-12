@@ -196,4 +196,32 @@ punjulaa apps, jupula  anaijatuin  pu kachuerrase</string>
   <string name="app_suggested_subtitle">AnyoneBot anas jukaipa juma alwuatawüa je eerrajilawua  wapushua \'ya</string>
   <string name="apps_suggested_title">Ain\'nes juka tu aplicación ka</string>
   <string name="apps_other_apps">Wanejet aplikación</string>
+
+    <string name="status_starting_up">Eepeja\'asu AnyoneBot&#8230;</string>
+    <string name="status_activated">Antirrawaas jumaa atalaya Anyone</string>
+    <string name="status_disabled">Yokutusu\'u AnyoneBot</string>
+    <string name="open_anyonebot_to_connect_to_anon">Pe\'erulaa  AnyoneBot jupula  puyata ín juma Anon.</string>
+    <string name="status_shutting_down">Yokuuter AnyoneBot</string>
+    <string name="config_invalid">sükumajia AnyoneBot maliaasat</string>
+
+    <string name="couldn_t_start_anon_process_">Nojotsü o\'ottuin sukuaipa shiatain anon</string>
+    <string name="your_reachableaddresses_settings_caused_an_exception_">Tü anatiaaka   erree juntunuín  casaa, nojots jainrre\'in</string>
+    <string name="your_relay_settings_caused_an_exception_">Tü anatiaka  eerjaya maimatuaa, nojots  jainrrei´n </string>
+    <string name="found_existing_anon_process">Antusü sünain sajia wanee Anon etüjulia &#8230;</string>
+    <string name="unable_to_start_anon">no jot süpüla achuajaje\'in Anon</string>
+
+    <string name="updating_settings_in_anon_service">Anoutuüin  tüü akümajiak süpüla Anon</string>
+
+    <string name="waiting_for_control_port">Atapajus  juntia</string>
+    <string name="connecting_to_control_port">süntiraya tü süchecheria sütsin</string>
+
+    <string name="kibibyte_per_second">KiB/s</string>
+    <string name="mebibyte_per_second">MiB/s</string>
+
+    <string name="log_notice_unable_to_update_onions">Nojoluinjat  aitanüin junulia cewoolla.</string>
+    <string name="log_notice_low_memory_warning">Motée ainrüü</string>
+    <string name="log_notice_updating_anonrc">Jeketerr  tu anatiakal  tu ipünamiukal C</string>
+    <string name="log_notice_added_event_handler">Kaa´muinshi atumaa  chi ayawuajuikai  kazachiki</string>
+    <string name="log_notice_connected_to_anon_control_port">Antirrashi  anon  juma ipunamuika eki.</string>
+    <string name="log_notice_ignoring_start_request">Nojots apunuin  juchuntia  eepeja\'asú</string>
 </resources>

@@ -199,4 +199,7 @@
     <string name="done">Wedi\'i wneud!</string>
     <string name="v3_key_hash">x25519 Allwedd Breifat yn Sylfaen32</string>
     <string name="configure_header">Ffurfweddu eich Cysylltiad Anon</string>
+
+    <string name="status_starting_up">Mae AnyoneBot yn cychwyn…</string>
+    <string name="status_activated">Wedi cysylltu â rhwydwaith Anyone</string>
 </resources>

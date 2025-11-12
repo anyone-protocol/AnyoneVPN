@@ -224,4 +224,8 @@
     <string name="pref_flag_secure_summary">Preprečite drugim aplikacijam snemanje posnetkov zaslona AnyoneBota</string>
     <string name="pref_flag_secure_title">Varnost zaslona</string>
     <string name="proxy_ports">Proksi vrata</string>
+
+    <string name="status_starting_up">AnyoneBot se zaganja…</string>
+    <string name="status_activated">Povezan v omrežje Anyone</string>
+    <string name="status_disabled">AnyoneBot ni aktiviran</string>
 </resources>
