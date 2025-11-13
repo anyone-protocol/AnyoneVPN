@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="menu_settings">Moslamalar</string>
     <string name="menu_stop">To‘xtatish</string>
     <string name="menu_about">Dastur haqida</string>
@@ -43,7 +43,7 @@
     <string name="deny">Rad etish</string>
     <string name="allow">Ruxsat berish</string>
 
-    <string name="status_starting_up">AnyoneBot ishga tushirilmoqda…</string>
+    <string name="status_starting_up">Anyone VPN ishga tushirilmoqda…</string>
     <string name="status_activated">Anyone tarmog\'iga ulangan</string>
     <string name="found_existing_anon_process">Mavjud bo\'lgan Anon jarayoni topildi…</string>
 </resources>

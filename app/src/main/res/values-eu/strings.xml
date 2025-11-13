@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot proxy aplikazio aske bat da beste aplikazioei Interneten erabilera seguruago bat egitea ahalbidetzen diena. AnyoneBot-ek Anon erabiltzen du zure Internet trafikoa zifratzeko eta mundu osoan barrena hainbat konputagailuetatik pasatuz ezkutatzeko. Anon software askea eta sare irekia da, askatasun eta pribatutasun pertsonala, aktibitate eta erlazio komertzial konfidentzialak erasotzen dituen sare analisi moten kontra eginez babesten zaituena.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN proxy aplikazio aske bat da beste aplikazioei Interneten erabilera seguruago bat egitea ahalbidetzen diena. Anyone VPN-ek Anon erabiltzen du zure Internet trafikoa zifratzeko eta mundu osoan barrena hainbat konputagailuetatik pasatuz ezkutatzeko. Anon software askea eta sare irekia da, askatasun eta pribatutasun pertsonala, aktibitate eta erlazio komertzial konfidentzialak erasotzen dituen sare analisi moten kontra eginez babesten zaituena.</string>
     <string name="menu_settings">Ezarpenak</string>
     <string name="menu_log">Egunkaria</string>
     <string name="menu_stop">Gelditu</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Honi buruz</string>
     <string name="menu_exit">Irten</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">Anon, Go-Tun2Socks, eta LibEvent dituen kode irekiko aplikazio bat da AnyoneBot. Anon sarera sartzeko HTTP proxya (8118) eta SOCKS proxya (9050) eskaintzen ditu. Rooteatutako gailuetan AnyoneBot-ek interneteko trafiko guztia Anon bidez bidali dezake baita ere.</string>
+    <string name="wizard_details_msg">Anon, Go-Tun2Socks, eta LibEvent dituen kode irekiko aplikazio bat da Anyone VPN. Anon sarera sartzeko HTTP proxya (8118) eta SOCKS proxya (9050) eskaintzen ditu. Rooteatutako gailuetan Anyone VPN-ek interneteko trafiko guztia Anon bidez bidali dezake baita ere.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Orokorra</string>
-    <string name="pref_start_boot_title">Hasi AnyoneBot abioan</string>
-    <string name="pref_start_boot_summary">Hasi AnyoneBot automatikoki  eta konektatu Anon zure Android gailua abiarazterakoan</string>
+    <string name="pref_start_boot_title">Hasi Anyone VPN abioan</string>
+    <string name="pref_start_boot_summary">Hasi Anyone VPN automatikoki  eta konektatu Anon zure Android gailua abiarazterakoan</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Lehen jauzirako hatzmarka, ezizen, herrialde eta helbideak</string>
     <string name="pref_entrance_node_dialog">Sartu sarrera-nodoak</string>
     <string name="pref_allow_background_starts_title">Baimendu bigarren planoko abioak</string>
-    <string name="pref_allow_background_starts_summary">Baimendu edozein aplikaziok AnyoneBot-i Anon eta dagozkion zerbitzuak abiaraztea agintzea</string>
+    <string name="pref_allow_background_starts_summary">Baimendu edozein aplikaziok Anyone VPN-i Anon eta dagozkion zerbitzuak abiaraztea agintzea</string>
     <string name="pref_proxy_title">Irteera sareko proxya (Aukerazkoa)</string>
     <string name="pref_proxy_type_title">Ireteera-proxy mota</string>
     <string name="pref_proxy_type_summary">Proxy zerbitzariarentzako erabiltzeko protokoloak: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Hasi Anon berriro prozesua amaitzeko</string>
     <string name="confirm_service_deletion">Berretsi zerbitzua ezabatzea</string>
     <string name="service_type">Zerbitzu mota</string>
-    <string name="please_restart_to_enable_the_changes">Mesedez berrabiarazi AnyoneBot aldaketak aktibatzeko</string>
+    <string name="please_restart_to_enable_the_changes">Mesedez berrabiarazi Anyone VPN aldaketak aktibatzeko</string>
     <string name="share_as_qr">Partekatu QR gisa</string>
     <string name="disable">Desgaitu</string>
     <string name="enable">Gaitu</string>
@@ -152,9 +152,9 @@
     <string name="menu_new_identity">Nortasun berria</string>
     <string name="next">Hurrengoa</string>
 
-    <string name="status_starting_up">AnyoneBot abiarazten ari da…</string>
+    <string name="status_starting_up">Anyone VPN abiarazten ari da…</string>
     <string name="status_activated">Anyone sarera konektatuta</string>
-    <string name="status_disabled">\"AnyoneBot desaktibatuta dago</string>
+    <string name="status_disabled">\"Anyone VPN desaktibatuta dago</string>
     <string name="couldn_t_start_anon_process_">Ezin izan da anon prozesua hasi:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Zure helbide atzigarriak salbuespena sortu du!</string>
     <string name="your_relay_settings_caused_an_exception_">Zure errele ezarpenak salbuespena sortu dute!</string>

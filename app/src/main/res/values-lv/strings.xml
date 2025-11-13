@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot ir starpniekserveru bezmaksas lietotne, kas sniedz iespēju citām lietotnēm drošāk lietot internetu. AnyoneBot izmanto Anon, lai šifrētu Jūsu interneta datplūsmu, tad to paslēpj, pārsūtot to caur daudziem datoriem visā pasaulē. Anon ir bezmaksas programmatūra un atvērts tīkls, kas palīdz Jums aizsargāties pret tīkla uzraudzības veidu - datplūsmas analīzi -, ar kuras palīdzību tiek apdraudēta personiskā brīvība un privātums, konfidenciālas lietišķas darbības un attiecības, kā arī valsts drošība.  </string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN ir starpniekserveru bezmaksas lietotne, kas sniedz iespēju citām lietotnēm drošāk lietot internetu. Anyone VPN izmanto Anon, lai šifrētu Jūsu interneta datplūsmu, tad to paslēpj, pārsūtot to caur daudziem datoriem visā pasaulē. Anon ir bezmaksas programmatūra un atvērts tīkls, kas palīdz Jums aizsargāties pret tīkla uzraudzības veidu - datplūsmas analīzi -, ar kuras palīdzību tiek apdraudēta personiskā brīvība un privātums, konfidenciālas lietišķas darbības un attiecības, kā arī valsts drošība.  </string>
     <string name="menu_settings">Iestatījumi</string>
     <string name="menu_log">Žurnāls</string>
     <string name="menu_stop">Apturēt</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Vispārīgi</string>
-    <string name="pref_start_boot_title">Startēt AnyoneBot, kad ielādējas</string>
-    <string name="pref_start_boot_summary">Automātiski startēt AnyoneBot, un veidot savienojumu ar Anon, kad Jūsu Android ierīce ielādējas</string>
+    <string name="pref_start_boot_title">Startēt Anyone VPN, kad ielādējas</string>
+    <string name="pref_start_boot_summary">Automātiski startēt Anyone VPN, un veidot savienojumu ar Anon, kad Jūsu Android ierīce ielādējas</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Ciparvirknes, segvārdi, valstis un adreses pirmajam lēkumam</string>
     <string name="pref_entrance_node_dialog">Ievadiet ieejas mezglus</string>
     <string name="pref_allow_background_starts_title">Ļaut sākšanos fonā</string>
-    <string name="pref_allow_background_starts_summary">Norādīt visām lietotnēm uzdot AnyoneBot palaist Anon un saistītos pakalpojumus.</string>
+    <string name="pref_allow_background_starts_summary">Norādīt visām lietotnēm uzdot Anyone VPN palaist Anon un saistītos pakalpojumus.</string>
     <string name="pref_proxy_title">Tīkla ārejošais starpnieks (neobligāts)</string>
     <string name="pref_proxy_type_title">Ārvērstā starpnieka tips</string>
     <string name="pref_proxy_type_summary">Starpnieka serverim izmantojamais protokols: HTTP, HTTPS, Socks4, Socks5</string>
@@ -92,7 +92,7 @@
     <string name="menu_hidden_services">Slēptie pakalpojumi</string>
     <string name="save">Saglabāt</string>
     <string name="name">Vārds</string>
-    <string name="please_restart_to_enable_the_changes">Lūdzu pārstartējiet AnyoneBot, lai iespējotu izmaiņas</string>
+    <string name="please_restart_to_enable_the_changes">Lūdzu pārstartējiet Anyone VPN, lai iespējotu izmaiņas</string>
     <string name="disable">Atspējot</string>
     <string name="confirm">Apstipriniet</string>
     <string name="version">Versija:</string>
@@ -103,7 +103,7 @@
     <string name="pref_disable_ipv4_summary">Norāda, ka izejas nedrīkst izveidot savienojumu ar IPv4 adresēm</string>
     <string name="testing_anon_direct">Savienojuma testēšana ar Anon…</string>
     <string name="menu_new_identity">Jauna identitāte</string>
-    <string name="wizard_details_msg">AnyoneBot ir atvērtā koda lietojumprogramma, kas satur Anon, Go-Tun2Socks un LibEvent. Tā nodrošina VPN tuneli, vietējo HTTP Connect proxy (tikai HTTPS portā 8118) un SOCKS proxy (9050) uz Anon tīklu.</string>
+    <string name="wizard_details_msg">Anyone VPN ir atvērtā koda lietojumprogramma, kas satur Anon, Go-Tun2Socks un LibEvent. Tā nodrošina VPN tuneli, vietējo HTTP Connect proxy (tikai HTTPS portā 8118) un SOCKS proxy (9050) uz Anon tīklu.</string>
     <string name="secure_your_connection_subtitle">Paslēpiet lietotnes no tīkla uzraudzības un iegūstiet piekļuvi, ja tās ir bloķētas.</string>
     <string name="connected_title">Savienots</string>
     <string name="btn_start_vpn">VPN sākšana</string>
@@ -193,7 +193,7 @@
     <string name="connect">Veidot savienojumu</string>
     <string name="next">Nākamais</string>
     <string name="proxy_ports">Proxy porti</string>
-    <string name="no_internet_subtitle">Lai izmantotu AnyoneBot, ir nepieciešams interneta savienojums.</string>
+    <string name="no_internet_subtitle">Lai izmantotu Anyone VPN, ir nepieciešams interneta savienojums.</string>
     <string name="not_sure">Neesat pārliecināts\?</string>
     <string name="ports_not_set">Nav iestatīti porti</string>
     <string name="power_user_mode">Jaudas lietotāja režīms</string>
@@ -213,21 +213,21 @@
     <string name="connection_direct">Tiešsaistes</string>
     <string name="pref_isolate_port">Izolēt galamērķa ostas</string>
     <string name="asking">ASKING…</string>
-    <string name="power_user_description">Lietotājiem, kas pārzina Anon. Ļauj palaist AnyoneBot bez VPN iestatījuma un parāda atvērtos SOCKS un HTTP portus</string>
+    <string name="power_user_description">Lietotājiem, kas pārzina Anon. Ļauj palaist Anyone VPN bez VPN iestatījuma un parāda atvērtos SOCKS un HTTP portus</string>
     <string name="pref_flag_secure_title">Ekrāna drošība</string>
-    <string name="root_warning">AnyoneBot ir konstatējis, ka jūsu ierīcei ir saknes, kas var radīt drošības problēmas.</string>
+    <string name="root_warning">Anyone VPN ir konstatējis, ka jūsu ierīcei ir saknes, kas var radīt drošības problēmas.</string>
     <string name="pref_isolate_protocol_summary">Katram savienojuma protokolam izmantojiet atšķirīgu ķēdi</string>
     <string name="incorrect_solution">Nepareizs risinājums</string>
-    <string name="app_suggested_subtitle">AnyoneBot vislabāk darbojas ar ziņapmaiņas un sociālo mediju lietotnēm.</string>
-    <string name="pref_flag_secure_summary">Neļaujiet citām programmām uzņemt AnyoneBot ekrānšāviņus</string>
+    <string name="app_suggested_subtitle">Anyone VPN vislabāk darbojas ar ziņapmaiņas un sociālo mediju lietotnēm.</string>
+    <string name="pref_flag_secure_summary">Neļaujiet citām programmām uzņemt Anyone VPN ekrānšāviņus</string>
     <string name="volunteer_status_title">Šodien ir labāk
 \npateicoties tev.</string>
     <string name="many_ways">Ir vairāki veidi, kā sasniegt Anon. Daži no tiem jums var darboties labāk nekā citi.</string>
     <string name="configure_header">Anon savienojuma konfigurēšana</string>
 
-    <string name="status_starting_up">AnyoneBot startē…</string>
+    <string name="status_starting_up">Anyone VPN startē…</string>
     <string name="status_activated">Izveidots savienojums ar tīklu Anyone</string>
-    <string name="status_disabled">AnyoneBot ir deaktivēts</string>
+    <string name="status_disabled">Anyone VPN ir deaktivēts</string>
     <string name="couldn_t_start_anon_process_">Neizdevās palaist anon\'a procesu:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Jūsu ReachableAddresses iestatījumi izraisīja izņēmuma stāvokli!</string>
     <string name="your_relay_settings_caused_an_exception_">Jūsu retranslatora iestatījumi izraisīja izņēmuma situāciju!</string>

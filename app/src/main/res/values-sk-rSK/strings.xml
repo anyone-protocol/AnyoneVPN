@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Welcome Wizard strings (DJH)-->
-    <!--END Welcome Wizard strings (DJH)-->
-    <!--New Wizard Strings-->
-    <!--Title Screen-->
-    <!--Warning screen-->
-    <!--Permissions screen-->
-    <!--TipsAndTricks screen-->
-    <!--Transparent Proxy screen-->
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot je bezplatná aplikácia proxy, ktorá umožňuje iným aplikáciám bezpečnejšie využívať internet. AnyoneBot používa Anon na šifrovanie vášho internetového prenosu a potom ho skryje tým, že skáče po sérii počítačov po celom svete. Anon je slobodný softvér a otvorená sieť, ktorá vám pomáha brániť proti určitému druhu sieťového dohľadu, ktorý ohrozuje osobnú slobodu a súkromie, dôverné obchodné činnosti a vzťahy a štátnu bezpečnosť známu ako dopravná analýza.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN je bezplatná aplikácia proxy, ktorá umožňuje iným aplikáciám bezpečnejšie využívať internet. Anyone VPN používa Anon na šifrovanie vášho internetového prenosu a potom ho skryje tým, že skáče po sérii počítačov po celom svete. Anon je slobodný softvér a otvorená sieť, ktorá vám pomáha brániť proti určitému druhu sieťového dohľadu, ktorý ohrozuje osobnú slobodu a súkromie, dôverné obchodné činnosti a vzťahy a štátnu bezpečnosť známu ako dopravná analýza.</string>
     <string name="menu_settings">Nastavenia</string>
     <string name="menu_log">Denník</string>
     <string name="menu_stop">Zastaviť</string>
@@ -18,9 +10,9 @@
     <string name="main_layout_upload">Nahrať</string>
     <string name="button_about">O Programe</string>
     <string name="menu_exit">Ukončenie</string>
-    <string name="wizard_details_msg">AnyoneBot je open-source aplikácia, ktorá obsahuje Anon, Go-Tun2Socks a LibEvent. Poskytuje tunel VPN, miestny proxy server HTTP Connect (HTTPS len na porte 8118) a proxy server SOCKS (9050) do siete Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN je open-source aplikácia, ktorá obsahuje Anon, Go-Tun2Socks a LibEvent. Poskytuje tunel VPN, miestny proxy server HTTP Connect (HTTPS len na porte 8118) a proxy server SOCKS (9050) do siete Anon.</string>
     <string name="pref_general_group">Všeobecné</string>
-    <string name="pref_start_boot_title">Spustiť AnyoneBot pri štarte</string>
+    <string name="pref_start_boot_title">Spustiť Anyone VPN pri štarte</string>
     <string name="consider_enable_battery_optimizations">Nie sú spustené žiadne hostované služby, zvážte povolenie optimalizácie batérie</string>
     <string name="allow">Povoliť</string>
     <string name="deny">Odmietnuť</string>
@@ -127,7 +119,7 @@
     <string name="backup_restored">Obnovená záloha</string>
     <string name="restore_backup">Obnovenie zálohovania</string>
     <string name="start_anon_again_for_finish_the_process">Znovu spustite Anon na dokončenie procesu</string>
-    <string name="please_restart_to_enable_the_changes">Reštartujte AnyoneBot, aby sa zmeny povolili</string>
+    <string name="please_restart_to_enable_the_changes">Reštartujte Anyone VPN, aby sa zmeny povolili</string>
     <string name="share_as_qr">Zdieľať ako QR</string>
     <string name="disable">Zakázať</string>
     <string name="enable">Povoliť</string>
@@ -146,10 +138,10 @@
     <string name="user_services">Služby pre používateľov</string>
     <string name="app_services">Služby aplikácie</string>
     <string name="refresh_apps">Aplikácie Refresh</string>
-    <string name="pref_start_boot_summary">Automatické spustenie AnyoneBotu a pripojenie Anon pri spustení zariadenia so systémom Android</string>
+    <string name="pref_start_boot_summary">Automatické spustenie Anyone VPNu a pripojenie Anon pri spustení zariadenia so systémom Android</string>
     <string name="pref_entrance_node_summary">Odtlačky prstov, zárezy, krajiny a adresy pre prvý skok</string>
     <string name="pref_proxy_type_summary">Protokol, ktorý sa má použiť pre proxy server: HTTP, HTTPS, SOCKS4, SOCKS5</string>
-    <string name="pref_allow_background_starts_summary">Nechajte ľubovoľnú aplikáciu povedať AnyoneBotu, aby spustil Anon a súvisiace služby</string>
+    <string name="pref_allow_background_starts_summary">Nechajte ľubovoľnú aplikáciu povedať Anyone VPNu, aby spustil Anon a súvisiace služby</string>
     <string name="fingerprints_nicks_countries_and_addresses_to_exclude">Odtlačky prstov, zárezy, krajiny a adresy na vylúčenie</string>
     <string name="relay_nickname">Štafetová prezývka</string>
     <string name="pref_proxy_title">Odchádzajúci sieťový proxy server (voliteľné)</string>
@@ -199,9 +191,9 @@
     <string name="apps_suggested_title">Navrhované aplikácie</string>
     <string name="not_sure">Nie ste si istí\?</string>
     <string name="no_internet_title">Pripojenie k internetu</string>
-    <string name="no_internet_subtitle">Na používanie služby AnyoneBot potrebujete internetové pripojenie.</string>
+    <string name="no_internet_subtitle">Na používanie služby Anyone VPN potrebujete internetové pripojenie.</string>
     <string name="power_user_mode">Režim Power User</string>
-    <string name="power_user_description">Pre používateľov, ktorí poznajú Anon. Umožňuje spustiť AnyoneBot bez nastavenia VPN a zobrazuje otvorené porty SOCKS a HTTP</string>
+    <string name="power_user_description">Pre používateľov, ktorí poznajú Anon. Umožňuje spustiť Anyone VPN bez nastavenia VPN a zobrazuje otvorené porty SOCKS a HTTP</string>
     <string name="setting_padding">Vypchávky</string>
     <string name="option_only_on_wifi">Iba v sieti Wifi</string>
     <string name="option_only_when_charging">Len pri nabíjaní</string>
@@ -210,7 +202,7 @@
     <string name="pref_isolate_protocol_summary">Pre každý pripojovací protokol použite iný obvod</string>
     <string name="volunteer_status_title">Dnes je lepšie
 \nvďaka tebe.</string>
-    <string name="app_suggested_subtitle">AnyoneBot funguje najlepšie s aplikáciami na zasielanie správ a sociálnymi médiami.</string>
+    <string name="app_suggested_subtitle">Anyone VPN funguje najlepšie s aplikáciami na zasielanie správ a sociálnymi médiami.</string>
     <string name="apps_other_apps">Ostatné aplikácie</string>
     <string name="asking">PÝTAŤ SA…</string>
     <string name="btn_copy_log">Kopírovanie denníka</string>
@@ -220,14 +212,14 @@
     <string name="log_copied">Záznam skopírovaný</string>
     <string name="connection_direct">Priamy</string>
     <string name="pref_flag_secure_title">Zabezpečenie obrazovky</string>
-    <string name="root_warning">AnyoneBot zistil, že vaše zariadenie je rootnuté, čo môže spôsobiť bezpečnostné problémy.</string>
-    <string name="pref_flag_secure_summary">Zabránenie iným aplikáciám robiť snímky obrazovky AnyoneBot</string>
+    <string name="root_warning">Anyone VPN zistil, že vaše zariadenie je rootnuté, čo môže spôsobiť bezpečnostné problémy.</string>
+    <string name="pref_flag_secure_summary">Zabránenie iným aplikáciám robiť snímky obrazovky Anyone VPN</string>
     <string name="proxy_ports">Proxy porty</string>
     <string name="ports_not_set">Porty nie sú nastavené</string>
     <string name="pref_detect_root_summary">Varovať pri spustení, ak sú na tomto zariadení zapnuté oprávnenia root</string>
     <string name="pref_detect_root_title">Rozpoznanie root</string>
 
-    <string name="status_starting_up">AnyoneBot štartuje…</string>
+    <string name="status_starting_up">Anyone VPN štartuje…</string>
     <string name="status_activated">Pripojený do Anyone siete</string>
-    <string name="status_disabled">AnyoneBot je deaktivovaný</string>
+    <string name="status_disabled">Anyone VPN je deaktivovaný</string>
 </resources>

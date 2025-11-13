@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Welcome Wizard strings (DJH)-->
-    <!--END Welcome Wizard strings (DJH)-->
-    <!--New Wizard Strings-->
-    <!--Title Screen-->
-    <!--Warning screen-->
-    <!--Permissions screen-->
-    <!--TipsAndTricks screen-->
-    <!--Transparent Proxy screen-->
     <string name="name">Name</string>
     <string name="set_locale_title">ژبه</string>
     <string name="menu_new_identity">New Identity</string>
@@ -22,7 +14,7 @@
     <string name="main_layout_download">ښکته کول</string>
     <string name="button_about">په اړه</string>
     <string name="menu_exit">Exit</string>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="menu_hidden_services">د Anon خدمات</string>
     <string name="hidden_services">د Anon خدمات</string>
     <string name="drawer_close">Close</string>

@@ -82,7 +82,7 @@ deploy_nightly:
     - test -z "$DEBUG_KEYSTORE" && exit 0
     - apt-get install -t bullseye-backports fdroidserver
     - sed -i
-        's,<string name="app_name">.*</string>,<string name="app_name">AnyoneBotNTLY</string>,'
+        's,<string name="app_name">.*</string>,<string name="app_name">AnyoneVpnNTLY</string>,'
         app/src/main/res/values*/strings.xml
     # add this nightly repo as a enabled repo
     - sed -i -e '/<\/string-array>/d' -e '/<\/resources>/d' app/src/main/res/values/default_repos.xml

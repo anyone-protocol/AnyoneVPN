@@ -21,7 +21,7 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
 
 **What Custom Configuration Do You Use?**
-If applicable, how did you set up AnyoneBot? Did you configure some settings?
+If applicable, how did you set up Anyone VPN? Did you configure some settings?
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.

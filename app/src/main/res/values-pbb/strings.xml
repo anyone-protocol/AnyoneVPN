@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBota’ teeçx PROXY’ dewemee vxiswa’ja’, naayu’ vxite çaam wejxatxku ũukhmee kmajĩ’ji’. AnyoneBota’ Anona’sku kseelpi’ji’ mjĩitx jxpa’yahtx jxaawkaan. Anona’ vxite çaam wejxa’, txa’wẽyçxa dewewa’jme’, na’ wala pu’çxhin kĩhsupa jiyuwẽte ki’ kwe’sx mjĩitx nwe’wek peethegkameen; sa’ ũukhmee vxiswa’ja’.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPNa’ teeçx PROXY’ dewemee vxiswa’ja’, naayu’ vxite çaam wejxatxku ũukhmee kmajĩ’ji’. Anyone VPNa’ Anona’sku kseelpi’ji’ mjĩitx jxpa’yahtx jxaawkaan. Anona’ vxite çaam wejxa’, txa’wẽyçxa dewewa’jme’, na’ wala pu’çxhin kĩhsupa jiyuwẽte ki’ kwe’sx mjĩitx nwe’wek peethegkameen; sa’ ũukhmee vxiswa’ja’.</string>
     <string name="menu_settings">Phewu’jwa’  </string>
     <string name="menu_log">Yase akhçxa jxaawnxi </string>
     <string name="menu_stop">Myuju </string>
@@ -10,17 +10,17 @@
     <string name="main_layout_upload">Mkaateka’j </string>
     <string name="button_about">Naa yuwete’</string>
     <string name="menu_exit">Kase’jnxi</string>
-    <string name="wizard_details_msg">AnyoneBota’ wala selpiisa’, naa çaam wejxa’tx ji’phpa’ka: Anon, Go-Tun2Socks ki’ LibEvent. Paaç jxkhẽwwa’ja’ teeçx weh VPNek ũsu’, teeçx proxy HTTP Connect local (HTTPS, naa’ 8118 vxitxteçxaa) ki’ Anonte’ teeçx proxy SOCKS (9050)</string>
+    <string name="wizard_details_msg">Anyone VPNa’ wala selpiisa’, naa çaam wejxa’tx ji’phpa’ka: Anon, Go-Tun2Socks ki’ LibEvent. Paaç jxkhẽwwa’ja’ teeçx weh VPNek ũsu’, teeçx proxy HTTP Connect local (HTTPS, naa’ 8118 vxitxteçxaa) ki’ Anonte’ teeçx proxy SOCKS (9050)</string>
     <string name="pref_general_group">Jxukaynas </string>
-    <string name="pref_start_boot_title">Puukiweçxa’, AnyoneBota’s mtakh</string>
-    <string name="pref_start_boot_summary">AnyoneBota’s peetx ktakhe, jiina’ Anonte maç idx çaamwelx behte’</string>
+    <string name="pref_start_boot_title">Puukiweçxa’, Anyone VPNa’s mtakh</string>
+    <string name="pref_start_boot_summary">Anyone VPNa’s peetx ktakhe, jiina’ Anonte maç idx çaamwelx behte’</string>
     <string name="pref_node_configuration">NODO phuse\'jwa\'</string>
     <string name="pref_node_configuration_summary">Naa, jxthaakwe phewu’jnxi le’çx spatxina jiyunximee jxkhẽwnxi’s </string>
     <string name="pref_entrance_node">U’kanxi NODOta’</string>
     <string name="pref_entrance_node_summary">Kuse vxa phaph, niks, çxhab wala kiwe, maju yuunxi’s, naatx khwẽ’y vxite ahn jxkhẽwwa’</string>
     <string name="pref_entrance_node_dialog">U’kanxi NODOte me’ka</string>
     <string name="pref_allow_background_starts_title">Nvxiht paaçte pũ’txsatx</string>
-    <string name="pref_allow_background_starts_summary">Miinvxiht maansa çaam wejxama’kyu  AnyoneBota’ peetx ta’sxin Anona’s  vxite txãjx mjĩitx peetx pu’txkan </string>
+    <string name="pref_allow_background_starts_summary">Miinvxiht maansa çaam wejxama’kyu  Anyone VPNa’ peetx ta’sxin Anona’s  vxite txãjx mjĩitx peetx pu’txkan </string>
     <string name="pref_proxy_title">Naa PROXY eka kase’jsa (idxteya’ja)</string>
     <string name="pref_proxy_type_title">Naa PROXY eka kase’jwa’ja’</string>
     <string name="pref_proxy_type_summary">Mjĩiç çxa’ naatx kseelpi’jine’ga çaam pe’pe walate PROXY: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -126,7 +126,7 @@ Notificaciones ampliadas</string>
     <string name="start_anon_again_for_finish_the_process">Anona’s ki’kin mpu’tx mjĩi\'s ew  jxã’jkan</string>
     <string name="confirm_service_deletion">Miptasx mjĩinxi\'s khũkhkan.</string>
     <string name="service_type">Fxiy fxiy selpisa</string>
-    <string name="please_restart_to_enable_the_changes">Ki’ mthak AnyoneBota’s yu’pthe’jnxitx nvxihtwa’</string>
+    <string name="please_restart_to_enable_the_changes">Ki’ mthak Anyone VPNa’s yu’pthe’jnxitx nvxihtwa’</string>
     <string name="share_as_qr">Katxuhde QRna’wẽ</string>
     <string name="disable">Mfxĩçxha</string>
     <string name="enable">Nvxi’jth</string>
@@ -189,20 +189,20 @@ Notificaciones ampliadas</string>
     <string name="next">Vxite</string>
     <string name="incorrect_solution">Paasnxi’ ewme’</string>
     <string name="power_user_mode">Meh kseelpi’jya jiisa</string>
-    <string name="power_user_description">Anona’s kseelpi’jya jiya’jsatxi’. Nvxitu’k VPN phewu’jmee AnyoneBota’s pu’txkan ki kaavxa’jak SOCKS vxite HTTP vxitx phadenxi ũssatx </string>
+    <string name="power_user_description">Anona’s kseelpi’jya jiya’jsatxi’. Nvxitu’k VPN phewu’jmee Anyone VPNa’s pu’txkan ki kaavxa’jak SOCKS vxite HTTP vxitx phadenxi ũssatx </string>
     <string name="action_activate">Miijxkaah</string>
     <string name="volunteer_status_title">Ãcxha’ jxthaakwe ewa’/idx pa’ka</string>
     <string name="title_choose_apps">Teeçx App mtxhitxh</string>
-    <string name="app_suggested_subtitle">AnyoneBota’ jxthaakwe ewa’ vxite App çaam wessu</string>
+    <string name="app_suggested_subtitle">Anyone VPNa’ jxthaakwe ewa’ vxite App çaam wessu</string>
     <string name="apps_suggested_title">Vxite App thegwa’</string>
     <string name="apps_other_apps">Vxite App</string>
 
-    <string name="status_starting_up">AnyoneBota’ takhna ũsa’&#8230;</string>
+    <string name="status_starting_up">Anyone VPNa’ takhna ũsa’&#8230;</string>
     <string name="status_activated">Anyone Networkte txitxanxi ũsa’</string>
-    <string name="status_disabled">AnyoneBota’ fxĩçxhanxi ũsa’ </string>
-    <string name="open_anyonebot_to_connect_to_anon">AnyoneBota’s phade Anonte txitxaya’pacxa</string>
-    <string name="status_shutting_down">AnyoneBota’ aphnxi ũsa’ </string>
-    <string name="config_invalid">AnyoneBot phewu’jnxi’ ewmee’</string>
+    <string name="status_disabled">Anyone VPNa’ fxĩçxhanxi ũsa’ </string>
+    <string name="open_anyonevpn_to_connect_to_anon">Anyone VPNa’s phade Anonte txitxaya’pacxa</string>
+    <string name="status_shutting_down">Anyone VPNa’ aphnxi ũsa’ </string>
+    <string name="config_invalid">Anyone VPN phewu’jnxi’ ewmee’</string>
 
     <string name="couldn_t_start_anon_process_">Anona’ takhya’ ewuume’</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">!Idx ReachableAddresses phewu’jnxi´ teeçx yuwek nvxiht!</string>

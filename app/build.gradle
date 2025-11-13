@@ -17,11 +17,11 @@ static def versionCodeEpoch() {
 
 android {
     defaultConfig {
-        applicationId "io.anyone.anyonebot"
+        applicationId "io.anyone.anyonevpn"
         versionName getVersionName()
         multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-        archivesBaseName = "AnyoneBot"
+        archivesBaseName = "AnyoneVpn"
     }
 
     compileOptions {
@@ -52,18 +52,18 @@ android {
     productFlavors {
         fullperm {
             dimension "free"
-            applicationId 'io.anyone.anyonebot'
+            applicationId 'io.anyone.anyonevpn'
             versionCode 4
             versionName getVersionName()
-            archivesBaseName = "AnyoneBot-${versionName}"
+            archivesBaseName = "AnyoneVpn-${versionName}"
         }
 
         nightly {
             dimension "free"
-            applicationId 'io.anyone.anyonebot.nightly'
+            applicationId 'io.anyone.anyonevpn.nightly'
             versionName getVersionName()
             versionCode versionCodeEpoch()
-            archivesBaseName = "AnyoneBot-${versionName}"
+            archivesBaseName = "AnyoneVpn-${versionName}"
         }
     }
 
@@ -129,5 +129,5 @@ android {
         xmlReport false
     }
 
-    namespace 'io.anyone.anyonebot'
+    namespace 'io.anyone.anyonevpn'
 }

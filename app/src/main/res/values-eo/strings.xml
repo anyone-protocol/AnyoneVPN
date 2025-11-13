@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="menu_settings">Agordoj</string>
     <string name="menu_log">Protokolo</string>
     <string name="menu_stop">Halti</string>
@@ -12,8 +12,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Ĝenerala</string>
-    <string name="pref_start_boot_title">Ŝalti AnyoneBot dum praŝargado</string>
-    <string name="pref_start_boot_summary">Aŭtomate startigi AnyoneBot kaj konekti al Anon dum praŝargado de via Androida ilo</string>
+    <string name="pref_start_boot_title">Ŝalti Anyone VPN dum praŝargado</string>
+    <string name="pref_start_boot_summary">Aŭtomate startigi Anyone VPN kaj konekti al Anon dum praŝargado de via Androida ilo</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -88,9 +88,9 @@
     <string name="drawer_close">Fermi</string>
     <string name="version">Versio:</string>
 
-    <string name="status_starting_up">AnyoneBot ŝaltiĝas…</string>
+    <string name="status_starting_up">Anyone VPN ŝaltiĝas…</string>
     <string name="status_activated">Konektita al Anyone-reto</string>
-    <string name="status_disabled">AnyoneBot estas malaktivigita</string>
+    <string name="status_disabled">Anyone VPN estas malaktivigita</string>
     <string name="couldn_t_start_anon_process_">Anon-procedo ne sukcesis stariĝi:</string>
     <string name="your_relay_settings_caused_an_exception_">Via agordo de relajso kaŭzis escepton!</string>
     <string name="found_existing_anon_process">trovi ekzistantan Anon-procedon…</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="menu_settings">Tetapan</string>
     <string name="menu_log">Log</string>
     <string name="menu_stop">Henti</string>
@@ -9,17 +9,9 @@
     <string name="main_layout_upload">Muat naik</string>
     <string name="button_about">Tentang</string>
     <string name="menu_exit">Keluar</string>
-    <!--Welcome Wizard strings (DJH)-->
-    <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Umum</string>
-    <string name="pref_start_boot_title">Mulakan AnyoneBot semasa Boot</string>
-    <string name="pref_start_boot_summary">Mula AnyoneBot secara automatik dan sambung Anon ketika peranti Android boot</string>
-    <!--New Wizard Strings-->
-    <!--Title Screen-->
-    <!--Warning screen-->
-    <!--Permissions screen-->
-    <!--TipsAndTricks screen-->
-    <!--Transparent Proxy screen-->
+    <string name="pref_start_boot_title">Mulakan Anyone VPN semasa Boot</string>
+    <string name="pref_start_boot_summary">Mula Anyone VPN secara automatik dan sambung Anon ketika peranti Android boot</string>
     <string name="pref_node_configuration">Konfigurasi Nod</string>
     <string name="pref_node_configuration_summary">Ini ialah tetapan lanjutan yang boleh mengurangkan kadar anonymity anda</string>
     <string name="pref_entrance_node">Nod Kemasukan</string>
@@ -93,11 +85,11 @@
     <string name="deny">Nafi</string>
     <string name="connect">Sambung</string>
 
-    <string name="status_shutting_down">AnyoneBot sedang ditutup</string>
+    <string name="status_shutting_down">Anyone VPN sedang ditutup</string>
 
-    <string name="status_starting_up">AnyoneBot telah dimulakan..</string>
+    <string name="status_starting_up">Anyone VPN telah dimulakan..</string>
     <string name="status_activated">Bersambung ke rangkaian Anyone</string>
-    <string name="status_disabled">\"AnyoneBot telah dinyah-aktifkan</string>
+    <string name="status_disabled">\"Anyone VPN telah dinyah-aktifkan</string>
     <string name="couldn_t_start_anon_process_">Tidak boleh memulakan proses anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Tetapan ReachableAddresses anda menyebabkan pengecualian!</string>
     <string name="your_relay_settings_caused_an_exception_">Tetapan relay anda menyebabkan pengecualian!</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot é uma app de proxy livre que capacita outras aplicações a usar a internet com mais segurança. O AnyoneBot usa o Anon para criptografar o seu tráfego na internet e então o esconde \"saltando\" entre uma série de computadores ao redor do mundo. Anon é um software livre e de rede aberta que ajuda a se defender de certas formas de vigilância que ameaçam privacidade e liberdade pessoais, atividades e relações comerciais confidenciais e segurança estatal conhecida como análise de tráfego.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN é uma app de proxy livre que capacita outras aplicações a usar a internet com mais segurança. O Anyone VPN usa o Anon para criptografar o seu tráfego na internet e então o esconde \"saltando\" entre uma série de computadores ao redor do mundo. Anon é um software livre e de rede aberta que ajuda a se defender de certas formas de vigilância que ameaçam privacidade e liberdade pessoais, atividades e relações comerciais confidenciais e segurança estatal conhecida como análise de tráfego.</string>
     <string name="menu_settings">Configurações</string>
     <string name="menu_log">Registo</string>
     <string name="menu_stop">Parar</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Geral</string>
-    <string name="pref_start_boot_title">Iniciar o AnyoneBot no Arranque</string>
-    <string name="pref_start_boot_summary">Iniciar automaticamente o AnyoneBot e conetar o Anon quando o seu aparelho Android inicia</string>
+    <string name="pref_start_boot_title">Iniciar o Anyone VPN no Arranque</string>
+    <string name="pref_start_boot_summary">Iniciar automaticamente o Anyone VPN e conetar o Anon quando o seu aparelho Android inicia</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -38,7 +38,7 @@
     <string name="done">Concluído!</string>
     <string name="disable">Desativar</string>
     <string name="enable">Ativar</string>
-    <string name="wizard_details_msg">O AnyoneBot é um software de código aberto que contem Anon, Go-Tun2Socks, LibEvent. Ele fornece um proxy local HTTP (8118) e um proxy SOCKS (9050) como acesso a rede Anon. AnyoneBot também tem a habilidade, em aparelhos com acesso root, de enviar todo o trafego de Internet via rede Anon.</string>
+    <string name="wizard_details_msg">O Anyone VPN é um software de código aberto que contem Anon, Go-Tun2Socks, LibEvent. Ele fornece um proxy local HTTP (8118) e um proxy SOCKS (9050) como acesso a rede Anon. Anyone VPN também tem a habilidade, em aparelhos com acesso root, de enviar todo o trafego de Internet via rede Anon.</string>
     <string name="pref_proxy_type_dialog">Inserir Tipo de Proxy</string>
     <string name="pref_proxy_port_dialog">Inserir Porta do Proxy</string>
     <string name="pref_proxy_username_summary">Nome do Utilizador do Proxy (Opcional)</string>
@@ -91,7 +91,7 @@
     <string name="trouble_connecting">Problemas na conexão \?</string>
     <string name="app_shortcuts">Aplicações ativadas para o Anon</string>
     <string name="share_as_qr">Compartilhar como QR</string>
-    <string name="please_restart_to_enable_the_changes">Por favor reinicie AnyoneBot para ativar as mundanças</string>
+    <string name="please_restart_to_enable_the_changes">Por favor reinicie Anyone VPN para ativar as mundanças</string>
     <string name="service_type">Tipo do Serviço</string>
     <string name="confirm_service_deletion">Confirmar a remoção do serviço</string>
     <string name="create_a_backup_first">Criar primeiro backup</string>
@@ -132,7 +132,7 @@
     <string name="strict_nodes">Nós Estritos</string>
     <string name="fingerprints_nicks_countries_and_addresses_to_exclude">Impressões digitais, apelidos, países e endereços para excluir</string>
     <string name="fingerprints_nicks_countries_and_addresses_for_the_last_hop">Impressões digitais, apelidos, países e endereços para a última etapa</string>
-    <string name="pref_allow_background_starts_summary">Deixar uma app informar o AnyoneBot para iniciar o Anon e os seus serviços relacionados</string>
+    <string name="pref_allow_background_starts_summary">Deixar uma app informar o Anyone VPN para iniciar o Anon e os seus serviços relacionados</string>
     <string name="pref_allow_background_starts_title">Permitir Inicializações em Segundo Plano</string>
     <string name="pref_entrance_node_dialog">Digite os Nós de Entrada</string>
     <string name="pref_entrance_node_summary">Impressões digitais, apelidos, países e endereços para a primeira etapa</string>
@@ -193,11 +193,11 @@
     <string name="next">Próximo</string>
     <string name="incorrect_solution">Solução incorreta</string>
     <string name="power_user_mode">Modo de utilizador avançado</string>
-    <string name="power_user_description">Para utilizadores familiarizados com Anon. Permite que inicie o AnyoneBot sem a configuração VPN e mostra as portas SOCKS e HTTP que estejam abertas</string>
+    <string name="power_user_description">Para utilizadores familiarizados com Anon. Permite que inicie o Anyone VPN sem a configuração VPN e mostra as portas SOCKS e HTTP que estejam abertas</string>
     <string name="action_activate">Ativar</string>
     <string name="volunteer_status_title">Hoje está melhor
 \npela sua causa.</string>
-    <string name="app_suggested_subtitle">O AnyoneBot funciona melhor com apps de mensagens e mídias sociais.</string>
+    <string name="app_suggested_subtitle">O Anyone VPN funciona melhor com apps de mensagens e mídias sociais.</string>
     <string name="apps_suggested_title">Sugestões de apps</string>
     <string name="apps_other_apps">Outras apps</string>
     <string name="action_use">Usar</string>
@@ -216,20 +216,20 @@
     <string name="log_copied">Registo copiado</string>
     <string name="many_ways">Existem muitas maneiras de se ligar ao Anon. Algumas podem funcionar melhor do que outras para você.</string>
     <string name="asking">A PERGUNTAR…</string>
-    <string name="no_internet_subtitle">Precisa de uma ligação à Internet para utilizar o AnyoneBot.</string>
+    <string name="no_internet_subtitle">Precisa de uma ligação à Internet para utilizar o Anyone VPN.</string>
     <string name="connection_direct">Direto</string>
-    <string name="pref_flag_secure_summary">Impedir que outras aplicações tirem capturas de ecrã do AnyoneBot</string>
+    <string name="pref_flag_secure_summary">Impedir que outras aplicações tirem capturas de ecrã do Anyone VPN</string>
     <string name="pref_flag_secure_title">Segurança do ecrã</string>
-    <string name="root_warning">O AnyoneBot detectou que o seu dispositivo tem root, e isso pode causar problemas de segurança.</string>
+    <string name="root_warning">O Anyone VPN detectou que o seu dispositivo tem root, e isso pode causar problemas de segurança.</string>
     <string name="pref_isolate_protocol_summary">Utilizar um circuito diferente para cada protocolo de ligação</string>
     <string name="not_sure">Não tem a certeza\?</string>
     <string name="pref_isolate_port_summary">Utilizar um circuito diferente para cada porta de destino</string>
     <string name="pref_detect_root_summary">Avisar no arranque se permissões de root estão ativadas neste dispositivo</string>
     <string name="pref_detect_root_title">Deteção de Root</string>
 
-    <string name="status_starting_up">O AnyoneBot está a iniciar…</string>
+    <string name="status_starting_up">O Anyone VPN está a iniciar…</string>
     <string name="status_activated">Conetado à rede Anyone</string>
-    <string name="status_disabled">O AnyoneBot está desativado</string>
+    <string name="status_disabled">O Anyone VPN está desativado</string>
     <string name="couldn_t_start_anon_process_">"Não foi possível iniciar o processo anon: "</string>
     <string name="found_existing_anon_process">encontrado o processo Anon existente…</string>
     <string name="unable_to_start_anon">Não é possível iniciar o Anon:</string>

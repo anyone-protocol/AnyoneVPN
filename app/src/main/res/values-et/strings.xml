@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot on vabalt kasutatav proxy rakendus, mis võimaldab teistel rakendustel Interneti turvalisemat kasutust. AnyoneBot krüpteerib ja peidab teie Internetiliikluse Anon abil paljude maailma arvutite vahel põrgatades. Anon on vaba tarkvara ja vaba võrgustik mis aitab teil kaitsta oma privaatsust, vabadust, konfidentsiaalset äritegevust, suhteid ja riiklikku julgeolekut arvutivõrgus toimuva liikluse analüüsi eest.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN on vabalt kasutatav proxy rakendus, mis võimaldab teistel rakendustel Interneti turvalisemat kasutust. Anyone VPN krüpteerib ja peidab teie Internetiliikluse Anon abil paljude maailma arvutite vahel põrgatades. Anon on vaba tarkvara ja vaba võrgustik mis aitab teil kaitsta oma privaatsust, vabadust, konfidentsiaalset äritegevust, suhteid ja riiklikku julgeolekut arvutivõrgus toimuva liikluse analüüsi eest.</string>
     <string name="menu_settings">Seaded</string>
     <string name="menu_log">Logi</string>
     <string name="menu_stop">Stopp</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Üldist</string>
-    <string name="pref_start_boot_title">Käivita AnyoneBot seadme käivitumisel</string>
-    <string name="pref_start_boot_summary">Automaatne AnyoneBot käivitumine ja Anon külge ühendumine seadme käivitumisel</string>
+    <string name="pref_start_boot_title">Käivita Anyone VPN seadme käivitumisel</string>
+    <string name="pref_start_boot_summary">Automaatne Anyone VPN käivitumine ja Anon külge ühendumine seadme käivitumisel</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -91,7 +91,7 @@
     <string name="share_as_qr">Jaga kui QR</string>
     <string name="app_shortcuts">Anon-toega rakendused</string>
     <string name="pref_allow_background_starts_title">Lubage taustakäivitusi</string>
-    <string name="pref_allow_background_starts_summary">Lase mis tahes rakendusel AnyoneBotile öelda, et ta käivitab Anoni ja sellega seotud teenused</string>
+    <string name="pref_allow_background_starts_summary">Lase mis tahes rakendusel Anyone VPNile öelda, et ta käivitab Anoni ja sellega seotud teenused</string>
     <string name="version">Versioon:</string>
     <string name="license">litsents:</string>
     <string name="v3_delete_client_authorization">Kliendi autoriseerimisvõtme kustutamine</string>
@@ -117,7 +117,7 @@
     <string name="menu_header_learn">Lisateave</string>
     <string name="msg_taking_too_long">See tundub liiga kaua aega võtvat</string>
     <string name="msg_try_something_else">Proovi midagi muud</string>
-    <string name="wizard_details_msg">AnyoneBot on avatud lähtekoodiga rakendus, mis sisaldab Anon, Go-Tun2Socks ja LibEvent. See pakub VPN-tunnelit, lokaalset HTTP Connect proksi (HTTPS ainult port 8118) ja SOCKS-proksi (9050) Anon-võrku.</string>
+    <string name="wizard_details_msg">Anyone VPN on avatud lähtekoodiga rakendus, mis sisaldab Anon, Go-Tun2Socks ja LibEvent. See pakub VPN-tunnelit, lokaalset HTTP Connect proksi (HTTPS ainult port 8118) ja SOCKS-proksi (9050) Anon-võrku.</string>
     <string name="hidden_service_request">Rakendus soovib avada Anon-võrku sibulaserveri sadamas %1$s. See on turvaline, kui te rakendust usaldate.</string>
     <string name="allow">Luba</string>
     <string name="pref_use_expanded_notifications_title">Laiendatud teated</string>
@@ -159,7 +159,7 @@
     <string name="start_anon_again_for_finish_the_process">Alusta Anon uuesti protsessi lõpetamiseks</string>
     <string name="confirm_service_deletion">Kinnitage teenuse kustutamine</string>
     <string name="service_type">Teenuse tüüp</string>
-    <string name="please_restart_to_enable_the_changes">Palun taaskäivitage AnyoneBot muudatuste lubamiseks</string>
+    <string name="please_restart_to_enable_the_changes">Palun taaskäivitage Anyone VPN muudatuste lubamiseks</string>
     <string name="consider_disable_battery_optimizations">Hostitud teenused töötavad, kaaluge aku optimeerimise väljalülitamist</string>
     <string name="pref_isolate_dest_summary">Kasutage iga sihtkoha aadressi jaoks erinevat vooluahelat</string>
     <string name="pref_connection_padding">Ühenduse polsterdamine</string>
@@ -200,12 +200,12 @@
     <string name="hide_apps">Peida rakendused võrgu jälgimise eest ja saada juurdepääs, kui need on blokeeritud.</string>
     <string name="action_activate">Aktiveeri</string>
     <string name="many_ways">Anonini jõudmiseks on mitmeid viise. Mõni neist võib teie jaoks toimida paremini kui teised.</string>
-    <string name="power_user_description">Anoniga tuttavatele kasutajatele. Võimaldab käivitada AnyoneBot ilma VPN-seadistusteta ja näitab avatud SOCKS- ja HTTP-porti</string>
+    <string name="power_user_description">Anoniga tuttavatele kasutajatele. Võimaldab käivitada Anyone VPN ilma VPN-seadistusteta ja näitab avatud SOCKS- ja HTTP-porti</string>
     <string name="volunteer_status_title">Täna on parem
 \ntänu sinule.</string>
-    <string name="app_suggested_subtitle">AnyoneBot töötab kõige paremini koos sõnumite ja sotsiaalmeedia rakendustega.</string>
+    <string name="app_suggested_subtitle">Anyone VPN töötab kõige paremini koos sõnumite ja sotsiaalmeedia rakendustega.</string>
     <string name="no_internet_title">Ühendage internetiga</string>
-    <string name="no_internet_subtitle">AnyoneBot\'i kasutamiseks on vaja internetiühendust.</string>
+    <string name="no_internet_subtitle">Anyone VPN\'i kasutamiseks on vaja internetiühendust.</string>
     <string name="log_copied">Logi kopeeritud</string>
     <string name="configure_header">Anon-ühenduse konfigureerimine</string>
     <string name="drawer_open">Avatud</string>
@@ -220,14 +220,14 @@
     <string name="setting_padding">Pehmendus</string>
     <string name="option_only_on_wifi">Ainult Wifi</string>
     <string name="option_only_when_charging">Ainult laadimisel</string>
-    <string name="pref_flag_secure_summary">Vältige, et teised rakendused ei saaks AnyoneBotist ekraanipilte teha</string>
+    <string name="pref_flag_secure_summary">Vältige, et teised rakendused ei saaks Anyone VPNist ekraanipilte teha</string>
     <string name="pref_flag_secure_title">Ekraani turvalisus</string>
-    <string name="root_warning">AnyoneBot on tuvastanud, et teie seade on juurdunud, mis võib põhjustada turvaprobleeme.</string>
+    <string name="root_warning">Anyone VPN on tuvastanud, et teie seade on juurdunud, mis võib põhjustada turvaprobleeme.</string>
     <string name="btn_copy_log">Logi kopeerimine</string>
 
-    <string name="status_starting_up">AnyoneBot käivitub…</string>
+    <string name="status_starting_up">Anyone VPN käivitub…</string>
     <string name="status_activated">Ühendatud Anyone võrgustikku</string>
-    <string name="status_disabled">AnyoneBot deaktiveeritud</string>
+    <string name="status_disabled">Anyone VPN deaktiveeritud</string>
     <string name="couldn_t_start_anon_process_">Anon protsessi käivitamine ebaõnnestus:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Teie ReachableAddresses seadistus põhjustas ekse!</string>
     <string name="your_relay_settings_caused_an_exception_">Teie releeseadistus põhjustas ekse!</string>

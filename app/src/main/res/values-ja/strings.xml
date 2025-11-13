@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBotは、より安全にインターネットを使用するために他のアプリを強化する無料のプロキシアプリです。AnyoneBotはAnonを使ってインターネットトラフィックを暗号化し、世界中のコンピュータを経由することでトラフィックを隠します。Anonはフリーソフトウェアであり、個人の自由やプライバシーを侵害し、機密のビジネス活動や人間関係のトラフィック解析を行う国家安全保障という名目のネットワーク監視から身を守るためのオープンネットワークです。</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPNは、より安全にインターネットを使用するために他のアプリを強化する無料のプロキシアプリです。Anyone VPNはAnonを使ってインターネットトラフィックを暗号化し、世界中のコンピュータを経由することでトラフィックを隠します。Anonはフリーソフトウェアであり、個人の自由やプライバシーを侵害し、機密のビジネス活動や人間関係のトラフィック解析を行う国家安全保障という名目のネットワーク監視から身を守るためのオープンネットワークです。</string>
     <string name="menu_settings">設定</string>
     <string name="menu_log">履歴</string>
     <string name="menu_stop">停止</string>
@@ -11,11 +11,11 @@
     <string name="button_about">バージョン情報</string>
     <string name="menu_exit">終了</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBotはAnon、Go-Tun2Socks、LibEventを含むオープンソースアプリです。Anonネットワークに入るVPNトンネル、ローカルHTTP接続プロキシ (8118) SOCKSプロキシ (9050) を提供します。</string>
+    <string name="wizard_details_msg">Anyone VPNはAnon、Go-Tun2Socks、LibEventを含むオープンソースアプリです。Anonネットワークに入るVPNトンネル、ローカルHTTP接続プロキシ (8118) SOCKSプロキシ (9050) を提供します。</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">一般</string>
-    <string name="pref_start_boot_title">起動時にAnyoneBotを実行</string>
-    <string name="pref_start_boot_summary">Android端末の起動時にAnyoneBotを自動で実行して、Anonに接続する</string>
+    <string name="pref_start_boot_title">起動時にAnyone VPNを実行</string>
+    <string name="pref_start_boot_summary">Android端末の起動時にAnyone VPNを自動で実行して、Anonに接続する</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">最初のホップのためのデジタル指紋、ニックネーム、国とIPアドレス</string>
     <string name="pref_entrance_node_dialog">入り口ノードを入力</string>
     <string name="pref_allow_background_starts_title">バックグラウンドでの開始を許可</string>
-    <string name="pref_allow_background_starts_summary">AnyoneBotがAnonと関連サービスを開始するように、任意のアプリに伝えます</string>
+    <string name="pref_allow_background_starts_summary">Anyone VPNがAnonと関連サービスを開始するように、任意のアプリに伝えます</string>
     <string name="pref_proxy_title">外方向ネットワークプロキシ (任意)</string>
     <string name="pref_proxy_type_title">外方向プロキシの種類</string>
     <string name="pref_proxy_type_summary">HTTP,HTTPS,Socks4,Socks5で使用するプロトコル</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">処理を終了するには、Anonを再起動して下さい</string>
     <string name="confirm_service_deletion">サービス削除を確認</string>
     <string name="service_type">サービスの種類</string>
-    <string name="please_restart_to_enable_the_changes">変更を有効にするにはAnyoneBotを再起動してください</string>
+    <string name="please_restart_to_enable_the_changes">変更を有効にするにはAnyone VPNを再起動してください</string>
     <string name="share_as_qr">QRで共有</string>
     <string name="disable">無効</string>
     <string name="enable">有効</string>
@@ -193,10 +193,10 @@
     <string name="incorrect_solution">不正解</string>
     <string name="power_user_mode">パワーユーザーモード</string>
     <string name="apps_other_apps">他のアプリ</string>
-    <string name="power_user_description">Anonに精通しているユーザー向け。VPN設定なしでAnyoneBotを起動でき、開いているSOCKSポートとHTTPポートが表示されます</string>
+    <string name="power_user_description">Anonに精通しているユーザー向け。VPN設定なしでAnyone VPNを起動でき、開いているSOCKSポートとHTTPポートが表示されます</string>
     <string name="title_choose_apps">アプリを選ぶ</string>
     <string name="apps_suggested_title">提案されたアプリ</string>
-    <string name="app_suggested_subtitle">AnyoneBotは、メッセージングアプリやソーシャルメディアアプリとの相性が抜群です。</string>
+    <string name="app_suggested_subtitle">Anyone VPNは、メッセージングアプリやソーシャルメディアアプリとの相性が抜群です。</string>
     <string name="action_activate">有効化</string>
     <string name="hide_apps">アプリをネットワーク監視から隠し、遮断されているときにはアクセスできるようにします。</string>
     <string name="pref_isolate_port">宛先ポートを分離</string>
@@ -206,7 +206,7 @@
     <string name="many_ways">Anonに到達する方法はたくさんあります。いくつかは、あなたにとってより良い方法であるかもしれません。</string>
     <string name="action_use">使用</string>
     <string name="no_internet_title">インターネットに接続</string>
-    <string name="no_internet_subtitle">AnyoneBotを使用するには、インターネット接続が必要です。</string>
+    <string name="no_internet_subtitle">Anyone VPNを使用するには、インターネット接続が必要です。</string>
     <string name="log_copied">ログをコピーしました</string>
     <string name="volunteer_status_title">今日の方がいい。
 \nあなたのおかげで。</string>
@@ -221,16 +221,16 @@
     <string name="setting_debug">デバッグ</string>
     <string name="connection_direct">直接</string>
     <string name="connection_custom">カスタム</string>
-    <string name="pref_flag_secure_summary">他のアプリがAnyoneBotのスクリーンショットを撮るのを防ぐ</string>
+    <string name="pref_flag_secure_summary">他のアプリがAnyone VPNのスクリーンショットを撮るのを防ぐ</string>
     <string name="pref_flag_secure_title">画面の安全</string>
-    <string name="root_warning">AnyoneBotは、端末が安全問題の原因になり得るroot化状態であると検知しました。</string>
+    <string name="root_warning">Anyone VPNは、端末が安全問題の原因になり得るroot化状態であると検知しました。</string>
     <string name="pref_detect_root_title">Root検知</string>
     <string name="pref_detect_root_summary">この端末でroot権限が有効になっている場合、起動時に警告</string>
 
-    <string name="status_starting_up">AnyoneBotが開始されています…</string>
+    <string name="status_starting_up">Anyone VPNが開始されています…</string>
     <string name="status_activated">Anyoneネットワークに接続しています</string>
-    <string name="status_disabled">\"AnyoneBotが解除されました</string>
-    <string name="status_shutting_down">AnyoneBotが終了しています</string>
+    <string name="status_disabled">\"Anyone VPNが解除されました</string>
+    <string name="status_shutting_down">Anyone VPNが終了しています</string>
     <string name="couldn_t_start_anon_process_">Anonプロセスの起動に失敗:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">あなたのReachableAddresses設定により例外が発生しました!</string>
     <string name="your_relay_settings_caused_an_exception_">あなたのリレー設定により例外が発生しました!</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot é um aplicativo de proxy livre que permite que outros aplicativos acessem a internet com mais segurança. AnyoneBot usa o Anon para criptografar seu tráfego na internet e então o esconde \"pulando\" entre uma série de computadores ao redor do mundo. Anon é um software livre e de rede aberta que ajuda você a se defender de certas formas de vigilância que ameaçam privacidade e liberdade pessoais, atividades e relações comerciais confidenciais e segurança estatal conhecida como análise de tráfego.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN é um aplicativo de proxy livre que permite que outros aplicativos acessem a internet com mais segurança. Anyone VPN usa o Anon para criptografar seu tráfego na internet e então o esconde \"pulando\" entre uma série de computadores ao redor do mundo. Anon é um software livre e de rede aberta que ajuda você a se defender de certas formas de vigilância que ameaçam privacidade e liberdade pessoais, atividades e relações comerciais confidenciais e segurança estatal conhecida como análise de tráfego.</string>
     <string name="menu_settings">Configurações</string>
     <string name="menu_log">Registro</string>
     <string name="menu_stop">Parar</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Sobre</string>
     <string name="menu_exit">Sair</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot é um aplicativo de código aberto que contém Anon, Go-Tun2Socks e LibEvent. Ele fornece um túnel VPN, um proxy HTTP Connect local (HTTPS apenas na porta 8118) e um proxy SOCKS (9050) para rede Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN é um aplicativo de código aberto que contém Anon, Go-Tun2Socks e LibEvent. Ele fornece um túnel VPN, um proxy HTTP Connect local (HTTPS apenas na porta 8118) e um proxy SOCKS (9050) para rede Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Geral</string>
-    <string name="pref_start_boot_title">Iniciar o AnyoneBot durante o Boot</string>
-    <string name="pref_start_boot_summary">Iniciar o AnyoneBot automaticamente e conectar o Anon durante a inicialização do seu aparelho Android</string>
+    <string name="pref_start_boot_title">Iniciar o Anyone VPN durante o Boot</string>
+    <string name="pref_start_boot_summary">Iniciar o Anyone VPN automaticamente e conectar o Anon durante a inicialização do seu aparelho Android</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Impressões digitais, nicknames, países e endereços para a primeira etapa</string>
     <string name="pref_entrance_node_dialog">Insira os Nós de Entrada</string>
     <string name="pref_allow_background_starts_title">Permitir inicializações em segundo plano</string>
-    <string name="pref_allow_background_starts_summary">Permitir que qualquer aplicativo diga ao AnyoneBot para iniciar o Anon e os seus serviços relacionados</string>
+    <string name="pref_allow_background_starts_summary">Permitir que qualquer aplicativo diga ao Anyone VPN para iniciar o Anon e os seus serviços relacionados</string>
     <string name="pref_proxy_title">Proxy de Saída da Rede (Opcional)</string>
     <string name="pref_proxy_type_title">Tipo de Proxy</string>
     <string name="pref_proxy_type_summary">Protocolo para usar no servidor proxy: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -108,7 +108,7 @@
     <string name="create_a_backup_first">Criar primeiro backup</string>
     <string name="confirm_service_deletion">Confirmar a remoção do serviço</string>
     <string name="service_type">Tipo do Serviço</string>
-    <string name="please_restart_to_enable_the_changes">Por favor reinicie AnyoneBot para habilitar as mundanças</string>
+    <string name="please_restart_to_enable_the_changes">Por favor reinicie Anyone VPN para habilitar as mundanças</string>
     <string name="share_as_qr">Compartilhar como QR</string>
     <string name="disable">Desabilitar</string>
     <string name="enable">Ativar</string>
@@ -191,12 +191,12 @@
     <string name="proxy_ports">Portas do proxy</string>
     <string name="ports_not_set">Portas não definidas</string>
     <string name="incorrect_solution">Solução incorreta</string>
-    <string name="power_user_description">Para usuários familiarizados com Anon. Permite que você inicie o AnyoneBot sem a configuração VPN e mostra as portas SOCKS e HTTP que estejam abertas</string>
+    <string name="power_user_description">Para usuários familiarizados com Anon. Permite que você inicie o Anyone VPN sem a configuração VPN e mostra as portas SOCKS e HTTP que estejam abertas</string>
     <string name="action_activate">Ativar</string>
     <string name="volunteer_status_title">Hoje o dia está melhor
 \ngraças a você.</string>
     <string name="title_choose_apps">Escolha os aplicativos</string>
-    <string name="app_suggested_subtitle">O AnyoneBot funciona melhor com aplicativos de mensagens e mídias sociais.</string>
+    <string name="app_suggested_subtitle">O Anyone VPN funciona melhor com aplicativos de mensagens e mídias sociais.</string>
     <string name="apps_suggested_title">Sugestões de aplicativos</string>
     <string name="apps_other_apps">Outros aplicativos</string>
     <string name="power_user_mode">Modo de usuário avançado</string>
@@ -208,7 +208,7 @@
     <string name="asking">PEDIDO…</string>
     <string name="no_internet_title">Conectar à internet</string>
     <string name="kindness_adjust_title">Configurações</string>
-    <string name="no_internet_subtitle">Você precisa de uma conexão com a Internet para usar o AnyoneBot.</string>
+    <string name="no_internet_subtitle">Você precisa de uma conexão com a Internet para usar o Anyone VPN.</string>
     <string name="pref_isolate_protocol">Isole os protocolos do cliente</string>
     <string name="pref_isolate_port_summary">Utilize um circuito diferente para cada porta de destino</string>
     <string name="pref_isolate_port">Isole as portas de destino</string>
@@ -220,17 +220,17 @@
     <string name="setting_padding">Preenchimento</string>
     <string name="menu_more">Mais</string>
     <string name="connection_custom">Personalizado</string>
-    <string name="pref_flag_secure_summary">Impedir que outros aplicativos façam capturas da tela do AnyoneBot</string>
+    <string name="pref_flag_secure_summary">Impedir que outros aplicativos façam capturas da tela do Anyone VPN</string>
     <string name="pref_flag_secure_title">Segurança da tela</string>
     <string name="connection_direct">Direto</string>
-    <string name="root_warning">O AnyoneBot detectou que o seu dispositivo tem root, isso pode causar sérios problemas de segurança.</string>
+    <string name="root_warning">O Anyone VPN detectou que o seu dispositivo tem root, isso pode causar sérios problemas de segurança.</string>
     <string name="pref_detect_root_summary">Avisar durante a inicialização se as permissões root estão ativadas neste dispositivo</string>
     <string name="pref_detect_root_title">Detecção root</string>
 
-    <string name="status_starting_up">AnyoneBot está iniciando…</string>
+    <string name="status_starting_up">Anyone VPN está iniciando…</string>
     <string name="status_activated">Conectado à rede Anyone</string>
-    <string name="status_disabled">AnyoneBot está desativado</string>
-    <string name="status_shutting_down">AnyoneBot está desligando</string>
+    <string name="status_disabled">Anyone VPN está desativado</string>
+    <string name="status_shutting_down">Anyone VPN está desligando</string>
     <string name="couldn_t_start_anon_process_">"Não foi possível iniciar o processo anon: "</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Suas configurações de Endereços Acessíveis causou uma exceção!</string>
     <string name="your_relay_settings_caused_an_exception_">Suas configurações de retransmissão causaram uma exceção!</string>

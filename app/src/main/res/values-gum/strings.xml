@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBotpe chi anwei kɵmɵn ikpape internetyu mentra kenamarmɵ chine maramtik kɵn. AnyoneBotpe, internet yu wammeran mentra lasrpitsɵsrkɵmɵntrappe Anon teik tɵka wetɵ ashmɵntrai isua marik kɵn, trek chippe chi wam merane esekawa ampumai imai purep ipik kɵn pɵrashmerayu ik pirau mupa kuin pɵrap. Anonpe kan software kɵn mayaelai chi anwei kɵmɵ, incha chu puisrɵ, kape chu pasriksrɵpe, wam kerilan mu kɵpen wampikelɵ wetɵ ashmɵntrai purukupik kɵn, trek tɵwai chutɵ kucha maya misakwan aship pasrapik Estado teik wan purukupik kɵn, kan \"analisis de tráfico\" teik tɵka.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPNpe chi anwei kɵmɵn ikpape internetyu mentra kenamarmɵ chine maramtik kɵn. Anyone VPNpe, internet yu wammeran mentra lasrpitsɵsrkɵmɵntrappe Anon teik tɵka wetɵ ashmɵntrai isua marik kɵn, trek chippe chi wam merane esekawa ampumai imai purep ipik kɵn pɵrashmerayu ik pirau mupa kuin pɵrap. Anonpe kan software kɵn mayaelai chi anwei kɵmɵ, incha chu puisrɵ, kape chu pasriksrɵpe, wam kerilan mu kɵpen wampikelɵ wetɵ ashmɵntrai purukupik kɵn, trek tɵwai chutɵ kucha maya misakwan aship pasrapik Estado teik wan purukupik kɵn, kan \"analisis de tráfico\" teik tɵka.</string>
     <string name="menu_settings">Tamaramtelɵ</string>
     <string name="menu_log">Munchi keeramik</string>
     <string name="menu_stop">Pasrampunkarup</string>
@@ -10,17 +10,17 @@
     <string name="main_layout_upload">Neera pasrɵp</string>
     <string name="button_about">Ikwan wamɵrɵsrɵpik</string>
     <string name="menu_exit">Wepiamik</string>
-    <string name="wizard_details_msg">AnyoneBotpe mayaelai kɵn, ikpe møi eshkailø tøkaik køn Anon, Go-Tun2Socks and LibEvent. Kan VPN kelichai purɵrɵpik, kan Proxy HTTP (HTTPS puerto 8118yutɵ kepintrapik) srape kan proxy SOCKS (9050) Anonyu kelichapik.</string>
+    <string name="wizard_details_msg">Anyone VPNpe mayaelai kɵn, ikpe møi eshkailø tøkaik køn Anon, Go-Tun2Socks and LibEvent. Kan VPN kelichai purɵrɵpik, kan Proxy HTTP (HTTPS puerto 8118yutɵ kepintrapik) srape kan proxy SOCKS (9050) Anonyu kelichapik.</string>
     <string name="pref_general_group">Mayaelai</string>
-    <string name="pref_start_boot_title">AnyoneBotwan kurɵptɵ pɵlpasramik</string>
-    <string name="pref_start_boot_summary">Ñui Android pɵlpasrentɵ AnyoneBotwan pɵlpasrinkaru Anon yu Kelitsɵska</string>
+    <string name="pref_start_boot_title">Anyone VPNwan kurɵptɵ pɵlpasramik</string>
+    <string name="pref_start_boot_summary">Ñui Android pɵlpasrentɵ Anyone VPNwan pɵlpasrinkaru Anon yu Kelitsɵska</string>
     <string name="pref_node_configuration">Nodomeran tamaramelɵ</string>
     <string name="pref_node_configuration_summary">Srɵitɵ katɵkuchi tamariklɵ iklɵ kɵn ñi mu ashmɵntrai marɵp yeilan mermanɵpik</string>
     <string name="pref_entrance_node"> kepiamik Nodos</string>
     <string name="pref_entrance_node_summary">Tasik urek warik, nɵtrɵ pirɵmerai munchi, chu warapelɵ kuisrɵ eshkamik ik utɵwan pɵrtrawa purampamik</string>
     <string name="pref_entrance_node_dialog">Nodoswei kepiamik kepip</string>
     <string name="pref_allow_background_starts_title">Katɵkan nɵɵrɵ pɵlpasrinkaruntrap</string>
-    <string name="pref_allow_background_starts_summary">Mɵ purukupik kɵpen AnyoneBotpa kelicha Anonwan pɵlpasrtrai cha karumik</string>
+    <string name="pref_allow_background_starts_summary">Mɵ purukupik kɵpen Anyone VPNpa kelicha Anonwan pɵlpasrtrai cha karumik</string>
     <string name="pref_proxy_title">Red wepintrai proxy marik (marinkui-marmuinkui)</string>
     <string name="pref_proxy_type_title">Wepintrai proxy marik</string>
     <string name="pref_proxy_type_summary">Proxyn mantɵ aship maramikwan eshkapik: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -126,7 +126,7 @@
     <string name="start_anon_again_for_finish_the_process">Anonwan katɵ pɵlpasrin karu, ñi marɵp weikwan pastɵkamikpe</string>
     <string name="confirm_service_deletion">Chi maramelan kertraik kɵn chipik</string>
     <string name="service_type">Kan maramelai kan utɵ</string>
-    <string name="please_restart_to_enable_the_changes">AnyoneBotwan katɵ pɵlpasrin karu, chi tɵ yunɵmariklan esekantrei</string>
+    <string name="please_restart_to_enable_the_changes">Anyone VPNwan katɵ pɵlpasrin karu, chi tɵ yunɵmariklan esekantrei</string>
     <string name="share_as_qr">QRyu kutri purɵramik</string>
     <string name="disable">Kuechip</string>
     <string name="enable">Pilɵkɵp</string>
@@ -189,19 +189,19 @@
     <string name="next">Katɵkan</string>
     <string name="incorrect_solution">Tamara pasrikpe kalɵ kɵn</string>
     <string name="power_user_mode">Power Usermei pasran</string>
-    <string name="power_user_description">Anonwan ashipelai. AnyoneBotwan pelpasrtrappe  VPN palɵmentrun incha wam srɵl kuri pentrapelan SOCKSpa  HTTPpa kenamartrun </string>
+    <string name="power_user_description">Anonwan ashipelai. Anyone VPNwan pelpasrtrappe  VPN palɵmentrun incha wam srɵl kuri pentrapelan SOCKSpa  HTTPpa kenamartrun </string>
     <string name="action_activate">Pilɵkɵp</string>
     <string name="volunteer_status_title">Mɵi kualɵm ñi kutri ikpe katɵkuchi tapik kɵn</string>
     <string name="title_choose_apps">Maram purukupele tamara pɵnsreilan lawa kemɵr</string>
-    <string name="app_suggested_subtitle">AnyoneBotpe tap pasrappe, pɵra ɵramikpa, wam pekuchipelɵpa tap pasrapik kɵn </string>
+    <string name="app_suggested_subtitle">Anyone VPNpe tap pasrappe, pɵra ɵramikpa, wam pekuchipelɵpa tap pasrapik kɵn </string>
     <string name="apps_suggested_title">Katɵkan eshkeilɵ kɵn Maram purukupelɵ tamara pɵnsreiklɵ</string>
     <string name="apps_other_apps">Katɵkan Maram purukupelɵ tamara pɵnsreiklɵ</string>
 
-    <string name="status_starting_up">AnyoneBotpe pɵlpasrɵp pasran&#8230;</string>
+    <string name="status_starting_up">Anyone VPNpe pɵlpasrɵp pasran&#8230;</string>
     <string name="status_activated">Anyoneyu kelicha pasrik</string>
-    <string name="status_disabled">AnyoneBotpe kuetsik pasran</string>
-    <string name="open_anyonebot_to_connect_to_anon">AnyoneBotwan kur Anonyu kelichap</string>
-    <string name="status_shutting_down">AnyoneBotpe kasrɵp pasran</string>
+    <string name="status_disabled">Anyone VPNpe kuetsik pasran</string>
+    <string name="open_anyonevpn_to_connect_to_anon">Anyone VPNwan kur Anonyu kelichap</string>
+    <string name="status_shutting_down">Anyone VPNpe kasrɵp pasran</string>
     <string name="config_invalid">Orborwan tamartrentikpe kalɵ kɵn</string>
 
     <string name="couldn_t_start_anon_process_">Anonwan p­‎​ɵlpasrtrap kaimeik pasran</string>

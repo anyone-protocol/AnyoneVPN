@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot is a free proxy app that empowers other apps to use the internet more securely. AnyoneBot uses Anon to encrypt your Internet traffic and then hides it by bouncing through a series of computers around the world. Anon is free software and an open network that helps you defend against a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security known as traffic analysis.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN is a free proxy app that empowers other apps to use the internet more securely. Anyone VPN uses Anon to encrypt your Internet traffic and then hides it by bouncing through a series of computers around the world. Anon is free software and an open network that helps you defend against a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security known as traffic analysis.</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_log">Log</string>
     <string name="menu_stop">Stop</string>
@@ -10,17 +10,17 @@
     <string name="main_layout_upload">Upload</string>
     <string name="button_about">About</string>
     <string name="menu_exit">Exit</string>
-    <string name="wizard_details_msg">AnyoneBot is an open-source application that contains Anon, Go-Tun2Socks and LibEvent. It provides a VPN tunnel, a local HTTP Connect proxy (HTTPS only on port 8118) and a SOCKS proxy (9050) into the Anon network.</string>
+    <string name="wizard_details_msg">Anyone VPN is an open-source application that contains Anon, Go-Tun2Socks and LibEvent. It provides a VPN tunnel, a local HTTP Connect proxy (HTTPS only on port 8118) and a SOCKS proxy (9050) into the Anon network.</string>
     <string name="pref_general_group">General</string>
-    <string name="pref_start_boot_title">Start AnyoneBot on Boot</string>
-    <string name="pref_start_boot_summary">Automatically start AnyoneBot and connect Anon when your Android device boots</string>
+    <string name="pref_start_boot_title">Start Anyone VPN on Boot</string>
+    <string name="pref_start_boot_summary">Automatically start Anyone VPN and connect Anon when your Android device boots</string>
     <string name="pref_node_configuration">Node Configuration</string>
     <string name="pref_node_configuration_summary">These are advanced settings that can reduce your anonymity</string>
     <string name="pref_entrance_node">Entrance Nodes</string>
     <string name="pref_entrance_node_summary">Fingerprints, nicks, countries and addresses for the first hop</string>
     <string name="pref_entrance_node_dialog">Enter Entrance Nodes</string>
     <string name="pref_allow_background_starts_title">Allow Background Starts</string>
-    <string name="pref_allow_background_starts_summary">Let any app tell AnyoneBot to start Anon and related services</string>
+    <string name="pref_allow_background_starts_summary">Let any app tell Anyone VPN to start Anon and related services</string>
     <string name="pref_proxy_title">Outbound Network Proxy (Optional)</string>
     <string name="pref_proxy_type_title">Outbound Proxy Type</string>
     <string name="pref_proxy_type_summary">Protocol to use for proxy server: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -62,8 +62,8 @@
     <string name="enter_ports">Enter ports</string>
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Enable debug log to output (must use adb or aLogcat to view)</string>
     <string name="project_home">Project Home:</string>
-    <string name="anyonebot_url" translatable="false">https://orbot.app/</string>
-    <string name="anyonebot_github" translatable="false">https://github.com/anyone-protocol/AnyoneBot</string>
+    <string name="anyonevpn_url" translatable="false">https://www.anyone.io/</string>
+    <string name="anyonevpn_github" translatable="false">https://github.com/anyone-protocol/AnyoneVpn</string>
     <string name="anon_url" translatable="false">Anon: https://www.anyone.io</string>
     <string name="openssl_url" translatable="false">OpenSSL: http://www.openssl.org</string>
     <string name="third_party_software">3rd-Party-Software: </string>
@@ -129,7 +129,7 @@
     <string name="start_anon_again_for_finish_the_process">Start Anon again for finish the process</string>
     <string name="confirm_service_deletion">Confirm service deletion</string>
     <string name="service_type">Service type</string>
-    <string name="please_restart_to_enable_the_changes">Please restart AnyoneBot to enable the changes</string>
+    <string name="please_restart_to_enable_the_changes">Please restart Anyone VPN to enable the changes</string>
     <string name="anon" translatable="false">.anon</string>
     <string name="share_as_qr">Share as QR</string>
     <string name="disable">Disable</string>
@@ -195,11 +195,11 @@
     <string name="next">Next</string>
     <string name="incorrect_solution">Incorrect Solution</string>
     <string name="power_user_mode">Power User Mode</string>
-    <string name="power_user_description">For users familiar with Anon. Allows you to start AnyoneBot without the VPN setting and shows open SOCKS and HTTP ports</string>
+    <string name="power_user_description">For users familiar with Anon. Allows you to start Anyone VPN without the VPN setting and shows open SOCKS and HTTP ports</string>
     <string name="action_activate">Activate</string>
     <string name="volunteer_status_title">Today is better\nbecause of you.</string>
     <string name="title_choose_apps">Choose Apps</string>
-    <string name="app_suggested_subtitle">AnyoneBot works best with messaging and social media apps.</string>
+    <string name="app_suggested_subtitle">Anyone VPN works best with messaging and social media apps.</string>
     <string name="apps_suggested_title">Suggested Apps</string>
     <string name="apps_other_apps">Other Apps</string>
     <string name="hide_apps">Hide apps from network monitoring and get access when they are blocked.</string>
@@ -210,7 +210,7 @@
     <string name="action_use">Use</string>
     <string name="asking">ASKING…</string>
     <string name="no_internet_title">Connect to internet</string>
-    <string name="no_internet_subtitle">You need an internet connection to use AnyoneBot.</string>
+    <string name="no_internet_subtitle">You need an internet connection to use Anyone VPN.</string>
     <string name="kindness_adjust_title">Settings</string>
     <string name="menu_more">More</string>
     <string name="option_only_on_wifi">Only on Wifi</string>
@@ -220,19 +220,19 @@
 
     <string name="connection_direct">Direct</string>
     <string name="connection_custom">Custom</string>
-    <string name="pref_flag_secure_summary">Prevent other apps from taking screenshots of AnyoneBot</string>
+    <string name="pref_flag_secure_summary">Prevent other apps from taking screenshots of Anyone VPN</string>
     <string name="pref_flag_secure_title">Screen Security</string>
-    <string name="root_warning">AnyoneBot has detected your device is rooted, which can cause security issues.</string>
+    <string name="root_warning">Anyone VPN has detected your device is rooted, which can cause security issues.</string>
     <string name="pref_detect_root_summary">Warn on startup if root permissions are enabled on this device</string>
     <string name="pref_detect_root_title">Root Detection</string>
 
-    <string name="status_starting_up">AnyoneBot is Starting&#8230;</string>
+    <string name="status_starting_up">Anyone VPN is Starting&#8230;</string>
     <string name="status_activated">Connected to the Anyone Network</string>
-    <string name="status_disabled">AnyoneBot is Deactivated</string>
-    <string name="open_anyonebot_to_connect_to_anon">Open AnyoneBot to Connect to Anon</string>
-    <string name="status_shutting_down">AnyoneBot is Shutting Down</string>
+    <string name="status_disabled">Anyone VPN is Deactivated</string>
+    <string name="open_anyonevpn_to_connect_to_anon">Open Anyone VPN to Connect to Anon</string>
+    <string name="status_shutting_down">Anyone VPN is Shutting Down</string>
     <string name="connect_to_anon">Connect to Anon</string>
-    <string name="config_invalid">AnyoneBot Configuration Invalid</string>
+    <string name="config_invalid">Anyone VPN Configuration Invalid</string>
 
     <string name="couldn_t_start_anon_process_">Couldn\'t start anon process: </string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Your ReachableAddresses settings caused an exception!</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="app_description">ऑरबॉट एक मुफ्त प्रॉक्सी ऐप है जो दूसरे ऐपों को इंटरनेट बेहतर सुरक्षा के साथ इस्तेमाल करने देता है। ऑरबॉट आपके इंटरनेट टैफिक को एन्क्रिप्ट करने और छुपाने के लिए टॉर इस्तेमाल करता है। टॉर एक मुफ्त सॉफ्टवेयर और एक खुला नेटवर्क है जो आपको नेटवर्क निगरानी के एक टाइप (जिससे निजी आज़ादी और गोपनियता, निजी कारोबारी काम और रिश्ते में नुकसान हो सकता है) और ट्रैफिक विश्लेषण से बचाता है।</string>
     <string name="menu_settings">सेटिंग</string>
     <string name="menu_log">लॉग</string>

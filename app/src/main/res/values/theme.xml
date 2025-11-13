@@ -9,7 +9,7 @@
         <item name="android:textColor">@color/menu_header</item>
     </style>
 
-    <style name="AnyoneBotActivityTheme" parent="Theme.AppCompat">
+    <style name="AnyoneVpnActivityTheme" parent="Theme.AppCompat">
         <item name="android:windowBackground">@color/background</item>
         <item name="android:windowIsFloating">false</item>
         <item name="colorPrimary">@color/background</item>
@@ -17,7 +17,7 @@
 
     </style>
 
-    <style name="AnyoneBotDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <style name="AnyoneVpnDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:background">@color/background</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>

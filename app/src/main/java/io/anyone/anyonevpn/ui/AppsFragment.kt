@@ -1,0 +1,266 @@
+/* Copyright (c) 2009, Nathan Freitas, Orbot / The Guardian Project - http://openideals.com/guardian */ /* See LICENSE for licensing information */
+package io.anyone.anyonevpn.ui
+
+import android.Manifest
+import android.content.SharedPreferences
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Filter
+import android.widget.ImageView
+import android.widget.TextView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import io.anyone.anyonevpn.BuildConfig
+import io.anyone.anyonevpn.R
+import io.anyone.anyonevpn.databinding.FragmentAppsBinding
+import io.anyone.anyonevpn.databinding.FragmentAppsItemBinding
+import io.anyone.anyonevpn.service.AnyoneVpnConstants
+import io.anyone.anyonevpn.service.util.Prefs
+import io.anyone.anyonevpn.service.vpn.AnonifiedApp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.lang.ref.WeakReference
+
+class AppsFragment(listener: OnChangeListener? = null) : BottomSheetDialogFragment(), View.OnClickListener, TextWatcher {
+
+    interface OnChangeListener {
+        fun onAppsChange()
+    }
+
+    private lateinit var mBinding: FragmentAppsBinding
+
+    private var mPrefs: SharedPreferences? = null
+
+    private val mJob = Job()
+    private val mScope = CoroutineScope(Dispatchers.Main + mJob)
+
+    private var mApps: List<AnonifiedApp> = emptyList()
+
+    private val mListener: WeakReference<OnChangeListener> = WeakReference(listener)
+
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+
+        mBinding = FragmentAppsBinding.inflate(inflater, container, false)
+
+        mBinding.etSearch.addTextChangedListener(this)
+
+        val b = BottomSheetBehavior.from(mBinding.container)
+        b.state = BottomSheetBehavior.STATE_EXPANDED
+        b.skipCollapsed = true
+
+        return mBinding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        mPrefs = Prefs.getSharedPrefs(context)
+        reloadApps()
+    }
+
+    override fun onClick(v: View) {
+        val entry = v.tag as? ListEntry ?: return
+
+        entry.app?.isTorified = !(entry.app?.isTorified ?: false)
+        entry.box?.setBackgroundResource(if (entry.app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
+        entry.active?.visibility = if (entry.app?.isTorified == true) View.VISIBLE else View.INVISIBLE
+
+        saveAppSettings()
+    }
+
+    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        // Ignored.
+    }
+
+    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        mAdapterApps.filter.filter(s)
+    }
+
+    override fun afterTextChanged(s: Editable?) {
+        // Ignored.
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        mJob.cancel()
+    }
+
+    private fun reloadApps() {
+        mScope.launch {
+            withContext(Dispatchers.IO) {
+                context?.packageManager?.let {
+                    mApps = getApps(it, mPrefs, null, null)
+                }
+            }
+
+            mBinding.appList.adapter = mAdapterApps
+        }
+    }
+
+    private val mAdapterApps by lazy {
+        object : ArrayAdapter<AnonifiedApp>(requireContext(), R.layout.fragment_apps_item, R.id.tvName, mApps) {
+
+            private var data: List<AnonifiedApp> = mApps
+
+            override fun getCount(): Int {
+                return data.size
+            }
+
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view =
+                    convertView ?: FragmentAppsItemBinding.inflate(layoutInflater, parent, false).root
+                var entry = view.tag as? ListEntry
+
+                if (entry == null) {
+                    // Inflate a new view
+                    entry = ListEntry()
+                    entry.box = view.findViewById(R.id.selection)
+                    entry.icon = view.findViewById(R.id.ivIcon)
+                    entry.text = view.findViewById(R.id.tvName)
+                    entry.active = view.findViewById(R.id.tvActive)
+                    view.tag = entry
+                }
+
+                entry.app = data[position]
+
+                entry.box?.tag = entry
+                entry.box?.setBackgroundResource(if (entry.app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
+                entry.box?.setOnClickListener(this@AppsFragment)
+
+                try {
+                    entry.icon?.setImageDrawable(
+                        context.packageManager?.getApplicationIcon(entry.app?.packageName ?: ""))
+                    entry.icon?.tag = entry
+                    entry.icon?.setOnClickListener(this@AppsFragment)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+
+                entry.text?.text = entry.app?.name
+                entry.text?.tag = entry
+                entry.text?.setOnClickListener(this@AppsFragment)
+
+                entry.active?.visibility =
+                    if (entry.app?.isTorified == true) View.VISIBLE else View.INVISIBLE
+                entry.active?.tag = entry
+                entry.active?.setOnClickListener(this@AppsFragment)
+
+                return view
+            }
+
+            override fun getFilter(): Filter {
+                val filter = object : Filter() {
+
+                    override fun performFiltering(constraint: CharSequence?): FilterResults {
+                        val results = FilterResults()
+
+                        if (constraint.isNullOrBlank()) {
+                            results.values = mApps
+                            results.count = mApps.count()
+                        }
+                        else {
+                            val filtered = mApps.filter {
+                                // ignore apps, which don't contain the filter string in their id or label.
+                                it.packageName.contains(constraint, true)
+                                        || it.name.contains(constraint, true)
+                            }
+
+                            results.values = filtered
+                            results.count = filtered.count()
+                        }
+
+                        return results
+                    }
+
+                    @Suppress("UNCHECKED_CAST")
+                    override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                        data = results?.values as? List<AnonifiedApp> ?: mApps
+                        notifyDataSetChanged()
+                    }
+                }
+
+                return filter
+            }
+        }
+    }
+
+    private fun saveAppSettings() {
+        val apps = HashSet<String>()
+
+        apps.addAll(mApps.filter { it.isTorified }.mapNotNull { it.packageName })
+
+        mPrefs?.edit()
+            ?.putString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, apps.joinToString("|"))
+            ?.apply()
+
+        mListener.get()?.onAppsChange()
+    }
+
+    private class ListEntry {
+        var box: View? = null
+        var icon: ImageView? = null
+        var text: TextView? = null // app name
+        var active: TextView? = null
+        var app: AnonifiedApp? = null
+    }
+
+    companion object {
+
+        fun getApps(
+            packageManager: PackageManager,
+            prefs: SharedPreferences?,
+            include: List<String>?,
+            exclude: List<String>?
+        ): List<AnonifiedApp> {
+
+            val anondApps = prefs?.getString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, "")
+                ?.split("|")
+                ?.filter { it.isNotEmpty() }
+
+            val apps = packageManager.getInstalledApplications(0)
+                .filter {
+                    it.enabled // Ignore disabled apps,
+                            // ignore apps which bring their own Tor,
+                            && !AnyoneVpnConstants.BYPASS_VPN_PACKAGES.contains(it.packageName)
+                            // ignore ourselves,
+                            && it.packageName != BuildConfig.APPLICATION_ID
+                            // ignore system apps, which haven't been updated (filters the most obscure ones),
+                            && (it.flags and ApplicationInfo.FLAG_SYSTEM == 0 || it.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0)
+                            // ignore apps, which aren't on the include list, if there is one,
+                            && include?.contains(it.packageName) != false
+                            // ignore apps, which are on the exclude list, if there is one,
+                            && exclude?.contains(it.packageName) != true
+                            // ignore apps, which don't connect to the net.
+                            && packageManager.getPackageInfo(it.packageName, PackageManager.GET_PERMISSIONS)
+                                ?.requestedPermissions?.contains(Manifest.permission.INTERNET) == true
+                }
+                .map {
+                    val app = AnonifiedApp()
+                    app.packageName = it.packageName
+                    app.name = packageManager.getApplicationLabel(it).toString()
+                    app.uid = it.uid
+                    app.procname = it.processName
+                    app.username = packageManager.getNameForUid(app.uid)
+                    app.isEnabled = true
+                    app.setUsesInternet(true)
+                    app.isTorified = anondApps?.contains(it.packageName) ?: false
+                    app
+                }
+
+            AnonifiedApp.sortAppsForTorifiedAndAbc(apps)
+
+            return apps
+        }
+    }
+}

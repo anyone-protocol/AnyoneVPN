@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="AnyoneBot vX.X.X" />
+        tools:text="Anyone VPN vX.X.X" />
 
     <ListView
         android:id="@+id/lvMoreActions"

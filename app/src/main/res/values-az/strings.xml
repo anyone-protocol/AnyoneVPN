@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">Pulsuz proksi tətbiqetməsi olan AnyoneBot başqa tətbiqetmələrə internetdən daha təhlükəsiz istifadə etmək imkanı verir. AnyoneBot sizin internet trafikinizi şifrələmək üçün Anondan istifadə edir və dünyanın hər yerində kompüterlərin birindən o birinə sıçramaqla bunu gizlədir. Anon pulsuz proqram təminatıdır, eyni zamanda sizin şəxsi azadlığınız və təhlükəsizliyinizə, gizli biznes fəaliyyəti və əlaqələrə, o cümlədən trafik analiz adlanan dövlət təhlükəsizliyinə xələl gətirə biləcək şəbəkə nəzarəti formalarından müdafiə olunmağa yardım edən açıq şəbəkədir.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Pulsuz proksi tətbiqetməsi olan Anyone VPN başqa tətbiqetmələrə internetdən daha təhlükəsiz istifadə etmək imkanı verir. Anyone VPN sizin internet trafikinizi şifrələmək üçün Anondan istifadə edir və dünyanın hər yerində kompüterlərin birindən o birinə sıçramaqla bunu gizlədir. Anon pulsuz proqram təminatıdır, eyni zamanda sizin şəxsi azadlığınız və təhlükəsizliyinizə, gizli biznes fəaliyyəti və əlaqələrə, o cümlədən trafik analiz adlanan dövlət təhlükəsizliyinə xələl gətirə biləcək şəbəkə nəzarəti formalarından müdafiə olunmağa yardım edən açıq şəbəkədir.</string>
     <string name="menu_settings">Quraşdırmalar</string>
     <string name="menu_log">Jurnal</string>
     <string name="menu_stop">Dur</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Əsas</string>
-    <string name="pref_start_boot_title">Android Açıldıqda AnyoneBotu Başlat</string>
-    <string name="pref_start_boot_summary">Android cihazın işə başladıqda avtomatik olaraq AnyoneBot başlansın və Anon-a qoşulsun</string>
+    <string name="pref_start_boot_title">Android Açıldıqda Anyone VPNu Başlat</string>
+    <string name="pref_start_boot_summary">Android cihazın işə başladıqda avtomatik olaraq Anyone VPN başlansın və Anon-a qoşulsun</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Birinci sıçrayış üçün barmaq izləri, nişanlar, ölkələr və ünvanlar</string>
     <string name="pref_entrance_node_dialog">Giriş Kəsişmələrini Əlavə et</string>
     <string name="pref_allow_background_starts_title">Arxa fonun işə başlamasına icazə verin</string>
-    <string name="pref_allow_background_starts_summary">Qoy hər-hansı tətbiqetmə AnyoneBota Anon və əlaqəli xidmətləri işə salmalı olduğunu desin</string>
+    <string name="pref_allow_background_starts_summary">Qoy hər-hansı tətbiqetmə Anyone VPNa Anon və əlaqəli xidmətləri işə salmalı olduğunu desin</string>
     <string name="pref_proxy_title">İxrac Edilən Şəbəkə Proksisi (istəyə bağlı)</string>
     <string name="pref_proxy_type_title">İxrac Edilən Proksi Növü</string>
     <string name="pref_proxy_type_summary">Proksi serveri istifadə etmək üçün protokol: HTTP, HTTPS, Socks4, Socks5</string>
@@ -90,7 +90,7 @@
     <string name="send_email">Emeyl göndərin</string>
     <string name="save">Saxla</string>
     <string name="name">Ad</string>
-    <string name="please_restart_to_enable_the_changes">Dəyişiklikləri aktivləşdirmək üçün AnyoneBot-u yenidən başladın</string>
+    <string name="please_restart_to_enable_the_changes">Dəyişiklikləri aktivləşdirmək üçün Anyone VPN-u yenidən başladın</string>
     <string name="disable">Söndür</string>
     <string name="enable">İşə sal</string>
     <string name="allow">İcazə ver</string>
@@ -121,7 +121,7 @@
     <string name="anon_port">Soğan limanı</string>
     <string name="restore_backup">Ehtiyyatda olanı bərpa etmə</string>
     <string name="v3_backup_key">Yedək Müştəri Avtorizasiya Açarı</string>
-    <string name="wizard_details_msg">AnyoneBot Anon, Go-Tun2Socks və LibEvent ehtiva edən açıq mənbəli proqramdır. Anon şəbəkəsinə VPN tuneli, yerli HTTP Connect proksisi (yalnız 8118 portunda HTTPS) və SOCKS proksisi (9050) təmin edir.</string>
+    <string name="wizard_details_msg">Anyone VPN Anon, Go-Tun2Socks və LibEvent ehtiva edən açıq mənbəli proqramdır. Anon şəbəkəsinə VPN tuneli, yerli HTTP Connect proksisi (yalnız 8118 portunda HTTPS) və SOCKS proksisi (9050) təmin edir.</string>
     <string name="pref_reduced_circuit_padding_summary">Data və batareyanın istifadəsini azaltmaq üçün aşağı yerüstü doldurma alqoritmlərindən istifadə edin</string>
     <string name="copy_address_to_clipboard">Ünvanı panoya kopyalayın</string>
     <string name="hidden_service_request">Tətbiq %1$s portunda soğan serverini Anon şəbəkəsinə açmaq istəyir. Tətbiqə etibar edirsinizsə, bu təhlükəsizdir.</string>
@@ -203,15 +203,15 @@
     <string name="btn_copy_log">Qeydi Kopyala</string>
     <string name="menu_header_learn">Daha ətraflı</string>
     <string name="menu_anon_connection">Anon bağlantısı</string>
-    <string name="power_user_description">Anon ilə tanış olan istifadəçilər üçün. VPN ayarı olmadan AnyoneBot-u işə salmağa imkan verir və açıq SOCKS və HTTP portlarını göstərir</string>
+    <string name="power_user_description">Anon ilə tanış olan istifadəçilər üçün. VPN ayarı olmadan Anyone VPN-u işə salmağa imkan verir və açıq SOCKS və HTTP portlarını göstərir</string>
     <string name="menu_app_settings">Tətbiq Parametrləri</string>
     <string name="incorrect_solution">Yanlış Həll</string>
-    <string name="app_suggested_subtitle">AnyoneBot mesajlaşma və sosial media proqramları ilə ən yaxşı şəkildə işləyir.</string>
+    <string name="app_suggested_subtitle">Anyone VPN mesajlaşma və sosial media proqramları ilə ən yaxşı şəkildə işləyir.</string>
     <string name="title_choose_apps">Proqramları seçin</string>
     <string name="msg_taking_too_long">Görünür, bu çox uzun çəkir</string>
     <string name="volunteer_status_title">Bu gün daha yaxşıdır
 \nsənə görə.</string>
-    <string name="no_internet_subtitle">AnyoneBotdan istifadə etmək üçün internet bağlantısı lazımdır.</string>
+    <string name="no_internet_subtitle">Anyone VPNdan istifadə etmək üçün internet bağlantısı lazımdır.</string>
     <string name="option_only_when_charging">Yalnız şarj edərkən</string>
     <string name="no_internet_title">İnternetə qoşulun</string>
     <string name="kindness_adjust_title">Parametrlər</string>
@@ -221,14 +221,14 @@
     <string name="connection_direct">Birbaşa</string>
     <string name="asking">SORUŞMAQ…</string>
     <string name="pref_flag_secure_title">Ekran Təhlükəsizliyi</string>
-    <string name="root_warning">AnyoneBot cihazınızın köklü olduğunu aşkar etdi və bu, təhlükəsizlik problemlərinə səbəb ola bilər.</string>
-    <string name="pref_flag_secure_summary">Digər proqramların AnyoneBotun skrinşotlarını çəkməsinə mane olun</string>
+    <string name="root_warning">Anyone VPN cihazınızın köklü olduğunu aşkar etdi və bu, təhlükəsizlik problemlərinə səbəb ola bilər.</string>
+    <string name="pref_flag_secure_summary">Digər proqramların Anyone VPNun skrinşotlarını çəkməsinə mane olun</string>
     <string name="many_ways">Anon-a çatmağın bir çox yolu var. Bəziləri sizin üçün digərlərindən daha yaxşı işləyə bilər.</string>
 
-    <string name="status_starting_up">AnyoneBot başlayır…</string>
+    <string name="status_starting_up">Anyone VPN başlayır…</string>
     <string name="status_activated">Anyone şəbəkəsinə bağlandı</string>
-    <string name="status_disabled">AnyoneBot deaktivasiya edildi</string>
-    <string name="status_shutting_down">AnyoneBot xidməti işini başa vurur</string>
+    <string name="status_disabled">Anyone VPN deaktivasiya edildi</string>
+    <string name="status_shutting_down">Anyone VPN xidməti işini başa vurur</string>
     <string name="couldn_t_start_anon_process_">Anon prosesi başlana bilmədi:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Sənin ƏlçatanÜnvanlar seçimin istisnaya səbəb oldu!</string>
     <string name="your_relay_settings_caused_an_exception_">Sənin keçid seçimlərin istisnaya səbəb oldu!</string>

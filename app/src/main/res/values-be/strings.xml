@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot — гэта свабодная праграма для проксі-злучэнняў, яна дазваляе іншым дадаткам больш бяспечна выкарыстоўваць інтэрнэт-злучэнне. AnyoneBot ужывае Anon для шыфравання інтэрнэт-трафіка, які потым хаваецца падчас перасылання праз некалькі кампутараў у розных частках планеты. Anon з\'яўляецца свабодным праграмным дадаткам, а таксама адкрытай сеткай, якая дапамагае абараніцца ад сачэння ў сетках, якая пагражае асабістай волі і прыватным жыцці, прыватнасці бізнес-дзейнасці і кантактаў, а таксама дзяржаўнай праграме бяспекі, вядомай як аналіз трафіка.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN — гэта свабодная праграма для проксі-злучэнняў, яна дазваляе іншым дадаткам больш бяспечна выкарыстоўваць інтэрнэт-злучэнне. Anyone VPN ужывае Anon для шыфравання інтэрнэт-трафіка, які потым хаваецца падчас перасылання праз некалькі кампутараў у розных частках планеты. Anon з\'яўляецца свабодным праграмным дадаткам, а таксама адкрытай сеткай, якая дапамагае абараніцца ад сачэння ў сетках, якая пагражае асабістай волі і прыватным жыцці, прыватнасці бізнес-дзейнасці і кантактаў, а таксама дзяржаўнай праграме бяспекі, вядомай як аналіз трафіка.</string>
     <string name="menu_settings">Налады</string>
     <string name="menu_log">Журнал</string>
     <string name="menu_stop">Стоп</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Пра праграму</string>
     <string name="menu_exit">Выйсце</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot — гэта праграма з адкрытым зыходным кодам, якая ўтрымоўвае Anon, Go-Tun2Socks, і LibEvent. Яно прапануе лакальны HTTP- (8118) і SOCKS-проксі (9050) у сетку Anon. AnyoneBot таксама дазваляе на прыладах з правамі root перасылаць увесь інтэрнэт-трафік праз Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN — гэта праграма з адкрытым зыходным кодам, якая ўтрымоўвае Anon, Go-Tun2Socks, і LibEvent. Яно прапануе лакальны HTTP- (8118) і SOCKS-проксі (9050) у сетку Anon. Anyone VPN таксама дазваляе на прыладах з правамі root перасылаць увесь інтэрнэт-трафік праз Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Агульныя</string>
-    <string name="pref_start_boot_title">Запускаць AnyoneBot пры загрузцы</string>
-    <string name="pref_start_boot_summary">Аўтаматычна запускаць AnyoneBot і падлучацца да сеткі Anon пры загрузцы вашай Android-прылады</string>
+    <string name="pref_start_boot_title">Запускаць Anyone VPN пры загрузцы</string>
+    <string name="pref_start_boot_summary">Аўтаматычна запускаць Anyone VPN і падлучацца да сеткі Anon пры загрузцы вашай Android-прылады</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Адбіткі, псеўданімы, краіны і адрасы для першага скоку</string>
     <string name="pref_entrance_node_dialog">Увядзіце ўваходныя вузлы</string>
     <string name="pref_allow_background_starts_title">Дазволіць фонавую загрузку</string>
-    <string name="pref_allow_background_starts_summary">Дазволіць кожнаму дадатку патрабаваць ад AnyoneBot запускаць Anon і якія адносяцца да яго сэрвісы</string>
+    <string name="pref_allow_background_starts_summary">Дазволіць кожнаму дадатку патрабаваць ад Anyone VPN запускаць Anon і якія адносяцца да яго сэрвісы</string>
     <string name="pref_proxy_title">Выходны сеткавы проксі (неабавязкова)</string>
     <string name="pref_proxy_type_title">Тып проксі</string>
     <string name="pref_proxy_type_summary">Пратакол для выкарыстання проксі-серверам: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Запусціце Anon ізноў для завяршэння працэсу</string>
     <string name="confirm_service_deletion">Пацверджанне выдалення службы</string>
     <string name="service_type">Тып службы</string>
-    <string name="please_restart_to_enable_the_changes">Калі ласка, перазапусціце AnyoneBot для ўступу змены ў сілу</string>
+    <string name="please_restart_to_enable_the_changes">Калі ласка, перазапусціце Anyone VPN для ўступу змены ў сілу</string>
     <string name="share_as_qr">Падзяліцца праз QR-код</string>
     <string name="disable">Адключыць</string>
     <string name="enable">Уключыць</string>

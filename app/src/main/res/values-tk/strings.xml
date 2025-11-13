@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pref_start_boot_title">AnyoneBot-y Boot-da başladyň</string>
-    <string name="pref_start_boot_summary">Android enjamyňyz açylanda AnyoneBot awtomatiki işe giriziň we Anon-y birikdiriň</string>
-    <string name="pref_allow_background_starts_summary">AnyoneBot arkaly Anon we degişli hyzmatlary işe girizmek üçin islendik programma üpjün edýär</string>
+    <string name="pref_start_boot_title">Anyone VPN-y Boot-da başladyň</string>
+    <string name="pref_start_boot_summary">Android enjamyňyz açylanda Anyone VPN awtomatiki işe giriziň we Anon-y birikdiriň</string>
+    <string name="pref_allow_background_starts_summary">Anyone VPN arkaly Anon we degişli hyzmatlary işe girizmek üçin islendik programma üpjün edýär</string>
     <string name="pref_proxy_password_summary">Proksi Paroly (Islege Görä)</string>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="menu_settings">Sazlamalar</string>
     <string name="menu_log">Hasaba gir</string>
     <string name="menu_stop">Stop</string>
@@ -49,7 +49,7 @@
     <string name="backup_restored">Ätiýaçlyk dikeldildi</string>
     <string name="create_a_backup_first">Ilki bilen ätiýaçlyk nusgasyny dörediň</string>
     <string name="service_type">Hyzmat görnüşi</string>
-    <string name="please_restart_to_enable_the_changes">Üýtgeşmeleriň güýje girmegi üçin AnyoneBot-y täzeden açyň</string>
+    <string name="please_restart_to_enable_the_changes">Üýtgeşmeleriň güýje girmegi üçin Anyone VPN-y täzeden açyň</string>
     <string name="share_as_qr">QR hökmünde paýlaşyň</string>
     <string name="consider_disable_battery_optimizations">Işleýän hyzmatlar, batareýa optimizasiýany öçürmegi göz öňünde tutuň</string>
     <string name="pref_isolate_dest_summary">Her niýetlenen salgy üçin dürli aýlanşyk ulanyň</string>
@@ -82,7 +82,7 @@
     <string name="captcha_title">Adamdygyňyzy bize habar beriň</string>
     <string name="menu_anon_connection">Anon Birikmesi</string>
     <string name="menu_help_others">Başgalaryna kömek ediň</string>
-    <string name="root_warning">AnyoneBot, enjamyňyzyň kök urandygyny (root), howpsuzlyk meselelerine sebäp bolup biljekdigini anyklady.</string>
+    <string name="root_warning">Anyone VPN, enjamyňyzyň kök urandygyny (root), howpsuzlyk meselelerine sebäp bolup biljekdigini anyklady.</string>
     <string name="pref_proxy_host_dialog">Proksi Hostyny Giriziň</string>
     <string name="pref_proxy_port_title">Çykýan Proksi Porty</string>
     <string name="pref_proxy_port_summary">Proksi Serwer Porty</string>
@@ -127,7 +127,7 @@
     <string name="action_activate">Işjeňleşdiriň</string>
     <string name="volunteer_status_title">Bu gün has gowy
 \nsen sebäpli.</string>
-    <string name="app_suggested_subtitle">AnyoneBot habarlaşma we sosial media programmalary bilen iň oňat işleýär.</string>
+    <string name="app_suggested_subtitle">Anyone VPN habarlaşma we sosial media programmalary bilen iň oňat işleýär.</string>
     <string name="apps_suggested_title">Maslahat berilýän programmalar</string>
     <string name="apps_other_apps">Basga programmalar</string>
     <string name="btn_copy_log">Log-y Göçüriň</string>
@@ -136,10 +136,10 @@
     <string name="action_use">Ulan</string>
     <string name="asking">SORAÝAR…</string>
     <string name="no_internet_title">Internede baglan</string>
-    <string name="no_internet_subtitle">AnyoneBot ulanmak üçin internet birikmesi gerek.</string>
+    <string name="no_internet_subtitle">Anyone VPN ulanmak üçin internet birikmesi gerek.</string>
     <string name="menu_more">Has köp</string>
     <string name="option_only_on_wifi">Diňe Wifi arkaly</string>
-    <string name="pref_flag_secure_summary">Beýleki programmalaryň AnyoneBot ekran suratlaryny almagynyň öňüni alyň</string>
+    <string name="pref_flag_secure_summary">Beýleki programmalaryň Anyone VPN ekran suratlaryny almagynyň öňüni alyň</string>
     <string name="connection_direct">Göni</string>
     <string name="title_choose_apps">Programmalar saýlaň</string>
     <string name="many_ways">Anona barmagyň köp ýoly bar. Käbirleri beýlekilerden has gowy işlemegi mümkin.</string>
@@ -164,8 +164,8 @@
     <string name="pref_detect_root_title">Köki Kesgitlemek</string>
     <string name="pref_detect_root_summary">Bu enjam kökli bolsa, başlangyçda duýduryş beriň</string>
     <string name="drawer_close">Ýap</string>
-    <string name="app_description">AnyoneBot, beýleki programmalara interneti has ygtybarly ulanmaga mümkinçilik berýän mugt proksi serwer programmasydyr. Anon arkaly, AnyoneBot internet trafigiňizi şifrleýär we dünýäniň dürli kompýuterlerinden geçirip gizleýär. Anon, şahsy erkinligiňize we maglumatlaryňyza, gizlin iş amallaryna we gatnaşyklaryňyza, döwlet howpsuzlygy we traffigiň derňewi diýlip atlandyrylýan Anon gözegçiliginden goraýan mugt programma üpjünçiligi we açyk ulgamdyr.</string>
-    <string name="wizard_details_msg">AnyoneBot; Anon, Go-Tun2Socks we LibEvent gurluşlaryny öz içine alýan açyk çeşme programmasy. Anon network birikmek üçin ýerli HTTP proksi (8118) we SOCKS proksi (9050) üpjün edýär.</string>
+    <string name="app_description">Anyone VPN, beýleki programmalara interneti has ygtybarly ulanmaga mümkinçilik berýän mugt proksi serwer programmasydyr. Anon arkaly, Anyone VPN internet trafigiňizi şifrleýär we dünýäniň dürli kompýuterlerinden geçirip gizleýär. Anon, şahsy erkinligiňize we maglumatlaryňyza, gizlin iş amallaryna we gatnaşyklaryňyza, döwlet howpsuzlygy we traffigiň derňewi diýlip atlandyrylýan Anon gözegçiliginden goraýan mugt programma üpjünçiligi we açyk ulgamdyr.</string>
+    <string name="wizard_details_msg">Anyone VPN; Anon, Go-Tun2Socks we LibEvent gurluşlaryny öz içine alýan açyk çeşme programmasy. Anon network birikmek üçin ýerli HTTP proksi (8118) we SOCKS proksi (9050) üpjün edýär.</string>
     <string name="pref_proxy_type_summary">Proksi serwerinde ulanmak üçin Anon protokollary: HTTP, HTTPS, SOCKS4, SOCKS5</string>
     <string name="fingerprints_nicks_countries_and_addresses_for_the_last_hop">Barmak yzlary, gysgaltmalar, ýurtlar we soňky böküş üçin salgylar</string>
     <string name="pref_proxy_host_title">Çykýan Proksi Wekili</string>
@@ -214,7 +214,7 @@
     <string name="strict_nodes_description">Aýrylan düwünleriň sazlamalaryny ähli zynjyrlary gurmak üçin talap hökmünde görüň. Sazlamalaryňyz bilen hiç hili zynjyr döredilip bilinmese, bu işlemegi bozup biler.</string>
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Düzediş ýazgysyny işjeňleşdiriň (görmek üçin adb ýa-da aLogCat talap eder)</string>
     <string name="drawer_open">Açyk</string>
-    <string name="power_user_description">Anon bilen tanyş ulanyjylar üçin. AnyoneBot-a VPN sazlamasyz başlamaga mümkinçilik berýär we açyk SOCKS we HTTP portlaryny görkezýär</string>
+    <string name="power_user_description">Anon bilen tanyş ulanyjylar üçin. Anyone VPN-a VPN sazlamasyz başlamaga mümkinçilik berýär we açyk SOCKS we HTTP portlaryny görkezýär</string>
     <string name="setting_padding">Ýassyklama</string>
     <string name="setting_debug">Düzediş</string>
     <string name="connection_custom">Ýörite</string>

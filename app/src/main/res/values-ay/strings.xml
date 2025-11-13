@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBotax mä ina proxy aplikasyunawa, llikatuq jan lunthatayasiñatakiw yaqha aplikasyunanakamppachar yanapi. AnyoneBotax Anonatuqiw uraqpachan luratanak jan uñjayasiñatak atamirinaktuq jark\'aqi. Anonax ina software ukhamawa, ukampirus maynin luratanakapa, aruskipatanakapa, amuyunakap jan uñjayasiñatakiw jark\'aqi.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPNax mä ina proxy aplikasyunawa, llikatuq jan lunthatayasiñatakiw yaqha aplikasyunanakamppachar yanapi. Anyone VPNax Anonatuqiw uraqpachan luratanak jan uñjayasiñatak atamirinaktuq jark\'aqi. Anonax ina software ukhamawa, ukampirus maynin luratanakapa, aruskipatanakapa, amuyunakap jan uñjayasiñatakiw jark\'aqi.</string>
     <string name="menu_settings">Mayjt\'ayaña</string>
     <string name="menu_log">Imata</string>
     <string name="menu_stop">Sayt\'ayaña</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Juk\'ampi</string>
     <string name="menu_exit">Mistuña</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot aplikasyunax inakiwa, kawknïriti Anon, Go-Tun2Socks ukat LibEvent ukaniwa. Anon llikanx mä VPN tunila, mä akankir proxy HTTP Connect (8118 waythapiwja ukanaki HTTPS) ukat mä SOCKS proxy (9050) churi.</string>
+    <string name="wizard_details_msg">Anyone VPN aplikasyunax inakiwa, kawknïriti Anon, Go-Tun2Socks ukat LibEvent ukaniwa. Anon llikanx mä VPN tunila, mä akankir proxy HTTP Connect (8118 waythapiwja ukanaki HTTPS) ukat mä SOCKS proxy (9050) churi.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Wakiskiri</string>
-    <string name="pref_start_boot_title">AnyoneBot qhantaykas qalltaña</string>
-    <string name="pref_start_boot_summary">Android aqtaykasax AnyoneBot, Anon justupak aqtayam</string>
+    <string name="pref_start_boot_title">Anyone VPN qhantaykas qalltaña</string>
+    <string name="pref_start_boot_summary">Android aqtaykasax Anyone VPN, Anon justupak aqtayam</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Nayrïr jalakipañanakan ampar luk\'an chimpunaka, ñanqha sutinaka, markanaka, chiqawjanakapa</string>
     <string name="pref_entrance_node_dialog">Mantanir puriñawjanak qillqantam</string>
     <string name="pref_allow_background_starts_title">Wakichäwinak qhiparkipstayaña</string>
-    <string name="pref_allow_background_starts_summary">Anon ukat niya kipka sirwisyunak qalltpan sasax kawkïr aplikasyunampis AnyoneBot ukar sayakim</string>
+    <string name="pref_allow_background_starts_summary">Anon ukat niya kipka sirwisyunak qalltpan sasax kawkïr aplikasyunampis Anyone VPN ukar sayakim</string>
     <string name="pref_proxy_title">Llikan uñstir proxy (munsta ukaki)</string>
     <string name="pref_proxy_type_title">Uñstir proxy</string>
     <string name="pref_proxy_type_summary">Uñstir yanapiri ajllt\'aña: HTTP, HTTPS, Socks4, Socks5.i</string>
@@ -110,7 +110,7 @@
     <string name="start_anon_again_for_finish_the_process">Tukuyañatakix Anon mayamp naktayam</string>
     <string name="confirm_service_deletion">Lurañanakax pichsutäniwa</string>
     <string name="service_type">Kunayman lurañanaka</string>
-    <string name="please_restart_to_enable_the_changes">Mayjt\'ayatanak aqtayañatakix AnyoneBot mayamp qhantt\'ayam, amp suma</string>
+    <string name="please_restart_to_enable_the_changes">Mayjt\'ayatanak aqtayañatakix Anyone VPN mayamp qhantt\'ayam, amp suma</string>
     <string name="share_as_qr">QRjam ch\'iqiyaña</string>
     <string name="disable">Jiwt\'ayaña</string>
     <string name="enable">Aqtayaña</string>
@@ -189,7 +189,7 @@
     <string name="pref_flag_secure_title">Pantalla jark\'aqäwi</string>
     <string name="many_ways">Anon ukarux kunaymantuqit waythapiyasispa. Yaqhipanakax yaqhanakat sipan kusa jumatak irnaqi.</string>
     <string name="action_use">Apnaqaña</string>
-    <string name="no_internet_subtitle">AnyoneBot apnaqañatakix Internet ukanïñamawa.</string>
+    <string name="no_internet_subtitle">Anyone VPN apnaqañatakix Internet ukanïñamawa.</string>
     <string name="v3_delete_client_authorization_confirm">Apnaqirir iyawsañ pichsuña</string>
     <string name="v3_delete_client_authorization">Apnaqirir iyawsañ chimpu pichsuña</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Wi-Fi peers, waythapiyat tispusitiwunaka ukat khiti yaqha jaqis IP ukamar waythapiykaspa jupax Anon ukar mantakispaw saña</string>
@@ -216,13 +216,13 @@
     <string name="app_services">Aplikasyunanakan sirwisyunakapa</string>
     <string name="secure_your_connection_subtitle">Uñakipat llika aplikasyunanak imantam ukat kunawsatï jark\'atakan ukha mantam.</string>
     <string name="menu_app_settings">Aplikasyun mayjt\'ayaña</string>
-    <string name="power_user_description">Anonamp jichuntat apnaqirinakataki. VPN jan mayjt\'ayampikiw AnyoneBot qalltayi ukatx SOCKS jist\'aratamp HTTP waythapiwjanakamp uñachayi</string>
-    <string name="app_suggested_subtitle">Apayanakamp llika aplikasyunanakampiw AnyoneBotax sumpach saranti.</string>
-    <string name="pref_flag_secure_summary">AnyoneBotat yaqha aplikasyun waruqirinakat jark\'aqam</string>
+    <string name="power_user_description">Anonamp jichuntat apnaqirinakataki. VPN jan mayjt\'ayampikiw Anyone VPN qalltayi ukatx SOCKS jist\'aratamp HTTP waythapiwjanakamp uñachayi</string>
+    <string name="app_suggested_subtitle">Apayanakamp llika aplikasyunanakampiw Anyone VPNax sumpach saranti.</string>
+    <string name="pref_flag_secure_summary">Anyone VPNat yaqha aplikasyun waruqirinakat jark\'aqam</string>
     <string name="btn_copy_log">Mantat waruqaña</string>
     <string name="log_copied">Mantatax waruqatawa</string>
     <string name="v3_backup_key_warning">Ukataraki: Akax yaqha aplikasyunanakaruw chimpum uñachayaspa</string>
     <string name="pref_isolate_protocol_summary">Sapa waythapiyañ prutukulutakix yaqh yaqha sirkuytu apnaqam</string>
-    <string name="root_warning">Jawsañamax rutiyataw ukwa AnyoneBotax katji, jark\'aqañaruw jan walt\'ayaspa.</string>
+    <string name="root_warning">Jawsañamax rutiyataw ukwa Anyone VPNax katji, jark\'aqañaruw jan walt\'ayaspa.</string>
     <string name="setting_padding">K\'iruntata</string>
 </resources>

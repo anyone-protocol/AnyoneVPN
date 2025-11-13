@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="menu_settings">Gosodiadau</string>
     <string name="menu_log">Log</string>
     <string name="menu_stop">Stop</string>
@@ -55,7 +55,7 @@
     <string name="menu_faq">Cwestiynau Cyffredin</string>
     <string name="allow">Caniatáu</string>
     <string name="enable">Galluogi</string>
-    <string name="app_description">Mae AnyoneBot yn ap dirprwy rhad ac am ddim sy\'n grymuso apiau eraill i ddefnyddio\'r rhyngrwyd yn fwy diogel. Mae AnyoneBot yn defnyddio Anon i amgryptio eich traffig Rhyngrwyd ac yna\'n ei guddio trwy bownsio trwy gyfres o gyfrifiaduron ledled y byd. Mae Anon yn feddalwedd am ddim ac yn rhwydwaith agored sy\'n eich helpu i amddiffyn yn erbyn math o wyliadwriaeth rhwydwaith sy\'n bygwth rhyddid personol a phreifatrwydd, gweithgareddau busnes cyfrinachol a pherthnasoedd, a diogelwch y wladwriaeth a elwir yn ddadansoddiad traffig.</string>
+    <string name="app_description">Mae Anyone VPN yn ap dirprwy rhad ac am ddim sy\'n grymuso apiau eraill i ddefnyddio\'r rhyngrwyd yn fwy diogel. Mae Anyone VPN yn defnyddio Anon i amgryptio eich traffig Rhyngrwyd ac yna\'n ei guddio trwy bownsio trwy gyfres o gyfrifiaduron ledled y byd. Mae Anon yn feddalwedd am ddim ac yn rhwydwaith agored sy\'n eich helpu i amddiffyn yn erbyn math o wyliadwriaeth rhwydwaith sy\'n bygwth rhyddid personol a phreifatrwydd, gweithgareddau busnes cyfrinachol a pherthnasoedd, a diogelwch y wladwriaeth a elwir yn ddadansoddiad traffig.</string>
     <string name="pref_proxy_port_dialog">Rhowch borthladd dirprwy</string>
     <string name="pref_proxy_host_summary">Enw gwesteiwr Gweinydd Dirprwy</string>
     <string name="pref_proxy_type_dialog">Rhowch Math o Ddirprwy</string>
@@ -63,19 +63,19 @@
     <string name="pref_proxy_port_summary">Porth Gweinydd dirprwyol</string>
     <string name="pref_proxy_port_title">Porthladd Procsi Allan</string>
     <string name="pref_node_configuration_summary">Mae\'r rhain yn osodiadau datblygedig a all leihau eich anhysbysrwydd</string>
-    <string name="wizard_details_msg">Mae AnyoneBot yn gymhwysiad ffynhonnell agored sy\'n cynnwys Anon, Go-Tun2Socks a LibEvent. Mae\'n darparu twnnel VPN, dirprwy HTTP Connect lleol (HTTPS yn unig ar borthladd 8118) a dirprwy SOCKS (9050) i mewn i rwydwaith Anon.</string>
-    <string name="pref_allow_background_starts_summary">Gadewch i unrhyw ap ddweud wrth AnyoneBot am gychwyn Anon a gwasanaethau cysylltiedig</string>
+    <string name="wizard_details_msg">Mae Anyone VPN yn gymhwysiad ffynhonnell agored sy\'n cynnwys Anon, Go-Tun2Socks a LibEvent. Mae\'n darparu twnnel VPN, dirprwy HTTP Connect lleol (HTTPS yn unig ar borthladd 8118) a dirprwy SOCKS (9050) i mewn i rwydwaith Anon.</string>
+    <string name="pref_allow_background_starts_summary">Gadewch i unrhyw ap ddweud wrth Anyone VPN am gychwyn Anon a gwasanaethau cysylltiedig</string>
     <string name="pref_proxy_username_dialog">Rhowch Enw Defnyddiwr Dirprwy</string>
     <string name="pref_proxy_password_dialog">Rhowch Gyfrinair Dirprwy</string>
     <string name="fingerprints_nicks_countries_and_addresses_for_the_last_hop">Olion bysedd, nicks, gwledydd a chyfeiriadau ar gyfer y hop olaf</string>
     <string name="pref_entrance_node_summary">Olion bysedd, nicks, gwledydd a chyfeiriadau ar gyfer y hop gyntaf</string>
     <string name="pref_proxy_type_title">Math Dirprwy Allannol</string>
-    <string name="pref_start_boot_summary">Dechreuwch AnyoneBot yn awtomatig a chysylltwch Anon pan fydd eich dyfais Android yn cychwyn</string>
+    <string name="pref_start_boot_summary">Dechreuwch Anyone VPN yn awtomatig a chysylltwch Anon pan fydd eich dyfais Android yn cychwyn</string>
     <string name="pref_proxy_host_dialog">Rhowch Gwesteiwr Dirprwy</string>
     <string name="pref_proxy_type_summary">Protocol i\'w ddefnyddio ar gyfer gweinydd dirprwyol: HTTP, HTTPS, SOCKS4, SOCKS5</string>
     <string name="pref_proxy_title">Dirprwy Rhwydwaith Allanol (Dewisol)</string>
     <string name="pref_proxy_host_title">Gwesteiwr Procsi Allan</string>
-    <string name="pref_start_boot_title">Dechreuwch AnyoneBot ar Boot</string>
+    <string name="pref_start_boot_title">Dechreuwch Anyone VPN ar Boot</string>
     <string name="pref_proxy_username_summary">Enw defnyddiwr dirprwy (Dewisol)</string>
     <string name="pref_proxy_username_title">Enw Defnyddiwr Procsi Allan</string>
     <string name="pref_proxy_password_title">Cyfrinair Procsi Allan</string>
@@ -165,7 +165,7 @@
     <string name="pref_dnsport_title">Porth DNS Anon</string>
     <string name="pref_reduced_circuit_padding">Padin cylched llai</string>
     <string name="pref_anonrc_dialog">Anonrc Custom</string>
-    <string name="please_restart_to_enable_the_changes">Ailgychwynnwch AnyoneBot i alluogi\'r newidiadau</string>
+    <string name="please_restart_to_enable_the_changes">Ailgychwynnwch Anyone VPN i alluogi\'r newidiadau</string>
     <string name="v3_client_auth_activity_title">Awdurdodi Cleient</string>
     <string name="mebibyte">MiB</string>
     <string name="menu_app_settings">Gosodiadau Ap</string>
@@ -200,6 +200,6 @@
     <string name="v3_key_hash">x25519 Allwedd Breifat yn Sylfaen32</string>
     <string name="configure_header">Ffurfweddu eich Cysylltiad Anon</string>
 
-    <string name="status_starting_up">Mae AnyoneBot yn cychwyn…</string>
+    <string name="status_starting_up">Mae Anyone VPN yn cychwyn…</string>
     <string name="status_activated">Wedi cysylltu â rhwydwaith Anyone</string>
 </resources>

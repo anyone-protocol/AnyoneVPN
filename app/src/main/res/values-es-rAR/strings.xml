@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot es una aplicación de proxy gratuita que le permite a otras aplicaciones utilizar Internet de forma segura. Anon encripta tu trafico de Internet y lo oculta rebotandolo a través de una serie de ordenadores alrededor del mundo. Anon es un software gratuito y una red abierta que te ayuda a defenderte contra una forma de vigilancia de red que amenaza la libertad personal y la privacidad, actividades confidenciales de negocios y relaciones, y la seguridad de estado conocida como análisis de trafico.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN es una aplicación de proxy gratuita que le permite a otras aplicaciones utilizar Internet de forma segura. Anon encripta tu trafico de Internet y lo oculta rebotandolo a través de una serie de ordenadores alrededor del mundo. Anon es un software gratuito y una red abierta que te ayuda a defenderte contra una forma de vigilancia de red que amenaza la libertad personal y la privacidad, actividades confidenciales de negocios y relaciones, y la seguridad de estado conocida como análisis de trafico.</string>
     <string name="menu_settings">Configuración</string>
     <string name="menu_log">Registro</string>
     <string name="menu_stop">Detener</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Acerca de</string>
     <string name="menu_exit">Salir</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot es una aplicación de código abierto que contiene Anon, Go-Tun2Socks, y LibEvent. Proporciona un proxy local HTTP (8118) y un proxy SOCKS (9050) adentro de la red de Anon. AnyoneBot también tiene la habilidad, en dispositivos ruteados, de enviar todo el trafico de Internet a través de Anon</string>
+    <string name="wizard_details_msg">Anyone VPN es una aplicación de código abierto que contiene Anon, Go-Tun2Socks, y LibEvent. Proporciona un proxy local HTTP (8118) y un proxy SOCKS (9050) adentro de la red de Anon. Anyone VPN también tiene la habilidad, en dispositivos ruteados, de enviar todo el trafico de Internet a través de Anon</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">General</string>
-    <string name="pref_start_boot_title">Arrancar AnyoneBot al inicio</string>
-    <string name="pref_start_boot_summary">Inicie automáticamente AnyoneBot y conecte Anon cuando el dispositivo android arranque.</string>
+    <string name="pref_start_boot_title">Arrancar Anyone VPN al inicio</string>
+    <string name="pref_start_boot_summary">Inicie automáticamente Anyone VPN y conecte Anon cuando el dispositivo android arranque.</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Huellas dactilares, apodos, países y direcciones para el primer salto</string>
     <string name="pref_entrance_node_dialog">Introduzca los nodos de entrada</string>
     <string name="pref_allow_background_starts_title">Permitir inicio de fondo</string>
-    <string name="pref_allow_background_starts_summary">Deje que cualquier aplicación indique a AnyoneBot que inicie Anon y servicios relacionados</string>
+    <string name="pref_allow_background_starts_summary">Deje que cualquier aplicación indique a Anyone VPN que inicie Anon y servicios relacionados</string>
     <string name="pref_proxy_title">red de proxy de salida (opcional)</string>
     <string name="pref_proxy_type_title">tipo de proxy de salida</string>
     <string name="pref_proxy_type_summary">Protocolo a utilizar para el servidor proxy: HTTP, HTTPS, Socks4, Socks5</string>
@@ -100,8 +100,8 @@
     <string name="hidden_services">Servicios Anon</string>
     <string name="confirm">Confirmar</string>
 
-    <string name="status_starting_up">AnyoneBot está iniciándose…</string>
+    <string name="status_starting_up">Anyone VPN está iniciándose…</string>
     <string name="status_activated">Conectado a la red Anyone</string>
-    <string name="status_disabled">\"AnyoneBot está Desactivado</string>
+    <string name="status_disabled">\"Anyone VPN está Desactivado</string>
     <string name="unable_to_start_anon">No se puede iniciar Anon:</string>
 </resources>

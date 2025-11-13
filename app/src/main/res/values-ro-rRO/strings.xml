@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot este o aplicaţie gratuită de proxy care permite altor aplicaţii să folosească internetul în siguranţă. AnyoneBot foloseşte Anon pentru a cripta traficul de internet după care îl ascunde printr-o serie de calculatoare din întreaga lume. Anon este un program gratuit si o reţea deschisă care te ajută să te aperi de monitorizarea reţelelor, lucru care ameninţă libertatea personală şi intimitatea, activităţi confidenţiale legate de afaceri si relaţii personale şi de analiza traficului.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN este o aplicaţie gratuită de proxy care permite altor aplicaţii să folosească internetul în siguranţă. Anyone VPN foloseşte Anon pentru a cripta traficul de internet după care îl ascunde printr-o serie de calculatoare din întreaga lume. Anon este un program gratuit si o reţea deschisă care te ajută să te aperi de monitorizarea reţelelor, lucru care ameninţă libertatea personală şi intimitatea, activităţi confidenţiale legate de afaceri si relaţii personale şi de analiza traficului.</string>
     <string name="menu_settings">Setări</string>
     <string name="menu_log">log</string>
     <string name="menu_stop">Stop</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">General</string>
-    <string name="pref_start_boot_title">Porneşte AnyoneBot la boot-are</string>
-    <string name="pref_start_boot_summary">Porneste AnyoneBot automat si conecteaza-te la Anon cand porneste dispozitivul</string>
+    <string name="pref_start_boot_title">Porneşte Anyone VPN la boot-are</string>
+    <string name="pref_start_boot_summary">Porneste Anyone VPN automat si conecteaza-te la Anon cand porneste dispozitivul</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Amprente, nick name-uri si adrese pentru primul hop</string>
     <string name="pref_entrance_node_dialog">Introdu noduri de intrare</string>
     <string name="pref_allow_background_starts_title">Permite pornirile din fundal</string>
-    <string name="pref_allow_background_starts_summary">Permite oricărei aplicaţie să anunţe AnyoneBot că porneşti Anon şi serviciile asociate</string>
+    <string name="pref_allow_background_starts_summary">Permite oricărei aplicaţie să anunţe Anyone VPN că porneşti Anon şi serviciile asociate</string>
     <string name="pref_proxy_title">Proxy de retea pentru iesire (optional)</string>
     <string name="pref_proxy_type_title">Tipul proxy-ului de iesire</string>
     <string name="pref_proxy_type_summary">Tipul protocolului pentru proxy: HTTP, HTTPS, Socks4, Socks5</string>
@@ -93,7 +93,7 @@
     <string name="save">Salvează</string>
     <string name="name">Nume</string>
     <string name="done">Gata!</string>
-    <string name="please_restart_to_enable_the_changes">Vă rugăm reporniţi AnyoneBot pentru a aplica modificările</string>
+    <string name="please_restart_to_enable_the_changes">Vă rugăm reporniţi Anyone VPN pentru a aplica modificările</string>
     <string name="disable">Dezactivează</string>
     <string name="enable">Activează</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Deschideți Proxy pe toate interfețele</string>
@@ -128,7 +128,7 @@
     <string name="consider_disable_battery_optimizations">Serviciile găzduite rulează, luați în considerare dezactivarea optimizărilor bateriei</string>
     <string name="backup_service">Serviciul de backup <i>(Atenție: Acest lucru ar putea expune configurația serviciului dvs. altor aplicații)</i></string>
     <string name="pref_isolate_port">Izolarea porturilor de destinație</string>
-    <string name="no_internet_subtitle">Aveți nevoie de o conexiune la internet pentru a utiliza AnyoneBot.</string>
+    <string name="no_internet_subtitle">Aveți nevoie de o conexiune la internet pentru a utiliza Anyone VPN.</string>
     <string name="pref_prefer_ipv6">Preferați conexiunile IPv6</string>
     <string name="configure_header">Configurați-vă conexiunea Anon</string>
     <string name="volunteer_mode_subtitle">Ajută-i pe alții să se conecteze</string>
@@ -167,7 +167,7 @@
     <string name="v3_backup_name_hint">Nume fișier de rezervă…</string>
     <string name="v3_import_auth_private">Importați .auth_private</string>
     <string name="drawer_open">Deschide</string>
-    <string name="wizard_details_msg">AnyoneBot este o aplicație open-source care conține Anon, Go-Tun2Socks și LibEvent. Acesta oferă un proxy HTTP local (8118) și un proxy SOCKS (9050) în rețeaua Anon. AnyoneBot are, de asemenea, capacitatea, pe dispozitivul înrădăcinat, de a trimite tot traficul de internet prin Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN este o aplicație open-source care conține Anon, Go-Tun2Socks și LibEvent. Acesta oferă un proxy HTTP local (8118) și un proxy SOCKS (9050) în rețeaua Anon. Anyone VPN are, de asemenea, capacitatea, pe dispozitivul înrădăcinat, de a trimite tot traficul de internet prin Anon.</string>
     <string name="version">Versiunea:</string>
     <string name="license">Licență:</string>
     <string name="hidden_service_request">O aplicație dorește să deschidă un server de anon pe portul %1$s în rețeaua Anon. Acest lucru este sigur dacă aveți încredere în aplicație.</string>
@@ -196,7 +196,7 @@
     <string name="kindness_adjust_title">Setări</string>
     <string name="secure_your_connection_title">Gata de conectare</string>
     <string name="log_copied">Jurnalul a fost copiat</string>
-    <string name="power_user_description">Pentru utilizatorii familiarizați cu Anon. Vă permite să porniți AnyoneBot fără setarea VPN și afișează porturile SOCKS și HTTP deschise</string>
+    <string name="power_user_description">Pentru utilizatorii familiarizați cu Anon. Vă permite să porniți Anyone VPN fără setarea VPN și afișează porturile SOCKS și HTTP deschise</string>
     <string name="action_activate">Activați</string>
     <string name="title_choose_apps">Selectează aplicații</string>
     <string name="apps_suggested_title">Aplicații sugerate</string>
@@ -207,7 +207,7 @@
     <string name="action_use">Utilizați</string>
     <string name="incorrect_solution">Soluție incorectă</string>
     <string name="power_user_mode">Mod utilizator expert</string>
-    <string name="app_suggested_subtitle">AnyoneBot funcționează cel mai bine cu aplicațiile de mesagerie și social media.</string>
+    <string name="app_suggested_subtitle">Anyone VPN funcționează cel mai bine cu aplicațiile de mesagerie și social media.</string>
     <string name="setting_debug">Depanare</string>
     <string name="menu_more">Mai mult</string>
     <string name="secure_your_connection_subtitle">Ascundeți aplicațiile de la monitorizarea rețelei și obțineți acces atunci când sunt blocate.</string>
@@ -221,15 +221,15 @@
     <string name="option_only_on_wifi">Doar pe Wi-Fi</string>
     <string name="option_only_when_charging">Numai la încărcare</string>
     <string name="btn_copy_log">Copiere jurnal</string>
-    <string name="pref_flag_secure_summary">Împiedicați alte aplicații să facă capturi de ecran din AnyoneBot</string>
+    <string name="pref_flag_secure_summary">Împiedicați alte aplicații să facă capturi de ecran din Anyone VPN</string>
     <string name="pref_flag_secure_title">Ecran de securitate</string>
-    <string name="root_warning">AnyoneBot a detectat că dispozitivul dvs. este deblocat (root), ceea ce poate cauza probleme de securitate.</string>
+    <string name="root_warning">Anyone VPN a detectat că dispozitivul dvs. este deblocat (root), ceea ce poate cauza probleme de securitate.</string>
     <string name="pref_detect_root_summary">Avertizează la pornire dacă permisiunile root sunt activate pe acest dispozitiv</string>
     <string name="pref_detect_root_title">Detectare root</string>
 
-    <string name="status_starting_up">AnyoneBot porneste…</string>
+    <string name="status_starting_up">Anyone VPN porneste…</string>
     <string name="status_activated">Conectat la reteaua Anyone</string>
-    <string name="status_disabled">AnyoneBot este dezactivat</string>
+    <string name="status_disabled">Anyone VPN este dezactivat</string>
     <string name="couldn_t_start_anon_process_">Nu am putut porni procesul anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Setarile tale pentru adrese accesibile au cauzat o exceptie!</string>
     <string name="your_relay_settings_caused_an_exception_">Setarile tale de relay au cauzat o exceptie!</string>

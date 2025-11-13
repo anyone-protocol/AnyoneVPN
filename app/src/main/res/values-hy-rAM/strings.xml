@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="menu_about">Մասին</string>
     <string name="button_about">Մասին</string>
     <string name="menu_exit">Ելք</string>
@@ -88,7 +88,7 @@
     <string name="btn_copy_log">Պատճենել մատյանը</string>
     <string name="action_use">Օգտվել</string>
     <string name="no_internet_title">Միացեք համացանցին</string>
-    <string name="no_internet_subtitle">AnyoneBot-ից օգտվելու համար Ձեզ պետք է միացում համացանցին:</string>
+    <string name="no_internet_subtitle">Anyone VPN-ից օգտվելու համար Ձեզ պետք է միացում համացանցին:</string>
     <string name="confirm_service_deletion">Հաստատել ծառայության ջնջումը</string>
     <string name="start_anon_again_for_finish_the_process">Գործընթացի ավարտման համար մեկնարկեք Anon-ը կրկին</string>
     <string name="pref_proxy_title">Արտագնա ցանցի փոխանորդ (կամընտրական)</string>
@@ -118,7 +118,7 @@
     <string name="pref_dnsport_title">Anon DNS մատույց</string>
     <string name="pref_dnsport_summary">Մատույցը, որով Anon-ն առաջարկում է իր «DNS»-ը (լռելայնը՝ 5400 կամ 0՝ կարողազրկման համար)</string>
     <string name="local_port">Տեղական մատույց</string>
-    <string name="please_restart_to_enable_the_changes">Փոփոխությունների կատարման համար խնդրում ենք վերսկսել «AnyoneBot»-ը</string>
+    <string name="please_restart_to_enable_the_changes">Փոփոխությունների կատարման համար խնդրում ենք վերսկսել «Anyone VPN»-ը</string>
     <string name="pref_prefer_ipv6">Նախընտել IPv6 միացումները</string>
     <string name="pref_disable_ipv4">Կարողազրկել IPv4 միացումները</string>
     <string name="volunteer_mode_subtitle">Օգնեք այլոց միանալ</string>

@@ -38,8 +38,8 @@
     <string name="no_internet_title">Connecter te a internet</string>
     <string name="connection_direct">Directe</string>
     <string name="title_choose_apps">Seliger le applicationes</string>
-    <string name="app_name">AnyoneBot</string>
-    <string name="no_internet_subtitle">Tu besonia un connexion de Internet pro usar AnyoneBot.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="no_internet_subtitle">Tu besonia un connexion de Internet pro usar Anyone VPN.</string>
     <string name="no_thx">Non, gratias</string>
     <string name="menu_help_others">Adjuta a alteres</string>
     <string name="power_user_mode">Modo de usator avantiate</string>
@@ -48,7 +48,7 @@
     <string name="menu_anon_connection">Connexion Anon</string>
     <string name="pref_flag_secure_title">Securitate del schermo</string>
     <string name="menu_app_settings">Parametros del application</string>
-    <string name="app_suggested_subtitle">AnyoneBot functiona melior con applicationes de messageria e retes social.</string>
+    <string name="app_suggested_subtitle">Anyone VPN functiona melior con applicationes de messageria e retes social.</string>
     <string name="volunteer_status_title">Hodie es melior
 \ngratias a te.</string>
     <string name="pref_proxy_type_dialog">Insere typo de proxy</string>
@@ -128,5 +128,5 @@
     <string name="confirm_service_deletion">Confirma le deletion del servicio</string>
     <string name="pref_disable_ipv4">Disactivar le connexiones IPv4</string>
     <string name="confirm">Confirmar</string>
-    <string name="please_restart_to_enable_the_changes">Reinitia AnyoneBot pro activar le cambiamentos</string>
+    <string name="please_restart_to_enable_the_changes">Reinitia Anyone VPN pro activar le cambiamentos</string>
 </resources>

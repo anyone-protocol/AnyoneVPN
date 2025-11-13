@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot é unha aplicación de proxy libre que permite a outras aplicacións usar a internet dun xeito máis seguro. AnyoneBot usa Anon para encriptar o teu tráfico de internet ocultando e rebotándoo a través dunha serie de ordenadores ao redor do mundo. Anon é software libre e unha rede aberta que axuda a defenderte contra unha forma de vixiancia na rede que ameaza a liberdade e privacidade persoal, actividades confidenciáis de negocios e relacións, e estado de seguridade coñecido como análise de tráfico.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN é unha aplicación de proxy libre que permite a outras aplicacións usar a internet dun xeito máis seguro. Anyone VPN usa Anon para encriptar o teu tráfico de internet ocultando e rebotándoo a través dunha serie de ordenadores ao redor do mundo. Anon é software libre e unha rede aberta que axuda a defenderte contra unha forma de vixiancia na rede que ameaza a liberdade e privacidade persoal, actividades confidenciáis de negocios e relacións, e estado de seguridade coñecido como análise de tráfico.</string>
     <string name="menu_settings">Axustes</string>
     <string name="menu_log">Rexistro (log)</string>
     <string name="menu_stop">Deter</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Sobre</string>
     <string name="menu_exit">Saír </string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot é unha aplicación de código-aberto que contén a Anon, Go-Tun2Socks e LibEvent. Proporciona un proxy HTTP (8118) e un proxy SOCKS (9050) na rede Anon. AnyoneBot tamén pode, nun dispositivo con acceso root, enviar todo o tráfico de internet a través de Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN é unha aplicación de código-aberto que contén a Anon, Go-Tun2Socks e LibEvent. Proporciona un proxy HTTP (8118) e un proxy SOCKS (9050) na rede Anon. Anyone VPN tamén pode, nun dispositivo con acceso root, enviar todo o tráfico de internet a través de Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Xeral</string>
-    <string name="pref_start_boot_title">Inciar AnyoneBot no Arranque</string>
-    <string name="pref_start_boot_summary">Iniciar AnyoneBot automáticamente cando o seu dispositivo Android arranque</string>
+    <string name="pref_start_boot_title">Inciar Anyone VPN no Arranque</string>
+    <string name="pref_start_boot_summary">Iniciar Anyone VPN automáticamente cando o seu dispositivo Android arranque</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Pegadas dixitais, alias, países e direcións para o primeiro salto</string>
     <string name="pref_entrance_node_dialog">Introduza Nós de Entrada</string>
     <string name="pref_allow_background_starts_title">Permitir inicio en segundo plano</string>
-    <string name="pref_allow_background_starts_summary">Permitir a calquera app dicirlle a AnyoneBot que inicie Anon e os servizos relacionados</string>
+    <string name="pref_allow_background_starts_summary">Permitir a calquera app dicirlle a Anyone VPN que inicie Anon e os servizos relacionados</string>
     <string name="pref_proxy_title">Proxy para a Rede de Saída (Opcional)</string>
     <string name="pref_proxy_type_title">Tipo de Proxy de Saída</string>
     <string name="pref_proxy_type_summary">Protocolo a usar para o servidor proxy: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Inicie Anon de novo para rematar o proceso</string>
     <string name="confirm_service_deletion">Confirme a eliminación do servizo</string>
     <string name="service_type">Tipo de servizo</string>
-    <string name="please_restart_to_enable_the_changes">Por favor, reinicie AnyoneBot para activar os cambios</string>
+    <string name="please_restart_to_enable_the_changes">Por favor, reinicie Anyone VPN para activar os cambios</string>
     <string name="share_as_qr">Compartir como QR</string>
     <string name="disable">Desactivar</string>
     <string name="enable">Activar</string>
@@ -194,7 +194,7 @@
     <string name="msg_try_something_else">Probe outra cousa</string>
     <string name="proxy_ports">Porto do Proxy</string>
     <string name="btn_start_vpn">Iniciar VPN</string>
-    <string name="no_internet_subtitle">Precísase conexión a Internet para utilizar AnyoneBot.</string>
+    <string name="no_internet_subtitle">Precísase conexión a Internet para utilizar Anyone VPN.</string>
     <string name="btn_anon_off">Desconectar Anon</string>
     <string name="no_thx">Non, grazas</string>
     <string name="menu_anon_connection">Conexión Anon</string>
@@ -204,9 +204,9 @@
     <string name="ports_not_set">Portos non configurados</string>
     <string name="kindness_adjust_title">Configuración</string>
 
-    <string name="status_starting_up">AnyoneBot está a se iniciar…</string>
+    <string name="status_starting_up">Anyone VPN está a se iniciar…</string>
     <string name="status_activated">Conectado á rede Anyone</string>
-    <string name="status_disabled">AnyoneBot está desactivado</string>
+    <string name="status_disabled">Anyone VPN está desactivado</string>
     <string name="couldn_t_start_anon_process_">No se pudio inciar o proceso anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">O seu axuste de ReachableAddresses causou unha excepción!</string>
     <string name="your_relay_settings_caused_an_exception_">Os seus axustes de relay causou unha excepción!</string>

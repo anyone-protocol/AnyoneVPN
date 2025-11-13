@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot on ilmainen välityspalvelinsovellus, joka tarjoaa muille sovelluksille mahdollisuuden käyttää internetiä turvallisemmin. AnyoneBot käyttää Anonia kryptaamaan verkkoliikenteesi ja sitten piilottaa sen kierrättämällä sitä usean tietokoneen kautta ympäri maailman. Anon on vapaa ohjelmisto ja avoin verkosto, jotka auttavat puolustautumaan vapautta ja yksityisyyttä uhkaavalta verkkovalvonnalta ja valtioiden verkonseurannalta sekä suojaamaan salaisia liiketoimintoja ja -yhteyksiä.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN on ilmainen välityspalvelinsovellus, joka tarjoaa muille sovelluksille mahdollisuuden käyttää internetiä turvallisemmin. Anyone VPN käyttää Anonia kryptaamaan verkkoliikenteesi ja sitten piilottaa sen kierrättämällä sitä usean tietokoneen kautta ympäri maailman. Anon on vapaa ohjelmisto ja avoin verkosto, jotka auttavat puolustautumaan vapautta ja yksityisyyttä uhkaavalta verkkovalvonnalta ja valtioiden verkonseurannalta sekä suojaamaan salaisia liiketoimintoja ja -yhteyksiä.</string>
     <string name="menu_settings">Asetukset</string>
     <string name="menu_log">Loki</string>
     <string name="menu_stop">Pysäytä</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Yleiset</string>
-    <string name="pref_start_boot_title">Käynnistä AnyoneBot automaattisesti</string>
-    <string name="pref_start_boot_summary">Käynnistä AnyoneBot ja muodosta Anon-yhteys automaattisesti Android-laitteesi käynnistyessä.</string>
+    <string name="pref_start_boot_title">Käynnistä Anyone VPN automaattisesti</string>
+    <string name="pref_start_boot_summary">Käynnistä Anyone VPN ja muodosta Anon-yhteys automaattisesti Android-laitteesi käynnistyessä.</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Leimat, nimimerkit, maat ja osoitteet ensimmäiseen hyppyyn.</string>
     <string name="pref_entrance_node_dialog">Syötä lähtösolmut</string>
     <string name="pref_allow_background_starts_title">Salli taustakäynnistys</string>
-    <string name="pref_allow_background_starts_summary">Salli muiden sovellusten ohjata AnyoneBotia käynnistämään Anon ja tarpeelliset palvelut.</string>
+    <string name="pref_allow_background_starts_summary">Salli muiden sovellusten ohjata Anyone VPNia käynnistämään Anon ja tarpeelliset palvelut.</string>
     <string name="pref_proxy_title">Lähtevä välityspalvelin (valinnainen)</string>
     <string name="pref_proxy_type_title">Välityspalvelimen tyyppi</string>
     <string name="pref_proxy_type_summary">Lähtevän välityspalvelimen yhteysprotokolla: HTTP, HTTPS, SOCKS4 tai SOCKS5.</string>
@@ -93,10 +93,10 @@
     <string name="save">Tallenna</string>
     <string name="name">Nimi</string>
     <string name="done">Valmis!</string>
-    <string name="please_restart_to_enable_the_changes">Käynnistä AnyoneBot uudelleen muutosten käyttöönottamiseksi.</string>
+    <string name="please_restart_to_enable_the_changes">Käynnistä Anyone VPN uudelleen muutosten käyttöönottamiseksi.</string>
     <string name="disable">Poista käytöstä</string>
     <string name="enable">Ota käyttöön</string>
-    <string name="wizard_details_msg">AnyoneBot-sovellus on avointa lähdekoodia ja se sisältää seuraavat: Anon, Go-Tun2Socks ja LibEvent. Se tarjoaa VPN-tunnelin, paikallisen HTTP Connect -välityspalvelimen (HTTPS vain portissa 8118) ja SOCKS-välityspalvelimen (9050) Anon-verkkoon.</string>
+    <string name="wizard_details_msg">Anyone VPN-sovellus on avointa lähdekoodia ja se sisältää seuraavat: Anon, Go-Tun2Socks ja LibEvent. Se tarjoaa VPN-tunnelin, paikallisen HTTP Connect -välityspalvelimen (HTTPS vain portissa 8118) ja SOCKS-välityspalvelimen (9050) Anon-verkkoon.</string>
     <string name="hidden_service_request">Sovellus haluaa avata Anon-verkkoon Anon-palvelimen portissa %1$s. Tämä on turvallista, jos luotat sovellukseen.</string>
     <string name="pref_http_title">Anoni HTTP</string>
     <string name="pref_http_summary">Portti, jonka kautta Anonin HTTP-välityspalvelin on tavoitettavissa (oletus on 8118 tai pois käytöstä arvolla 0).</string>
@@ -184,12 +184,12 @@
     <string name="trying_to_connect_title">Yhdistetään…</string>
     <string name="secure_your_connection_subtitle">Piilota sovelluksia verkkoseurannalta ja käytä estettyjä palveluita.</string>
     <string name="proxy_ports">Välityspalvelimen portit</string>
-    <string name="power_user_description">Kokeneille Anon-käyttäjille. Mahdollistaa AnyoneBotin käynnistyksen ilman VPN-asetusta ja näyttää avoimet SOCKS- ja HTTP-portit.</string>
+    <string name="power_user_description">Kokeneille Anon-käyttäjille. Mahdollistaa Anyone VPNin käynnistyksen ilman VPN-asetusta ja näyttää avoimet SOCKS- ja HTTP-portit.</string>
     <string name="power_user_mode">Tehokäyttäjätila</string>
     <string name="action_activate">Aktivoi</string>
     <string name="volunteer_status_title">Tänään on ansiostasi parempi päivä.</string>
     <string name="title_choose_apps">Valitse sovelluksia</string>
-    <string name="app_suggested_subtitle">AnyoneBot toimii parhaiten viestintäsovellusten ja sosiaalisen median sovellusten kanssa.</string>
+    <string name="app_suggested_subtitle">Anyone VPN toimii parhaiten viestintäsovellusten ja sosiaalisen median sovellusten kanssa.</string>
     <string name="apps_other_apps">Muut sovellukset</string>
     <string name="apps_suggested_title">Ehdotetut sovellukset</string>
     <string name="configure_header">Määritä Anon-yhteytesi</string>
@@ -204,7 +204,7 @@
     <string name="kindness_adjust_title">Asetukset</string>
     <string name="action_use">Tapa:</string>
     <string name="asking">KYSYTÄÄN…</string>
-    <string name="no_internet_subtitle">Tarvitset Internet-yhteyden AnyoneBotin käyttöön.</string>
+    <string name="no_internet_subtitle">Tarvitset Internet-yhteyden Anyone VPNin käyttöön.</string>
     <string name="not_sure">Etkö osaa valita\?</string>
     <string name="many_ways">Anon voidaan tavoittaa monilla tavoilla. Jotkin saattavat sopia sinulle muita paremmin.</string>
     <string name="no_internet_title">Yhdistä Internetiin</string>
@@ -221,14 +221,14 @@
     <string name="option_only_on_wifi">Vain Wi-Fi-verkossa</string>
     <string name="option_only_when_charging">Vain ladattaessa</string>
     <string name="btn_copy_log">Kopioi loki</string>
-    <string name="pref_flag_secure_summary">Estä muita sovelluksia ottamasta kuvankaappauksia AnyoneBotista.</string>
-    <string name="root_warning">AnyoneBot on havainnut laitteesi olevan rootattu ja tästä voi aiheutua tietoturvaongelmia.</string>
+    <string name="pref_flag_secure_summary">Estä muita sovelluksia ottamasta kuvankaappauksia Anyone VPNista.</string>
+    <string name="root_warning">Anyone VPN on havainnut laitteesi olevan rootattu ja tästä voi aiheutua tietoturvaongelmia.</string>
     <string name="pref_detect_root_summary">Varoita käynnistettäessä, jos laitetta käytetään root-oikeuksilla</string>
     <string name="pref_detect_root_title">Root-tunnistus</string>
 
-    <string name="status_starting_up">AnyoneBot käynnistyy…</string>
+    <string name="status_starting_up">Anyone VPN käynnistyy…</string>
     <string name="status_activated">Yhdistetty Anyone-verkkoon</string>
-    <string name="status_disabled">AnyoneBot on poistettu käytöstä</string>
+    <string name="status_disabled">Anyone VPN on poistettu käytöstä</string>
     <string name="couldn_t_start_anon_process_">Anon-prosessin käynnistäminen epäonnistui:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">ReachableAccess-asetuksesi aiheuttivat virheen!</string>
     <string name="your_relay_settings_caused_an_exception_">Releasetuksesi aiheuttivat virheen!</string>

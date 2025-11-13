@@ -48,7 +48,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:autoLink="web"
-            android:text="@string/anyonebot_url"
+            android:text="@string/anyonevpn_url"
             android:textColor="@android:color/white"
             android:textColorLink="@android:color/white" />
 
@@ -57,7 +57,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:autoLink="web"
-            android:text="@string/anyonebot_github"
+            android:text="@string/anyonevpn_github"
             android:textColor="@android:color/white"
             android:textColorLink="@android:color/white" />
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot은 다른 앱이 인터넷을 더 안전하게 이용할 수 있도록 도와주는 무료 프록시 앱입니다. AnyoneBot은 Anon를 이용하여 여러분의 인터넷 트래픽을 암호화하고 전 세계에 연결된 컴퓨터를 거쳐서 숨깁니다. Anon는 무료 소프트웨어이면서 개방 네트워크로서 여러분을 개인의 자유, 사생활, 은밀한 사업 활동, 관계, 국가 안보를 위협하는 네트워크 감시인 트래픽 분석으로부터 보호합니다.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN은 다른 앱이 인터넷을 더 안전하게 이용할 수 있도록 도와주는 무료 프록시 앱입니다. Anyone VPN은 Anon를 이용하여 여러분의 인터넷 트래픽을 암호화하고 전 세계에 연결된 컴퓨터를 거쳐서 숨깁니다. Anon는 무료 소프트웨어이면서 개방 네트워크로서 여러분을 개인의 자유, 사생활, 은밀한 사업 활동, 관계, 국가 안보를 위협하는 네트워크 감시인 트래픽 분석으로부터 보호합니다.</string>
     <string name="menu_settings">설정</string>
     <string name="menu_log">로그</string>
     <string name="menu_stop">중지</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">일반</string>
-    <string name="pref_start_boot_title">부팅 후 AnyoneBot 시작</string>
-    <string name="pref_start_boot_summary">안드로이드 장치가 시작할 때 자동적으로 AnyoneBot을 시작하고 Anon에 연결합니다</string>
+    <string name="pref_start_boot_title">부팅 후 Anyone VPN 시작</string>
+    <string name="pref_start_boot_summary">안드로이드 장치가 시작할 때 자동적으로 Anyone VPN을 시작하고 Anon에 연결합니다</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">첫번째 Hop을 위한핑거프린트, 별칭, 나라와 주소</string>
     <string name="pref_entrance_node_dialog">입구 노드 입력</string>
     <string name="pref_allow_background_starts_title">백그라운드에서 시작 허용</string>
-    <string name="pref_allow_background_starts_summary">모든 어플리케이션이 AnyoneBot에 Anon를 시작하고 관련 서비스를 시작할 수 있도록 지시하는것을 허락합니다</string>
+    <string name="pref_allow_background_starts_summary">모든 어플리케이션이 Anyone VPN에 Anon를 시작하고 관련 서비스를 시작할 수 있도록 지시하는것을 허락합니다</string>
     <string name="pref_proxy_title">외부 네트워크 프록시 (선택)</string>
     <string name="pref_proxy_type_title">외부 프록시 유형</string>
     <string name="pref_proxy_type_summary">프록시 서버를 위한 사용되는 프로토콜 : HTTP, HTTPS, Socks4, Socks5</string>
@@ -90,7 +90,7 @@
     <string name="send_email">이메일 보내기</string>
     <string name="save">저장</string>
     <string name="name">Name</string>
-    <string name="please_restart_to_enable_the_changes">변경을 완료하려면 AnyoneBot을 재시작하세요</string>
+    <string name="please_restart_to_enable_the_changes">변경을 완료하려면 Anyone VPN을 재시작하세요</string>
     <string name="disable">비활성화</string>
     <string name="enable">활성화</string>
     <string name="connected_title">연결됨</string>
@@ -125,9 +125,9 @@
     <string name="no_internet_title">인터넷에 연결하기</string>
     <string name="btn_refresh">새로고침</string>
 
-    <string name="status_starting_up">AnyoneBot 시작 중…</string>
+    <string name="status_starting_up">Anyone VPN 시작 중…</string>
     <string name="status_activated">Anyone 네트워크에 연결됨</string>
-    <string name="status_disabled">AnyoneBot이 비활성화되어 있습니다</string>
+    <string name="status_disabled">Anyone VPN이 비활성화되어 있습니다</string>
     <string name="couldn_t_start_anon_process_">"Anon 프로세스 시작 불가능:  "</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">귀하의 ReachableAddress 설정은 예외를 발생시켰습니다!</string>
     <string name="your_relay_settings_caused_an_exception_">귀하의 중계서버 설정은 예외를 발생시켰습니다!</string>

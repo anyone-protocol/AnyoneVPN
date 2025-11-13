@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Welcome Wizard strings (DJH)-->
-    <!--END Welcome Wizard strings (DJH)-->
-    <!--New Wizard Strings-->
-    <!--Title Screen-->
-    <!--Warning screen-->
-    <!--Permissions screen-->
-    <!--TipsAndTricks screen-->
-    <!--Transparent Proxy screen-->
     <string name="menu_settings">Nustatymai</string>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="enter_exclude_nodes">Įveskite neįtrauktinus mazgus</string>
     <string name="pref_disable_ipv4_summary">Nurodo išėjimams nesijungti prie IPv4 adresų</string>
     <string name="pref_prefer_ipv6_summary">Nurodo, kad pirmenybė teikiama IPv6 adresams</string>
@@ -44,7 +36,7 @@
     <string name="create_a_backup_first">Pirmiausia sukurkite atsarginę kopiją</string>
     <string name="copy_address_to_clipboard">Kopijuoti adresą į iškarpinę</string>
     <string name="pref_proxy_title">Išeinančio tinklo įgaliotasis serveris (pasirinktinai)</string>
-    <string name="pref_start_boot_title">Paleisti „AnyoneBot“ paleidimo metu</string>
+    <string name="pref_start_boot_title">Paleisti „Anyone VPN“ paleidimo metu</string>
     <string name="v3_delete_client_authorization_confirm">Naikinti kliento autorizavimą</string>
     <string name="v3_client_auth_activity_title">Kliento autorizacija</string>
     <string name="v3_anon">.anon domenas</string>
@@ -121,7 +113,7 @@
     <string name="mebibyte">MiB</string>
     <string name="kibibyte">KiB</string>
     <string name="the_nickname_for_your_anon_relay">Jūsų „Anon“ relės slapyvardis</string>
-    <string name="please_restart_to_enable_the_changes">Paleiskite „AnyoneBot“ iš naujo, kad įgalintumėte pakeitimus</string>
+    <string name="please_restart_to_enable_the_changes">Paleiskite „Anyone VPN“ iš naujo, kad įgalintumėte pakeitimus</string>
     <string name="start_anon_again_for_finish_the_process">Norėdami užbaigti procesą, vėl paleiskite „Anon“</string>
     <string name="pref_anonrc_summary">TIK EKSPERTAMS: įveskite tiesiogines anonrc konfigūracijos eilutes</string>
     <string name="newnym">Jūs perėjote prie naujos „Anon“ tapatybės!</string>
@@ -129,8 +121,8 @@
     <string name="pref_node_configuration_summary">Tai yra išplėstiniai nustatymai, kurie gali sumažinti jūsų anonimiškumą</string>
     <string name="pref_disable_network_summary">Užmigdyti „Anon“, kai nėra interneto</string>
     <string name="pref_proxy_type_summary">Protokolas, kurį reikia naudoti įgaliotajam serveriui: HTTP, HTTPS, SOCKS4, SOCKS5</string>
-    <string name="pref_allow_background_starts_summary">Leiskite bet kuriai programėlei nurodyti „AnyoneBot“ paleisti „Anon“ ir susijusias paslaugas</string>
-    <string name="pref_start_boot_summary">Automatiškai paleisti „AnyoneBot“ ir prijunkti „Anon“, kai įsijungs „Android“ įrenginys</string>
+    <string name="pref_allow_background_starts_summary">Leiskite bet kuriai programėlei nurodyti „Anyone VPN“ paleisti „Anon“ ir susijusias paslaugas</string>
+    <string name="pref_start_boot_summary">Automatiškai paleisti „Anyone VPN“ ir prijunkti „Anon“, kai įsijungs „Android“ įrenginys</string>
     <string name="backup_service">Atsarginio kopijavimo paslauga <i>(Įspėjimas: tai gali atskleisti jūsų paslaugos konfigūraciją kitoms programoms)</i></string>
     <string name="enable_debug_log_to_output_must_use_adb_or_alogcat_to_view_">Įgalinti derinimo žurnalo išvestį (norėdami peržiūrėti turite naudoti adb arba aLogcat)</string>
     <string name="pref_dnsport_summary">Prievadas, kuriuo „Anon“ siūlo savo DNS (numatytoji reikšmė: 5400 arba 0, jei norite išjungti)</string>
@@ -141,7 +133,7 @@
     <string name="pref_reduced_connection_padding_summary">Greičiau uždaromos relių jungtys ir siunčiama mažiau užpildymo paketų, kad būtų sumažintas duomenų ir akumuliatoriaus naudojimas</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Leisti „Wi-Fi“ poroms, pririštiems įrenginiams ir visiems kitiems, kurie gali prisijungti prie jūsų IP, pasiekti „Anon“</string>
     <string name="hidden_service_request">Programėlė nori atidaryti „Anon“ tinklo prievado %1$s anon serverį. Tai saugu, jei pasitikite programėle.</string>
-    <string name="wizard_details_msg">„AnyoneBot“ yra atvirojo kodo programa, kurią sudaro „Anon“, „Go-Tun2Socks“ ir „LibEvent“. Ji suteikia vietinį HTTP įgaliotąjį (proxy) serverį (8118) ir SOCKS įgaliotąjį serverį (9050) į „Anon“ tinklą.</string>
+    <string name="wizard_details_msg">„Anyone VPN“ yra atvirojo kodo programa, kurią sudaro „Anon“, „Go-Tun2Socks“ ir „LibEvent“. Ji suteikia vietinį HTTP įgaliotąjį (proxy) serverį (8118) ir SOCKS įgaliotąjį serverį (9050) į „Anon“ tinklą.</string>
     <string name="relaying">Perdavimas</string>
     <string name="pref_general_group">Bendrieji</string>
     <string name="menu_log">Žurnalas</string>
@@ -159,7 +151,7 @@
     <string name="main_layout_download">Atsisiųsti</string>
     <string name="menu_about">Apie</string>
     <string name="menu_stop">Sustabdyti</string>
-    <string name="app_description">„AnyoneBot“ yra nemokama įgaliotojo serverio programa, kuri leidžia kitoms programoms saugiau naudotis internetu. „AnyoneBot“ naudoja „Anon“, kad užšifruotų jūsų interneto srautą ir paslėptų jį per kelis kompiuterius visame pasaulyje. „Anon“ yra nemokama programinė įranga ir atviras tinklas, padedantis apsisaugoti nuo tinklo stebėjimo, keliančio grėsmę asmens laisvei ir privatumui, konfidencialiai verslo veiklai ir santykiams bei valstybės saugumui, vadinamo srauto analize.</string>
+    <string name="app_description">„Anyone VPN“ yra nemokama įgaliotojo serverio programa, kuri leidžia kitoms programoms saugiau naudotis internetu. „Anyone VPN“ naudoja „Anon“, kad užšifruotų jūsų interneto srautą ir paslėptų jį per kelis kompiuterius visame pasaulyje. „Anon“ yra nemokama programinė įranga ir atviras tinklas, padedantis apsisaugoti nuo tinklo stebėjimo, keliančio grėsmę asmens laisvei ir privatumui, konfidencialiai verslo veiklai ir santykiams bei valstybės saugumui, vadinamo srauto analize.</string>
     <string name="version">Versija:</string>
     <string name="license">Licencija:</string>
     <string name="secure_your_connection_title">Paruošta prisijungti</string>
@@ -193,11 +185,11 @@
     <string name="volunteer_status_title">Šiandiena yra geresnė
 \ndėka jūsų.</string>
     <string name="apps_other_apps">Kitos programėlės</string>
-    <string name="power_user_description">Vartotojams, susipažinusiems su . Leidžia paleisti „AnyoneBot“ be VPN nustatymo ir rodo atvirus SOCKS ir HTTP prievadus</string>
+    <string name="power_user_description">Vartotojams, susipažinusiems su . Leidžia paleisti „Anyone VPN“ be VPN nustatymo ir rodo atvirus SOCKS ir HTTP prievadus</string>
     <string name="connect">Prisijungti</string>
     <string name="next">Toliau</string>
     <string name="incorrect_solution">Neteisingas sprendimas</string>
-    <string name="app_suggested_subtitle">„AnyoneBot“ geriausiai veikia su pranešimų ir socialinių tinklų programėlėmis.</string>
+    <string name="app_suggested_subtitle">„Anyone VPN“ geriausiai veikia su pranešimų ir socialinių tinklų programėlėmis.</string>
     <string name="title_choose_apps">Pasirinkti programėles</string>
     <string name="apps_suggested_title">Siūlomos programėlės</string>
     <string name="hide_apps">Paslėpkite programėles nuo tinklo stebėjimo ir gaukite prieigą, kai jos blokuojamos.</string>
@@ -206,7 +198,7 @@
     <string name="setting_debug">Derinimas</string>
     <string name="action_use">Naudoti</string>
     <string name="no_internet_title">Prisijunkite prie interneto</string>
-    <string name="no_internet_subtitle">Norint naudotis \"AnyoneBot\", reikia interneto ryšio.</string>
+    <string name="no_internet_subtitle">Norint naudotis \"Anyone VPN\", reikia interneto ryšio.</string>
     <string name="not_sure">Nesate tikri\?</string>
     <string name="option_only_when_charging">Tik įkraunant</string>
     <string name="pref_isolate_port_summary">Kiekvienam paskirties prievadui naudokite skirtingą grandinę</string>
@@ -220,8 +212,8 @@
     <string name="pref_isolate_port">Išskirti paskirties prievadai</string>
     <string name="asking">KLAUSIMAS…</string>
     <string name="pref_flag_secure_title">Ekrano apsauga</string>
-    <string name="root_warning">\"AnyoneBot\" nustatė, kad jūsų įrenginys yra įsišaknijęs, o tai gali sukelti saugumo problemų.</string>
+    <string name="root_warning">\"Anyone VPN\" nustatė, kad jūsų įrenginys yra įsišaknijęs, o tai gali sukelti saugumo problemų.</string>
     <string name="pref_isolate_protocol_summary">Kiekvienam jungiamajam protokolui naudokite skirtingą grandinę</string>
-    <string name="pref_flag_secure_summary">Neleiskite kitoms programoms daryti \"AnyoneBot\" ekrano nuotraukų</string>
+    <string name="pref_flag_secure_summary">Neleiskite kitoms programoms daryti \"Anyone VPN\" ekrano nuotraukų</string>
     <string name="many_ways">Yra daugybė būdų pasiekti Anon. Vieni iš jų jums gali tikti labiau nei kiti.</string>
 </resources>

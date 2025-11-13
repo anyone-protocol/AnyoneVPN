@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">L\'AnyoneBot és una aplicació de servidor intermediari gratuïta que capacita a les altres aplicacions per utilitzar internet de forma més segura. L\'AnyoneBot utilitza Anon per xifrar les vostres comunicacions per Internet i ocultar-les fent-les saltar per una sèrie d\'ordinadors repartits per tot el món. Anon és un programari lliure i una xarxa oberta que us ajuda a defensar-vos d\'un tipus de vigilància a la xarxa que amenaça la llibertat personal i la privadesa, activitats empresarials i relacions confidencials i la seguretat en general, coneguda com a anàlisi de trànsit.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">L\'Anyone VPN és una aplicació de servidor intermediari gratuïta que capacita a les altres aplicacions per utilitzar internet de forma més segura. L\'Anyone VPN utilitza Anon per xifrar les vostres comunicacions per Internet i ocultar-les fent-les saltar per una sèrie d\'ordinadors repartits per tot el món. Anon és un programari lliure i una xarxa oberta que us ajuda a defensar-vos d\'un tipus de vigilància a la xarxa que amenaça la llibertat personal i la privadesa, activitats empresarials i relacions confidencials i la seguretat en general, coneguda com a anàlisi de trànsit.</string>
     <string name="menu_settings">Preferències</string>
     <string name="menu_log">Registre</string>
     <string name="menu_stop">Atura</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Quant a</string>
     <string name="menu_exit">Surt</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">L\'AnyoneBot és una aplicació de codi obert que conté Anon, Go-Tun2Socks, i LibEvent. Proporciona un proxy HTTP local (8118) i un proxy SOCKS (9050) a la xarxa Anon. En dispositius root, l\'AnyoneBot també té la capacitat d\'enviar tot el trànsit d\'Internet a través de Anon.</string>
+    <string name="wizard_details_msg">L\'Anyone VPN és una aplicació de codi obert que conté Anon, Go-Tun2Socks, i LibEvent. Proporciona un proxy HTTP local (8118) i un proxy SOCKS (9050) a la xarxa Anon. En dispositius root, l\'Anyone VPN també té la capacitat d\'enviar tot el trànsit d\'Internet a través de Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">General</string>
     <string name="pref_start_boot_title">Inicia l\'Obot amb el sistema</string>
-    <string name="pref_start_boot_summary">Inicia l\'AnyoneBot i connecta a Anon automàticament quan s\'inicia el dispositiu Android</string>
+    <string name="pref_start_boot_summary">Inicia l\'Anyone VPN i connecta a Anon automàticament quan s\'inicia el dispositiu Android</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Empremtes, àlies, països i adreces per al primer salt</string>
     <string name="pref_entrance_node_dialog">Introduïu els nodes d\'entrada</string>
     <string name="pref_allow_background_starts_title">Permet l\'inici en rerefons</string>
-    <string name="pref_allow_background_starts_summary">Permet a qualsevol aplicació iniciar la xarxa Anon mitjançant l\'AnyoneBot i els serveis relacionats</string>
+    <string name="pref_allow_background_starts_summary">Permet a qualsevol aplicació iniciar la xarxa Anon mitjançant l\'Anyone VPN i els serveis relacionats</string>
     <string name="pref_proxy_title">Servidor intermediari de sortida a la xarxa (opcional)</string>
     <string name="pref_proxy_type_title">Tipus de servidor intermediari de sortida</string>
     <string name="pref_proxy_type_summary">Protocol a utilitzar per al servidor intermediari: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Torneu a iniciar el Anon per a acabar el procés</string>
     <string name="confirm_service_deletion">Confirma la supressió del servei</string>
     <string name="service_type">Tipus de servei</string>
-    <string name="please_restart_to_enable_the_changes">Reinicieu l\'AnyoneBot per a aplicar els canvis</string>
+    <string name="please_restart_to_enable_the_changes">Reinicieu l\'Anyone VPN per a aplicar els canvis</string>
     <string name="share_as_qr">Comparteix com a QR</string>
     <string name="disable">Desactiva</string>
     <string name="enable">Activa</string>
@@ -159,7 +159,7 @@
     <string name="mebibyte">MiB</string>
     <string name="proxy_ports">Ports proxy</string>
     <string name="pref_circuit_padding">Farciment del circuit</string>
-    <string name="no_internet_subtitle">Us cal una connexió a internet per a utilitzar l\'AnyoneBot.</string>
+    <string name="no_internet_subtitle">Us cal una connexió a internet per a utilitzar l\'Anyone VPN.</string>
     <string name="v3_hosted_services">Serveis Anon hostatjats</string>
     <string name="msg_try_something_else">Proveu altra cosa</string>
     <string name="pref_disable_ipv4_summary">Indica a les sortides que no connectin a adreces IPv4</string>
@@ -193,7 +193,7 @@
     <string name="pref_isolate_port">Aïlla els ports de destinació</string>
     <string name="menu_anon_connection">Connexió Anon</string>
     <string name="asking">S\'ESTÀ PREGUNTANT…</string>
-    <string name="power_user_description">Per a usuaris familiaritzats amb el Anon. Us permet iniciar l\'AnyoneBot sense l\'opció de la VPN i us mostra els ports SOCKS i HTTP oberts</string>
+    <string name="power_user_description">Per a usuaris familiaritzats amb el Anon. Us permet iniciar l\'Anyone VPN sense l\'opció de la VPN i us mostra els ports SOCKS i HTTP oberts</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Obre el servidor intermediari en totes les interfícies</string>
     <string name="v3_import_auth_private">Importa .auth_private</string>
     <string name="pref_prefer_ipv6_summary">Indica a les sortides que es prefereixen adreces IPv6</string>
@@ -201,7 +201,7 @@
     <string name="v3_client_auth_activity_title">Autorització del client</string>
     <string name="pref_flag_secure_title">Seguretat de pantalla</string>
     <string name="menu_app_settings">Configuració de l\'aplicació</string>
-    <string name="root_warning">L\'AnyoneBot ha detectat que el vostre dispositiu té desblocats els permisos «root». Això pot causar problemes de seguretat.</string>
+    <string name="root_warning">L\'Anyone VPN ha detectat que el vostre dispositiu té desblocats els permisos «root». Això pot causar problemes de seguretat.</string>
     <string name="btn_change_exit">Canvia la sortida</string>
     <string name="backup_port_exist">Error: Ja hi ha un servei Anon utilitzant el port %s</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Permet accedir al Anon als companys Wi-Fi, als dispositius connectats i a qualsevol que es pugui connectar a la vostra IP</string>
@@ -212,12 +212,12 @@
     <string name="testing_anon_direct_success">Èxit. La connexió al Anon és bona!</string>
     <string name="btn_start_vpn">Inicia la VPN</string>
     <string name="strict_nodes_description">Tracta els paràmetres d\'exclusió de nodes com a requeriment per a construir tots els circuits. Podria trencar la funcionalitat si no es pot generar cap circuit amb aquests paràmetres.</string>
-    <string name="app_suggested_subtitle">L\'AnyoneBot funciona millor amb aplicacions de missatgeria i xarxes socials.</string>
+    <string name="app_suggested_subtitle">L\'Anyone VPN funciona millor amb aplicacions de missatgeria i xarxes socials.</string>
     <string name="secure_your_connection_title">Preparat per a connectar</string>
     <string name="msg_taking_too_long">Sembla que està trigant massa</string>
     <string name="v3_delete_client_authorization_confirm">Suprimeix l\'autorització del client</string>
     <string name="pref_http_summary">Port al qual el Anon ofereix el seu servidor intermediari HTTP (per defecte: 8118, o 0 per a desactivar)</string>
-    <string name="pref_flag_secure_summary">Impedeix que altres aplicacions facin captures de pantalla de l\'AnyoneBot</string>
+    <string name="pref_flag_secure_summary">Impedeix que altres aplicacions facin captures de pantalla de l\'Anyone VPN</string>
     <string name="volunteer_status_title">L\'avui és millor
 \ngràcies a vós.</string>
     <string name="many_ways">Hi ha moltes maneres d\'arribar al Anon. Algunes podrien funcionar millor que altres.</string>
@@ -227,9 +227,9 @@
     <string name="pref_detect_root_summary">Avisa a l\'inici si els permisos d\'administrador estan activats en aquest dispositiu</string>
     <string name="pref_detect_root_title">Detecció d\'administrador</string>
 
-    <string name="status_starting_up">L\'AnyoneBot s\'està iniciant…</string>
+    <string name="status_starting_up">L\'Anyone VPN s\'està iniciant…</string>
     <string name="status_activated">Esteu connectat a la xarxa Anyone</string>
-    <string name="status_disabled">L\'AnyoneBot està desactivat</string>
+    <string name="status_disabled">L\'Anyone VPN està desactivat</string>
     <string name="couldn_t_start_anon_process_">No s\'ha pogut iniciar el procés anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Els paràmetres d\'adreces accessibles han provocat una excepció.</string>
     <string name="your_relay_settings_caused_an_exception_">Els paràmetres de reemissió han causat una excepció.</string>

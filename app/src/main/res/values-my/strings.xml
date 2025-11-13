@@ -6,15 +6,7 @@
     <string name="main_layout_download">ဒေါင်းလုဒ်</string>
     <string name="button_about">အကြောင်း</string>
     <string name="menu_exit">ထွက်ရန်</string>
-    <!--Welcome Wizard strings (DJH)-->
-    <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">ယေဘုယျ</string>
-    <!--New Wizard Strings-->
-    <!--Title Screen-->
-    <!--Warning screen-->
-    <!--Permissions screen-->
-    <!--TipsAndTricks screen-->
-    <!--Transparent Proxy screen-->
     <string name="error">ချို့ယွင်းချက်</string>
     <string name="set_locale_title">ဘာသာစကား</string>
     <string name="hidden_services">Hidden Services</string>
@@ -37,6 +29,6 @@
     <string name="menu_more">နောက်ထပ်</string>
     <string name="connection_custom">စိတ်ကြိုက်</string>
     <string name="confirm">အတည်ပြုရန်</string>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="allow">ခွင့်ပြုပါ</string>
 </resources>

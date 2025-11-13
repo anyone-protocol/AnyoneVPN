@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot er en gratis og åben proxy-applikation, der gør det muligt at anvende internettet mere sikkert fra andre programmer. AnyoneBot bruger Anon til at kryptere internettrafikken, og skjuler den ved at sende den gennem serverere, lokaliseret i hele verden. Anon er gratis og åben software, der kan hjælpe dig mod netværksovervågning kaldet trafikanalyse, der kan true din personlige frihed, dit privatliv, handelsaktivitet og forhold.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN er en gratis og åben proxy-applikation, der gør det muligt at anvende internettet mere sikkert fra andre programmer. Anyone VPN bruger Anon til at kryptere internettrafikken, og skjuler den ved at sende den gennem serverere, lokaliseret i hele verden. Anon er gratis og åben software, der kan hjælpe dig mod netværksovervågning kaldet trafikanalyse, der kan true din personlige frihed, dit privatliv, handelsaktivitet og forhold.</string>
     <string name="menu_settings">Indstillinger</string>
     <string name="menu_log">Log</string>
     <string name="menu_stop">Stop</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Generelt</string>
-    <string name="pref_start_boot_title">Start AnyoneBot ved opstart</string>
-    <string name="pref_start_boot_summary">Start automatisk AnyoneBot og forbind til Anon når din android enhed starter</string>
+    <string name="pref_start_boot_title">Start Anyone VPN ved opstart</string>
+    <string name="pref_start_boot_summary">Start automatisk Anyone VPN og forbind til Anon når din android enhed starter</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -90,9 +90,9 @@
     <string name="pref_prefer_ipv6">Foretrækker IPv6-forbindelser</string>
     <string name="pref_reduced_connection_padding_summary">Lukker relæforbindelser tidligere og sender færre padding-pakker for at reducere data- og batteriforbruget</string>
     <string name="pref_prefer_ipv6_summary">Fortæller exits, at IPv6-adresser er at foretrække</string>
-    <string name="wizard_details_msg">AnyoneBot er et program med åben kildekode, der indeholder Anon, Go-Tun2Socks og LibEvent. Det giver en VPN-tunnel, en lokal HTTP Connect-proxy (kun HTTPS på port 8118) og en SOCKS-proxy (9050) ind i Anon-netværket.</string>
+    <string name="wizard_details_msg">Anyone VPN er et program med åben kildekode, der indeholder Anon, Go-Tun2Socks og LibEvent. Det giver en VPN-tunnel, en lokal HTTP Connect-proxy (kun HTTPS på port 8118) og en SOCKS-proxy (9050) ind i Anon-netværket.</string>
     <string name="secure_your_connection_title">Sikre din forbindelse med Anon</string>
-    <string name="secure_your_connection_subtitle">AnyoneBot giver dig en sikker, uafbrudt forbindelse til dine apps.</string>
+    <string name="secure_your_connection_subtitle">Anyone VPN giver dig en sikker, uafbrudt forbindelse til dine apps.</string>
     <string name="connected_title">Du er forbundet!</string>
     <string name="btn_start_vpn">Start VPN</string>
     <string name="volunteer_mode_subtitle">Hjælp andre med at få forbindelse</string>
@@ -111,7 +111,7 @@
     <string name="menu_header_learn">Få mere at vide</string>
     <string name="msg_try_something_else">Prøv noget andet</string>
     <string name="msg_taking_too_long">Det ser ud til at tage lang tid</string>
-    <string name="pref_allow_background_starts_summary">Lad en hvilken som helst app fortælle AnyoneBot, at Anon og relaterede tjenester skal startes</string>
+    <string name="pref_allow_background_starts_summary">Lad en hvilken som helst app fortælle Anyone VPN, at Anon og relaterede tjenester skal startes</string>
     <string name="version">Version:</string>
     <string name="license">Licens:</string>
     <string name="hidden_service_request">En app ønsker at åbne en løgserver på port %1$s til Anon-netværket. Dette er sikkert, hvis du stoler på appen.</string>
@@ -157,7 +157,7 @@
     <string name="start_anon_again_for_finish_the_process">Start Anon igen for at afslutte processen</string>
     <string name="confirm_service_deletion">Bekræft sletning af tjeneste</string>
     <string name="service_type">Type af tjeneste</string>
-    <string name="please_restart_to_enable_the_changes">Genstart venligst AnyoneBot for at aktivere ændringerne</string>
+    <string name="please_restart_to_enable_the_changes">Genstart venligst Anyone VPN for at aktivere ændringerne</string>
     <string name="share_as_qr">Del som QR</string>
     <string name="pref_isolate_dest">Isolere destinationsadresser</string>
     <string name="pref_isolate_dest_summary">Brug et andet kredsløb for hver destinationsadresse</string>
@@ -197,9 +197,9 @@
     <string name="connect">Forbinde</string>
     <string name="next">Næste</string>
 
-    <string name="status_starting_up">AnyoneBot starter op …</string>
+    <string name="status_starting_up">Anyone VPN starter op …</string>
     <string name="status_activated">Der er forbindelse til Anyone-netværket</string>
-    <string name="status_disabled">AnyoneBot er slået fra</string>
+    <string name="status_disabled">Anyone VPN er slået fra</string>
     <string name="couldn_t_start_anon_process_">Kunne ikke starte anon processen:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Din ReachableAdresses indstilling forudsagede en fejl!</string>
     <string name="your_relay_settings_caused_an_exception_">Dine relæindstillinger forårsagede en fejl!</string>

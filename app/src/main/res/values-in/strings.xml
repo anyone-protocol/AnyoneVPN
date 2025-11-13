@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot adalah aplikasi proxy gratis yang membuat aplikasi-aplikasi lainnya dapat terkoneksi dengan internet secara aman. AnyoneBot menggunakan Anon untuk mengenkripsi hubungan internet Anda dan menyalurkannya melewati berbagai komputer di seluruh dunia. Anon adalah software gratis dan layanan terbuka, yang membantu Anda menghindari pengawasan jaringan yang mengancam kebebasan pribadi dan privasi, aktivitas bisnis rahasia dan relasi, serta keamanan negara yang dikenal dengan analisis traffic.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN adalah aplikasi proxy gratis yang membuat aplikasi-aplikasi lainnya dapat terkoneksi dengan internet secara aman. Anyone VPN menggunakan Anon untuk mengenkripsi hubungan internet Anda dan menyalurkannya melewati berbagai komputer di seluruh dunia. Anon adalah software gratis dan layanan terbuka, yang membantu Anda menghindari pengawasan jaringan yang mengancam kebebasan pribadi dan privasi, aktivitas bisnis rahasia dan relasi, serta keamanan negara yang dikenal dengan analisis traffic.</string>
     <string name="menu_settings">Pengaturan</string>
     <string name="menu_log">Log</string>
     <string name="menu_stop">Berhenti</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Umum</string>
-    <string name="pref_start_boot_title">Mulai AnyoneBot saat Boot</string>
-    <string name="pref_start_boot_summary">Secara otomatis memulai AnyoneBot dan menghubungkan dengan Anon ketika perangkat Android anda boot</string>
+    <string name="pref_start_boot_title">Mulai Anyone VPN saat Boot</string>
+    <string name="pref_start_boot_summary">Secara otomatis memulai Anyone VPN dan menghubungkan dengan Anon ketika perangkat Android anda boot</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Sidik jari, alias, negara dan alamat untuk loncatan pertama</string>
     <string name="pref_entrance_node_dialog">Masukkan Simpul Masuk</string>
     <string name="pref_allow_background_starts_title">Izinkan Memulai di Latar Belakang</string>
-    <string name="pref_allow_background_starts_summary">Biarkan aplikasi lain memberitahu AnyoneBot untuk memulai Anon dan layanan terkait</string>
+    <string name="pref_allow_background_starts_summary">Biarkan aplikasi lain memberitahu Anyone VPN untuk memulai Anon dan layanan terkait</string>
     <string name="pref_proxy_title">Outbound Proxy Jaringan (Opsional)</string>
     <string name="pref_proxy_type_title">Outbound Jenis Proxy</string>
     <string name="pref_proxy_type_summary">Protokol yang digunakan untuk server proxy: HTTP, HTTPS, Socks4, Socks5</string>
@@ -88,7 +88,7 @@
     <string name="pref_anonrc_summary">HANYA UNTUK AHLI: masukkan baris konfigurasi direct anonrc</string>
     <string name="pref_anonrc_dialog">anonrc Custom</string>
     <string name="send_email">Kirim Email</string>
-    <string name="please_restart_to_enable_the_changes">Silakan start ulang AnyoneBot untuk mengaktifkan perubahan</string>
+    <string name="please_restart_to_enable_the_changes">Silakan start ulang Anyone VPN untuk mengaktifkan perubahan</string>
     <string name="done">Beres!</string>
     <string name="name">Nama</string>
     <string name="menu_hidden_services">Perkhidmatan Anon</string>
@@ -108,12 +108,12 @@
     <string name="v3_client_auth_activity_title">Otorisasi Klien</string>
     <string name="secure_your_connection_subtitle">Sembunyikan aplikasi dari pemantauran jaringan dan dapatkan akses ketika mereka diblokir..</string>
     <string name="power_user_mode">Mode Pengguna Berdaya</string>
-    <string name="power_user_description">Untuk pengguna yang familier dengan Anon. Memungkinkan Anda untuk memulai AnyoneBot tanpa pengaturan VPN dan menampilkan porta SOCKS dan HTTP yang terbuka</string>
+    <string name="power_user_description">Untuk pengguna yang familier dengan Anon. Memungkinkan Anda untuk memulai Anyone VPN tanpa pengaturan VPN dan menampilkan porta SOCKS dan HTTP yang terbuka</string>
     <string name="action_activate">Aktifkan</string>
     <string name="volunteer_status_title">Hari ini lebih baik
 \nkarena tindakan Anda.</string>
     <string name="title_choose_apps">Pilih Aplikasi</string>
-    <string name="app_suggested_subtitle">AnyoneBot bekerja baik dengan aplikasi perpesanan dan media sosial.</string>
+    <string name="app_suggested_subtitle">Anyone VPN bekerja baik dengan aplikasi perpesanan dan media sosial.</string>
     <string name="apps_suggested_title">Aplikasi yang Disarankan</string>
     <string name="apps_other_apps">Aplikasi Lain</string>
     <string name="v3_delete_client_authorization">Hapus Kunci Otorisasi Klien</string>
@@ -156,7 +156,7 @@
     <string name="user_services">Layanan pengguna</string>
     <string name="app_services">Layanan aplikasi</string>
     <string name="refresh_apps">Muat Ulang Aplikasi</string>
-    <string name="wizard_details_msg">AnyoneBot adalah aplikasi sumber terbuka yang berisi Anon, Go-Tun2Socks dan LibEvent. Ini menyediakan terowongan VPN, proksi Koneksi HTTP (hanya HTTPS dan di porta 8118) dan sebuah proksi SOCKS (9050) ke jaringan Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN adalah aplikasi sumber terbuka yang berisi Anon, Go-Tun2Socks dan LibEvent. Ini menyediakan terowongan VPN, proksi Koneksi HTTP (hanya HTTPS dan di porta 8118) dan sebuah proksi SOCKS (9050) ke jaringan Anon.</string>
     <string name="hidden_service_request">Sebuah aplikasi ingin membuka server anon di porta %1$s ke jaringan Anon. Ini aman jika Anda mempercayai aplikasinya.</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Perbolehkan peer Wi-Fi, perangkat tertambat dan siapa pun yang dapat menghubungkan ke IP Anda, untuk mengakses Anon</string>
     <string name="strict_nodes_description">Terapkan pengaturan Kecualikan Nodus sebagai kebutuhan untuk membangun semua sirkuit. Ini mungkin merusak penggunaan jika tidak ada sirkuit yang dapat dibuat dengan pengaturan Kecualikan Nodus Anda.</string>
@@ -205,7 +205,7 @@
     <string name="not_sure">Tidak yakin\?</string>
     <string name="many_ways">Ada lebih banyak cara untuk mencapai Anon. Beberapa dapat bekerja dengan baik daripada yang lain untuk Anda.</string>
     <string name="no_internet_title">Hubungkan ke internet</string>
-    <string name="no_internet_subtitle">Anda membutuhkan koneksi internet untuk menggunakan AnyoneBot.</string>
+    <string name="no_internet_subtitle">Anda membutuhkan koneksi internet untuk menggunakan Anyone VPN.</string>
     <string name="kindness_adjust_title">Pengaturan</string>
     <string name="asking">MENANYAKAN…</string>
     <string name="action_use">Gunakan</string>
@@ -221,16 +221,16 @@
     <string name="option_only_when_charging">Hanya saat mengisi daya</string>
     <string name="connection_direct">Direct</string>
     <string name="connection_custom">Kustom</string>
-    <string name="root_warning">AnyoneBot telah mendeteksi bahwa perangkat Anda telah di‐root, yang dapat membuat masalah keamanan.</string>
-    <string name="pref_flag_secure_summary">Cegah aplikasi lain mengambil tangkapan layar AnyoneBot</string>
+    <string name="root_warning">Anyone VPN telah mendeteksi bahwa perangkat Anda telah di‐root, yang dapat membuat masalah keamanan.</string>
+    <string name="pref_flag_secure_summary">Cegah aplikasi lain mengambil tangkapan layar Anyone VPN</string>
     <string name="pref_flag_secure_title">Keamanan Layar</string>
     <string name="pref_detect_root_summary">Peringatkan pada pemulaian jika perizinan root diaktifkan di perangkat ini</string>
     <string name="pref_detect_root_title">Deteksi Root</string>
 
-    <string name="status_starting_up">AnyoneBot sedang dimulai…</string>
+    <string name="status_starting_up">Anyone VPN sedang dimulai…</string>
     <string name="status_activated">Tersambung ke Jaringan Anyone</string>
-    <string name="status_disabled">AnyoneBot telah dibatalkan</string>
-    <string name="status_shutting_down">AnyoneBot dimatikan</string>
+    <string name="status_disabled">Anyone VPN telah dibatalkan</string>
+    <string name="status_shutting_down">Anyone VPN dimatikan</string>
     <string name="couldn_t_start_anon_process_">Tidak dapat memulai proses anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Pengaturan ReachableAddresses anda menyebabkan kesalahan!</string>
     <string name="your_relay_settings_caused_an_exception_">Pengaturan relay anda menyebabkan kesalahan!</string>

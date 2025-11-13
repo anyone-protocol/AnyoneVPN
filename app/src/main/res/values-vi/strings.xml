@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot là một ứng dụng proxy miễn phí làm cho các ứng dụng khác sử dụng internet một cách bảo mật hơn. AnyoneBot sử dụng Anon để mã hóa lưu lượng Internet rồi ẩn nó bằng cách đưa qua một loạt máy tính trên khắp thế giới. Anon là phần mềm tự do và là một mạng lưới mở giúp bạn chống lại một dạng của sự giám sát trên mạng đe dọa quyền riêng tư và tự do cá nhân, những hoạt động và mối quan hệ bí mật trong kinh doanh, và an ninh tiểu bang được biết đến là phân tích lưu lượng mạng.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN là một ứng dụng proxy miễn phí làm cho các ứng dụng khác sử dụng internet một cách bảo mật hơn. Anyone VPN sử dụng Anon để mã hóa lưu lượng Internet rồi ẩn nó bằng cách đưa qua một loạt máy tính trên khắp thế giới. Anon là phần mềm tự do và là một mạng lưới mở giúp bạn chống lại một dạng của sự giám sát trên mạng đe dọa quyền riêng tư và tự do cá nhân, những hoạt động và mối quan hệ bí mật trong kinh doanh, và an ninh tiểu bang được biết đến là phân tích lưu lượng mạng.</string>
     <string name="menu_settings">Cài đặt</string>
     <string name="menu_log">Nhật ký Log</string>
     <string name="menu_stop">Dừng lại</string>
@@ -13,8 +13,8 @@
     <!--Welcome Wizard strings (DJH)-->
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Tổng quan</string>
-    <string name="pref_start_boot_title">Khởi chạy AnyoneBot khi khởi động hệ thống</string>
-    <string name="pref_start_boot_summary">Tự khởi động AnyoneBot và kết nối vào mạng Anon sau khi thiết bị Android của bạn khởi động</string>
+    <string name="pref_start_boot_title">Khởi chạy Anyone VPN khi khởi động hệ thống</string>
+    <string name="pref_start_boot_summary">Tự khởi động Anyone VPN và kết nối vào mạng Anon sau khi thiết bị Android của bạn khởi động</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -27,7 +27,7 @@
     <string name="pref_entrance_node_summary">Dấu vân tay theo dõi (Fingerprint), biệt hiệu, quốc gia và địa chỉ cho nút giao mạng đầu tiên</string>
     <string name="pref_entrance_node_dialog">Nhập thông tin nút giao mạng đầu vào</string>
     <string name="pref_allow_background_starts_title">Cho phép khởi động ngầm</string>
-    <string name="pref_allow_background_starts_summary">Cho phép ứng dụng bất kỳ yêu cầu AnyoneBot khởi động Anon và các dịch vụ liên quan</string>
+    <string name="pref_allow_background_starts_summary">Cho phép ứng dụng bất kỳ yêu cầu Anyone VPN khởi động Anon và các dịch vụ liên quan</string>
     <string name="pref_proxy_title">Proxy mạng ngõ ra (Outbound Network) (Tùy chọn)</string>
     <string name="pref_proxy_type_title">Kiểu Proxy ngõ ra</string>
     <string name="pref_proxy_type_summary">Giao thức dùng cho proxy: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -90,7 +90,7 @@
     <string name="send_email">Gửi email</string>
     <string name="save">Lưu</string>
     <string name="name">Tên</string>
-    <string name="please_restart_to_enable_the_changes">Vui lòng khởi động lại AnyoneBot để áp dụng thay đổi</string>
+    <string name="please_restart_to_enable_the_changes">Vui lòng khởi động lại Anyone VPN để áp dụng thay đổi</string>
     <string name="disable">Tắt</string>
     <string name="enable">Cho phép</string>
     <string name="pref_http_dialog">Thiết lập cổng HTTP</string>
@@ -100,7 +100,7 @@
     <string name="deny">Từ chối</string>
     <string name="allow">Cho phép</string>
     <string name="hidden_service_request">Một ứng dụng muốn mở máy chủ anon ở cổng %1$s vào mạng Anon. Việc này là an toàn nếu bạn tin tưởng ứng dụng đó.</string>
-    <string name="wizard_details_msg">AnyoneBot là một ứng dụng mã nguồn mở chứa Anon, Go-Tun2Socks, LibEvent. Nó cung cấp một proxy HTTP cục bộ (8118) và một proxy SOCKS (9050) vào mạng Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN là một ứng dụng mã nguồn mở chứa Anon, Go-Tun2Socks, LibEvent. Nó cung cấp một proxy HTTP cục bộ (8118) và một proxy SOCKS (9050) vào mạng Anon.</string>
     <string name="pref_reduced_connection_padding_summary">Đóng các kết nối chuyển tiếp sớm hơn và gửi ít gói đặt khoảng cách hơn để giảm sử dụng dữ liệu và pin</string>
     <string name="pref_reduced_connection_padding">Giảm khoảng cách kết nối</string>
     <string name="pref_connection_padding_summary">Luôn bật đặt khoảng cách cho kết nối để phòng vệ chống lại một số dạng phân tích lưu lượng. Mặc định: tự động</string>
@@ -202,12 +202,12 @@
     <string name="msg_taking_too_long">Điều này có vẻ như đang mất quá nhiều thời gian</string>
     <string name="proxy_ports">Các cổng Proxy</string>
     <string name="no_thx">Không cảm ơn</string>
-    <string name="power_user_description">Đối với những người dùng đã quen thuộc với Anon. Cho phép bạn khởi động AnyoneBot mà không cần cài đặt VPN và hiển thị các cổng SOCKS và HTTP mở khả dụng</string>
+    <string name="power_user_description">Đối với những người dùng đã quen thuộc với Anon. Cho phép bạn khởi động Anyone VPN mà không cần cài đặt VPN và hiển thị các cổng SOCKS và HTTP mở khả dụng</string>
     <string name="btn_copy_log">Sao chép nhật ký Log</string>
     <string name="log_copied">Nhật ký Log đã được sao chép</string>
-    <string name="pref_flag_secure_summary">Ngăn chặn các app ứng dụng khác khỏi việc chụp ảnh màn hình AnyoneBot</string>
+    <string name="pref_flag_secure_summary">Ngăn chặn các app ứng dụng khác khỏi việc chụp ảnh màn hình Anyone VPN</string>
     <string name="pref_flag_secure_title">Bảo mật Màn hình</string>
-    <string name="root_warning">AnyoneBot đã phát hiện được rằng thiết bị của bạn đã được root, điều này có thể gây ra các vấn đề an ninh bảo mật.</string>
+    <string name="root_warning">Anyone VPN đã phát hiện được rằng thiết bị của bạn đã được root, điều này có thể gây ra các vấn đề an ninh bảo mật.</string>
     <string name="pref_isolate_port">Cô lập các cổng đích đến (destination ports)</string>
     <string name="pref_isolate_port_summary">Sử dụng một mạch nối khác cho mỗi một cổng đích đến (destination port)</string>
     <string name="pref_isolate_protocol_summary">Sử dụng một mạch nối khác biệt cho mỗi một giao thức protocol kết nối</string>
@@ -215,13 +215,13 @@
     <string name="captcha_title">Hãy cho chúng tôi biết bạn là con người</string>
     <string name="incorrect_solution">Đáp án không chính xác</string>
     <string name="power_user_mode">Chế độ người dùng nâng cao Power User</string>
-    <string name="app_suggested_subtitle">AnyoneBot hoạt động tốt nhất với các app ứng dụng nhắn tin và mạng xã hội.</string>
+    <string name="app_suggested_subtitle">Anyone VPN hoạt động tốt nhất với các app ứng dụng nhắn tin và mạng xã hội.</string>
     <string name="secure_your_connection_title">Sẵn sàng kết nối</string>
     <string name="apps_suggested_title">Các app ứng dụng được gợi ý</string>
     <string name="apps_other_apps">Các app ứng dụng khác</string>
     <string name="asking">ĐANG HỎI…</string>
     <string name="no_internet_title">Kết nối tới Internet</string>
-    <string name="no_internet_subtitle">Bạn cần một kết nối internet để sử dụng AnyoneBot.</string>
+    <string name="no_internet_subtitle">Bạn cần một kết nối internet để sử dụng Anyone VPN.</string>
     <string name="kindness_adjust_title">Cài đặt</string>
     <string name="setting_padding">Định khoảng cách Padding</string>
     <string name="pref_detect_root_summary">Cảnh báo khi khởi chạy rằng, liệu quyền hạn root đã được bật kích hoạt trên thiết bị này chưa</string>
@@ -229,8 +229,8 @@
 
     <string name="status_starting_up">Ortbot đang khởi động…</string>
     <string name="status_activated">Đã kết nối với mạng Anyone</string>
-    <string name="status_disabled">AnyoneBot đã được vô hiệu hóa</string>
-    <string name="status_shutting_down">Đang tắt dịch vụ AnyoneBot</string>
+    <string name="status_disabled">Anyone VPN đã được vô hiệu hóa</string>
+    <string name="status_shutting_down">Đang tắt dịch vụ Anyone VPN</string>
     <string name="couldn_t_start_anon_process_">Không thể khởi động tiến trình anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Thiết lập ReachableAddresses đã gây ra một vấn đề! </string>
     <string name="your_relay_settings_caused_an_exception_">Thiết lập relay của bạn đã gây ra một vấn đề!</string>

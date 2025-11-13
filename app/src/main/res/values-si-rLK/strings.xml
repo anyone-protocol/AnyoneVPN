@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="status_starting_up">AnyoneBot ආරම්භ කරමින්…</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="status_starting_up">Anyone VPN ආරම්භ කරමින්…</string>
     <string name="status_activated">Anyone ජාලයට සබැදියි</string>
-    <string name="status_disabled">AnyoneBot ක්‍රියාවිරහිත කර ඇත </string>
+    <string name="status_disabled">Anyone VPN ක්‍රියාවිරහිත කර ඇත </string>
     <string name="couldn_t_start_anon_process_">Anon ක්‍රියාවලින් ආරම්භ කිරීමට නොහැකි විය:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">ඔබේ සේන්දුවන ලිපිනයෙහි සිටුවම්වල ව්‍යතිරේකයක් හටගෙන ඇත!</string>
     <string name="your_relay_settings_caused_an_exception_">ඔබේ ප්‍රතියෝජක සිටුවම්වල ව්‍යතිරේකයක් හටගෙන ඇත!</string>

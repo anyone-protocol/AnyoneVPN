@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot är en gratis proxyapp som möjliggör andra appar att använda internet mer säkert. AnyoneBot använder Anon för att kryptera din internettrafik och döljer den genom att den studsar genom ett antal datorer världen över. Anon är fri programvara och ett öppet nätverk som hjälper dig att skydda dig mot en form av nätverksövervakning som hotar personlig integritet och frihet, hemliga affärsaktiviteter och relationer, och skyddar mot statlig övervakning även kallad trafikanalys.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN är en gratis proxyapp som möjliggör andra appar att använda internet mer säkert. Anyone VPN använder Anon för att kryptera din internettrafik och döljer den genom att den studsar genom ett antal datorer världen över. Anon är fri programvara och ett öppet nätverk som hjälper dig att skydda dig mot en form av nätverksövervakning som hotar personlig integritet och frihet, hemliga affärsaktiviteter och relationer, och skyddar mot statlig övervakning även kallad trafikanalys.</string>
     <string name="menu_settings">Inställningar</string>
     <string name="menu_log">Logg</string>
     <string name="menu_stop">Stopp</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Om</string>
     <string name="menu_exit">Avsluta</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot är ett program med öppen källkod som innehåller Anon, Go-Tun2Socks, och LibEvent. Den tillhandahåller en lokal HTTP-proxy (8118) och en SOCKS-proxy (9050) i Anon-nätverket. AnyoneBot har också förmågan att, på rotad enhet, skicka all internettrafik genom Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN är ett program med öppen källkod som innehåller Anon, Go-Tun2Socks, och LibEvent. Den tillhandahåller en lokal HTTP-proxy (8118) och en SOCKS-proxy (9050) i Anon-nätverket. Anyone VPN har också förmågan att, på rotad enhet, skicka all internettrafik genom Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Allmänt</string>
-    <string name="pref_start_boot_title">Starta AnyoneBot vid Uppstart</string>
-    <string name="pref_start_boot_summary">Starta AnyoneBot automatiskt och anslut till Anon när din Android enhet startar upp</string>
+    <string name="pref_start_boot_title">Starta Anyone VPN vid Uppstart</string>
+    <string name="pref_start_boot_summary">Starta Anyone VPN automatiskt och anslut till Anon när din Android enhet startar upp</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Fingeravtryck, nicks, länder, och adresser för första hoppet</string>
     <string name="pref_entrance_node_dialog">Skriv in Ingångs Noder</string>
     <string name="pref_allow_background_starts_title">Tillåt start i bakgrunden</string>
-    <string name="pref_allow_background_starts_summary">Låt alla appar säga åt AnyoneBot att starta Anon och relaterade tjänster</string>
+    <string name="pref_allow_background_starts_summary">Låt alla appar säga åt Anyone VPN att starta Anon och relaterade tjänster</string>
     <string name="pref_proxy_title">Utgående nätverksproxy (Valfri)</string>
     <string name="pref_proxy_type_title">Proxy-typ</string>
     <string name="pref_proxy_type_summary">Protokoll att använda för proxyserver: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Starta Anon igen för att avsluta processen</string>
     <string name="confirm_service_deletion">Bekräfta tjänst borttagning</string>
     <string name="service_type">Typ av tjänst</string>
-    <string name="please_restart_to_enable_the_changes">Vänligen starta om AnyoneBot för att aktivera ändringarna</string>
+    <string name="please_restart_to_enable_the_changes">Vänligen starta om Anyone VPN för att aktivera ändringarna</string>
     <string name="share_as_qr">Dela som QR</string>
     <string name="disable">Inaktivera</string>
     <string name="enable">Aktivera</string>
@@ -184,7 +184,7 @@
     <string name="captcha_title">Låt oss veta att du är mänsklig</string>
     <string name="msg_taking_too_long">Detta tycks ta för lång tid</string>
     <string name="power_user_mode">Power User Mode (strömförsörjningsläge)</string>
-    <string name="power_user_description">För användare som är bekanta med Anon. Gör det möjligt att starta AnyoneBot utan VPN-inställning och visar öppna SOCKS- och HTTP-portar</string>
+    <string name="power_user_description">För användare som är bekanta med Anon. Gör det möjligt att starta Anyone VPN utan VPN-inställning och visar öppna SOCKS- och HTTP-portar</string>
     <string name="action_activate">Aktivera</string>
     <string name="volunteer_status_title">Idag är bättre
 \ntack vare dig.</string>
@@ -192,7 +192,7 @@
     <string name="action_use">Använd</string>
     <string name="asking">FRÅGAR…</string>
     <string name="no_internet_title">Anslut till internet</string>
-    <string name="no_internet_subtitle">Du behöver en internetuppkoppling för att använda AnyoneBot.</string>
+    <string name="no_internet_subtitle">Du behöver en internetuppkoppling för att använda Anyone VPN.</string>
     <string name="kindness_adjust_title">Inställningar</string>
     <string name="configure_header">Konfigurera din Anon-anslutning</string>
     <string name="drawer_close">Stäng</string>
@@ -208,7 +208,7 @@
     <string name="incorrect_solution">Felaktig lösning</string>
     <string name="ports_not_set">Portar inte inställda</string>
     <string name="connect">Anslut</string>
-    <string name="app_suggested_subtitle">AnyoneBot fungerar bäst med appar för meddelanden och sociala medier.</string>
+    <string name="app_suggested_subtitle">Anyone VPN fungerar bäst med appar för meddelanden och sociala medier.</string>
     <string name="apps_suggested_title">Föreslagna appar</string>
     <string name="apps_other_apps">Andra appar</string>
     <string name="many_ways">Det finns många sätt att nå Anon. Vissa kanske fungerar bättre än andra för dig.</string>
@@ -222,13 +222,13 @@
     <string name="btn_copy_log">Kopiera logg</string>
     <string name="option_only_on_wifi">Endast på Wifi</string>
     <string name="pref_flag_secure_title">Säkerhet på skärmen</string>
-    <string name="root_warning">AnyoneBot har upptäckt att din enhet är rotad, vilket kan orsaka säkerhetsproblem.</string>
-    <string name="pref_flag_secure_summary">Förhindra att andra appar tar skärmdumpar av AnyoneBot</string>
+    <string name="root_warning">Anyone VPN har upptäckt att din enhet är rotad, vilket kan orsaka säkerhetsproblem.</string>
+    <string name="pref_flag_secure_summary">Förhindra att andra appar tar skärmdumpar av Anyone VPN</string>
 
-    <string name="status_starting_up">AnyoneBot startar…</string>
+    <string name="status_starting_up">Anyone VPN startar…</string>
     <string name="status_activated">Uppkopplad till Anyone nätverket</string>
-    <string name="status_disabled">AnyoneBot är inaktiverad</string>
-    <string name="status_shutting_down">AnyoneBot avslutas</string>
+    <string name="status_disabled">Anyone VPN är inaktiverad</string>
+    <string name="status_shutting_down">Anyone VPN avslutas</string>
     <string name="couldn_t_start_anon_process_">Kunde inte starta anon-process:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Din NåbaraAdresser inställning orsakade ett undantag!</string>
     <string name="your_relay_settings_caused_an_exception_">Din relä inställning orsakade ett undantag!</string>

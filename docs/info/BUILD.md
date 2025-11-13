@@ -1,4 +1,4 @@
-# Building AnyoneBot 
+# Building Anyone VPN 
 
 Please install the following prerequisites (instructions for each follows):
 	
@@ -7,7 +7,7 @@ Please install the following prerequisites (instructions for each follows):
 
 Now build the Android app using Android Studio/gradle
 
-This will produce an unsigned AnyoneBot package APK.
+This will produce an unsigned Anyone VPN package APK.
 
 ## Signing
 

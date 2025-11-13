@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot is een vrije proxy-app die het andere apps mogelijk maakt het internet veiliger te gebruiken. AnyoneBot gebruikt Anon om je internetverkeer te versleutelen en het vervolgens te verhullen het door het door een serie computers over de hele wereld te routeren. Anon is vrije software en een open netwerk dat je helpt te verdedigen tegen een vorm van netwerktoezicht, genaamd \'verkeersanalyse\', die persoonlijke vrijheid en privacy, vertrouwelijke bedrijfsactiviteiten en relaties en staatsveiligheid bedreigt.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN is een vrije proxy-app die het andere apps mogelijk maakt het internet veiliger te gebruiken. Anyone VPN gebruikt Anon om je internetverkeer te versleutelen en het vervolgens te verhullen het door het door een serie computers over de hele wereld te routeren. Anon is vrije software en een open netwerk dat je helpt te verdedigen tegen een vorm van netwerktoezicht, genaamd \'verkeersanalyse\', die persoonlijke vrijheid en privacy, vertrouwelijke bedrijfsactiviteiten en relaties en staatsveiligheid bedreigt.</string>
     <string name="menu_settings">Instellingen</string>
     <string name="menu_log">Logboek</string>
     <string name="menu_stop">Stop</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Over</string>
     <string name="menu_exit">Sluiten</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot is een openbronapplicatie die Anon, Go-Tun2Socks, en LibEvent bevat. Het creëert een lokale HTTP-proxy (8118) en een SOCKS-proxy (9050) naar het Anon-netwerk. AnyoneBot heeft ook de mogelijkheid om al het internetverkeer over het Anon-netwerk te sturen.</string>
+    <string name="wizard_details_msg">Anyone VPN is een openbronapplicatie die Anon, Go-Tun2Socks, en LibEvent bevat. Het creëert een lokale HTTP-proxy (8118) en een SOCKS-proxy (9050) naar het Anon-netwerk. Anyone VPN heeft ook de mogelijkheid om al het internetverkeer over het Anon-netwerk te sturen.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Algemeen</string>
-    <string name="pref_start_boot_title">Start AnyoneBot bij opstarten</string>
-    <string name="pref_start_boot_summary">Start AnyoneBot en verbind automatisch met Anon wanneer je Android-toestel opstart</string>
+    <string name="pref_start_boot_title">Start Anyone VPN bij opstarten</string>
+    <string name="pref_start_boot_summary">Start Anyone VPN en verbind automatisch met Anon wanneer je Android-toestel opstart</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Vingerafdrukken, nicks, landen en adressen voor de eerste hop</string>
     <string name="pref_entrance_node_dialog">Voer toegangsnodes in</string>
     <string name="pref_allow_background_starts_title">Sta starten op de achtergrond toe</string>
-    <string name="pref_allow_background_starts_summary">Sta elke applicatie toe om AnyoneBot de Anonverbinding en -diensten te laten starten </string>
+    <string name="pref_allow_background_starts_summary">Sta elke applicatie toe om Anyone VPN de Anonverbinding en -diensten te laten starten </string>
     <string name="pref_proxy_title">Uitgaande netwerk-proxy (facultatief)</string>
     <string name="pref_proxy_type_title">Proxy-type</string>
     <string name="pref_proxy_type_summary">Protocol om te gebruiken voor proxyserver: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Start Anon opnieuw om het proces te voltooien</string>
     <string name="confirm_service_deletion">Bevestig verwijderen van dienst</string>
     <string name="service_type">Diensttype</string>
-    <string name="please_restart_to_enable_the_changes">Herstart AnyoneBot om de wijzigingen in te schakelen</string>
+    <string name="please_restart_to_enable_the_changes">Herstart Anyone VPN om de wijzigingen in te schakelen</string>
     <string name="share_as_qr">Delen als QR-code</string>
     <string name="disable">Uitschakelen</string>
     <string name="enable">Inschakelen</string>
@@ -163,10 +163,10 @@
     <string name="pref_open_proxy_on_all_interfaces_title">Open proxy op alle interfaces</string>
     <string name="pref_http_dialog">HTTP port configuratie</string>
 
-    <string name="status_starting_up">AnyoneBot is bezig met starten…</string>
+    <string name="status_starting_up">Anyone VPN is bezig met starten…</string>
     <string name="status_activated">Verbonden met het Anyone-netwerk</string>
-    <string name="status_disabled">AnyoneBot is uitgeschakeld</string>
-    <string name="status_shutting_down">AnyoneBot wordt afgesloten</string>
+    <string name="status_disabled">Anyone VPN is uitgeschakeld</string>
+    <string name="status_shutting_down">Anyone VPN wordt afgesloten</string>
     <string name="couldn_t_start_anon_process_">"Kon anon-proces niet starten: "</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Je ReachableAddresses-instellingen veroorzaakten een fout!</string>
     <string name="your_relay_settings_caused_an_exception_">Je relay-instellingen veroorzaakten een fout!</string>

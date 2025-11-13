@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot est une appli libre de serveur mandataire qui permet aux applis d’utiliser Internet avec une sécurité accrue. AnyoneBot utilise Anon pour chiffrer votre trafic Internet et le cache ensuite en le relayant au travers d’ordinateurs de par le monde. Anon est un logiciel libre et un réseau ouvert qui vous aident à vous défendre contre une forme de surveillance réseau qui menace la liberté personnelle et la protection des données personnelles, les activités professionnelles confidentielles et les relations, et l’analyse du trafic des gouvernements.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN est une appli libre de serveur mandataire qui permet aux applis d’utiliser Internet avec une sécurité accrue. Anyone VPN utilise Anon pour chiffrer votre trafic Internet et le cache ensuite en le relayant au travers d’ordinateurs de par le monde. Anon est un logiciel libre et un réseau ouvert qui vous aident à vous défendre contre une forme de surveillance réseau qui menace la liberté personnelle et la protection des données personnelles, les activités professionnelles confidentielles et les relations, et l’analyse du trafic des gouvernements.</string>
     <string name="menu_settings">Paramètres</string>
     <string name="menu_log">Journal</string>
     <string name="menu_stop">Arrêter</string>
@@ -11,15 +11,15 @@
     <string name="button_about">À propos</string>
     <string name="menu_exit">Fermer</string>
     <string name="pref_general_group">Général</string>
-    <string name="pref_start_boot_title">Démarrer AnyoneBot à l’amorçage</string>
-    <string name="pref_start_boot_summary">Démarrer AnyoneBot automatiquement et se connecter à Anon lors de l’amorçage de votre appareil Android</string>
+    <string name="pref_start_boot_title">Démarrer Anyone VPN à l’amorçage</string>
+    <string name="pref_start_boot_summary">Démarrer Anyone VPN automatiquement et se connecter à Anon lors de l’amorçage de votre appareil Android</string>
     <string name="pref_node_configuration">Configuration des nœuds</string>
     <string name="pref_node_configuration_summary">Ces paramètres avancés peuvent réduire votre anonymat</string>
     <string name="pref_entrance_node">Nœuds d’entrée</string>
     <string name="pref_entrance_node_summary">Empreintes, pseudos, pays et adresses pour le premier saut</string>
     <string name="pref_entrance_node_dialog">Saisir les nœuds d’entrée</string>
     <string name="pref_allow_background_starts_title">Permettre les lancements en arrière-plan</string>
-    <string name="pref_allow_background_starts_summary">Laisser n’importe quelle appli indiquer à AnyoneBot de démarrer Anon et les services connexes</string>
+    <string name="pref_allow_background_starts_summary">Laisser n’importe quelle appli indiquer à Anyone VPN de démarrer Anon et les services connexes</string>
     <string name="pref_proxy_title">Mandataire pour le réseau sortant (facultatif)</string>
     <string name="pref_proxy_type_title">Type de mandataire sortant</string>
     <string name="pref_proxy_type_summary">Protocole à utiliser pour le serveur mandataire : HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -82,8 +82,8 @@
     <string name="send_email">Envoyer un courriel</string>
     <string name="save">Enregistrer</string>
     <string name="name">Nom</string>
-    <string name="please_restart_to_enable_the_changes">Veuillez redémarrer AnyoneBot pour activer les changements</string>
-    <string name="wizard_details_msg">AnyoneBot est une application à code source ouvert qui comprend Anon, Go-Tun2Socks et LibEvent. Elle fournit un mandataire HTTP local (8118) et un mandataire SOCKS (9050) vers le réseau Anon. Sur un appareil débridé, AnyoneBot peut aussi faire passer tout le trafic Internet par Anon.</string>
+    <string name="please_restart_to_enable_the_changes">Veuillez redémarrer Anyone VPN pour activer les changements</string>
+    <string name="wizard_details_msg">Anyone VPN est une application à code source ouvert qui comprend Anon, Go-Tun2Socks et LibEvent. Elle fournit un mandataire HTTP local (8118) et un mandataire SOCKS (9050) vers le réseau Anon. Sur un appareil débridé, Anyone VPN peut aussi faire passer tout le trafic Internet par Anon.</string>
     <string name="hidden_service_request">Une appli veut ouvrir le serveur anon sur le port %1$s au réseau Anon. Cette action est sûre si vous faites confiance à cette appli.</string>
     <string name="pref_open_proxy_on_all_interfaces_title">Ouvrir le mandataire sur toutes les interfaces</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Autoriser l’accès à Anon aux pairs Wi-Fi, aux appareils qui utilisent la fonction modem et à quiconque peut se connecter à votre IP</string>
@@ -159,7 +159,7 @@
     <string name="volunteer_status_title">Aujourd’hui, c’est meilleur
 \ngrâce à toi.</string>
     <string name="title_choose_apps">Choisir les applications</string>
-    <string name="app_suggested_subtitle">AnyoneBot fonctionne mieux avec les applications de messagerie et de médias sociaux.</string>
+    <string name="app_suggested_subtitle">Anyone VPN fonctionne mieux avec les applications de messagerie et de médias sociaux.</string>
     <string name="apps_suggested_title">Applications suggérées</string>
     <string name="apps_other_apps">Autres applications</string>
     <string name="configure_header">Configurer vôtre connexion Anon</string>
@@ -192,7 +192,7 @@
     <string name="pref_isolate_protocol">Isoler les protocoles des clients</string>
     <string name="proxy_ports">Ports proxy</string>
     <string name="action_use">Utilisation</string>
-    <string name="no_internet_subtitle">Vous avez besoin d\'une connexion internet pour utiliser AnyoneBot.</string>
+    <string name="no_internet_subtitle">Vous avez besoin d\'une connexion internet pour utiliser Anyone VPN.</string>
     <string name="kindness_adjust_title">Paramètres</string>
     <string name="asking">DEMANDER…</string>
     <string name="setting_padding">Rembourrage</string>
@@ -202,7 +202,7 @@
     <string name="pref_isolate_port_summary">Utiliser un circuit différent pour chaque port de destination</string>
     <string name="pref_isolate_protocol_summary">Utiliser un circuit différent pour chaque protocole de connexion</string>
     <string name="many_ways">Il existe de nombreuses façons d\'atteindre Anon. Certaines peuvent fonctionner mieux que d\'autres pour vous.</string>
-    <string name="power_user_description">Pour les utilisateurs familiers avec Anon. Permet de démarrer AnyoneBot sans le paramètre VPN et montre les ports SOCKS et HTTP ouverts</string>
+    <string name="power_user_description">Pour les utilisateurs familiers avec Anon. Permet de démarrer Anyone VPN sans le paramètre VPN et montre les ports SOCKS et HTTP ouverts</string>
     <string name="no_internet_title">Se connecter à l\'internet</string>
     <string name="option_only_on_wifi">Uniquement sur Wifi</string>
     <string name="ports_not_set">Ports non définis</string>
@@ -213,18 +213,18 @@
     <string name="not_sure">Vous n\'êtes pas sûr \?</string>
     <string name="connection_direct">Direct</string>
     <string name="connection_custom">Personnalisé</string>
-    <string name="pref_flag_secure_summary">Empêcher les autres applications de prendre des captures d\'écran d\'AnyoneBot</string>
+    <string name="pref_flag_secure_summary">Empêcher les autres applications de prendre des captures d\'écran d\'Anyone VPN</string>
     <string name="pref_flag_secure_title">Sécurité de l\'écran</string>
-    <string name="root_warning">AnyoneBot a détecté que votre appareil est rooté, ce qui peut entraîner des problèmes de sécurité.</string>
+    <string name="root_warning">Anyone VPN a détecté que votre appareil est rooté, ce qui peut entraîner des problèmes de sécurité.</string>
     <string name="pref_detect_root_summary">Avertir au démarrage si les droits d\'accès root sont activés sur cet appareil</string>
     <string name="pref_detect_root_title">Détection root</string>
 
-    <string name="open_anyonebot_to_connect_to_anon">Ouvrez AnyoneBot pour vous connecter à Anon</string>
+    <string name="open_anyonevpn_to_connect_to_anon">Ouvrez Anyone VPN pour vous connecter à Anon</string>
 
-    <string name="status_starting_up">AnyoneBot démarre…</string>
+    <string name="status_starting_up">Anyone VPN démarre…</string>
     <string name="status_activated">Connecté au réseau Anyone</string>
-    <string name="status_disabled">AnyoneBot est désactivé</string>
-    <string name="status_shutting_down">AnyoneBot est en cours d\'extinction</string>
+    <string name="status_disabled">Anyone VPN est désactivé</string>
+    <string name="status_shutting_down">Anyone VPN est en cours d\'extinction</string>
     <string name="couldn_t_start_anon_process_">"Impossible de démarrer le processus anon: "</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Vos paramètres ReachableAddresses (adresses accessibles) ont causé une exception !</string>
     <string name="your_relay_settings_caused_an_exception_">Vos paramètres de relais ont causé une exception !</string>

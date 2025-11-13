@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">AnyoneBot</string>
-  <string name="app_description">AnyoneBot shia wane a\'yataaya maliasat, akaalinjia tü wane a\'yataayaakalüirua süpüla anainjainjatüin shia\'yataaya. AnyoneBot a\'yataasü sulu\'u \"internet\" süka wane kanüliasü Anon je süchikijee sunujuluin sulu\'u wane kojuyasü \"computador\" sainküsü mmakat. Anon maliasat je taashisü süpüla sa\'inmajüin pia suulia eekai mojulaweein pümüin wanaa sümaa pi\'yataain sulu\'u \"internet\".</string>
+  <string name="app_name">Anyone VPN</string>
+  <string name="app_description">Anyone VPN shia wane a\'yataaya maliasat, akaalinjia tü wane a\'yataayaakalüirua süpüla anainjainjatüin shia\'yataaya. Anyone VPN a\'yataasü sulu\'u \"internet\" süka wane kanüliasü Anon je süchikijee sunujuluin sulu\'u wane kojuyasü \"computador\" sainküsü mmakat. Anon maliasat je taashisü süpüla sa\'inmajüin pia suulia eekai mojulaweein pümüin wanaa sümaa pi\'yataain sulu\'u \"internet\".</string>
   <string name="menu_settings">Anaata</string>
   <string name="menu_log">Sünüliamajatu</string>
   <string name="menu_stop">Püsha´walaa</string>
@@ -10,17 +10,17 @@
   <string name="main_layout_upload">Alika\'a </string>
   <string name="button_about">Jautoupuna</string>
   <string name="menu_exit">Ajuitia</string>
-  <string name="wizard_details_msg">AnyoneBot jia wane ayataya  kalúús Anon, Go-Tun2Socks y LibEvent. apus  wopúú VPN, un proxy HTTP Connect local (HTTPS jumuiwuaya\'a 8118) je wanee proxy SOCKS (9050) julúú atalaya Anon.</string>
+  <string name="wizard_details_msg">Anyone VPN jia wane ayataya  kalúús Anon, Go-Tun2Socks y LibEvent. apus  wopúú VPN, un proxy HTTP Connect local (HTTPS jumuiwuaya\'a 8118) je wanee proxy SOCKS (9050) julúú atalaya Anon.</string>
   <string name="pref_general_group">Jupushu\'aa.</string>
-  <string name="pref_start_boot_title">Achüwuaja AnyoneBot juttianain.</string>
-  <string name="pref_start_boot_summary">Puchuaja AnyoneBot juma Anon juttianainje jupula Android.</string>
+  <string name="pref_start_boot_title">Achüwuaja Anyone VPN juttianain.</string>
+  <string name="pref_start_boot_summary">Puchuaja Anyone VPN juma Anon juttianainje jupula Android.</string>
   <string name="pref_node_configuration">Anatiaa node </string>
   <string name="pref_node_configuration_summary">Shia anatia anaskal jupula erajunuin pia.</string>
   <string name="pref_entrance_node">Nodos jupula ekerolaa</string>
   <string name="pref_entrance_node_summary">Juchikana\'in ta japirra,  juma\'in paa, erre ein jipia jupula juwotnajüin palajaná</string>
   <string name="pref_entrance_node_dialog">Pikeroto jumana nodo.</string>
   <string name="pref_allow_background_starts_title">Pülatirru\'in juttianaín  piantualeya </string>
-  <string name="pref_allow_background_starts_summary">Kettirria jut´tirruín tu aplicaciónka jupula jumuin numuin AnyoneBot nuchuajainjatú  jupushuaya  ainjüleka </string>
+  <string name="pref_allow_background_starts_summary">Kettirria jut´tirruín tu aplicaciónka jupula jumuin numuin Anyone VPN nuchuajainjatú  jupushuaya  ainjüleka </string>
   <string name="pref_proxy_title"> network Proxy  ajuitúsú(optional)</string>
   <string name="pref_proxy_type_title">Wanee proxy ajuitüsü</string>
   <string name="pref_proxy_type_summary">Muinjat jukuaipa  jupula proxy: HTTP, HTTPS, SOCKS4, SOCKS5</string>
@@ -125,7 +125,7 @@
   <string name="start_anon_again_for_finish_the_process">püttira Anon süchuküa süpüla ajattüin tü sükuaipakat.</string>
   <string name="confirm_service_deletion">apirüinjat sujütchajaya tü süpülajatükat</string>
   <string name="service_type">jetsü tü süpülajatka</string>
-  <string name="please_restart_to_enable_the_changes">pülejera süchukua AnyoneBot süpüla sujutalüin tü shiratiakat.</string>
+  <string name="please_restart_to_enable_the_changes">pülejera süchukua Anyone VPN süpüla sujutalüin tü shiratiakat.</string>
   <string name="share_as_qr">asülajiranuin maka sümuin QR</string>
   <string name="disable">pakatüin</string>
   <string name="enable">alaatiria</string>
@@ -193,16 +193,16 @@ punjulaa apps, jupula  anaijatuin  pu kachuerrase</string>
   <string name="action_activate">Painjamata.</string>
   <string name="volunteer_status_title">Joluu anashatas wamuin ka pukalijaín waya</string>
   <string name="title_choose_apps">Apawúa  aplikación</string>
-  <string name="app_suggested_subtitle">AnyoneBot anas jukaipa juma alwuatawüa je eerrajilawua  wapushua \'ya</string>
+  <string name="app_suggested_subtitle">Anyone VPN anas jukaipa juma alwuatawüa je eerrajilawua  wapushua \'ya</string>
   <string name="apps_suggested_title">Ain\'nes juka tu aplicación ka</string>
   <string name="apps_other_apps">Wanejet aplikación</string>
 
-    <string name="status_starting_up">Eepeja\'asu AnyoneBot&#8230;</string>
+    <string name="status_starting_up">Eepeja\'asu Anyone VPN&#8230;</string>
     <string name="status_activated">Antirrawaas jumaa atalaya Anyone</string>
-    <string name="status_disabled">Yokutusu\'u AnyoneBot</string>
-    <string name="open_anyonebot_to_connect_to_anon">Pe\'erulaa  AnyoneBot jupula  puyata ín juma Anon.</string>
-    <string name="status_shutting_down">Yokuuter AnyoneBot</string>
-    <string name="config_invalid">sükumajia AnyoneBot maliaasat</string>
+    <string name="status_disabled">Yokutusu\'u Anyone VPN</string>
+    <string name="open_anyonevpn_to_connect_to_anon">Pe\'erulaa  Anyone VPN jupula  puyata ín juma Anon.</string>
+    <string name="status_shutting_down">Yokuuter Anyone VPN</string>
+    <string name="config_invalid">sükumajia Anyone VPN maliaasat</string>
 
     <string name="couldn_t_start_anon_process_">Nojotsü o\'ottuin sukuaipa shiatain anon</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Tü anatiaaka   erree juntunuín  casaa, nojots jainrre\'in</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot е слободна прокси апликација која им овозможува на другите апликации да го користат Интернетот побезбедно. AnyoneBot користи Anon за енкриптирање на интернет сообраќајот, а потоа го сокрива и го потскокнува преку серија компјутери низ целиот свет. Anon е слободен софтвер и отворена мрежа кој ви помага да се одбарните од форми на надзор на мрежата кој им се заканува на вашата лична слобода и приватност, доверливите деловни активности и односи, и државната безбедност позната како анализа на сообраќајот.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN е слободна прокси апликација која им овозможува на другите апликации да го користат Интернетот побезбедно. Anyone VPN користи Anon за енкриптирање на интернет сообраќајот, а потоа го сокрива и го потскокнува преку серија компјутери низ целиот свет. Anon е слободен софтвер и отворена мрежа кој ви помага да се одбарните од форми на надзор на мрежата кој им се заканува на вашата лична слобода и приватност, доверливите деловни активности и односи, и државната безбедност позната како анализа на сообраќајот.</string>
     <string name="menu_settings">Поставки</string>
     <string name="menu_log">Дневник</string>
     <string name="menu_stop">Запри</string>
@@ -11,11 +11,11 @@
     <string name="button_about">За</string>
     <string name="menu_exit">Излез</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot e апликација со отворен код која содржи Anon, Go-Tun2Socks, и LibEvent. Овозможува локален HTTP прокси (8118) и SOCKS прокси (9050) во Anon мрежата. AnyoneBot исто така има можност, на уред со root пристап, да го испраќа целиот интернет сообраќај преку Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN e апликација со отворен код која содржи Anon, Go-Tun2Socks, и LibEvent. Овозможува локален HTTP прокси (8118) и SOCKS прокси (9050) во Anon мрежата. Anyone VPN исто така има можност, на уред со root пристап, да го испраќа целиот интернет сообраќај преку Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Општо</string>
-    <string name="pref_start_boot_title">Стартувај го AnyoneBot на бутирање</string>
-    <string name="pref_start_boot_summary">Автоматски стартувајте го AnyoneBot и поврзете го Anon кога вашиот Android уред ќе се стартува</string>
+    <string name="pref_start_boot_title">Стартувај го Anyone VPN на бутирање</string>
+    <string name="pref_start_boot_summary">Автоматски стартувајте го Anyone VPN и поврзете го Anon кога вашиот Android уред ќе се стартува</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Отпечатоци од прсти, прекари, држави и адреси за првиот скок.</string>
     <string name="pref_entrance_node_dialog">Внесете влезни јазли</string>
     <string name="pref_allow_background_starts_title">Дозволи позадинско стартување</string>
-    <string name="pref_allow_background_starts_summary">Дозволи било која апликација да му каже на AnyoneBot да го стартува Anon и сервисите поврзани со него</string>
+    <string name="pref_allow_background_starts_summary">Дозволи било која апликација да му каже на Anyone VPN да го стартува Anon и сервисите поврзани со него</string>
     <string name="pref_proxy_title">Излезен прокси на мрежата (незадолжително)</string>
     <string name="pref_proxy_type_title">Тип на излезен прокси</string>
     <string name="pref_proxy_type_summary">Протокол за користење на прокси-сервер: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Стартувај го Anon повторно да го заврши процесот</string>
     <string name="confirm_service_deletion">Потврди бришење на услугата</string>
     <string name="service_type">Тип на услуга</string>
-    <string name="please_restart_to_enable_the_changes">Ве молиме стартувајте го повторно AnyoneBot за да се овозможат промените</string>
+    <string name="please_restart_to_enable_the_changes">Ве молиме стартувајте го повторно Anyone VPN за да се овозможат промените</string>
     <string name="share_as_qr">Сподели како QR</string>
     <string name="disable">Оневозможи</string>
     <string name="enable">Овозможи</string>
@@ -146,9 +146,9 @@
     <string name="connect">Поврзи</string>
     <string name="drawer_open">Отвори</string>
 
-    <string name="status_starting_up">AnyoneBot се стартува…</string>
+    <string name="status_starting_up">Anyone VPN се стартува…</string>
     <string name="status_activated">Поврзан на мрежата на Anyone</string>
-    <string name="status_disabled">AnyoneBot е деактивиран</string>
+    <string name="status_disabled">Anyone VPN е деактивиран</string>
     <string name="couldn_t_start_anon_process_">Не може да се започне anon-процесот:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Вашите поставки за достапните адреси предизвикаа грешка!</string>
     <string name="your_relay_settings_caused_an_exception_">Вашите поставки за реле предизвикаа грешка!</string>

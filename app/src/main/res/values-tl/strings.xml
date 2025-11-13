@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
+    <string name="app_name">Anyone VPN</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_log">Tala</string>
     <string name="menu_stop">Ihinto</string>
@@ -13,7 +13,7 @@
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Pangkalahatan</string>
     <string name="pref_start_boot_title">Umpisahan ang Orboot sa Boot</string>
-    <string name="pref_start_boot_summary">Kusang umpisahan ang AnyoneBot at kumonekta sa Anon sa pag bukas ng iyong Android Device</string>
+    <string name="pref_start_boot_summary">Kusang umpisahan ang Anyone VPN at kumonekta sa Anon sa pag bukas ng iyong Android Device</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -26,7 +26,7 @@
     <string name="pref_entrance_node_summary">Fingerprints, nicks, mga bansa at mga address para sa unang lukso</string>
     <string name="pref_entrance_node_dialog">Pumasok sa Entrance Nodes</string>
     <string name="pref_allow_background_starts_title">Pahintulutan na magsimula sa background</string>
-    <string name="pref_allow_background_starts_summary">Hayaan ang kahit anong app na sabihin kay AnyoneBot na magsimula ng Anon at anumang malapit na serbisyo.</string>
+    <string name="pref_allow_background_starts_summary">Hayaan ang kahit anong app na sabihin kay Anyone VPN na magsimula ng Anon at anumang malapit na serbisyo.</string>
     <string name="pref_proxy_title">Outbound Network Proxy (Optional)</string>
     <string name="pref_proxy_type_title">Outbound Proxy Type</string>
     <string name="pref_proxy_type_summary">Mga protocol na gagamitin para sa proxy server: HTTP, HTTPS, Socks4, Socks5</string>
@@ -89,9 +89,9 @@
     <string name="menu_hidden_services">Mga Serbisyo ng Anon</string>
     <string name="connection_custom">Custom</string>
 
-    <string name="status_starting_up">Nagsisimula na ang AnyoneBot…</string>
+    <string name="status_starting_up">Nagsisimula na ang Anyone VPN…</string>
     <string name="status_activated">Konektado sa Anyone network</string>
-    <string name="status_disabled">Naka-deactivate ang AnyoneBot</string>
+    <string name="status_disabled">Naka-deactivate ang Anyone VPN</string>
     <string name="couldn_t_start_anon_process_">Hindi ma umpisahan ang proseso ng anon:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Ang iyong ReachableAddresses settings ay nag sanhi ng exception!</string>
     <string name="your_relay_settings_caused_an_exception_">Ang iyong relay settings ay nag sanhi ng exception!</string>

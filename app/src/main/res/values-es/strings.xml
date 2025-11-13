@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot es una aplicación libre de proxy (interpuesto) que faculta a otras aplicaciones para usar Internet de forma más segura. AnyoneBot utiliza Anon para cifrar su tráfico de Internet, y luego lo oculta rebotándolo a través de una serie de computadoras por todo el mundo. Anon es software libre y una red abierta que le ayuda a defenderse contra una forma de vigilancia de red conocida como análisis de tráfico que amenaza la libertad y la privacidad personales, las actividades y relaciones comerciales confidenciales, y la seguridad de estado.</string>
-    <string name="status_starting_up">AnyoneBot está iniciandose…</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN es una aplicación libre de proxy (interpuesto) que faculta a otras aplicaciones para usar Internet de forma más segura. Anyone VPN utiliza Anon para cifrar su tráfico de Internet, y luego lo oculta rebotándolo a través de una serie de computadoras por todo el mundo. Anon es software libre y una red abierta que le ayuda a defenderse contra una forma de vigilancia de red conocida como análisis de tráfico que amenaza la libertad y la privacidad personales, las actividades y relaciones comerciales confidenciales, y la seguridad de estado.</string>
+    <string name="status_starting_up">Anyone VPN está iniciandose…</string>
     <string name="status_activated">Conectado a la red Anyone</string>
-    <string name="status_disabled">AnyoneBot está desactivado</string>
-    <string name="status_shutting_down">AnyoneBot se está cerrando</string>
+    <string name="status_disabled">Anyone VPN está desactivado</string>
+    <string name="status_shutting_down">Anyone VPN se está cerrando</string>
     <string name="couldn_t_start_anon_process_">"No se pudo iniciar el proceso de anon: "</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">¡Sus \'Reglas de direcciones accesibles\' han producido una excepción!</string>
     <string name="your_relay_settings_caused_an_exception_">¡La configuración de su repetidor ha producido una excepción!</string>

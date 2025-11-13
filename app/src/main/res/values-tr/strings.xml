@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot başka uygulamaların İnterneti daha güvenli olarak kullanmasını sağlayan özgür bir vekil sunucu uygulamasıdır. AnyoneBot, Anon kullanarak İnternet trafiğinizi şifreler ve dünya üzerindeki pek çok farklı bilgisayardan geçirerek gizler. Anon kişisel özgürlüğünüze ve bilgilerinize, gizli ticari işlemlerinize ve ilişkilerinize, devlet güvenliğine karşı tehdit oluşturan ve trafik analizi olarak bilinen ağ izlemelerine karşı koruma sağlayan bir özgür yazılım ve açık ağdır.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN başka uygulamaların İnterneti daha güvenli olarak kullanmasını sağlayan özgür bir vekil sunucu uygulamasıdır. Anyone VPN, Anon kullanarak İnternet trafiğinizi şifreler ve dünya üzerindeki pek çok farklı bilgisayardan geçirerek gizler. Anon kişisel özgürlüğünüze ve bilgilerinize, gizli ticari işlemlerinize ve ilişkilerinize, devlet güvenliğine karşı tehdit oluşturan ve trafik analizi olarak bilinen ağ izlemelerine karşı koruma sağlayan bir özgür yazılım ve açık ağdır.</string>
     <string name="menu_settings">Ayarlar</string>
     <string name="menu_log">Günlük</string>
     <string name="menu_stop">Durdur</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Hakkında</string>
     <string name="menu_exit">Çıkış</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot; Anon, Go-Tun2Socks, LibEvent yapılarını kapsayan açık kaynaklı bir uygulamadır. Anon ağına bağlanmak için bir yerel HTTP vekil sunucu (8118) ve bir SOCKS vekil sunucu (9050) sağlar.</string>
+    <string name="wizard_details_msg">Anyone VPN; Anon, Go-Tun2Socks, LibEvent yapılarını kapsayan açık kaynaklı bir uygulamadır. Anon ağına bağlanmak için bir yerel HTTP vekil sunucu (8118) ve bir SOCKS vekil sunucu (9050) sağlar.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Genel</string>
-    <string name="pref_start_boot_title">AnyoneBot Açılışta Başlatılsın</string>
-    <string name="pref_start_boot_summary">Android aygıtınızı açtığınızda AnyoneBot otomatik olarak başlatılarak Anon ağına bağlanılır</string>
+    <string name="pref_start_boot_title">Anyone VPN Açılışta Başlatılsın</string>
+    <string name="pref_start_boot_summary">Android aygıtınızı açtığınızda Anyone VPN otomatik olarak başlatılarak Anon ağına bağlanılır</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">İlk sıçrama noktası için parmak izleri, kısaltmalar, ülkeler ve adresler</string>
     <string name="pref_entrance_node_dialog">Giriş Düğümlerini Yazın</string>
     <string name="pref_allow_background_starts_title">Arka planda başlatmaya izin ver</string>
-    <string name="pref_allow_background_starts_summary">Herhangi bir uygulamanın AnyoneBot aracılığıyla Anon ve ilgili hizmetleri başlatmasını sağlar</string>
+    <string name="pref_allow_background_starts_summary">Herhangi bir uygulamanın Anyone VPN aracılığıyla Anon ve ilgili hizmetleri başlatmasını sağlar</string>
     <string name="pref_proxy_title">Giden Ağ Sunucusu (İsteğe Bağlı)</string>
     <string name="pref_proxy_type_title">Giden Vekil Sunucu Türü</string>
     <string name="pref_proxy_type_summary">Vekil sunucuda kullanılacak ağ iletişim kuralları: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">İşlemi tamamlamak için Anon uygulamasını yeniden başlatın</string>
     <string name="confirm_service_deletion">Hizmeti Silmeyi Onayla</string>
     <string name="service_type">Hizmet Türü</string>
-    <string name="please_restart_to_enable_the_changes">Değişiklikleri etkinleştirmek için AnyoneBot uygulamasını yeniden başlatın</string>
+    <string name="please_restart_to_enable_the_changes">Değişiklikleri etkinleştirmek için Anyone VPN uygulamasını yeniden başlatın</string>
     <string name="share_as_qr">QR Olarak Paylaş</string>
     <string name="disable">Devre Dışı Bırak</string>
     <string name="enable">Etkinleştir</string>
@@ -197,8 +197,8 @@
     <string name="apps_suggested_title">Önerilen Uygulamalar</string>
     <string name="power_user_mode">Uzman Kullanıcı Modu</string>
     <string name="action_activate">Etkinleştir</string>
-    <string name="app_suggested_subtitle">AnyoneBot en iyi mesajlaşma ve sosyal medya uygulamalarıyla çalışır.</string>
-    <string name="power_user_description">Anon\'a aşina olan kullanıcılar için. AnyoneBot\'u VPN ayarı olmadan başlatmanıza izin verir ve açık SOCKS ve HTTP bağlantı noktalarını gösterir</string>
+    <string name="app_suggested_subtitle">Anyone VPN en iyi mesajlaşma ve sosyal medya uygulamalarıyla çalışır.</string>
+    <string name="power_user_description">Anon\'a aşina olan kullanıcılar için. Anyone VPN\'u VPN ayarı olmadan başlatmanıza izin verir ve açık SOCKS ve HTTP bağlantı noktalarını gösterir</string>
     <string name="apps_other_apps">Diğer Uygulamalar</string>
     <string name="hide_apps">Uygulamaları ağ izlenmesinden gizleyin ve engellendiklerinde erişim sağlayın.</string>
     <string name="log_copied">Günlük Kopyalandı</string>
@@ -208,7 +208,7 @@
     <string name="asking">SORUYOR…</string>
     <string name="no_internet_title">İnternete bağlan</string>
     <string name="kindness_adjust_title">Ayarlar</string>
-    <string name="no_internet_subtitle">AnyoneBot\'u kullanmak için internet bağlantınızın olması gerekir.</string>
+    <string name="no_internet_subtitle">Anyone VPN\'u kullanmak için internet bağlantınızın olması gerekir.</string>
     <string name="pref_isolate_port_summary">Her hedef bağlantı noktası için farklı bir devre kullanın</string>
     <string name="pref_isolate_port">Hedef bağlantı noktaları yalıtılsın</string>
     <string name="pref_isolate_protocol">İstemci iletişim kuralları yalıtılsın</string>
@@ -219,18 +219,18 @@
     <string name="option_only_when_charging">Yalnızca şarj olurken</string>
     <string name="menu_more">Daha fazla</string>
     <string name="setting_padding">Yastıklama</string>
-    <string name="pref_flag_secure_summary">Diğer uygulamaların AnyoneBot\'un ekran görüntülerini almasını engelleyin</string>
+    <string name="pref_flag_secure_summary">Diğer uygulamaların Anyone VPN\'un ekran görüntülerini almasını engelleyin</string>
     <string name="connection_direct">Doğrudan</string>
     <string name="connection_custom">Özel</string>
     <string name="pref_flag_secure_title">Ekran Güvenliği</string>
-    <string name="root_warning">AnyoneBot, aygıtınızın root yapılmış olduğunu tespit etti, bu güvenlik sorunlarına neden olabilir.</string>
+    <string name="root_warning">Anyone VPN, aygıtınızın root yapılmış olduğunu tespit etti, bu güvenlik sorunlarına neden olabilir.</string>
     <string name="pref_detect_root_title">Root Algılama</string>
     <string name="pref_detect_root_summary">Bu aygıtta root izinleri etkinleştirilmişse başlangıçta uyar</string>
 
-    <string name="status_starting_up">AnyoneBot başlatılıyor…</string>
+    <string name="status_starting_up">Anyone VPN başlatılıyor…</string>
     <string name="status_activated">Anyone ağına bağlandı</string>
-    <string name="status_disabled">AnyoneBot devre dışı bırakıldı</string>
-    <string name="status_shutting_down">AnyoneBot hizmeti kapatılıyor</string>
+    <string name="status_disabled">Anyone VPN devre dışı bırakıldı</string>
+    <string name="status_shutting_down">Anyone VPN hizmeti kapatılıyor</string>
     <string name="couldn_t_start_anon_process_">Anon işlemi başlatılamadı</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">ErişilebilirAdresleriniz ayarlarınız bir istisnaya yol açtı!</string>
     <string name="your_relay_settings_caused_an_exception_">Anon aktarıcı ayarlarınız bir istisnaya yol açtı!</string>

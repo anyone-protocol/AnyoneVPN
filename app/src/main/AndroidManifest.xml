@@ -32,7 +32,7 @@
     </queries>
     
     <application
-        android:name=".AnyoneBotApp"
+        android:name=".AnyoneVpnApp"
         android:allowBackup="false"
         android:allowClearUserData="true"
         android:configChanges="locale|orientation|screenSize"
@@ -44,11 +44,11 @@
         android:hasFragileUserData="false"
         android:taskAffinity="">
 
-        <activity android:name=".AnyoneBotActivity"
+        <activity android:name=".AnyoneVpnActivity"
             android:excludeFromRecents="false"
 
             android:launchMode="singleTask"
-            android:theme="@style/AnyoneBotActivityTheme"
+            android:theme="@style/AnyoneVpnActivityTheme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,14 +61,14 @@
             android:label="@string/hidden_services">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AnyoneBotActivity" />
+                android:value=".AnyoneVpnActivity" />
         </activity>
 
         <activity android:name=".ui.clientauth.ClientAuthActivity"
             android:label="@string/v3_client_auth_activity_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AnyoneBotActivity"/>
+                android:value=".AnyoneVpnActivity"/>
         </activity>
 
         <activity
@@ -91,7 +91,7 @@
             android:exported="false"/>
 
         <receiver
-            android:name=".service.StartTorReceiver"
+            android:name=".service.StartAnonReceiver"
             android:exported="true"
             tools:ignore="ExportedReceiver">
             <intent-filter>
@@ -112,7 +112,7 @@
         </receiver>
 
         <service
-            android:name=".service.AnyoneBotService"
+            android:name=".service.AnyoneVpnService"
             android:enabled="true"
             android:permission="android.permission.BIND_VPN_SERVICE"
             android:foregroundServiceType="dataSync"
@@ -124,7 +124,7 @@
         </service>
 
         <service
-            android:name=".ui.AnyoneBotTileService"
+            android:name=".ui.AnyoneVpnTileService"
             android:label="@string/app_name"
             android:icon="@drawable/ic_launcher"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"

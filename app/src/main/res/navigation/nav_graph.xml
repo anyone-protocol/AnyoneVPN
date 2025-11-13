@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/connectFragment"
-        android:name="io.anyone.anyonebot.ConnectFragment"
+        android:name="io.anyone.anyonevpn.ConnectFragment"
         android:label="fragment_connect"
         tools:layout="@layout/fragment_connect" />
     <fragment
         android:id="@+id/moreFragment"
-        android:name="io.anyone.anyonebot.MoreFragment"
+        android:name="io.anyone.anyonevpn.MoreFragment"
         android:label="fragment_more"
         tools:layout="@layout/fragment_more" />
 

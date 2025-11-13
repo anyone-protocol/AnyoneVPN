@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot је бесплатна прокси апликација која даје моћ другим апликацијама да безбедније користе интернет. AnyoneBot користи Тор за шифровање вашег интернет саобраћаја и онда га скрива слањем кроз низ рачунара широм света. Тор је слободан софтвер и отворена мрежа која помаже да се одбраните од разних облика надзора мрежа који угрожавају личну слободу и приватност, поверљиве пословне активности и личне односе и државне безбедности познате као анализа саобраћаја.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN је бесплатна прокси апликација која даје моћ другим апликацијама да безбедније користе интернет. Anyone VPN користи Тор за шифровање вашег интернет саобраћаја и онда га скрива слањем кроз низ рачунара широм света. Тор је слободан софтвер и отворена мрежа која помаже да се одбраните од разних облика надзора мрежа који угрожавају личну слободу и приватност, поверљиве пословне активности и личне односе и државне безбедности познате као анализа саобраћаја.</string>
     <string name="menu_settings">Подешавања</string>
     <string name="menu_log">Логови</string>
     <string name="menu_stop">Заустави</string>
@@ -11,11 +11,11 @@
     <string name="button_about">О нама</string>
     <string name="menu_exit">Излаз</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot је апликација отвореног кода која садржи Тор, Go-Tun2Socks и LibEvent. Омогућава локални HTTP proxy (8118) и SOCKS proxy (9050) у Тор мрежу. AnyoneBot такође има могућност да на рутованом уређају шаље сав интернет саобраћај преко Тор-а.</string>
+    <string name="wizard_details_msg">Anyone VPN је апликација отвореног кода која садржи Тор, Go-Tun2Socks и LibEvent. Омогућава локални HTTP proxy (8118) и SOCKS proxy (9050) у Тор мрежу. Anyone VPN такође има могућност да на рутованом уређају шаље сав интернет саобраћај преко Тор-а.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Опште</string>
-    <string name="pref_start_boot_title">Покрени AnyoneBot при покретању уређаја</string>
-    <string name="pref_start_boot_summary">Аутоматски покрените AnyoneBot и конектујте се са Тор мрежом када се упали Ваш Андроид уређај.</string>
+    <string name="pref_start_boot_title">Покрени Anyone VPN при покретању уређаја</string>
+    <string name="pref_start_boot_summary">Аутоматски покрените Anyone VPN и конектујте се са Тор мрежом када се упали Ваш Андроид уређај.</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Отисци прстију, надимци, државе и адресе првог скока</string>
     <string name="pref_entrance_node_dialog">Унесите почетне чворове</string>
     <string name="pref_allow_background_starts_title">Дозволи Покретање у позадини</string>
-    <string name="pref_allow_background_starts_summary">Дозволи било којој апликацији да нареди AnyoneBotу да покрене Тор и његове сервисе</string>
+    <string name="pref_allow_background_starts_summary">Дозволи било којој апликацији да нареди Anyone VPNу да покрене Тор и његове сервисе</string>
     <string name="pref_proxy_title">Мрежни прокси за одлазећи промет (Необавезно)</string>
     <string name="pref_proxy_type_title">Тип проксија за одлазећи промет</string>
     <string name="pref_proxy_type_summary">Протокол који ће се користити за прокси сервер: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Поново покрените Тор да бисте довршили процес</string>
     <string name="confirm_service_deletion">Потрврди брисанје услуге</string>
     <string name="service_type">Тип Услуге</string>
-    <string name="please_restart_to_enable_the_changes">Молимо покрените поново AnyoneBot ради примењивања промена</string>
+    <string name="please_restart_to_enable_the_changes">Молимо покрените поново Anyone VPN ради примењивања промена</string>
     <string name="share_as_qr">Дели као QR код</string>
     <string name="disable">Онемогући</string>
     <string name="enable">Омогући</string>
@@ -145,9 +145,9 @@
     <string name="connection_direct">Директни</string>
     <string name="connection_custom">Custom</string>
 
-    <string name="status_starting_up">AnyoneBot се покреће…</string>
+    <string name="status_starting_up">Anyone VPN се покреће…</string>
     <string name="status_activated">Повезан са Anyone мрежом</string>
-    <string name="status_disabled">AnyoneBot је деактивиран</string>
+    <string name="status_disabled">Anyone VPN је деактивиран</string>
     <string name="couldn_t_start_anon_process_">Није могуће покренути anon процес:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Ваше ReachableAddresses поставке су изазвале изузетак!</string>
     <string name="your_relay_settings_caused_an_exception_">Ваше поставке релеја су изазвале изузетак!</string>

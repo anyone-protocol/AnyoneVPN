@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">Az AnyoneBot egy ingyenes proxy alkalmazás, ami képessé tesz alkalmazásokat, hogy biztonságosabban használhassák az internetet. Az AnyoneBot Anon-t használ, hogy titkosítsa az internetforgalmadat és elrejtse azáltal, hogy pattogtatja számítógépek sorozatain keresztül a világ körül. A Anon ingyenes szoftver és nyitott hálózat, ami segít megvédeni a hálózati felügyelettől, ami fenyegeti a személyi szabadságot és magánéletet, a bizalmas céges tevékenységeket és kapcsolatokat, és állambiztonság címén a forgalomelemzéstől.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Az Anyone VPN egy ingyenes proxy alkalmazás, ami képessé tesz alkalmazásokat, hogy biztonságosabban használhassák az internetet. Az Anyone VPN Anon-t használ, hogy titkosítsa az internetforgalmadat és elrejtse azáltal, hogy pattogtatja számítógépek sorozatain keresztül a világ körül. A Anon ingyenes szoftver és nyitott hálózat, ami segít megvédeni a hálózati felügyelettől, ami fenyegeti a személyi szabadságot és magánéletet, a bizalmas céges tevékenységeket és kapcsolatokat, és állambiztonság címén a forgalomelemzéstől.</string>
     <string name="menu_settings">Beállítások</string>
     <string name="menu_log">Log</string>
     <string name="menu_stop">Leállítás</string>
@@ -11,11 +11,11 @@
     <string name="button_about">Névjegy</string>
     <string name="menu_exit">Kilépés</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">Az AnyoneBot egy nyilt forráskódú alkalmazás ami Anon, Go-Tun2Socks, és LibEvent alkalmazásokat tartalmaz. Helyi  HTTP proxyt (8118) és  SOCKS proxyt (9050) biztosít a Anon hálózatba. Az AnyoneBot továbbá képes arra, hogy rootolt eszközön a teljes internet forgalmat keresztül küldje a Anon-on.</string>
+    <string name="wizard_details_msg">Az Anyone VPN egy nyilt forráskódú alkalmazás ami Anon, Go-Tun2Socks, és LibEvent alkalmazásokat tartalmaz. Helyi  HTTP proxyt (8118) és  SOCKS proxyt (9050) biztosít a Anon hálózatba. Az Anyone VPN továbbá képes arra, hogy rootolt eszközön a teljes internet forgalmat keresztül küldje a Anon-on.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Általános</string>
-    <string name="pref_start_boot_title">Az AnyoneBot indítása rendszerindításkor</string>
-    <string name="pref_start_boot_summary">Automatikusan elindítja az AnyoneBot-ot és csatlakozik a hálózathoz, amikor az Android eszköz betölt</string>
+    <string name="pref_start_boot_title">Az Anyone VPN indítása rendszerindításkor</string>
+    <string name="pref_start_boot_summary">Automatikusan elindítja az Anyone VPN-ot és csatlakozik a hálózathoz, amikor az Android eszköz betölt</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Ujjlenyomatok, becenevek, országok és címek az első ugráshoz</string>
     <string name="pref_entrance_node_dialog">Belépő csomópontok megadása</string>
     <string name="pref_allow_background_starts_title">Háttérbeli indulások engedélyezése</string>
-    <string name="pref_allow_background_starts_summary">Bármely alkalmazás közölheti az AnyoneBot-tal, hogy indítsa a Anon-t és a kapcsolódó szolgáltatásokat</string>
+    <string name="pref_allow_background_starts_summary">Bármely alkalmazás közölheti az Anyone VPN-tal, hogy indítsa a Anon-t és a kapcsolódó szolgáltatásokat</string>
     <string name="pref_proxy_title">Kimenő hálózati proxy (választható)</string>
     <string name="pref_proxy_type_title">Proxy típus</string>
     <string name="pref_proxy_type_summary">A Proxy szerver által használandó protokoll: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Indítsa el a Anon-t még egyszer a befejezéshez</string>
     <string name="confirm_service_deletion">Szolgáltatás törlés jóváhagyása</string>
     <string name="service_type">Szolgáltatás típus</string>
-    <string name="please_restart_to_enable_the_changes">Kérlek indítsd újra az AnyoneBot-ot a változások engedélyezéséhez</string>
+    <string name="please_restart_to_enable_the_changes">Kérlek indítsd újra az Anyone VPN-ot a változások engedélyezéséhez</string>
     <string name="share_as_qr">Megosztás QR-ként</string>
     <string name="disable">Kikapcsol</string>
     <string name="enable">Engedélyezés</string>
@@ -154,10 +154,10 @@
     <string name="license">Licensz:</string>
     <string name="connected_title">Csatlakozva</string>
 
-    <string name="status_starting_up">Az AnyoneBot indul…</string>
+    <string name="status_starting_up">Az Anyone VPN indul…</string>
     <string name="status_activated">Csatlakozva a Anyone hálózathoz</string>
-    <string name="status_disabled">Az AnyoneBot deaktiválva</string>
-    <string name="status_shutting_down">A AnyoneBot leáll</string>
+    <string name="status_disabled">Az Anyone VPN deaktiválva</string>
+    <string name="status_shutting_down">A Anyone VPN leáll</string>
     <string name="couldn_t_start_anon_process_">Nem indítható el a anon folyamat:</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Az elérhető címeid beállításai kivételt okoztak!</string>
     <string name="your_relay_settings_caused_an_exception_">Az átjátszód beállításai kivételt okoztak!</string>

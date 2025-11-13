@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot është një aplikacion i lirë ndërmjetësish që i bën aplikacionet e tjera ta përdorin internetin në mënyrë më të siguruar. AnyoneBot-i përdor Anon-in për të fshehtëzuar trafikun tuaj Internet dhe mandej e fsheh duke e kaluar përmes një vargu kompjuterash nëpër botë. Anon-i është <em>software</em> i lirë dhe një rrjet i hapët që ju ndihmon të mbroheni nga një formë survejimi rrjetesh e cila kërcënon lirinë dhe privatësinë personale, veprimtarinë dhe marrëdhëniet rezervat në biznesi dhe sigurinë shtetërore, e njohur si analizim trafiku.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN është një aplikacion i lirë ndërmjetësish që i bën aplikacionet e tjera ta përdorin internetin në mënyrë më të siguruar. Anyone VPN-i përdor Anon-in për të fshehtëzuar trafikun tuaj Internet dhe mandej e fsheh duke e kaluar përmes një vargu kompjuterash nëpër botë. Anon-i është <em>software</em> i lirë dhe një rrjet i hapët që ju ndihmon të mbroheni nga një formë survejimi rrjetesh e cila kërcënon lirinë dhe privatësinë personale, veprimtarinë dhe marrëdhëniet rezervat në biznesi dhe sigurinë shtetërore, e njohur si analizim trafiku.</string>
     <string name="menu_settings">Rregullime</string>
     <string name="menu_stop">Ndale</string>
     <string name="menu_about">Mbi</string>
@@ -40,11 +40,11 @@
     <string name="msg_taking_too_long">Kjo duket se po zgjat shumë</string>
     <string name="msg_try_something_else">Provoni diçka tjetër</string>
     <string name="power_user_mode">Mënyra “Përdorues i Regjur”</string>
-    <string name="power_user_description">Për përdorues të familjarizuar me Anon-in. Ju lejon ta nisni AnyoneBot-in pa rregullimin VPN dhe shfaqë porta SOCKS dhe HTTP të hapura</string>
+    <string name="power_user_description">Për përdorues të familjarizuar me Anon-in. Ju lejon ta nisni Anyone VPN-in pa rregullimin VPN dhe shfaqë porta SOCKS dhe HTTP të hapura</string>
     <string name="action_activate">Aktivizoje</string>
     <string name="apps_suggested_title">Aplikacione të Këshilluar</string>
     <string name="apps_other_apps">Aplikacione të Tjera</string>
-    <string name="pref_start_boot_title">Nise AnyoneBot-in që gjatë Nisjes së Kompjuterit</string>
+    <string name="pref_start_boot_title">Nise Anyone VPN-in që gjatë Nisjes së Kompjuterit</string>
     <string name="exit_nodes">Nyja Daljesh</string>
     <string name="confirm">Ripohojeni</string>
     <string name="anon_port">Portë Anon</string>
@@ -75,7 +75,7 @@
     <string name="menu_faq">PBR</string>
     <string name="menu_log">Regjistër</string>
     <string name="main_layout_upload">Ngarkim</string>
-    <string name="wizard_details_msg">AnyoneBot-i është një aplikacion me burim të hapët, që përmban Anon, Go-Tun2Socks dhe LibEvent.AI furnizon një tunel VPN, një ndërmjetës vendor HTTP Connect (HTTPS vetëm në portën 8118) dhe një ndërmjetës SOCKS (9050) te rrjeti Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN-i është një aplikacion me burim të hapët, që përmban Anon, Go-Tun2Socks dhe LibEvent.AI furnizon një tunel VPN, një ndërmjetës vendor HTTP Connect (HTTPS vetëm në portën 8118) dhe një ndërmjetës SOCKS (9050) te rrjeti Anon.</string>
     <string name="pref_node_configuration">Formësim Nyjesh</string>
     <string name="pref_node_configuration_summary">Këto janë rregullime të thelluara që mund të reduktojnë anonimitetin tuaj</string>
     <string name="pref_entrance_node">Nyja Hyrjesh</string>
@@ -110,7 +110,7 @@
     <string name="license">Licencë:</string>
     <string name="pref_dnsport_dialog">Formësim Porte DNS</string>
     <string name="create_a_backup_first">Krijo së pari një kopjeruajtje</string>
-    <string name="please_restart_to_enable_the_changes">Që të hyjnë në fuqi ndryshimet, ju lutemi, rinisni AnyoneBot-in</string>
+    <string name="please_restart_to_enable_the_changes">Që të hyjnë në fuqi ndryshimet, ju lutemi, rinisni Anyone VPN-in</string>
     <string name="share_as_qr">Jepeni si QR</string>
     <string name="pref_prefer_ipv6">Parapëlqe lidhje IPv6</string>
     <string name="app_shortcuts">Aplikacione të ujdisura për Anon</string>
@@ -157,16 +157,16 @@
     <string name="vpn_disabled">VPN e Çaktivizuar</string>
     <string name="menu_new_identity">Identitet i Ri</string>
     <string name="incorrect_solution">Zgjidhje e Pasaktë</string>
-    <string name="pref_start_boot_summary">Nise automatikisht AnyoneBot-in dhe lidhu me Anon-in, kur niset pajisja Android</string>
+    <string name="pref_start_boot_summary">Nise automatikisht Anyone VPN-in dhe lidhu me Anon-in, kur niset pajisja Android</string>
     <string name="pref_entrance_node_summary">Shenja gishtash, nofka, vende dhe adresa për hopin e parë</string>
-    <string name="pref_allow_background_starts_summary">Lejoni çfarëdo aplikacioni t’i thotë AnyoneBot-it të nisë Anon-in dhe shërbime të lidhura me të</string>
+    <string name="pref_allow_background_starts_summary">Lejoni çfarëdo aplikacioni t’i thotë Anyone VPN-it të nisë Anon-in dhe shërbime të lidhura me të</string>
     <string name="strict_nodes_description">Trajtojini rregullimet për Nyje Dalëse si një domosdoshmëri për ngritjen e krejt qarqeve. Kjo mund të dëmtojë funksione, nëse s’është e mundur të prodhohen qarqe me rregullimet tuaja për Nyje Dalëse.</string>
     <string name="pref_use_expanded_notifications">Shfaq te njoftimi vendin dhe adresën IP të nyjës tuaj dalëse Anon, kur dihet</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Lejoni të pranishëm në Wi-Fi-n tuaj, pajisje të lidhura dhe këdo tjetër që mund të lidhet te IP-ja juaj, të hyjnë në</string>
     <string name="pref_socks_summary">Portë te e cila Anon-i ofron ndërmjetësin e vet SOCKS (parazgjedhje: 9050, ose 0 për ta çaktivizuar)</string>
     <string name="pref_http_title">Anon HTTP</string>
     <string name="consider_enable_battery_optimizations">Pa shërbime të strehuara në funksionim, shihni mundësinë e aktivizimit të optimizimeve të baterisë</string>
-    <string name="app_suggested_subtitle">Më mirë se me gjithçka tjetër, AnyoneBot-i funksionon me aplikacione shkëmbimi mesazhesh dhe mediash shoqërore.</string>
+    <string name="app_suggested_subtitle">Më mirë se me gjithçka tjetër, Anyone VPN-i funksionon me aplikacione shkëmbimi mesazhesh dhe mediash shoqërore.</string>
     <string name="secure_your_connection_subtitle">Fshihini aplikacione mbikëqyrjes së rrjetit dhe përfitoni hyrje kur janë të bllokuar.</string>
     <string name="fingerprints_nicks_countries_and_addresses_for_the_last_hop">Shenja gishtash, nofka, vende dhe adresa për hopin e fundit</string>
     <string name="fingerprints_nicks_countries_and_addresses_to_exclude">Shenja gishtash, nofka, vende dhe adresa për t’u përjashtuar</string>
@@ -195,7 +195,7 @@
     <string name="setting_debug">Diagnostiojeni</string>
     <string name="menu_more">Më tepër</string>
     <string name="hide_apps">Fshihni aplikacione nga mbikëqyrje rrjeti dhe përfitoni hyrje, kur janë të bllokuar.</string>
-    <string name="no_internet_subtitle">Që të përdorni AnyoneBot-in, ju duhet një lidhje internet.</string>
+    <string name="no_internet_subtitle">Që të përdorni Anyone VPN-in, ju duhet një lidhje internet.</string>
     <string name="not_sure">Jo i sigurt\?</string>
     <string name="option_only_when_charging">Vetëm kur ngarkohet bateria</string>
     <string name="pref_isolate_port_summary">Përdorni një qark të ndryshëm për çdo portë vendmbërritje</string>
@@ -210,10 +210,10 @@
     <string name="pref_isolate_port">Izolo porta vendmbërritje</string>
     <string name="asking">PO PYETET…</string>
     <string name="pref_flag_secure_title">Siguri Ekrani</string>
-    <string name="root_warning">AnyoneBot-i ka pikasur se është shtënë në dorë kontrolli i pajisjes tuaj, çka mund të shkaktojë probleme sigurie.</string>
+    <string name="root_warning">Anyone VPN-i ka pikasur se është shtënë në dorë kontrolli i pajisjes tuaj, çka mund të shkaktojë probleme sigurie.</string>
     <string name="pref_isolate_protocol_summary">Përdorni një qark të ndryshëm për çdo protokoll lidhjeje</string>
     <string name="pref_reduced_connection_padding_summary">I mbyll më herët lidhjet me relenë dhe dërgon më pak pakete “padding”, për të zvogëluar përdorim të dhënash dhe baterie</string>
-    <string name="pref_flag_secure_summary">Pengo aplikacione të tjerë të bëjnë foto ekrani të AnyoneBot-it</string>
+    <string name="pref_flag_secure_summary">Pengo aplikacione të tjerë të bëjnë foto ekrani të Anyone VPN-it</string>
     <string name="many_ways">Ka mjaft mënyra për të mbërritur te Anon-i. Disa mund të funksionojnë më mirë se të tjerat për ju.</string>
     <string name="relaying">Përdorim Relesh</string>
     <string name="pref_circuit_padding">“Padding” qarku</string>

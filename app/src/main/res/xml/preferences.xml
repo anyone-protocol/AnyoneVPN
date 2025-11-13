@@ -128,7 +128,7 @@
             />
 
         <EditTextPreference
-            android:defaultValue="AnyoneBotRelay"
+            android:defaultValue="AnyoneVpnRelay"
             android:dialogTitle="@string/enter_a_custom_relay_nickname"
             android:key="pref_or_nickname"
             android:summary="@string/the_nickname_for_your_anon_relay"

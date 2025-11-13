@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot คือแอปพร็อกซีฟรีที่ช่วยเพิ่มประสิทธิภาพให้กับแอปอื่นๆ ให้สามารถใช้งานอินเตอร์เน็ตได้อย่างปลอดภัยมากขึ้น AnyoneBot ใช้ Anon ในการเข้ารหัสการรับส่งข้อมูลทางอินเตอร์เน็ตของคุณและทำการซ่อนข้อมูลโดยการสะท้อนการเชื่อมต่อผ่านกลุ่มของเครื่องคอมพิวเตอร์ทั่วโลก Anon เป็นซอฟท์แวร์ฟรีและเป็นเครือข่ายแบบเปิดที่ช่วยปกป้องคุณจากการสอดส่องเครือข่ายที่คุกคามอิสรภาพและความเป็นส่วนตัวของผู้คน รักษาความลับทางธุรกิจและความสัมพันธ์ และการสร้างความปลอดภัยจากการวิเคราะห์การรับส่งข้อมูล</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN คือแอปพร็อกซีฟรีที่ช่วยเพิ่มประสิทธิภาพให้กับแอปอื่นๆ ให้สามารถใช้งานอินเตอร์เน็ตได้อย่างปลอดภัยมากขึ้น Anyone VPN ใช้ Anon ในการเข้ารหัสการรับส่งข้อมูลทางอินเตอร์เน็ตของคุณและทำการซ่อนข้อมูลโดยการสะท้อนการเชื่อมต่อผ่านกลุ่มของเครื่องคอมพิวเตอร์ทั่วโลก Anon เป็นซอฟท์แวร์ฟรีและเป็นเครือข่ายแบบเปิดที่ช่วยปกป้องคุณจากการสอดส่องเครือข่ายที่คุกคามอิสรภาพและความเป็นส่วนตัวของผู้คน รักษาความลับทางธุรกิจและความสัมพันธ์ และการสร้างความปลอดภัยจากการวิเคราะห์การรับส่งข้อมูล</string>
     <string name="menu_settings">การตั้งค่า</string>
     <string name="menu_log">บันทึก</string>
     <string name="menu_stop">หยุด</string>
@@ -11,11 +11,11 @@
     <string name="button_about">เกี่ยวกับ</string>
     <string name="menu_exit">ออก</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot เป็นแอปพลิเคชันโอเพ่นซอร์สที่ประกอบด้วย Anon, Go-Tun2Socks, และ LibEvent โดย AnyoneBot จะสร้างพร็อกซี (8118) และพร็อกซี SOCKS (9050) ในเครื่อง ภายในเครือข่าย Anon AnyoneBot ยังสามารถทำการรับส่งข้อมูลทั้งหมดส่งผ่าน Anon ได้บนอุปกรณ์ที่ได้ทำการ root แล้ว</string>
+    <string name="wizard_details_msg">Anyone VPN เป็นแอปพลิเคชันโอเพ่นซอร์สที่ประกอบด้วย Anon, Go-Tun2Socks, และ LibEvent โดย Anyone VPN จะสร้างพร็อกซี (8118) และพร็อกซี SOCKS (9050) ในเครื่อง ภายในเครือข่าย Anon Anyone VPN ยังสามารถทำการรับส่งข้อมูลทั้งหมดส่งผ่าน Anon ได้บนอุปกรณ์ที่ได้ทำการ root แล้ว</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">ทั่วไป</string>
-    <string name="pref_start_boot_title">เริ่ม AnyoneBot เมื่อเปิดระบบ</string>
-    <string name="pref_start_boot_summary">เริ่ม AnyoneBot โดยอัตโนมัติและให้เชื่อมต่อกับ Anon เมื่ออุปกรณ์แอนดรอยด์ของคุณเริ่มทำงาน</string>
+    <string name="pref_start_boot_title">เริ่ม Anyone VPN เมื่อเปิดระบบ</string>
+    <string name="pref_start_boot_summary">เริ่ม Anyone VPN โดยอัตโนมัติและให้เชื่อมต่อกับ Anon เมื่ออุปกรณ์แอนดรอยด์ของคุณเริ่มทำงาน</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">ลายนิ้วมือ ชื่อเล่น ประเทศ และที่อยู่ของฮอพแรก</string>
     <string name="pref_entrance_node_dialog">ระบุโหนดทางเข้า</string>
     <string name="pref_allow_background_starts_title">อนุญาตให้เริ่มการทำงานพื้นหลัง</string>
-    <string name="pref_allow_background_starts_summary">ให้แอปทุกตัวแจ้ง AnyoneBot ให้ Anon และบริการที่เกี่ยวข้องเริ่มทำงาน</string>
+    <string name="pref_allow_background_starts_summary">ให้แอปทุกตัวแจ้ง Anyone VPN ให้ Anon และบริการที่เกี่ยวข้องเริ่มทำงาน</string>
     <string name="pref_proxy_title">พร็อกซีเครือข่ายขาออก (ระบุหรือไม่ก็ได้)</string>
     <string name="pref_proxy_type_title">ชนิดของพร็อกซีขาออก</string>
     <string name="pref_proxy_type_summary">โพรโทคอลที่ใช้สำหรับเซิร์ฟเวอร์พร็อกซี: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">เริ่มทำงาน Anon อีกครั้งเพื่อจบกระบวนการ</string>
     <string name="confirm_service_deletion">ยืนยันการลบบริการ</string>
     <string name="service_type">ประเภทของบริการ</string>
-    <string name="please_restart_to_enable_the_changes">กรุณาเริ่ม AnyoneBot ใหม่เพื่อให้การเปลี่ยนแปลงใช้งานได้</string>
+    <string name="please_restart_to_enable_the_changes">กรุณาเริ่ม Anyone VPN ใหม่เพื่อให้การเปลี่ยนแปลงใช้งานได้</string>
     <string name="share_as_qr">แชร์ในรูปแบบคิวอาร์</string>
     <string name="disable">ปิดการใช้งาน</string>
     <string name="enable">เปิดใช้งาน</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnyoneBot</string>
-    <string name="app_description">AnyoneBot — это бесплатный инструмент, который позволяет другим приложениям использовать интернет более безопасно, используя Anon для шифрования вашего интернет-трафика, пропуская его через ряд компьютеров по всему миру. Anon — это бесплатное программное обеспечение и открытая сеть, которая помогает вам защититься от формы сетевого наблюдения, угрожающей личной свободе и конфиденциальности, конфиденциальной деловой активности и отношениям, а также государственной безопасности, известной как анализ трафика.</string>
+    <string name="app_name">Anyone VPN</string>
+    <string name="app_description">Anyone VPN — это бесплатный инструмент, который позволяет другим приложениям использовать интернет более безопасно, используя Anon для шифрования вашего интернет-трафика, пропуская его через ряд компьютеров по всему миру. Anon — это бесплатное программное обеспечение и открытая сеть, которая помогает вам защититься от формы сетевого наблюдения, угрожающей личной свободе и конфиденциальности, конфиденциальной деловой активности и отношениям, а также государственной безопасности, известной как анализ трафика.</string>
     <string name="menu_settings">Настройки</string>
     <string name="menu_log">Журнал</string>
     <string name="menu_stop">Остановить</string>
@@ -11,11 +11,11 @@
     <string name="button_about">О приложении</string>
     <string name="menu_exit">Выход</string>
     <!--Welcome Wizard strings (DJH)-->
-    <string name="wizard_details_msg">AnyoneBot — это приложение с открытым исходным кодом, которое содержит Anon, Go-Tun2Socks и LibEvent. Оно обеспечивает VPN-туннель, локальный прокси HTTP Connect (HTTPS только на порту 8118) и SOCKS-прокси (9050) в сеть Anon.</string>
+    <string name="wizard_details_msg">Anyone VPN — это приложение с открытым исходным кодом, которое содержит Anon, Go-Tun2Socks и LibEvent. Оно обеспечивает VPN-туннель, локальный прокси HTTP Connect (HTTPS только на порту 8118) и SOCKS-прокси (9050) в сеть Anon.</string>
     <!--END Welcome Wizard strings (DJH)-->
     <string name="pref_general_group">Общие</string>
-    <string name="pref_start_boot_title">Автоматический запуск AnyoneBot при загрузке системы</string>
-    <string name="pref_start_boot_summary">Автоматически запускать AnyoneBot и подключаться к сети Anon при загрузке вашего Android-устройства</string>
+    <string name="pref_start_boot_title">Автоматический запуск Anyone VPN при загрузке системы</string>
+    <string name="pref_start_boot_summary">Автоматически запускать Anyone VPN и подключаться к сети Anon при загрузке вашего Android-устройства</string>
     <!--New Wizard Strings-->
     <!--Title Screen-->
     <!--Warning screen-->
@@ -28,7 +28,7 @@
     <string name="pref_entrance_node_summary">Отпечатки, псевдонимы, страны и адреса для первого прыжка</string>
     <string name="pref_entrance_node_dialog">Введите входные узлы</string>
     <string name="pref_allow_background_starts_title">Разрешить фоновую загрузку</string>
-    <string name="pref_allow_background_starts_summary">Позволить любому приложению требовать от AnyoneBot запускать Anon и относящиеся к нему службы</string>
+    <string name="pref_allow_background_starts_summary">Позволить любому приложению требовать от Anyone VPN запускать Anon и относящиеся к нему службы</string>
     <string name="pref_proxy_title">Исходящий сетевой прокси (необязательно)</string>
     <string name="pref_proxy_type_title">Тип прокси</string>
     <string name="pref_proxy_type_summary">Протокол для использования прокси: HTTP, HTTPS, Socks4, Socks5</string>
@@ -109,7 +109,7 @@
     <string name="start_anon_again_for_finish_the_process">Запустите Anon снова для завершения процесса</string>
     <string name="confirm_service_deletion">Подтверждение удаления службы</string>
     <string name="service_type">Тип службы</string>
-    <string name="please_restart_to_enable_the_changes">Перезапустите AnyoneBot для вступления изменения в силу</string>
+    <string name="please_restart_to_enable_the_changes">Перезапустите Anyone VPN для вступления изменения в силу</string>
     <string name="share_as_qr">Поделиться через QR-код</string>
     <string name="disable">Отключить</string>
     <string name="enable">Включить</string>
@@ -196,10 +196,10 @@
 \nблагодаря вам.</string>
     <string name="title_choose_apps">Выбор приложений</string>
     <string name="apps_suggested_title">Рекомендуемые приложения</string>
-    <string name="power_user_description">Для пользователей, знакомых с Anon. Позволяет запустить AnyoneBot без настроек VPN и показывает открытые SOCKS и HTTP порты</string>
+    <string name="power_user_description">Для пользователей, знакомых с Anon. Позволяет запустить Anyone VPN без настроек VPN и показывает открытые SOCKS и HTTP порты</string>
     <string name="apps_other_apps">Другие приложения</string>
     <string name="action_activate">Активировать</string>
-    <string name="app_suggested_subtitle">AnyoneBot лучше всего работает с приложениями для обмена сообщениями и социальными сетями.</string>
+    <string name="app_suggested_subtitle">Anyone VPN лучше всего работает с приложениями для обмена сообщениями и социальными сетями.</string>
     <string name="hide_apps">Скрывайте приложения от отслеживания в сети и получайте доступ при блокировке.</string>
     <string name="log_copied">Журнал скопирован</string>
     <string name="many_ways">Есть много способов добраться до Anon. Некоторые из них могут сработать у вас лучше, чем другие.</string>
@@ -207,7 +207,7 @@
     <string name="action_use">Использовать</string>
     <string name="asking">ЗАПРОС…</string>
     <string name="no_internet_title">Подключиться к интернету</string>
-    <string name="no_internet_subtitle">Для использования AnyoneBot необходимо подключение к интернету.</string>
+    <string name="no_internet_subtitle">Для использования Anyone VPN необходимо подключение к интернету.</string>
     <string name="kindness_adjust_title">Настройки</string>
     <string name="pref_isolate_protocol">Изолировать протоколы клиентов</string>
     <string name="pref_isolate_port_summary">Использовать разные цепочки подключения для каждого порта назначения</string>
@@ -222,15 +222,15 @@
     <string name="connection_direct">Прямое</string>
     <string name="connection_custom">Настраиваемое</string>
     <string name="pref_flag_secure_title">Защита экрана</string>
-    <string name="pref_flag_secure_summary">Не позволять другим приложениям получать снимки экрана AnyoneBot</string>
-    <string name="root_warning">AnyoneBot обнаружил root-доступ на вашем устройстве, что снижает его защищённость.</string>
+    <string name="pref_flag_secure_summary">Не позволять другим приложениям получать снимки экрана Anyone VPN</string>
+    <string name="root_warning">Anyone VPN обнаружил root-доступ на вашем устройстве, что снижает его защищённость.</string>
     <string name="pref_detect_root_title">Обнаружение root</string>
     <string name="pref_detect_root_summary">Предупреждать при запуске, если на устройстве включены права root-доступа</string>
 
-    <string name="status_starting_up">Запуск AnyoneBot…</string>
+    <string name="status_starting_up">Запуск Anyone VPN…</string>
     <string name="status_activated">Подключён к сети Anyone</string>
-    <string name="status_disabled">AnyoneBot отключён</string>
-    <string name="status_shutting_down">Служба AnyoneBot выключается</string>
+    <string name="status_disabled">Anyone VPN отключён</string>
+    <string name="status_shutting_down">Служба Anyone VPN выключается</string>
     <string name="couldn_t_start_anon_process_">"Невозможно запустить anon: "</string>
     <string name="your_reachableaddresses_settings_caused_an_exception_">Ваши настройки доступных адресов вызвали исключение!</string>
     <string name="your_relay_settings_caused_an_exception_">Настройки вашего ретранслятора вызвали исключение!</string>
