@@ -1,4 +1,0 @@
-* Correzioni importanti per la modalità VPN
-* Nuovi bridge predefiniti
-* Aggiornato alla versione 0.4.0.4
-* Supporto per la modalità a 64 bit e Android Q

@@ -1,4 +1,0 @@
-* s'ha afegit compatibilitat amb el pont Snowflake
-* s'ha actualitzat la compatibilitat amb els ponts Meek i Obfs4
-* s'ha millorat la velocitat de la funcionalitat «Sol·licita ponts nous»
-* Actualitzat al Tor 0.4.4.6

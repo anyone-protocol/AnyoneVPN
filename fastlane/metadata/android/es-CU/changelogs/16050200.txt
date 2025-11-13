@@ -1,1 +1,0 @@
-Correcciones relacionadas con fallos en el inicio de servicio en segundo plano

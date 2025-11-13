@@ -1,1 +1,0 @@
-Opravuje pád související se startem služby na pozadí

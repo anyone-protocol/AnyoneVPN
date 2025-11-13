@@ -1,4 +1,0 @@
-* podpora služeb Onion v3
-* vylepšení nastavení mostů
-* zajištění, že režim VPN je považován za "neomezené připojení"
-* experimentální režim pro běh jako Snowflake proxy

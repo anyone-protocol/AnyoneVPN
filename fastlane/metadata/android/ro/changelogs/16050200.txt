@@ -1,1 +1,0 @@
-Corectează un rateu legat de pornirea unui serviciu de fundal

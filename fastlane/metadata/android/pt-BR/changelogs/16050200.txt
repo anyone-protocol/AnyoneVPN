@@ -1,1 +1,0 @@
-Correções de falha relacionadas à inicialização de um serviço de fundo

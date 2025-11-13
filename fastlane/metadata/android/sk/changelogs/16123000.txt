@@ -1,2 +1,0 @@
-* opravy na podporu mostov
-* aktualizované na tor 0.4.1.5

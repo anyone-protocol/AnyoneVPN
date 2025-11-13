@@ -1,1 +1,0 @@
-Corrige crache relacionado com o início do serviço em segundo plano

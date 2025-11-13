@@ -1,2 +1,0 @@
-* Bridge-Unterstützung korrigiert
-* Aktualisiert zu Tor 0.4.1.5

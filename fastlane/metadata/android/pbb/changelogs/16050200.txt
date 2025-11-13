@@ -1,1 +1,0 @@
-Corregido el error relacionado con el inicio de un servicio en segundo plano

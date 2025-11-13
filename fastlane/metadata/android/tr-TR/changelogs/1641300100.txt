@@ -1,3 +1,0 @@
-- artık desteklenmediği için Meek "Bulut" köprü seçeneği kaldırıldı
-- Onion V3 hizmet desteği için daha fazla iyileştirmeler
-- #441 için, uygulama tabanlı VPN seçimi için uygulama aramasını düzeltir
