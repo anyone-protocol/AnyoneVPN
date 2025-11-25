@@ -13,6 +13,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -21,9 +23,6 @@
 
     <!-- For Android 13 -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-
-    <!-- For Android 14 -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
 
     <queries>
         <intent>
@@ -115,7 +114,7 @@
             android:name=".service.AnyoneVpnService"
             android:enabled="true"
             android:permission="android.permission.BIND_VPN_SERVICE"
-            android:foregroundServiceType="dataSync"
+            android:foregroundServiceType="systemExempted"
             android:stopWithTask="false"
             android:exported="true">
             <intent-filter>

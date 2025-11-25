@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.content.pm.ServiceInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.net.VpnService;
@@ -60,6 +61,7 @@ import java.util.concurrent.Executors;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.ServiceCompat;
 import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -186,7 +188,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             mNotifyBuilder.setProgress(0, 0, false); // removes progress bar
         }
 
-        startForeground(NOTIFY_ID, mNotifyBuilder.build());
+        ServiceCompat.startForeground(this, NOTIFY_ID, mNotifyBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED);
     }
 
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -309,11 +311,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                 appBinHome = getFilesDir();
                 if (!appBinHome.exists()) appBinHome.mkdirs();
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    appCacheHome = new File(getDataDir(), DIRECTORY_ANON_DATA);
-                } else {
-                    appCacheHome = getDir(DIRECTORY_ANON_DATA, Application.MODE_PRIVATE);
-                }
+                appCacheHome = getDir(DIRECTORY_ANON_DATA, Application.MODE_PRIVATE);
 
                 if (!appCacheHome.exists()) appCacheHome.mkdirs();
 
