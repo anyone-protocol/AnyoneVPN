@@ -18,8 +18,3 @@ buildscript {
 		// in the individual module build.gradle files
     }
 }
-
-ext {
-    versionCode = 4812
-    versionName = "0.4.8.11"
-}
