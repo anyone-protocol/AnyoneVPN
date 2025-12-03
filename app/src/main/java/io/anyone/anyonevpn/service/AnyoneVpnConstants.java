@@ -129,7 +129,6 @@ public interface AnyoneVpnConstants {
     String LOCAL_EXTRA_BOOTSTRAP_PERCENT = "percent";
     String LOCAL_ACTION_PORTS = "ports";
     String LOCAL_ACTION_V3_NAMES_UPDATED = "V3_NAMES_UPDATED";
-    String LOCAL_ACTION_NOTIFICATION_START = "notification_start";
     String LOCAL_ACTION_SMART_CONNECT_EVENT = "smart";
     String LOCAL_EXTRA_SMART_STATUS = "status";
     String SMART_STATUS_NO_DIRECT = "no_direct";

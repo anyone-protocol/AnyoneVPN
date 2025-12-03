@@ -170,11 +170,25 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         mNotifyBuilder.setContentTitle(title);
 
         mNotifyBuilder.mActions.clear(); // clear out any notification actions, if any
+
         if (conn != null && mCurrentStatus.equals(STATUS_ON)) { // only add new identity action when there is a connection
-            var pendingIntentNewNym = PendingIntent.getBroadcast(this, 0, new Intent(AnonControlCommands.SIGNAL_NEWNYM), PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+            var i = new Intent(this, AnyoneVpnService.class);
+            i.setAction(AnonControlCommands.SIGNAL_NEWNYM);
+            i.putExtra(AnyoneVpnConstants.EXTRA_NOT_SYSTEM, true);
+
+            var pendingIntentNewNym = PendingIntent.getForegroundService(this, 0, i,
+                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
             mNotifyBuilder.addAction(R.drawable.ic_refresh_white_24dp, getString(R.string.menu_new_identity), pendingIntentNewNym);
-        } else if (mCurrentStatus.equals(STATUS_OFF)) {
-            var pendingIntentConnect = PendingIntent.getBroadcast(this, 0, new Intent(LOCAL_ACTION_NOTIFICATION_START), PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        }
+        else if (mCurrentStatus.equals(STATUS_OFF)) {
+            var i = new Intent(this, AnyoneVpnService.class);
+            i.setAction(ACTION_START);
+            i.putExtra(AnyoneVpnConstants.EXTRA_NOT_SYSTEM, true);
+
+            var pendingIntentConnect = PendingIntent.getForegroundService(this, 0, i,
+                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
             mNotifyBuilder.addAction(R.drawable.ic_anyone, getString(R.string.connect_to_anon), pendingIntentConnect);
         }
 
@@ -325,11 +339,9 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                     mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 }
 
-                IntentFilter filter = new IntentFilter(AnonControlCommands.SIGNAL_NEWNYM);
-                filter.addAction(CMD_ACTIVE);
+                IntentFilter filter = new IntentFilter(CMD_ACTIVE);
                 filter.addAction(ACTION_STATUS);
                 filter.addAction(ACTION_ERROR);
-                filter.addAction(LOCAL_ACTION_NOTIFICATION_START);
 
                 mActionBroadcastReceiver = new ActionBroadcastReceiver();
                 ContextCompat.registerReceiver(this, mActionBroadcastReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED);
@@ -1186,9 +1198,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             if (TextUtils.isEmpty(action)) return;
 
             switch (action) {
-                case AnonControlCommands.SIGNAL_NEWNYM -> newIdentity();
                 case CMD_ACTIVE -> sendSignalActive();
-                case LOCAL_ACTION_NOTIFICATION_START -> startAnon();
                 case ACTION_ERROR -> {
                     if (showTorServiceErrorMsg) {
                         Toast.makeText(context, getString(R.string.config_invalid), Toast.LENGTH_LONG).show();
