@@ -189,7 +189,7 @@ public class AnyoneVpnManager implements Handler.Callback, AnyoneVpnConstants {
 
         var conf = "misc:\n" +
 //                "  log-file: /data/data/io.anyone.anyonevpn/cache/hev.log\n" +
-                "  log-level: debug\n" +
+                "  log-level: warn\n" +
                 "  task-stack-size: " + TProxyService.TASK_SIZE + "\n" +
                 "tunnel:\n" +
                 "  ipv4: '" + TProxyService.VIRTUAL_GATEWAY_IPV4 + "'\n" +
