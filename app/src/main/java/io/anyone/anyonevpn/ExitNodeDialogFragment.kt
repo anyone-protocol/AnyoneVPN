@@ -40,12 +40,16 @@ class ExitNodeDialogFragment(private val callback: ExitNodeSelectedCallback) : D
             "AE",
             "AL",
             "AT",
+            "BG",
             "CA",
+            "CH",
             "DE",
+            "EG",
             "ES",
             "FR",
             "GB",
             "HU",
+            "IT",
             "LU",
             "LV",
             "MD",
@@ -53,8 +57,10 @@ class ExitNodeDialogFragment(private val callback: ExitNodeSelectedCallback) : D
             "PL",
             "RO",
             "RU",
+            "SE",
             "UA",
             "US",
+            "ZA",
         )
     }
 }
