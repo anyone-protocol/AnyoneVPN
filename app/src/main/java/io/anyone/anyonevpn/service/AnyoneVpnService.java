@@ -830,7 +830,6 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         var prefs = Prefs.getSharedPrefs(getApplicationContext());
         var becomeRelay = prefs.getBoolean(AnyoneVpnConstants.PREF_OR, false);
         var ReachableAddresses = prefs.getBoolean(AnyoneVpnConstants.PREF_REACHABLE_ADDRESSES, false);
-        var enableStrictNodes = prefs.getBoolean("pref_strict_nodes", false);
         var entranceNodes = prefs.getString("pref_entrance_nodes", "");
         var exitNodes = prefs.getString("pref_exit_nodes", "");
         var excludeNodes = prefs.getString("pref_exclude_nodes", "");
@@ -854,7 +853,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         if (!TextUtils.isEmpty(excludeNodes))
             extraLines.append("ExcludeNodes ").append(excludeNodes).append('\n');
 
-        extraLines.append("StrictNodes ").append(enableStrictNodes ? "1" : "0").append('\n');
+        extraLines.append("StrictNodes ").append(Prefs.getStrictNodes() ? "1" : "0").append('\n');
 
         extraLines.append("\n");
 
@@ -1097,7 +1096,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                     conn.setConf("GeoIPFile", fileGeoIP.getCanonicalPath());
                     conn.setConf("GeoIPv6File", fileGeoIP6.getCanonicalPath());
                     conn.setConf("ExitNodes", Prefs.getExitNodes());
-                    conn.setConf("StrictNodes", "1");
+                    conn.setConf("StrictNodes", Prefs.getStrictNodes() ? "1" : "0");
                     conn.setConf("DisableNetwork", "1");
                     conn.setConf("DisableNetwork", "0");
 

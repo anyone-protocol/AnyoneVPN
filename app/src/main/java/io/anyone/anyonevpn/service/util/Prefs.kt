@@ -15,6 +15,7 @@ object Prefs {
     private const val PREF_OPEN_PROXY_ON_ALL_INTERFACES = "pref_open_proxy_on_all_interfaces"
     private const val PREF_USE_VPN = "pref_vpn"
     private const val PREF_EXIT_NODES = "pref_exit_nodes"
+    private const val PREF_STRICT_NODES = "pref_strict_nodes"
     private const val PREF_POWER_USER_MODE = "pref_power_user"
 
 
@@ -113,6 +114,10 @@ object Prefs {
         set(country) {
             putString(PREF_EXIT_NODES, country)
         }
+
+    @JvmStatic
+    val strictNodes: Boolean
+        get() = prefs?.getBoolean(PREF_STRICT_NODES, false) ?: false
 
     val firstExitCountry: String?
         get() {
