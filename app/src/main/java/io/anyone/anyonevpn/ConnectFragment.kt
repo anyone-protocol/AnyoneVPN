@@ -27,7 +27,7 @@ import io.anyone.anyonevpn.service.AnyoneVpnConstants
 import io.anyone.anyonevpn.service.AnyoneVpnService
 import io.anyone.anyonevpn.service.util.Prefs
 import io.anyone.anyonevpn.service.util.Utils
-import io.anyone.anyonevpn.ui.AppsFragment
+import io.anyone.anyonevpn.ui.AppsActivity
 import io.anyone.jni.AnonControlCommands
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -35,7 +35,7 @@ import kotlinx.coroutines.launch
 
 
 class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
-    ExitNodeDialogFragment.ExitNodeSelectedCallback, AppsFragment.OnChangeListener {
+    ExitNodeDialogFragment.ExitNodeSelectedCallback, AppsActivity.OnChangeListener {
 
     companion object {
         private var begin: Long = 0
@@ -77,10 +77,9 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding = FragmentConnectBinding.inflate(inflater, container, false)
 
         binding.btSelectApps.setOnClickListener {
-            activity?.supportFragmentManager?.let {
-                val fragment = AppsFragment(this)
-                fragment.show(it, fragment.tag)
-            }
+            val context = context ?: return@setOnClickListener
+
+            startActivity(Intent(context, AppsActivity::class.java))
         }
 
         binding.btRefresh.setOnClickListener {

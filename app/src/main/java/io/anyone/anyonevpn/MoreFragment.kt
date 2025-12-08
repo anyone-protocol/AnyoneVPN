@@ -18,13 +18,13 @@ import io.anyone.anyonevpn.service.AnyoneVpnConstants
 import io.anyone.anyonevpn.service.AnyoneVpnService
 import io.anyone.anyonevpn.service.util.Prefs
 import io.anyone.anyonevpn.ui.AboutDialogFragment
-import io.anyone.anyonevpn.ui.AppsFragment
+import io.anyone.anyonevpn.ui.AppsActivity
 import io.anyone.anyonevpn.ui.MenuAction
 import io.anyone.anyonevpn.ui.MoreActionAdapter
 import io.anyone.anyonevpn.ui.hostedservices.HostedServicesActivity
 import io.anyone.anyonevpn.ui.clientauth.ClientAuthActivity
 
-class MoreFragment : Fragment(), AppsFragment.OnChangeListener {
+class MoreFragment : Fragment(), AppsActivity.OnChangeListener {
 
     private lateinit var mBinding: FragmentMoreBinding
 
@@ -68,10 +68,9 @@ class MoreFragment : Fragment(), AppsFragment.OnChangeListener {
                 startActivity(Intent(requireActivity(), ClientAuthActivity::class.java))
               },
             MenuAction(R.string.btn_choose_apps, R.drawable.ic_add_square) {
-                activity?.supportFragmentManager?.let {
-                    val fragment = AppsFragment(this)
-                    fragment.show(it, fragment.tag)
-                }
+                val context = context ?: return@MenuAction
+
+                startActivity(Intent(context, AppsActivity::class.java))
             },
             MenuAction(R.string.menu_settings, R.drawable.ic_settings) {
                 mSettingsActivityLauncher.launch(Intent(context, SettingsActivity::class.java))

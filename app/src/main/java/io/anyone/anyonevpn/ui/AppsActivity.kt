@@ -8,18 +8,18 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Filter
 import android.widget.ImageView
 import android.widget.TextView
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import io.anyone.anyonevpn.BuildConfig
 import io.anyone.anyonevpn.R
-import io.anyone.anyonevpn.databinding.FragmentAppsBinding
-import io.anyone.anyonevpn.databinding.FragmentAppsItemBinding
+import io.anyone.anyonevpn.core.ui.BaseActivity
+import io.anyone.anyonevpn.databinding.ActivityAppsBinding
+import io.anyone.anyonevpn.databinding.ActivityAppsItemBinding
 import io.anyone.anyonevpn.service.AnyoneVpnConstants
 import io.anyone.anyonevpn.service.util.Prefs
 import io.anyone.anyonevpn.service.vpn.AnonifiedApp
@@ -30,13 +30,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.lang.ref.WeakReference
 
-class AppsFragment(listener: OnChangeListener? = null) : BottomSheetDialogFragment(), View.OnClickListener, TextWatcher {
+class AppsActivity(listener: OnChangeListener? = null) : BaseActivity(), View.OnClickListener, TextWatcher {
 
     interface OnChangeListener {
         fun onAppsChange()
     }
 
-    private lateinit var mBinding: FragmentAppsBinding
+    private lateinit var mBinding: ActivityAppsBinding
 
     private var mPrefs: SharedPreferences? = null
 
@@ -48,24 +48,31 @@ class AppsFragment(listener: OnChangeListener? = null) : BottomSheetDialogFragme
     private val mListener: WeakReference<OnChangeListener> = WeakReference(listener)
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-        mBinding = FragmentAppsBinding.inflate(inflater, container, false)
+        mBinding = ActivityAppsBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         mBinding.etSearch.addTextChangedListener(this)
-
-        val b = BottomSheetBehavior.from(mBinding.container)
-        b.state = BottomSheetBehavior.STATE_EXPANDED
-        b.skipCollapsed = true
-
-        return mBinding.root
     }
 
     override fun onResume() {
         super.onResume()
 
-        mPrefs = Prefs.getSharedPrefs(context)
+        mPrefs = Prefs.getSharedPrefs(this)
         reloadApps()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            finish()
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onClick(v: View) {
@@ -99,7 +106,7 @@ class AppsFragment(listener: OnChangeListener? = null) : BottomSheetDialogFragme
     private fun reloadApps() {
         mScope.launch {
             withContext(Dispatchers.IO) {
-                context?.packageManager?.let {
+                packageManager?.let {
                     mApps = getApps(it, mPrefs, null, null)
                 }
             }
@@ -109,7 +116,7 @@ class AppsFragment(listener: OnChangeListener? = null) : BottomSheetDialogFragme
     }
 
     private val mAdapterApps by lazy {
-        object : ArrayAdapter<AnonifiedApp>(requireContext(), R.layout.fragment_apps_item, R.id.tvName, mApps) {
+        object : ArrayAdapter<AnonifiedApp>(this, R.layout.activity_apps_item, R.id.tvName, mApps) {
 
             private var data: List<AnonifiedApp> = mApps
 
@@ -119,7 +126,7 @@ class AppsFragment(listener: OnChangeListener? = null) : BottomSheetDialogFragme
 
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val view =
-                    convertView ?: FragmentAppsItemBinding.inflate(layoutInflater, parent, false).root
+                    convertView ?: ActivityAppsItemBinding.inflate(layoutInflater, parent, false).root
                 var entry = view.tag as? ListEntry
 
                 if (entry == null) {
@@ -136,25 +143,25 @@ class AppsFragment(listener: OnChangeListener? = null) : BottomSheetDialogFragme
 
                 entry.box?.tag = entry
                 entry.box?.setBackgroundResource(if (entry.app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
-                entry.box?.setOnClickListener(this@AppsFragment)
+                entry.box?.setOnClickListener(this@AppsActivity)
 
                 try {
                     entry.icon?.setImageDrawable(
                         context.packageManager?.getApplicationIcon(entry.app?.packageName ?: ""))
                     entry.icon?.tag = entry
-                    entry.icon?.setOnClickListener(this@AppsFragment)
+                    entry.icon?.setOnClickListener(this@AppsActivity)
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
 
                 entry.text?.text = entry.app?.name
                 entry.text?.tag = entry
-                entry.text?.setOnClickListener(this@AppsFragment)
+                entry.text?.setOnClickListener(this@AppsActivity)
 
                 entry.active?.visibility =
                     if (entry.app?.isTorified == true) View.VISIBLE else View.INVISIBLE
                 entry.active?.tag = entry
-                entry.active?.setOnClickListener(this@AppsFragment)
+                entry.active?.setOnClickListener(this@AppsActivity)
 
                 return view
             }

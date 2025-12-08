@@ -11,13 +11,9 @@ import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
-import android.view.ViewGroup
-import android.widget.*
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updateLayoutParams
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -27,9 +23,9 @@ import io.anyone.anyonevpn.core.putNotSystem
 import io.anyone.anyonevpn.core.ui.BaseActivity
 import io.anyone.anyonevpn.databinding.ActivityAnyonevpnBinding
 import io.anyone.anyonevpn.service.AnyoneVpnConstants
+import io.anyone.anyonevpn.service.AnyoneVpnService
 import io.anyone.anyonevpn.service.util.Prefs
 import io.anyone.anyonevpn.ui.LogFragment
-import io.anyone.anyonevpn.service.AnyoneVpnService
 
 class AnyoneVpnActivity : BaseActivity() {
 
@@ -81,26 +77,6 @@ class AnyoneVpnActivity : BaseActivity() {
     private fun createAnyoneVpn() {
         mBinding = ActivityAnyonevpnBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-
-        // https://developer.android.com/develop/ui/views/layout/edge-to-edge#handle-overlaps
-        ViewCompat.setOnApplyWindowInsetsListener(mBinding.root) { v, windowInsets ->
-            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-
-            // Apply the insets as a margin to the view. This solution sets
-            // only the bottom, left, and right dimensions, but you can apply whichever
-            // insets are appropriate to your layout. You can also update the view padding
-            // if that's more appropriate.
-            v.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                leftMargin = insets.left
-                bottomMargin = insets.bottom
-                rightMargin = insets.right
-                topMargin = insets.top
-            }
-
-            // Return CONSUMED if you don't want want the window insets to keep passing
-            // down to descendant views.
-            WindowInsetsCompat.CONSUMED
-        }
 
         mFragLog = LogFragment()
 

@@ -79,6 +79,11 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat" />
 
+        <activity android:name=".ui.AppsActivity"
+            android:exported="false"
+            android:label="@string/title_choose_apps"
+            android:theme="@style/AnyoneVpnActivityTheme" />
+
         <provider
             android:name=".ui.hostedservices.HostedServicesContentProvider"
             android:authorities="${applicationId}.ui.hostedservices"
