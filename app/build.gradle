@@ -53,7 +53,7 @@ android {
         fullperm {
             dimension "free"
             applicationId 'io.anyone.anyonevpn'
-            versionCode 6
+            versionCode 7
             versionName getVersionName()
             archivesBaseName = "AnyoneVpn-${versionName}"
         }
