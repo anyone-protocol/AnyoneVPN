@@ -56,7 +56,6 @@ class ExitNodeDialogFragment(private val callback: ExitNodeSelectedCallback) : D
             "NL",
             "PL",
             "RO",
-            "RU",
             "SE",
             "UA",
             "US",
