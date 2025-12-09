@@ -176,20 +176,14 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             i.setAction(AnonControlCommands.SIGNAL_NEWNYM);
             i.putExtra(AnyoneVpnConstants.EXTRA_NOT_SYSTEM, true);
 
-            var pendingIntentNewNym = PendingIntent.getForegroundService(this, 0, i,
-                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-
-            mNotifyBuilder.addAction(R.drawable.ic_refresh_white_24dp, getString(R.string.menu_new_identity), pendingIntentNewNym);
+            mNotifyBuilder.addAction(R.drawable.ic_refresh_white_24dp, getString(R.string.menu_new_identity), getServiceIntent(i));
         }
         else if (mCurrentStatus.equals(STATUS_OFF)) {
             var i = new Intent(this, AnyoneVpnService.class);
             i.setAction(ACTION_START);
             i.putExtra(AnyoneVpnConstants.EXTRA_NOT_SYSTEM, true);
 
-            var pendingIntentConnect = PendingIntent.getForegroundService(this, 0, i,
-                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-
-            mNotifyBuilder.addAction(R.drawable.ic_anyone, getString(R.string.connect_to_anon), pendingIntentConnect);
+            mNotifyBuilder.addAction(R.drawable.ic_anyone, getString(R.string.connect_to_anon), getServiceIntent(i));
         }
 
         mNotifyBuilder.setContentText(notifyMsg).setSmallIcon(icon).setTicker(notifyType != NOTIFY_ID ? notifyMsg : null);
@@ -1105,6 +1099,16 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                 }
             }
         }
+    }
+
+    private PendingIntent getServiceIntent(Intent i) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            return PendingIntent.getForegroundService(this, 0, i,
+                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        }
+
+        return PendingIntent.getService(this, 0, i,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
     public static final class OnionService implements BaseColumns {
