@@ -24,7 +24,7 @@ import io.anyone.anyonevpn.ui.MoreActionAdapter
 import io.anyone.anyonevpn.ui.hostedservices.HostedServicesActivity
 import io.anyone.anyonevpn.ui.clientauth.ClientAuthActivity
 
-class MoreFragment : Fragment(), AppsActivity.OnChangeListener {
+class MoreFragment : Fragment() {
 
     private lateinit var mBinding: FragmentMoreBinding
 
@@ -99,10 +99,6 @@ class MoreFragment : Fragment(), AppsActivity.OnChangeListener {
         mBinding.lvMoreActions.adapter = MoreActionAdapter(requireActivity(), listItems)
 
         return mBinding.root
-    }
-
-    override fun onAppsChange() {
-        sendIntentToService(AnyoneVpnConstants.ACTION_RESTART_VPN)
     }
 
     fun setPorts(newHttpPort: Int, newSocksPort: Int) {

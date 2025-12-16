@@ -2,6 +2,7 @@
 package io.anyone.anyonevpn.ui
 
 import android.Manifest
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
@@ -15,12 +16,15 @@ import android.widget.ArrayAdapter
 import android.widget.Filter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import io.anyone.anyonevpn.BuildConfig
 import io.anyone.anyonevpn.R
+import io.anyone.anyonevpn.core.putNotSystem
 import io.anyone.anyonevpn.core.ui.BaseActivity
 import io.anyone.anyonevpn.databinding.ActivityAppsBinding
 import io.anyone.anyonevpn.databinding.ActivityAppsItemBinding
 import io.anyone.anyonevpn.service.AnyoneVpnConstants
+import io.anyone.anyonevpn.service.AnyoneVpnService
 import io.anyone.anyonevpn.service.util.Prefs
 import io.anyone.anyonevpn.service.vpn.AnonifiedApp
 import kotlinx.coroutines.CoroutineScope
@@ -28,13 +32,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.lang.ref.WeakReference
 
-class AppsActivity(listener: OnChangeListener? = null) : BaseActivity(), View.OnClickListener, TextWatcher {
-
-    interface OnChangeListener {
-        fun onAppsChange()
-    }
+class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
 
     private lateinit var mBinding: ActivityAppsBinding
 
@@ -44,8 +43,6 @@ class AppsActivity(listener: OnChangeListener? = null) : BaseActivity(), View.On
     private val mScope = CoroutineScope(Dispatchers.Main + mJob)
 
     private var mApps: List<AnonifiedApp> = emptyList()
-
-    private val mListener: WeakReference<OnChangeListener> = WeakReference(listener)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -211,7 +208,10 @@ class AppsActivity(listener: OnChangeListener? = null) : BaseActivity(), View.On
             ?.putString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, apps.joinToString("|"))
             ?.apply()
 
-        mListener.get()?.onAppsChange()
+        val intent = Intent(this, AnyoneVpnService::class.java).putNotSystem()
+        intent.action = AnyoneVpnConstants.ACTION_RESTART_VPN
+
+        ContextCompat.startForegroundService(this, intent)
     }
 
     private class ListEntry {

@@ -35,7 +35,7 @@ import kotlinx.coroutines.launch
 
 
 class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
-    ExitNodeDialogFragment.ExitNodeSelectedCallback, AppsActivity.OnChangeListener {
+    ExitNodeDialogFragment.ExitNodeSelectedCallback {
 
     companion object {
         private var begin: Long = 0
@@ -114,6 +114,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         }
 
         updateExitFlag()
+        updateApps()
     }
 
     override fun onPause() {
@@ -189,43 +190,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
 
         binding.connectedGroup.visibility = View.VISIBLE
 
-        val apps = Prefs.getSharedPrefs(context)
-            ?.getString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, "")
-            ?.split("|")
-            ?.filter { it.isNotEmpty() }
-            ?.toTypedArray()
-
-        binding.appIconFlow.referencedIds = arrayOf<Int>().toIntArray()
-
-        for (view in binding.root.children) {
-            if (view.tag?.toString()?.startsWith("app_icon") == true) {
-                view.visibility = View.GONE
-            }
-        }
-
-        if (apps.isNullOrEmpty()) {
-            binding.tvFullDeviceVpn.setText(R.string.full_device_vpn)
-            binding.appIconFlow.visibility = View.GONE
-        }
-        else {
-            binding.tvFullDeviceVpn.setText(R.string.app_shortcuts)
-            binding.appIconFlow.visibility = View.VISIBLE
-
-            for (app in apps) {
-                val iv = binding.root.findViewWithTag("app_icon_${app}") ?: getAppIcon(app) ?: continue
-
-                if (iv.parent == null) {
-                    binding.root.addView(iv)
-                }
-                else {
-                    iv.visibility = View.VISIBLE
-                }
-
-                val ids = binding.appIconFlow.referencedIds.toMutableList()
-                ids.add(iv.id)
-                binding.appIconFlow.referencedIds = ids.toIntArray()
-            }
-        }
+        updateApps()
 
         binding.root.requestLayout()
 
@@ -298,12 +263,6 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         updateExitFlag()
     }
 
-    override fun onAppsChange() {
-        sendIntentToService(AnyoneVpnConstants.ACTION_RESTART_VPN)
-
-        doLayoutOn()
-    }
-
 
     /** Sends intent to service, first modifying it to indicate it is not from the system */
     private fun sendIntentToService(intent: Intent) =
@@ -364,5 +323,45 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
 
         binding.btChangeExit.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null,
             Utils.emojiToDrawable(context,flag), null)
+    }
+
+    private fun updateApps() {
+        val apps = Prefs.getSharedPrefs(context)
+            ?.getString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, "")
+            ?.split("|")
+            ?.filter { it.isNotEmpty() }
+            ?.toTypedArray()
+
+        binding.appIconFlow.referencedIds = arrayOf<Int>().toIntArray()
+
+        for (view in binding.root.children) {
+            if (view.tag?.toString()?.startsWith("app_icon") == true) {
+                view.visibility = View.GONE
+            }
+        }
+
+        if (apps.isNullOrEmpty()) {
+            binding.tvFullDeviceVpn.setText(R.string.full_device_vpn)
+            binding.appIconFlow.visibility = View.GONE
+        }
+        else {
+            binding.tvFullDeviceVpn.setText(R.string.app_shortcuts)
+            binding.appIconFlow.visibility = View.VISIBLE
+
+            for (app in apps) {
+                val iv = binding.root.findViewWithTag("app_icon_${app}") ?: getAppIcon(app) ?: continue
+
+                if (iv.parent == null) {
+                    binding.root.addView(iv)
+                }
+                else {
+                    iv.visibility = View.VISIBLE
+                }
+
+                val ids = binding.appIconFlow.referencedIds.toMutableList()
+                ids.add(iv.id)
+                binding.appIconFlow.referencedIds = ids.toIntArray()
+            }
+        }
     }
 }
