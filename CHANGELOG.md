@@ -1,5 +1,10 @@
 # AnyoneVPN Changelog
 
+## 0.1.4
+
+- Always show "Choose apps" and "Change exit" buttons.
+- Fixed crash on stopping.
+
 ## 0.1.3
 
 - Updated exit node country list again.
