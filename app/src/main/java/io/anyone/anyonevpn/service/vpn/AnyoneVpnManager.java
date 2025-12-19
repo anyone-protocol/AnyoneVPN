@@ -214,7 +214,7 @@ public class AnyoneVpnManager implements Handler.Callback, AnyoneVpnConstants {
         return file;
     }
 
-    private void startListeningToFD() throws IOException {
+    private void startListeningToFD() throws IOException, IllegalStateException {
         if (mInterface == null) return; // Prepare hasn't been called yet
 
         fis = new FileInputStream(mInterface.getFileDescriptor());
