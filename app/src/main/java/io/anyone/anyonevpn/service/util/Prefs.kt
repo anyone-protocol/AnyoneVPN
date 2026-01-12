@@ -87,7 +87,7 @@ object Prefs {
 
     val firstExitCountry: String?
         get() {
-            val exitNodes = exitNodes ?: return null
+            val exitNodes = exitNodes
 
             return """(?:^|,)\s*\{([^,}]*)\}\s*(?:,|$)""".toRegex()
                 .find(exitNodes)?.groupValues?.getOrNull(1)

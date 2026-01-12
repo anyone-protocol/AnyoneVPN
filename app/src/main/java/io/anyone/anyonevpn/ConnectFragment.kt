@@ -339,7 +339,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
             }
         }
 
-        if (apps.isNullOrEmpty()) {
+        if (apps.isEmpty()) {
             binding.tvFullDeviceVpn.setText(R.string.full_device_vpn)
             binding.appIconFlow.visibility = View.GONE
         }
