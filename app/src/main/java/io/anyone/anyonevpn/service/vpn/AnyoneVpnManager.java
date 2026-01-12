@@ -17,7 +17,6 @@
 package io.anyone.anyonevpn.service.vpn;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.VpnService;
 import android.os.Build;
@@ -52,7 +51,6 @@ public class AnyoneVpnManager implements Handler.Callback, AnyoneVpnConstants {
     private int mTorSocks = -1;
     private int mTorDns = -1;
     private final VpnService mService;
-    private final SharedPreferences prefs;
 
     private FileInputStream fis;
     private DataOutputStream fos;
@@ -61,7 +59,6 @@ public class AnyoneVpnManager implements Handler.Callback, AnyoneVpnConstants {
 
     public AnyoneVpnManager(AnyoneVpnService service) {
         mService = service;
-        prefs = Prefs.getSharedPrefs(mService.getApplicationContext());
     }
 
     public void handleIntent(VpnService.Builder builder, Intent intent) {
@@ -226,13 +223,13 @@ public class AnyoneVpnManager implements Handler.Callback, AnyoneVpnConstants {
     }
 
     private void doAppBasedRouting(VpnService.Builder builder) throws NameNotFoundException {
-        var apps = AnonifiedApp.getApps(mService, prefs);
+        var apps = AnonifiedApp.Companion.getApps(mService);
         var individualAppsWereSelected = false;
         var isLockdownMode = isVpnLockdown(mService);
 
         for (AnonifiedApp app : apps) {
             if (app.isTorified() && (!app.getPackageName().equals(mService.getPackageName()))) {
-                if (prefs.getBoolean(app.getPackageName() + AnyoneVpnConstants.APP_TOR_KEY, true)) {
+                if (Prefs.isAppAnonified(app.getPackageName())) {
                     builder.addAllowedApplication(app.getPackageName());
                 }
                 individualAppsWereSelected = true;

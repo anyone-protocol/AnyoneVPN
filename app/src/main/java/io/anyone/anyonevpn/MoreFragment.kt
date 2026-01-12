@@ -33,7 +33,7 @@ class MoreFragment : Fragment() {
 
     private val mSettingsActivityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
-            Prefs.defaultLocale = result.data?.getStringExtra("locale")
+            Prefs.defaultLocale = result.data?.getStringExtra("locale") ?: Prefs.defaultLocale
 
             sendIntentToService(AnyoneVpnConstants.ACTION_LOCAL_LOCALE_SET)
 

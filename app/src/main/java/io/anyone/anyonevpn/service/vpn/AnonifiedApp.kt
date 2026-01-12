@@ -1,211 +1,110 @@
-package io.anyone.anyonevpn.service.vpn;
+package io.anyone.anyonevpn.service.vpn
 
-import android.Manifest;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
+import android.Manifest
+import android.content.Context
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
+import android.graphics.drawable.Drawable
+import io.anyone.anyonevpn.service.AnyoneVpnConstants
+import io.anyone.anyonevpn.service.util.Prefs
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
+import java.text.Normalizer
 
-import androidx.annotation.NonNull;
+@Serializable
+class AnonifiedApp : Comparable<AnonifiedApp> {
+    @Serializable
+    var isEnabled: Boolean = false
 
-import io.anyone.anyonevpn.service.AnyoneVpnConstants;
+    @Serializable
+    var uid: Int = 0
 
-import java.text.Normalizer;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.StringTokenizer;
+    @Serializable
+    var username: String? = null
 
-/** @noinspection unused*/
-public class AnonifiedApp implements Comparable {
+    @Serializable
+    var procname: String? = null
 
-    private boolean enabled;
-    private int uid;
-    private String username;
-    private String procname;
-    private String name;
-    private Drawable icon;
-    private String packageName;
+    @Serializable
+    var name: String? = null
 
-    private boolean torified = false;
-    private boolean usesInternet = false;
+    // Drawable is not serializable
+    @Transient
+    var icon: Drawable? = null
 
-    public static ArrayList<AnonifiedApp> getApps(Context context, SharedPreferences prefs) {
+    @Serializable
+    var packageName: String = ""
 
-        String tordAppString = prefs.getString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, "");
-        String[] tordApps;
+    @Serializable
+    var isTorified: Boolean = false
 
-        StringTokenizer st = new StringTokenizer(tordAppString, "|");
-        tordApps = new String[st.countTokens()];
-        int tordIdx = 0;
-        while (st.hasMoreTokens()) {
-            tordApps[tordIdx++] = st.nextToken();
-        }
+    @Serializable
+    var usesInternet: Boolean = false
 
-        Arrays.sort(tordApps);
+    override fun compareTo(other: AnonifiedApp): Int =
+         (name ?: "").compareTo(other.name ?: "", ignoreCase = true)
 
-        //else load the apps up
-        PackageManager pMgr = context.getPackageManager();
+    override fun toString(): String = name ?: ""
 
-        List<ApplicationInfo> lAppInfo = pMgr.getInstalledApplications(0);
+    companion object {
+        fun getApps(context: Context): ArrayList<AnonifiedApp> {
+            val torifiedPackages = Prefs.anonifiedApps
+                .split("|")
+                .filter { it.isNotBlank() }
+                .sorted()
 
-        Iterator<ApplicationInfo> itAppInfo = lAppInfo.iterator();
-
-        ArrayList<AnonifiedApp> apps = new ArrayList<>();
-
-        while (itAppInfo.hasNext()) {
-            ApplicationInfo aInfo = itAppInfo.next();
-            AnonifiedApp app = new AnonifiedApp();
-            try {
-                PackageInfo pInfo = pMgr.getPackageInfo(aInfo.packageName, PackageManager.GET_PERMISSIONS);
-                if (AnyoneVpnConstants.BYPASS_VPN_PACKAGES.contains(aInfo.packageName)) {
-                    app.setUsesInternet(false);
-                } else if (pInfo != null && pInfo.requestedPermissions != null) {
-                    for (String permInfo : pInfo.requestedPermissions) {
-                        if (permInfo.equals(Manifest.permission.INTERNET)) {
-                            app.setUsesInternet(true);
+            val pMgr = context.packageManager
+            val lAppInfo = pMgr.getInstalledApplications(0)
+            val apps = ArrayList<AnonifiedApp>()
+            lAppInfo.forEach {
+                val app = AnonifiedApp()
+                try {
+                    val pInfo = pMgr.getPackageInfo(it.packageName, PackageManager.GET_PERMISSIONS)
+                    if (AnyoneVpnConstants.BYPASS_VPN_PACKAGES.contains(it.packageName)) {
+                        app.usesInternet = false
+                    } else if (pInfo?.requestedPermissions != null) {
+                        for (permInfo in pInfo.requestedPermissions!!) {
+                            if (permInfo == Manifest.permission.INTERNET) {
+                                app.usesInternet = true
+                            }
                         }
                     }
+                } catch (e: Exception) {
+                    e.printStackTrace()
                 }
 
+                if ((it.flags and ApplicationInfo.FLAG_SYSTEM) == 1)
+                    app.usesInternet = true // System app
 
-            } catch (Exception e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+                if (!app.usesInternet) return@forEach
+                else apps.add(app)
+
+                app.apply {
+                    isEnabled = it.enabled
+                    uid = it.uid
+                    username = pMgr.getNameForUid(it.uid)
+                    procname = it.processName
+                    packageName = it.packageName
+                }
+
+                try {
+                    app.name = pMgr.getApplicationLabel(it).toString()
+                } catch (_: Exception) {
+                    app.name = it.packageName
+                }
+
+                // Check if this application is allowed
+                app.isTorified = torifiedPackages.binarySearch(app.packageName) >= 0
             }
 
-            if ((aInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 1) {
-                //System app
-                app.setUsesInternet(true);
-            }
-
-
-            if (!app.usesInternet()) continue;
-            else {
-                apps.add(app);
-            }
-
-
-            app.setEnabled(aInfo.enabled);
-            app.setUid(aInfo.uid);
-            app.setUsername(pMgr.getNameForUid(app.getUid()));
-            app.setProcname(aInfo.processName);
-            app.setPackageName(aInfo.packageName);
-
-            try {
-                app.setName(pMgr.getApplicationLabel(aInfo).toString());
-            } catch (Exception e) {
-                app.setName(aInfo.packageName);
-            }
-
-            //app.setIcon(pMgr.getApplicationIcon(aInfo));
-
-            // check if this application is allowed
-            app.setTorified(Arrays.binarySearch(tordApps, app.getPackageName()) >= 0);
+            apps.sort()
+            return apps
         }
 
-        Collections.sort(apps);
-
-        return apps;
-    }
-
-    public static void sortAppsForTorifiedAndAbc(List<AnonifiedApp> apps) {
-        Collections.sort(apps, (o1, o2) -> {
-            /* Some apps start with lowercase letters and without the sorting being case
-               insensitive they'd appear at the end of the grid of apps, a position where users
-               would likely not expect to find them.
-             */
-            if (o1.isTorified() == o2.isTorified())
-                return Normalizer.normalize(o1.getName(), Normalizer.Form.NFD).compareToIgnoreCase(Normalizer.normalize(o2.getName(), Normalizer.Form.NFD));
-            if (o1.isTorified()) return -1;
-            return 1;
-        });
-    }
-
-    public boolean usesInternet() {
-        return usesInternet;
-    }
-
-    public void setUsesInternet(boolean usesInternet) {
-        this.usesInternet = usesInternet;
-    }
-
-    public boolean isTorified() {
-        return torified;
-    }
-
-    public void setTorified(boolean torified) {
-        this.torified = torified;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public int getUid() {
-        return uid;
-    }
-
-    public void setUid(int uid) {
-        this.uid = uid;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getProcname() {
-        return procname;
-    }
-
-    public void setProcname(String procname) {
-        this.procname = procname;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Drawable getIcon() {
-        return icon;
-    }
-
-    public void setIcon(Drawable icon) {
-        this.icon = icon;
-    }
-
-    @Override
-    public int compareTo(Object another) {
-        return this.toString().compareToIgnoreCase(another.toString());
-    }
-
-    @NonNull
-    @Override
-    public String toString() {
-        return getName();
-    }
-
-    public String getPackageName() {
-        return packageName;
-    }
-
-    public void setPackageName(String packageName) {
-        this.packageName = packageName;
+        fun sortAppsForTorifiedAndAbc(apps: List<AnonifiedApp>?) {
+            apps?.sortedWith(compareBy<AnonifiedApp> { !it.isTorified }.thenBy {
+                Normalizer.normalize(it.name ?: "", Normalizer.Form.NFD)
+            })
+        }
     }
 }

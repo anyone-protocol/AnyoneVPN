@@ -47,7 +47,7 @@ public class AnyoneVpnRawEventListener implements RawEventListener {
 
             handleStreamEventExpandedNotifications(payload[1], payload[3], payload[2], payload[4]);
 
-            if (Prefs.useDebugLogging()) handleStreamEventsDebugLogging(payload[1], payload[0]);
+            if (Prefs.getUseDebugLogging()) handleStreamEventsDebugLogging(payload[1], payload[0]);
         } else if (AnonControlCommands.EVENT_CIRCUIT_STATUS.equals(keyword)) {
             String status = payload[1];
             String circuitId = payload[0];
@@ -148,7 +148,7 @@ public class AnyoneVpnRawEventListener implements RawEventListener {
     }
 
     private void handleCircuitStatus(String circuitStatus, String circuitId, String path) {
-        if (!Prefs.useDebugLogging()) return;
+        if (!Prefs.getUseDebugLogging()) return;
 
         StringBuilder sb = new StringBuilder();
         sb.append("Circuit (");
@@ -200,7 +200,7 @@ public class AnyoneVpnRawEventListener implements RawEventListener {
                 hmBuiltNodes.put(node.id, node);
                 isFirstNode = false;
             } else if (circuitStatus.equals(AnonControlCommands.CIRC_EVENT_LAUNCHED)) {
-                if (Prefs.useDebugLogging() && nodeCount > 3) mService.debug(sb.toString());
+                if (Prefs.getUseDebugLogging() && nodeCount > 3) mService.debug(sb.toString());
             } else if (circuitStatus.equals(AnonControlCommands.CIRC_EVENT_CLOSED)) {
                 hmBuiltNodes.remove(node.id);
             }

@@ -3,7 +3,6 @@ package io.anyone.anyonevpn.ui
 
 import android.Manifest
 import android.content.Intent
-import android.content.SharedPreferences
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -37,8 +36,6 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
 
     private lateinit var mBinding: ActivityAppsBinding
 
-    private var mPrefs: SharedPreferences? = null
-
     private val mJob = Job()
     private val mScope = CoroutineScope(Dispatchers.Main + mJob)
 
@@ -59,7 +56,6 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     override fun onResume() {
         super.onResume()
 
-        mPrefs = Prefs.getSharedPrefs(this)
         reloadApps()
     }
 
@@ -104,7 +100,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         mScope.launch {
             withContext(Dispatchers.IO) {
                 packageManager?.let {
-                    mApps = getApps(it, mPrefs, null, null)
+                    mApps = getApps(it, null, null)
                 }
             }
 
@@ -177,7 +173,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
                             val filtered = mApps.filter {
                                 // ignore apps, which don't contain the filter string in their id or label.
                                 it.packageName.contains(constraint, true)
-                                        || it.name.contains(constraint, true)
+                                        || it.name?.contains(constraint, true) ?: false
                             }
 
                             results.values = filtered
@@ -202,11 +198,9 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     private fun saveAppSettings() {
         val apps = HashSet<String>()
 
-        apps.addAll(mApps.filter { it.isTorified }.mapNotNull { it.packageName })
+        apps.addAll(mApps.filter { it.isTorified }.map { it.packageName })
 
-        mPrefs?.edit()
-            ?.putString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, apps.joinToString("|"))
-            ?.apply()
+        Prefs.anonifiedApps = apps.joinToString("|")
 
         val intent = Intent(this, AnyoneVpnService::class.java).putNotSystem()
         intent.action = AnyoneVpnConstants.ACTION_RESTART_VPN
@@ -226,14 +220,13 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
 
         fun getApps(
             packageManager: PackageManager,
-            prefs: SharedPreferences?,
             include: List<String>?,
             exclude: List<String>?
         ): List<AnonifiedApp> {
 
-            val anondApps = prefs?.getString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, "")
-                ?.split("|")
-                ?.filter { it.isNotEmpty() }
+            val anondApps = Prefs.anonifiedApps
+                .split("|")
+                .filter { it.isNotEmpty() }
 
             val apps = packageManager.getInstalledApplications(0)
                 .filter {
@@ -260,8 +253,8 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
                     app.procname = it.processName
                     app.username = packageManager.getNameForUid(app.uid)
                     app.isEnabled = true
-                    app.setUsesInternet(true)
-                    app.isTorified = anondApps?.contains(it.packageName) ?: false
+                    app.usesInternet = true
+                    app.isTorified = anondApps.contains(it.packageName)
                     app
                 }
 

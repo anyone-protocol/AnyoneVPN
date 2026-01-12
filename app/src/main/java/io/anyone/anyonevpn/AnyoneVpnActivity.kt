@@ -102,7 +102,7 @@ class AnyoneVpnActivity : BaseActivity() {
 
         requestNotificationPermission()
 
-        if (Prefs.detectRoot()) {
+        if (Prefs.detectRoot) {
             val rootBeer = RootBeer(this)
             if (rootBeer.isRooted) {
                 //we found indication of root

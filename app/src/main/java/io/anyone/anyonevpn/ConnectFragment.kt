@@ -156,7 +156,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
             requestCodeVpnLauncher.launch(vpnIntent)
         } else {
             // todo we need to add a power user mode for users to start the VPN without tor
-            Prefs.putUseVpn(!Prefs.isPowerUserMode)
+            Prefs.useVpn = !Prefs.isPowerUserMode
             sendIntentToService(AnyoneVpnConstants.ACTION_START)
 
             if (!Prefs.isPowerUserMode) sendIntentToService(AnyoneVpnConstants.ACTION_START_VPN)
@@ -326,11 +326,10 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
     }
 
     private fun updateApps() {
-        val apps = Prefs.getSharedPrefs(context)
-            ?.getString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, "")
-            ?.split("|")
-            ?.filter { it.isNotEmpty() }
-            ?.toTypedArray()
+        val apps = Prefs.anonifiedApps
+            .split("|")
+            .filter { it.isNotEmpty() }
+            .toTypedArray()
 
         binding.appIconFlow.referencedIds = arrayOf<Int>().toIntArray()
 

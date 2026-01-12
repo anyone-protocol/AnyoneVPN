@@ -12,7 +12,7 @@ import io.anyone.anyonevpn.service.util.Prefs
 class OnBootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         try {
-            if (Prefs.startOnBoot() && !sReceivedBoot) {
+            if (Prefs.startOnBoot && !sReceivedBoot) {
                 //   if (isNetworkAvailable(context)) {
                 startService(AnyoneVpnConstants.ACTION_START, context)
                 sReceivedBoot = true

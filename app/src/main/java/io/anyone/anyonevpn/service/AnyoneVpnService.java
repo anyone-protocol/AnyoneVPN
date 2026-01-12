@@ -53,7 +53,6 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
-import java.util.Objects;
 import java.util.StringTokenizer;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
@@ -102,13 +101,13 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     public void debug(String msg) {
         Log.d(TAG, msg);
 
-        if (Prefs.useDebugLogging()) {
+        if (Prefs.getUseDebugLogging()) {
             sendCallbackLogMessage(msg);
         }
     }
 
     public void logException(String msg, Exception e) {
-        if (Prefs.useDebugLogging()) {
+        if (Prefs.getUseDebugLogging()) {
             Log.e(TAG, msg, e);
             var baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));
@@ -217,7 +216,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                 if (VpnService.prepare(this) == null) {
                     // Power-user mode doesn't matter here. If the system is starting the VPN, i.e.
                     // via always-on VPN, we need to start it regardless.
-                    Prefs.putUseVpn(true);
+                    Prefs.setUseVpn(true);
                     mExecutor.execute(new IncomingIntentRouter(new Intent(ACTION_START)));
                     mExecutor.execute(new IncomingIntentRouter(new Intent(ACTION_START_VPN)));
                 } else {
@@ -298,7 +297,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
 
     protected void logNotice(String msg) {
         if (msg != null && !msg.trim().isEmpty()) {
-            if (Prefs.useDebugLogging()) Log.d(TAG, msg);
+            if (Prefs.getUseDebugLogging()) Log.d(TAG, msg);
             sendCallbackLogMessage(msg);
         }
     }
@@ -380,44 +379,43 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     }
 
     private File updateAnonrcCustomFile() throws IOException {
-        var prefs = Prefs.getSharedPrefs(getApplicationContext());
         var extraLines = new StringBuffer();
 
         extraLines.append("\n");
         extraLines.append("RunAsDaemon 0").append('\n');
         extraLines.append("AvoidDiskWrites 1").append('\n');
 
-        var socksPortPref = prefs.getString(PREF_SOCKS, SOCKS_PROXY_PORT_DEFAULT);
+        var socksPortPref = Prefs.getProxySocksPort();
         if (socksPortPref.indexOf(':') != -1) socksPortPref = socksPortPref.split(":")[1];
 
         socksPortPref = checkPortOrAuto(socksPortPref);
 
-        var httpPortPref = prefs.getString(PREF_HTTP, HTTP_PROXY_PORT_DEFAULT);
+        var httpPortPref = Prefs.getProxyHttpPort();
         if (httpPortPref.indexOf(':') != -1) httpPortPref = httpPortPref.split(":")[1];
 
         httpPortPref = checkPortOrAuto(httpPortPref);
 
         var isolate = "";
-        if (prefs.getBoolean(PREF_ISOLATE_DEST, false)) {
+        if (Prefs.getIsolateDest()) {
             isolate += " IsolateDestAddr ";
         }
-        if (prefs.getBoolean(PREF_ISOLATE_PORT, false)) {
+        if (Prefs.getIsolatePort()) {
             isolate += " IsolateDestPort ";
         }
-        if (prefs.getBoolean(PREF_ISOLATE_PROTOCOL, false)) {
+        if (Prefs.getIsolateProtocol()) {
             isolate += " IsolateClientProtocol ";
         }
 
         var ipv6Pref = "";
-        if (prefs.getBoolean(PREF_PREFER_IPV6, true)) {
+        if (Prefs.getPreferIpv6()) {
             ipv6Pref += " IPv6Traffic PreferIPv6 ";
         }
 
-        if (prefs.getBoolean(PREF_DISABLE_IPV4, false)) {
+        if (Prefs.getDisableIpv4()) {
             ipv6Pref += " IPv6Traffic NoIPv4Traffic ";
         }
 
-        if (!Prefs.openProxyOnAllInterfaces()) {
+        if (!Prefs.getOpenProxyOnAllInterfaces()) {
             extraLines.append("SOCKSPort ").append(socksPortPref).append(isolate).append(ipv6Pref).append('\n');
         } else {
             extraLines.append("SOCKSPort 0.0.0.0:").append(socksPortPref).append(ipv6Pref).append(isolate).append("\n");
@@ -429,26 +427,26 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         extraLines.append("HTTPTunnelPort ").append(httpPortPref).append(isolate).append('\n');
 
 
-        if (prefs.getBoolean(PREF_CONNECTION_PADDING, false)) {
+        if (Prefs.getConnectionPadding()) {
             extraLines.append("ConnectionPadding 1").append('\n');
         }
 
-        if (prefs.getBoolean(PREF_REDUCED_CONNECTION_PADDING, true)) {
+        if (Prefs.getReducedConnectionPadding()) {
             extraLines.append("ReducedConnectionPadding 1").append('\n');
         }
 
-        if (prefs.getBoolean(PREF_CIRCUIT_PADDING, true)) {
+        if (Prefs.getCircuitPadding()) {
             extraLines.append("CircuitPadding 1").append('\n');
         } else {
             extraLines.append("CircuitPadding 0").append('\n');
         }
 
-        if (prefs.getBoolean(PREF_REDUCED_CIRCUIT_PADDING, true)) {
+        if (Prefs.getReducedCircuitPadding()) {
             extraLines.append("ReducedCircuitPadding 1").append('\n');
         }
 
-        var transPort = prefs.getString("pref_transport", ANON_TRANSPROXY_PORT_DEFAULT + "");
-        var dnsPort = prefs.getString("pref_dnsport", ANON_DNS_PORT_DEFAULT + "");
+        var transPort = Prefs.getAnonTransPort();
+        var dnsPort = Prefs.getAnonDnsPort();
 
         extraLines.append("TransPort ").append(checkPortOrAuto(transPort)).append(isolate).append('\n');
         extraLines.append("DNSPort ").append(checkPortOrAuto(dnsPort)).append(isolate).append('\n');
@@ -462,7 +460,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
 
         extraLines.append("DisableNetwork 0").append('\n');
 
-        if (Prefs.useDebugLogging()) {
+        if (Prefs.getUseDebugLogging()) {
             extraLines.append("Log debug syslog").append('\n');
             extraLines.append("SafeLogging 0").append('\n');
         }
@@ -472,7 +470,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         if (extraLines == null) return null;
 
         extraLines.append('\n');
-        extraLines.append(prefs.getString("pref_custom_torrc", "")).append('\n');
+        extraLines.append(Prefs.getCustomAnonRc()).append('\n');
 
         logNotice(getString(R.string.log_notice_updating_anonrc));
 
@@ -557,7 +555,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             startAnonService();
             showTorServiceErrorMsg = true;
 
-            if (Prefs.hostOnionServicesEnabled()) {
+            if (Prefs.getHostOnionServicesEnabled()) {
                 try {
                     updateV3OnionNames();
                 } catch (SecurityException se) {
@@ -661,12 +659,12 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
 
                         //now set our own events
                         ArrayList<String> events = new ArrayList<>(Arrays.asList(AnonControlCommands.EVENT_OR_CONN_STATUS, AnonControlCommands.EVENT_CIRCUIT_STATUS, AnonControlCommands.EVENT_NOTICE_MSG, AnonControlCommands.EVENT_WARN_MSG, AnonControlCommands.EVENT_ERR_MSG, AnonControlCommands.EVENT_BANDWIDTH_USED, AnonControlCommands.EVENT_NEW_DESC, AnonControlCommands.EVENT_ADDRMAP));
-                        if (Prefs.useDebugLogging()) {
+                        if (Prefs.getUseDebugLogging()) {
                             events.add(AnonControlCommands.EVENT_DEBUG_MSG);
                             events.add(AnonControlCommands.EVENT_INFO_MSG);
                         }
 
-                        if (Prefs.useDebugLogging())
+                        if (Prefs.getUseDebugLogging())
                             events.add(AnonControlCommands.EVENT_STREAM_STATUS);
 
                         conn.setEvents(events);
@@ -679,7 +677,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
 
             @Override
             public void onServiceDisconnected(ComponentName componentName) {
-                if (Prefs.useDebugLogging()) Log.d(TAG, "TorService: onServiceDisconnected");
+                if (Prefs.getUseDebugLogging()) Log.d(TAG, "TorService: onServiceDisconnected");
                 sendLocalStatusOffBroadcast();
             }
 
@@ -739,7 +737,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                     confDns = st.nextToken().split(":")[1];
                     confDns = confDns.substring(0, confDns.length() - 1);
                     mPortDns = Integer.parseInt(confDns);
-                    Prefs.getSharedPrefs(getApplicationContext()).edit().putInt(PREFS_DNS_PORT, mPortDns).apply();
+                    Prefs.setAnonDnsPortResolved(mPortDns);
                 }
 
                 String confTrans = conn.getInfo("net/listeners/trans");
@@ -816,17 +814,16 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         var intent = new Intent(LOCAL_ACTION_PORTS).putExtra(EXTRA_SOCKS_PROXY_PORT, socksPort).putExtra(EXTRA_HTTP_PROXY_PORT, httpPort).putExtra(EXTRA_DNS_PORT, dnsPort).putExtra(EXTRA_TRANS_PORT, transPort);
 
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
-        if (Prefs.useVpn() && mVpnManager != null) mVpnManager.handleIntent(new Builder(), intent);
+        if (Prefs.getUseVpn() && mVpnManager != null) mVpnManager.handleIntent(new Builder(), intent);
     }
 
     private StringBuffer processSettingsImpl(StringBuffer extraLines) throws IOException {
         logNotice(getString(R.string.updating_settings_in_anon_service));
-        var prefs = Prefs.getSharedPrefs(getApplicationContext());
-        var becomeRelay = prefs.getBoolean(AnyoneVpnConstants.PREF_OR, false);
-        var ReachableAddresses = prefs.getBoolean(AnyoneVpnConstants.PREF_REACHABLE_ADDRESSES, false);
-        var entranceNodes = prefs.getString("pref_entrance_nodes", "");
-        var exitNodes = prefs.getString("pref_exit_nodes", "");
-        var excludeNodes = prefs.getString("pref_exclude_nodes", "");
+        var becomeRelay = Prefs.getBeRelay();
+        var ReachableAddresses = Prefs.getReachableAddresses();
+        var entranceNodes = Prefs.getEntryNodes();
+        var exitNodes = Prefs.getExitNodes();
+        var excludeNodes = Prefs.getExcludeNodes();
 
         extraLines = processSettingsImplDirectPathway(extraLines);
 
@@ -853,7 +850,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
 
         try {
             if (ReachableAddresses) {
-                var ReachableAddressesPorts = prefs.getString(PREF_REACHABLE_ADDRESSES_PORTS, "*:80,*:443");
+                var ReachableAddressesPorts = Prefs.getReachableAddressesPorts();
                 extraLines.append("ReachableAddresses" + ' ').append(ReachableAddressesPorts).append('\n');
             }
 
@@ -864,8 +861,8 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
 
         try {
             if (becomeRelay && (!ReachableAddresses)) {
-                var ORPort = Integer.parseInt(Objects.requireNonNull(prefs.getString(PREF_OR_PORT, "9001")));
-                var nickname = prefs.getString(PREF_OR_NICKNAME, "Anyone VPN");
+                var ORPort = Integer.parseInt(Prefs.getOrPort());
+                var nickname = Prefs.getOrNickname();
                 var dnsFile = writeDNSFile();
 
                 extraLines.append("ServerDNSResolvConfFile").append(' ').append(dnsFile).append('\n'); // DNSResolv is not a typo
@@ -879,7 +876,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             return null;
         }
 
-        if (Prefs.hostOnionServicesEnabled()) {
+        if (Prefs.getHostOnionServicesEnabled()) {
             var contentResolver = getApplicationContext().getContentResolver();
             addV3OnionServicesToTorrc(extraLines, contentResolver);
             addV3ClientAuthToTorrc(extraLines, contentResolver);
@@ -889,28 +886,43 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     }
 
     private StringBuffer processSettingsImplDirectPathway(StringBuffer extraLines) {
-        var prefs = Prefs.getSharedPrefs(getApplicationContext());
         extraLines.append("UseBridges 0").append('\n');
-        if (!Prefs.useVpn()) { //set the proxy here if we aren't using a bridge
-            var proxyType = prefs.getString("pref_proxy_type", null);
-            if (proxyType != null && !proxyType.isEmpty()) {
-                var proxyHost = prefs.getString("pref_proxy_host", null);
-                var proxyPort = prefs.getString("pref_proxy_port", null);
-                var proxyUser = prefs.getString("pref_proxy_username", null);
-                var proxyPass = prefs.getString("pref_proxy_password", null);
+        if (Prefs.getUseVpn()) { //set the proxy here if we aren't using a bridge
+            var proxy = Prefs.getProxy();
 
-                if ((proxyHost != null && !proxyHost.isEmpty()) && (proxyPort != null && !proxyPort.isEmpty())) {
-                    extraLines.append(proxyType).append("Proxy").append(' ').append(proxyHost).append(':').append(proxyPort).append('\n');
+            if (proxy != null) {
+                var hostPort = proxy.getHost();
+                if (proxy.getPort() >= 1 && proxy.getPort() <= 65536) hostPort += ":" + proxy.getPort();
 
-                    if (proxyUser != null && proxyPass != null) {
-                        if (proxyType.equalsIgnoreCase("socks5")) {
-                            extraLines.append("Socks5ProxyUsername").append(' ').append(proxyUser).append('\n');
-                            extraLines.append("Socks5ProxyPassword").append(' ').append(proxyPass).append('\n');
-                        } else
-                            extraLines.append(proxyType).append("ProxyAuthenticator").append(' ').append(proxyUser).append(':').append(proxyPort).append('\n');
+                switch (proxy.getScheme()) {
+                    case "https":
+                        extraLines.append("HTTPSProxy ").append(hostPort).append("\n");
 
-                    } else if (proxyPass != null)
-                        extraLines.append(proxyType).append("ProxyAuthenticator").append(' ').append(proxyUser).append(':').append(proxyPort).append('\n');
+                        if (!TextUtils.isEmpty(proxy.getUserInfo())) {
+                            extraLines.append("HTTPSProxyAuthenticator ").append(proxy.getUserInfo()).append("\n");
+                        }
+
+                        break;
+
+                    case "socks4":
+                        extraLines.append("Socks4Proxy ").append(hostPort).append("\n");
+
+                        break;
+
+                    case "socks5":
+                        extraLines.append("Socks5Proxy ").append(hostPort).append("\n");
+
+                        var userInfo = proxy.getUserInfo().split(":");
+
+                        if (userInfo.length > 0 && !userInfo[0].isEmpty()) {
+                            extraLines.append("Socks5ProxyUsername ").append(userInfo[0]).append("\n");
+
+                            if (userInfo.length > 1 && !userInfo[1].isEmpty()) {
+                                extraLines.append("Socks5ProxyPassword ").append(userInfo[1]).append("\n");
+                            }
+                        }
+
+                        break;
                 }
             }
         }
@@ -1054,7 +1066,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     // system calls this method when VPN disconnects (either by the user or another VPN app)
     @Override
     public void onRevoke() {
-        Prefs.putUseVpn(false);
+        Prefs.setUseVpn(false);
         mVpnManager.handleIntent(new Builder(), new Intent(ACTION_STOP_VPN));
         // tell UI, if it's open, to update immediately (don't wait for onResume() in Activity...)
         LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(ACTION_STOP_VPN));
@@ -1141,7 +1153,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                 case ACTION_START -> {
                     startAnon();
                     replyWithStatus(mIntent);
-                    if (Prefs.useVpn()) {
+                    if (Prefs.getUseVpn()) {
                         if (mVpnManager != null && (!mVpnManager.isStarted())) { // start VPN here
                             Intent vpnIntent = VpnService.prepare(AnyoneVpnService.this);
                             if (vpnIntent == null) { //then we can run the VPN

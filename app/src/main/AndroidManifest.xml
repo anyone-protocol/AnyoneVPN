@@ -94,6 +94,11 @@
             android:name=".ui.clientauth.ClientAuthContentProvider"
             android:exported="false"/>
 
+        <provider
+            android:name=".service.util.PreferenceProvider"
+            android:authorities="${applicationId}.provider.preferences"
+            android:exported="false" />
+
         <receiver
             android:name=".service.StartAnonReceiver"
             android:exported="true"

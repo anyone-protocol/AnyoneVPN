@@ -21,7 +21,7 @@ public class StartAnonReceiver extends BroadcastReceiver implements AnyoneVpnCon
             String action = intent.getAction();
             if (TextUtils.equals(action, ACTION_START)) {
                 String packageName = intent.getStringExtra(EXTRA_PACKAGE_NAME);
-                if (Prefs.allowBackgroundStarts()) {
+                if (Prefs.getAllowBackgroundStarts()) {
                     Intent startTorIntent = new Intent(context, AnyoneVpnService.class).setAction(action).putExtra(AnyoneVpnConstants.EXTRA_NOT_SYSTEM, true);
                     if (packageName != null) {
                         startTorIntent.putExtra(AnyoneVpnService.EXTRA_PACKAGE_NAME, packageName);
