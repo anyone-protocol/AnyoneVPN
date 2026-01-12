@@ -266,4 +266,8 @@
     <!-- ClientAuthActivity -->
     <string name="add_client_auth">Add Client Authentication</string>
     <string name="there_s_no_current_authorization">There\'s no current authorization</string>
+
+    <!-- AppsActivity -->
+    <string name="select_all">Select All</string>
+    <string name="deselect_all">Deselect All^</string>
 </resources>

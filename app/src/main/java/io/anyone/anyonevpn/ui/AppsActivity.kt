@@ -8,6 +8,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +16,9 @@ import android.widget.ArrayAdapter
 import android.widget.Filter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
+import androidx.core.view.allViews
 import io.anyone.anyonevpn.BuildConfig
 import io.anyone.anyonevpn.R
 import io.anyone.anyonevpn.core.putNotSystem
@@ -53,16 +56,57 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         mBinding.etSearch.addTextChangedListener(this)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.choose_apps, menu)
+
+        return true
+    }
+
     override fun onResume() {
         super.onResume()
 
         reloadApps()
     }
 
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+        val item = menu?.findItem(R.id.select_all) ?: return true
+
+        if (mApps.count { it.isTorified } < mApps.size) {
+            item.icon = AppCompatResources.getDrawable(this, R.drawable.select_all_24px)
+            item.setTitle(R.string.select_all)
+        }
+        else {
+            item.icon = AppCompatResources.getDrawable(this, R.drawable.deselect_24px)
+            item.setTitle(R.string.deselect_all)
+        }
+
+        return true
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            finish()
-            return true
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+
+            R.id.select_all -> {
+                val select = mApps.count { it.isTorified } < mApps.size
+
+                for (app in mApps) {
+                    app.isTorified = select
+                }
+
+                for (v in mBinding.appList.allViews) {
+                    (v.tag as? ListEntry)?.update()
+                }
+
+                saveAppSettings()
+
+                invalidateOptionsMenu()
+
+                return true
+            }
         }
 
         return super.onOptionsItemSelected(item)
@@ -72,10 +116,11 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         val entry = v.tag as? ListEntry ?: return
 
         entry.app?.isTorified = !(entry.app?.isTorified ?: false)
-        entry.box?.setBackgroundResource(if (entry.app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
-        entry.active?.visibility = if (entry.app?.isTorified == true) View.VISIBLE else View.INVISIBLE
+        entry.update()
 
         saveAppSettings()
+
+        invalidateOptionsMenu()
     }
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -102,6 +147,8 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
                 packageManager?.let {
                     mApps = getApps(it, null, null)
                 }
+
+                invalidateOptionsMenu()
             }
 
             mBinding.appList.adapter = mAdapterApps
@@ -214,6 +261,11 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         var text: TextView? = null // app name
         var active: TextView? = null
         var app: AnonifiedApp? = null
+
+        fun update() {
+            box?.setBackgroundResource(if (app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
+            active?.visibility = if (app?.isTorified == true) View.VISIBLE else View.INVISIBLE
+        }
     }
 
     companion object {
