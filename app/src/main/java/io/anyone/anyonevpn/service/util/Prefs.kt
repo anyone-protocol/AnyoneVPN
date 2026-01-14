@@ -19,7 +19,7 @@ object Prefs {
     private const val PREF_POWER_USER_MODE = "pref_power_user"
 
 
-    private const val PREF_HOST_ONION_SERVICES = "pref_host_onionservices"
+    private const val PREF_HOST_HIDDEN_SERVICES = "pref_host_onionservices"
 
     private const val PREF_CURRENT_VERSION = "pref_current_version"
 
@@ -43,9 +43,9 @@ object Prefs {
     }
 
     @JvmStatic
-    var hostOnionServicesEnabled: Boolean
-        get() = cr?.getPrefBoolean(PREF_HOST_ONION_SERVICES, true) ?: true
-        set(value) = cr?.putPref(PREF_HOST_ONION_SERVICES, value) ?: Unit
+    var hostHiddenServicesEnabled: Boolean
+        get() = cr?.getPrefBoolean(PREF_HOST_HIDDEN_SERVICES, true) ?: true
+        set(value) = cr?.putPref(PREF_HOST_HIDDEN_SERVICES, value) ?: Unit
 
 
     @JvmStatic

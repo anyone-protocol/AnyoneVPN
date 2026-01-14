@@ -77,7 +77,7 @@ public interface AnyoneVpnConstants {
 
     String ACTION_LOCAL_LOCALE_SET = "io.anyone.anyonevpn.intent.LOCAL_LOCALE_SET";
 
-    String ACTION_UPDATE_ONION_NAMES = "io.anyone.anyonevpn.intent.action.UPDATE_ONION_NAMES";
+    String ACTION_UPDATE_HIDDEN_SERVICES_NAMES = "io.anyone.anyonevpn.intent.action.UPDATE_ONION_NAMES";
 
     /**
      * {@link Intent} send by Anyone VPN with {@code ON/OFF/STARTING/STOPPING} status

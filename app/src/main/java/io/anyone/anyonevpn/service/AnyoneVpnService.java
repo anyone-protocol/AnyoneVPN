@@ -73,10 +73,10 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     private static final int ERROR_NOTIFY_ID = 3;
 
     //these will be set dynamically due to build flavors
-    private static Uri V3_ONION_SERVICES_CONTENT_URI = null;//Uri.parse("content://org.torproject.android.ui.v3onionservice/v3");
+    private static Uri V3_HIDDEN_SERVICES_CONTENT_URI = null;//Uri.parse("content://org.torproject.android.ui.v3onionservice/v3");
     private static Uri V3_CLIENT_AUTH_URI = null;//Uri.parse("content://org.torproject.android.ui.v3onionservice.clientauth/v3auth");
     private final static String NOTIFICATION_CHANNEL_ID = "anyonevpn_channel_1";
-    private static final String[] V3_ONION_SERVICE_PROJECTION = new String[]{OnionService._ID, OnionService.NAME, OnionService.DOMAIN, OnionService.PORT, OnionService.ONION_PORT, OnionService.ENABLED, OnionService.PATH};
+    private static final String[] V3_HIDDEN_SERVICE_PROJECTION = new String[]{HiddenService._ID, HiddenService.NAME, HiddenService.DOMAIN, HiddenService.PORT, HiddenService.ANON_PORT, HiddenService.ENABLED, HiddenService.PATH};
     private static final String[] V3_CLIENT_AUTH_PROJECTION = new String[]{V3ClientAuth._ID, V3ClientAuth.DOMAIN, V3ClientAuth.HASH, V3ClientAuth.ENABLED};
 
     public static int mPortSOCKS = -1;
@@ -96,7 +96,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     private boolean shouldUnbindAnonService;
     private NotificationManager mNotificationManager = null;
     private NotificationCompat.Builder mNotifyBuilder;
-    private File mV3OnionBasePath, mV3AuthBasePath;
+    private File mV3HiddenServicesBasePath, mV3AuthBasePath;
 
     public void debug(String msg) {
         Log.d(TAG, msg);
@@ -309,7 +309,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         configLanguage();
         try {
             //set proper content URIs for current build flavor
-            V3_ONION_SERVICES_CONTENT_URI = Uri.parse("content://" + getApplicationContext().getPackageName() + ".ui.hostedservices/v3");
+            V3_HIDDEN_SERVICES_CONTENT_URI = Uri.parse("content://" + getApplicationContext().getPackageName() + ".ui.hostedservices/v3");
             V3_CLIENT_AUTH_URI = Uri.parse("content://" + getApplicationContext().getPackageName() + ".ui.hostedservices.clientauth/v3auth");
 
             try {
@@ -322,8 +322,8 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
 
                 if (!appCacheHome.exists()) appCacheHome.mkdirs();
 
-                mV3OnionBasePath = new File(getFilesDir().getAbsolutePath(), ANON_SERVICES_DIR);
-                if (!mV3OnionBasePath.isDirectory()) mV3OnionBasePath.mkdirs();
+                mV3HiddenServicesBasePath = new File(getFilesDir().getAbsolutePath(), ANON_SERVICES_DIR);
+                if (!mV3HiddenServicesBasePath.isDirectory()) mV3HiddenServicesBasePath.mkdirs();
 
                 mV3AuthBasePath = new File(getFilesDir().getAbsolutePath(), V3_CLIENT_AUTH_DIR);
                 if (!mV3AuthBasePath.isDirectory()) mV3AuthBasePath.mkdirs();
@@ -555,9 +555,9 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             startAnonService();
             showTorServiceErrorMsg = true;
 
-            if (Prefs.getHostOnionServicesEnabled()) {
+            if (Prefs.getHostHiddenServicesEnabled()) {
                 try {
-                    updateV3OnionNames();
+                    updateV3HiddenServicesNames();
                 } catch (SecurityException se) {
                     logNotice(getString(R.string.log_notice_unable_to_update_onions));
                 }
@@ -568,34 +568,34 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         }
     }
 
-    private void updateV3OnionNames() throws SecurityException {
+    private void updateV3HiddenServicesNames() throws SecurityException {
         var contentResolver = getApplicationContext().getContentResolver();
-        var onionServices = contentResolver.query(V3_ONION_SERVICES_CONTENT_URI, null, null, null, null);
-        if (onionServices != null) {
+        var hiddenServices = contentResolver.query(V3_HIDDEN_SERVICES_CONTENT_URI, null, null, null, null);
+        if (hiddenServices != null) {
             try {
-                while (onionServices.moveToNext()) {
-                    var domain_index = onionServices.getColumnIndex(OnionService.DOMAIN);
-                    var path_index = onionServices.getColumnIndex(OnionService.PATH);
-                    var id_index = onionServices.getColumnIndex(OnionService._ID);
+                while (hiddenServices.moveToNext()) {
+                    var domain_index = hiddenServices.getColumnIndex(HiddenService.DOMAIN);
+                    var path_index = hiddenServices.getColumnIndex(HiddenService.PATH);
+                    var id_index = hiddenServices.getColumnIndex(HiddenService._ID);
                     if (domain_index < 0 || path_index < 0 || id_index < 0) continue;
-                    var domain = onionServices.getString(domain_index);
+                    var domain = hiddenServices.getString(domain_index);
                     if (domain == null || TextUtils.isEmpty(domain)) {
-                        var path = onionServices.getString(path_index);
-                        var v3OnionDirPath = new File(mV3OnionBasePath.getAbsolutePath(), path).getCanonicalPath();
-                        var hostname = new File(v3OnionDirPath, "hostname");
+                        var path = hiddenServices.getString(path_index);
+                        var v3HiddenServicesDirPath = new File(mV3HiddenServicesBasePath.getAbsolutePath(), path).getCanonicalPath();
+                        var hostname = new File(v3HiddenServicesDirPath, "hostname");
                         if (hostname.exists()) {
-                            int id = onionServices.getInt(id_index);
+                            int id = hiddenServices.getInt(id_index);
                             domain = Utils.readInputStreamAsString(new FileInputStream(hostname)).trim();
                             var fields = new ContentValues();
-                            fields.put(OnionService.DOMAIN, domain);
-                            contentResolver.update(V3_ONION_SERVICES_CONTENT_URI, fields, OnionService._ID + "=" + id, null);
+                            fields.put(HiddenService.DOMAIN, domain);
+                            contentResolver.update(V3_HIDDEN_SERVICES_CONTENT_URI, fields, HiddenService._ID + "=" + id, null);
                         }
                     }
                 }
                 /*
                 This old status hack is temporary and fixes the issue reported by syphyr at
                 https://github.com/guardianproject/orbot/pull/556
-                Down the line a better approach needs to happen for sending back the onion names updated
+                Down the line a better approach needs to happen for sending back the hidden services names updated
                 status, perhaps just adding it as an extra to the normal Intent callback...
                  */
                 var oldStatus = mCurrentStatus;
@@ -606,7 +606,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             } catch (Exception e) {
                 Log.e(TAG, Log.getStackTraceString(e));
             }
-            onionServices.close();
+            hiddenServices.close();
         }
     }
 
@@ -876,10 +876,10 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             return null;
         }
 
-        if (Prefs.getHostOnionServicesEnabled()) {
+        if (Prefs.getHostHiddenServicesEnabled()) {
             var contentResolver = getApplicationContext().getContentResolver();
-            addV3OnionServicesToTorrc(extraLines, contentResolver);
-            addV3ClientAuthToTorrc(extraLines, contentResolver);
+            addV3HiddenServicesToAnonrc(extraLines, contentResolver);
+            addV3ClientAuthToAnonrc(extraLines, contentResolver);
         }
 
         return extraLines;
@@ -943,39 +943,39 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             return nf.format(Math.round(((float) ((int) (bitsPerSecond * 100 / 1024 / 1024)) / 100))) + context.getString(R.string.mebibyte_per_second);
     }
 
-    private void addV3OnionServicesToTorrc(StringBuffer torrc, ContentResolver contentResolver) {
+    private void addV3HiddenServicesToAnonrc(StringBuffer torrc, ContentResolver contentResolver) {
         try {
-            var onionServices = contentResolver.query(V3_ONION_SERVICES_CONTENT_URI, V3_ONION_SERVICE_PROJECTION, OnionService.ENABLED + "=1", null, null);
-            if (onionServices != null) {
-                while (onionServices.moveToNext()) {
-                    var id_index = onionServices.getColumnIndex(OnionService._ID);
-                    var port_index = onionServices.getColumnIndex(OnionService.PORT);
-                    var onion_port_index = onionServices.getColumnIndex(OnionService.ONION_PORT);
-                    var path_index = onionServices.getColumnIndex(OnionService.PATH);
-                    var domain_index = onionServices.getColumnIndex(OnionService.DOMAIN);
+            var hiddenServices = contentResolver.query(V3_HIDDEN_SERVICES_CONTENT_URI, V3_HIDDEN_SERVICE_PROJECTION, HiddenService.ENABLED + "=1", null, null);
+            if (hiddenServices != null) {
+                while (hiddenServices.moveToNext()) {
+                    var id_index = hiddenServices.getColumnIndex(HiddenService._ID);
+                    var port_index = hiddenServices.getColumnIndex(HiddenService.PORT);
+                    var anon_port_index = hiddenServices.getColumnIndex(HiddenService.ANON_PORT);
+                    var path_index = hiddenServices.getColumnIndex(HiddenService.PATH);
+                    var domain_index = hiddenServices.getColumnIndex(HiddenService.DOMAIN);
                     // Ensure that are have all the indexes before trying to use them
-                    if (id_index < 0 || port_index < 0 || onion_port_index < 0 || path_index < 0 || domain_index < 0)
+                    if (id_index < 0 || port_index < 0 || anon_port_index < 0 || path_index < 0 || domain_index < 0)
                         continue;
 
-                    var id = onionServices.getInt(id_index);
-                    var localPort = onionServices.getInt(port_index);
-                    var onionPort = onionServices.getInt(onion_port_index);
-                    var path = onionServices.getString(path_index);
-                    var domain = onionServices.getString(domain_index);
+                    var id = hiddenServices.getInt(id_index);
+                    var localPort = hiddenServices.getInt(port_index);
+                    var anonPort = hiddenServices.getInt(anon_port_index);
+                    var path = hiddenServices.getString(path_index);
+                    var domain = hiddenServices.getString(domain_index);
                     if (path == null) {
                         path = "v3";
                         if (domain == null) path += UUID.randomUUID().toString();
                         else path += localPort;
                         var cv = new ContentValues();
-                        cv.put(OnionService.PATH, path);
-                        contentResolver.update(V3_ONION_SERVICES_CONTENT_URI, cv, OnionService._ID + "=" + id, null);
+                        cv.put(HiddenService.PATH, path);
+                        contentResolver.update(V3_HIDDEN_SERVICES_CONTENT_URI, cv, HiddenService._ID + "=" + id, null);
                     }
-                    var v3DirPath = new File(mV3OnionBasePath.getAbsolutePath(), path).getCanonicalPath();
+                    var v3DirPath = new File(mV3HiddenServicesBasePath.getAbsolutePath(), path).getCanonicalPath();
                     torrc.append("HiddenServiceDir ").append(v3DirPath).append("\n");
                     torrc.append("HiddenServiceVersion 3").append("\n");
-                    torrc.append("HiddenServicePort ").append(onionPort).append(" 127.0.0.1:").append(localPort).append("\n");
+                    torrc.append("HiddenServicePort ").append(anonPort).append(" 127.0.0.1:").append(localPort).append("\n");
                 }
-                onionServices.close();
+                hiddenServices.close();
             }
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
@@ -986,7 +986,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         return domain + ":descriptor:x25519:" + keyHash;
     }
 
-    private void addV3ClientAuthToTorrc(StringBuffer torrc, ContentResolver contentResolver) {
+    private void addV3ClientAuthToAnonrc(StringBuffer anonrc, ContentResolver contentResolver) {
         var v3auths = contentResolver.query(V3_CLIENT_AUTH_URI, V3_CLIENT_AUTH_PROJECTION, V3ClientAuth.ENABLED + "=1", null, null);
 
         if (v3auths == null) return;
@@ -1000,7 +1000,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             }
         }
 
-        torrc.append("ClientOnionAuthDir " + mV3AuthBasePath.getAbsolutePath()).append('\n');
+        anonrc.append("ClientOnionAuthDir " + mV3AuthBasePath.getAbsolutePath()).append('\n');
 
         try {
             int i = 0;
@@ -1123,10 +1123,10 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
-    public static final class OnionService implements BaseColumns {
+    public static final class HiddenService implements BaseColumns {
         public static final String NAME = "name";
         public static final String PORT = "port";
-        public static final String ONION_PORT = "onion_port";
+        public static final String ANON_PORT = "anon_port";
         public static final String DOMAIN = "domain";
         public static final String ENABLED = "enabled";
         public static final String PATH = "filepath";
@@ -1169,7 +1169,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                     var userIsQuitting = mIntent.getBooleanExtra(ACTION_STOP_FOREGROUND_TASK, false);
                     stopAnonAsync(!userIsQuitting);
                 }
-                case ACTION_UPDATE_ONION_NAMES -> updateV3OnionNames();
+                case ACTION_UPDATE_HIDDEN_SERVICES_NAMES -> updateV3HiddenServicesNames();
                 case ACTION_STOP_FOREGROUND_TASK -> stopForeground(true);
                 case ACTION_START_VPN -> {
                     if (mVpnManager != null && (!mVpnManager.isStarted())) {
