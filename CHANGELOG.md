@@ -1,5 +1,11 @@
 # AnyoneVPN Changelog
 
+## 0.1.5
+
+- Added select all / deselect all option to "Choose Apps" activity.
+- Fixed bug regarding hidden services support.
+- Encapsulate core VPN code in its own process for better stability.
+
 ## 0.1.4
 
 - Always show "Choose apps" and "Change exit" buttons.
