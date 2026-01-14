@@ -62,7 +62,6 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.ServiceCompat;
 import androidx.core.content.ContextCompat;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 @SuppressWarnings("StringConcatenationInsideStringBufferAppend")
 public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
@@ -515,22 +514,22 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     private void replyWithStatus(Intent startRequest) {
         String packageName = startRequest.getStringExtra(EXTRA_PACKAGE_NAME);
 
-        Intent reply = new Intent(ACTION_STATUS);
-        reply.putExtra(EXTRA_STATUS, mCurrentStatus);
-        reply.putExtra(EXTRA_SOCKS_PROXY, "socks://127.0.0.1:" + mPortSOCKS);
-        reply.putExtra(EXTRA_SOCKS_PROXY_HOST, "127.0.0.1");
-        reply.putExtra(EXTRA_SOCKS_PROXY_PORT, mPortSOCKS);
-        reply.putExtra(EXTRA_HTTP_PROXY, "http://127.0.0.1:" + mPortHTTP);
-        reply.putExtra(EXTRA_HTTP_PROXY_HOST, "127.0.0.1");
-        reply.putExtra(EXTRA_HTTP_PROXY_PORT, mPortHTTP);
-        reply.putExtra(EXTRA_DNS_PORT, mPortDns);
+        Intent reply = new Intent(ACTION_STATUS)
+                .putExtra(EXTRA_STATUS, mCurrentStatus)
+                .putExtra(EXTRA_SOCKS_PROXY, "socks://127.0.0.1:" + mPortSOCKS)
+                .putExtra(EXTRA_SOCKS_PROXY_HOST, "127.0.0.1")
+                .putExtra(EXTRA_SOCKS_PROXY_PORT, mPortSOCKS)
+                .putExtra(EXTRA_HTTP_PROXY, "http://127.0.0.1:" + mPortHTTP)
+                .putExtra(EXTRA_HTTP_PROXY_HOST, "127.0.0.1")
+                .putExtra(EXTRA_HTTP_PROXY_PORT, mPortHTTP)
+                .putExtra(EXTRA_DNS_PORT, mPortDns);
 
         if (packageName != null) {
             reply.setPackage(packageName);
             sendBroadcast(reply);
         }
 
-        LocalBroadcastManager.getInstance(this).sendBroadcast(reply.setAction(LOCAL_ACTION_STATUS));
+        sendBroadcast(reply.setAction(LOCAL_ACTION_STATUS).setPackage(getPackageName()));
 
         if (mPortSOCKS != -1 && mPortHTTP != -1)
             sendCallbackPorts(mPortSOCKS, mPortHTTP, mPortDns, mPortTrans);
@@ -599,8 +598,8 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
                 status, perhaps just adding it as an extra to the normal Intent callback...
                  */
                 var oldStatus = mCurrentStatus;
-                var intent = new Intent(LOCAL_ACTION_V3_NAMES_UPDATED);
-                LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+
+                sendBroadcast(new Intent(LOCAL_ACTION_V3_NAMES_UPDATED).setPackage(getPackageName()));
 
                 mCurrentStatus = oldStatus;
             } catch (Exception e) {
@@ -702,8 +701,9 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     }
 
     private void sendLocalStatusOffBroadcast() {
-        var localOffStatus = new Intent(LOCAL_ACTION_STATUS).putExtra(EXTRA_STATUS, STATUS_OFF);
-        LocalBroadcastManager.getInstance(this).sendBroadcast(localOffStatus);
+        sendBroadcast(new Intent(LOCAL_ACTION_STATUS)
+                .putExtra(EXTRA_STATUS, STATUS_OFF)
+                .setPackage(getPackageName()));
     }
 
     protected void exec(Runnable run) {
@@ -790,12 +790,21 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     }
 
     protected void sendCallbackBandwidth(long lastWritten, long lastRead, long totalWritten, long totalRead) {
-        LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(LOCAL_ACTION_BANDWIDTH).putExtra(LOCAL_EXTRA_TOTAL_WRITTEN, totalWritten).putExtra(LOCAL_EXTRA_TOTAL_READ, totalRead).putExtra(LOCAL_EXTRA_LAST_WRITTEN, lastWritten).putExtra(LOCAL_EXTRA_LAST_READ, lastRead));
+        sendBroadcast(new Intent(LOCAL_ACTION_BANDWIDTH)
+                .putExtra(LOCAL_EXTRA_TOTAL_WRITTEN, totalWritten)
+                .putExtra(LOCAL_EXTRA_TOTAL_READ, totalRead)
+                .putExtra(LOCAL_EXTRA_LAST_WRITTEN, lastWritten)
+                .putExtra(LOCAL_EXTRA_LAST_READ, lastRead)
+                .setPackage(getPackageName()));
     }
 
     private void sendCallbackLogMessage(final String logMessage) {
         var notificationMessage = logMessage;
-        var localIntent = new Intent(LOCAL_ACTION_LOG).putExtra(LOCAL_EXTRA_LOG, logMessage);
+
+        var localIntent = new Intent(LOCAL_ACTION_LOG)
+                .putExtra(LOCAL_EXTRA_LOG, logMessage)
+                .setPackage(getPackageName());
+
         if (logMessage.contains(LOG_NOTICE_HEADER)) {
             notificationMessage = notificationMessage.substring(LOG_NOTICE_HEADER.length());
             if (notificationMessage.contains(LOG_NOTICE_BOOTSTRAPPED)) {
@@ -807,13 +816,19 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
             }
         }
         showToolbarNotification(notificationMessage, NOTIFY_ID, R.drawable.ic_anyone);
-        mHandler.post(() -> LocalBroadcastManager.getInstance(AnyoneVpnService.this).sendBroadcast(localIntent));
+        mHandler.post(() -> sendBroadcast(localIntent));
     }
 
     private void sendCallbackPorts(int socksPort, int httpPort, int dnsPort, int transPort) {
-        var intent = new Intent(LOCAL_ACTION_PORTS).putExtra(EXTRA_SOCKS_PROXY_PORT, socksPort).putExtra(EXTRA_HTTP_PROXY_PORT, httpPort).putExtra(EXTRA_DNS_PORT, dnsPort).putExtra(EXTRA_TRANS_PORT, transPort);
+        var intent = new Intent(LOCAL_ACTION_PORTS)
+                .putExtra(EXTRA_SOCKS_PROXY_PORT, socksPort)
+                .putExtra(EXTRA_HTTP_PROXY_PORT, httpPort)
+                .putExtra(EXTRA_DNS_PORT, dnsPort)
+                .putExtra(EXTRA_TRANS_PORT, transPort)
+                .setPackage(getPackageName());
 
-        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+        sendBroadcast(intent);
+
         if (Prefs.getUseVpn() && mVpnManager != null) mVpnManager.handleIntent(new Builder(), intent);
     }
 
@@ -1069,7 +1084,7 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
         Prefs.setUseVpn(false);
         mVpnManager.handleIntent(new Builder(), new Intent(ACTION_STOP_VPN));
         // tell UI, if it's open, to update immediately (don't wait for onResume() in Activity...)
-        LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(ACTION_STOP_VPN));
+        sendBroadcast(new Intent(ACTION_STOP_VPN).setPackage(getPackageName()));
     }
 
     private void setExitNode(String newExits) {
@@ -1237,7 +1252,8 @@ public class AnyoneVpnService extends VpnService implements AnyoneVpnConstants {
     }
 
     private void sendStatusToAnyoneVpnActivity() {
-        var localStatus = new Intent(LOCAL_ACTION_STATUS).putExtra(EXTRA_STATUS, mCurrentStatus);
-        LocalBroadcastManager.getInstance(AnyoneVpnService.this).sendBroadcast(localStatus); // update the activity with what's new
+        sendBroadcast(new Intent(LOCAL_ACTION_STATUS)
+                .putExtra(EXTRA_STATUS, mCurrentStatus)
+                .setPackage(getPackageName())); // update the activity with what's new
     }
 }

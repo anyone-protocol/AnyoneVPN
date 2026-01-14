@@ -123,6 +123,7 @@
         <service
             android:name=".service.AnyoneVpnService"
             android:enabled="true"
+            android:process=":anon"
             android:permission="android.permission.BIND_VPN_SERVICE"
             android:foregroundServiceType="systemExempted"
             android:stopWithTask="false"
@@ -131,6 +132,11 @@
                 <action android:name="android.net.VpnService" />
             </intent-filter>
         </service>
+
+        <service android:name="io.anyone.jni.AnonService"
+            android:process=":anon"
+            tools:node="merge"
+            tools:replace="android:process" />
 
         <service
             android:name=".ui.AnyoneVpnTileService"

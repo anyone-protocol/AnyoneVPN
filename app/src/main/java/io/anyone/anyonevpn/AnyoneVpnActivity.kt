@@ -14,7 +14,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.scottyab.rootbeer.RootBeer
@@ -84,21 +83,15 @@ class AnyoneVpnActivity : BaseActivity() {
         mBinding.bottomNavigation.setupWithNavController(navController)
         mBinding.bottomNavigation.selectedItemId = R.id.connectFragment
 
-        with(LocalBroadcastManager.getInstance(this)) {
-            registerReceiver(
-                anyoneVpnServiceBroadcastReceiver, IntentFilter(AnyoneVpnConstants.LOCAL_ACTION_STATUS)
-            )
-            registerReceiver(
-                anyoneVpnServiceBroadcastReceiver, IntentFilter(AnyoneVpnConstants.LOCAL_ACTION_LOG)
-            )
-            registerReceiver(
-                anyoneVpnServiceBroadcastReceiver, IntentFilter(AnyoneVpnConstants.LOCAL_ACTION_PORTS)
-            )
-            registerReceiver(
-                anyoneVpnServiceBroadcastReceiver,
-                IntentFilter(AnyoneVpnConstants.LOCAL_ACTION_SMART_CONNECT_EVENT)
-            )
+        val filter = IntentFilter().apply {
+            addAction(AnyoneVpnConstants.LOCAL_ACTION_STATUS)
+            addAction(AnyoneVpnConstants.LOCAL_ACTION_LOG)
+            addAction(AnyoneVpnConstants.LOCAL_ACTION_PORTS)
+            addAction(AnyoneVpnConstants.LOCAL_ACTION_SMART_CONNECT_EVENT)
         }
+
+        ContextCompat.registerReceiver(this, anyoneVpnServiceBroadcastReceiver,
+            filter, ContextCompat.RECEIVER_NOT_EXPORTED)
 
         requestNotificationPermission()
 
@@ -170,8 +163,7 @@ class AnyoneVpnActivity : BaseActivity() {
     override fun onDestroy() {
         super.onDestroy()
 
-        LocalBroadcastManager.getInstance(this)
-            .unregisterReceiver(anyoneVpnServiceBroadcastReceiver)
+        unregisterReceiver(anyoneVpnServiceBroadcastReceiver)
     }
 
 
