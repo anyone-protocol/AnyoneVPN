@@ -1,8 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
-        agp_version = '8.13.2'
-        kotlin_version = '2.1.21'
+        agp_version = '9.0.0'
+        kotlin_version = '2.2.10'
     }
 
     repositories {

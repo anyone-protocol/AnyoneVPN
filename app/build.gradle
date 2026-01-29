@@ -4,11 +4,9 @@ apply plugin: 'kotlin-android'
 /* gets the version name from the latest Git tag, stripping the leading v off */
 def getVersionName = { ->
     def stdout = new ByteArrayOutputStream()
-    exec {
+    return providers.exec {
         commandLine 'git', 'describe', '--tags', '--always'
-        standardOutput = stdout
-    }
-    return stdout.toString().trim()
+    }.standardOutput.asText.get().trim()
 }
 
 static def versionCodeEpoch() {
@@ -21,7 +19,6 @@ android {
         versionName getVersionName()
         multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-        archivesBaseName = "AnyoneVpn"
     }
 
     compileOptions {
@@ -55,7 +52,6 @@ android {
             applicationId 'io.anyone.anyonevpn'
             versionCode 10
             versionName getVersionName()
-            archivesBaseName = "AnyoneVpn-${versionName}"
         }
 
         nightly {
@@ -63,7 +59,6 @@ android {
             applicationId 'io.anyone.anyonevpn.nightly'
             versionName getVersionName()
             versionCode versionCodeEpoch()
-            archivesBaseName = "AnyoneVpn-${versionName}"
         }
     }
 
