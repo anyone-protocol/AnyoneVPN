@@ -31,6 +31,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivAction"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Choose apps" />
+        tools:text="Exclude apps" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@ import kotlinx.serialization.Transient
 import java.text.Normalizer
 
 @Serializable
-class AnonifiedApp : Comparable<AnonifiedApp> {
+class ExcludedApp : Comparable<ExcludedApp> {
     @Serializable
     var isEnabled: Boolean = false
 
@@ -36,18 +36,18 @@ class AnonifiedApp : Comparable<AnonifiedApp> {
     var packageName: String = ""
 
     @Serializable
-    var isTorified: Boolean = false
+    var isExcluded: Boolean = false
 
     @Serializable
     var usesInternet: Boolean = false
 
-    override fun compareTo(other: AnonifiedApp): Int =
+    override fun compareTo(other: ExcludedApp): Int =
          (name ?: "").compareTo(other.name ?: "", ignoreCase = true)
 
     override fun toString(): String = name ?: ""
 
     companion object {
-        fun getApps(context: Context): ArrayList<AnonifiedApp> {
+        fun getApps(context: Context): ArrayList<ExcludedApp> {
             val torifiedPackages = Prefs.anonifiedApps
                 .split("|")
                 .filter { it.isNotBlank() }
@@ -55,9 +55,9 @@ class AnonifiedApp : Comparable<AnonifiedApp> {
 
             val pMgr = context.packageManager
             val lAppInfo = pMgr.getInstalledApplications(0)
-            val apps = ArrayList<AnonifiedApp>()
+            val apps = ArrayList<ExcludedApp>()
             lAppInfo.forEach {
-                val app = AnonifiedApp()
+                val app = ExcludedApp()
                 try {
                     val pInfo = pMgr.getPackageInfo(it.packageName, PackageManager.GET_PERMISSIONS)
                     if (AnyoneVpnConstants.BYPASS_VPN_PACKAGES.contains(it.packageName)) {
@@ -94,15 +94,15 @@ class AnonifiedApp : Comparable<AnonifiedApp> {
                 }
 
                 // Check if this application is allowed
-                app.isTorified = torifiedPackages.binarySearch(app.packageName) >= 0
+                app.isExcluded = torifiedPackages.binarySearch(app.packageName) >= 0
             }
 
             apps.sort()
             return apps
         }
 
-        fun sortAppsForTorifiedAndAbc(apps: List<AnonifiedApp>?) {
-            apps?.sortedWith(compareBy<AnonifiedApp> { !it.isTorified }.thenBy {
+        fun sortAppsForTorifiedAndAbc(apps: List<ExcludedApp>?) {
+            apps?.sortedWith(compareBy<ExcludedApp> { !it.isExcluded }.thenBy {
                 Normalizer.normalize(it.name ?: "", Normalizer.Form.NFD)
             })
         }

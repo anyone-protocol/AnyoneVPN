@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Attiva sempre il riempimento della connesione in difesa contro alcune forme di analisi del traffico. Predefinito: auto</string>
     <string name="pref_reduced_connection_padding">Riempimento connessione ridotto</string>
     <string name="pref_reduced_connection_padding_summary">Chiude prima le connessioni dei relay e invia meno pacchetti riempiti per ridurre l\'uso di dati e batteria</string>
-    <string name="app_shortcuts">App con accesso a Anon</string>
     <string name="trouble_connecting">Problemi nel connetterti?</string>
     <string name="full_device_vpn">VPN intero dispositivo</string>
     <string name="vpn_disabled">VPN disattivata</string>
@@ -174,7 +173,6 @@
     <string name="drawer_open">Apri</string>
     <string name="connected_title">Connesso</string>
     <string name="version">Versione:</string>
-    <string name="title_choose_apps">Scegli le app</string>
     <string name="action_activate">Attiva</string>
     <string name="action_use">Usa</string>
     <string name="menu_faq">FAQ</string>
@@ -190,7 +188,6 @@
     <string name="pref_reduced_circuit_padding">Riempimento del circuito ridotto</string>
     <string name="volunteer_mode_subtitle">Aiuta altri a connettersi</string>
     <string name="msg_taking_too_long">Sembra impiegarci troppo tempo</string>
-    <string name="btn_choose_apps">Scegli le app</string>
     <string name="captcha_title">Facci sapere che sei umano</string>
     <string name="msg_try_something_else">Prova qualcos\'altro</string>
     <string name="proxy_ports">Porte del proxy</string>

@@ -78,7 +78,6 @@
     <string name="btn_change_exit">Cambiar salida</string>
     <string name="pref_circuit_padding_summary">Habilita el relleno de circuito para defenderte contra algunas formas de análisis de tráfico</string>
     <string name="pref_reduced_circuit_padding_summary">Usa algoritmos de relleno de gastos generales más bajos para reducir el uso de datos y batería</string>
-    <string name="app_shortcuts">Aplicaciones habilitadas para Anon</string>
     <string name="captcha_title">Dejanos saber que eres una persona</string>
     <string name="pref_use_expanded_notifications_title">Notificaciones ampliadas</string>
     <string name="pref_disable_network_summary">Pon Anon a dormir cuando no haya Internet disponible</string>
@@ -174,7 +173,6 @@
     <string name="configure_header">Configura tu conexión Anon</string>
     <string name="volunteer_mode_subtitle">Ayuda a otros a conectarse</string>
     <string name="trying_to_connect_title">Conectando…</string>
-    <string name="btn_choose_apps">Elegir aplicaciones</string>
     <string name="btn_refresh">Actualizar</string>
     <string name="btn_anon_off">Desactiva Anon</string>
     <string name="menu_header_features">Características</string>
@@ -196,7 +194,6 @@
     <string name="action_activate">Activar</string>
     <string name="volunteer_status_title">Hoy es mejor
 \ngracias a ti.</string>
-    <string name="title_choose_apps">Elije aplicaciones</string>
     <string name="apps_suggested_title">Aplicaciones sugeridas</string>
     <string name="hide_apps">Oculta las aplicaciones de la supervisión de la red y obten acceso cuando estén bloqueadas.</string>
     <string name="btn_copy_log">Copiar registro</string>

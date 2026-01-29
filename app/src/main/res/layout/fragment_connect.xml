@@ -31,7 +31,7 @@
         android:drawableEnd="@drawable/ic_search"
         android:paddingStart="@dimen/activity_horizontal_margin"
         android:paddingEnd="@dimen/activity_horizontal_margin"
-        android:text="@string/btn_choose_apps"
+        android:text="@string/btn_exclude_apps"
         app:layout_constraintBottom_toTopOf="@id/btRefresh"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -28,7 +28,7 @@ import io.anyone.anyonevpn.databinding.ActivityAppsItemBinding
 import io.anyone.anyonevpn.service.AnyoneVpnConstants
 import io.anyone.anyonevpn.service.AnyoneVpnService
 import io.anyone.anyonevpn.service.util.Prefs
-import io.anyone.anyonevpn.service.vpn.AnonifiedApp
+import io.anyone.anyonevpn.service.vpn.ExcludedApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -42,7 +42,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     private val mJob = Job()
     private val mScope = CoroutineScope(Dispatchers.Main + mJob)
 
-    private var mApps: List<AnonifiedApp> = emptyList()
+    private var mApps: List<ExcludedApp> = emptyList()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,7 +71,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
         val item = menu?.findItem(R.id.select_all) ?: return true
 
-        if (mApps.count { it.isTorified } < mApps.size) {
+        if (mApps.count { it.isExcluded } < mApps.size) {
             item.icon = AppCompatResources.getDrawable(this, R.drawable.select_all_24px)
             item.setTitle(R.string.select_all)
         }
@@ -91,10 +91,10 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
             }
 
             R.id.select_all -> {
-                val select = mApps.count { it.isTorified } < mApps.size
+                val select = mApps.count { it.isExcluded } < mApps.size
 
                 for (app in mApps) {
-                    app.isTorified = select
+                    app.isExcluded = select
                 }
 
                 for (v in mBinding.appList.allViews) {
@@ -115,7 +115,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     override fun onClick(v: View) {
         val entry = v.tag as? ListEntry ?: return
 
-        entry.app?.isTorified = !(entry.app?.isTorified ?: false)
+        entry.app?.isExcluded = !(entry.app?.isExcluded ?: false)
         entry.update()
 
         saveAppSettings()
@@ -156,9 +156,9 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     }
 
     private val mAdapterApps by lazy {
-        object : ArrayAdapter<AnonifiedApp>(this, R.layout.activity_apps_item, R.id.tvName, mApps) {
+        object : ArrayAdapter<ExcludedApp>(this, R.layout.activity_apps_item, R.id.tvName, mApps) {
 
-            private var data: List<AnonifiedApp> = mApps
+            private var data: List<ExcludedApp> = mApps
 
             override fun getCount(): Int {
                 return data.size
@@ -182,7 +182,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
                 entry.app = data[position]
 
                 entry.box?.tag = entry
-                entry.box?.setBackgroundResource(if (entry.app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
+                entry.box?.setBackgroundResource(if (entry.app?.isExcluded == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
                 entry.box?.setOnClickListener(this@AppsActivity)
 
                 try {
@@ -199,7 +199,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
                 entry.text?.setOnClickListener(this@AppsActivity)
 
                 entry.active?.visibility =
-                    if (entry.app?.isTorified == true) View.VISIBLE else View.INVISIBLE
+                    if (entry.app?.isExcluded == true) View.VISIBLE else View.INVISIBLE
                 entry.active?.tag = entry
                 entry.active?.setOnClickListener(this@AppsActivity)
 
@@ -232,7 +232,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
 
                     @Suppress("UNCHECKED_CAST")
                     override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                        data = results?.values as? List<AnonifiedApp> ?: mApps
+                        data = results?.values as? List<ExcludedApp> ?: mApps
                         notifyDataSetChanged()
                     }
                 }
@@ -245,7 +245,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     private fun saveAppSettings() {
         val apps = HashSet<String>()
 
-        apps.addAll(mApps.filter { it.isTorified }.map { it.packageName })
+        apps.addAll(mApps.filter { it.isExcluded }.map { it.packageName })
 
         Prefs.anonifiedApps = apps.joinToString("|")
 
@@ -260,11 +260,11 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         var icon: ImageView? = null
         var text: TextView? = null // app name
         var active: TextView? = null
-        var app: AnonifiedApp? = null
+        var app: ExcludedApp? = null
 
         fun update() {
-            box?.setBackgroundResource(if (app?.isTorified == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
-            active?.visibility = if (app?.isTorified == true) View.VISIBLE else View.INVISIBLE
+            box?.setBackgroundResource(if (app?.isExcluded == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
+            active?.visibility = if (app?.isExcluded == true) View.VISIBLE else View.INVISIBLE
         }
     }
 
@@ -274,7 +274,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
             packageManager: PackageManager,
             include: List<String>?,
             exclude: List<String>?
-        ): List<AnonifiedApp> {
+        ): List<ExcludedApp> {
 
             val anondApps = Prefs.anonifiedApps
                 .split("|")
@@ -298,7 +298,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
                                 ?.requestedPermissions?.contains(Manifest.permission.INTERNET) == true
                 }
                 .map {
-                    val app = AnonifiedApp()
+                    val app = ExcludedApp()
                     app.packageName = it.packageName
                     app.name = packageManager.getApplicationLabel(it).toString()
                     app.uid = it.uid
@@ -306,11 +306,11 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
                     app.username = packageManager.getNameForUid(app.uid)
                     app.isEnabled = true
                     app.usesInternet = true
-                    app.isTorified = anondApps.contains(it.packageName)
+                    app.isExcluded = anondApps.contains(it.packageName)
                     app
                 }
 
-            AnonifiedApp.sortAppsForTorifiedAndAbc(apps)
+            ExcludedApp.sortAppsForTorifiedAndAbc(apps)
 
             return apps
         }

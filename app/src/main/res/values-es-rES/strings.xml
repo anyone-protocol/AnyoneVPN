@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Habilita siempre el relleno de la conexión como defensa contra algunas formas de análisis de tráfico. Predeterminado: Automático</string>
     <string name="pref_reduced_connection_padding">Relleno de la conexión reducido</string>
     <string name="pref_reduced_connection_padding_summary">Cierra las conexiones de repetidor más pronto y envía menos paquetes de relleno para reducir el uso de datos y batería</string>
-    <string name="app_shortcuts">Aplicaciones habilitadas-para-Anon</string>
     <string name="trouble_connecting">¿Problemas de conexión\?</string>
     <string name="full_device_vpn">VPN de dispositivo completo</string>
     <string name="vpn_disabled">VPN deshabilitada</string>
@@ -150,7 +149,6 @@
     <string name="btn_start_vpn">Iniciar VPN</string>
     <string name="volunteer_mode_subtitle">Ayudar a otros a conectarse</string>
     <string name="trying_to_connect_title">Conectando…</string>
-    <string name="btn_choose_apps">Elije las aplicaciones</string>
     <string name="btn_change_exit">Cambiar la salida</string>
     <string name="no_thx">No, gracias</string>
     <string name="menu_header_features">Características</string>
@@ -196,7 +194,6 @@
     <string name="action_activate">Activar</string>
     <string name="volunteer_status_title">Hoy es mejor
 \ngracias a ti.</string>
-    <string name="title_choose_apps">Elija las aplicaciones</string>
     <string name="app_suggested_subtitle">Anyone VPN funciona mejor con aplicaciones de mensajería y redes sociales.</string>
     <string name="apps_suggested_title">Aplicaciones sugeridas</string>
     <string name="apps_other_apps">Otras aplicaciones</string>

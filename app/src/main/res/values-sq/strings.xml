@@ -29,7 +29,6 @@
     <string name="pref_anonrc_dialog">anonrc vetjake</string>
     <string name="volunteer_status_title">Për hir tuajin sot
 \nështë më mirë.</string>
-    <string name="title_choose_apps">Zgjidhni Aplikacione</string>
     <string name="allow">Lejoje</string>
     <string name="user_services">Shërbime përdoruesi</string>
     <string name="app_services">Shërbime aplikacionesh</string>
@@ -62,7 +61,6 @@
     <string name="btn_start_vpn">Nise VPN-në</string>
     <string name="volunteer_mode_subtitle">Ndihmoni të tjerët të lidhen</string>
     <string name="trying_to_connect_title">Po lidhjet…</string>
-    <string name="btn_choose_apps">Zgjidhni aplikacione</string>
     <string name="btn_change_exit">Ndryshoni dalje</string>
     <string name="btn_refresh">Rifreskoje</string>
     <string name="btn_anon_off">Çaktivizoje Anon-in</string>
@@ -113,7 +111,6 @@
     <string name="please_restart_to_enable_the_changes">Që të hyjnë në fuqi ndryshimet, ju lutemi, rinisni Anyone VPN-in</string>
     <string name="share_as_qr">Jepeni si QR</string>
     <string name="pref_prefer_ipv6">Parapëlqe lidhje IPv6</string>
-    <string name="app_shortcuts">Aplikacione të ujdisura për Anon</string>
     <string name="deny">Mohoje</string>
     <string name="kibibyte">KiB</string>
     <string name="newnym">Kaluat te një identitet i ri Anon!</string>

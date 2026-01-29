@@ -68,7 +68,6 @@
     <string name="pref_connection_padding_summary">Habilitar siempre relleno de conexión para defenderse contra algunas formas de análisis de tráfico. Por defecto: auto</string>
     <string name="pref_circuit_padding_summary">Habilitar el relleno de circuito para defenderse contra algunas formas de análisis de tráfico</string>
     <string name="pref_disable_ipv4_summary">Indica a las salidas que no se conecten a direcciones IPv4</string>
-    <string name="app_shortcuts">Aplicaciones que pasan por Anon</string>
     <string name="menu_new_identity">Nueva identidad</string>
     <string name="many_ways">Hay muchas maneras de llegar a Anon. Algunas pueden funcionar mejor que otras para ti.</string>
     <string name="menu_more">Más</string>
@@ -171,7 +170,6 @@
     <string name="configure_header">Configurar tu conexión a Anon</string>
     <string name="volunteer_mode_subtitle">Ayuda a conectarse a otros</string>
     <string name="trying_to_connect_title">Conectando…</string>
-    <string name="btn_choose_apps">Elegir aplicaciones</string>
     <string name="btn_change_exit">Cambiar nodo de salida</string>
     <string name="btn_refresh">Refrescar</string>
     <string name="btn_anon_off">Desactivar Anon</string>
@@ -196,7 +194,6 @@
     <string name="power_user_description">Para usuarios que conocen Anon. Permite iniciar Anyone VPN sin el ajuste VPN y muestra puertos abiertos SOCKS y HTTP</string>
     <string name="volunteer_status_title">Hoy es mejor
 \ngracias a ti.</string>
-    <string name="title_choose_apps">Elegir aplicaciones</string>
     <string name="app_suggested_subtitle">Anyone VPN funciona mejor con aplicaciones de mensajería y redes sociales.</string>
     <string name="apps_suggested_title">Aplicaciones sugeridas</string>
     <string name="hide_apps">Ocultar aplicaciones del monitoreo de red y obtener acceso cuando estén bloqueadas.</string>

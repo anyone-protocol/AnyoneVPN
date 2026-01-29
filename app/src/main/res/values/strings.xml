@@ -154,7 +154,7 @@
     <string name="pref_prefer_ipv6_summary">Tells exits that IPv6 addresses are preferred</string>
     <string name="pref_disable_ipv4">Disable IPv4 connections</string>
     <string name="pref_disable_ipv4_summary">Tells exits not to connect to IPv4 addresses</string>
-    <string name="app_shortcuts">Anon-Enabled Apps</string>
+    <string name="excluded_apps">Excluded apps</string>
     <string name="testing_anon_direct">Testing connection to Anon…</string>
     <string name="testing_anon_direct_success">Success. Anon connection is good!</string>
     <string name="trouble_connecting">Trouble connecting?</string>
@@ -172,7 +172,7 @@
     <string name="configure_header">Configure your Anon Connection</string>
     <string name="volunteer_mode_subtitle">Help others connect</string>
     <string name="trying_to_connect_title">Connecting…</string>
-    <string name="btn_choose_apps">Choose apps</string>
+    <string name="btn_exclude_apps">Exclude apps</string>
     <string name="btn_change_exit">Change exit</string>
     <string name="btn_refresh">Refresh</string>
     <string name="btn_anon_off">Turn Anon off</string>
@@ -198,7 +198,7 @@
     <string name="power_user_description">For users familiar with Anon. Allows you to start Anyone VPN without the VPN setting and shows open SOCKS and HTTP ports</string>
     <string name="action_activate">Activate</string>
     <string name="volunteer_status_title">Today is better\nbecause of you.</string>
-    <string name="title_choose_apps">Choose Apps</string>
+    <string name="title_exclude_apps">Exclude Apps</string>
     <string name="app_suggested_subtitle">Anyone VPN works best with messaging and social media apps.</string>
     <string name="apps_suggested_title">Suggested Apps</string>
     <string name="apps_other_apps">Other Apps</string>
@@ -257,7 +257,7 @@
     <string name="log_notice_ignoring_start_request">Ignoring start request, already started.</string>
 
     <!-- AppManagerActivity -->
-    <string name="search_for_app_to_add_to_vpn">Search for app to add to VPN</string>
+    <string name="search_for_app_to_exclude_from_vpn">Search for app to exclude from VPN</string>
     <string name="active">Active</string>
 
     <!-- HostedServicesActivity -->
@@ -269,5 +269,5 @@
 
     <!-- AppsActivity -->
     <string name="select_all">Select All</string>
-    <string name="deselect_all">Deselect All^</string>
+    <string name="deselect_all">Deselect All</string>
 </resources>

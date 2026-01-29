@@ -344,7 +344,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
             binding.appIconFlow.visibility = View.GONE
         }
         else {
-            binding.tvFullDeviceVpn.setText(R.string.app_shortcuts)
+            binding.tvFullDeviceVpn.setText(R.string.excluded_apps)
             binding.appIconFlow.visibility = View.VISIBLE
 
             for (app in apps) {

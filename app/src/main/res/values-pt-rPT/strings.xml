@@ -89,7 +89,6 @@
     <string name="enter_or_port">Inserir OU porta</string>
     <string name="full_device_vpn">VPN Para Todo o Aparelho</string>
     <string name="trouble_connecting">Problemas na conexão \?</string>
-    <string name="app_shortcuts">Aplicações ativadas para o Anon</string>
     <string name="share_as_qr">Compartilhar como QR</string>
     <string name="please_restart_to_enable_the_changes">Por favor reinicie Anyone VPN para ativar as mundanças</string>
     <string name="service_type">Tipo do Serviço</string>
@@ -169,7 +168,6 @@
     <string name="trying_to_connect_title">Conectando…</string>
     <string name="btn_anon_off">Desligar o Anon</string>
     <string name="no_thx">Não, obrigado</string>
-    <string name="btn_choose_apps">Escolher aplicações</string>
     <string name="btn_change_exit">Mudar saída</string>
     <string name="btn_refresh">Actualizar</string>
     <string name="menu_header_features">Características</string>
@@ -183,7 +181,6 @@
     <string name="msg_try_something_else">Tente outra coisa</string>
     <string name="strict_nodes_description">Tratar as definições de Excluir Nós como um requisito para a construção de todos os circuitos. Isto pode quebrar a funcionalidade se nenhum circuito for capaz de ser gerado com as suas definições de Excluir Nós.</string>
     <string name="version">Versão:</string>
-    <string name="title_choose_apps">Escolha as apps</string>
     <string name="configure_header">Configure a sua conexão Anon</string>
     <string name="drawer_open">Abrir</string>
     <string name="drawer_close">Fechar</string>

@@ -148,7 +148,6 @@ atl oquitlapatic</string>
     <string name="pref_prefer_ipv6_summary">Inon quilhui in quizayan tlain quipactia in chantia IPv6 </string>
     <string name="pref_disable_ipv4">Ahmo xicpatla in centilili IPv4 </string>
     <string name="pref_disable_ipv4_summary">Quihtoa in calacaliztli tlein ahmo quicetilia ichanti IPv4</string>
-    <string name="app_shortcuts">App opatlahqueh inic Anon</string>
     <string name="testing_anon_direct">Quiyehyecoa icetil ipan Anon…</string>
     <string name="testing_anon_direct_success">Tepehualiztli. Anon ¡In cetilia cualli ca!</string>
     <string name="trouble_connecting">¿Tiahhueliti inic ticcetilia?</string>
@@ -169,7 +168,6 @@ atl oquitlapatic</string>
     <string name="configure_header">Ximocentiliz moTortencuiliztli</string>
     <string name="volunteer_mode_subtitle">Xiquinpalehuiz pampa ma tencuican </string>
     <string name="trying_to_connect_title">Tencuitica…</string>
-    <string name="btn_choose_apps">Xicpepena tepoztlatlatquitl</string>
     <string name="btn_change_exit">Xipatla quizayan</string>
     <string name="btn_refresh">Papatia</string>
     <string name="btn_anon_off">XicehuiTor</string>
@@ -194,7 +192,6 @@ atl oquitlapatic</string>
     <string name="power_user_description">Inic tlapouhqui tlein quimati Anon. Huel quilhui tlein pehuaz Orbort yehce ahmo mochihua in quipatlaz VPN ihuan quimachti in acaltecoyan SOCKS ihuan otlapouhqueh HTTP</string>
     <string name="action_activate">Xicyeltiz</string>
     <string name="volunteer_status_title">Axcan cenca cualli ipampa tehuatzin. Nimitztlazohcamati miec</string>
-    <string name="title_choose_apps">Xipepena tepoztlatlatquitl</string>
     <string name="app_suggested_subtitle">Anyone VPN  tequipano cenca cualli ica amatlacuilotepoztlatlatquitl ihuan tlacanamimatlatl</string>
     <string name="apps_suggested_title">Yolitectia tepoztlatlatquitl</string>
     <string name="apps_other_apps">Occe tepoztlatlatquitl</string>

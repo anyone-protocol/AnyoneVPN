@@ -108,7 +108,6 @@
     <string name="connected_title">Savienots</string>
     <string name="btn_start_vpn">VPN sākšana</string>
     <string name="volunteer_mode_subtitle">Palīdziet citiem izveidot savienojumu</string>
-    <string name="btn_choose_apps">Izvēlieties lietotnes</string>
     <string name="btn_change_exit">Mainīt izeju</string>
     <string name="btn_refresh">Atjaunināt</string>
     <string name="btn_anon_off">Anon izslēgšana</string>
@@ -163,7 +162,6 @@
     <string name="pref_isolate_dest_summary">Katrai galamērķa adresei izmantojiet citu ķēdi</string>
     <string name="pref_connection_padding">Savienojuma polsterējums</string>
     <string name="pref_reduced_connection_padding">Samazināts savienojuma polsterējums</string>
-    <string name="app_shortcuts">Ar Anon iespējotas lietotnes</string>
     <string name="testing_anon_direct_success">Panākumi. Anon savienojums ir labs!</string>
     <string name="trouble_connecting">Problēmas ar savienojumu\?</string>
     <string name="full_device_vpn">Pilns ierīces VPN</string>
@@ -186,7 +184,6 @@
     <string name="drawer_open">Atvērt</string>
     <string name="connection_custom">Pielāgots</string>
     <string name="action_activate">Atjaunot</string>
-    <string name="title_choose_apps">Izvēlēties lietotnes</string>
     <string name="setting_debug">Atkļūdot</string>
     <string name="menu_more">Vairāk</string>
     <string name="drawer_close">Aizvērt</string>

@@ -19,7 +19,7 @@
             android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:background="@drawable/btn_main_scene"
             android:drawableStart="@drawable/ic_search"
-            android:hint="@string/search_for_app_to_add_to_vpn"
+            android:hint="@string/search_for_app_to_exclude_from_vpn"
             android:importantForAutofill="no"
             android:inputType="text|textFilter|textNoSuggestions"
             android:paddingHorizontal="8dp"

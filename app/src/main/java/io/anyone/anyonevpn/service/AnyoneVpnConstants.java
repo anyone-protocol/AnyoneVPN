@@ -40,7 +40,6 @@ public interface AnyoneVpnConstants {
     String PREF_DISABLE_IPV4 = "pref_disable_ipv4";
 
 
-    String APP_TOR_KEY = "_app_tor";
     String APP_DATA_KEY = "_app_data";
     String APP_WIFI_KEY = "_app_wifi";
 
@@ -174,7 +173,8 @@ public interface AnyoneVpnConstants {
             "org.torproject.torbrowser_alpha",
             "org.torproject.torbrowser",
             "org.onionshare.android", // issue #618
-            "org.briarproject.briar.android" // https://github.com/guardianproject/orbot/issues/474
+            "org.briarproject.briar.android", // https://github.com/guardianproject/orbot/issues/474,
+            "org.torproject.android"
     );
 
     List<String> VPN_SUGGESTED_APPS = Arrays.asList("org.thoughtcrime.securesms", // Signal

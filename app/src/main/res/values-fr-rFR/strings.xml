@@ -122,7 +122,6 @@
     <string name="pref_prefer_ipv6_summary">Indique aux sorties que les adresses IPv6 sont préférables</string>
     <string name="pref_disable_ipv4">Désactiver les connexions IPv4</string>
     <string name="pref_disable_ipv4_summary">Indique aux sorties de ne pas se connecter aux adresses IPv4</string>
-    <string name="app_shortcuts">Applis pour lesquelles Anon est activé</string>
     <string name="trouble_connecting">Des problèmes pour se connecter \?</string>
     <string name="full_device_vpn">RPV de l’appareil entier</string>
     <string name="vpn_disabled">Le RPV est désactivé</string>
@@ -158,7 +157,6 @@
     <string name="action_activate">Activer</string>
     <string name="volunteer_status_title">Aujourd’hui, c’est meilleur
 \ngrâce à toi.</string>
-    <string name="title_choose_apps">Choisir les applications</string>
     <string name="app_suggested_subtitle">Anyone VPN fonctionne mieux avec les applications de messagerie et de médias sociaux.</string>
     <string name="apps_suggested_title">Applications suggérées</string>
     <string name="apps_other_apps">Autres applications</string>
@@ -171,7 +169,6 @@
     <string name="btn_start_vpn">Démarrer le RPV</string>
     <string name="volunteer_mode_subtitle">Aider les autres à se connecter</string>
     <string name="trying_to_connect_title">Connexion en cours …</string>
-    <string name="btn_choose_apps">Choisir des applications</string>
     <string name="btn_change_exit">Changer la sortie</string>
     <string name="btn_refresh">Actualiser</string>
     <string name="btn_anon_off">Éteindre Anon</string>

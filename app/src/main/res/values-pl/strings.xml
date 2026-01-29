@@ -125,7 +125,6 @@
     <string name="vpn_disabled">VPN wyłączony</string>
     <string name="full_device_vpn">Pełna sieć urządzeń VPN</string>
     <string name="trouble_connecting">Masz problem z połączeniem\?</string>
-    <string name="app_shortcuts">Aplikacje obsługujące Anon</string>
     <string name="pref_disable_ipv4_summary">Informuje wyjścia, aby nie łączyły się z adresami IPv4</string>
     <string name="pref_disable_ipv4">Wyłącz połączenia IPv4</string>
     <string name="pref_prefer_ipv6_summary">Informuje wyjścia, że preferowane są adresy IPv6</string>
@@ -145,7 +144,6 @@
     <string name="secure_your_connection_subtitle">Ukryj aplikacje przed monitorowaniem sieci i uzyskaj dostęp, gdy zostaną zablokowane.</string>
     <string name="volunteer_status_title">Dziś jest lepsze
 \ndzięki tobie.</string>
-    <string name="title_choose_apps">Wybierz aplikacje</string>
     <string name="action_activate">Aktywuj</string>
     <string name="power_user_description">Dla użytkowników zaznajomionych z Anon. Pozwala na uruchomienie Anyone VPNa bez ustawienia VPN i pokazuje otwarte porty SOCKS i HTTP</string>
     <string name="apps_suggested_title">Sugerowane aplikacje</string>
@@ -166,7 +164,6 @@
     <string name="secure_your_connection_title">Gotowy do połączenia</string>
     <string name="btn_start_vpn">Uruchom VPN</string>
     <string name="volunteer_mode_subtitle">Pomóż innym połączyć się</string>
-    <string name="btn_choose_apps">Wybierz aplikacje</string>
     <string name="btn_refresh">Odśwież</string>
     <string name="no_thx">Nie, dziękuję</string>
     <string name="btn_anon_off">Wyłącz Anon</string>

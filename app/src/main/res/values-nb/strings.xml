@@ -134,7 +134,6 @@
     <string name="pref_connection_padding_summary">Aktiverer alltid utfylling av tilkoblinger for å beskytte mot visse former for trafikkanalyse. Standardinnstilling: auto</string>
     <string name="pref_connection_padding">Utfylling av tilkoblingen</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">Tillat Wi-Fi-likemenn, tjudrede enheter, og alle som kan koble til din IP; tilgang til Anon</string>
-    <string name="app_shortcuts">Anon-aktiverte apper</string>
     <string name="backup_saved_at_external_storage">Sikkerhetskopi lagret på eksternt lagringsområde</string>
     <string name="pref_http_summary">Porten Anon tilbyr sin HTTP-mellomtjener på (forvalg: 8118 eller 0 for å skru av)</string>
     <string name="vpn_default_world">Globalt (Auto)</string>
@@ -168,7 +167,6 @@
     <string name="drawer_close">Lukk</string>
     <string name="connect">Koble til</string>
     <string name="action_activate">Aktiver</string>
-    <string name="title_choose_apps">Velg programmer</string>
     <string name="no_internet_title">Koble til Internett</string>
     <string name="connection_direct">Direkte</string>
     <string name="connection_custom">Egendefinert</string>
@@ -187,7 +185,6 @@
     <string name="no_thx">Nei takk</string>
     <string name="menu_help_others">Hjelp andre</string>
     <string name="power_user_mode">Strømbrukermodus</string>
-    <string name="btn_choose_apps">Velg apper</string>
     <string name="apps_other_apps">Andre apper</string>
     <string name="volunteer_mode_subtitle">Hjelp andre med å få kontakt</string>
     <string name="option_only_when_charging">Bare ved lading</string>

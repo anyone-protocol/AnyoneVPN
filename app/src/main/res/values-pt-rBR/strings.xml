@@ -112,7 +112,6 @@
     <string name="share_as_qr">Compartilhar como QR</string>
     <string name="disable">Desabilitar</string>
     <string name="enable">Ativar</string>
-    <string name="app_shortcuts">Aplicações habilitadas para o Anon</string>
     <string name="trouble_connecting">Problemas na conexão?</string>
     <string name="full_device_vpn">VPN PARA TODO O DISPOSITIVO</string>
     <string name="refresh_apps">Atualizar os Aplicativos</string>
@@ -176,7 +175,6 @@
     <string name="trying_to_connect_title">Conectando…</string>
     <string name="btn_change_exit">Altere a saída</string>
     <string name="menu_help_others">Ajude os outros</string>
-    <string name="btn_choose_apps">Escolha os aplicativos</string>
     <string name="btn_refresh">Atualizar</string>
     <string name="btn_anon_off">Desligar o Anon</string>
     <string name="no_thx">Não, obrigado</string>
@@ -195,7 +193,6 @@
     <string name="action_activate">Ativar</string>
     <string name="volunteer_status_title">Hoje o dia está melhor
 \ngraças a você.</string>
-    <string name="title_choose_apps">Escolha os aplicativos</string>
     <string name="app_suggested_subtitle">O Anyone VPN funciona melhor com aplicativos de mensagens e mídias sociais.</string>
     <string name="apps_suggested_title">Sugestões de aplicativos</string>
     <string name="apps_other_apps">Outros aplicativos</string>

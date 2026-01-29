@@ -113,7 +113,6 @@
     <string name="enable">تفعيل</string>
     <string name="consider_disable_battery_optimizations">الخدمات المستضافة قيد التشغيل، ضع في اعتبارك تعطيل تحسينات البطارية</string>
     <string name="consider_enable_battery_optimizations">لا توجد خدمات مستضافة قيد التشغيل، ففكر في تفعيل تحسينات البطارية</string>
-    <string name="app_shortcuts">التطبيقات المهيئة للعبور عبر تور</string>
     <string name="trouble_connecting">تواجه مشكلة للإتصال ؟</string>
     <string name="full_device_vpn">كل الجهاز عبر الشبكة الإفتراضية الخاصة VPN</string>
     <string name="vpn_disabled">الـ VPN غير مُفَعّل</string>
@@ -122,7 +121,6 @@
     <string name="drawer_open">افتح</string>
     <string name="drawer_close">إغلاق</string>
     <string name="action_activate">تفعيل</string>
-    <string name="title_choose_apps">اختر تطبيقات</string>
     <string name="setting_debug">تنقيح</string>
     <string name="connection_direct">المباشرة</string>
     <string name="v3_client_auth_activity_title">تفويض العميل</string>
@@ -152,7 +150,6 @@
     <string name="app_services">خدمات التطبيق</string>
     <string name="secure_your_connection_title">جاهز للاتصال</string>
     <string name="volunteer_mode_subtitle">ساعد الآخرين على التواصل</string>
-    <string name="btn_choose_apps">اختر التطبيقات</string>
     <string name="btn_change_exit">تغيير الخروج</string>
     <string name="no_internet_title">اتصل بالإنترنت</string>
     <string name="no_internet_subtitle">تحتاج إلى اتصال بالإنترنت لاستخدام Anyone VPN.</string>

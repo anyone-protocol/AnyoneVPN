@@ -121,7 +121,7 @@
     <string name="pref_connection_padding_summary">Aktiviert immer die Verbindungsauffüllung, um einige Formen der Verkehrsanalyse zu verhindern. Standard: Automatisch</string>
     <string name="pref_reduced_connection_padding">Reduzierte Verbindungsauffüllung</string>
     <string name="pref_reduced_connection_padding_summary">Schließt Relaisverbindungen früher und sendet weniger Füllpakete, um Datenmenge und Akkulast zu reduzieren</string>
-    <string name="app_shortcuts">Anon-Aktivierte Apps</string>
+    <string name="excluded_apps">Ausgeschlossene Apps</string>
     <string name="trouble_connecting">Probleme beim Verbinden?</string>
     <string name="full_device_vpn">Vollständiges Geräte-VPN</string>
     <string name="vpn_disabled">VPN deaktiviert</string>
@@ -168,7 +168,7 @@
     <string name="action_activate">Aktivieren</string>
     <string name="apps_suggested_title">Vorgeschlagene Apps</string>
     <string name="power_user_description">Für Benutzer, die mit Anon vertraut sind. Ermöglicht den Start von Anyone VPN ohne die VPN-Einstellung und zeigt offene SOCKS- und HTTP-Ports an</string>
-    <string name="title_choose_apps">Apps auswählen</string>
+    <string name="title_exclude_apps">Apps ausschließen</string>
     <string name="volunteer_status_title">Heute ist es besser
 \nwegen dir.</string>
     <string name="app_suggested_subtitle">Anyone VPN funktioniert am besten mit Messaging- und Social-Media-Apps.</string>
@@ -185,7 +185,7 @@
     <string name="btn_start_vpn">VPN starten</string>
     <string name="volunteer_mode_subtitle">Anderen helfen, sich zu vernetzen</string>
     <string name="trying_to_connect_title">Verbinden…</string>
-    <string name="btn_choose_apps">Anwendungen auswählen</string>
+    <string name="btn_exclude_apps">Apps ausschließen</string>
     <string name="btn_change_exit">Ausgang ändern</string>
     <string name="btn_refresh">Auffrischen</string>
     <string name="btn_anon_off">Anon ausschalten</string>
@@ -239,4 +239,19 @@
     <string name="updating_settings_in_anon_service">Einstellungen im Anon-Dienst werden aktualisiert</string>
     <string name="mebibyte_per_second">MiB/s</string>
     <string name="kibibyte_per_second">KiB/s</string>
+
+    <!-- AppManagerActivity -->
+    <string name="search_for_app_to_exclude_from_vpn">Suche nach Apps um sie vom VPN auszuschließen</string>
+    <string name="active">Aktiv</string>
+
+    <!-- HostedServicesActivity -->
+    <string name="add_service">Service hinzufügen</string>
+
+    <!-- ClientAuthActivity -->
+    <string name="add_client_auth">Clientauthentifizierung hinzufügen</string>
+    <string name="there_s_no_current_authorization">Es gibt keine gültige Authentifizierung</string>
+
+    <!-- AppsActivity -->
+    <string name="select_all">Alles auswählen</string>
+    <string name="deselect_all">Alles abwählen</string>
 </resources>

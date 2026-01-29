@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">เปิดใช้งานช่องว่างภายในเครือข่ายเสมอเพื่อป้องกันการวิเคราะห์การรับส่งข้อมูลบางรูปแบบ ตั้งค่าเริ่มต้นเป็น: อัตโนมัติ</string>
     <string name="pref_reduced_connection_padding">ลดช่องว่างภายในเครือข่าย</string>
     <string name="pref_reduced_connection_padding_summary">เลือกการเชื่อมต่อรีเลย์ให้เร็วขึ้นและส่งช่องว่างภายในแพคเก็ตให้น้อยลงเพื่อลดการใช้งานข้อมูลและแบตเตอรี่</string>
-    <string name="app_shortcuts">แอปที่ใช้ได้กับ Anon</string>
     <string name="trouble_connecting">มีปัญหากับการเชื่อมต่อหรือไม่\?</string>
     <string name="full_device_vpn">VPN ทั้งอุปกรณ์</string>
     <string name="vpn_disabled">ปิดใช้งาน VPN</string>
@@ -149,7 +148,6 @@
     <string name="drawer_open">เปิด</string>
     <string name="drawer_close">ปิด</string>
     <string name="connection_custom">กำหนดเอง</string>
-    <string name="title_choose_apps">เลือกโปรแกรม</string>
     <string name="action_use">ใช้</string>
     <string name="action_activate">เปิดใช้งาน</string>
     <string name="setting_debug">ดีบั๊ก</string>

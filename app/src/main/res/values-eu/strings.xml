@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Beti gaitzen du konexioaren betegarria trafikoaren azterketa motza batzuetaz babesteko. Lehenetsita: automatikoa</string>
     <string name="pref_reduced_connection_padding">Konexioaren betegarria gutxitua</string>
     <string name="pref_reduced_connection_padding_summary">Errelearen konexioa azkarrago ixten du eta pakete betegarri gutxiago bidaltzen ditu datu eta bateria erabilera gutxiagotzeko</string>
-    <string name="app_shortcuts">Anon-gaitutako aplikazioak</string>
     <string name="trouble_connecting">Arazoak konektatzeko?</string>
     <string name="full_device_vpn">Gailu osoaren VPN-a</string>
     <string name="vpn_disabled">VPN-a desgaituta</string>
@@ -134,7 +133,6 @@
     <string name="confirm">Berretsi</string>
     <string name="connect">Konektatu</string>
     <string name="action_activate">Aktibatu</string>
-    <string name="title_choose_apps">Hautatu aplikazioak</string>
     <string name="connection_direct">Zuzena</string>
     <string name="connection_custom">Custom</string>
     <string name="connected_title">Konektatuta</string>

@@ -37,7 +37,6 @@
     <string name="action_activate">Activar</string>
     <string name="no_internet_title">Connecter te a internet</string>
     <string name="connection_direct">Directe</string>
-    <string name="title_choose_apps">Seliger le applicationes</string>
     <string name="app_name">Anyone VPN</string>
     <string name="no_internet_subtitle">Tu besonia un connexion de Internet pro usar Anyone VPN.</string>
     <string name="no_thx">Non, gratias</string>
@@ -60,7 +59,6 @@
     <string name="license">Licentia:</string>
     <string name="pref_proxy_host_dialog">Insere le servitor proxy</string>
     <string name="service_type">Typo de servicio</string>
-    <string name="app_shortcuts">Applicationes activate pro Anon</string>
     <string name="allow">Permitter</string>
     <string name="hidden_services">Servicios anon</string>
     <string name="done">Facite!</string>
@@ -68,7 +66,6 @@
     <string name="secure_your_connection_title">Preste pro connecter</string>
     <string name="btn_start_vpn">Initiar le VPN</string>
     <string name="trying_to_connect_title">Connectente…</string>
-    <string name="btn_choose_apps">Seliger le applicationes</string>
     <string name="btn_anon_off">Disactivar Anon</string>
     <string name="btn_change_exit">Cambiar le sortita</string>
     <string name="volunteer_mode_subtitle">Adjutar a alteres a connecter se</string>

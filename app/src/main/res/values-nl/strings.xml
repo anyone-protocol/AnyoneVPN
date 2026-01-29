@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Schakelt verbindingsopvulling altijd in om te verdedigen tegen krachtiger vormen van verkeersanalyse. Standaard: automatisch</string>
     <string name="pref_reduced_connection_padding">Beperkte verbindingsopvulling</string>
     <string name="pref_reduced_connection_padding_summary">Sluit relayverbindingen sneller en stuurt minder opvullingspakketten om gegevens- en accuverbruik te verminderen</string>
-    <string name="app_shortcuts">Anon-gebruikende apps</string>
     <string name="trouble_connecting">Problemen met verbinden?</string>
     <string name="full_device_vpn">Volledigapparaats-VPN</string>
     <string name="vpn_disabled">VPN uitgeschakeld</string>
@@ -137,7 +136,6 @@
     <string name="trying_to_connect_title">Bezig met verbinden…</string>
     <string name="btn_refresh">Vernieuwen</string>
     <string name="menu_header_features">Mogelijkheden</string>
-    <string name="title_choose_apps">Kies apps</string>
     <string name="action_use">Gebruik</string>
     <string name="menu_more">Meer</string>
     <string name="connection_direct">Direct</string>

@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Activa sempre el farciment de la connexió per a defensar-se d\'algunes formes d\'anàlisi de trànsit. Per defecte: automàtic</string>
     <string name="pref_reduced_connection_padding">Farciment de connexió reduït</string>
     <string name="pref_reduced_connection_padding_summary">Tanca les connexions de repetició més aviat i envia menys paquets de farciment per a reduir l\'ús de dades i bateria</string>
-    <string name="app_shortcuts">Aplicacions amb accés al Anon</string>
     <string name="trouble_connecting">Problemes en connectar?</string>
     <string name="full_device_vpn">VPN a tot el dispositiu</string>
     <string name="vpn_disabled">VPN desactivat</string>
@@ -143,7 +142,6 @@
     <string name="connected_title">Connectat</string>
     <string name="no_internet_title">Connecta a internet</string>
     <string name="action_activate">Activa</string>
-    <string name="title_choose_apps">Trieu les aplicacions</string>
     <string name="setting_debug">Depuració</string>
     <string name="menu_more">Més</string>
     <string name="confirm">Confirma</string>
@@ -169,7 +167,6 @@
     <string name="pref_http_dialog">Configuració del port HTTP</string>
     <string name="menu_help_others">Ajudeu els altres</string>
     <string name="power_user_mode">Mode d\'usuari avançat</string>
-    <string name="btn_choose_apps">Trieu aplicacions</string>
     <string name="v3_backup_key">Fes una còpia de seguretat de la clau de l\'autorització del client</string>
     <string name="apps_other_apps">Altres aplicacions</string>
     <string name="volunteer_mode_subtitle">Ajudeu els altres a connectar-se</string>

@@ -223,25 +223,24 @@ public class AnyoneVpnManager implements Handler.Callback, AnyoneVpnConstants {
     }
 
     private void doAppBasedRouting(VpnService.Builder builder) throws NameNotFoundException {
-        var apps = AnonifiedApp.Companion.getApps(mService);
-        var individualAppsWereSelected = false;
+        var apps = ExcludedApp.Companion.getApps(mService);
         var isLockdownMode = isVpnLockdown(mService);
 
-        for (AnonifiedApp app : apps) {
-            if (app.isTorified() && (!app.getPackageName().equals(mService.getPackageName()))) {
-                if (Prefs.isAppAnonified(app.getPackageName())) {
-                    builder.addAllowedApplication(app.getPackageName());
-                }
-                individualAppsWereSelected = true;
-            }
-        }
-        Log.i(TAG, "App based routing is enabled?=" + individualAppsWereSelected + ", isLockdownMode=" + isLockdownMode);
+        Log.i(TAG, "isLockdownMode=" + isLockdownMode);
 
-        if (!individualAppsWereSelected && !isLockdownMode) {
-            // disallow orobt itself...
+        if (!isLockdownMode) {
+            for (ExcludedApp app : apps) {
+                if (app.isExcluded() && (!app.getPackageName().equals(mService.getPackageName()))) {
+                    if (Prefs.isAppExcluded(app.getPackageName())) {
+                        builder.addDisallowedApplication(app.getPackageName());
+                    }
+                }
+            }
+
+            // Disallow AnyoneVPN itself…
             builder.addDisallowedApplication(mService.getPackageName());
 
-            // disallow tor apps to avoid tor over tor, Orbot doesnt need to concern itself with them
+            // Disallow tor apps to avoid tor over anon, AnyoneVPN doesn't need to concern itself with them.
             for (String packageName : AnyoneVpnConstants.BYPASS_VPN_PACKAGES)
                 builder.addDisallowedApplication(packageName);
         }

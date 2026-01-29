@@ -116,7 +116,6 @@
     <string name="consider_disable_battery_optimizations">托管服务正在运行，考虑禁用电池优化</string>
     <string name="consider_enable_battery_optimizations">没有托管服务正在运行，考虑启用电池优化</string>
     <string name="pref_disable_ipv4">禁用 IPv4 连接</string>
-    <string name="app_shortcuts">启用 Anon 的应用</string>
     <string name="trouble_connecting">连接时遇到问题？</string>
     <string name="full_device_vpn">全设备 VPN</string>
     <string name="vpn_disabled">VPN 已禁用</string>
@@ -176,7 +175,6 @@
     <string name="btn_start_vpn">启动 VPN</string>
     <string name="no_thx">不，谢谢</string>
     <string name="menu_help_others">帮助其他人</string>
-    <string name="btn_choose_apps">选择应用</string>
     <string name="btn_change_exit">更改出口</string>
     <string name="menu_anon_connection">Anon 连接</string>
     <string name="menu_faq">常见问题</string>
@@ -193,7 +191,6 @@
     <string name="incorrect_solution">不正确的解答</string>
     <string name="power_user_mode">高级用户模式</string>
     <string name="power_user_description">适合熟悉 Anon 的用户。 允许在没有 VPN 设置的情况下启动 Anyone VPN 并显示打开的 SOCKS 和 HTTP 端口</string>
-    <string name="title_choose_apps">选择应用</string>
     <string name="app_suggested_subtitle">Anyone VPN 最适合消息传递和社交媒体应用。</string>
     <string name="apps_suggested_title">推荐的应用</string>
     <string name="apps_other_apps">其他应用</string>

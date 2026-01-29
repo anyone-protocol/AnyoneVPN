@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">همیشه لایه‌گذاری ارتباط را به کار می‌اندازد تا با برخی از حالت‌های تحلیل ترافیک مقابله کند. پیش‌گزیده: خودکار</string>
     <string name="pref_reduced_connection_padding">کاهش لایه‌گذاری اتّصال</string>
     <string name="pref_reduced_connection_padding_summary">اتّصال بازپخش‌کننده‌ها را زودتر قطع می‌کند و بسته‌های لایه‌گذاری کمتری ارسال می‌کند تا استفاده از داده و باتری را کاهش دهد</string>
-    <string name="app_shortcuts">کاره‌ها با تور به کار افتاده</string>
     <string name="trouble_connecting">در اتّصال مشکل دارید؟</string>
     <string name="full_device_vpn">وی‌پی‌ان برای تمام افزاره</string>
     <string name="vpn_disabled">وی‌پی‌ان از کار انداخته شد</string>
@@ -164,7 +163,6 @@
     <string name="refresh_apps">تازه‌سازی کاره‌ها</string>
     <string name="secure_your_connection_title">آمادهٔ وصل شدن</string>
     <string name="btn_start_vpn">آغاز وی‌پی‌ان</string>
-    <string name="btn_choose_apps">گزینش کاره‌ها</string>
     <string name="btn_change_exit">تغییر خروجی</string>
     <string name="btn_refresh">نوسازی</string>
     <string name="captcha_title">به ما نشان دهید که انسان هستید</string>
@@ -195,7 +193,6 @@
     <string name="action_activate">فعّال کردن</string>
     <string name="volunteer_status_title">به لطفتان امروز
 \nروز بهتری است.</string>
-    <string name="title_choose_apps">گزینش کاره‌ها</string>
     <string name="apps_other_apps">دیگر کاره‌ها</string>
     <string name="power_user_description">برای کاربران آشنا با تور. می‌گذارد روبوت پیازی را بدون تنظیمات وی‌پی‌ان آغاز کند و درگاه‌های باز HTTP و ساکس را نشان می‌دهد</string>
     <string name="app_suggested_subtitle">روبوت پیازی بهترین کارایی را با کاره‌های شبکهٔ اجتماعی و پیام‌رسان دارد.</string>

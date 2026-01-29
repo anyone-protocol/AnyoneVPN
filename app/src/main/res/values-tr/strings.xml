@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Bazı trafik inceleme yöntemlerine karşı korunmayı sağlamak için her zaman bağlantı yastıklaması kullanılır. Öntanımlı olarak: otomatik</string>
     <string name="pref_reduced_connection_padding">Azaltılmış bağlantı yastıklaması</string>
     <string name="pref_reduced_connection_padding_summary">Aktarıcı bağlantılarını daha kısa sürede kapatır ve veri ve pil kullanımını azaltmak için daha az yastıklama paketi gönderir</string>
-    <string name="app_shortcuts">Anon Kullanan Uygulamalar</string>
     <string name="trouble_connecting">Bağlanmakta sorun mu yaşıyorsunuz?</string>
     <string name="full_device_vpn">Cihaz Geneli VPN</string>
     <string name="vpn_disabled">VPN Devre Dışı</string>
@@ -174,7 +173,6 @@
     <string name="btn_start_vpn">VPN\'i başlat</string>
     <string name="secure_your_connection_title">Bağlanmaya hazır</string>
     <string name="menu_header_learn">Daha fazla bilgi edin</string>
-    <string name="btn_choose_apps">Uygulamaları seç</string>
     <string name="btn_change_exit">Çıkışı değiştir</string>
     <string name="btn_refresh">Yenile</string>
     <string name="btn_anon_off">Anon\'u kapat</string>
@@ -193,7 +191,6 @@
     <string name="incorrect_solution">Yanlış Çözüm</string>
     <string name="volunteer_status_title">Bugün sizin
 \nsayenizde daha iyi.</string>
-    <string name="title_choose_apps">Uygulamaları Seç</string>
     <string name="apps_suggested_title">Önerilen Uygulamalar</string>
     <string name="power_user_mode">Uzman Kullanıcı Modu</string>
     <string name="action_activate">Etkinleştir</string>

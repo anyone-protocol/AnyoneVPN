@@ -146,7 +146,6 @@
     <string name="pref_prefer_ipv6_summary">Wepampiklan IPv6 tɵka maramik kɵn cha eshkau</string>
     <string name="pref_disable_ipv4">IPv4 Kɵlitsilan kuetsamik </string>
     <string name="pref_disable_ipv4_summary">Wepampiklan IPv4 tɵka marmumik kɵn cha eshkau</string>
-    <string name="app_shortcuts">Anonpa-maram purukupele</string>
     <string name="testing_anon_direct">Anonpa kelichip pasreikwan asamik</string>
     <string name="testing_anon_direct_success">Tap kɵn! Anonpa kelitsan </string>
     <string name="trouble_connecting">Kelichipyu Pesrɵsrtelɵ Ilesrkɵpelɵ kenamisrita?</string>
@@ -167,7 +166,6 @@
     <string name="configure_header">Kelitsamikawan tamara pasr</string>
     <string name="volunteer_mode_subtitle">Katɵkanelan kelitsam puruku</string>
     <string name="trying_to_connect_title">Kelichip</string>
-    <string name="btn_choose_apps">Chi netɵ maram purukuntrapelan lawa pɵnsramik</string>
     <string name="btn_change_exit">Wam wepipikwan yunɵmaramik</string>
     <string name="btn_refresh">Srɵ tamara pasrɵp</string>
     <string name="btn_anon_off">Anonwan kuecha pasramik</string>
@@ -192,7 +190,6 @@
     <string name="power_user_description">Anonwan ashipelai. Anyone VPNwan pelpasrtrappe  VPN palɵmentrun incha wam srɵl kuri pentrapelan SOCKSpa  HTTPpa kenamartrun </string>
     <string name="action_activate">Pilɵkɵp</string>
     <string name="volunteer_status_title">Mɵi kualɵm ñi kutri ikpe katɵkuchi tapik kɵn</string>
-    <string name="title_choose_apps">Maram purukupele tamara pɵnsreilan lawa kemɵr</string>
     <string name="app_suggested_subtitle">Anyone VPNpe tap pasrappe, pɵra ɵramikpa, wam pekuchipelɵpa tap pasrapik kɵn </string>
     <string name="apps_suggested_title">Katɵkan eshkeilɵ kɵn Maram purukupelɵ tamara pɵnsreiklɵ</string>
     <string name="apps_other_apps">Katɵkan Maram purukupelɵ tamara pɵnsreiklɵ</string>

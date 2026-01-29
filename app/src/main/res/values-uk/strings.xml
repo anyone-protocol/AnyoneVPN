@@ -118,7 +118,6 @@
     <string name="pref_isolate_dest">Ізолювати адреси призначення</string>
     <string name="pref_isolate_dest_summary">Використати інакшу схему для кожної адреси призначення</string>
     <string name="pref_connection_padding_summary">Завжди забезпечує підкладку зʼєднання для захисту від деяких форм аналізу трафіку. Типово: автоматично</string>
-    <string name="app_shortcuts">Застосунки, що працюють з Anon</string>
     <string name="trouble_connecting">Проблеми з під\'єднанням?</string>
     <string name="full_device_vpn">VPN для всього пристрою</string>
     <string name="vpn_disabled">VPN вимкнено</string>
@@ -176,7 +175,6 @@
     <string name="menu_faq">ЧаП</string>
     <string name="msg_taking_too_long">Схоже, це триватиме задовго</string>
     <string name="msg_try_something_else">Спробуйте щось інше</string>
-    <string name="btn_choose_apps">Вибрати застосунки</string>
     <string name="menu_header_features">Функції</string>
     <string name="btn_start_vpn">Запустити VPN</string>
     <string name="menu_anon_connection">З\'єднання Anon</string>
@@ -197,7 +195,6 @@
 \nзавдяки вам.</string>
     <string name="app_suggested_subtitle">Anyone VPN найкраще працює з застосунками для обміну повідомленнями та соціальними мережами.</string>
     <string name="apps_suggested_title">Рекомендовані застосунки</string>
-    <string name="title_choose_apps">Вибрати застосунки</string>
     <string name="power_user_description">Для користувачів, знайомих з Anon. Дозволяє запускати Anyone VPN без налаштування VPN і показує відкриті SOCKS і HTTP-порти</string>
     <string name="apps_other_apps">Інші застосунки</string>
     <string name="hide_apps">Приховуйте застосунки від моніторингу мережі та отримуйте доступ, коли вони заблоковані.</string>

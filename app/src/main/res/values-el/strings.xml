@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Πάντα δίνετε η δυνατότητα σύνδεσης padding για υπεράσπιση ενάντια σε ορισμένες μορφές ανάλυση της κυκλοφορίας. Προεπιλογή: auto</string>
     <string name="pref_reduced_connection_padding">Σύνδεση αναπλήρωσης</string>
     <string name="pref_reduced_connection_padding_summary">Κλείνει τον ηλεκτρονόμο συνδέσεων αργά και αποστολή λιγότερο να γεμίσει τα πακέτα για να μειώσει δεδομένων και τη χρήση της μπαταρίας</string>
-    <string name="app_shortcuts">Ενεργοποιημένες εφαρμογές με το Anon</string>
     <string name="trouble_connecting">Πρόβλημα σύνδεσης;</string>
     <string name="full_device_vpn">Πλήρης Συσκευή VPN</string>
     <string name="vpn_disabled">Το VPN απενεργοποιήθηκε</string>
@@ -139,7 +138,6 @@
     <string name="btn_start_vpn">Έναρξη VPN</string>
     <string name="volunteer_mode_subtitle">Βοηθήστε άλλους να συνδεθούν</string>
     <string name="trying_to_connect_title">Σύνδεση…</string>
-    <string name="btn_choose_apps">Επιλέξτε εφαρμογές</string>
     <string name="btn_change_exit">Αλλαγή εξόδου</string>
     <string name="btn_refresh">Ανανέωση</string>
     <string name="btn_anon_off">Απενεργοποιήστε το Anon</string>
@@ -195,7 +193,6 @@
     <string name="connect">Συνδέστε το</string>
     <string name="next">Επόμενο</string>
     <string name="incorrect_solution">Λανθασμένη λύση</string>
-    <string name="title_choose_apps">Επιλέξτε εφαρμογές</string>
     <string name="hide_apps">Απόκρυψη εφαρμογών από την παρακολούθηση του δικτύου και πρόσβαση σε αυτές όταν είναι μπλοκαρισμένες.</string>
     <string name="log_copied">Ημερολόγιο Αντιγραφή</string>
     <string name="not_sure">Δεν είστε σίγουροι\?</string>

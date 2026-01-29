@@ -17,6 +17,7 @@ object Prefs {
     private const val PREF_EXIT_NODES = "pref_exit_nodes"
     private const val PREF_STRICT_NODES = "pref_strict_nodes"
     private const val PREF_POWER_USER_MODE = "pref_power_user"
+    private const val EXCLUDED_APPS_KEY = "_app_tor"
 
 
     private const val PREF_HOST_HIDDEN_SERVICES = "pref_host_onionservices"
@@ -105,8 +106,8 @@ object Prefs {
         set(value) = cr?.putPref(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, value) ?: Unit
 
     @JvmStatic
-    fun isAppAnonified(appId: String): Boolean {
-        return cr?.getPrefBoolean("$appId${AnyoneVpnConstants.APP_TOR_KEY}", true) ?: true
+    fun isAppExcluded(appId: String): Boolean {
+        return cr?.getPrefBoolean("$appId${EXCLUDED_APPS_KEY}", true) ?: true
     }
 
     @JvmStatic

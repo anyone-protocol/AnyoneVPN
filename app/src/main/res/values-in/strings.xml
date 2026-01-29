@@ -112,7 +112,6 @@
     <string name="action_activate">Aktifkan</string>
     <string name="volunteer_status_title">Hari ini lebih baik
 \nkarena tindakan Anda.</string>
-    <string name="title_choose_apps">Pilih Aplikasi</string>
     <string name="app_suggested_subtitle">Anyone VPN bekerja baik dengan aplikasi perpesanan dan media sosial.</string>
     <string name="apps_suggested_title">Aplikasi yang Disarankan</string>
     <string name="apps_other_apps">Aplikasi Lain</string>
@@ -164,9 +163,7 @@
     <string name="consider_disable_battery_optimizations">Layanan berjalan, pertimbangkan untuk menonaktifkan optimisasi baterai</string>
     <string name="pref_disable_ipv4_summary">Memberi tahu nodus keluar untuk tidak menghubungkan ke alamat IPv4</string>
     <string name="pref_disable_ipv4">Nonaktifkan koneksi IPv4</string>
-    <string name="app_shortcuts">Aplikasi diaktifkan dengan Anon</string>
     <string name="volunteer_mode_subtitle">Bantu orang lain menghubung</string>
-    <string name="btn_choose_apps">Pilih aplikasi</string>
     <string name="menu_faq">SSD</string>
     <string name="confirm">Konfirmasi</string>
     <string name="v3_backup_key_warning">Peringatan: Ini dapat membocorkan kunci Anda ke aplikasi lain</string>

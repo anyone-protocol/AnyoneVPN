@@ -124,7 +124,6 @@
     <string name="v3_backup_name_hint">Име на файла за резервно копие…</string>
     <string name="anon_port">Порт на Anon</string>
     <string name="full_device_vpn">Услуга за ВЧМ за цялото устройство</string>
-    <string name="app_shortcuts">Приложения, поддържащи Тор</string>
     <string name="testing_anon_direct">Проверка на връзката с Тор…</string>
     <string name="pref_prefer_ipv6_summary">Показва на изходните възли предпочитание към адреси от IPv6</string>
     <string name="vpn_disabled">ВЧМ е изключена</string>
@@ -164,7 +163,6 @@
     <string name="pref_open_proxy_on_all_interfaces_summary">Позволете на потребителите на същата безжична мрежа, свързаните устройства и всички други, които могат да се свържат към вашия адрес по IP, достъп до Тор</string>
     <string name="consider_disable_battery_optimizations">Собствените услуги работят, помислете дали да не изключите оптимизацията на батерията</string>
     <string name="trying_to_connect_title">Свързване…</string>
-    <string name="btn_choose_apps">Избор на приложения</string>
     <string name="btn_change_exit">Промяна на изходен възел</string>
     <string name="no_thx">Не, благодаря</string>
     <string name="menu_header_features">Възможности</string>
@@ -199,7 +197,6 @@
     <string name="app_suggested_subtitle">Anyone VPN работи най-добре с приложения за съобщения и социални медии.</string>
     <string name="apps_suggested_title">Препоръчани приложения</string>
     <string name="apps_other_apps">Други приложения</string>
-    <string name="title_choose_apps">Избор на приложения</string>
     <string name="hide_apps">Скрийте приложенията от наблюдение на мрежата и получете достъп, когато са блокирани.</string>
     <string name="log_copied">Дневникът е копиран</string>
     <string name="action_use">Използване</string>

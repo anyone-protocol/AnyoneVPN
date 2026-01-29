@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Virkjar alltaf bólstrun tengingar (padding) til varnar gegn ákveðnum gerðum umferðargreiningar. Sjálfgefið: sjálfvirkt</string>
     <string name="pref_reduced_connection_padding">Minnkuð bólstrun tengingar (padding)</string>
     <string name="pref_reduced_connection_padding_summary">Lokar tengingum við endurvarpa fyrr og sendir færri pakka til að bólstra tengingu (padding) svo gagnamagn og rafhlöðunotkun sé sem minnst</string>
-    <string name="app_shortcuts">Anon-virkjuð forrit</string>
     <string name="trouble_connecting">Vandamál við tengingu?</string>
     <string name="full_device_vpn">Fullt VPN á tækinu</string>
     <string name="vpn_disabled">VPN óvirkt</string>
@@ -179,7 +178,6 @@
     <string name="volunteer_mode_subtitle">Hjálpaðu öðrum að tengjast</string>
     <string name="trying_to_connect_title">Tengist…</string>
     <string name="btn_refresh">Endurlesa</string>
-    <string name="btn_choose_apps">Veldu forrit</string>
     <string name="btn_change_exit">Breyta útgangi</string>
     <string name="menu_faq">Algengar spurningar</string>
     <string name="menu_header_learn">Kanna nánar</string>
@@ -192,7 +190,6 @@
     <string name="strict_nodes_description">Meðhöndla útilokaða punkta sem forsendu við byggingu allra rása. Þetta gæti skemmt fyrir virkni ef ekki er hægt að byggja upp neinar rásir út frá stillingum útilokaðra punkta.</string>
     <string name="incorrect_solution">Röng lausn</string>
     <string name="action_activate">Virkja</string>
-    <string name="title_choose_apps">Veldu forrit</string>
     <string name="volunteer_status_title">Dagurinn í dag er betri
 \nþökk sé þér.</string>
     <string name="apps_suggested_title">Tillögur að forritum</string>

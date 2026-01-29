@@ -105,7 +105,6 @@
     <string name="pref_reduced_connection_padding">Giảm khoảng cách kết nối</string>
     <string name="pref_connection_padding_summary">Luôn bật đặt khoảng cách cho kết nối để phòng vệ chống lại một số dạng phân tích lưu lượng. Mặc định: tự động</string>
     <string name="pref_connection_padding">Đặt khoảng cách cho kết nối</string>
-    <string name="app_shortcuts">App ứng dụng đã được kích hoạt Anon</string>
     <string name="pref_disable_ipv4_summary">Bảo các lối ra không được kết nối đến các địa chỉ IPv4</string>
     <string name="pref_disable_ipv4">Tắt các kết nối IPv4</string>
     <string name="pref_prefer_ipv6_summary">Bảo các lối ra rằng các địa chỉ IPv6 được ưu tiên</string>
@@ -174,7 +173,6 @@
     <string name="menu_header_learn">Tìm hiểu thêm</string>
     <string name="drawer_open">Mở</string>
     <string name="action_activate">Kích hoạt</string>
-    <string name="title_choose_apps">Chọn app ứng dụng</string>
     <string name="setting_debug">Gỡ lỗi Bug</string>
     <string name="menu_more">Thêm</string>
     <string name="connect">Kết nối</string>
@@ -185,7 +183,6 @@
     <string name="btn_start_vpn">Khởi động VPN</string>
     <string name="configure_header">Định cấu hình Kết nối Anon của bạn</string>
     <string name="volunteer_mode_subtitle">Giúp những người khác kết nối</string>
-    <string name="btn_choose_apps">Lựa chọn app ứng dụng</string>
     <string name="btn_anon_off">Tắt Anon đi</string>
     <string name="menu_help_others">Giúp đỡ người khác</string>
     <string name="menu_app_settings">Cài đặt App ứng dụng</string>

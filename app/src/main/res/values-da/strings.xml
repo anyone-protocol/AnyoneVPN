@@ -97,7 +97,6 @@
     <string name="btn_start_vpn">Start VPN</string>
     <string name="volunteer_mode_subtitle">Hjælp andre med at få forbindelse</string>
     <string name="trying_to_connect_title">Forsøger at oprette forbindelse til Anon…</string>
-    <string name="btn_choose_apps">Vælg apps</string>
     <string name="no_thx">Nej tak</string>
     <string name="btn_change_exit">Ændring af udgang</string>
     <string name="btn_refresh">Opdater</string>
@@ -165,7 +164,6 @@
     <string name="pref_circuit_padding">Udstopning af kredsløb</string>
     <string name="pref_reduced_circuit_padding_summary">Brug mindre overhead-padding-algoritmer for at reducere data- og batteriforbruget</string>
     <string name="pref_disable_ipv4_summary">Angiver, at exits ikke skal oprette forbindelse til IPv4-adresser</string>
-    <string name="app_shortcuts">Anon-aktiverede apps</string>
     <string name="testing_anon_direct">Test af forbindelse til Anon…</string>
     <string name="full_device_vpn">Fuld VPN til enheden</string>
     <string name="vpn_disabled">VPN deaktiveret</string>
@@ -187,7 +185,6 @@
     <string name="menu_more">Mere</string>
     <string name="connection_direct">Direkte</string>
     <string name="connection_custom">Brugerdefinerede</string>
-    <string name="title_choose_apps">Vælg Apps</string>
     <string name="no_internet_title">Forbind til internettet</string>
     <string name="action_activate">Aktivér</string>
     <string name="setting_padding">Spaltefyld</string>

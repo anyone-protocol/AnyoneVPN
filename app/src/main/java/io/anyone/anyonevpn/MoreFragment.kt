@@ -67,7 +67,7 @@ class MoreFragment : Fragment() {
             ) {
                 startActivity(Intent(requireActivity(), ClientAuthActivity::class.java))
               },
-            MenuAction(R.string.btn_choose_apps, R.drawable.ic_add_square) {
+            MenuAction(R.string.btn_exclude_apps, R.drawable.ic_add_square) {
                 val context = context ?: return@MenuAction
 
                 startActivity(Intent(context, AppsActivity::class.java))

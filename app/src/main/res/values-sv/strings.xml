@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Aktivera alltid anslutnings-utfyllnad för att skydda mot vissa former av trafikanalys. Standard: auto</string>
     <string name="pref_reduced_connection_padding">Minskad anslutnings-utfyllnad</string>
     <string name="pref_reduced_connection_padding_summary">Stänger relä-anslutningar tidigare, och skickar färre utfyllnadspaket för att minska datatrafik och batteriförbrukning</string>
-    <string name="app_shortcuts">Anon-aktiverade appar</string>
     <string name="trouble_connecting">Problem med att ansluta?</string>
     <string name="full_device_vpn">VPN för hela enheten</string>
     <string name="vpn_disabled">VPN inaktiverad</string>
@@ -154,7 +153,6 @@
     <string name="btn_start_vpn">Starta VPN</string>
     <string name="volunteer_mode_subtitle">Hjälp andra att ansluta sig</string>
     <string name="trying_to_connect_title">Anslutning…</string>
-    <string name="btn_choose_apps">Välj appar</string>
     <string name="btn_change_exit">Ändra utgång</string>
     <string name="btn_refresh">Uppdatera</string>
     <string name="btn_anon_off">Stäng av Anon</string>
@@ -188,7 +186,6 @@
     <string name="action_activate">Aktivera</string>
     <string name="volunteer_status_title">Idag är bättre
 \ntack vare dig.</string>
-    <string name="title_choose_apps">Välj appar</string>
     <string name="action_use">Använd</string>
     <string name="asking">FRÅGAR…</string>
     <string name="no_internet_title">Anslut till internet</string>

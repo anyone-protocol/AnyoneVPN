@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Всегда включает прокладку соединения для защиты от некоторых форм анализа трафика. По умолчанию: авто</string>
     <string name="pref_reduced_connection_padding">Сокращённая прокладка соединения</string>
     <string name="pref_reduced_connection_padding_summary">Раньше закрывает ретранслированные соединения и отправляет меньше пакетов заполнения для уменьшения объёма передаваемых данных и использования батареи</string>
-    <string name="app_shortcuts">Приложения с поддержкой Anon</string>
     <string name="trouble_connecting">Проблема с подключением?</string>
     <string name="full_device_vpn">VPN для всего устройства</string>
     <string name="vpn_disabled">VPN отключён</string>
@@ -162,7 +161,6 @@
     <string name="allow">Разрешить</string>
     <string name="connected_title">Подключено</string>
     <string name="trying_to_connect_title">Подключение…</string>
-    <string name="btn_choose_apps">Выбор приложений</string>
     <string name="btn_change_exit">Сменить выходной узел</string>
     <string name="btn_refresh">Обновить</string>
     <string name="no_thx">Нет, спасибо</string>
@@ -194,7 +192,6 @@
     <string name="power_user_mode">Режим опытного пользователя</string>
     <string name="volunteer_status_title">Мир стал лучше
 \nблагодаря вам.</string>
-    <string name="title_choose_apps">Выбор приложений</string>
     <string name="apps_suggested_title">Рекомендуемые приложения</string>
     <string name="power_user_description">Для пользователей, знакомых с Anon. Позволяет запустить Anyone VPN без настроек VPN и показывает открытые SOCKS и HTTP порты</string>
     <string name="apps_other_apps">Другие приложения</string>

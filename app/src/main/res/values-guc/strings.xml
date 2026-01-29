@@ -145,7 +145,6 @@
   <string name="pref_prefer_ipv6_summary">eiyataa tü süjuitiakat tü süchekakat tü süpülajanakat IPv6</string>
   <string name="pref_disable_ipv4">akatünusü sapajiraya IPv4</string>
   <string name="pref_disable_ipv4_summary">masümuin wana süma süjuitüin nojoluinjatü apajirain sünainje shiyawasee IPv4</string>
-  <string name="app_shortcuts">apliaciones jutatüsü süpüla Anon</string>
   <string name="testing_anon_direct">o&gt;ulaküsü tü suntireria sünain Anon…</string>
   <string name="testing_anon_direct_success">anayawatsü ¡ tü sünteria sümüin Anon anasü !</string>
   <string name="trouble_connecting">Kapúles A\'pansajrrawua?</string>
@@ -167,7 +166,6 @@ punjulaa apps, jupula  anaijatuin  pu kachuerrase</string>
     <string name="configure_header">Punata juchuajia Anon</string>
   <string name="volunteer_mode_subtitle">pukalijaa waneirrüa junain apainjirrawua</string>
   <string name="trying_to_connect_title">Apai\'injirrawua.</string>
-  <string name="btn_choose_apps">Apawua app</string>
   <string name="btn_change_exit">  Awuanajawua  ajui\'tia</string>
   <string name="btn_refresh">Jekets juchikuaaya </string>
   <string name="btn_anon_off">Oyokujaa Anon</string>
@@ -192,7 +190,6 @@ punjulaa apps, jupula  anaijatuin  pu kachuerrase</string>
   <string name="power_user_description">Pirrajule Anon es jupula  painjüin  jumuywaya\'a, pirreer  SOCKS and HTTP  errulaín</string>
   <string name="action_activate">Painjamata.</string>
   <string name="volunteer_status_title">Joluu anashatas wamuin ka pukalijaín waya</string>
-  <string name="title_choose_apps">Apawúa  aplikación</string>
   <string name="app_suggested_subtitle">Anyone VPN anas jukaipa juma alwuatawüa je eerrajilawua  wapushua \'ya</string>
   <string name="apps_suggested_title">Ain\'nes juka tu aplicación ka</string>
   <string name="apps_other_apps">Wanejet aplikación</string>

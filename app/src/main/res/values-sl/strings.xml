@@ -48,7 +48,6 @@
     <string name="testing_anon_direct_success">Uspeh. Povezava Anon je dobra!</string>
     <string name="testing_anon_direct">Preizkušanje povezave z omrežjem Anon…</string>
     <string name="pref_disable_ipv4_summary">Sporoča izhodom, naj se ne povezujejo z naslovi IPv4</string>
-    <string name="app_shortcuts">Aplikacije s podporo Anon</string>
     <string name="vpn_disabled">Onemogočeno omrežje VPN</string>
     <string name="wizard_details_msg">Anyone VPN je odprtokodna aplikacija, ki vsebuje Anon, Go-Tun2Socks in LibEvent. Zagotavlja predor VPN, lokalni posrednik HTTP Connect (samo HTTPS na vratih 8118) in posrednik SOCKS (9050) v omrežje Anon.</string>
     <string name="secure_your_connection_title">Pripravljen na povezavo</string>
@@ -57,7 +56,6 @@
     <string name="btn_start_vpn">Začetek omrežja VPN</string>
     <string name="volunteer_mode_subtitle">Pomagajte drugim, da se povežejo</string>
     <string name="trying_to_connect_title">Povezovanje …</string>
-    <string name="btn_choose_apps">Izberite aplikacije</string>
     <string name="btn_change_exit">Sprememba izhoda</string>
     <string name="btn_refresh">Osvežitev</string>
     <string name="btn_anon_off">Izklop storitve Anon</string>
@@ -186,7 +184,6 @@
     <string name="drawer_open">Odpri</string>
     <string name="drawer_close">Zapri</string>
     <string name="next">Naprej</string>
-    <string name="title_choose_apps">Izberi aplikacije</string>
     <string name="action_use">Uporabi</string>
     <string name="connection_direct">Neposredno</string>
     <string name="connection_custom">Prilagojeno</string>

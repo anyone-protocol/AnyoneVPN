@@ -47,7 +47,6 @@
     <string name="trying_to_connect_title">Yn cysylltu…</string>
     <string name="btn_refresh">Ail-lwytho</string>
     <string name="menu_header_features">Nodweddion</string>
-    <string name="title_choose_apps">Dewis Apiau</string>
     <string name="menu_more">Mwy</string>
     <string name="drawer_open">Agor</string>
     <string name="drawer_close">Cau</string>
@@ -122,7 +121,6 @@
     <string name="vpn_disabled">VPN Anabl</string>
     <string name="menu_help_others">Helpu Eraill</string>
     <string name="consider_disable_battery_optimizations">Gwasanaethau lletyol sy\'n rhedeg, ystyriwch analluogi optimeiddio batri</string>
-    <string name="btn_choose_apps">Dewiswch apps</string>
     <string name="anon_port">Porthladd Nionyn</string>
     <string name="restore_backup">Adfer copi wrth gefn</string>
     <string name="pref_dnsport_dialog">DNS Port Config</string>
@@ -183,7 +181,6 @@
     <string name="v3_delete_client_authorization">Dileu Allwedd Awdurdodi Cleient</string>
     <string name="pref_isolate_protocol_summary">Defnyddiwch gylched wahanol ar gyfer pob protocol cysylltu</string>
     <string name="confirm_service_deletion">Cadarnhau dileu gwasanaeth</string>
-    <string name="app_shortcuts">Apiau wedi\'u Galluogi gan Anon</string>
     <string name="testing_anon_direct_success">Llwyddiant. Mae cysylltiad Anon yn dda!</string>
     <string name="btn_start_vpn">Cychwyn VPN</string>
     <string name="secure_your_connection_title">Yn barod i gysylltu</string>

@@ -41,7 +41,7 @@
     <string name="action_activate">Activate</string>
     <string name="volunteer_status_title">Today is better
 \nbecause of you.</string>
-    <string name="title_choose_apps">Choose Apps</string>
+    <string name="title_exclude_apps">Exclude Apps</string>
     <string name="app_suggested_subtitle">Anyone VPN works best with messaging and social media apps.</string>
     <string name="apps_suggested_title">Suggested Apps</string>
     <string name="apps_other_apps">Other Apps</string>
@@ -120,7 +120,7 @@
     <string name="secure_your_connection_subtitle">Hide apps from network monitoring and get access when they are blocked.</string>
     <string name="btn_start_vpn">Start VPN</string>
     <string name="volunteer_mode_subtitle">Help others connect</string>
-    <string name="btn_choose_apps">Choose apps</string>
+    <string name="btn_exclude_apps">Exclude apps</string>
     <string name="btn_change_exit">Change exit</string>
     <string name="btn_refresh">Refresh</string>
     <string name="btn_anon_off">Turn Anon off</string>
@@ -193,7 +193,7 @@
     <string name="delete_service">Delete Service</string>
     <string name="pref_prefer_ipv6_summary">Tells exits that IPv6 addresses are preferred</string>
     <string name="pref_disable_ipv4_summary">Tells exits not to connect to IPv4 addresses</string>
-    <string name="app_shortcuts">Anon-Enabled Apps</string>
+    <string name="excluded_apps">Excluded apps</string>
     <string name="vpn_disabled">VPN Disabled</string>
     <string name="menu_new_identity">New Identity</string>
     <string name="user_services">User services</string>

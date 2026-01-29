@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">ある種のトラフィック解析から防御するために、接続水増しを常に有効にします。初期設定: 自動</string>
     <string name="pref_reduced_connection_padding">節減型通信水増し</string>
     <string name="pref_reduced_connection_padding_summary">データと電池の消費量を減らすために、中継接続を早めに閉じ、水増しパケットを少なく送信します</string>
-    <string name="app_shortcuts">Anonが有効化されたアプリ</string>
     <string name="trouble_connecting">接続に問題がありましたか?</string>
     <string name="full_device_vpn">全デバイスVPN</string>
     <string name="vpn_disabled">VPNが無効</string>
@@ -151,7 +150,6 @@
     <string name="connected_title">接続されました</string>
     <string name="btn_start_vpn">VPNを開始</string>
     <string name="trying_to_connect_title">接続しています…</string>
-    <string name="btn_choose_apps">アプリを選ぶ</string>
     <string name="btn_change_exit">出口を変更する</string>
     <string name="btn_refresh">リフレッシュ</string>
     <string name="btn_anon_off">Anonをオフにする</string>
@@ -194,7 +192,6 @@
     <string name="power_user_mode">パワーユーザーモード</string>
     <string name="apps_other_apps">他のアプリ</string>
     <string name="power_user_description">Anonに精通しているユーザー向け。VPN設定なしでAnyone VPNを起動でき、開いているSOCKSポートとHTTPポートが表示されます</string>
-    <string name="title_choose_apps">アプリを選ぶ</string>
     <string name="apps_suggested_title">提案されたアプリ</string>
     <string name="app_suggested_subtitle">Anyone VPNは、メッセージングアプリやソーシャルメディアアプリとの相性が抜群です。</string>
     <string name="action_activate">有効化</string>

@@ -79,7 +79,6 @@
     <string name="menu_new_identity">Nauja tapatybė</string>
     <string name="vpn_disabled">VPN išjungtas</string>
     <string name="trouble_connecting">Nepavyksta prisijungti\?</string>
-    <string name="app_shortcuts">„Anon“ įgalintos programos</string>
     <string name="pref_connection_padding">Ryšio užpildymas</string>
     <string name="service_type">Paslaugos tipas</string>
     <string name="restore_backup">Atkurti atsarginę kopiją</string>
@@ -160,7 +159,6 @@
     <string name="btn_start_vpn">Pradėti VPN</string>
     <string name="volunteer_mode_subtitle">Padėkite kitiems prisijungti</string>
     <string name="trying_to_connect_title">Prisijungiama…</string>
-    <string name="btn_choose_apps">Pasirinkite programėles</string>
     <string name="btn_change_exit">Keisti išėjimą</string>
     <string name="btn_anon_off">Išjunkite „Anon“</string>
     <string name="btn_refresh">Atnaujinti</string>
@@ -190,7 +188,6 @@
     <string name="next">Toliau</string>
     <string name="incorrect_solution">Neteisingas sprendimas</string>
     <string name="app_suggested_subtitle">„Anyone VPN“ geriausiai veikia su pranešimų ir socialinių tinklų programėlėmis.</string>
-    <string name="title_choose_apps">Pasirinkti programėles</string>
     <string name="apps_suggested_title">Siūlomos programėlės</string>
     <string name="hide_apps">Paslėpkite programėles nuo tinklo stebėjimo ir gaukite prieigą, kai jos blokuojamos.</string>
     <string name="menu_more">Daugiau</string>

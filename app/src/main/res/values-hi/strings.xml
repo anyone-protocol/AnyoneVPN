@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">ट्रैफिक विश्लेषण के कुछ अवतार से बचने के लिए कनेक्शन पैडिंग हमेशा चालू रखता है। डिफॉल्ट: अपनेआप</string>
     <string name="pref_reduced_connection_padding">कम कनेक्शन पैडिंग</string>
     <string name="pref_reduced_connection_padding_summary">डाटा और बैट्री खप्त कम करने के लिए रीले कनेक्शन जल्दी बंद करता है और कम पैडिंग पैकेट भेजता है</string>
-    <string name="app_shortcuts">टॉर इस्तेमाल करनेवाले ऐप</string>
     <string name="trouble_connecting">जुड़ने में दिक्कत\?</string>
     <string name="full_device_vpn">पूरे डिवाइस पे वीपीएन</string>
     <string name="vpn_disabled">वीपीएन बंद</string>
@@ -148,7 +147,6 @@
     <string name="connection_direct">सीधा</string>
     <string name="connection_custom">कस्टम</string>
     <string name="action_activate">चालू करें</string>
-    <string name="title_choose_apps">ऐप चुनें</string>
     <string name="menu_more">और</string>
     <string name="drawer_open">खोलें</string>
     <string name="drawer_close">बंद करें</string>
@@ -218,7 +216,6 @@
     <string name="menu_anon_connection">टॉर कनेक्शन</string>
     <string name="menu_app_settings">ऐप सेटिंग</string>
     <string name="msg_taking_too_long">इसमें बहुत ज़्यादा वक्त लग रहा है</string>
-    <string name="btn_choose_apps">ऐप चुनें</string>
     <string name="btn_change_exit">आखिरी नोड बदलें</string>
     <string name="btn_anon_off">टॉर बंद करें</string>
     <string name="captcha_title">खुद के इंसान होने का सबूत दें</string>

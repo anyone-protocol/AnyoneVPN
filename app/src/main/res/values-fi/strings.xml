@@ -139,7 +139,6 @@
     <string name="trouble_connecting">Yhteysongelmia\?</string>
     <string name="testing_anon_direct_success">Onnistui. Anon-yhteys on kunnossa!</string>
     <string name="testing_anon_direct">Kokeillaan yhteyttä Anoniin…</string>
-    <string name="app_shortcuts">Anon-yhteyttä käyttävät sovellukset</string>
     <string name="pref_disable_ipv4_summary">Kertoo päätössolmuille, ettei IPv4-osoitteisiin yhdistetä.</string>
     <string name="pref_disable_ipv4">Poista käytöstä IPv4-yhteydet</string>
     <string name="pref_prefer_ipv6_summary">Kertoo päätössolmuille, että suositaan IPv6-osoitteita.</string>
@@ -165,7 +164,6 @@
     <string name="connected_title">Yhdistetty</string>
     <string name="btn_start_vpn">Käynnistä VPN</string>
     <string name="volunteer_mode_subtitle">Auta muita yhdistymään</string>
-    <string name="btn_choose_apps">Valitse sovelluksia</string>
     <string name="btn_change_exit">Vaihda päätössolmu</string>
     <string name="btn_refresh">Päivitä</string>
     <string name="btn_anon_off">Katkaise Anon-yhteys</string>
@@ -188,7 +186,6 @@
     <string name="power_user_mode">Tehokäyttäjätila</string>
     <string name="action_activate">Aktivoi</string>
     <string name="volunteer_status_title">Tänään on ansiostasi parempi päivä.</string>
-    <string name="title_choose_apps">Valitse sovelluksia</string>
     <string name="app_suggested_subtitle">Anyone VPN toimii parhaiten viestintäsovellusten ja sosiaalisen median sovellusten kanssa.</string>
     <string name="apps_other_apps">Muut sovellukset</string>
     <string name="apps_suggested_title">Ehdotetut sovellukset</string>

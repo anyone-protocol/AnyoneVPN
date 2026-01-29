@@ -122,7 +122,6 @@
     <string name="pref_connection_padding_summary">Yaqhip apayat uñsusirinakat jark\'aqasiñataki, waythapiñ ch\'amachir aqtayapunim. Utt\'ayata: justupacha</string>
     <string name="pref_reduced_connection_padding">Juk\'aptayat waythapiñ ch\'amañchiri</string>
     <string name="pref_reduced_connection_padding_summary">Ch\'amachirimp llika katuqatamp  juk\'aqtayañataki, jank\'aki ch\'iqiyir waythapir jist\'antam ukatx juk\'amp juk\'a ch\'amachir wakichäwinak apayam</string>
-    <string name="app_shortcuts">Anonatak naktat aplikasyunanaka</string>
     <string name="trouble_connecting">Janit waythapki\?</string>
     <string name="full_device_vpn">Taqpach wakichäwinakaw VPN ukamp apnaqatäni</string>
     <string name="vpn_disabled">VPN jiwt\'ayatawa</string>
@@ -199,14 +198,12 @@
     <string name="v3_backup_name_hint">Imatan sutipan jark\'aqat waraqäwipa…</string>
     <string name="pref_disable_ipv4_summary">IPv4 katjirinakarux jan waythapisipxamti saw mistuñanakar si</string>
     <string name="pref_isolate_port_summary">Sapa puriñ waythapiwjatakix mayja sirkuytu apnaqam</string>
-    <string name="title_choose_apps">Aplikasyunanak ajllim</string>
     <string name="power_user_mode">Ukjarst apnaqañanaka</string>
     <string name="apps_suggested_title">Uñtayanit aplikasyunanaka</string>
     <string name="apps_other_apps">Yaqha aplikasyunanaka</string>
     <string name="strict_nodes_description">Ajllinukut mayjt\'ayañ yant\'am sirkuytunak utjayañatak mayiwjama. Ajllinukutax janitï mayjt\'atakaspax lurawx suyt\'ayaspawa.</string>
     <string name="pref_prefer_ipv6_summary">IPu6 wakiskir mistuñ thakhinak uñt\'ayaña</string>
     <string name="hide_apps">Llikankir uñakipat aplikasyunanak imantam ukat kunawsatï jark\'antatäkan ukha mantam.</string>
-    <string name="btn_choose_apps">Aplikasyunanak ajllt\'ama</string>
     <string name="refresh_apps">Aplikasyunanak jichhaptayaña</string>
     <string name="pref_circuit_padding">Sirkuytu phuqhacha</string>
     <string name="pref_circuit_padding_summary">Yaqhip yatiy thakhi uñakipaña ukanakat jark\'aqasiñamatakix sirkuytu phuqhach naktayam</string>

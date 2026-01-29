@@ -86,7 +86,6 @@
     <string name="menu_faq">שו״ת</string>
     <string name="menu_header_learn">מידע נוסף</string>
     <string name="connect">התחברות</string>
-    <string name="title_choose_apps">בחירת יישומונים</string>
     <string name="pref_disable_network_title">אין שינה אוטומטית של רשת</string>
     <string name="pref_open_proxy_on_all_interfaces_title">פתיחת מתווך על כל המנשקים</string>
     <string name="pref_open_proxy_on_all_interfaces_summary">לאפשר לעמיתים ברשת האלחוטית, מכשירים קשורים ולכל מי שיכול להתחבר ל־IP שלך לגשת לתור</string>
@@ -117,7 +116,6 @@
     <string name="pref_reduced_connection_padding_summary">סוגר חיבורי ממסר מוקדם יותר ושולח פחות חבילות מידע כריפוד כדי להפחית שימוש בנתונים ובסוללה</string>
     <string name="pref_disable_ipv4">השבתת חיבורי IPv4</string>
     <string name="pref_disable_ipv4_summary">מורה לפתחות לא להתחבר לכתובות IPv4</string>
-    <string name="app_shortcuts">יישומים מאופשרי־Anon</string>
     <string name="pref_connection_padding">ריפוד חיבור</string>
     <string name="pref_reduced_connection_padding">הופחת ריפוד חיבור</string>
     <string name="pref_prefer_ipv6">להעדיף חיבורי IPv6</string>
@@ -186,7 +184,6 @@
     <string name="menu_help_others">סיוע לאחרים</string>
     <string name="consider_disable_battery_optimizations">שירותים מתארחים פועלים, כדאי להשבית את מיטוב הסוללה</string>
     <string name="power_user_mode">מצב משתמש פיכח</string>
-    <string name="btn_choose_apps">בחירת יישומונים</string>
     <string name="v3_backup_key">גיבוי מפתח הרשאת לקוח</string>
     <string name="apps_other_apps">יישומונים אחרים</string>
     <string name="volunteer_mode_subtitle">סיוע לאחרים להתחבר</string>

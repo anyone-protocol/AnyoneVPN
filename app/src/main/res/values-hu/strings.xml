@@ -121,7 +121,6 @@
     <string name="pref_connection_padding_summary">Mindig engedélyezi a kapcsolat kitöltést, hogy megvédjen a hálózati analízistől. Alapértelmezés: auto </string>
     <string name="pref_reduced_connection_padding">Csökkentett kapcsolat kitöltés</string>
     <string name="pref_reduced_connection_padding_summary">Hamarabb lezárja a relé kapcsolatokat, és kevesebb kitöltő csomagot küld a csökkentett adat és akkumulátor használat érdekében</string>
-    <string name="app_shortcuts">Anon-engedélyezett Alkalmazások</string>
     <string name="trouble_connecting">Probléma a csatlakozással?</string>
     <string name="full_device_vpn">Teljes Készülék VPN</string>
     <string name="vpn_disabled">VPN Letiltva</string>
@@ -136,7 +135,6 @@
     <string name="action_activate">Aktiválás</string>
     <string name="no_internet_title">Csatlakozás az internethez</string>
     <string name="kibibyte">KiB</string>
-    <string name="title_choose_apps">Alkalmazások kiválasztása</string>
     <string name="setting_debug">Hibakeresés</string>
     <string name="menu_more">Több</string>
     <string name="version">Verzió:</string>

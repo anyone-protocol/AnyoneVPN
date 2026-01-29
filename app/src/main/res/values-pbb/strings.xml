@@ -146,7 +146,6 @@ Notificaciones ampliadas</string>
     <string name="pref_prefer_ipv6_summary">kase’jnxi txhitxhnxitx miipta’sx IPv6 dxi’jtx</string>
     <string name="pref_disable_ipv4">IPv4 açhnxi’s mfxĩçxha</string>
     <string name="pref_disable_ipv4_summary">Kase’jnxite, IPv4 dxi’jte açhmeene’kwe jĩ’kee</string>
-    <string name="app_shortcuts">App Anonjĩ nvxitnxi ũsta’</string>
     <string name="testing_anon_direct">Anon açhnxi’s isana…</string>
     <string name="testing_anon_direct_success">Ewnxuja’. ¡Anon açhnxi’ ewa\'!</string>
     <string name="trouble_connecting">¿Açhwẽte ewuumeeka’?</string>
@@ -167,7 +166,6 @@ Notificaciones ampliadas</string>
     <string name="configure_header">Mphuse\'j Anonyak kitxawa\'</string>
     <string name="volunteer_mode_subtitle">Vxitetx mpu’çxh açya’ ewuukan</string>
     <string name="trying_to_connect_title">Açhnaa…</string>
-    <string name="btn_choose_apps">Appetx mtxhitxh</string>
     <string name="btn_change_exit">Kase’jnxi\'s myu’pthe’j </string>
     <string name="btn_refresh">Miikphuusẽe</string>
     <string name="btn_anon_off">Anona’s mfxĩçxha</string>
@@ -192,7 +190,6 @@ Notificaciones ampliadas</string>
     <string name="power_user_description">Anona’s kseelpi’jya jiya’jsatxi’. Nvxitu’k VPN phewu’jmee Anyone VPNa’s pu’txkan ki kaavxa’jak SOCKS vxite HTTP vxitx phadenxi ũssatx </string>
     <string name="action_activate">Miijxkaah</string>
     <string name="volunteer_status_title">Ãcxha’ jxthaakwe ewa’/idx pa’ka</string>
-    <string name="title_choose_apps">Teeçx App mtxhitxh</string>
     <string name="app_suggested_subtitle">Anyone VPNa’ jxthaakwe ewa’ vxite App çaam wessu</string>
     <string name="apps_suggested_title">Vxite App thegwa’</string>
     <string name="apps_other_apps">Vxite App</string>

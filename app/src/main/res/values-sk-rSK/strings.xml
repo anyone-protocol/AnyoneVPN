@@ -25,14 +25,12 @@
     <string name="exit_nodes">Výstupné uzly</string>
     <string name="relays">Relé</string>
     <string name="pref_prefer_ipv6">Uprednostňovanie pripojení IPv6</string>
-    <string name="app_shortcuts">Aplikácie s podporou Anon</string>
     <string name="save">Uložiť</string>
     <string name="pref_node_configuration">Konfigurácia uzla</string>
     <string name="secure_your_connection_subtitle">Skryte aplikácie pred monitorovaním siete a získajte k nim prístup, keď sú blokované.</string>
     <string name="connected_title">Pripojené</string>
     <string name="volunteer_mode_subtitle">Pomôžte ostatným pripojiť sa</string>
     <string name="trying_to_connect_title">Pripojenie…</string>
-    <string name="btn_choose_apps">Výber aplikácií</string>
     <string name="btn_change_exit">Zmena výstupu</string>
     <string name="btn_refresh">Obnoviť</string>
     <string name="btn_anon_off">Vypnutie Anon</string>
@@ -178,7 +176,6 @@
     <string name="drawer_open">Otvoriť</string>
     <string name="drawer_close">Zatvoriť</string>
     <string name="connect">Pripojiť</string>
-    <string name="title_choose_apps">Vybrať aplikácie</string>
     <string name="connection_custom">Vlastné</string>
     <string name="next">Ďalšie</string>
     <string name="action_activate">Kedy aktivovať…</string>

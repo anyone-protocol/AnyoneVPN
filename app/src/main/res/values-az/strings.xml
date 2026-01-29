@@ -166,7 +166,6 @@
     <string name="v3_delete_client_authorization">Müştəri Avtorizasiya Açarını silin</string>
     <string name="pref_isolate_protocol_summary">Hər bir əlaqə protokolu üçün fərqli bir dövrə istifadə edin</string>
     <string name="confirm_service_deletion">Xidmətin silinməsini təsdiqləyin</string>
-    <string name="app_shortcuts">Anon-u aktivləşdirən proqramlar</string>
     <string name="testing_anon_direct_success">Uğur. Anon bağlantısı yaxşıdır!</string>
     <string name="strict_nodes_description">İstisna qovşaqlarının parametrlərini bütün sxemlərin qurulması üçün tələb kimi qəbul edin. İstisna Qovşaqları parametrlərinizlə heç bir sxem yaratmaq mümkün olmadıqda, bu, funksionallığı poza bilər.</string>
     <string name="start_anon_again_for_finish_the_process">Prosesi başa çatdırmaq üçün Anon-u yenidən başladın</string>
@@ -181,7 +180,6 @@
     <string name="done">Bitdi!</string>
     <string name="v3_key_hash">Base32-də x25519 Şəxsi Açar</string>
     <string name="no_thx">Xeyr, təşəkkürlər</string>
-    <string name="btn_choose_apps">Proqramları seçin</string>
     <string name="volunteer_mode_subtitle">Başqalarına qoşulmağa kömək edin</string>
     <string name="secure_your_connection_subtitle">Tətbiqləri şəbəkə monitorinqindən gizlədin və bloklandıqda giriş əldə edin.</string>
     <string name="btn_anon_off">Anon-u söndürün</string>
@@ -207,7 +205,6 @@
     <string name="menu_app_settings">Tətbiq Parametrləri</string>
     <string name="incorrect_solution">Yanlış Həll</string>
     <string name="app_suggested_subtitle">Anyone VPN mesajlaşma və sosial media proqramları ilə ən yaxşı şəkildə işləyir.</string>
-    <string name="title_choose_apps">Proqramları seçin</string>
     <string name="msg_taking_too_long">Görünür, bu çox uzun çəkir</string>
     <string name="volunteer_status_title">Bu gün daha yaxşıdır
 \nsənə görə.</string>

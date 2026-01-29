@@ -146,7 +146,6 @@
     <string name="refresh_apps">Aplicații de reîmprospătare</string>
     <string name="btn_start_vpn">Pornire VPN</string>
     <string name="trying_to_connect_title">Se conectează…</string>
-    <string name="btn_choose_apps">Alegere aplicații</string>
     <string name="btn_change_exit">Schimbare ieșire</string>
     <string name="menu_help_others">Ajutați-i pe alții</string>
     <string name="menu_app_settings">Setări aplicație</string>
@@ -176,7 +175,6 @@
     <string name="create_a_backup_first">Creați mai întâi o copie de rezervă</string>
     <string name="share_as_qr">Partajați ca QR</string>
     <string name="pref_connection_padding">Umplerea conexiunii</string>
-    <string name="app_shortcuts">Aplicații compatibile cu Anon</string>
     <string name="testing_anon_direct_success">Succes. Configurația punții este bună!</string>
     <string name="msg_taking_too_long">Acest lucru pare să dureze prea mult timp</string>
     <string name="pref_isolate_port_summary">Utilizați un circuit diferit pentru fiecare port de destinație</string>
@@ -198,7 +196,6 @@
     <string name="log_copied">Jurnalul a fost copiat</string>
     <string name="power_user_description">Pentru utilizatorii familiarizați cu Anon. Vă permite să porniți Anyone VPN fără setarea VPN și afișează porturile SOCKS și HTTP deschise</string>
     <string name="action_activate">Activați</string>
-    <string name="title_choose_apps">Selectează aplicații</string>
     <string name="apps_suggested_title">Aplicații sugerate</string>
     <string name="apps_other_apps">Alte aplicații</string>
     <string name="hide_apps">Ascundeți aplicațiile de la monitorizarea rețelei și obțineți acces atunci când sunt blocate.</string>
