@@ -1,5 +1,12 @@
 # AnyoneVPN Changelog
 
+## 0.1.6
+
+- Updated Gradle, AGP and dependencies.
+- Reworked "Choose apps" (allowlist) to "Exclude apps" (denylist).
+- Updated geoip files.
+- Updated exit country list.
+
 ## 0.1.5
 
 - Added select all / deselect all option to "Choose Apps" activity.
