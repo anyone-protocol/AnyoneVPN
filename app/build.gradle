@@ -18,6 +18,9 @@ android {
         versionName getVersionName()
         multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        base {
+            archivesName = "AnyoneVpn-${versionName}"
+        }
     }
 
     compileOptions {
@@ -49,8 +52,11 @@ android {
         fullperm {
             dimension "free"
             applicationId 'io.anyone.anyonevpn'
-            versionCode 11
+            versionCode 12
             versionName getVersionName()
+            base {
+                archivesName = "AnyoneVpn-${versionName}"
+            }
         }
 
         nightly {
@@ -58,6 +64,9 @@ android {
             applicationId 'io.anyone.anyonevpn.nightly'
             versionName getVersionName()
             versionCode versionCodeEpoch()
+            base {
+                archivesName = "AnyoneVpn-${versionName}"
+            }
         }
     }
 
@@ -87,7 +96,7 @@ android {
 
         implementation "androidx.appcompat:appcompat:1.7.1"
         implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-        implementation "androidx.core:core:1.17.0"
+        implementation "androidx.core:core-ktx:1.17.0"
         implementation 'androidx.core:core-ktx:1.17.0'
         implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
         implementation "androidx.navigation:navigation-ui-ktx:2.9.7"

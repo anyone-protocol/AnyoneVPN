@@ -1,5 +1,10 @@
 # AnyoneVPN Changelog
 
+## 0.1.7
+
+- Exclude apps: Sort excluded at top.
+- Exclude apps: Added toggle to show/hide system apps.
+
 ## 0.1.6
 
 - Updated Gradle, AGP and dependencies.
