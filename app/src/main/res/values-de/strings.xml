@@ -254,4 +254,5 @@
     <!-- AppsActivity -->
     <string name="select_all">Alles auswählen</string>
     <string name="deselect_all">Alles abwählen</string>
+    <string name="show_system_apps">System Apps anzeigen</string>
 </resources>

@@ -10,6 +10,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.CompoundButton
 import android.widget.Filter
 import android.widget.ImageView
 import android.widget.TextView
@@ -24,21 +25,25 @@ import io.anyone.anyonevpn.databinding.ActivityAppsItemBinding
 import io.anyone.anyonevpn.service.AnyoneVpnConstants
 import io.anyone.anyonevpn.service.AnyoneVpnService
 import io.anyone.anyonevpn.service.util.Prefs
-import io.anyone.anyonevpn.service.vpn.ExcludedApp
+import io.anyone.anyonevpn.service.vpn.OtherApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
+class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher,
+    CompoundButton.OnCheckedChangeListener {
 
     private lateinit var mBinding: ActivityAppsBinding
 
     private val mJob = Job()
     private val mScope = CoroutineScope(Dispatchers.Main + mJob)
 
-    private var mApps: List<ExcludedApp> = emptyList()
+    private var mApps: List<OtherApp> = emptyList()
+
+    private var mSearchText: CharSequence? = null
+    private var mShowSystemApps = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +55,8 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         mBinding.etSearch.addTextChangedListener(this)
+
+        mBinding.cbSystemApps.setOnCheckedChangeListener(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -124,11 +131,17 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     }
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        mSearchText = s
         mAdapterApps.filter.filter(s)
     }
 
     override fun afterTextChanged(s: Editable?) {
         // Ignored.
+    }
+
+    override fun onCheckedChanged(view: CompoundButton, checked: Boolean) {
+        mShowSystemApps = checked
+        mAdapterApps.filter.filter(mSearchText)
     }
 
     override fun onPause() {
@@ -141,7 +154,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         mScope.launch {
             withContext(Dispatchers.IO) {
                 packageManager?.let {
-                    mApps = ExcludedApp.getAllApps(it)
+                    mApps = OtherApp.getAll(it)
                 }
 
                 invalidateOptionsMenu()
@@ -152,9 +165,12 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     }
 
     private val mAdapterApps by lazy {
-        object : ArrayAdapter<ExcludedApp>(this, R.layout.activity_apps_item, R.id.tvName, mApps) {
+        object : ArrayAdapter<OtherApp>(this, R.layout.activity_apps_item, R.id.tvName, mApps) {
 
-            private var data: List<ExcludedApp> = mApps
+            private val appsPrefiltered: List<OtherApp>
+                get() = mApps.filter { it.isExcluded || !it.isSystem || mShowSystemApps }
+
+            private var data: List<OtherApp> = appsPrefiltered
 
             override fun getCount(): Int {
                 return data.size
@@ -206,29 +222,25 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
                 val filter = object : Filter() {
 
                     override fun performFiltering(constraint: CharSequence?): FilterResults {
-                        val results = FilterResults()
+                        var filtered = appsPrefiltered
 
-                        if (constraint.isNullOrBlank()) {
-                            results.values = mApps
-                            results.count = mApps.count()
-                        }
-                        else {
-                            val filtered = mApps.filter {
+                        if (!constraint.isNullOrBlank()) {
+                            filtered = filtered.filter {
                                 // ignore apps, which don't contain the filter string in their id or label.
-                                it.packageName.contains(constraint, true)
-                                        || it.name?.contains(constraint, true) ?: false
+                                 (it.packageName.contains(constraint, true)
+                                         || it.name?.contains(constraint, true) ?: false)
                             }
-
-                            results.values = filtered
-                            results.count = filtered.count()
                         }
 
-                        return results
+                        return FilterResults().apply {
+                            values = filtered
+                            count = filtered.count()
+                        }
                     }
 
                     @Suppress("UNCHECKED_CAST")
                     override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                        data = results?.values as? List<ExcludedApp> ?: mApps
+                        data = results?.values as? List<OtherApp> ?: mApps
                         notifyDataSetChanged()
                     }
                 }
@@ -252,7 +264,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         var icon: ImageView? = null
         var text: TextView? = null // app name
         var active: TextView? = null
-        var app: ExcludedApp? = null
+        var app: OtherApp? = null
 
         fun update() {
             box?.setBackgroundResource(if (app?.isExcluded == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)

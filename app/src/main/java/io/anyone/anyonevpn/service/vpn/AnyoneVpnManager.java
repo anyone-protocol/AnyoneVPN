@@ -222,13 +222,13 @@ public class AnyoneVpnManager implements Handler.Callback, AnyoneVpnConstants {
     }
 
     private void doAppBasedRouting(VpnService.Builder builder) throws NameNotFoundException {
-        var apps = ExcludedApp.Companion.getAllApps(mService.getPackageManager(), null, null);
+        var apps = OtherApp.Companion.getAll(mService.getPackageManager(), null, null);
         var isLockdownMode = isVpnLockdown(mService);
 
         Log.i(TAG, "isLockdownMode=" + isLockdownMode);
 
         if (!isLockdownMode) {
-            for (ExcludedApp app : apps) {
+            for (OtherApp app : apps) {
                 if (app.isExcluded()) {
                     builder.addDisallowedApplication(app.getPackageName());
                 }

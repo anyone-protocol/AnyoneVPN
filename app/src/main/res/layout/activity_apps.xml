@@ -27,6 +27,21 @@
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbSystemApps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/show_system_apps" />
+
+        </LinearLayout>
+
         <GridView
             android:id="@+id/appList"
             android:layout_width="match_parent"
