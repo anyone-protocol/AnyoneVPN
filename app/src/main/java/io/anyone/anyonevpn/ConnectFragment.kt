@@ -326,10 +326,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
     }
 
     private fun updateApps() {
-        val apps = Prefs.anonifiedApps
-            .split("|")
-            .filter { it.isNotEmpty() }
-            .toTypedArray()
+        val apps = Prefs.excludedApps
 
         binding.appIconFlow.referencedIds = arrayOf<Int>().toIntArray()
 

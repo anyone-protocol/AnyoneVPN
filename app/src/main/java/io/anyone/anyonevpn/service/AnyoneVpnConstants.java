@@ -163,8 +163,6 @@ public interface AnyoneVpnConstants {
 
     String PREFS_DNS_PORT = "PREFS_DNS_PORT";
 
-    String PREFS_KEY_ANONIFIED = "PrefAnond";
-
     /**
      * Include packages here to make the VPNService ignore these apps. This is to
      * prevent anon over anon/tor scenarios...

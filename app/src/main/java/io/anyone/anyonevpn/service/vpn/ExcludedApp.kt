@@ -1,10 +1,11 @@
 package io.anyone.anyonevpn.service.vpn
 
 import android.Manifest
-import android.content.Context
+import android.annotation.SuppressLint
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
+import io.anyone.anyonevpn.BuildConfig
 import io.anyone.anyonevpn.service.AnyoneVpnConstants
 import io.anyone.anyonevpn.service.util.Prefs
 import kotlinx.serialization.Serializable
@@ -47,62 +48,47 @@ class ExcludedApp : Comparable<ExcludedApp> {
     override fun toString(): String = name ?: ""
 
     companion object {
-        fun getApps(context: Context): ArrayList<ExcludedApp> {
-            val torifiedPackages = Prefs.anonifiedApps
-                .split("|")
-                .filter { it.isNotBlank() }
-                .sorted()
 
-            val pMgr = context.packageManager
-            val lAppInfo = pMgr.getInstalledApplications(0)
-            val apps = ArrayList<ExcludedApp>()
-            lAppInfo.forEach {
-                val app = ExcludedApp()
-                try {
-                    val pInfo = pMgr.getPackageInfo(it.packageName, PackageManager.GET_PERMISSIONS)
-                    if (AnyoneVpnConstants.BYPASS_VPN_PACKAGES.contains(it.packageName)) {
-                        app.usesInternet = false
-                    } else if (pInfo?.requestedPermissions != null) {
-                        for (permInfo in pInfo.requestedPermissions!!) {
-                            if (permInfo == Manifest.permission.INTERNET) {
-                                app.usesInternet = true
-                            }
-                        }
-                    }
-                } catch (e: Exception) {
-                    e.printStackTrace()
+        @SuppressLint("QueryPermissionsNeeded")
+        fun getAllApps(
+            packageManager: PackageManager,
+            include: List<String>? = null,
+            exclude: List<String>? = null
+        ): List<ExcludedApp> {
+
+            val excludedApps = Prefs.excludedApps
+
+            val apps = packageManager.getInstalledApplications(0)
+                .filter {
+                    it.enabled // Ignore disabled apps,
+                            // ignore apps which bring their own Tor,
+                            && !AnyoneVpnConstants.BYPASS_VPN_PACKAGES.contains(it.packageName)
+                            // ignore ourselves,
+                            && it.packageName != BuildConfig.APPLICATION_ID
+                            // ignore system apps, which haven't been updated (filters the most obscure ones),
+                            && (it.flags and ApplicationInfo.FLAG_SYSTEM == 0 || it.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0)
+                            // ignore apps, which aren't on the include list, if there is one,
+                            && include?.contains(it.packageName) != false
+                            // ignore apps, which are on the exclude list, if there is one,
+                            && exclude?.contains(it.packageName) != true
+                            // ignore apps, which don't connect to the net.
+                            && packageManager.getPackageInfo(it.packageName, PackageManager.GET_PERMISSIONS)
+                        ?.requestedPermissions?.contains(Manifest.permission.INTERNET) == true
+                }
+                .map {
+                    val app = ExcludedApp()
+                    app.packageName = it.packageName
+                    app.name = packageManager.getApplicationLabel(it).toString()
+                    app.uid = it.uid
+                    app.procname = it.processName
+                    app.username = packageManager.getNameForUid(app.uid)
+                    app.isEnabled = true
+                    app.usesInternet = true
+                    app.isExcluded = excludedApps.contains(it.packageName)
+                    app
                 }
 
-                if ((it.flags and ApplicationInfo.FLAG_SYSTEM) == 1)
-                    app.usesInternet = true // System app
-
-                if (!app.usesInternet) return@forEach
-                else apps.add(app)
-
-                app.apply {
-                    isEnabled = it.enabled
-                    uid = it.uid
-                    username = pMgr.getNameForUid(it.uid)
-                    procname = it.processName
-                    packageName = it.packageName
-                }
-
-                try {
-                    app.name = pMgr.getApplicationLabel(it).toString()
-                } catch (_: Exception) {
-                    app.name = it.packageName
-                }
-
-                // Check if this application is allowed
-                app.isExcluded = torifiedPackages.binarySearch(app.packageName) >= 0
-            }
-
-            apps.sort()
-            return apps
-        }
-
-        fun sortAppsForTorifiedAndAbc(apps: List<ExcludedApp>?) {
-            apps?.sortedWith(compareBy<ExcludedApp> { !it.isExcluded }.thenBy {
+            return apps.sortedWith(compareBy<ExcludedApp> { !it.isExcluded }.thenBy {
                 Normalizer.normalize(it.name ?: "", Normalizer.Form.NFD)
             })
         }

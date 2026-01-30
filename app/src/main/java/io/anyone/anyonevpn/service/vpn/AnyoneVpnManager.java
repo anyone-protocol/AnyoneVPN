@@ -34,7 +34,6 @@ import io.anyone.anyonevpn.R;
 import io.anyone.anyonevpn.service.AnyoneVpnConstants;
 import io.anyone.anyonevpn.service.AnyoneVpnService;
 import io.anyone.anyonevpn.service.TProxyService;
-import io.anyone.anyonevpn.service.util.Prefs;
 
 import java.io.DataOutputStream;
 import java.io.File;
@@ -223,17 +222,15 @@ public class AnyoneVpnManager implements Handler.Callback, AnyoneVpnConstants {
     }
 
     private void doAppBasedRouting(VpnService.Builder builder) throws NameNotFoundException {
-        var apps = ExcludedApp.Companion.getApps(mService);
+        var apps = ExcludedApp.Companion.getAllApps(mService.getPackageManager(), null, null);
         var isLockdownMode = isVpnLockdown(mService);
 
         Log.i(TAG, "isLockdownMode=" + isLockdownMode);
 
         if (!isLockdownMode) {
             for (ExcludedApp app : apps) {
-                if (app.isExcluded() && (!app.getPackageName().equals(mService.getPackageName()))) {
-                    if (Prefs.isAppExcluded(app.getPackageName())) {
-                        builder.addDisallowedApplication(app.getPackageName());
-                    }
+                if (app.isExcluded()) {
+                    builder.addDisallowedApplication(app.getPackageName());
                 }
             }
 

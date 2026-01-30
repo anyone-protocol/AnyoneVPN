@@ -17,7 +17,7 @@ object Prefs {
     private const val PREF_EXIT_NODES = "pref_exit_nodes"
     private const val PREF_STRICT_NODES = "pref_strict_nodes"
     private const val PREF_POWER_USER_MODE = "pref_power_user"
-    private const val EXCLUDED_APPS_KEY = "_app_tor"
+    private const val PREFS_KEY_EXCLUDED: String = "PrefAnond"
 
 
     private const val PREF_HOST_HIDDEN_SERVICES = "pref_host_onionservices"
@@ -101,14 +101,9 @@ object Prefs {
         get() = cr?.getPrefBoolean(PREF_SECURE_WINDOW_FLAG, true) ?: true
         set(isFlagSecure) = cr?.putPref(PREF_SECURE_WINDOW_FLAG, isFlagSecure) ?: Unit
 
-    var anonifiedApps: String
-        get() = cr?.getPrefString(AnyoneVpnConstants.PREFS_KEY_ANONIFIED) ?: ""
-        set(value) = cr?.putPref(AnyoneVpnConstants.PREFS_KEY_ANONIFIED, value) ?: Unit
-
-    @JvmStatic
-    fun isAppExcluded(appId: String): Boolean {
-        return cr?.getPrefBoolean("$appId${EXCLUDED_APPS_KEY}", true) ?: true
-    }
+    var excludedApps: Set<String>
+        get() = (cr?.getPrefString(PREFS_KEY_EXCLUDED) ?: "").split("|").filter { it.isNotBlank() }.toSet()
+        set(value) = cr?.putPref(PREFS_KEY_EXCLUDED, value.joinToString("|")) ?: Unit
 
     @JvmStatic
     val proxySocksPort: String

@@ -1,10 +1,7 @@
 /* Copyright (c) 2009, Nathan Freitas, Orbot / The Guardian Project - http://openideals.com/guardian */ /* See LICENSE for licensing information */
 package io.anyone.anyonevpn.ui
 
-import android.Manifest
 import android.content.Intent
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -19,7 +16,6 @@ import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.core.view.allViews
-import io.anyone.anyonevpn.BuildConfig
 import io.anyone.anyonevpn.R
 import io.anyone.anyonevpn.core.putNotSystem
 import io.anyone.anyonevpn.core.ui.BaseActivity
@@ -145,7 +141,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         mScope.launch {
             withContext(Dispatchers.IO) {
                 packageManager?.let {
-                    mApps = getApps(it, null, null)
+                    mApps = ExcludedApp.getAllApps(it)
                 }
 
                 invalidateOptionsMenu()
@@ -243,11 +239,7 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
     }
 
     private fun saveAppSettings() {
-        val apps = HashSet<String>()
-
-        apps.addAll(mApps.filter { it.isExcluded }.map { it.packageName })
-
-        Prefs.anonifiedApps = apps.joinToString("|")
+        Prefs.excludedApps = mApps.filter { it.isExcluded }.map { it.packageName }.toSet()
 
         val intent = Intent(this, AnyoneVpnService::class.java).putNotSystem()
         intent.action = AnyoneVpnConstants.ACTION_RESTART_VPN
@@ -265,54 +257,6 @@ class AppsActivity : BaseActivity(), View.OnClickListener, TextWatcher {
         fun update() {
             box?.setBackgroundResource(if (app?.isExcluded == true) R.drawable.btn_apps_selected else R.drawable.btn_apps)
             active?.visibility = if (app?.isExcluded == true) View.VISIBLE else View.INVISIBLE
-        }
-    }
-
-    companion object {
-
-        fun getApps(
-            packageManager: PackageManager,
-            include: List<String>?,
-            exclude: List<String>?
-        ): List<ExcludedApp> {
-
-            val anondApps = Prefs.anonifiedApps
-                .split("|")
-                .filter { it.isNotEmpty() }
-
-            val apps = packageManager.getInstalledApplications(0)
-                .filter {
-                    it.enabled // Ignore disabled apps,
-                            // ignore apps which bring their own Tor,
-                            && !AnyoneVpnConstants.BYPASS_VPN_PACKAGES.contains(it.packageName)
-                            // ignore ourselves,
-                            && it.packageName != BuildConfig.APPLICATION_ID
-                            // ignore system apps, which haven't been updated (filters the most obscure ones),
-                            && (it.flags and ApplicationInfo.FLAG_SYSTEM == 0 || it.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0)
-                            // ignore apps, which aren't on the include list, if there is one,
-                            && include?.contains(it.packageName) != false
-                            // ignore apps, which are on the exclude list, if there is one,
-                            && exclude?.contains(it.packageName) != true
-                            // ignore apps, which don't connect to the net.
-                            && packageManager.getPackageInfo(it.packageName, PackageManager.GET_PERMISSIONS)
-                                ?.requestedPermissions?.contains(Manifest.permission.INTERNET) == true
-                }
-                .map {
-                    val app = ExcludedApp()
-                    app.packageName = it.packageName
-                    app.name = packageManager.getApplicationLabel(it).toString()
-                    app.uid = it.uid
-                    app.procname = it.processName
-                    app.username = packageManager.getNameForUid(app.uid)
-                    app.isEnabled = true
-                    app.usesInternet = true
-                    app.isExcluded = anondApps.contains(it.packageName)
-                    app
-                }
-
-            ExcludedApp.sortAppsForTorifiedAndAbc(apps)
-
-            return apps
         }
     }
 }
