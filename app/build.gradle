@@ -1,5 +1,4 @@
 apply from: "../commons-device.gradle"
-apply plugin: 'kotlin-android'
 
 /* gets the version name from the latest Git tag, stripping the leading v off */
 def getVersionName = { ->
@@ -40,10 +39,6 @@ android {
             shrinkResources false
             minifyEnabled false
         }
-    }
-
-    kotlinOptions {
-        jvmTarget = '17'
     }
 
     flavorDimensions "free"
