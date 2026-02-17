@@ -1,5 +1,10 @@
 # AnyoneVPN Changelog
 
+## 0.1.8
+
+- Fixed nointernet image.
+- Updated build system.
+
 ## 0.1.7
 
 - Exclude apps: Sort excluded at top.
