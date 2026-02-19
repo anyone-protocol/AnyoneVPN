@@ -167,6 +167,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding.controlGroup.visibility = View.GONE
 
         binding.ivStatus.setImageResource(R.drawable.nointernet)
+        binding.ivStatus.scaleType = ImageView.ScaleType.CENTER_INSIDE
 
         binding.unconnectedGroup.visibility = View.VISIBLE
 
@@ -182,6 +183,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding.controlGroup.visibility = View.VISIBLE
 
         binding.ivStatus.setImageResource(R.drawable.logo_started)
+        binding.ivStatus.scaleType = ImageView.ScaleType.CENTER_CROP
         binding.ivStatus.setOnClickListener {
             stopAnonAndVpn()
         }
@@ -201,6 +203,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding.controlGroup.visibility = View.GONE
 
         binding.ivStatus.setImageResource(R.drawable.logo_stopped)
+        binding.ivStatus.scaleType = ImageView.ScaleType.CENTER_CROP
         binding.ivStatus.setOnClickListener {
             startAnonAndVpn()
         }
@@ -222,6 +225,7 @@ class ConnectFragment : Fragment(), ConnectionHelperCallbacks,
         binding.controlGroup.visibility = View.GONE
 
         binding.ivStatus.setImageResource(R.drawable.logo_starting_25)
+        binding.ivStatus.scaleType = ImageView.ScaleType.CENTER_CROP
         binding.ivStatus.setOnClickListener {
             stopAnonAndVpn()
         }
