@@ -1,5 +1,8 @@
 # AnyoneVPN Changelog
 
+## 0.1.9
+- Improved no-internet image.
+
 ## 0.1.8
 
 - Fixed nointernet image.
