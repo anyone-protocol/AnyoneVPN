@@ -1,5 +1,8 @@
 # AnyoneVPN Changelog
 
+## 0.1.10
+- Updated exit node list.
+
 ## 0.1.9
 - Improved no-internet image.
 
