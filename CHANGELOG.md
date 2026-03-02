@@ -1,5 +1,8 @@
 # AnyoneVPN Changelog
 
+## 0.1.11
+- Open testing release.
+
 ## 0.1.10
 - Updated exit node list.
 
